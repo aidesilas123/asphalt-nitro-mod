@@ -1,0 +1,158 @@
+###### Class com.google.android.gms.internal.ads.zzbjb (com.google.android.gms.internal.ads.zzbjb)
+.class public final synthetic Lcom/google/android/gms/internal/ads/zzbjb;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzbkd;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/ads/zzdge;
+
+.field public final synthetic zzb:Lcom/google/android/gms/internal/ads/zzcpo;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzdge;Lcom/google/android/gms/internal/ads/zzcpo;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzbjb;->zza:Lcom/google/android/gms/internal/ads/zzdge;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zzbjb;->zzb:Lcom/google/android/gms/internal/ads/zzcpo;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Object;Ljava/util/Map;)V
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzbjb;->zza:Lcom/google/android/gms/internal/ads/zzdge;
+
+    check-cast p1, Lcom/google/android/gms/internal/ads/zzcgv;
+
+    invoke-static {p2, v0}, Lcom/google/android/gms/internal/ads/zzbkc;->zzc(Ljava/util/Map;Lcom/google/android/gms/internal/ads/zzdge;)V
+
+    const-string v0, "u"
+
+    invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    if-nez p2, :cond_17
+
+    const-string p1, "URL missing from click GMSG."
+
+    invoke-static {p1}, Lcom/google/android/gms/internal/ads/zzcbn;->zzj(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_17
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzbjb;->zzb:Lcom/google/android/gms/internal/ads/zzcpo;
+
+    invoke-static {p1, p2}, Lcom/google/android/gms/internal/ads/zzbkc;->zza(Lcom/google/android/gms/internal/ads/zzcgv;Ljava/lang/String;)Lcom/google/common/util/concurrent/h0;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/google/android/gms/internal/ads/zzgas;->zzu(Lcom/google/common/util/concurrent/h0;)Lcom/google/android/gms/internal/ads/zzgas;
+
+    move-result-object p2
+
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbjd;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/internal/ads/zzbjd;-><init>(Lcom/google/android/gms/internal/ads/zzcpo;)V
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzcca;->zza:Lcom/google/android/gms/internal/ads/zzgbl;
+
+    invoke-static {p2, v1, v0}, Lcom/google/android/gms/internal/ads/zzgbb;->zzn(Lcom/google/common/util/concurrent/h0;Lcom/google/android/gms/internal/ads/zzgai;Ljava/util/concurrent/Executor;)Lcom/google/common/util/concurrent/h0;
+
+    move-result-object p2
+
+    new-instance v1, Lcom/google/android/gms/internal/ads/zzbjr;
+
+    invoke-direct {v1, p1}, Lcom/google/android/gms/internal/ads/zzbjr;-><init>(Lcom/google/android/gms/internal/ads/zzcgv;)V
+
+    invoke-static {p2, v1, v0}, Lcom/google/android/gms/internal/ads/zzgbb;->zzr(Lcom/google/common/util/concurrent/h0;Lcom/google/android/gms/internal/ads/zzgax;Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.internal.ads.zzbjd (com.google.android.gms.internal.ads.zzbjd)
+.class public final synthetic Lcom/google/android/gms/internal/ads/zzbjd;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzgai;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/ads/zzcpo;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzcpo;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzbjd;->zza:Lcom/google/android/gms/internal/ads/zzcpo;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Object;)Lcom/google/common/util/concurrent/h0;
+    .registers 4
+
+    check-cast p1, Ljava/lang/String;
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbkc;->zza:Lcom/google/android/gms/internal/ads/zzbkd;
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbdc;->zzjB:Lcom/google/android/gms/internal/ads/zzbcu;
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzba;->zzc()Lcom/google/android/gms/internal/ads/zzbda;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/ads/zzbda;->zza(Lcom/google/android/gms/internal/ads/zzbcu;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzbjd;->zza:Lcom/google/android/gms/internal/ads/zzcpo;
+
+    if-eqz v0, :cond_23
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzay;->zze()Ljava/util/Random;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Lcom/google/android/gms/internal/ads/zzcpo;->zzc(Ljava/lang/String;Ljava/util/Random;)Lcom/google/common/util/concurrent/h0;
+
+    move-result-object p1
+
+    goto :goto_27
+
+    :cond_23
+    invoke-static {p1}, Lcom/google/android/gms/internal/ads/zzgbb;->zzh(Ljava/lang/Object;)Lcom/google/common/util/concurrent/h0;
+
+    move-result-object p1
+
+    :goto_27
+    return-object p1
+.end method

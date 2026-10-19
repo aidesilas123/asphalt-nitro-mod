@@ -1,0 +1,9 @@
+###### Class com.bytedance.sdk.openadsdk.core.nativeexpress.a (com.bytedance.sdk.openadsdk.core.nativeexpress.a)
+.class public interface abstract Lcom/bytedance/sdk/openadsdk/core/nativeexpress/a;
+.super Ljava/lang/Object;
+.source "BackupViewClickListener.java"
+
+
+# virtual methods
+.method public abstract a(Landroid/view/View;ILcom/bytedance/sdk/openadsdk/core/model/m;)V
+.end method

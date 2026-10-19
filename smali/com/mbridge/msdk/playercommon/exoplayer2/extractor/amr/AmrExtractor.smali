@@ -1,0 +1,810 @@
+###### Class com.mbridge.msdk.playercommon.exoplayer2.extractor.amr.AmrExtractor (com.mbridge.msdk.playercommon.exoplayer2.extractor.amr.AmrExtractor)
+.class public final Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;
+.super Ljava/lang/Object;
+.source "AmrExtractor.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/Extractor;
+
+
+# static fields
+.field public static final FACTORY:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorsFactory;
+
+.field private static final MAX_FRAME_SIZE_BYTES:I
+
+.field private static final SAMPLE_RATE_NB:I = 0x1f40
+
+.field private static final SAMPLE_RATE_WB:I = 0x3e80
+
+.field private static final SAMPLE_TIME_PER_FRAME_US:I = 0x4e20
+
+.field private static final amrSignatureNb:[B
+
+.field private static final amrSignatureWb:[B
+
+.field private static final frameSizeBytesByTypeNb:[I
+
+.field private static final frameSizeBytesByTypeWb:[I
+
+
+# instance fields
+.field private currentSampleBytesRemaining:I
+
+.field private currentSampleTimeUs:J
+
+.field private currentSampleTotalBytes:I
+
+.field private hasOutputFormat:Z
+
+.field private isWideBand:Z
+
+.field private final scratch:[B
+
+.field private trackOutput:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    new-instance v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor$1;
+
+    invoke-direct {v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor$1;-><init>()V
+
+    sput-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->FACTORY:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorsFactory;
+
+    const/16 v0, 0x10
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_2e
+
+    sput-object v1, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeNb:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_52
+
+    sput-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeWb:[I
+
+    const-string v1, "#!AMR\n"
+
+    invoke-static {v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/util/Util;->getUtf8Bytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureNb:[B
+
+    const-string v1, "#!AMR-WB\n"
+
+    invoke-static {v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/util/Util;->getUtf8Bytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureWb:[B
+
+    const/16 v1, 0x8
+
+    aget v0, v0, v1
+
+    sput v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->MAX_FRAME_SIZE_BYTES:I
+
+    return-void
+
+    :array_2e
+    .array-data 4
+        0xd
+        0xe
+        0x10
+        0x12
+        0x14
+        0x15
+        0x1b
+        0x20
+        0x6
+        0x7
+        0x6
+        0x6
+        0x1
+        0x1
+        0x1
+        0x1
+    .end array-data
+
+    :array_52
+    .array-data 4
+        0x12
+        0x18
+        0x21
+        0x25
+        0x29
+        0x2f
+        0x33
+        0x3b
+        0x3d
+        0x6
+        0x1
+        0x1
+        0x1
+        0x1
+        0x1
+        0x1
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->scratch:[B
+
+    return-void
+.end method
+
+.method static amrSignatureNb()[B
+    .registers 2
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureNb:[B
+
+    array-length v1, v0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static amrSignatureWb()[B
+    .registers 2
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureWb:[B
+
+    array-length v1, v0
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static frameSizeBytesByTypeNb(I)I
+    .registers 2
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeNb:[I
+
+    aget p0, v0, p0
+
+    return p0
+.end method
+
+.method static frameSizeBytesByTypeWb(I)I
+    .registers 2
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeWb:[I
+
+    aget p0, v0, p0
+
+    return p0
+.end method
+
+.method private getFrameSizeInBytes(I)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isValidFrameType(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2e
+
+    new-instance v0, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Illegal AMR "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    if-eqz v2, :cond_19
+
+    const-string v2, "WB"
+
+    goto :goto_1b
+
+    :cond_19
+    const-string v2, "NB"
+
+    :goto_1b
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " frame type "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2e
+    iget-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    if-eqz v0, :cond_37
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeWb:[I
+
+    aget p1, v0, p1
+
+    goto :goto_3b
+
+    :cond_37
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->frameSizeBytesByTypeNb:[I
+
+    aget p1, v0, p1
+
+    :goto_3b
+    return p1
+.end method
+
+.method private isNarrowBandValidFrameType(I)Z
+    .registers 3
+
+    iget-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    if-nez v0, :cond_e
+
+    const/16 v0, 0xc
+
+    if-lt p1, v0, :cond_c
+
+    const/16 v0, 0xe
+
+    if-le p1, v0, :cond_e
+
+    :cond_c
+    const/4 p1, 0x1
+
+    goto :goto_f
+
+    :cond_e
+    const/4 p1, 0x0
+
+    :goto_f
+    return p1
+.end method
+
+.method private isValidFrameType(I)Z
+    .registers 3
+
+    if-ltz p1, :cond_14
+
+    const/16 v0, 0xf
+
+    if-gt p1, v0, :cond_14
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBandValidFrameType(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isNarrowBandValidFrameType(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_14
+
+    :cond_12
+    const/4 p1, 0x1
+
+    goto :goto_15
+
+    :cond_14
+    const/4 p1, 0x0
+
+    :goto_15
+    return p1
+.end method
+
+.method private isWideBandValidFrameType(I)Z
+    .registers 3
+
+    iget-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    if-eqz v0, :cond_e
+
+    const/16 v0, 0xa
+
+    if-lt p1, v0, :cond_c
+
+    const/16 v0, 0xd
+
+    if-le p1, v0, :cond_e
+
+    :cond_c
+    const/4 p1, 0x1
+
+    goto :goto_f
+
+    :cond_e
+    const/4 p1, 0x0
+
+    :goto_f
+    return p1
+.end method
+
+.method private maybeOutputFormat()V
+    .registers 15
+
+    iget-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->hasOutputFormat:Z
+
+    if-nez v0, :cond_30
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->hasOutputFormat:Z
+
+    iget-boolean v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    if-eqz v0, :cond_e
+
+    const-string v1, "audio/amr-wb"
+
+    goto :goto_10
+
+    :cond_e
+    const-string v1, "audio/3gpp"
+
+    :goto_10
+    move-object v3, v1
+
+    if-eqz v0, :cond_18
+
+    const/16 v0, 0x3e80
+
+    const/16 v8, 0x3e80
+
+    goto :goto_1c
+
+    :cond_18
+    const/16 v0, 0x1f40
+
+    const/16 v8, 0x1f40
+
+    :goto_1c
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->trackOutput:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, -0x1
+
+    sget v6, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->MAX_FRAME_SIZE_BYTES:I
+
+    const/4 v7, 0x1
+
+    const/4 v9, -0x1
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    invoke-static/range {v2 .. v13}, Lcom/mbridge/msdk/playercommon/exoplayer2/Format;->createAudioSampleFormat(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIILjava/util/List;Lcom/mbridge/msdk/playercommon/exoplayer2/drm/DrmInitData;ILjava/lang/String;)Lcom/mbridge/msdk/playercommon/exoplayer2/Format;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;->format(Lcom/mbridge/msdk/playercommon/exoplayer2/Format;)V
+
+    :cond_30
+    return-void
+.end method
+
+.method private peekAmrSignature(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;[B)Z
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    invoke-interface {p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
+
+    array-length v0, p2
+
+    new-array v0, v0, [B
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v2, v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
+
+    invoke-static {v0, p2}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method private readAmrHeader(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)Z
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureNb:[B
+
+    invoke-direct {p0, p1, v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->peekAmrSignature(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;[B)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_11
+
+    iput-boolean v2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    array-length v0, v0
+
+    invoke-interface {p1, v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
+
+    return v3
+
+    :cond_11
+    sget-object v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->amrSignatureWb:[B
+
+    invoke-direct {p0, p1, v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->peekAmrSignature(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;[B)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_20
+
+    iput-boolean v3, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->isWideBand:Z
+
+    array-length v0, v0
+
+    invoke-interface {p1, v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
+
+    return v3
+
+    :cond_20
+    return v2
+.end method
+
+.method private readNextSampleSize(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    invoke-interface {p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->scratch:[B
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-interface {p1, v0, v1, v2}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->scratch:[B
+
+    aget-byte p1, p1, v1
+
+    and-int/lit16 v0, p1, 0x83
+
+    if-gtz v0, :cond_1b
+
+    shr-int/lit8 p1, p1, 0x3
+
+    and-int/lit8 p1, p1, 0xf
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->getFrameSizeInBytes(I)I
+
+    move-result p1
+
+    return p1
+
+    :cond_1b
+    new-instance v0, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Invalid padding bits for frame header "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method private readSample(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)I
+    .registers 10
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    iget v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    const/4 v1, -0x1
+
+    if-nez v0, :cond_f
+
+    :try_start_5
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->readNextSampleSize(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTotalBytes:I
+    :try_end_b
+    .catch Ljava/io/EOFException; {:try_start_5 .. :try_end_b} :catch_e
+
+    iput v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    goto :goto_f
+
+    :catch_e
+    return v1
+
+    :cond_f
+    :goto_f
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->trackOutput:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+    iget v2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    const/4 v3, 0x1
+
+    invoke-interface {v0, p1, v2, v3}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;->sampleData(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;IZ)I
+
+    move-result p1
+
+    if-ne p1, v1, :cond_1b
+
+    return v1
+
+    :cond_1b
+    iget v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    sub-int/2addr v0, p1
+
+    iput v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    const/4 p1, 0x0
+
+    if-lez v0, :cond_24
+
+    return p1
+
+    :cond_24
+    iget-object v1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->trackOutput:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+    iget-wide v2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTimeUs:J
+
+    const/4 v4, 0x1
+
+    iget v5, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTotalBytes:I
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-interface/range {v1 .. v7}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIIILcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput$CryptoData;)V
+
+    iget-wide v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTimeUs:J
+
+    const-wide/16 v2, 0x4e20
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTimeUs:J
+
+    return p1
+.end method
+
+
+# virtual methods
+.method public final init(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorOutput;)V
+    .registers 5
+
+    new-instance v0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/SeekMap$Unseekable;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    invoke-direct {v0, v1, v2}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/SeekMap$Unseekable;-><init>(J)V
+
+    invoke-interface {p1, v0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorOutput;->seekMap(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/SeekMap;)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-interface {p1, v0, v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorOutput;->track(II)Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->trackOutput:Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/TrackOutput;
+
+    invoke-interface {p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorOutput;->endTracks()V
+
+    return-void
+.end method
+
+.method public final read(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/PositionHolder;)I
+    .registers 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    invoke-interface {p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;->getPosition()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p2, v0, v2
+
+    if-nez p2, :cond_19
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->readAmrHeader(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_11
+
+    goto :goto_19
+
+    :cond_11
+    new-instance p1, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;
+
+    const-string p2, "Could not find AMR header."
+
+    invoke-direct {p1, p2}, Lcom/mbridge/msdk/playercommon/exoplayer2/ParserException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_19
+    :goto_19
+    invoke-direct {p0}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->maybeOutputFormat()V
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->readSample(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final release()V
+    .registers 1
+
+    return-void
+.end method
+
+.method public final seek(JJ)V
+    .registers 5
+
+    const-wide/16 p1, 0x0
+
+    iput-wide p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTimeUs:J
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleTotalBytes:I
+
+    iput p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->currentSampleBytesRemaining:I
+
+    return-void
+.end method
+
+.method public final sniff(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)Z
+    .registers 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;->readAmrHeader(Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorInput;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+###### Class com.mbridge.msdk.playercommon.exoplayer2.extractor.amr.AmrExtractor.AnonymousClass1 (com.mbridge.msdk.playercommon.exoplayer2.extractor.amr.AmrExtractor$1)
+.class final Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor$1;
+.super Ljava/lang/Object;
+.source "AmrExtractor.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/ExtractorsFactory;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final createExtractors()[Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/Extractor;
+    .registers 4
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/Extractor;
+
+    new-instance v1, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;
+
+    invoke-direct {v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/extractor/amr/AmrExtractor;-><init>()V
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method

@@ -1,0 +1,225 @@
+###### Class androidx.core.widget.ListViewCompat (androidx.core.widget.ListViewCompat)
+.class public final Landroidx/core/widget/ListViewCompat;
+.super Ljava/lang/Object;
+.source "ListViewCompat.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/widget/ListViewCompat$Api19Impl;
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static canScrollList(Landroid/widget/ListView;I)Z
+    .registers 6
+    .param p0    # Landroid/widget/ListView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_b
+
+    invoke-static {p0, p1}, Landroidx/core/widget/ListViewCompat$Api19Impl;->canScrollList(Landroid/widget/ListView;I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_b
+    invoke-virtual {p0}, Landroid/widget/ListView;->getChildCount()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_13
+
+    return v1
+
+    :cond_13
+    invoke-virtual {p0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-lez p1, :cond_38
+
+    add-int/lit8 p1, v0, -0x1
+
+    invoke-virtual {p0, p1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getBottom()I
+
+    move-result p1
+
+    add-int/2addr v2, v0
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getCount()I
+
+    move-result v0
+
+    if-lt v2, v0, :cond_36
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getListPaddingBottom()I
+
+    move-result p0
+
+    sub-int/2addr v0, p0
+
+    if-le p1, v0, :cond_37
+
+    :cond_36
+    const/4 v1, 0x1
+
+    :cond_37
+    return v1
+
+    :cond_38
+    invoke-virtual {p0, v1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result p1
+
+    if-gtz v2, :cond_48
+
+    invoke-virtual {p0}, Landroid/widget/ListView;->getListPaddingTop()I
+
+    move-result p0
+
+    if-ge p1, p0, :cond_49
+
+    :cond_48
+    const/4 v1, 0x1
+
+    :cond_49
+    return v1
+.end method
+
+.method public static scrollListBy(Landroid/widget/ListView;I)V
+    .registers 4
+    .param p0    # Landroid/widget/ListView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_a
+
+    invoke-static {p0, p1}, Landroidx/core/widget/ListViewCompat$Api19Impl;->scrollListBy(Landroid/widget/ListView;I)V
+
+    goto :goto_22
+
+    :cond_a
+    invoke-virtual {p0}, Landroid/widget/ListView;->getFirstVisiblePosition()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_12
+
+    return-void
+
+    :cond_12
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Landroid/widget/ListView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1a
+
+    return-void
+
+    :cond_1a
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    sub-int/2addr v1, p1
+
+    invoke-virtual {p0, v0, v1}, Landroid/widget/ListView;->setSelectionFromTop(II)V
+
+    :goto_22
+    return-void
+.end method
+
+###### Class androidx.core.widget.ListViewCompat.Api19Impl (androidx.core.widget.ListViewCompat$Api19Impl)
+.class Landroidx/core/widget/ListViewCompat$Api19Impl;
+.super Ljava/lang/Object;
+.source "ListViewCompat.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RequiresApi;
+    value = 0x13
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/core/widget/ListViewCompat;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "Api19Impl"
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static canScrollList(Landroid/widget/ListView;I)Z
+    .registers 2
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    invoke-virtual {p0, p1}, Landroid/widget/ListView;->canScrollList(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static scrollListBy(Landroid/widget/ListView;I)V
+    .registers 2
+    .annotation build Landroidx/annotation/DoNotInline;
+    .end annotation
+
+    invoke-virtual {p0, p1}, Landroid/widget/ListView;->scrollListBy(I)V
+
+    return-void
+.end method

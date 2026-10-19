@@ -1,0 +1,36 @@
+package com.bytedance.sdk.openadsdk.core.widget;
+
+import android.graphics.Canvas;
+import android.graphics.Path;
+import android.graphics.RectF;
+import android.webkit.WebView;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class TTCornersWebView extends WebView {
+    private int a;
+    private int b;
+    private int c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private int f1722d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private final float[] f1723e;
+
+    @Override // android.webkit.WebView, android.view.View
+    public void onDraw(Canvas canvas) {
+        this.c = getScrollX();
+        this.f1722d = getScrollY();
+        Path path = new Path();
+        path.addRoundRect(new RectF(0.0f, this.f1722d, this.c + this.a, r2 + this.b), this.f1723e, Path.Direction.CW);
+        canvas.clipPath(path);
+        super.onDraw(canvas);
+    }
+
+    @Override // android.webkit.WebView, android.widget.AbsoluteLayout, android.view.View
+    protected void onMeasure(int i, int i2) {
+        super.onMeasure(i, i2);
+        this.a = getMeasuredWidth();
+        this.b = getMeasuredHeight();
+    }
+}

@@ -1,0 +1,36 @@
+version: 2.9.3
+apkFileName: AsphaltNitro_Mod.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: '21'
+  targetSdkVersion: '33'
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+versionInfo:
+  versionCode: '18001'
+  versionName: 1.8.0a
+compressionType: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles: {}
+doNotCompress:
+- resources.arsc
+- zip
+- ogg
+- png
+- mp3
+- mpc
+- vxn
+- vxvs
+- jpg
+- tga
+- pig
+- bclara
+- xtea
+- dat
+- bin

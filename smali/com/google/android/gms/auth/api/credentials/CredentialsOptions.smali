@@ -1,0 +1,120 @@
+###### Class com.google.android.gms.auth.api.credentials.CredentialsOptions (com.google.android.gms.auth.api.credentials.CredentialsOptions)
+.class public final Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+.super Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;
+    }
+.end annotation
+
+
+# static fields
+.field public static final DEFAULT:Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;
+
+    invoke-direct {v0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;-><init>()V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;->zzc()Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+
+    sput-object v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;->DEFAULT:Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+
+    return-void
+.end method
+
+.method private constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;-><init>(Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;Lcom/google/android/gms/auth/api/credentials/zzh;)V
+    .registers 3
+
+    invoke-direct {p0, p1}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;)V
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.auth.api.credentials.CredentialsOptions.Builder (com.google.android.gms.auth.api.credentials.CredentialsOptions$Builder)
+.class public final Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;
+.super Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final build()Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+    .registers 3
+
+    new-instance v0, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;-><init>(Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;Lcom/google/android/gms/auth/api/credentials/zzh;)V
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic forceEnableSaveDialog()Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;->forceEnableSaveDialog()Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final forceEnableSaveDialog()Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;
+    .registers 2
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iput-object v0, p0, Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions$Builder;->zzn:Ljava/lang/Boolean;
+
+    return-object p0
+.end method
+
+.method public final synthetic zzc()Lcom/google/android/gms/auth/api/Auth$AuthCredentialsOptions;
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/android/gms/auth/api/credentials/CredentialsOptions$Builder;->build()Lcom/google/android/gms/auth/api/credentials/CredentialsOptions;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,0 +1,250 @@
+###### Class com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel (com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel)
+.class public Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel;
+.super Ljava/lang/Object;
+.source "StatisticModel.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel;
+    }
+.end annotation
+
+
+# instance fields
+.field public common:Lcom/bykv/vk/openvk/preload/geckox/model/Common;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "common"
+    .end annotation
+.end field
+
+.field public packages:Ljava/util/List;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "packages"
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel;->packages:Ljava/util/List;
+
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel.PackageStatisticModel (com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel$PackageStatisticModel)
+.class public Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel;
+.super Ljava/lang/Object;
+.source "StatisticModel.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "PackageStatisticModel"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel$DownloadFailRecords;
+    }
+.end annotation
+
+
+# instance fields
+.field public ac:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "ac"
+    .end annotation
+.end field
+
+.field public accessKey:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "access_key"
+    .end annotation
+.end field
+
+.field public activeCheckDuration:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "active_check_duration"
+    .end annotation
+.end field
+
+.field public applyDuration:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "apply_duration"
+    .end annotation
+.end field
+
+.field public channel:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "channel"
+    .end annotation
+.end field
+
+.field public cleanDuration:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "clean_duration"
+    .end annotation
+.end field
+
+.field public cleanStrategy:Ljava/lang/Integer;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "clean_strategy"
+    .end annotation
+.end field
+
+.field public cleanType:Ljava/lang/Integer;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "clean_type"
+    .end annotation
+.end field
+
+.field public downloadDuration:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "download_duration"
+    .end annotation
+.end field
+
+.field public downloadFailRecords:Ljava/util/List;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "download_fail_records"
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel$DownloadFailRecords;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public downloadRetryTimes:Ljava/lang/Integer;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "download_retry_times"
+    .end annotation
+.end field
+
+.field public downloadUrl:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "download_url"
+    .end annotation
+.end field
+
+.field public errCode:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "err_code"
+    .end annotation
+.end field
+
+.field public errMsg:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "err_msg"
+    .end annotation
+.end field
+
+.field public groupName:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "group_name"
+    .end annotation
+.end field
+
+.field public id:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "id"
+    .end annotation
+.end field
+
+.field public logId:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "log_id"
+    .end annotation
+.end field
+
+.field public patchId:Ljava/lang/Long;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "patch_id"
+    .end annotation
+.end field
+
+.field public statsType:Ljava/lang/Integer;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "stats_type"
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel.PackageStatisticModel.DownloadFailRecords (com.bykv.vk.openvk.preload.geckox.statistic.model.StatisticModel$PackageStatisticModel$DownloadFailRecords)
+.class public Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel$DownloadFailRecords;
+.super Ljava/lang/Object;
+.source "StatisticModel.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "DownloadFailRecords"
+.end annotation
+
+
+# instance fields
+.field public domain:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "domain"
+    .end annotation
+.end field
+
+.field public reason:Ljava/lang/String;
+    .annotation runtime Lcom/bykv/vk/openvk/preload/a/a/c;
+        a = "reason"
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel$DownloadFailRecords;->domain:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/bykv/vk/openvk/preload/geckox/statistic/model/StatisticModel$PackageStatisticModel$DownloadFailRecords;->reason:Ljava/lang/String;
+
+    return-void
+.end method

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/page_count_line"
+    android:background="@android:color/white"
+    android:layout_width="@dimen/hyprmx_page_count_indicator_width"
+    android:layout_height="@dimen/hyprmx_page_count_indicator_height"
+    android:layout_marginLeft="@dimen/hyprmx_page_count_indicator_left_margin"
+    android:layout_marginTop="@dimen/hyprmx_page_count_indicator_top_margin"
+    android:layout_marginRight="@dimen/hyprmx_page_count_indicator_right_margin"
+    android:layout_marginBottom="@dimen/hyprmx_page_count_indicator_bottom_margin"
+    android:layout_weight="1"/>

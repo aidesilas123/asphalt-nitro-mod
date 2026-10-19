@@ -1,0 +1,20 @@
+package com.bytedance.sdk.openadsdk.api.reward;
+
+/* JADX INFO: loaded from: classes2.dex */
+public class PAGRewardItem {
+    private final int a;
+    private final String b;
+
+    public PAGRewardItem(int i, String str) {
+        this.a = i;
+        this.b = str;
+    }
+
+    public int getRewardAmount() {
+        return this.a;
+    }
+
+    public String getRewardName() {
+        return this.b;
+    }
+}

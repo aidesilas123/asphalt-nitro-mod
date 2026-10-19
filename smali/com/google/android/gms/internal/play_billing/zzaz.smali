@@ -1,0 +1,22 @@
+###### Class com.google.android.gms.internal.play_billing.zzaz (com.google.android.gms.internal.play_billing.zzaz)
+.class final Lcom/google/android/gms/internal/play_billing/zzaz;
+.super Ljava/lang/Object;
+.source "com.android.billingclient:billing@@6.0.1"
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/android/gms/internal/play_billing/zzay;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

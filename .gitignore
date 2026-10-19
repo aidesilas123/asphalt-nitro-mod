@@ -1,0 +1,16 @@
+# Build output
+build/
+dist/
+*.apk
+*.idsig
+
+# Build tools cache
+tools/
+bin/
+
+# OS and Python artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+desktop.ini

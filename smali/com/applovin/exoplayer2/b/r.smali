@@ -1,0 +1,842 @@
+###### Class com.applovin.exoplayer2.b.r (com.applovin.exoplayer2.b.r)
+.class public final Lcom/applovin/exoplayer2/b/r;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/applovin/exoplayer2/b/r$a;
+    }
+.end annotation
+
+
+# static fields
+.field private static final mA:[Ljava/lang/String;
+
+.field private static final mB:[I
+
+.field private static final mC:[I
+
+.field private static final mD:[I
+
+.field private static final mE:[I
+
+.field private static final mF:[I
+
+.field private static final mG:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    const-string v0, "audio/mpeg-L1"
+
+    const-string v1, "audio/mpeg-L2"
+
+    const-string v2, "audio/mpeg"
+
+    filled-new-array {v0, v1, v2}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/applovin/exoplayer2/b/r;->mA:[Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_3a
+
+    sput-object v0, Lcom/applovin/exoplayer2/b/r;->mB:[I
+
+    const/16 v0, 0xe
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_44
+
+    sput-object v1, Lcom/applovin/exoplayer2/b/r;->mC:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_64
+
+    sput-object v1, Lcom/applovin/exoplayer2/b/r;->mD:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_84
+
+    sput-object v1, Lcom/applovin/exoplayer2/b/r;->mE:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_a4
+
+    sput-object v1, Lcom/applovin/exoplayer2/b/r;->mF:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_c4
+
+    sput-object v0, Lcom/applovin/exoplayer2/b/r;->mG:[I
+
+    return-void
+
+    :array_3a
+    .array-data 4
+        0xac44
+        0xbb80
+        0x7d00
+    .end array-data
+
+    :array_44
+    .array-data 4
+        0x7d00
+        0xfa00
+        0x17700
+        0x1f400
+        0x27100
+        0x2ee00
+        0x36b00
+        0x3e800
+        0x46500
+        0x4e200
+        0x55f00
+        0x5dc00
+        0x65900
+        0x6d600
+    .end array-data
+
+    :array_64
+    .array-data 4
+        0x7d00
+        0xbb80
+        0xdac0
+        0xfa00
+        0x13880
+        0x17700
+        0x1b580
+        0x1f400
+        0x23280
+        0x27100
+        0x2af80
+        0x2ee00
+        0x36b00
+        0x3e800
+    .end array-data
+
+    :array_84
+    .array-data 4
+        0x7d00
+        0xbb80
+        0xdac0
+        0xfa00
+        0x13880
+        0x17700
+        0x1b580
+        0x1f400
+        0x27100
+        0x2ee00
+        0x36b00
+        0x3e800
+        0x4e200
+        0x5dc00
+    .end array-data
+
+    :array_a4
+    .array-data 4
+        0x7d00
+        0x9c40
+        0xbb80
+        0xdac0
+        0xfa00
+        0x13880
+        0x17700
+        0x1b580
+        0x1f400
+        0x27100
+        0x2ee00
+        0x36b00
+        0x3e800
+        0x4e200
+    .end array-data
+
+    :array_c4
+    .array-data 4
+        0x1f40
+        0x3e80
+        0x5dc0
+        0x7d00
+        0x9c40
+        0xbb80
+        0xdac0
+        0xfa00
+        0x13880
+        0x17700
+        0x1b580
+        0x1f400
+        0x23280
+        0x27100
+    .end array-data
+.end method
+
+.method public static aG(I)I
+    .registers 8
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/b/r;->aI(I)Z
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    ushr-int/lit8 v0, p0, 0x13
+
+    const/4 v2, 0x3
+
+    and-int/2addr v0, v2
+
+    const/4 v3, 0x1
+
+    if-ne v0, v3, :cond_10
+
+    return v1
+
+    :cond_10
+    ushr-int/lit8 v4, p0, 0x11
+
+    and-int/2addr v4, v2
+
+    if-nez v4, :cond_16
+
+    return v1
+
+    :cond_16
+    ushr-int/lit8 v5, p0, 0xc
+
+    const/16 v6, 0xf
+
+    and-int/2addr v5, v6
+
+    if-eqz v5, :cond_74
+
+    if-ne v5, v6, :cond_20
+
+    goto :goto_74
+
+    :cond_20
+    ushr-int/lit8 v6, p0, 0xa
+
+    and-int/2addr v6, v2
+
+    if-ne v6, v2, :cond_26
+
+    return v1
+
+    :cond_26
+    sget-object v1, Lcom/applovin/exoplayer2/b/r;->mB:[I
+
+    aget v1, v1, v6
+
+    const/4 v6, 0x2
+
+    if-ne v0, v6, :cond_30
+
+    div-int/lit8 v1, v1, 0x2
+
+    goto :goto_34
+
+    :cond_30
+    if-nez v0, :cond_34
+
+    div-int/lit8 v1, v1, 0x4
+
+    :cond_34
+    :goto_34
+    ushr-int/lit8 p0, p0, 0x9
+
+    and-int/2addr p0, v3
+
+    if-ne v4, v2, :cond_4d
+
+    if-ne v0, v2, :cond_41
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mC:[I
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    goto :goto_46
+
+    :cond_41
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mD:[I
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    :goto_46
+    mul-int/lit8 v0, v0, 0xc
+
+    div-int/2addr v0, v1
+
+    add-int/2addr v0, p0
+
+    mul-int/lit8 v0, v0, 0x4
+
+    return v0
+
+    :cond_4d
+    if-ne v0, v2, :cond_5d
+
+    if-ne v4, v6, :cond_57
+
+    sget-object v6, Lcom/applovin/exoplayer2/b/r;->mE:[I
+
+    sub-int/2addr v5, v3
+
+    aget v5, v6, v5
+
+    goto :goto_62
+
+    :cond_57
+    sget-object v6, Lcom/applovin/exoplayer2/b/r;->mF:[I
+
+    sub-int/2addr v5, v3
+
+    aget v5, v6, v5
+
+    goto :goto_62
+
+    :cond_5d
+    sget-object v6, Lcom/applovin/exoplayer2/b/r;->mG:[I
+
+    sub-int/2addr v5, v3
+
+    aget v5, v6, v5
+
+    :goto_62
+    const/16 v6, 0x90
+
+    if-ne v0, v2, :cond_6b
+
+    mul-int/lit16 v5, v5, 0x90
+
+    div-int/2addr v5, v1
+
+    add-int/2addr v5, p0
+
+    return v5
+
+    :cond_6b
+    if-ne v4, v3, :cond_6f
+
+    const/16 v6, 0x48
+
+    :cond_6f
+    mul-int v6, v6, v5
+
+    div-int/2addr v6, v1
+
+    add-int/2addr v6, p0
+
+    return v6
+
+    :cond_74
+    :goto_74
+    return v1
+.end method
+
+.method public static aH(I)I
+    .registers 7
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/b/r;->aI(I)Z
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    ushr-int/lit8 v0, p0, 0x13
+
+    const/4 v2, 0x3
+
+    and-int/2addr v0, v2
+
+    const/4 v3, 0x1
+
+    if-ne v0, v3, :cond_10
+
+    return v1
+
+    :cond_10
+    ushr-int/lit8 v3, p0, 0x11
+
+    and-int/2addr v3, v2
+
+    if-nez v3, :cond_16
+
+    return v1
+
+    :cond_16
+    ushr-int/lit8 v4, p0, 0xc
+
+    const/16 v5, 0xf
+
+    and-int/2addr v4, v5
+
+    ushr-int/lit8 p0, p0, 0xa
+
+    and-int/2addr p0, v2
+
+    if-eqz v4, :cond_2a
+
+    if-eq v4, v5, :cond_2a
+
+    if-ne p0, v2, :cond_25
+
+    goto :goto_2a
+
+    :cond_25
+    invoke-static {v0, v3}, Lcom/applovin/exoplayer2/b/r;->l(II)I
+
+    move-result p0
+
+    return p0
+
+    :cond_2a
+    :goto_2a
+    return v1
+.end method
+
+.method private static aI(I)Z
+    .registers 2
+
+    const/high16 v0, -0x200000
+
+    and-int/2addr p0, v0
+
+    if-ne p0, v0, :cond_7
+
+    const/4 p0, 0x1
+
+    goto :goto_8
+
+    :cond_7
+    const/4 p0, 0x0
+
+    :goto_8
+    return p0
+.end method
+
+.method static synthetic aJ(I)Z
+    .registers 1
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/b/r;->aI(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic eF()[Ljava/lang/String;
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mA:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic eG()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mB:[I
+
+    return-object v0
+.end method
+
+.method static synthetic eH()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mC:[I
+
+    return-object v0
+.end method
+
+.method static synthetic eI()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mD:[I
+
+    return-object v0
+.end method
+
+.method static synthetic eJ()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mE:[I
+
+    return-object v0
+.end method
+
+.method static synthetic eK()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mF:[I
+
+    return-object v0
+.end method
+
+.method static synthetic eL()[I
+    .registers 1
+
+    sget-object v0, Lcom/applovin/exoplayer2/b/r;->mG:[I
+
+    return-object v0
+.end method
+
+.method private static l(II)I
+    .registers 5
+
+    const/4 v0, 0x1
+
+    const/16 v1, 0x480
+
+    const/4 v2, 0x3
+
+    if-eq p1, v0, :cond_15
+
+    const/4 p0, 0x2
+
+    if-eq p1, p0, :cond_14
+
+    if-ne p1, v2, :cond_e
+
+    const/16 p0, 0x180
+
+    return p0
+
+    :cond_e
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+
+    :cond_14
+    return v1
+
+    :cond_15
+    if-ne p0, v2, :cond_18
+
+    goto :goto_1a
+
+    :cond_18
+    const/16 v1, 0x240
+
+    :goto_1a
+    return v1
+.end method
+
+.method static synthetic m(II)I
+    .registers 2
+
+    invoke-static {p0, p1}, Lcom/applovin/exoplayer2/b/r;->l(II)I
+
+    move-result p0
+
+    return p0
+.end method
+
+###### Class com.applovin.exoplayer2.b.r.a (com.applovin.exoplayer2.b.r$a)
+.class public final Lcom/applovin/exoplayer2/b/r$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/applovin/exoplayer2/b/r;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field public dM:I
+
+.field public dv:I
+
+.field public eg:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field public jz:I
+
+.field public mH:I
+
+.field public mI:I
+
+.field public mJ:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public aK(I)Z
+    .registers 10
+
+    invoke-static {p1}, Lcom/applovin/exoplayer2/b/r;->aJ(I)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    ushr-int/lit8 v0, p1, 0x13
+
+    const/4 v2, 0x3
+
+    and-int/2addr v0, v2
+
+    const/4 v3, 0x1
+
+    if-ne v0, v3, :cond_10
+
+    return v1
+
+    :cond_10
+    ushr-int/lit8 v4, p1, 0x11
+
+    and-int/2addr v4, v2
+
+    if-nez v4, :cond_16
+
+    return v1
+
+    :cond_16
+    ushr-int/lit8 v5, p1, 0xc
+
+    const/16 v6, 0xf
+
+    and-int/2addr v5, v6
+
+    if-eqz v5, :cond_af
+
+    if-ne v5, v6, :cond_21
+
+    goto/16 :goto_af
+
+    :cond_21
+    ushr-int/lit8 v6, p1, 0xa
+
+    and-int/2addr v6, v2
+
+    if-ne v6, v2, :cond_27
+
+    return v1
+
+    :cond_27
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->mH:I
+
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eF()[Ljava/lang/String;
+
+    move-result-object v1
+
+    rsub-int/lit8 v7, v4, 0x3
+
+    aget-object v1, v1, v7
+
+    iput-object v1, p0, Lcom/applovin/exoplayer2/b/r$a;->eg:Ljava/lang/String;
+
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eG()[I
+
+    move-result-object v1
+
+    aget v1, v1, v6
+
+    iput v1, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    const/4 v6, 0x2
+
+    if-ne v0, v6, :cond_42
+
+    div-int/2addr v1, v6
+
+    iput v1, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    goto :goto_48
+
+    :cond_42
+    if-nez v0, :cond_48
+
+    div-int/lit8 v1, v1, 0x4
+
+    iput v1, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    :cond_48
+    :goto_48
+    ushr-int/lit8 v1, p1, 0x9
+
+    and-int/2addr v1, v3
+
+    invoke-static {v0, v4}, Lcom/applovin/exoplayer2/b/r;->m(II)I
+
+    move-result v7
+
+    iput v7, p0, Lcom/applovin/exoplayer2/b/r$a;->mJ:I
+
+    if-ne v4, v2, :cond_71
+
+    if-ne v0, v2, :cond_5d
+
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eH()[I
+
+    move-result-object v0
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    goto :goto_64
+
+    :cond_5d
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eI()[I
+
+    move-result-object v0
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    :goto_64
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->dv:I
+
+    mul-int/lit8 v0, v0, 0xc
+
+    iget v4, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    div-int/2addr v0, v4
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x4
+
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->jz:I
+
+    goto :goto_a6
+
+    :cond_71
+    const/16 v7, 0x90
+
+    if-ne v0, v2, :cond_91
+
+    if-ne v4, v6, :cond_7f
+
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eJ()[I
+
+    move-result-object v0
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    goto :goto_86
+
+    :cond_7f
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eK()[I
+
+    move-result-object v0
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    :goto_86
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->dv:I
+
+    mul-int/lit16 v0, v0, 0x90
+
+    iget v4, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    div-int/2addr v0, v4
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->jz:I
+
+    goto :goto_a6
+
+    :cond_91
+    invoke-static {}, Lcom/applovin/exoplayer2/b/r;->eL()[I
+
+    move-result-object v0
+
+    sub-int/2addr v5, v3
+
+    aget v0, v0, v5
+
+    iput v0, p0, Lcom/applovin/exoplayer2/b/r$a;->dv:I
+
+    if-ne v4, v3, :cond_9e
+
+    const/16 v7, 0x48
+
+    :cond_9e
+    mul-int v7, v7, v0
+
+    iget v0, p0, Lcom/applovin/exoplayer2/b/r$a;->dM:I
+
+    div-int/2addr v7, v0
+
+    add-int/2addr v7, v1
+
+    iput v7, p0, Lcom/applovin/exoplayer2/b/r$a;->jz:I
+
+    :goto_a6
+    shr-int/lit8 p1, p1, 0x6
+
+    and-int/2addr p1, v2
+
+    if-ne p1, v2, :cond_ac
+
+    const/4 v6, 0x1
+
+    :cond_ac
+    iput v6, p0, Lcom/applovin/exoplayer2/b/r$a;->mI:I
+
+    return v3
+
+    :cond_af
+    :goto_af
+    return v1
+.end method

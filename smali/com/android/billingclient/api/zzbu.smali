@@ -1,0 +1,4 @@
+###### Class com.android.billingclient.api.zzbu (com.android.billingclient.api.zzbu)
+.class public final synthetic Lcom/android/billingclient/api/zzbu;
+.super Ljava/lang/Object;
+.source "com.android.billingclient:billing@@6.0.1"

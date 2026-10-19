@@ -1,0 +1,9 @@
+###### Class com.fyber.inneractive.sdk.protobuf.t0 (com.fyber.inneractive.sdk.protobuf.t0)
+.class public interface abstract Lcom/fyber/inneractive/sdk/protobuf/t0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# virtual methods
+.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
+.end method

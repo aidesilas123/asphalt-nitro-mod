@@ -1,0 +1,478 @@
+{
+  "app": {
+    "name": "Gameloft",
+    "vendors": {
+      "iab": {
+        "all": true,
+        "stacks": {
+          "ids": [],
+          "auto": true
+        },
+        "enabled": true,
+        "exclude": [],
+        "include": [],
+        "version": 2,
+        "minorVersion": 2,
+        "restrictions": [],
+        "gvlSpecificationVersion": 3
+      },
+      "didomi": [ "facebook", "google" ],
+      "custom": [
+        {
+          "id": "admob",
+          "name": "AdMob",
+          "policyUrl": "",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "improve_products", "market_research", "measure_ad_performance", "measure_content_performance", "select_basic_ads", "select_personalized_ads", "select_personalized_content" ],
+          "legIntPurposeIds": [],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "googleana-4TXnJigR",
+          "name": "Google Analytics Products",
+          "policyUrl": "https://policies.google.com/privacy",
+          "purposeIds": [ "cookies", "measure_content_performance" ],
+          "legIntPurposeIds": [],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "gameloftd-itqQPWGA",
+          "name": "Gameloft Distribution",
+          "policyUrl": "",
+          "purposeIds": [ "device_characteristics", "market_research", "measure_ad_performance", "measure_content_performance", "geolocation_data", "cookies", "create_ads_profile", "create_content_profile", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "groupcana-7MciEY7d",
+          "name": "Group Canal+",
+          "policyUrl": "https://static.canal-plus.net/gitlab/infoslegales/production/donnees-personnelles.html",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "market_research", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "device_characteristics", "measure_ad_performance", "measure_content_performance", "geolocation_data" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "ironsource-VwP36PZH",
+          "name": "Ironsource",
+          "policyUrl": "http://www.ironsrc.com/wp-content/uploads/2019/03/ironSource-Privacy-Policy.pdf",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "geolocation_data", "market_research", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "device_characteristics", "measure_ad_performance", "measure_content_performance" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "havasgrou-47k3mgDM",
+          "name": "Havas Group",
+          "policyUrl": "https://www.havasgroup.fr/politique-de-protection-des-donnees-personnelles/",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "market_research", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "device_characteristics", "measure_ad_performance", "measure_content_performance", "geolocation_data" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "madopiou-T7VprpaK",
+          "name": "MADOPI OU",
+          "policyUrl": "https://madopi.com/wp-content/uploads/2022/05/PrivacyPolicy.pdf",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "device_characteristics", "geolocation_data", "market_research", "measure_ad_performance", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "measure_content_performance" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "prismamed-q4CL4nxa",
+          "name": "PRISMA MEDIA SAS ",
+          "policyUrl": "https://www.prismamedia.com/charte-pour-la-protection-des-donnees/",
+          "purposeIds": [ "device_characteristics", "market_research", "measure_ad_performance", "geolocation_data", "measure_content_performance", "cookies", "create_ads_profile", "create_content_profile", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "seeticket-DmdCkjWQ",
+          "name": "See Tickets SAS",
+          "policyUrl": "https://www.seetickets.com/fr/?",
+          "purposeIds": [ "vivendigr-C3mXxw7j", "device_characteristics", "market_research", "create_ads_profile", "create_content_profile", "measure_ad_performance", "select_personalized_ads", "select_personalized_content", "measure_content_performance", "geolocation_data", "cookies" ],
+          "legIntPurposeIds": [ "improve_products", "select_basic_ads" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "vivendi-9ARr6jQZ",
+          "name": "Vivendi",
+          "policyUrl": "https://www.vivendi.com/en/footer/data-and-content-protection-charter/",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "market_research", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "device_characteristics", "measure_ad_performance", "measure_content_performance", "geolocation_data" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "editishol-eNgH7dAh",
+          "name": "Editis Holding SA",
+          "policyUrl": "https://www.editis.com/cgu-et-protection-des-donnees-a-caractere-personnel/",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "measure_ad_performance", "device_characteristics", "market_research", "measure_content_performance", "geolocation_data" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "facebooka-X7hyUmKm",
+          "name": "Facebook Audience Network",
+          "policyUrl": "https://www.facebook.com/privacy",
+          "purposeIds": [ "cookies", "create_ads_profile", "create_content_profile", "geolocation_data", "measure_ad_performance", "select_personalized_ads", "select_personalized_content", "vivendigr-C3mXxw7j", "device_characteristics", "market_research", "measure_content_performance" ],
+          "legIntPurposeIds": [ "select_basic_ads", "improve_products" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "silvermob-6LymX22p",
+          "name": "SilverMob",
+          "policyUrl": "https://silvermob.com/privacy",
+          "purposeIds": [ "cookies", "create_ads_profile", "select_personalized_ads" ],
+          "legIntPurposeIds": [ "improve_products", "market_research", "measure_ad_performance", "select_basic_ads" ],
+          "usesNonCookieAccess": false,
+          "lang_urls": []
+        },
+        {
+          "id": "mintegral-GB3fYJKZ",
+          "name": "MINTEGRAL INTERNATIONAL LTD (ADLOGIC TECHNOLOGY Pte. Ltd)",
+          "policyUrl": "https://www.mintegral.com/en/privacy",
+          "purposeIds": [ "cookies", "create_ads_profile", "device_characteristics", "market_research", "measure_ad_performance", "select_personalized_ads", "improve_products", "select_basic_ads", "geo_ads" ],
+          "legIntPurposeIds": [],
+          "usesNonCookieAccess": false,
+          "cookieMaxAgeSeconds": 34257600,
+          "lang_urls": []
+        }
+      ],
+      "google": { "fullATP": false }
+    },
+    "privacyPolicyURL": "https://www.gameloft.com/en/privacy-notice/",
+    "essentialPurposes": [],
+    "gdprAppliesGlobally": false,
+    "gdprAppliesWhenUnknown": false,
+    "customPurposes": [
+      {
+        "id": "vivendigr-C3mXxw7j",
+        "name": {
+          "de": "Datenoptimierung für Unternehmen der Vivendi-Gruppe  ",
+          "en": "Vivendi Group entities data optimization ",
+          "es": "Optimización de datos para entidades del Grupo Vivendi",
+          "fr": "Optimisation des données pour les entités du groupe Vivendi ",
+          "it": "Ottimizzazione dei dati per le entità del Gruppo Vivendi ",
+          "ja": "Vivendi Group各社への共有",
+          "ko": "Vivendi Group 최적화",
+          "pt": "3) Entidades do Grupo Vivendi - Otimização de Dados",
+          "ru": "Группа компаний Vivendi - Оптимизация данных",
+          "tr": "Vivendi Grubu Varlıkları -- Veri Optimizasyonu"
+        },
+        "description": {
+          "de": "Die erfassten Daten werden an Unternehmen der Vivendi-Gruppe weitergegeben, um die Inhalte/Werbung und Produkte zu personalisieren, die Gameloft und andere Vivendi-Unternehmen Ihnen möglicherweise anbieten.",
+          "en": "The collection of your information is shared with Vivendi entities to personalise content/ advertisings and products Gameloft and Vivendi entities may propose to you.",
+          "es": "\nLa información recopilada se comparte con las entidades de Vivendi para personalizar el contenido/publicidad y los productos que las entidades de Gameloft y Vivendi pueden ofrecerte.",
+          "fr": "Les informations recueillies sont partagées avec les entités Vivendi afin de personnaliser le contenu ou la publicité et les produits que les entités Gameloft et Vivendi peuvent vous adresser.",
+          "it": "Le informazioni raccolte vengono condivise con le entità Vivendi per personalizzare i contenuti / la pubblicità e i prodotti offerti da Gameloft e dalle entità Vivendi.",
+          "ja": "収集したお客様の情報はVivendi各社に共有されます。これは、ゲームロフトおよびVivendi各社がお客様に提供し得るコンテンツ/広告および製品のパーソナライズに使用されます。",
+          "ko": "수집한 정보는 Gameloft와 Vivendi에서 제공하는 콘텐츠/광고 및 제품의 개별 추천을 위해 Vivendi와 공유됩니다.",
+          "pt": "Suas informações recolhidas são compartilhadas com entidades do Grupo Vivendi para personalizar conteúdo/publicidade e produtos que a Gameloft e entidades do Grupo Vivendi possam oferecer a você.",
+          "ru": "Ваши собранные данные могут передаваться между компаниями группы Vivendi для персонализации контента/рекламы и продуктов, предлагаемых вам компанией Gameloft и другими компаниями Vivendi.",
+          "tr": "Gameloft ve Vivendi varlıklarının sizlere sunabileceği içerik/reklam ve ürünleri kişiselleştirmek için toplanan bilgileriniz Vivendi şirketleriyle paylaşılır."
+        }
+      },
+      {
+        "id": "geo_ads",
+        "name": {
+          "ar": "تخزين معلومات تحديد الموقع الجغرافي والوصول إليها لأغراض الدعاية المستهدفة",
+          "az": "Məqsədli reklam məqsədləri üçün geolokasiya məlumatlarının saxlanması və əldə edilməsi",
+          "bg": "Съхранение и достъп до информация за геолокация за целево рекламиране",
+          "bn": "লক্ষ্যযুক্ত বিজ্ঞাপনের উদ্দেশ্যে ভৌগলিক অবস্থানের তথ্য সংরক্ষণ এবং অ্যাক্সেস",
+          "ca": "Emmagatzematge i accés a la informació de geolocalització amb finalitats de publicitat personalitzada",
+          "cs": "Ukládání a přístup k informacím o geografické poloze pro účely cílené reklamy",
+          "da": "Lagring og adgang til oplysninger om geoplacering til målrettede reklameformål.",
+          "de": "Speicherung von und Zugriff auf Standortdaten für gezielte Werbung",
+          "el": "Αποθήκευση και πρόσβαση σε πληροφορίες γεωγραφικής τοποθεσίας στο πλαίσιο στοχευμένης διαφήμισης",
+          "en": "Storage and access to geolocation information for targeted advertising purposes",
+          "es": "Almacenamiento y acceso a información de geolocalización con propósitos de publicidad dirigida",
+          "et": "Asukohateabe salvestamine ja juurdepääs sellele sihitud reklaami otstarbel",
+          "fi": "Geosijaintitietojen tallennus ja käyttö kohdennettua mainontaa varten",
+          "fr": "Conservation et accès aux informations de géolocalisation à des fins de publicité ciblée",
+          "he": "אחסון וגישה למידע גאוגרפי למטרות פרסום ממומן",
+          "hr": "Pohrana i pristup informacijama o geolokaciji u svrhu ciljanog oglašavanja.",
+          "hu": "Tárolás és a helymeghatározási adatok elérése célzott hirdetések céljaira",
+          "id": "Penyimpanan dan akses ke informasi geolokasi untuk tujuan periklanan yang ditargetkan",
+          "it": "Archiviazione e accesso alle informazioni di geolocalizzazione per scopi pubblicitari mirati",
+          "ja": "ターゲティング広告目的のための地理位置情報の保存とアクセス",
+          "ko": "대상 광고 목적으로의 지리적 위치 정보의 저장 및 접근",
+          "lt": "Atmintinė ir prieiga prie geografinės vietos informacijos tikslinės reklamos tikslais",
+          "lv": "Piekļuve datu glabātuvei un ģeolokācijas informācijai pielāgotas reklāmas mērķiem",
+          "ms": "Penyimpanan dan akses kepada maklumat geolokasi untuk tujuan pengiklanan yang disasarkan",
+          "nl": "Opslag en toegang tot geolocatie-informatie voor gerichte reclamedoeleinden",
+          "no": "Lagring og tilgang til geolokaliseringsinformasjon for målrettede annonseringsformål",
+          "pl": "Przechowywanie i dostęp do informacji geolokacyjnych w celach reklamowych",
+          "pt": "Armazenamento e acesso a informações de geolocalização para fins de publicidade direcionada",
+          "ro": "Stocare și acces la informațiile de geolocalizare pentru afișarea reclamelor țintite",
+          "ru": "Хранение и передача данных о местоположении для таргетированной рекламы",
+          "sk": "Úložisko a prístup ku geolokačným informáciám na účely zacielenej reklamy",
+          "sl": "Shranjevanje in dostop do geolokacijskih podatkov za ciljno oglaševanje",
+          "sr": "Чување и приступ информацијама о геолокацији у сврхе циљаног оглашавања",
+          "sv": "Lagring av och åtkomst till geografisk information för riktad reklam",
+          "sw": "Hifadhi na ufikiaji wa maelezo ya eneo la kijiografia kwa madhumuni yanayolengwa ya utangazaji",
+          "th": "การจัดเก็บและการเข้าถึงข้อมูลตำแหน่งทางภูมิศาสตร์เพื่อวัตถุประสงค์ในการโฆษณาที่ตรงเป้าหมาย",
+          "tr": "Hedefli reklam amaçları için coğrafi konum bilgilerinin depolanması ve erişim",
+          "uk": "Сховище та доступ до відомостей про географічне положення для показу цільових рекламних оголошень",
+          "vi": "Lưu trữ và truy cập thông tin địa lý để mục đích quảng cáo nhắm mục tiêu",
+          "fil": "Imbakan at pag-access sa impormasyon ng geolocation para sa naka-target na layunin ng advertising",
+          "az-AZ": "Məqsədli reklam məqsədləri üçün geolokasiya məlumatlarının saxlanması və əldə edilməsi",
+          "bn-IN": "লক্ষ্যযুক্ত বিজ্ঞাপনের উদ্দেশ্যে ভৌগলিক অবস্থানের তথ্য সংরক্ষণ এবং অ্যাক্সেস",
+          "hi-in": "लक्षित विज्ञापन उद्देश्यों के लिए भू-स्थान सूचना की संग्रहण और पहुंच",
+          "mk-MK": "Складирање и пристап до информации за геолокација за целни рекламни цели",
+          "pt-BR": "Armazenamento e acesso a informações de geolocalização para fins de publicidade direcionada",
+          "zh-CN": "为定向广告目的存储和访问地理位置信息",
+          "zh-TW": "為了針對廣告目的儲存和訪問地理位置信息"
+        },
+        "description": {
+          "ar": "يريد شركاؤنا في التسويق الجغرافي ، نيابة عن عملائهم ، أن يقدموا لك إعلانات مخصصة تتكيف مع اهتماماتك والعروض التجارية المتاحة من حولك.",
+          "bg": "Нашите партньори в областта на геомаркетинга искат, от името на своите клиенти, да Ви предложат персонализирани реклами, съобразени с Вашите интереси, както и търговски оферти в близост до Вас.",
+          "ca": "Els nostres socis de geomàrqueting volen, en nom dels seus clients, oferir-vos anuncis personalitzats que s'adaptin als vostres interessos i també ofertes comercials disponibles al vostre voltant.",
+          "cs": "Naši geomarketingoví partneři chtějí jménem svých zákazníků nabízet personalizované reklamy přizpůsobené vašim zájmům a obchodní nabídky, které jsou k dispozici ve vašem okolí.",
+          "da": "Vores geomarketing-partnere ønsker på vegne af deres kunder at tilbyde dig personligt tilpassede reklamer, som passer til dine interesser, og kommercielle tilbud i nærheden af dig.",
+          "de": "Unsere Geomarketing-Partner möchten im Namen ihrer Kunden personalisierte Werbung zeigen, die auf Ihre Interessen und Angebote in Ihrer Nähe abgestimmt sind.",
+          "el": "Οι συνεργάτες μας στον τομέα του γεωγραφικού μάρκετινγκ επιθυμούν, για λογαριασμό των πελατών τους, να σας προσφέρουν εξατομικευμένες διαφημίσεις που είναι προσαρμοσμένες στα ενδιαφέροντά σας και εμπορικές προσφορές που είναι διαθέσιμες γύρω σας.",
+          "en": "Our geomarketing partners want, on behalf of their customers, to offer you personalized advertisements adapted to your interests and and commercial offers available around you.",
+          "es": "Nuestros socios de geomarketing quieren, en nombre de sus clientes, ofrecerle publicidad personalizada adaptada a sus intereses y ofertas comerciales disponibles a su alrededor.",
+          "et": "Meie geoturunduspartnerid soovivad pakkuda teile oma klientide poolt isikupärastatud reklaame, mis on kohandatud teie huvide ja teie lähedal tehtud äripakkumiste põhjal.",
+          "fi": "Geomarkkinointikumppanimme haluavat tarjota sinulle asiakkaidensa puolesta mielenkiinnonkohteitasi vastaavia personoituja mainoksia ja lähialueellasi saatavilla olevia tarjouksia.",
+          "fr": "Nos partenaires géomarketing souhaitent, pour le compte de leurs clients (magasins et marques), vous proposer des publicités personnalisées adaptées à vos centres d’intérêt et vous permettre de connaitre les offres disponibles autour de vous.",
+          "he": "שותפי הגיאומרקטינג שלנו רוצים, בשם לקוחותיהם, להציע לך פרסומות מותאמות אישית המותאמות לתחומי העניין שלך ולהצעות המסחריות הזמינות סביבך.",
+          "hr": "Naši partneri za geomarketing vam žele u ime svojih klijenata nuditi oglase koji su prilagođeni vašim interesima, kao i komercijalne ponude koje su dostupne u vašoj blizini.",
+          "hu": "Geomarketinges partnereink szeretnének Önnek ügyfeleik nevében személyre szabott, az Ön érdeklődési körén alapuló, a környezetében elérhető hirdetéseket és kereskedelmi kínálatokat nyújtani.",
+          "id": "Mitra geomarketing kami ingin, atas nama pelanggan mereka, menawarkan kepada Anda iklan yang dipersonalisasi yang disesuaikan dengan minat Anda dan penawaran komersial yang tersedia di sekitar Anda.",
+          "it": "I nostri partner di geomarketing desiderano, per conto dei loro clienti, offrirti annunci personalizzati adatti ai tuoi interessi e offerte commerciali disponibili nella tua zona.",
+          "ja": "当社のジオマーケティング パートナーは、顧客に代わって、あなたの興味に合わせたパーソナライズされた広告や、あなたの周囲で利用可能な商業オファーを提供したいと考えています。",
+          "ko": "당사의 지리 마케팅 파트너는 고객을 대신하여 귀하의 관심 분야에 맞는 맞춤형 광고와 귀하 주변에서 이용 가능한 상업적 제안을 제공하기를 원합니다.",
+          "lt": "Mūsų geografinės rinkodaros partneriai savo klientų vardu nori pasiūlyti jums reklamas, asmeniškai pritaikytas prie jūsų pomėgių, ir komercinius pasiūlymus, galiojančius jūsų apylinkėse.",
+          "lv": "Mūsu ģeomārketinga partneri, savu klientu vardā, vēlas piedāvāt jums personalizētas reklāmas, kas ir pielāgotas jūsu interesēm, un īpaši jums paredzētus komerciālus piedāvājumus.",
+          "ms": "Rakan kongsi geomarketing kami mahu, bagi pihak pelanggan mereka, menawarkan kepada anda iklan yang diperibadikan yang disesuaikan dengan minat anda dan tawaran komersial yang tersedia di sekeliling anda.",
+          "nl": "Onze geomarketing-partners willen u namens hun klanten graag gepersonaliseerde reclames aanbieden die op uw interesses zijn afgestemd en commerciële aanbiedingen die in uw buurt beschikbaar zijn.",
+          "no": "Våre geomarkedsføringspartnere ønsker, på vegne av sine kunder, å tilby deg personlig tilpassede annonser tilpasset dine interesser og kommersielle tilbud tilgjengelig rundt deg.",
+          "pl": "Nasi partnerzy w usługach geolokacyjnych starają się, w imieniu swoich klientów, zaoferować Ci spersonalizowane reklamy, uwzględniając Twoje zainteresowania i dostęp do produktów.",
+          "pt": "Os nossos parceiros de geomarketing pretendem oferecer-lhe, em nome dos respetivos clientes, anúncios personalizados adaptados aos seus interesses, bem como ofertas comerciais disponíveis perto de si.",
+          "ro": "Partenerii noștri de geomarketing își doresc, în numele clienților, să vă ofere reclame personalizate adaptate intereselor dvs. și oferte comerciale disponibile în zona dvs.",
+          "ru": "Наши партнеры по геомаркетингу хотят от имени своих клиентов предлагать вам персонализированную рекламу, соответствующую вашим интересам и доступным предложениям рядом с вами.",
+          "sk": "Naši geomarketingoví partneri vám chcú v mene svojich zákazníkov ponúknuť prispôsobenú reklamu zodpovedajúcu vašim záujmom a komerčným ponukám dostupným vo vašom okolí.",
+          "sl": "Naši geotržni partnerji vam želijo za svoje stranke ponujati oglase, osebno prilagojene glede na vaše zanimanje, in komercialne ponudbe, ki so na voljo v vaši bližini.",
+          "sr": "Наши геомаркетинг партнери желе, у име својих купаца, да вам понуде персонализоване рекламе прилагођене вашим интересовањима и комерцијалне понуде доступне око вас.",
+          "sv": "Våra geomarknadsföringspartners vill, å sina kunders vägnar, erbjuda dig personliga annonser som är anpassade efter dina intressen och kommersiella erbjudanden som är tillgängliga i ditt närområde.",
+          "sw": "Washirika wetu wa uuzaji wa kijiografia wanataka, kwa niaba ya wateja wao, kukupa matangazo ya kibinafsi ambayo yanalingana na mambo yanayokuvutia na matoleo ya kibiashara yanayopatikana karibu nawe.",
+          "th": "พันธมิตรการตลาดทางภูมิศาสตร์ของเราต้องการในนามของลูกค้า เพื่อนำเสนอโฆษณาที่ปรับเปลี่ยนตามความสนใจและข้อเสนอเชิงพาณิชย์ที่มีให้สำหรับคุณ",
+          "tr": "Coğrafi konum pazarlama ortaklarımız, müşterilerinin adına, sizlerin ilgi alanlarınıza uygun kişiselleştirilmiş reklamlar ve bölgenizde mevcut olan ticari teklifleri sunmak istemektedir.",
+          "uk": "Наші партнери з геомаркетингу хочуть від імені своїх клієнтів пропонувати вам персоналізовані рекламні оголошення, адаптовані під ваші інтереси, і комерційні пропозиції неподалік від вас.",
+          "vi": "Các đối tác tiếp thị địa lý của chúng tôi thay mặt cho khách hàng của họ muốn cung cấp cho bạn các quảng cáo được cá nhân hóa phù hợp với sở thích của bạn và các ưu đãi thương mại có sẵn xung quanh bạn.",
+          "fil": "Nais ng aming mga kasosyo sa geomarketing, sa ngalan ng kanilang mga customer, na mag-alok sa iyo ng mga personalized na advertisement na inangkop sa iyong mga interes at komersyal na alok na available sa paligid mo.",
+          "az-AZ": "Geomarketinq tərəfdaşlarımız öz müştəriləri adından sizin maraqlarınıza uyğunlaşdırılmış fərdiləşdirilmiş reklamları və ətrafınızda mövcud olan kommersiya təkliflərini təklif etmək istəyirlər.",
+          "bn-IN": "আমাদের জিওমার্কেটিং অংশীদাররা তাদের গ্রাহকদের পক্ষ থেকে আপনার চারপাশে উপলব্ধ আপনার আগ্রহ এবং বাণিজ্যিক অফারগুলির সাথে খাপ খাইয়ে আপনাকে ব্যক্তিগতকৃত বিজ্ঞাপন অফার করতে চায়।",
+          "hi-IN": "हमारे जियोमार्केटिंग साझेदार अपने ग्राहकों की ओर से, आपकी रुचियों और आपके आस-पास उपलब्ध व्यावसायिक प्रस्तावों के अनुरूप आपको वैयक्तिकृत विज्ञापन प्रदान करना चाहते हैं।",
+          "mk-MK": "Нашите партнери за геомаркетинг сакаат, во име на своите клиенти, да ви понудат персонализирани реклами приспособени на вашите интереси и комерцијални понуди достапни околу вас.",
+          "pt-BR": "Os nossos parceiros de geomarketing pretendem, em nome dos seus clientes, oferecer-lhe anúncios personalizados adaptados aos seus interesses e ofertas comerciais disponíveis ao seu redor.",
+          "zh-CN": "我们的地理营销合作伙伴希望代表他们的客户向您提供适合您的兴趣的个性化广告以及您周围的商业优惠。",
+          "zh-TW": "我們的地理行銷合作夥伴希望代表他們的客戶向您提供適合您的興趣的個人化廣告以及您周圍的商業優惠。"
+        }
+      }
+    ],
+    "apiKey": "4ddf68ae-5211-4fb3-9350-c14ce85ace44",
+    "deploymentId": "2nkVHhPF",
+    "country": "fr",
+    "consentDuration": 15811200,
+    "deniedConsentDuration": 7905600
+  },
+  "user": { "bots": { "consentRequired": false } },
+  "theme": {
+    "css": "",
+    "font": "Arial, sans-serif",
+    "color": "#05687B",
+    "linkColor": "#05687B"
+  },
+  "notice": {
+    "content": {
+      "notice": {
+        "de": "Wir und <a href=\"javascript:Didomi.preferences.show('vendors')\">unsere Partner</a> können auf Ihrem Gerät nicht sensible Informationen wie Cookies oder eine eindeutige Gerätekennung speichern und darauf zugreifen und personenbezogene Informationen wie Online-Identifizierungsmerkmale (wie IP-Adressen oder Werbe-IDs), Verhaltensdaten (wie Ihren Browserverlauf) oder Ihre Geolokalisierungsdaten verarbeiten. Bitte beachten Sie, dass Ihre personenbezogenen Daten in Ländern außerhalb der EU, darunter auch in die USA, übermittelt werden können. Weitere Informationen finden Sie in unserer Datenschutzrichtlinie. Sie können Ihre Einwilligungspräferenzen jederzeit ändern, wie in unserer Cookie-Richtlinie erläutert.",
+        "en": "We and <a href=\"javascript:Didomi.preferences.show('vendors')\">our partners</a> may store and access non-sensitive information on your device, like cookies or a unique device identifier, and process personal information like online identifiers (such as IP addresses or advertising IDs), behavioural data (such as your browsing history) or your geolocation data. Please note that your personal information may be transferred outside of the EU, including to the USA. More information is available in our Privacy Policy. You may manage your consent preferences at any time, as explained in our Cookies Policy.",
+        "es": "Gameloft y <a href=\"javascript:Didomi.preferences.show('vendors')\">sus socios</a> pueden almacenar y acceder a información no confidencial en su dispositivo, como cookies o un identificador de dispositivo único, y procesar información personal como identificadores en línea (direcciones IP o ID de publicidad), datos de comportamiento (historial de navegación) o sus datos de geolocalización. Tenga en cuenta que su información personal puede transferirse fuera de la UE, incluidos los EE. UU. Hay más información disponible en nuestra Política de privacidad. Puede gestionar sus preferencias de consentimiento en cualquier momento, tal y como se explica en nuestra Política de cookies.",
+        "fr": "Nous et <a href=\"javascript:Didomi.preferences.show('vendors')\">nos partenaires</a> pouvons stocker des informations non sensibles sur votre appareil, comme des cookies ou un identifiant d'appareil unique, et y accéder, et traiter des informations personnelles comme des identifiants en ligne (tels que des adresses IP ou des identifiants publicitaires), des données comportementales (telles que votre historique de navigation) ou vos données de géolocalisation. Veuillez noter que vos informations personnelles pourraient être transférées en dehors de l'UE, y compris aux États-Unis. Vous trouvez de plus amples informations dans notre Politique de confidentialité. Vous pouvez gérer votre consentement à tout moment, comme indiqué dans notre Politique en matière de cookies.",
+        "it": "Noi e <a href=\"javascript:Didomi.preferences.show('vendors')\">i nostri partner</a> conserviamo e accediamo a dati non riservati sul tuo dispositivo, come cookie o l'identificativo unico del tuo dispositivo, ed elaboriamo dati personali come identificativi online (indirizzi IP, ID pubblicitari, ecc.), dati sulle tue abitudini di navigazione o la tua posizione geografica. I tuoi dati personali potrebbero essere trasferiti al di fuori dell'Unione Europea, in territori che possono includere gli Stati Uniti. Per ulteriori informazioni, consulta le nostre Politiche sulla privacy. È possibile ritirare il proprio consenso in qualsiasi momento, come indicato nelle nostre Politiche sui cookie."
+      },
+      "popup": {
+        "de": "",
+        "en": "",
+        "es": "",
+        "fr": "",
+        "it": ""
+      }
+    },
+    "position": "popup",
+    "closeOnClick": false,
+    "closeOnScroll": false,
+    "showDataProcessing": true,
+    "closeOnScrollThreshold": 0,
+    "daysBeforeShowingAgain": 180,
+    "closeOnScrollThresholdType": "",
+    "closeOnClickNavigationDelay": 0,
+    "denyOptions": { "button": "none" },
+    "denyAppliesToLI": false,
+    "enable": false
+  },
+  "languages": {
+    "default": "en",
+    "enabled": [ "en", "fr", "de", "it", "es" ]
+  },
+  "preferences": {
+    "content": {
+      "text": {
+        "de": "Hallo! Vielen Dank für das Herunterladen unseres Spiels! Willkommen auf unserer Consent-Management-Seite! Wir bei Gameloft möchten, dass jeder spielen kann. Deshalb ist dieses Spiel gratis. Um dieses Spiel weiter zu verbessern und damit wir in Zukunft weitere coole Elemente hinzufügen können, benötigen wir und unsere Partner Ihre Einwilligung, um einige Ihrer Daten (personenbezogen oder nicht) für verschiedene Zwecke zu sammeln. Dazu gehören: Das Messen unserer Zielgruppe und Durchführen von Analysen, das Bereitstellen von zielgerichteten Inhalten und Anzeigen basierend auf Ihren Interessen und Interaktionen mit uns sowie das Ermöglichen des Teilens von Inhalten in den Social Media. Klicken Sie hier <a href=\"https://www.gameloft.com/de/privacy-notice\" target=\"_blank\">Datenschutzrichtlinie</a>  , um weitere Informationen zu Ihren persönlichen Daten und Datenschutzrechten zu erhalten.\nWenn Ihnen das Spiel gefällt und Sie uns unterstützen möchten, treffen Sie unten Ihre Auswahl und spielen Sie weiter! Sie können alle diese Zwecke akzeptieren, indem Sie auf \"Allen zustimmen\" klicken, alle ablehnen, indem Sie auf \"Alle ablehnen\" klicken, oder unten Ihre eigene Auswahl treffen. Keine Sorge, falls Sie Ihre Meinung ändern, können Sie jederzeit in den Spieleinstellungen zu dieser Seite zurückkehren.\n",
+        "en": "Hey! Thank you for downloading our game! Welcome to our Consent Management Page! At Gameloft, we want everyone to be able to play, and that’s why this game is free. To keep improving this game so we can add more cool stuff in the future, we and our partners need your consent to collect some of your information (personal or not) for several purposes. These include: measuring our audience and performing analytics, providing you with targeted content and ads based on your interests and interactions with us, and allowing you to share content on social media. You can click here <a href=\"https://www.gameloft.com/en/privacy-notice\" target=\"_blank\">Privacy Policy</a> to find out more, including details about your personal information and privacy rights.\nSo if you like the game and want to support us, make your choices below and play on! You can accept all of these purposes by clicking on “Agree to all,” refuse all of them by clicking on “Disagree to all,” or make your own selection below. Don’t worry, you can always go to the game settings and come back to this page if you change your mind. \nThank you and enjoy!\n\n",
+        "es": "¡Gracias por descargar nuestro juego! ¡Bienvenido a nuestra página de gestión de consentimiento! En Gameloft, queremos que todos puedan jugar, y por eso este juego es gratuito. Para seguir mejorando este juego y poder agregar más cosas interesantes en el futuro, nosotros y nuestros socios necesitamos tu consentimiento para recopilar parte de tu información (personal o no) para varios propósitos. Estos incluyen: medir nuestra audiencia y realizar análisis, proporcionarte contenido específico y anuncios basados en tus intereses e interacciones con nosotros, y permitirte compartir contenido en las redes sociales \nPuedes hacer clic aquí <a href=\"https://www.gameloft.com/es/privacy-notice\" target=\"_blank\">Política de privacidad</a> para obtener más información, incluidos detalles sobre tu información personal y tus derechos de privacidad.\nAsí que, si te gusta el juego y quieres apoyarnos, ¡haz tu elección a continuación y sigue jugando! Puedes aceptar todas estas opciones  haciendo clic en \"Aceptar todos\", rechazarlos haciendo clic en \"Rechazar todos\" o hacer tu propia selección a continuación. No te preocupes, siempre puedes ir a la configuración del juego y volver a esta página si cambias de opinión.\n¡Gracias y disfruta!\n",
+        "fr": "Merci d'avoir téléchargé notre jeu ! Bienvenue sur notre page de gestion des consentements ! Chez Gameloft, nous voulons que tout le monde puisse jouer, et c'est pourquoi ce jeu est gratuit. Afin de continuer à améliorer ce jeu et d'y ajouter d'autres choses intéressantes à l'avenir, nos partenaires et nous-mêmes avons besoin de votre consentement pour recueillir certaines de vos informations (personnelles ou non) à plusieurs fins. Il s'agit notamment de mesurer notre audience et d'effectuer des analyses, de vous fournir un contenu et des publicités ciblés en fonction de vos intérêts et de vos interactions avec nous, et de vous permettre de partager du contenu sur les médias sociaux. Vous pouvez cliquer ici <a href=\"https://www.gameloft.com/fr/privacy-notice\" target=\"_blank\">Privacy Policy</a> pour en savoir plus, notamment sur vos informations personnelles et vos droits en matière de respect de la vie privée.\nAlors si vous aimez le jeu et voulez nous soutenir, faites vos choix ci-dessous et continuez à jouer ! Vous pouvez accepter tous ces objectifs en cliquant sur \"Accepter tout\", les refuser tous en cliquant sur \"Ne pas accepter tout\", ou faire votre propre sélection ci-dessous. Ne vous inquiétez pas, vous pouvez toujours aller dans les paramètres du jeu et revenir sur cette page si vous changez d'avis. \nMerci et bon jeu !\n",
+        "it": "Ciao! Grazie per aver scaricato il nostro gioco! Ti diamo il benvenuto nella nostra Pagina di gestione dei consensi! Gameloft vuole offrire a tutti la possibilità di giocare ed è per questa ragione che questo gioco è gratis. Per continuare a migliorare il gioco e aggiungere così altri fantastici contenuti in futuro, noi e i nostri partner abbiamo bisogno del tuo consenso per raccogliere alcune delle tue informazioni (personali o meno) per diversi scopi, tra cui: misurare l’audience e svolgere analisi, fornirti contenuti e pubblicità mirata in base ai tuoi interessi e interazioni con noi e permetterti di condividere contenuti sui social media. Clicca qui <a href=\"https://www.gameloft.com/it/privacy-notice\" target=\"_blank\">Politiche sulla privacy</a ricevere maggiori informazioni, come i dettagli sulle informazioni personali e sui diritti sulla privacy.\nPerciò, se ti piace il gioco e vuoi sostenerci, effettua le tue scelte qui sotto e continua a giocare! Puoi accettare tutti questi scopi  cliccando su \"Accetto tutto\", rifiutarli tutti cliccando su \"Rifiuto tutto\" o effettuare la tua scelta di seguito. Non preoccuparti: se cambi idea, puoi sempre accedere alle impostazioni del gioco e tornare a questa pagina.\nGrazie e buon divertimento!\n"
+      },
+      "title": {
+        "de": "Gameloft-Consent-Management-Seite",
+        "en": "Gameloft Consent Management Page",
+        "es": "Gameloft-Página de gestión de consentimiento ",
+        "fr": "Gameloft - Page de gestion de consentement",
+        "it": "Gameloft- Pagina di gestione dei consensi"
+      },
+      "textVendors": {
+        "de": "Sie können für jeden aufgeführten Partner Ihre Zustimmungspräferenzen festlegen. Klicken Sie auf einen Partnernamen, um sich über Branche und Datenerhebung sowie -verwendung zu informieren.",
+        "en": "You can set your consent preferences for every partner listed below individually. Click on a partner name to get more information on what it does, what data it is collecting and how it is using it.",
+        "es": "Puede configurar sus preferencias de consentimiento por separado para cada uno de los socios mencionados abajo. Haga clic en el nombre de un socio para obtener más información acerca de qué hace, qué datos recopila y cómo los usa.",
+        "fr": "Vous pouvez définir vos préférences de consentement pour chaque partenaire listé ci-dessous individuellement. Cliquez sur le nom d'un partenaire pour obtenir plus d'informations sur ce qu'il fait, les données qu'il récolte et comment il les utilise.",
+        "it": "Puoi impostare le preferenze di consenso per ogni singolo partner elencato di seguito. Fai clic sul nome di un partner per ottenere maggiori informazioni su cosa fa, quali dati sta raccogliendo e come li sta usando."
+      }
+    },
+    "categories": [
+      {
+        "id": "CCWVMt",
+        "name": {
+          "de": "Gezielte Werbezwecke",
+          "en": "Targeted Advertising Purposes",
+          "es": "Propósitos publicitarios dirigidos",
+          "fr": "Publicité ciblée",
+          "it": "Pubblicità mirate"
+        },
+        "type": "category",
+        "children": [
+          {
+            "type": "purpose",
+            "purposeId": "cookies"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "create_ads_profile"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "select_personalized_ads"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "measure_ad_performance"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "create_content_profile"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "select_personalized_content"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "measure_content_performance"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "geolocation_data"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "device_characteristics"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "market_research"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "vivendigr-C3mXxw7j"
+          }
+        ],
+        "expanded": false,
+        "description": {
+          "de": "Funktionen, die für Ihre Zustimmung eingereicht wurden",
+          "en": "Features submitted for your consent:",
+          "es": "Funciones enviadas para su consentimiento",
+          "fr": "Éléments soumis à votre consentement",
+          "it": "Opzioni presentate per il tuo consenso"
+        }
+      },
+      {
+        "id": "QXAPPe",
+        "name": {
+          "de": "Standard-Anzeigen und -Produktverbesserungen",
+          "en": "Basic Ads and Product Improvements",
+          "es": "Anuncios básicos y mejoras de productos",
+          "fr": "Publicités de base et améliorations de produit",
+          "it": "Pubblicità di base e miglioramenti prodotto"
+        },
+        "type": "category",
+        "children": [
+          {
+            "type": "purpose",
+            "purposeId": "select_basic_ads"
+          },
+          {
+            "type": "purpose",
+            "purposeId": "improve_products"
+          }
+        ],
+        "expanded": false,
+        "description": {
+          "de": "Funktionen, die nicht für Ihre Zustimmung eingereicht wurden",
+          "en": "Features not submitted for your consent",
+          "es": "Funciones no enviadas para su consentimiento",
+          "fr": "Éléments non soumis à votre consentement",
+          "it": "Opzioni non presentate per il tuo consenso "
+        }
+      },
+      {
+        "type": "purpose",
+        "purposeId": "use_limited_data_to_select_content"
+      }
+    ],
+    "showWhenConsentIsMissing": false,
+    "denyAppliesToLI": true,
+    "canCloseWhenConsentIsMissing": false
+  },
+  "regulations": {},
+  "integrations": {
+    "vendors": {
+      "google": {
+        "enable": false,
+        "refresh": true,
+        "eprivacy": false,
+        "passTargetingVariables": false
+      },
+      "salesforce-dmp": {
+        "enable": false,
+        "namespace": null
+      },
+      "refreshOnConsent": false
+    }
+  },
+  "regulation": {
+    "name": "gdpr",
+    "group": { "name": "optin" }
+  },
+  "version": "1.0.0"
+}

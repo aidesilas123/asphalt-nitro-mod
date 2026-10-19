@@ -1,0 +1,9 @@
+###### Class com.google.android.gms.internal.ads.zzcbp (com.google.android.gms.internal.ads.zzcbp)
+.class public interface abstract Lcom/google/android/gms/internal/ads/zzcbp;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+
+# virtual methods
+.method public abstract zza(Ljava/lang/Object;)Ljava/lang/Object;
+.end method

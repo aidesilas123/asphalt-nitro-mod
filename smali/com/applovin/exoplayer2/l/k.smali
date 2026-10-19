@@ -1,0 +1,29 @@
+###### Class com.applovin.exoplayer2.l.k (com.applovin.exoplayer2.l.k)
+.class public interface abstract Lcom/applovin/exoplayer2/l/k;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Throwable;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract k(Ljava/lang/Throwable;)Landroid/util/Pair;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)",
+            "Landroid/util/Pair<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method

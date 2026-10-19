@@ -1,0 +1,14 @@
+###### Class com.bytedance.sdk.openadsdk.api.nativeAd.PAGNativeAdsManager (com.bytedance.sdk.openadsdk.api.nativeAd.PAGNativeAdsManager)
+.class public Lcom/bytedance/sdk/openadsdk/api/nativeAd/PAGNativeAdsManager;
+.super Ljava/lang/Object;
+.source "PAGNativeAdsManager.java"
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

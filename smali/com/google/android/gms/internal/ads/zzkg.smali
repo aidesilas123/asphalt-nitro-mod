@@ -1,0 +1,40 @@
+###### Class com.google.android.gms.internal.ads.zzkg (com.google.android.gms.internal.ads.zzkg)
+.class final Lcom/google/android/gms/internal/ads/zzkg;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzaaa;
+.implements Lcom/google/android/gms/internal/ads/zzlu;
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzkf;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zzt(ILjava/lang/Object;)V
+    .registers 3
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method

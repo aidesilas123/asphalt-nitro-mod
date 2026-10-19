@@ -1,0 +1,3051 @@
+###### Class com.google.android.material.floatingactionbutton.b (com.google.android.material.floatingactionbutton.b)
+.class Lcom/google/android/material/floatingactionbutton/b;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/material/floatingactionbutton/b$g;,
+        Lcom/google/android/material/floatingactionbutton/b$i;,
+        Lcom/google/android/material/floatingactionbutton/b$h;,
+        Lcom/google/android/material/floatingactionbutton/b$l;,
+        Lcom/google/android/material/floatingactionbutton/b$m;,
+        Lcom/google/android/material/floatingactionbutton/b$k;,
+        Lcom/google/android/material/floatingactionbutton/b$j;
+    }
+.end annotation
+
+
+# static fields
+.field static final a:Landroid/animation/TimeInterpolator;
+
+.field static final b:[I
+
+.field static final c:[I
+
+.field static final d:[I
+
+.field static final e:[I
+
+.field static final f:[I
+
+.field static final g:[I
+
+
+# instance fields
+.field private A:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroid/animation/Animator$AnimatorListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private B:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroid/animation/Animator$AnimatorListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private C:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/google/android/material/floatingactionbutton/b$j;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+.field final E:Lcom/google/android/material/shadow/b;
+
+.field private final F:Landroid/graphics/Rect;
+
+.field private final G:Landroid/graphics/RectF;
+
+.field private final H:Landroid/graphics/RectF;
+
+.field private final I:Landroid/graphics/Matrix;
+
+.field private J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field h:Lcom/google/android/material/shape/ShapeAppearanceModel;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field j:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field k:Lcom/google/android/material/floatingactionbutton/a;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field l:Landroid/graphics/drawable/Drawable;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field m:Z
+
+.field n:Z
+
+.field o:F
+
+.field p:F
+
+.field q:F
+
+.field r:I
+
+.field private final s:Lcom/google/android/material/internal/d;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+.field private t:Landroid/animation/Animator;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private u:Lcom/google/android/material/animation/MotionSpec;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private v:Lcom/google/android/material/animation/MotionSpec;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private w:F
+
+.field private x:F
+
+.field private y:I
+
+.field private z:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    sget-object v0, Lcom/google/android/material/animation/AnimationUtils;->c:Landroid/animation/TimeInterpolator;
+
+    sput-object v0, Lcom/google/android/material/floatingactionbutton/b;->a:Landroid/animation/TimeInterpolator;
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_32
+
+    sput-object v1, Lcom/google/android/material/floatingactionbutton/b;->b:[I
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_3a
+
+    sput-object v1, Lcom/google/android/material/floatingactionbutton/b;->c:[I
+
+    new-array v1, v0, [I
+
+    fill-array-data v1, :array_44
+
+    sput-object v1, Lcom/google/android/material/floatingactionbutton/b;->d:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_4c
+
+    sput-object v0, Lcom/google/android/material/floatingactionbutton/b;->e:[I
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const v1, 0x101009e
+
+    const/4 v2, 0x0
+
+    aput v1, v0, v2
+
+    sput-object v0, Lcom/google/android/material/floatingactionbutton/b;->f:[I
+
+    new-array v0, v2, [I
+
+    sput-object v0, Lcom/google/android/material/floatingactionbutton/b;->g:[I
+
+    return-void
+
+    :array_32
+    .array-data 4
+        0x10100a7
+        0x101009e
+    .end array-data
+
+    :array_3a
+    .array-data 4
+        0x1010367
+        0x101009c
+        0x101009e
+    .end array-data
+
+    :array_44
+    .array-data 4
+        0x101009c
+        0x101009e
+    .end array-data
+
+    :array_4c
+    .array-data 4
+        0x1010367
+        0x101009e
+    .end array-data
+.end method
+
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/FloatingActionButton;Lcom/google/android/material/shadow/b;)V
+    .registers 5
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b;->n:Z
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lcom/google/android/material/floatingactionbutton/b;->x:F
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->F:Landroid/graphics/Rect;
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->G:Landroid/graphics/RectF;
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->H:Landroid/graphics/RectF;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->I:Landroid/graphics/Matrix;
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->E:Lcom/google/android/material/shadow/b;
+
+    new-instance p2, Lcom/google/android/material/internal/d;
+
+    invoke-direct {p2}, Lcom/google/android/material/internal/d;-><init>()V
+
+    iput-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->s:Lcom/google/android/material/internal/d;
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->b:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$i;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$i;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->c:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$h;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$h;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->d:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$h;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$h;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->e:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$h;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$h;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->f:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$l;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$l;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    sget-object v0, Lcom/google/android/material/floatingactionbutton/b;->g:[I
+
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$g;
+
+    invoke-direct {v1, p0}, Lcom/google/android/material/floatingactionbutton/b$g;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-direct {p0, v1}, Lcom/google/android/material/floatingactionbutton/b;->k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Lcom/google/android/material/internal/d;->a([ILandroid/animation/ValueAnimator;)V
+
+    invoke-virtual {p1}, Landroid/widget/ImageButton;->getRotation()F
+
+    move-result p1
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->w:F
+
+    return-void
+.end method
+
+.method private X()Z
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-static {v0}, Landroidx/core/view/ViewCompat;->isLaidOut(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->isInEditMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_12
+
+    const/4 v0, 0x1
+
+    goto :goto_13
+
+    :cond_12
+    const/4 v0, 0x0
+
+    :goto_13
+    return v0
+.end method
+
+.method static synthetic a(Lcom/google/android/material/floatingactionbutton/b;I)I
+    .registers 2
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    return p1
+.end method
+
+.method static synthetic b(Lcom/google/android/material/floatingactionbutton/b;Landroid/animation/Animator;)Landroid/animation/Animator;
+    .registers 2
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->t:Landroid/animation/Animator;
+
+    return-object p1
+.end method
+
+.method static synthetic c(Lcom/google/android/material/floatingactionbutton/b;F)F
+    .registers 2
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->x:F
+
+    return p1
+.end method
+
+.method static synthetic d(Lcom/google/android/material/floatingactionbutton/b;FLandroid/graphics/Matrix;)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/material/floatingactionbutton/b;->h(FLandroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method private e0(Landroid/animation/ObjectAnimator;)V
+    .registers 4
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1a
+
+    if-eq v0, v1, :cond_7
+
+    return-void
+
+    :cond_7
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/b$e;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/b$e;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setEvaluator(Landroid/animation/TypeEvaluator;)V
+
+    return-void
+.end method
+
+.method private h(FLandroid/graphics/Matrix;)V
+    .registers 8
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-virtual {p2}, Landroid/graphics/Matrix;->reset()V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_38
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->y:I
+
+    if-eqz v1, :cond_38
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->G:Landroid/graphics/RectF;
+
+    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/b;->H:Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v4, v4, v3, v0}, Landroid/graphics/RectF;->set(FFFF)V
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->y:I
+
+    int-to-float v3, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {v2, v4, v4, v3, v0}, Landroid/graphics/RectF;->set(FFFF)V
+
+    sget-object v0, Landroid/graphics/Matrix$ScaleToFit;->CENTER:Landroid/graphics/Matrix$ScaleToFit;
+
+    invoke-virtual {p2, v1, v2, v0}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->y:I
+
+    int-to-float v1, v0
+
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v2
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v2
+
+    invoke-virtual {p2, p1, p1, v1, v0}, Landroid/graphics/Matrix;->postScale(FFFF)Z
+
+    :cond_38
+    return-void
+.end method
+
+.method private i(Lcom/google/android/material/animation/MotionSpec;FFF)Landroid/animation/AnimatorSet;
+    .registers 11
+    .param p1    # Lcom/google/android/material/animation/MotionSpec;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    sget-object v2, Landroid/view/View;->ALPHA:Landroid/util/Property;
+
+    const/4 v3, 0x1
+
+    new-array v4, v3, [F
+
+    const/4 v5, 0x0
+
+    aput p2, v4, v5
+
+    invoke-static {v1, v2, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    const-string v1, "opacity"
+
+    invoke-virtual {p1, v1}, Lcom/google/android/material/animation/MotionSpec;->c(Ljava/lang/String;)Lcom/google/android/material/animation/e;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Lcom/google/android/material/animation/e;->a(Landroid/animation/Animator;)V
+
+    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    sget-object v1, Landroid/view/View;->SCALE_X:Landroid/util/Property;
+
+    new-array v2, v3, [F
+
+    aput p3, v2, v5
+
+    invoke-static {p2, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    const-string v1, "scale"
+
+    invoke-virtual {p1, v1}, Lcom/google/android/material/animation/MotionSpec;->c(Ljava/lang/String;)Lcom/google/android/material/animation/e;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2}, Lcom/google/android/material/animation/e;->a(Landroid/animation/Animator;)V
+
+    invoke-direct {p0, p2}, Lcom/google/android/material/floatingactionbutton/b;->e0(Landroid/animation/ObjectAnimator;)V
+
+    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    sget-object v2, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
+
+    new-array v4, v3, [F
+
+    aput p3, v4, v5
+
+    invoke-static {p2, v2, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, v1}, Lcom/google/android/material/animation/MotionSpec;->c(Ljava/lang/String;)Lcom/google/android/material/animation/e;
+
+    move-result-object p3
+
+    invoke-virtual {p3, p2}, Lcom/google/android/material/animation/e;->a(Landroid/animation/Animator;)V
+
+    invoke-direct {p0, p2}, Lcom/google/android/material/floatingactionbutton/b;->e0(Landroid/animation/ObjectAnimator;)V
+
+    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->I:Landroid/graphics/Matrix;
+
+    invoke-direct {p0, p4, p2}, Lcom/google/android/material/floatingactionbutton/b;->h(FLandroid/graphics/Matrix;)V
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    new-instance p3, Lcom/google/android/material/animation/c;
+
+    invoke-direct {p3}, Lcom/google/android/material/animation/c;-><init>()V
+
+    new-instance p4, Lcom/google/android/material/floatingactionbutton/b$c;
+
+    invoke-direct {p4, p0}, Lcom/google/android/material/floatingactionbutton/b$c;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    new-array v1, v3, [Landroid/graphics/Matrix;
+
+    new-instance v2, Landroid/graphics/Matrix;
+
+    iget-object v3, p0, Lcom/google/android/material/floatingactionbutton/b;->I:Landroid/graphics/Matrix;
+
+    invoke-direct {v2, v3}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
+    aput-object v2, v1, v5
+
+    invoke-static {p2, p3, p4, v1}, Landroid/animation/ObjectAnimator;->ofObject(Ljava/lang/Object;Landroid/util/Property;Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/ObjectAnimator;
+
+    move-result-object p2
+
+    const-string p3, "iconScale"
+
+    invoke-virtual {p1, p3}, Lcom/google/android/material/animation/MotionSpec;->c(Ljava/lang/String;)Lcom/google/android/material/animation/e;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Lcom/google/android/material/animation/e;->a(Landroid/animation/Animator;)V
+
+    invoke-interface {v0, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance p1, Landroid/animation/AnimatorSet;
+
+    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+
+    invoke-static {p1, v0}, Lcom/google/android/material/animation/AnimatorSetCompat;->playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
+
+    return-object p1
+.end method
+
+.method private j(FFF)Landroid/animation/AnimatorSet;
+    .registers 19
+
+    move-object v10, p0
+
+    new-instance v11, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v11}, Landroid/animation/AnimatorSet;-><init>()V
+
+    new-instance v12, Ljava/util/ArrayList;
+
+    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_78
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object v13
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getAlpha()F
+
+    move-result v2
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getScaleX()F
+
+    move-result v4
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getScaleY()F
+
+    move-result v6
+
+    iget v7, v10, Lcom/google/android/material/floatingactionbutton/b;->x:F
+
+    new-instance v9, Landroid/graphics/Matrix;
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->I:Landroid/graphics/Matrix;
+
+    invoke-direct {v9, v0}, Landroid/graphics/Matrix;-><init>(Landroid/graphics/Matrix;)V
+
+    new-instance v14, Lcom/google/android/material/floatingactionbutton/b$d;
+
+    move-object v0, v14
+
+    move-object v1, p0
+
+    move/from16 v3, p1
+
+    move/from16 v5, p2
+
+    move/from16 v8, p3
+
+    invoke-direct/range {v0 .. v9}, Lcom/google/android/material/floatingactionbutton/b$d;-><init>(Lcom/google/android/material/floatingactionbutton/b;FFFFFFFLandroid/graphics/Matrix;)V
+
+    invoke-virtual {v13, v14}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    invoke-interface {v12, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v11, v12}, Lcom/google/android/material/animation/AnimatorSetCompat;->playTogether(Landroid/animation/AnimatorSet;Ljava/util/List;)V
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$attr;->J:I
+
+    iget-object v2, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v2}, Landroid/widget/ImageButton;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    sget v3, Lcom/google/android/material/R$integer;->b:I
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v2
+
+    invoke-static {v0, v1, v2}, Lcom/google/android/material/motion/MotionUtils;->resolveThemeDuration(Landroid/content/Context;II)I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    invoke-virtual {v11, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+
+    iget-object v0, v10, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    sget v1, Lcom/google/android/material/R$attr;->K:I
+
+    sget-object v2, Lcom/google/android/material/animation/AnimationUtils;->b:Landroid/animation/TimeInterpolator;
+
+    invoke-static {v0, v1, v2}, Lcom/google/android/material/motion/MotionUtils;->resolveThemeInterpolator(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+
+    move-result-object v0
+
+    invoke-virtual {v11, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    return-object v11
+
+    :array_78
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method private k(Lcom/google/android/material/floatingactionbutton/b$m;)Landroid/animation/ValueAnimator;
+    .registers 5
+    .param p1    # Lcom/google/android/material/floatingactionbutton/b$m;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Landroid/animation/ValueAnimator;
+
+    invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
+
+    sget-object v1, Lcom/google/android/material/floatingactionbutton/b;->a:Landroid/animation/TimeInterpolator;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    const-wide/16 v1, 0x64
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_20
+
+    invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
+
+    return-object v0
+
+    nop
+
+    :array_20
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method private q()Landroid/view/ViewTreeObserver$OnPreDrawListener;
+    .registers 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    if-nez v0, :cond_b
+
+    new-instance v0, Lcom/google/android/material/floatingactionbutton/b$f;
+
+    invoke-direct {v0, p0}, Lcom/google/android/material/floatingactionbutton/b$f;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    :cond_b
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method A()V
+    .registers 1
+
+    return-void
+.end method
+
+.method B()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    if-eqz v1, :cond_10
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->J:Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    :cond_10
+    return-void
+.end method
+
+.method C([I)V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->s:Lcom/google/android/material/internal/d;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/d;->d([I)V
+
+    return-void
+.end method
+
+.method D(FFF)V
+    .registers 4
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->c0()V
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/floatingactionbutton/b;->d0(F)V
+
+    return-void
+.end method
+
+.method E(Landroid/graphics/Rect;)V
+    .registers 9
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->l:Landroid/graphics/drawable/Drawable;
+
+    const-string v1, "Didn\'t initialize content background"
+
+    invoke-static {v0, v1}, Landroidx/core/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->W()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
+
+    iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/b;->l:Landroid/graphics/drawable/Drawable;
+
+    iget v3, p1, Landroid/graphics/Rect;->left:I
+
+    iget v4, p1, Landroid/graphics/Rect;->top:I
+
+    iget v5, p1, Landroid/graphics/Rect;->right:I
+
+    iget v6, p1, Landroid/graphics/Rect;->bottom:I
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->E:Lcom/google/android/material/shadow/b;
+
+    invoke-interface {p1, v0}, Lcom/google/android/material/shadow/b;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_2a
+
+    :cond_23
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->E:Lcom/google/android/material/shadow/b;
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->l:Landroid/graphics/drawable/Drawable;
+
+    invoke-interface {p1, v0}, Lcom/google/android/material/shadow/b;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :goto_2a
+    return-void
+.end method
+
+.method F()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getRotation()F
+
+    move-result v0
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->w:F
+
+    cmpl-float v1, v1, v0
+
+    if-eqz v1, :cond_11
+
+    iput v0, p0, Lcom/google/android/material/floatingactionbutton/b;->w:F
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->a0()V
+
+    :cond_11
+    return-void
+.end method
+
+.method G()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->C:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_18
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_8
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_18
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/material/floatingactionbutton/b$j;
+
+    invoke-interface {v1}, Lcom/google/android/material/floatingactionbutton/b$j;->b()V
+
+    goto :goto_8
+
+    :cond_18
+    return-void
+.end method
+
+.method H()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->C:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_18
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_8
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_18
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/material/floatingactionbutton/b$j;
+
+    invoke-interface {v1}, Lcom/google/android/material/floatingactionbutton/b$j;->a()V
+
+    goto :goto_8
+
+    :cond_18
+    return-void
+.end method
+
+.method I()Z
+    .registers 2
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method J(Landroid/content/res/ColorStateList;)V
+    .registers 3
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setTintList(Landroid/content/res/ColorStateList;)V
+
+    :cond_7
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->k:Lcom/google/android/material/floatingactionbutton/a;
+
+    if-nez p1, :cond_c
+
+    return-void
+
+    :cond_c
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method K(Landroid/graphics/PorterDuff$Mode;)V
+    .registers 3
+    .param p1    # Landroid/graphics/PorterDuff$Mode;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setTintMode(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_7
+    return-void
+.end method
+
+.method final L(F)V
+    .registers 4
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    cmpl-float v0, v0, p1
+
+    if-eqz v0, :cond_f
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/google/android/material/floatingactionbutton/b;->D(FFF)V
+
+    :cond_f
+    return-void
+.end method
+
+.method M(Z)V
+    .registers 2
+
+    iput-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/b;->m:Z
+
+    return-void
+.end method
+
+.method final N(Lcom/google/android/material/animation/MotionSpec;)V
+    .registers 2
+    .param p1    # Lcom/google/android/material/animation/MotionSpec;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->v:Lcom/google/android/material/animation/MotionSpec;
+
+    return-void
+.end method
+
+.method final O(F)V
+    .registers 4
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    cmpl-float v0, v0, p1
+
+    if-eqz v0, :cond_f
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    invoke-virtual {p0, v0, p1, v1}, Lcom/google/android/material/floatingactionbutton/b;->D(FFF)V
+
+    :cond_f
+    return-void
+.end method
+
+.method final P(F)V
+    .registers 3
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->x:F
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->I:Landroid/graphics/Matrix;
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->h(FLandroid/graphics/Matrix;)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+.method final Q(I)V
+    .registers 3
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->y:I
+
+    if-eq v0, p1, :cond_9
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->y:I
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->b0()V
+
+    :cond_9
+    return-void
+.end method
+
+.method final R(F)V
+    .registers 4
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    cmpl-float v0, v0, p1
+
+    if-eqz v0, :cond_f
+
+    iput p1, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    invoke-virtual {p0, v0, v1, p1}, Lcom/google/android/material/floatingactionbutton/b;->D(FFF)V
+
+    :cond_f
+    return-void
+.end method
+
+.method S(Landroid/content/res/ColorStateList;)V
+    .registers 3
+    .param p1    # Landroid/content/res/ColorStateList;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->j:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_b
+
+    invoke-static {p1}, Lcom/google/android/material/ripple/RippleUtils;->sanitizeRippleDrawableColor(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroidx/core/graphics/drawable/DrawableCompat;->setTintList(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method T(Z)V
+    .registers 2
+
+    iput-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/b;->n:Z
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->c0()V
+
+    return-void
+.end method
+
+.method final U(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+    .registers 4
+    .param p1    # Lcom/google/android/material/shape/ShapeAppearanceModel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->h:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+
+    :cond_9
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->j:Landroid/graphics/drawable/Drawable;
+
+    instance-of v1, v0, Lcom/google/android/material/shape/l;
+
+    if-eqz v1, :cond_14
+
+    check-cast v0, Lcom/google/android/material/shape/l;
+
+    invoke-interface {v0, p1}, Lcom/google/android/material/shape/l;->setShapeAppearanceModel(Lcom/google/android/material/shape/ShapeAppearanceModel;)V
+
+    :cond_14
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->k:Lcom/google/android/material/floatingactionbutton/a;
+
+    if-nez p1, :cond_19
+
+    return-void
+
+    :cond_19
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method final V(Lcom/google/android/material/animation/MotionSpec;)V
+    .registers 2
+    .param p1    # Lcom/google/android/material/animation/MotionSpec;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->u:Lcom/google/android/material/animation/MotionSpec;
+
+    return-void
+.end method
+
+.method W()Z
+    .registers 2
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method final Y()Z
+    .registers 3
+
+    iget-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b;->m:Z
+
+    if-eqz v0, :cond_11
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getSizeDimension()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->r:I
+
+    if-lt v0, v1, :cond_f
+
+    goto :goto_11
+
+    :cond_f
+    const/4 v0, 0x0
+
+    goto :goto_12
+
+    :cond_11
+    :goto_11
+    const/4 v0, 0x1
+
+    :goto_12
+    return v0
+.end method
+
+.method Z(Lcom/google/android/material/floatingactionbutton/b$k;Z)V
+    .registers 9
+    .param p1    # Lcom/google/android/material/floatingactionbutton/b$k;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->x()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return-void
+
+    :cond_7
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->t:Landroid/animation/Animator;
+
+    if-eqz v0, :cond_e
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_e
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->u:Lcom/google/android/material/animation/MotionSpec;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_15
+
+    const/4 v0, 0x1
+
+    goto :goto_16
+
+    :cond_15
+    const/4 v0, 0x0
+
+    :goto_16
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/b;->X()Z
+
+    move-result v2
+
+    const/high16 v3, 0x3f800000    # 1.0f
+
+    if-eqz v2, :cond_80
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v1}, Landroid/widget/ImageButton;->getVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_4f
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setAlpha(F)V
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const v4, 0x3ecccccd    # 0.4f
+
+    if-eqz v0, :cond_37
+
+    const v5, 0x3ecccccd    # 0.4f
+
+    goto :goto_38
+
+    :cond_37
+    const/4 v5, 0x0
+
+    :goto_38
+    invoke-virtual {v1, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleY(F)V
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    if-eqz v0, :cond_43
+
+    const v5, 0x3ecccccd    # 0.4f
+
+    goto :goto_44
+
+    :cond_43
+    const/4 v5, 0x0
+
+    :goto_44
+    invoke-virtual {v1, v5}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleX(F)V
+
+    if-eqz v0, :cond_4c
+
+    const v2, 0x3ecccccd    # 0.4f
+
+    :cond_4c
+    invoke-virtual {p0, v2}, Lcom/google/android/material/floatingactionbutton/b;->P(F)V
+
+    :cond_4f
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->u:Lcom/google/android/material/animation/MotionSpec;
+
+    if-eqz v0, :cond_58
+
+    invoke-direct {p0, v0, v3, v3, v3}, Lcom/google/android/material/floatingactionbutton/b;->i(Lcom/google/android/material/animation/MotionSpec;FFF)Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    goto :goto_5c
+
+    :cond_58
+    invoke-direct {p0, v3, v3, v3}, Lcom/google/android/material/floatingactionbutton/b;->j(FFF)Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    :goto_5c
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$b;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/google/android/material/floatingactionbutton/b$b;-><init>(Lcom/google/android/material/floatingactionbutton/b;ZLcom/google/android/material/floatingactionbutton/b$k;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->A:Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_7c
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_6c
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_7c
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/animation/Animator$AnimatorListener;
+
+    invoke-virtual {v0, p2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    goto :goto_6c
+
+    :cond_7c
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+
+    goto :goto_9c
+
+    :cond_80
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0, v1, p2}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->b(IZ)V
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {p2, v3}, Landroid/widget/ImageButton;->setAlpha(F)V
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {p2, v3}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleY(F)V
+
+    iget-object p2, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {p2, v3}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleX(F)V
+
+    invoke-virtual {p0, v3}, Lcom/google/android/material/floatingactionbutton/b;->P(F)V
+
+    if-eqz p1, :cond_9c
+
+    invoke-interface {p1}, Lcom/google/android/material/floatingactionbutton/b$k;->a()V
+
+    :cond_9c
+    :goto_9c
+    return-void
+.end method
+
+.method a0()V
+    .registers 4
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-ne v0, v1, :cond_2e
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->w:F
+
+    const/high16 v1, 0x42b40000    # 90.0f
+
+    rem-float/2addr v0, v1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_20
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getLayerType()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_2e
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/ImageButton;->setLayerType(ILandroid/graphics/Paint;)V
+
+    goto :goto_2e
+
+    :cond_20
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getLayerType()I
+
+    move-result v0
+
+    if-eqz v0, :cond_2e
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/ImageButton;->setLayerType(ILandroid/graphics/Paint;)V
+
+    :cond_2e
+    :goto_2e
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_38
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b;->w:F
+
+    float-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->b0(I)V
+
+    :cond_38
+    return-void
+.end method
+
+.method final b0()V
+    .registers 2
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->x:F
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/b;->P(F)V
+
+    return-void
+.end method
+
+.method final c0()V
+    .registers 6
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->F:Landroid/graphics/Rect;
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/b;->r(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p0, v0}, Lcom/google/android/material/floatingactionbutton/b;->E(Landroid/graphics/Rect;)V
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->E:Lcom/google/android/material/shadow/b;
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    iget v3, v0, Landroid/graphics/Rect;->top:I
+
+    iget v4, v0, Landroid/graphics/Rect;->right:I
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-interface {v1, v2, v3, v4, v0}, Lcom/google/android/material/shadow/b;->setShadowPadding(IIII)V
+
+    return-void
+.end method
+
+.method d0(F)V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->W(F)V
+
+    :cond_7
+    return-void
+.end method
+
+.method public e(Landroid/animation/Animator$AnimatorListener;)V
+    .registers 3
+    .param p1    # Landroid/animation/Animator$AnimatorListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->B:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_b
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->B:Ljava/util/ArrayList;
+
+    :cond_b
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->B:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method f(Landroid/animation/Animator$AnimatorListener;)V
+    .registers 3
+    .param p1    # Landroid/animation/Animator$AnimatorListener;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->A:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_b
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->A:Ljava/util/ArrayList;
+
+    :cond_b
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->A:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method g(Lcom/google/android/material/floatingactionbutton/b$j;)V
+    .registers 3
+    .param p1    # Lcom/google/android/material/floatingactionbutton/b$j;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->C:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_b
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->C:Ljava/util/ArrayList;
+
+    :cond_b
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->C:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method final l()Landroid/graphics/drawable/Drawable;
+    .registers 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->l:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method m()F
+    .registers 2
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    return v0
+.end method
+
+.method n()Z
+    .registers 2
+
+    iget-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b;->m:Z
+
+    return v0
+.end method
+
+.method final o()Lcom/google/android/material/animation/MotionSpec;
+    .registers 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->v:Lcom/google/android/material/animation/MotionSpec;
+
+    return-object v0
+.end method
+
+.method p()F
+    .registers 2
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    return v0
+.end method
+
+.method r(Landroid/graphics/Rect;)V
+    .registers 7
+    .param p1    # Landroid/graphics/Rect;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b;->m:Z
+
+    if-eqz v0, :cond_10
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->r:I
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getSizeDimension()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/lit8 v0, v0, 0x2
+
+    goto :goto_11
+
+    :cond_10
+    const/4 v0, 0x0
+
+    :goto_11
+    iget-boolean v1, p0, Lcom/google/android/material/floatingactionbutton/b;->n:Z
+
+    if-eqz v1, :cond_1d
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->m()F
+
+    move-result v1
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    add-float/2addr v1, v2
+
+    goto :goto_1e
+
+    :cond_1d
+    const/4 v1, 0x0
+
+    :goto_1e
+    float-to-double v2, v1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v2, v2
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    const/high16 v3, 0x3fc00000    # 1.5f
+
+    mul-float v1, v1, v3
+
+    float-to-double v3, v1
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v3
+
+    double-to-int v1, v3
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p1, v2, v0, v2, v0}, Landroid/graphics/Rect;->set(IIII)V
+
+    return-void
+.end method
+
+.method s()F
+    .registers 2
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    return v0
+.end method
+
+.method final t()Lcom/google/android/material/shape/ShapeAppearanceModel;
+    .registers 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->h:Lcom/google/android/material/shape/ShapeAppearanceModel;
+
+    return-object v0
+.end method
+
+.method final u()Lcom/google/android/material/animation/MotionSpec;
+    .registers 2
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->u:Lcom/google/android/material/animation/MotionSpec;
+
+    return-object v0
+.end method
+
+.method v(Lcom/google/android/material/floatingactionbutton/b$k;Z)V
+    .registers 5
+    .param p1    # Lcom/google/android/material/floatingactionbutton/b$k;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->w()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return-void
+
+    :cond_7
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->t:Landroid/animation/Animator;
+
+    if-eqz v0, :cond_e
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
+
+    :cond_e
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/b;->X()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_49
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->v:Lcom/google/android/material/animation/MotionSpec;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1e
+
+    invoke-direct {p0, v0, v1, v1, v1}, Lcom/google/android/material/floatingactionbutton/b;->i(Lcom/google/android/material/animation/MotionSpec;FFF)Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    goto :goto_25
+
+    :cond_1e
+    const v0, 0x3ecccccd    # 0.4f
+
+    invoke-direct {p0, v1, v0, v0}, Lcom/google/android/material/floatingactionbutton/b;->j(FFF)Landroid/animation/AnimatorSet;
+
+    move-result-object v0
+
+    :goto_25
+    new-instance v1, Lcom/google/android/material/floatingactionbutton/b$a;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/google/android/material/floatingactionbutton/b$a;-><init>(Lcom/google/android/material/floatingactionbutton/b;ZLcom/google/android/material/floatingactionbutton/b$k;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b;->B:Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_45
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_35
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_45
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/animation/Animator$AnimatorListener;
+
+    invoke-virtual {v0, p2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    goto :goto_35
+
+    :cond_45
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+
+    goto :goto_59
+
+    :cond_49
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    if-eqz p2, :cond_50
+
+    const/16 v1, 0x8
+
+    goto :goto_51
+
+    :cond_50
+    const/4 v1, 0x4
+
+    :goto_51
+    invoke-virtual {v0, v1, p2}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->b(IZ)V
+
+    if-eqz p1, :cond_59
+
+    invoke-interface {p1}, Lcom/google/android/material/floatingactionbutton/b$k;->b()V
+
+    :cond_59
+    :goto_59
+    return-void
+.end method
+
+.method w()Z
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_10
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    if-ne v0, v2, :cond_f
+
+    const/4 v1, 0x1
+
+    :cond_f
+    return v1
+
+    :cond_10
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    const/4 v3, 0x2
+
+    if-eq v0, v3, :cond_16
+
+    const/4 v1, 0x1
+
+    :cond_16
+    return v1
+.end method
+
+.method x()Z
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_11
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    const/4 v3, 0x2
+
+    if-ne v0, v3, :cond_10
+
+    const/4 v1, 0x1
+
+    :cond_10
+    return v1
+
+    :cond_11
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b;->z:I
+
+    if-eq v0, v2, :cond_16
+
+    const/4 v1, 0x1
+
+    :cond_16
+    return v1
+.end method
+
+.method y()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->s:Lcom/google/android/material/internal/d;
+
+    invoke-virtual {v0}, Lcom/google/android/material/internal/d;->c()V
+
+    return-void
+.end method
+
+.method z()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-eqz v0, :cond_9
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-static {v1, v0}, Lcom/google/android/material/shape/MaterialShapeUtils;->setParentAbsoluteElevation(Landroid/view/View;Lcom/google/android/material/shape/MaterialShapeDrawable;)V
+
+    :cond_9
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b;->I()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/b;->q()Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    :cond_1c
+    return-void
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.a (com.google.android.material.floatingactionbutton.b$a)
+.class Lcom/google/android/material/floatingactionbutton/b$a;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->v(Lcom/google/android/material/floatingactionbutton/b$k;Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field private a:Z
+
+.field final synthetic b:Z
+
+.field final synthetic c:Lcom/google/android/material/floatingactionbutton/b$k;
+
+.field final synthetic d:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;ZLcom/google/android/material/floatingactionbutton/b$k;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iput-boolean p2, p0, Lcom/google/android/material/floatingactionbutton/b$a;->b:Z
+
+    iput-object p3, p0, Lcom/google/android/material/floatingactionbutton/b$a;->c:Lcom/google/android/material/floatingactionbutton/b$k;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .registers 2
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->a:Z
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 4
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->a(Lcom/google/android/material/floatingactionbutton/b;I)I
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->b(Lcom/google/android/material/floatingactionbutton/b;Landroid/animation/Animator;)Landroid/animation/Animator;
+
+    iget-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->a:Z
+
+    if-nez p1, :cond_26
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object p1, p1, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b$a;->b:Z
+
+    if-eqz v0, :cond_1b
+
+    const/16 v1, 0x8
+
+    goto :goto_1c
+
+    :cond_1b
+    const/4 v1, 0x4
+
+    :goto_1c
+    invoke-virtual {p1, v1, v0}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->b(IZ)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->c:Lcom/google/android/material/floatingactionbutton/b$k;
+
+    if-eqz p1, :cond_26
+
+    invoke-interface {p1}, Lcom/google/android/material/floatingactionbutton/b$k;->b()V
+
+    :cond_26
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget-boolean v1, p0, Lcom/google/android/material/floatingactionbutton/b$a;->b:Z
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->b(IZ)V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/google/android/material/floatingactionbutton/b;->a(Lcom/google/android/material/floatingactionbutton/b;I)I
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$a;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-static {v0, p1}, Lcom/google/android/material/floatingactionbutton/b;->b(Lcom/google/android/material/floatingactionbutton/b;Landroid/animation/Animator;)Landroid/animation/Animator;
+
+    iput-boolean v2, p0, Lcom/google/android/material/floatingactionbutton/b$a;->a:Z
+
+    return-void
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.C0230b (com.google.android.material.floatingactionbutton.b$b)
+.class Lcom/google/android/material/floatingactionbutton/b$b;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->Z(Lcom/google/android/material/floatingactionbutton/b$k;Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/google/android/material/floatingactionbutton/b$k;
+
+.field final synthetic c:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;ZLcom/google/android/material/floatingactionbutton/b$k;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    iput-boolean p2, p0, Lcom/google/android/material/floatingactionbutton/b$b;->a:Z
+
+    iput-object p3, p0, Lcom/google/android/material/floatingactionbutton/b$b;->b:Lcom/google/android/material/floatingactionbutton/b$k;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 3
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->a(Lcom/google/android/material/floatingactionbutton/b;I)I
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->b(Lcom/google/android/material/floatingactionbutton/b;Landroid/animation/Animator;)Landroid/animation/Animator;
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$b;->b:Lcom/google/android/material/floatingactionbutton/b$k;
+
+    if-eqz p1, :cond_13
+
+    invoke-interface {p1}, Lcom/google/android/material/floatingactionbutton/b$k;->a()V
+
+    :cond_13
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget-boolean v1, p0, Lcom/google/android/material/floatingactionbutton/b$b;->a:Z
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v1}, Lcom/google/android/material/internal/VisibilityAwareImageButton;->b(IZ)V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Lcom/google/android/material/floatingactionbutton/b;->a(Lcom/google/android/material/floatingactionbutton/b;I)I
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$b;->c:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-static {v0, p1}, Lcom/google/android/material/floatingactionbutton/b;->b(Lcom/google/android/material/floatingactionbutton/b;Landroid/animation/Animator;)Landroid/animation/Animator;
+
+    return-void
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.c (com.google.android.material.floatingactionbutton.b$c)
+.class Lcom/google/android/material/floatingactionbutton/b$c;
+.super Lcom/google/android/material/animation/d;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->i(Lcom/google/android/material/animation/MotionSpec;FFF)Landroid/animation/AnimatorSet;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic d:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$c;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-direct {p0}, Lcom/google/android/material/animation/d;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
+    .registers 5
+    .param p2    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Landroid/graphics/Matrix;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$c;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-static {v0, p1}, Lcom/google/android/material/floatingactionbutton/b;->c(Lcom/google/android/material/floatingactionbutton/b;F)F
+
+    invoke-super {p0, p1, p2, p3}, Lcom/google/android/material/animation/d;->a(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+    .param p2    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    check-cast p2, Landroid/graphics/Matrix;
+
+    check-cast p3, Landroid/graphics/Matrix;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/floatingactionbutton/b$c;->a(FLandroid/graphics/Matrix;Landroid/graphics/Matrix;)Landroid/graphics/Matrix;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.d (com.google.android.material.floatingactionbutton.b$d)
+.class Lcom/google/android/material/floatingactionbutton/b$d;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->j(FFF)Landroid/animation/AnimatorSet;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:F
+
+.field final synthetic b:F
+
+.field final synthetic c:F
+
+.field final synthetic d:F
+
+.field final synthetic e:F
+
+.field final synthetic f:F
+
+.field final synthetic g:F
+
+.field final synthetic h:Landroid/graphics/Matrix;
+
+.field final synthetic i:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;FFFFFFFLandroid/graphics/Matrix;)V
+    .registers 10
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iput p2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->a:F
+
+    iput p3, p0, Lcom/google/android/material/floatingactionbutton/b$d;->b:F
+
+    iput p4, p0, Lcom/google/android/material/floatingactionbutton/b$d;->c:F
+
+    iput p5, p0, Lcom/google/android/material/floatingactionbutton/b$d;->d:F
+
+    iput p6, p0, Lcom/google/android/material/floatingactionbutton/b$d;->e:F
+
+    iput p7, p0, Lcom/google/android/material/floatingactionbutton/b$d;->f:F
+
+    iput p8, p0, Lcom/google/android/material/floatingactionbutton/b$d;->g:F
+
+    iput-object p9, p0, Lcom/google/android/material/floatingactionbutton/b$d;->h:Landroid/graphics/Matrix;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .registers 7
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->a:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->b:F
+
+    const/4 v3, 0x0
+
+    const v4, 0x3e4ccccd    # 0.2f
+
+    invoke-static {v1, v2, v3, v4, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFFFF)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setAlpha(F)V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->c:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->d:F
+
+    invoke-static {v1, v2, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFF)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleX(F)V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->e:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->d:F
+
+    invoke-static {v1, v2, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFF)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->setScaleY(F)V
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->f:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->g:F
+
+    invoke-static {v1, v2, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFF)F
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/google/android/material/floatingactionbutton/b;->c(Lcom/google/android/material/floatingactionbutton/b;F)F
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->f:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$d;->g:F
+
+    invoke-static {v1, v2, p1}, Lcom/google/android/material/animation/AnimationUtils;->lerp(FFF)F
+
+    move-result p1
+
+    iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->h:Landroid/graphics/Matrix;
+
+    invoke-static {v0, p1, v1}, Lcom/google/android/material/floatingactionbutton/b;->d(Lcom/google/android/material/floatingactionbutton/b;FLandroid/graphics/Matrix;)V
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$d;->i:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object p1, p1, Lcom/google/android/material/floatingactionbutton/b;->D:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$d;->h:Landroid/graphics/Matrix;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageButton;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.e (com.google.android.material.floatingactionbutton.b$e)
+.class Lcom/google/android/material/floatingactionbutton/b$e;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+# interfaces
+.implements Landroid/animation/TypeEvaluator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->e0(Landroid/animation/ObjectAnimator;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/animation/TypeEvaluator<",
+        "Ljava/lang/Float;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field a:Landroid/animation/FloatEvaluator;
+
+.field final synthetic b:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$e;->b:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Landroid/animation/FloatEvaluator;
+
+    invoke-direct {p1}, Landroid/animation/FloatEvaluator;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$e;->a:Landroid/animation/FloatEvaluator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(FLjava/lang/Float;Ljava/lang/Float;)Ljava/lang/Float;
+    .registers 5
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$e;->a:Landroid/animation/FloatEvaluator;
+
+    invoke-virtual {v0, p1, p2, p3}, Landroid/animation/FloatEvaluator;->evaluate(FLjava/lang/Number;Ljava/lang/Number;)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    const p2, 0x3dcccccd    # 0.1f
+
+    cmpg-float p2, p1, p2
+
+    if-gez p2, :cond_12
+
+    const/4 p1, 0x0
+
+    :cond_12
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    check-cast p2, Ljava/lang/Float;
+
+    check-cast p3, Ljava/lang/Float;
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/material/floatingactionbutton/b$e;->a(FLjava/lang/Float;Ljava/lang/Float;)Ljava/lang/Float;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.f (com.google.android.material.floatingactionbutton.b$f)
+.class Lcom/google/android/material/floatingactionbutton/b$f;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/android/material/floatingactionbutton/b;->q()Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$f;->a:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onPreDraw()Z
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$f;->a:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-virtual {v0}, Lcom/google/android/material/floatingactionbutton/b;->F()V
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.g (com.google.android.material.floatingactionbutton.b$g)
+.class Lcom/google/android/material/floatingactionbutton/b$g;
+.super Lcom/google/android/material/floatingactionbutton/b$m;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "g"
+.end annotation
+
+
+# instance fields
+.field final synthetic e:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$g;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/floatingactionbutton/b$m;-><init>(Lcom/google/android/material/floatingactionbutton/b;Lcom/google/android/material/floatingactionbutton/b$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a()F
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.h (com.google.android.material.floatingactionbutton.b$h)
+.class Lcom/google/android/material/floatingactionbutton/b$h;
+.super Lcom/google/android/material/floatingactionbutton/b$m;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "h"
+.end annotation
+
+
+# instance fields
+.field final synthetic e:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$h;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/floatingactionbutton/b$m;-><init>(Lcom/google/android/material/floatingactionbutton/b;Lcom/google/android/material/floatingactionbutton/b$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a()F
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$h;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v1, v0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    iget v0, v0, Lcom/google/android/material/floatingactionbutton/b;->p:F
+
+    add-float/2addr v1, v0
+
+    return v1
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.i (com.google.android.material.floatingactionbutton.b$i)
+.class Lcom/google/android/material/floatingactionbutton/b$i;
+.super Lcom/google/android/material/floatingactionbutton/b$m;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "i"
+.end annotation
+
+
+# instance fields
+.field final synthetic e:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$i;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/floatingactionbutton/b$m;-><init>(Lcom/google/android/material/floatingactionbutton/b;Lcom/google/android/material/floatingactionbutton/b$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a()F
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$i;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v1, v0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    iget v0, v0, Lcom/google/android/material/floatingactionbutton/b;->q:F
+
+    add-float/2addr v1, v0
+
+    return v1
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.j (com.google.android.material.floatingactionbutton.b$j)
+.class interface abstract Lcom/google/android/material/floatingactionbutton/b$j;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "j"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.k (com.google.android.material.floatingactionbutton.b$k)
+.class interface abstract Lcom/google/android/material/floatingactionbutton/b$k;
+.super Ljava/lang/Object;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "k"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract b()V
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.l (com.google.android.material.floatingactionbutton.b$l)
+.class Lcom/google/android/material/floatingactionbutton/b$l;
+.super Lcom/google/android/material/floatingactionbutton/b$m;
+.source "FloatingActionButtonImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "l"
+.end annotation
+
+
+# instance fields
+.field final synthetic e:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$l;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/google/android/material/floatingactionbutton/b$m;-><init>(Lcom/google/android/material/floatingactionbutton/b;Lcom/google/android/material/floatingactionbutton/b$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a()F
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$l;->e:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v0, v0, Lcom/google/android/material/floatingactionbutton/b;->o:F
+
+    return v0
+.end method
+
+###### Class com.google.android.material.floatingactionbutton.b.m (com.google.android.material.floatingactionbutton.b$m)
+.class abstract Lcom/google/android/material/floatingactionbutton/b$m;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "FloatingActionButtonImpl.java"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/floatingactionbutton/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x402
+    name = "m"
+.end annotation
+
+
+# instance fields
+.field private a:Z
+
+.field private b:F
+
+.field private c:F
+
+.field final synthetic d:Lcom/google/android/material/floatingactionbutton/b;
+
+
+# direct methods
+.method private constructor <init>(Lcom/google/android/material/floatingactionbutton/b;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$m;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/android/material/floatingactionbutton/b;Lcom/google/android/material/floatingactionbutton/b$a;)V
+    .registers 3
+
+    invoke-direct {p0, p1}, Lcom/google/android/material/floatingactionbutton/b$m;-><init>(Lcom/google/android/material/floatingactionbutton/b;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected abstract a()F
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .registers 3
+
+    iget-object p1, p0, Lcom/google/android/material/floatingactionbutton/b$m;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->c:F
+
+    float-to-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1, v0}, Lcom/google/android/material/floatingactionbutton/b;->d0(F)V
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lcom/google/android/material/floatingactionbutton/b$m;->a:Z
+
+    return-void
+.end method
+
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .registers 5
+    .param p1    # Landroid/animation/ValueAnimator;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->a:Z
+
+    if-nez v0, :cond_1b
+
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget-object v0, v0, Lcom/google/android/material/floatingactionbutton/b;->i:Lcom/google/android/material/shape/MaterialShapeDrawable;
+
+    if-nez v0, :cond_c
+
+    const/4 v0, 0x0
+
+    goto :goto_10
+
+    :cond_c
+    invoke-virtual {v0}, Lcom/google/android/material/shape/MaterialShapeDrawable;->v()F
+
+    move-result v0
+
+    :goto_10
+    iput v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->b:F
+
+    invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/b$m;->a()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->c:F
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->a:Z
+
+    :cond_1b
+    iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/b$m;->d:Lcom/google/android/material/floatingactionbutton/b;
+
+    iget v1, p0, Lcom/google/android/material/floatingactionbutton/b$m;->b:F
+
+    iget v2, p0, Lcom/google/android/material/floatingactionbutton/b$m;->c:F
+
+    sub-float/2addr v2, v1
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
+
+    move-result p1
+
+    mul-float v2, v2, p1
+
+    add-float/2addr v1, v2
+
+    float-to-int p1, v1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/material/floatingactionbutton/b;->d0(F)V
+
+    return-void
+.end method

@@ -1,0 +1,9 @@
+###### Class com.google.android.datatransport.runtime.scheduling.d (com.google.android.datatransport.runtime.scheduling.d)
+.class public interface abstract Lcom/google/android/datatransport/runtime/scheduling/d;
+.super Ljava/lang/Object;
+.source "Scheduler.java"
+
+
+# virtual methods
+.method public abstract a(Lcom/google/android/datatransport/runtime/TransportContext;Lcom/google/android/datatransport/runtime/EventInternal;Lcom/google/android/datatransport/e;)V
+.end method

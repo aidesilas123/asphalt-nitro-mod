@@ -1,0 +1,1825 @@
+###### Class com.applovin.impl.mediation.d.f (com.applovin.impl.mediation.d.f)
+.class public Lcom/applovin/impl/mediation/d/f;
+.super Lcom/applovin/impl/sdk/e/d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/applovin/impl/mediation/d/f$a;
+    }
+.end annotation
+
+
+# static fields
+.field private static final awA:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+
+# instance fields
+.field private final akY:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/applovin/mediation/MaxNetworkResponseInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final awV:Ljava/lang/String;
+
+.field private final awW:Lcom/applovin/mediation/MaxAdFormat;
+
+.field private final awX:Lorg/json/JSONObject;
+
+.field private final awY:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/b/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final awZ:Lcom/applovin/impl/mediation/ads/a$a;
+
+.field private final axa:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Landroid/content/Context;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private startTimeMillis:J
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+
+    sput-object v0, Lcom/applovin/impl/mediation/d/f;->awA:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-void
+.end method
+
+.method constructor <init>(Ljava/lang/String;Lcom/applovin/mediation/MaxAdFormat;Ljava/util/Map;Lorg/json/JSONObject;Landroid/content/Context;Lcom/applovin/impl/sdk/n;Lcom/applovin/impl/mediation/ads/a$a;)V
+    .registers 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lcom/applovin/mediation/MaxAdFormat;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lorg/json/JSONObject;",
+            "Landroid/content/Context;",
+            "Lcom/applovin/impl/sdk/n;",
+            "Lcom/applovin/impl/mediation/ads/a$a;",
+            ")V"
+        }
+    .end annotation
+
+    const-string v0, "TaskProcessMediationWaterfall"
+
+    invoke-direct {p0, v0, p6, p1}, Lcom/applovin/impl/sdk/e/d;-><init>(Ljava/lang/String;Lcom/applovin/impl/sdk/n;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    iput-object p4, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    iput-object p7, p0, Lcom/applovin/impl/mediation/d/f;->awZ:Lcom/applovin/impl/mediation/ads/a$a;
+
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f;->axa:Ljava/lang/ref/WeakReference;
+
+    new-instance p1, Lorg/json/JSONArray;
+
+    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
+
+    const-string p2, "ads"
+
+    invoke-static {p4, p2, p1}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getJSONArray(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
+
+    move-result p5
+
+    invoke-direct {p2, p5}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    const/4 p2, 0x0
+
+    :goto_2b
+    invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
+
+    move-result p5
+
+    if-ge p2, p5, :cond_42
+
+    const/4 p5, 0x0
+
+    invoke-static {p1, p2, p5}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getJSONObject(Lorg/json/JSONArray;ILorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p5
+
+    iget-object p7, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    invoke-static {p2, p3, p5, p4, p6}, Lcom/applovin/impl/mediation/b/a;->a(ILjava/util/Map;Lorg/json/JSONObject;Lorg/json/JSONObject;Lcom/applovin/impl/sdk/n;)Lcom/applovin/impl/mediation/b/a;
+
+    move-result-object p5
+
+    invoke-interface {p7, p5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_2b
+
+    :cond_42
+    new-instance p1, Ljava/util/ArrayList;
+
+    iget-object p2, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method private synthetic a(Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/mediation/MaxError;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/b/a;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/d/f;->h(Lcom/applovin/impl/mediation/b/a;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/mediation/MaxError;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/mediation/MaxError;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/impl/sdk/n;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    return-object p0
+.end method
+
+.method static synthetic c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method private c(Lcom/applovin/mediation/MaxError;)V
+    .registers 13
+
+    invoke-interface {p1}, Lcom/applovin/mediation/MaxError;->getCode()I
+
+    move-result v0
+
+    const/16 v1, 0xcc
+
+    if-ne v0, v1, :cond_14
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->BR()Lcom/applovin/impl/sdk/d/g;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/applovin/impl/sdk/d/f;->aTj:Lcom/applovin/impl/sdk/d/f;
+
+    invoke-virtual {v0, v1}, Lcom/applovin/impl/sdk/d/g;->a(Lcom/applovin/impl/sdk/d/f;)J
+
+    goto :goto_33
+
+    :cond_14
+    invoke-interface {p1}, Lcom/applovin/mediation/MaxError;->getCode()I
+
+    move-result v0
+
+    const/16 v1, -0x1389
+
+    if-ne v0, v1, :cond_28
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->BR()Lcom/applovin/impl/sdk/d/g;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/applovin/impl/sdk/d/f;->aTk:Lcom/applovin/impl/sdk/d/f;
+
+    invoke-virtual {v0, v1}, Lcom/applovin/impl/sdk/d/g;->a(Lcom/applovin/impl/sdk/d/f;)J
+
+    goto :goto_33
+
+    :cond_28
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->BR()Lcom/applovin/impl/sdk/d/g;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/applovin/impl/sdk/d/f;->aTl:Lcom/applovin/impl/sdk/d/f;
+
+    invoke-virtual {v0, v1}, Lcom/applovin/impl/sdk/d/g;->a(Lcom/applovin/impl/sdk/d/f;)J
+
+    :goto_33
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_44
+    :goto_44
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5c
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/applovin/mediation/MaxNetworkResponseInfo;
+
+    invoke-interface {v2}, Lcom/applovin/mediation/MaxNetworkResponseInfo;->getAdLoadState()Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;
+
+    move-result-object v3
+
+    sget-object v4, Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;->FAILED_TO_LOAD:Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;
+
+    if-ne v3, v4, :cond_44
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_44
+
+    :cond_5c
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_c4
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "======FAILED AD LOADS======"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v3, 0x0
+
+    :goto_6f
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-ge v3, v4, :cond_ba
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/applovin/mediation/MaxNetworkResponseInfo;
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, ") "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v4}, Lcom/applovin/mediation/MaxNetworkResponseInfo;->getMediatedNetwork()Lcom/applovin/mediation/MaxMediatedNetworkInfo;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lcom/applovin/mediation/MaxMediatedNetworkInfo;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "..code: "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v4}, Lcom/applovin/mediation/MaxNetworkResponseInfo;->getError()Lcom/applovin/mediation/MaxError;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lcom/applovin/mediation/MaxError;->getCode()I
+
+    move-result v5
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "..message: "
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v4}, Lcom/applovin/mediation/MaxNetworkResponseInfo;->getError()Lcom/applovin/mediation/MaxError;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lcom/applovin/mediation/MaxError;->getMessage()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_6f
+
+    :cond_ba
+    move-object v0, p1
+
+    check-cast v0, Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/applovin/impl/mediation/MaxErrorImpl;->setAdLoadFailureInfo(Ljava/lang/String;)V
+
+    :cond_c4
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/applovin/impl/mediation/d/f;->startTimeMillis:J
+
+    sub-long v8, v0, v2
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10a
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    iget-object v1, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Waterfall failed in "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v3, "ms for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " ad unit "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " with error: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/applovin/impl/sdk/x;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_10a
+    move-object v0, p1
+
+    check-cast v0, Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    new-instance v1, Lcom/applovin/impl/mediation/MaxAdWaterfallInfoImpl;
+
+    const/4 v5, 0x0
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    const-string v3, "waterfall_name"
+
+    const-string v4, ""
+
+    invoke-static {v2, v3, v4}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    const-string v3, "waterfall_test_name"
+
+    invoke-static {v2, v3, v4}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getString(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    iget-object v10, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    move-object v4, v1
+
+    invoke-direct/range {v4 .. v10}, Lcom/applovin/impl/mediation/MaxAdWaterfallInfoImpl;-><init>(Lcom/applovin/impl/mediation/b/a;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V
+
+    invoke-virtual {v0, v1}, Lcom/applovin/impl/mediation/MaxErrorImpl;->setWaterfall(Lcom/applovin/mediation/MaxAdWaterfallInfo;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awZ:Lcom/applovin/impl/mediation/ads/a$a;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    invoke-static {v0, v1, p1}, Lcom/applovin/impl/sdk/utils/m;->a(Lcom/applovin/mediation/MaxAdListener;Ljava/lang/String;Lcom/applovin/mediation/MaxError;)V
+
+    return-void
+.end method
+
+.method static synthetic d(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/mediation/MaxAdFormat;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    return-object p0
+.end method
+
+.method static synthetic e(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/ref/WeakReference;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f;->axa:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic f(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/impl/mediation/ads/a$a;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f;->awZ:Lcom/applovin/impl/mediation/ads/a$a;
+
+    return-object p0
+.end method
+
+.method static synthetic g(Lcom/applovin/impl/mediation/d/f;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method private h(Lcom/applovin/impl/mediation/b/a;)V
+    .registers 8
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->CC()Lcom/applovin/impl/sdk/y;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/applovin/impl/sdk/y;->l(Lcom/applovin/impl/mediation/b/a;)V
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/applovin/impl/mediation/d/f;->startTimeMillis:J
+
+    sub-long/2addr v0, v2
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_52
+
+    iget-object v2, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    iget-object v3, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Waterfall loaded in "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v5, "ms from "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/b/f;->yA()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " for "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    invoke-virtual {v5}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, " ad unit "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Lcom/applovin/impl/sdk/x;->g(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_52
+    new-instance v2, Lcom/applovin/impl/mediation/MaxAdWaterfallInfoImpl;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f;->akY:Ljava/util/List;
+
+    invoke-direct {v2, p1, v0, v1, v3}, Lcom/applovin/impl/mediation/MaxAdWaterfallInfoImpl;-><init>(Lcom/applovin/impl/mediation/b/a;JLjava/util/List;)V
+
+    invoke-virtual {p1, v2}, Lcom/applovin/impl/mediation/b/a;->setWaterfall(Lcom/applovin/mediation/MaxAdWaterfallInfo;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awZ:Lcom/applovin/impl/mediation/ads/a$a;
+
+    invoke-static {v0, p1}, Lcom/applovin/impl/sdk/utils/m;->a(Lcom/applovin/mediation/MaxAdListener;Lcom/applovin/mediation/MaxAd;)V
+
+    return-void
+.end method
+
+.method public static synthetic i(Lcom/applovin/impl/mediation/d/f;)V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/applovin/impl/mediation/d/f;->zJ()V
+
+    return-void
+.end method
+
+.method public static synthetic j(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/d/f;->a(Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+
+    return-void
+.end method
+
+.method private synthetic zJ()V
+    .registers 4
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->CF()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "MAX SDK Not Initialized In Test Mode"
+
+    const-string v2, "Test ads may not load. Please force close and restart the app if you experience issues."
+
+    invoke-static {v1, v2, v0}, Lcom/applovin/impl/sdk/utils/u;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .registers 9
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/applovin/impl/mediation/d/f;->startTimeMillis:J
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    const-string v1, "is_testing"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2e
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->CE()Lcom/applovin/impl/mediation/debugger/ui/testmode/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/applovin/impl/mediation/debugger/ui/testmode/c;->isEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2e
+
+    sget-object v0, Lcom/applovin/impl/mediation/d/f;->awA:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2e
+
+    new-instance v0, Lcom/applovin/impl/mediation/d/o;
+
+    invoke-direct {v0, p0}, Lcom/applovin/impl/mediation/d/o;-><init>(Lcom/applovin/impl/mediation/d/f;)V
+
+    invoke-static {v0}, Lcom/applovin/sdk/AppLovinSdkUtils;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    :cond_2e
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const-string v1, " ad unit "
+
+    if-lez v0, :cond_89
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_77
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    iget-object v3, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Starting waterfall for "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v5, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    invoke-virtual {v5}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " with "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " ad(s)..."
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v1}, Lcom/applovin/impl/sdk/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_77
+    new-instance v0, Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awY:Ljava/util/List;
+
+    invoke-direct {v0, p0, v2, v1}, Lcom/applovin/impl/mediation/d/f$a;-><init>(Lcom/applovin/impl/mediation/d/f;ILjava/util/List;)V
+
+    iget-object v1, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v1}, Lcom/applovin/impl/sdk/n;->BO()Lcom/applovin/impl/sdk/e/q;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/applovin/impl/sdk/e/q;->b(Lcom/applovin/impl/sdk/e/d;)V
+
+    goto/16 :goto_108
+
+    :cond_89
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b5
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    iget-object v2, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "No ads were returned from the server for "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    invoke-virtual {v4}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lcom/applovin/impl/sdk/x;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_b5
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awV:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f;->awW:Lcom/applovin/mediation/MaxAdFormat;
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    iget-object v3, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-static {v0, v1, v2, v3}, Lcom/applovin/impl/sdk/utils/u;->a(Ljava/lang/String;Lcom/applovin/mediation/MaxAdFormat;Lorg/json/JSONObject;Lcom/applovin/impl/sdk/n;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f;->awX:Lorg/json/JSONObject;
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v2, "settings"
+
+    invoke-static {v0, v2, v1}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getJSONObject(Lorg/json/JSONObject;Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "alfdcs"
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getLong(Lorg/json/JSONObject;Ljava/lang/String;J)J
+
+    move-result-wide v4
+
+    new-instance v1, Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    const/16 v6, 0xcc
+
+    const-string v7, "MAX returned no eligible ads from any mediated networks for this app/device."
+
+    invoke-direct {v1, v6, v7}, Lcom/applovin/impl/mediation/MaxErrorImpl;-><init>(ILjava/lang/String;)V
+
+    cmp-long v6, v4, v2
+
+    if-lez v6, :cond_105
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v2
+
+    new-instance v4, Lcom/applovin/impl/mediation/d/p;
+
+    invoke-direct {v4, p0, v1}, Lcom/applovin/impl/mediation/d/p;-><init>(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    const-string v5, "alfdcs_iba"
+
+    invoke-static {v0, v5, v1}, Lcom/applovin/impl/sdk/utils/JsonUtils;->getBoolean(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Boolean;)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_101
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-static {v2, v3, v0, v4}, Lcom/applovin/impl/sdk/utils/f;->a(JLcom/applovin/impl/sdk/n;Ljava/lang/Runnable;)Lcom/applovin/impl/sdk/utils/f;
+
+    goto :goto_108
+
+    :cond_101
+    invoke-static {v4, v2, v3}, Lcom/applovin/sdk/AppLovinSdkUtils;->runOnUiThreadDelayed(Ljava/lang/Runnable;J)V
+
+    goto :goto_108
+
+    :cond_105
+    invoke-direct {p0, v1}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/mediation/MaxError;)V
+
+    :goto_108
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.d.f.a (com.applovin.impl.mediation.d.f$a)
+.class Lcom/applovin/impl/mediation/d/f$a;
+.super Lcom/applovin/impl/sdk/e/d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/applovin/impl/mediation/d/f;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field private final aml:Lcom/applovin/impl/mediation/b/a;
+
+.field private final axb:I
+
+.field private final axc:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/b/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic axd:Lcom/applovin/impl/mediation/d/f;
+
+.field private final startTimeMillis:J
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/mediation/d/f;ILjava/util/List;)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/b/a;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f;->a(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f;->b(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/impl/sdk/n;
+
+    move-result-object v1
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, v0, v1, p1}, Lcom/applovin/impl/sdk/e/d;-><init>(Ljava/lang/String;Lcom/applovin/impl/sdk/n;Ljava/lang/String;)V
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/applovin/impl/mediation/d/f$a;->startTimeMillis:J
+
+    iput p2, p0, Lcom/applovin/impl/mediation/d/f$a;->axb:I
+
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/applovin/impl/mediation/b/a;
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f$a;->aml:Lcom/applovin/impl/mediation/b/a;
+
+    iput-object p3, p0, Lcom/applovin/impl/mediation/d/f$a;->axc:Ljava/util/List;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f$a;)J
+    .registers 3
+
+    iget-wide v0, p0, Lcom/applovin/impl/mediation/d/f$a;->startTimeMillis:J
+
+    return-wide v0
+.end method
+
+.method private a(Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+    .registers 15
+    .param p5    # Lcom/applovin/mediation/MaxError;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/b/a;->isBidding()Z
+
+    move-result v4
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/b/f;->vt()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/mediation/e/c;->a(Ljava/lang/String;Lcom/applovin/impl/sdk/n;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/applovin/impl/mediation/MaxMediatedNetworkInfoImpl;
+
+    invoke-direct {v2, v0}, Lcom/applovin/impl/mediation/MaxMediatedNetworkInfoImpl;-><init>(Lorg/json/JSONObject;)V
+
+    new-instance v8, Lcom/applovin/impl/mediation/MaxNetworkResponseInfoImpl;
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/b/a;->getCredentials()Landroid/os/Bundle;
+
+    move-result-object v3
+
+    move-object v0, v8
+
+    move-object v1, p2
+
+    move-wide v5, p3
+
+    move-object v7, p5
+
+    invoke-direct/range {v0 .. v7}, Lcom/applovin/impl/mediation/MaxNetworkResponseInfoImpl;-><init>(Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;Lcom/applovin/mediation/MaxMediatedNetworkInfo;Landroid/os/Bundle;ZJLcom/applovin/mediation/MaxError;)V
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f;->g(Lcom/applovin/impl/mediation/d/f;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+    .registers 6
+
+    invoke-direct/range {p0 .. p5}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/d/f$a;Ljava/lang/String;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/d/f$a;->ch(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    return-object p0
+.end method
+
+.method static synthetic c(Lcom/applovin/impl/mediation/d/f$a;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method private ch(Ljava/lang/String;)V
+    .registers 2
+
+    return-void
+.end method
+
+.method static synthetic d(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    return-object p0
+.end method
+
+.method static synthetic e(Lcom/applovin/impl/mediation/d/f$a;)I
+    .registers 1
+
+    iget p0, p0, Lcom/applovin/impl/mediation/d/f$a;->axb:I
+
+    return p0
+.end method
+
+.method static synthetic f(Lcom/applovin/impl/mediation/d/f$a;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f$a;->axc:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic g(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    return-object p0
+.end method
+
+.method static synthetic h(Lcom/applovin/impl/mediation/d/f$a;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic i(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    return-object p0
+.end method
+
+.method static synthetic j(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/mediation/b/a;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/d/f$a;->aml:Lcom/applovin/impl/mediation/b/a;
+
+    return-object p0
+.end method
+
+.method static synthetic k(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/n;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public run()V
+    .registers 7
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5e
+
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->logger:Lcom/applovin/impl/sdk/x;
+
+    iget-object v1, p0, Lcom/applovin/impl/sdk/e/d;->tag:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Loading ad "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v3, p0, Lcom/applovin/impl/mediation/d/f$a;->axb:I
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " of "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a;->axc:Ljava/util/List;
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v3, " from "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a;->aml:Lcom/applovin/impl/mediation/b/a;
+
+    invoke-virtual {v3}, Lcom/applovin/impl/mediation/b/f;->yA()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v3}, Lcom/applovin/impl/mediation/d/f;->d(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/mediation/MaxAdFormat;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " ad unit "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v3}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/applovin/impl/sdk/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_5e
+    const-string v0, "started to load ad"
+
+    invoke-direct {p0, v0}, Lcom/applovin/impl/mediation/d/f$a;->ch(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f;->e(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    instance-of v1, v0, Landroid/app/Activity;
+
+    if-eqz v1, :cond_76
+
+    check-cast v0, Landroid/app/Activity;
+
+    goto :goto_7c
+
+    :cond_76
+    iget-object v0, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->CF()Landroid/app/Activity;
+
+    move-result-object v0
+
+    :goto_7c
+    iget-object v1, p0, Lcom/applovin/impl/sdk/e/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {v1}, Lcom/applovin/impl/sdk/n;->Cy()Lcom/applovin/impl/mediation/MediationServiceImpl;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v2}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a;->aml:Lcom/applovin/impl/mediation/b/a;
+
+    new-instance v4, Lcom/applovin/impl/mediation/d/f$a$1;
+
+    iget-object v5, p0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v5}, Lcom/applovin/impl/mediation/d/f;->f(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/impl/mediation/ads/a$a;
+
+    move-result-object v5
+
+    invoke-direct {v4, p0, v5}, Lcom/applovin/impl/mediation/d/f$a$1;-><init>(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/ads/a$a;)V
+
+    invoke-virtual {v1, v2, v3, v0, v4}, Lcom/applovin/impl/mediation/MediationServiceImpl;->loadThirdPartyMediatedAd(Ljava/lang/String;Lcom/applovin/impl/mediation/b/a;Landroid/app/Activity;Lcom/applovin/impl/mediation/ads/a$a;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.d.f.a.AnonymousClass1 (com.applovin.impl.mediation.d.f$a$1)
+.class Lcom/applovin/impl/mediation/d/f$a$1;
+.super Lcom/applovin/impl/mediation/e/a;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/mediation/d/f$a;->run()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axe:Lcom/applovin/impl/mediation/d/f$a;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/ads/a$a;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-direct {p0, p2}, Lcom/applovin/impl/mediation/e/a;-><init>(Lcom/applovin/impl/mediation/ads/a$a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAdLoadFailed(Ljava/lang/String;Lcom/applovin/mediation/MaxError;)V
+    .registers 13
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Lcom/applovin/mediation/MaxError;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;)J
+
+    move-result-wide v2
+
+    sub-long v7, v0, v2
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f$a;->g(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_63
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f$a;->i(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f$a;->h(Lcom/applovin/impl/mediation/d/f$a;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Ad failed to load in "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, " ms for "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v2, v2, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v2}, Lcom/applovin/impl/mediation/d/f;->d(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/mediation/MaxAdFormat;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " ad unit "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v2, v2, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v2}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " with error: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v0, v1}, Lcom/applovin/impl/sdk/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_63
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "failed to load ad: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p2}, Lcom/applovin/mediation/MaxError;->getCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v4}, Lcom/applovin/impl/mediation/d/f$a;->j(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/mediation/b/a;
+
+    move-result-object v5
+
+    sget-object v6, Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;->FAILED_TO_LOAD:Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;
+
+    move-object v9, p2
+
+    invoke-static/range {v4 .. v9}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/d/f$a;->e(Lcom/applovin/impl/mediation/d/f$a;)I
+
+    move-result p1
+
+    iget-object p2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {p2}, Lcom/applovin/impl/mediation/d/f$a;->f(Lcom/applovin/impl/mediation/d/f$a;)Ljava/util/List;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, -0x1
+
+    if-ge p1, p2, :cond_cc
+
+    new-instance p1, Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object p2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v0, p2, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {p2}, Lcom/applovin/impl/mediation/d/f$a;->e(Lcom/applovin/impl/mediation/d/f$a;)I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v1}, Lcom/applovin/impl/mediation/d/f$a;->f(Lcom/applovin/impl/mediation/d/f$a;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {p1, v0, p2, v1}, Lcom/applovin/impl/mediation/d/f$a;-><init>(Lcom/applovin/impl/mediation/d/f;ILjava/util/List;)V
+
+    iget-object p2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object p2, p2, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {p2}, Lcom/applovin/impl/mediation/d/f;->d(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/mediation/MaxAdFormat;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/applovin/impl/mediation/e/c;->f(Lcom/applovin/mediation/MaxAdFormat;)Lcom/applovin/impl/sdk/e/q$b;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f$a;->k(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/n;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/applovin/impl/sdk/n;->BO()Lcom/applovin/impl/sdk/e/q;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lcom/applovin/impl/sdk/e/q;->a(Lcom/applovin/impl/sdk/e/d;Lcom/applovin/impl/sdk/e/q$b;)V
+
+    goto :goto_dc
+
+    :cond_cc
+    new-instance p1, Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    const/16 p2, -0x1389
+
+    const-string v0, "MAX returned eligible ads from mediated networks, but all ads failed to load. Inspect getWaterfall() for more info."
+
+    invoke-direct {p1, p2, v0}, Lcom/applovin/impl/mediation/MaxErrorImpl;-><init>(ILjava/lang/String;)V
+
+    iget-object p2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object p2, p2, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {p2, p1}, Lcom/applovin/impl/mediation/d/f;->a(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/mediation/MaxError;)V
+
+    :goto_dc
+    return-void
+.end method
+
+.method public onAdLoaded(Lcom/applovin/mediation/MaxAd;)V
+    .registers 12
+    .param p1    # Lcom/applovin/mediation/MaxAd;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    const-string v1, "loaded ad"
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;Ljava/lang/String;)V
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v2}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;)J
+
+    move-result-wide v2
+
+    sub-long v7, v0, v2
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f$a;->b(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_62
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f$a;->d(Lcom/applovin/impl/mediation/d/f$a;)Lcom/applovin/impl/sdk/x;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v1}, Lcom/applovin/impl/mediation/d/f$a;->c(Lcom/applovin/impl/mediation/d/f$a;)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Ad loaded in "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v3, "ms for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v3, v3, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v3}, Lcom/applovin/impl/mediation/d/f;->d(Lcom/applovin/impl/mediation/d/f;)Lcom/applovin/mediation/MaxAdFormat;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/applovin/mediation/MaxAdFormat;->getLabel()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " ad unit "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v3, v3, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v3}, Lcom/applovin/impl/mediation/d/f;->c(Lcom/applovin/impl/mediation/d/f;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/applovin/impl/sdk/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_62
+    iget-object v4, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    check-cast p1, Lcom/applovin/impl/mediation/b/a;
+
+    sget-object v6, Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;->AD_LOADED:Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;
+
+    const/4 v9, 0x0
+
+    move-object v5, p1
+
+    invoke-static/range {v4 .. v9}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f$a;->e(Lcom/applovin/impl/mediation/d/f$a;)I
+
+    move-result v0
+
+    :goto_73
+    add-int/lit8 v0, v0, 0x1
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v1}, Lcom/applovin/impl/mediation/d/f$a;->f(Lcom/applovin/impl/mediation/d/f$a;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_97
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    invoke-static {v2}, Lcom/applovin/impl/mediation/d/f$a;->f(Lcom/applovin/impl/mediation/d/f$a;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Lcom/applovin/impl/mediation/b/a;
+
+    sget-object v4, Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;->AD_LOAD_NOT_ATTEMPTED:Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;
+
+    const-wide/16 v5, -0x1
+
+    const/4 v7, 0x0
+
+    invoke-static/range {v2 .. v7}, Lcom/applovin/impl/mediation/d/f$a;->a(Lcom/applovin/impl/mediation/d/f$a;Lcom/applovin/impl/mediation/b/a;Lcom/applovin/mediation/MaxNetworkResponseInfo$AdLoadState;JLcom/applovin/mediation/MaxError;)V
+
+    goto :goto_73
+
+    :cond_97
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/f$a$1;->axe:Lcom/applovin/impl/mediation/d/f$a;
+
+    iget-object v0, v0, Lcom/applovin/impl/mediation/d/f$a;->axd:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v0, p1}, Lcom/applovin/impl/mediation/d/f;->a(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/b/a;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.d.o (com.applovin.impl.mediation.d.o)
+.class public final synthetic Lcom/applovin/impl/mediation/d/o;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Lcom/applovin/impl/mediation/d/f;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/applovin/impl/mediation/d/f;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/o;->a:Lcom/applovin/impl/mediation/d/f;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/o;->a:Lcom/applovin/impl/mediation/d/f;
+
+    invoke-static {v0}, Lcom/applovin/impl/mediation/d/f;->i(Lcom/applovin/impl/mediation/d/f;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.d.p (com.applovin.impl.mediation.d.p)
+.class public final synthetic Lcom/applovin/impl/mediation/d/p;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Lcom/applovin/impl/mediation/d/f;
+
+.field public final synthetic b:Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/d/p;->a:Lcom/applovin/impl/mediation/d/f;
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/d/p;->b:Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/d/p;->a:Lcom/applovin/impl/mediation/d/f;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/d/p;->b:Lcom/applovin/impl/mediation/MaxErrorImpl;
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/mediation/d/f;->j(Lcom/applovin/impl/mediation/d/f;Lcom/applovin/impl/mediation/MaxErrorImpl;)V
+
+    return-void
+.end method

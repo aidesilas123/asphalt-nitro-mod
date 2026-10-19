@@ -1,0 +1,440 @@
+###### Class kotlin.text.CharsKt__CharKt (kotlin.text.CharsKt__CharKt)
+.class Lkotlin/text/CharsKt__CharKt;
+.super Lkotlin/text/CharsKt__CharJVMKt;
+.source "Char.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u001e\n\u0000\n\u0002\u0010\u000c\n\u0002\u0010\u0008\n\u0002\u0008\u0006\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0010\u000e\n\u0002\u0008\u0002\u001a\u000c\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u0007\u001a\u0014\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u0002H\u0007\u001a\u000c\u0010\u0004\u001a\u00020\u0002*\u00020\u0001H\u0007\u001a\u0014\u0010\u0004\u001a\u00020\u0002*\u00020\u00012\u0006\u0010\u0003\u001a\u00020\u0002H\u0007\u001a\u0013\u0010\u0005\u001a\u0004\u0018\u00010\u0002*\u00020\u0001H\u0007\u00a2\u0006\u0002\u0010\u0006\u001a\u001b\u0010\u0005\u001a\u0004\u0018\u00010\u0002*\u00020\u00012\u0006\u0010\u0003\u001a\u00020\u0002H\u0007\u00a2\u0006\u0002\u0010\u0007\u001a\u001c\u0010\u0008\u001a\u00020\t*\u00020\u00012\u0006\u0010\n\u001a\u00020\u00012\u0008\u0008\u0002\u0010\u000b\u001a\u00020\t\u001a\n\u0010\u000c\u001a\u00020\t*\u00020\u0001\u001a\u0015\u0010\r\u001a\u00020\u000e*\u00020\u00012\u0006\u0010\n\u001a\u00020\u000eH\u0087\n\u001a\u000c\u0010\u000f\u001a\u00020\u000e*\u00020\u0001H\u0007\u00a8\u0006\u0010"
+    }
+    d2 = {
+        "digitToChar",
+        "",
+        "",
+        "radix",
+        "digitToInt",
+        "digitToIntOrNull",
+        "(C)Ljava/lang/Integer;",
+        "(CI)Ljava/lang/Integer;",
+        "equals",
+        "",
+        "other",
+        "ignoreCase",
+        "isSurrogate",
+        "plus",
+        "",
+        "titlecase",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x31
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lkotlin/text/CharsKt__CharJVMKt;-><init>()V
+
+    return-void
+.end method
+
+.method public static final digitToChar(I)C
+    .registers 4
+
+    new-instance v0, Lkotlin/ranges/IntRange;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v1, v2}, Lkotlin/ranges/IntRange;-><init>(II)V
+
+    invoke-virtual {v0, p0}, Lkotlin/ranges/IntRange;->l(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    add-int/lit8 p0, p0, 0x30
+
+    int-to-char p0, p0
+
+    return p0
+
+    :cond_12
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Int "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not a decimal digit"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final digitToChar(II)C
+    .registers 5
+
+    new-instance v0, Lkotlin/ranges/IntRange;
+
+    const/4 v1, 0x2
+
+    const/16 v2, 0x24
+
+    invoke-direct {v0, v1, v2}, Lkotlin/ranges/IntRange;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Lkotlin/ranges/IntRange;->l(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3e
+
+    if-ltz p0, :cond_1f
+
+    if-ge p0, p1, :cond_1f
+
+    const/16 p1, 0xa
+
+    if-ge p0, p1, :cond_19
+
+    add-int/lit8 p0, p0, 0x30
+
+    goto :goto_1d
+
+    :cond_19
+    add-int/lit8 p0, p0, 0x41
+
+    int-to-char p0, p0
+
+    sub-int/2addr p0, p1
+
+    :goto_1d
+    int-to-char p0, p0
+
+    return p0
+
+    :cond_1f
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Digit "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " does not represent a valid digit in radix "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_3e
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Invalid radix: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, ". Valid radix values are in range 2..36"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static digitToInt(C)I
+    .registers 4
+
+    const/16 v0, 0xa
+
+    invoke-static {p0, v0}, Lkotlin/text/CharsKt__CharJVMKt;->digitOf(CI)I
+
+    move-result v0
+
+    if-ltz v0, :cond_9
+
+    return v0
+
+    :cond_9
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Char "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not a decimal digit"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final digitToInt(CI)I
+    .registers 5
+
+    invoke-static {p0, p1}, Lkotlin/text/CharsKt__CharKt;->digitToIntOrNull(CI)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    return p0
+
+    :cond_b
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Char "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    const-string p0, " is not a digit in the given radix="
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static final digitToIntOrNull(C)Ljava/lang/Integer;
+    .registers 2
+
+    const/16 v0, 0xa
+
+    invoke-static {p0, v0}, Lkotlin/text/CharsKt__CharJVMKt;->digitOf(CI)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    if-ltz v0, :cond_12
+
+    const/4 v0, 0x1
+
+    goto :goto_13
+
+    :cond_12
+    const/4 v0, 0x0
+
+    :goto_13
+    if-eqz v0, :cond_16
+
+    goto :goto_17
+
+    :cond_16
+    const/4 p0, 0x0
+
+    :goto_17
+    return-object p0
+.end method
+
+.method public static final digitToIntOrNull(CI)Ljava/lang/Integer;
+    .registers 2
+
+    invoke-static {p1}, Lkotlin/text/a;->checkRadix(I)I
+
+    invoke-static {p0, p1}, Lkotlin/text/CharsKt__CharJVMKt;->digitOf(CI)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    if-ltz p1, :cond_13
+
+    const/4 p1, 0x1
+
+    goto :goto_14
+
+    :cond_13
+    const/4 p1, 0x0
+
+    :goto_14
+    if-eqz p1, :cond_17
+
+    goto :goto_18
+
+    :cond_17
+    const/4 p0, 0x0
+
+    :goto_18
+    return-object p0
+.end method
+
+.method public static final equals(CCZ)Z
+    .registers 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    const/4 v1, 0x0
+
+    if-nez p2, :cond_8
+
+    return v1
+
+    :cond_8
+    invoke-static {p0}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result p0
+
+    invoke-static {p1}, Ljava/lang/Character;->toUpperCase(C)C
+
+    move-result p1
+
+    if-eq p0, p1, :cond_1e
+
+    invoke-static {p0}, Ljava/lang/Character;->toLowerCase(C)C
+
+    move-result p0
+
+    invoke-static {p1}, Ljava/lang/Character;->toLowerCase(C)C
+
+    move-result p1
+
+    if-ne p0, p1, :cond_1d
+
+    goto :goto_1e
+
+    :cond_1d
+    const/4 v0, 0x0
+
+    :cond_1e
+    :goto_1e
+    return v0
+.end method
+
+.method public static synthetic equals$default(CCZILjava/lang/Object;)Z
+    .registers 5
+
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_5
+
+    const/4 p2, 0x0
+
+    :cond_5
+    invoke-static {p0, p1, p2}, Lkotlin/text/CharsKt__CharKt;->equals(CCZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final isSurrogate(C)Z
+    .registers 4
+
+    new-instance v0, Lkotlin/ranges/CharRange;
+
+    const v1, 0xd800
+
+    const v2, 0xdfff
+
+    invoke-direct {v0, v1, v2}, Lkotlin/ranges/CharRange;-><init>(CC)V
+
+    invoke-virtual {v0, p0}, Lkotlin/ranges/CharRange;->l(C)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static titlecase(C)Ljava/lang/String;
+    .registers 1
+
+    invoke-static {p0}, Lkotlin/text/_OneToManyTitlecaseMappingsKt;->titlecaseImpl(C)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

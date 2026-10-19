@@ -1,0 +1,316 @@
+###### Class kotlinx.coroutines.debug.AgentPremain (kotlinx.coroutines.debug.AgentPremain)
+.class public final Lkotlinx/coroutines/debug/AgentPremain;
+.super Ljava/lang/Object;
+.source "AgentPremain.kt"
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "all"
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkotlinx/coroutines/debug/AgentPremain$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c1\u0002\u0018\u00002\u00020\u0001:\u0001\u000cB\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J\u0008\u0010\u0005\u001a\u00020\u0006H\u0002J\u001a\u0010\u0007\u001a\u00020\u00062\u0008\u0010\u0008\u001a\u0004\u0018\u00010\t2\u0006\u0010\n\u001a\u00020\u000bH\u0007R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\r"
+    }
+    d2 = {
+        "Lkotlinx/coroutines/debug/AgentPremain;",
+        "",
+        "()V",
+        "enableCreationStackTraces",
+        "",
+        "installSignalHandler",
+        "",
+        "premain",
+        "args",
+        "",
+        "instrumentation",
+        "Ljava/lang/instrument/Instrumentation;",
+        "DebugProbesTransformer",
+        "kotlinx-coroutines-core"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lorg/codehaus/mojo/animal_sniffer/IgnoreJRERequirement;
+.end annotation
+
+
+# static fields
+.field public static final a:Lkotlinx/coroutines/debug/AgentPremain;
+
+.field private static final b:Z
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    new-instance v0, Lkotlinx/coroutines/debug/AgentPremain;
+
+    invoke-direct {v0}, Lkotlinx/coroutines/debug/AgentPremain;-><init>()V
+
+    sput-object v0, Lkotlinx/coroutines/debug/AgentPremain;->a:Lkotlinx/coroutines/debug/AgentPremain;
+
+    const/4 v0, 0x0
+
+    :try_start_8
+    sget-object v1, Lkotlin/Result;->a:Lkotlin/Result$a;
+
+    const-string v1, "kotlinx.coroutines.debug.enable.creation.stack.trace"
+
+    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1b
+
+    invoke-static {v1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    goto :goto_1c
+
+    :cond_1b
+    move-object v1, v0
+
+    :goto_1c
+    invoke-static {v1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_20
+    .catchall {:try_start_8 .. :try_end_20} :catchall_21
+
+    goto :goto_2c
+
+    :catchall_21
+    move-exception v1
+
+    sget-object v2, Lkotlin/Result;->a:Lkotlin/Result$a;
+
+    invoke-static {v1}, Lkotlin/ResultKt;->createFailure(Ljava/lang/Throwable;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkotlin/Result;->constructor-impl(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    :goto_2c
+    invoke-static {v1}, Lkotlin/Result;->isFailure-impl(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_33
+
+    goto :goto_34
+
+    :cond_33
+    move-object v0, v1
+
+    :goto_34
+    check-cast v0, Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_3d
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    goto :goto_43
+
+    :cond_3d
+    sget-object v0, Lkotlinx/coroutines/debug/internal/DebugProbesImpl;->a:Lkotlinx/coroutines/debug/internal/DebugProbesImpl;
+
+    invoke-virtual {v0}, Lkotlinx/coroutines/debug/internal/DebugProbesImpl;->d()Z
+
+    move-result v0
+
+    :goto_43
+    sput-boolean v0, Lkotlinx/coroutines/debug/AgentPremain;->b:Z
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a()V
+    .registers 3
+
+    :try_start_0
+    new-instance v0, Lsun/misc/Signal;
+
+    const-string v1, "TRAP"
+
+    invoke-direct {v0, v1}, Lsun/misc/Signal;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lkotlinx/coroutines/debug/a;->a:Lkotlinx/coroutines/debug/a;
+
+    invoke-static {v0, v1}, Lsun/misc/Signal;->handle(Lsun/misc/Signal;Lsun/misc/SignalHandler;)Lsun/misc/SignalHandler;
+    :try_end_c
+    .catchall {:try_start_0 .. :try_end_c} :catchall_c
+
+    :catchall_c
+    return-void
+.end method
+
+.method public static final premain(Ljava/lang/String;Ljava/lang/instrument/Instrumentation;)V
+    .registers 3
+
+    sget-object p0, Lkotlinx/coroutines/debug/internal/a;->a:Lkotlinx/coroutines/debug/internal/a;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lkotlinx/coroutines/debug/internal/a;->b(Z)V
+
+    sget-object p0, Lkotlinx/coroutines/debug/AgentPremain$a;->a:Lkotlinx/coroutines/debug/AgentPremain$a;
+
+    check-cast p0, Ljava/lang/instrument/ClassFileTransformer;
+
+    invoke-interface {p1, p0}, Ljava/lang/instrument/Instrumentation;->addTransformer(Ljava/lang/instrument/ClassFileTransformer;)V
+
+    sget-object p0, Lkotlinx/coroutines/debug/internal/DebugProbesImpl;->a:Lkotlinx/coroutines/debug/internal/DebugProbesImpl;
+
+    sget-boolean p1, Lkotlinx/coroutines/debug/AgentPremain;->b:Z
+
+    invoke-virtual {p0, p1}, Lkotlinx/coroutines/debug/internal/DebugProbesImpl;->q(Z)V
+
+    invoke-virtual {p0}, Lkotlinx/coroutines/debug/internal/DebugProbesImpl;->e()V
+
+    sget-object p0, Lkotlinx/coroutines/debug/AgentPremain;->a:Lkotlinx/coroutines/debug/AgentPremain;
+
+    invoke-direct {p0}, Lkotlinx/coroutines/debug/AgentPremain;->a()V
+
+    return-void
+.end method
+
+###### Class kotlinx.coroutines.debug.AgentPremain.a (kotlinx.coroutines.debug.AgentPremain$a)
+.class public final Lkotlinx/coroutines/debug/AgentPremain$a;
+.super Ljava/lang/Object;
+.source "AgentPremain.kt"
+
+# interfaces
+.implements Ljava/lang/instrument/ClassFileTransformer;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkotlinx/coroutines/debug/AgentPremain;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u00c0\u0002\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002J<\u0010\u0003\u001a\u0004\u0018\u00010\u00042\u0008\u0010\u0005\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0007\u001a\u00020\u00082\u000c\u0010\t\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\n2\u0006\u0010\u000b\u001a\u00020\u000c2\u0008\u0010\r\u001a\u0004\u0018\u00010\u0004H\u0016\u00a8\u0006\u000e"
+    }
+    d2 = {
+        "Lkotlinx/coroutines/debug/AgentPremain$DebugProbesTransformer;",
+        "Ljava/lang/instrument/ClassFileTransformer;",
+        "()V",
+        "transform",
+        "",
+        "loader",
+        "Ljava/lang/ClassLoader;",
+        "className",
+        "",
+        "classBeingRedefined",
+        "Ljava/lang/Class;",
+        "protectionDomain",
+        "Ljava/security/ProtectionDomain;",
+        "classfileBuffer",
+        "kotlinx-coroutines-core"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final a:Lkotlinx/coroutines/debug/AgentPremain$a;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lkotlinx/coroutines/debug/AgentPremain$a;
+
+    invoke-direct {v0}, Lkotlinx/coroutines/debug/AgentPremain$a;-><init>()V
+
+    sput-object v0, Lkotlinx/coroutines/debug/AgentPremain$a;->a:Lkotlinx/coroutines/debug/AgentPremain$a;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+###### Class kotlinx.coroutines.debug.a (kotlinx.coroutines.debug.a)
+.class public final synthetic Lkotlinx/coroutines/debug/a;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lsun/misc/SignalHandler;
+
+
+# static fields
+.field public static final synthetic a:Lkotlinx/coroutines/debug/a;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lkotlinx/coroutines/debug/a;
+
+    invoke-direct {v0}, Lkotlinx/coroutines/debug/a;-><init>()V
+
+    sput-object v0, Lkotlinx/coroutines/debug/a;->a:Lkotlinx/coroutines/debug/a;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

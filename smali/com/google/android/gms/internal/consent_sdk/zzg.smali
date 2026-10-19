@@ -1,0 +1,342 @@
+###### Class com.google.android.gms.internal.consent_sdk.zzg (com.google.android.gms.internal.consent_sdk.zzg)
+.class public final Lcom/google/android/gms/internal/consent_sdk/zzg;
+.super Ljava/lang/Object;
+.source "com.google.android.ump:user-messaging-platform@@2.1.0"
+
+
+# instance fields
+.field private final zza:Ljava/util/concurrent/Executor;
+
+
+# direct methods
+.method constructor <init>(Ljava/util/concurrent/Executor;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/consent_sdk/zzg;->zza:Ljava/util/concurrent/Executor;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()Ljava/util/concurrent/Executor;
+    .registers 2
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/consent_sdk/zzg;->zza:Ljava/util/concurrent/Executor;
+
+    return-object v0
+.end method
+
+.method public final varargs zzb(Ljava/lang/String;Ljava/lang/String;[Lcom/google/android/gms/internal/consent_sdk/zzf;)V
+    .registers 6
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/AnyThread;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/consent_sdk/zzg;->zza:Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lcom/google/android/gms/internal/consent_sdk/zze;
+
+    invoke-direct {v1, p1, p2, p3}, Lcom/google/android/gms/internal/consent_sdk/zze;-><init>(Ljava/lang/String;Ljava/lang/String;[Lcom/google/android/gms/internal/consent_sdk/zzf;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.internal.consent_sdk.zze (com.google.android.gms.internal.consent_sdk.zze)
+.class public final synthetic Lcom/google/android/gms/internal/consent_sdk/zze;
+.super Ljava/lang/Object;
+.source "com.google.android.ump:user-messaging-platform@@2.1.0"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic zza:Ljava/lang/String;
+
+.field public final synthetic zzb:Ljava/lang/String;
+
+.field public final synthetic zzc:[Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;[Lcom/google/android/gms/internal/consent_sdk/zzf;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zza:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zzb:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zzc:[Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 11
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zza:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zzb:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/consent_sdk/zze;->zzc:[Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    const-string v4, "UserMessagingPlatform"
+
+    if-eqz v3, :cond_14
+
+    const-string v0, "Error on action: empty action name"
+
+    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_14
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    const-string v5, "Action["
+
+    if-eqz v3, :cond_26
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    goto :goto_2c
+
+    :cond_26
+    :try_start_26
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_2b
+    .catch Lorg/json/JSONException; {:try_start_26 .. :try_end_2b} :catch_a7
+
+    move-object v1, v3
+
+    :goto_2c
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "]: "
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    array-length v3, v2
+
+    const/4 v6, 0x0
+
+    :goto_4c
+    if-ge v6, v3, :cond_a6
+
+    aget-object v7, v2, v6
+
+    new-instance v8, Ljava/util/concurrent/FutureTask;
+
+    new-instance v9, Lcom/google/android/gms/internal/consent_sdk/zzd;
+
+    invoke-direct {v9, v7, v0, v1}, Lcom/google/android/gms/internal/consent_sdk/zzd;-><init>(Lcom/google/android/gms/internal/consent_sdk/zzf;Ljava/lang/String;Lorg/json/JSONObject;)V
+
+    invoke-direct {v8, v9}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+
+    invoke-interface {v7}, Lcom/google/android/gms/internal/consent_sdk/zzf;->zza()Ljava/util/concurrent/Executor;
+
+    move-result-object v7
+
+    invoke-interface {v7, v8}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :try_start_61
+    invoke-virtual {v8}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Boolean;
+
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v7
+    :try_end_6b
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_61 .. :try_end_6b} :catch_87
+    .catch Ljava/lang/InterruptedException; {:try_start_61 .. :try_end_6b} :catch_6e
+
+    if-nez v7, :cond_a6
+
+    goto :goto_a3
+
+    :catch_6e
+    move-exception v7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Thread interrupted for Action["
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_a3
+
+    :catch_87
+    move-exception v7
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Failed to run Action["
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v7
+
+    invoke-static {v4, v8, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_a3
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_4c
+
+    :cond_a6
+    return-void
+
+    :catch_a7
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "]: failed to parse args: "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.internal.consent_sdk.zzd (com.google.android.gms.internal.consent_sdk.zzd)
+.class public final synthetic Lcom/google/android/gms/internal/consent_sdk/zzd;
+.super Ljava/lang/Object;
+.source "com.google.android.ump:user-messaging-platform@@2.1.0"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+.field public final synthetic zzb:Ljava/lang/String;
+
+.field public final synthetic zzc:Lorg/json/JSONObject;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/consent_sdk/zzf;Ljava/lang/String;Lorg/json/JSONObject;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zza:Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zzb:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zzc:Lorg/json/JSONObject;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .registers 4
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zza:Lcom/google/android/gms/internal/consent_sdk/zzf;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zzb:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/consent_sdk/zzd;->zzc:Lorg/json/JSONObject;
+
+    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/consent_sdk/zzf;->zzb(Ljava/lang/String;Lorg/json/JSONObject;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method

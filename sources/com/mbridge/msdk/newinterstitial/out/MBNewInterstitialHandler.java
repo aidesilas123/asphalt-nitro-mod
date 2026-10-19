@@ -1,0 +1,180 @@
+package com.mbridge.msdk.newinterstitial.out;
+
+import android.content.Context;
+import android.text.TextUtils;
+import com.mbridge.msdk.c.f;
+import com.mbridge.msdk.foundation.controller.b;
+import com.mbridge.msdk.foundation.entity.CampaignEx;
+import com.mbridge.msdk.foundation.same.report.m;
+import com.mbridge.msdk.foundation.same.report.r;
+import com.mbridge.msdk.foundation.tools.SameMD5;
+import com.mbridge.msdk.foundation.tools.aa;
+import com.mbridge.msdk.foundation.tools.af;
+import com.mbridge.msdk.foundation.tools.y;
+import com.mbridge.msdk.out.BaseExtraInterfaceForHandler;
+import com.mbridge.msdk.reward.b.a;
+import java.util.HashMap;
+import java.util.Map;
+import org.json.JSONObject;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class MBNewInterstitialHandler implements BaseExtraInterfaceForHandler {
+    private a a;
+    private String b;
+
+    public MBNewInterstitialHandler(Context context, String str, String str2) {
+        if (b.d().g() == null && context != null) {
+            b.d().b(context);
+        }
+        String strG = af.g(str2);
+        if (!TextUtils.isEmpty(strG)) {
+            af.a(str2, strG);
+        }
+        a(str, str2);
+    }
+
+    public MBNewInterstitialHandler(String str, String str2) {
+        a(str, str2);
+    }
+
+    private void a(String str, String str2) {
+        this.b = str2;
+        try {
+            if (this.a == null) {
+                a aVar = new a();
+                this.a = aVar;
+                aVar.a(true);
+            }
+            this.a.b(str, str2);
+            f.a().e(str2);
+        } catch (Throwable th) {
+            aa.b("MBRewardVideoHandler", th.getMessage(), th);
+        }
+    }
+
+    public void clearVideoCache() {
+        try {
+            if (this.a != null) {
+                y.a();
+            }
+        } catch (Exception e2) {
+            e2.printStackTrace();
+        }
+    }
+
+    public String getCreativeIdWithUnitId() {
+        a aVar = this.a;
+        return aVar != null ? aVar.b() : "";
+    }
+
+    public String getRequestId() {
+        a aVar = this.a;
+        return aVar != null ? aVar.a() : "";
+    }
+
+    public boolean isReady() {
+        a aVar = this.a;
+        if (aVar == null) {
+            r.a().e(this.b, "niv", false);
+            return false;
+        }
+        boolean zD = aVar.d(true);
+        if (zD) {
+            r.a().d(this.b, "niv", false);
+        } else {
+            r.a().e(this.b, "niv", false);
+        }
+        return zD;
+    }
+
+    public void load() {
+        HashMap map = new HashMap();
+        try {
+            String md5 = SameMD5.getMD5(af.c());
+            map.put(CampaignEx.JSON_KEY_LOCAL_REQUEST_ID, md5);
+            r.a("2000123", this.b, md5, "new_Interstitial_load", 287);
+        } catch (Exception unused) {
+        }
+        r.a().a(this.b, "niv", false);
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(true, (Map<String, String>) map);
+        }
+    }
+
+    public void loadFormSelfFilling() {
+        HashMap map = new HashMap();
+        try {
+            String md5 = SameMD5.getMD5(af.c());
+            map.put(CampaignEx.JSON_KEY_LOCAL_REQUEST_ID, md5);
+            r.a("2000123", this.b, md5, "self_load", 287);
+        } catch (Exception unused) {
+        }
+        r.a().a(this.b, "niv", false);
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(false, (Map<String, String>) map);
+        }
+    }
+
+    public void playVideoMute(int i) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(i);
+        }
+    }
+
+    public void setAlertDialogText(String str, String str2, String str3, String str4) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(str, str2, str3, str4);
+        }
+    }
+
+    @Override // com.mbridge.msdk.out.BaseExtraInterfaceForHandler
+    public void setExtraInfo(JSONObject jSONObject) {
+        b.d().a(this.b, jSONObject);
+    }
+
+    public void setIVRewardEnable(int i, double d2) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(i, com.mbridge.msdk.foundation.same.a.q, (int) (d2 * 100.0d));
+        }
+    }
+
+    public void setIVRewardEnable(int i, int i2) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(i, com.mbridge.msdk.foundation.same.a.r, i2);
+        }
+    }
+
+    public void setInterstitialVideoListener(NewInterstitialListener newInterstitialListener) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(new com.mbridge.msdk.newinterstitial.a.a(newInterstitialListener, this.b, false));
+        }
+    }
+
+    public void setRewardVideoListener(NewInterstitialListener newInterstitialListener) {
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a(new com.mbridge.msdk.newinterstitial.a.a(newInterstitialListener, this.b, false));
+        }
+    }
+
+    public void show() {
+        try {
+            HashMap map = new HashMap();
+            map.put(CampaignEx.JSON_KEY_HB, "0");
+            m.a().b("2000128", "new_interstitial_show", this.b, "287", map);
+        } catch (Exception unused) {
+        }
+        r.a().f(this.b, "niv", false);
+        a aVar = this.a;
+        if (aVar != null) {
+            aVar.a((String) null, (String) null, (String) null);
+        }
+    }
+}

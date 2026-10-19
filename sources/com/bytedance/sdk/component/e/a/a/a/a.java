@@ -1,0 +1,33 @@
+package com.bytedance.sdk.component.e.a.a.a;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import com.bytedance.sdk.component.e.a.a.a.b;
+
+/* JADX INFO: compiled from: DBAdapter.java */
+/* JADX INFO: loaded from: classes2.dex */
+public class a extends b {
+
+    @SuppressLint({"StaticFieldLeak"})
+    private static volatile a a;
+
+    private a(Context context) {
+        super(context);
+    }
+
+    public static a a(Context context) {
+        if (a == null) {
+            synchronized (a.class) {
+                if (a == null) {
+                    a = new a(context);
+                }
+            }
+        }
+        return a;
+    }
+
+    @Override // com.bytedance.sdk.component.e.a.a.a.b
+    public /* bridge */ /* synthetic */ b.C0116b a() {
+        return super.a();
+    }
+}

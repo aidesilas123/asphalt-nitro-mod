@@ -1,0 +1,108 @@
+package com.json.mediationsdk.demandOnly;
+
+import com.json.bb;
+import com.json.f3;
+import com.json.mediationsdk.AbstractAdapter;
+import com.json.mediationsdk.c;
+import com.json.mediationsdk.demandOnly.h;
+import com.json.mediationsdk.demandOnly.i;
+import com.json.mediationsdk.demandOnly.j;
+import com.json.mediationsdk.demandOnly.o;
+import com.json.mediationsdk.e;
+import com.json.mediationsdk.f;
+import com.json.mediationsdk.logger.IronLog;
+import com.json.mediationsdk.logger.IronSourceError;
+import com.json.mediationsdk.model.NetworkSettings;
+import com.json.mediationsdk.utils.ErrorBuilder;
+import com.json.mediationsdk.utils.IronSourceAES;
+import com.json.mediationsdk.utils.IronSourceConstants;
+import com.json.mediationsdk.utils.IronSourceUtils;
+import com.json.u5;
+import com.json.w3;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
+
+/* JADX INFO: loaded from: classes4.dex */
+public class k implements i.c {
+    private final f3 a;
+    private final ConcurrentHashMap<String, l> b;
+    private final u5<ISDemandOnlyRewardedVideoListener> c;
+
+    public k(List<NetworkSettings> list, bb bbVar, c cVar, u5<ISDemandOnlyRewardedVideoListener> u5Var, String str, String str2, f3 f3Var) {
+        String sessionId = IronSourceUtils.getSessionId();
+        boolean zD = bbVar.d();
+        f fVar = new f(bbVar.k(), zD, sessionId);
+        this.b = new ConcurrentHashMap<>();
+        this.a = f3Var;
+        this.c = u5Var;
+        for (NetworkSettings networkSettings : list) {
+            if (networkSettings.isIronSource()) {
+                AbstractAdapter abstractAdapterA = cVar.a(networkSettings, networkSettings.getRewardedVideoSettings(), true);
+                if (abstractAdapterA != null) {
+                    l lVar = new l(str, str2, networkSettings, this.c.a(networkSettings.getSubProviderId()), bbVar.i(), abstractAdapterA, new e(fVar));
+                    lVar.a(zD);
+                    this.b.put(networkSettings.getSubProviderId(), lVar);
+                }
+            } else {
+                IronLog.INTERNAL.error("cannot load " + networkSettings.getProviderTypeForReflection());
+            }
+        }
+    }
+
+    public ConcurrentHashMap<String, l> a() {
+        return this.b;
+    }
+
+    @Override // com.ironsource.mediationsdk.demandOnly.i.c
+    public void a(h.d dVar) {
+        String instanceId = dVar.getInstanceId();
+        try {
+            l lVar = this.b.get(instanceId);
+            if (lVar == null) {
+                this.a.a(j.b.NOT_FOUND_IN_LOAD, instanceId);
+                IronSourceError ironSourceErrorBuildNonExistentInstanceError = ErrorBuilder.buildNonExistentInstanceError(IronSourceConstants.REWARDED_VIDEO_AD_UNIT);
+                IronLog.API.error(ironSourceErrorBuildNonExistentInstanceError.getErrorMessage());
+                this.c.a(instanceId).onRewardedVideoAdLoadFailed(instanceId, ironSourceErrorBuildNonExistentInstanceError);
+                return;
+            }
+            if (dVar.getBidding()) {
+                lVar.b(new o.a(IronSourceAES.decode(w3.b().c(), dVar.getAdMarkup())));
+            } else {
+                lVar.d();
+            }
+        } catch (Exception e2) {
+            IronSourceError ironSourceErrorBuildLoadFailedError = ErrorBuilder.buildLoadFailedError("loadRewardedVideo exception " + e2.getMessage());
+            IronLog.API.error(ironSourceErrorBuildLoadFailedError.getErrorMessage());
+            this.c.a(instanceId).onRewardedVideoAdLoadFailed(instanceId, ironSourceErrorBuildLoadFailedError);
+        }
+    }
+
+    @Override // com.ironsource.mediationsdk.demandOnly.i.c
+    public boolean a(String str) {
+        l lVar = this.b.get(str);
+        if (lVar != null) {
+            return lVar.a();
+        }
+        this.a.a(1500, str);
+        return false;
+    }
+
+    @Override // com.ironsource.mediationsdk.demandOnly.i.c
+    public void b(String str) {
+        try {
+            l lVar = this.b.get(str);
+            if (lVar != null) {
+                lVar.e();
+                return;
+            }
+            this.a.a(1507, str);
+            IronSourceError ironSourceErrorBuildNonExistentInstanceError = ErrorBuilder.buildNonExistentInstanceError(IronSourceConstants.REWARDED_VIDEO_AD_UNIT);
+            IronLog.API.error(ironSourceErrorBuildNonExistentInstanceError.getErrorMessage());
+            this.c.a(str).onRewardedVideoAdShowFailed(str, ironSourceErrorBuildNonExistentInstanceError);
+        } catch (Exception e2) {
+            IronSourceError ironSourceErrorBuildShowFailedError = ErrorBuilder.buildShowFailedError(IronSourceConstants.REWARDED_VIDEO_AD_UNIT, "showRewardedVideo exception " + e2.getMessage());
+            IronLog.API.error(ironSourceErrorBuildShowFailedError.getErrorMessage());
+            this.c.a(str).onRewardedVideoAdShowFailed(str, ironSourceErrorBuildShowFailedError);
+        }
+    }
+}

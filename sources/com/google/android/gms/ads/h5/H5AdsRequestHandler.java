@@ -1,0 +1,29 @@
+package com.google.android.gms.ads.h5;
+
+import android.content.Context;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import com.google.android.gms.internal.ads.zzbli;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads-lite@@22.6.0 */
+/* JADX INFO: loaded from: classes2.dex */
+@RequiresApi(api = 21)
+public final class H5AdsRequestHandler {
+    private final zzbli zza;
+
+    public H5AdsRequestHandler(@NonNull Context context, @NonNull OnH5AdsEventListener onH5AdsEventListener) {
+        this.zza = new zzbli(context, onH5AdsEventListener);
+    }
+
+    public void clearAdObjects() {
+        this.zza.zza();
+    }
+
+    public boolean handleH5AdsRequest(@NonNull String str) {
+        return this.zza.zzb(str);
+    }
+
+    public boolean shouldInterceptRequest(@NonNull String str) {
+        return zzbli.zzc(str);
+    }
+}

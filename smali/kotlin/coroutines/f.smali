@@ -1,0 +1,408 @@
+###### Class kotlin.coroutines.SafeContinuation (kotlin.coroutines.f)
+.class public final Lkotlin/coroutines/f;
+.super Ljava/lang/Object;
+.source "SafeContinuationJvm.kt"
+
+# interfaces
+.implements Lkotlin/coroutines/d;
+.implements Lkotlin/coroutines/jvm/internal/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkotlin/coroutines/f$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lkotlin/coroutines/d<",
+        "TT;>;",
+        "Lkotlin/coroutines/jvm/internal/d;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000<\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0000\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0002\u0008\u0001\u0018\u0000 \u001a*\u0006\u0008\u0000\u0010\u0001 \u00002\u0008\u0012\u0004\u0012\u0002H\u00010\u00022\u00020\u0003:\u0001\u001aB\u0015\u0008\u0011\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0002\u00a2\u0006\u0002\u0010\u0005B\u001f\u0008\u0000\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0002\u0012\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0002\u0010\u0008J\n\u0010\u0011\u001a\u0004\u0018\u00010\u0007H\u0001J\n\u0010\u0012\u001a\u0004\u0018\u00010\u0013H\u0016J\u001b\u0010\u0014\u001a\u00020\u00152\u000c\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0016H\u0016\u00a2\u0006\u0002\u0010\u0017J\u0008\u0010\u0018\u001a\u00020\u0019H\u0016R\u0016\u0010\t\u001a\u0004\u0018\u00010\u00038VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\n\u0010\u000bR\u0014\u0010\u000c\u001a\u00020\r8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u000e\u0010\u000fR\u0014\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0002X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0007X\u0082\u000e\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u001b"
+    }
+    d2 = {
+        "Lkotlin/coroutines/SafeContinuation;",
+        "T",
+        "Lkotlin/coroutines/Continuation;",
+        "Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;",
+        "delegate",
+        "(Lkotlin/coroutines/Continuation;)V",
+        "initialResult",
+        "",
+        "(Lkotlin/coroutines/Continuation;Ljava/lang/Object;)V",
+        "callerFrame",
+        "getCallerFrame",
+        "()Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;",
+        "context",
+        "Lkotlin/coroutines/CoroutineContext;",
+        "getContext",
+        "()Lkotlin/coroutines/CoroutineContext;",
+        "result",
+        "getOrThrow",
+        "getStackTraceElement",
+        "Ljava/lang/StackTraceElement;",
+        "resumeWith",
+        "",
+        "Lkotlin/Result;",
+        "(Ljava/lang/Object;)V",
+        "toString",
+        "",
+        "Companion",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field private static final a:Lkotlin/coroutines/f$a;
+
+.field private static final b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater<",
+            "Lkotlin/coroutines/f<",
+            "*>;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field private final c:Lkotlin/coroutines/d;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/coroutines/d<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+.field private volatile result:Ljava/lang/Object;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    new-instance v0, Lkotlin/coroutines/f$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lkotlin/coroutines/f$a;-><init>(Lkotlin/jvm/internal/n;)V
+
+    sput-object v0, Lkotlin/coroutines/f;->a:Lkotlin/coroutines/f$a;
+
+    const-class v0, Lkotlin/coroutines/f;
+
+    const-class v1, Ljava/lang/Object;
+
+    const-string v2, "result"
+
+    invoke-static {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lkotlin/coroutines/f;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkotlin/coroutines/d;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/coroutines/d<",
+            "-TT;>;)V"
+        }
+    .end annotation
+
+    const-string v0, "delegate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->b:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    invoke-direct {p0, p1, v0}, Lkotlin/coroutines/f;-><init>(Lkotlin/coroutines/d;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkotlin/coroutines/d;Ljava/lang/Object;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/coroutines/d<",
+            "-TT;>;",
+            "Ljava/lang/Object;",
+            ")V"
+        }
+    .end annotation
+
+    const-string v0, "delegate"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkotlin/coroutines/f;->c:Lkotlin/coroutines/d;
+
+    iput-object p2, p0, Lkotlin/coroutines/f;->result:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()Ljava/lang/Object;
+    .registers 4
+
+    iget-object v0, p0, Lkotlin/coroutines/f;->result:Ljava/lang/Object;
+
+    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->b:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    if-ne v0, v1, :cond_19
+
+    sget-object v0, Lkotlin/coroutines/f;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_17
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_17
+    iget-object v0, p0, Lkotlin/coroutines/f;->result:Ljava/lang/Object;
+
+    :cond_19
+    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->c:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    if-ne v0, v1, :cond_22
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_26
+
+    :cond_22
+    instance-of v1, v0, Lkotlin/Result$b;
+
+    if-nez v1, :cond_27
+
+    :goto_26
+    return-object v0
+
+    :cond_27
+    check-cast v0, Lkotlin/Result$b;
+
+    iget-object v0, v0, Lkotlin/Result$b;->a:Ljava/lang/Throwable;
+
+    throw v0
+.end method
+
+.method public getCallerFrame()Lkotlin/coroutines/jvm/internal/d;
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/coroutines/f;->c:Lkotlin/coroutines/d;
+
+    instance-of v1, v0, Lkotlin/coroutines/jvm/internal/d;
+
+    if-eqz v1, :cond_9
+
+    check-cast v0, Lkotlin/coroutines/jvm/internal/d;
+
+    goto :goto_a
+
+    :cond_9
+    const/4 v0, 0x0
+
+    :goto_a
+    return-object v0
+.end method
+
+.method public getContext()Lkotlin/coroutines/CoroutineContext;
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/coroutines/f;->c:Lkotlin/coroutines/d;
+
+    invoke-interface {v0}, Lkotlin/coroutines/d;->getContext()Lkotlin/coroutines/CoroutineContext;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getStackTraceElement()Ljava/lang/StackTraceElement;
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public resumeWith(Ljava/lang/Object;)V
+    .registers 5
+
+    :cond_0
+    iget-object v0, p0, Lkotlin/coroutines/f;->result:Ljava/lang/Object;
+
+    sget-object v1, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->b:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    if-ne v0, v1, :cond_f
+
+    sget-object v0, Lkotlin/coroutines/f;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_f
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_29
+
+    sget-object v0, Lkotlin/coroutines/f;->b:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v2, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->c:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lkotlin/coroutines/f;->c:Lkotlin/coroutines/d;
+
+    invoke-interface {v0, p1}, Lkotlin/coroutines/d;->resumeWith(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_29
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Already resumed"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "SafeContinuation for "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkotlin/coroutines/f;->c:Lkotlin/coroutines/d;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class kotlin.coroutines.SafeContinuation.a (kotlin.coroutines.f$a)
+.class final Lkotlin/coroutines/f$a;
+.super Ljava/lang/Object;
+.source "SafeContinuationJvm.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkotlin/coroutines/f;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0082\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002Rd\u0010\u0003\u001aR\u0012\u0014\u0012\u0012\u0012\u0002\u0008\u0003 \u0006*\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u00050\u0005\u0012\u000c\u0012\n \u0006*\u0004\u0018\u00010\u00010\u0001 \u0006*(\u0012\u0014\u0012\u0012\u0012\u0002\u0008\u0003 \u0006*\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u00050\u0005\u0012\u000c\u0012\n \u0006*\u0004\u0018\u00010\u00010\u0001\u0018\u00010\u00040\u0004X\u0082\u0004\u00a2\u0006\u0008\n\u0000\u0012\u0004\u0008\u0007\u0010\u0002\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "Lkotlin/coroutines/SafeContinuation$Companion;",
+        "",
+        "()V",
+        "RESULT",
+        "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
+        "Lkotlin/coroutines/SafeContinuation;",
+        "kotlin.jvm.PlatformType",
+        "getRESULT$annotations",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/n;)V
+    .registers 2
+
+    invoke-direct {p0}, Lkotlin/coroutines/f$a;-><init>()V
+
+    return-void
+.end method

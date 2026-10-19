@@ -1,0 +1,861 @@
+2_EN;750;416;651;652;751;
+2_FR;752;417;653;654;753;
+2_DE;754;418;655;656;755;
+2_IT;756;419;657;658;757;
+2_ES;758;420;659;660;759;
+2_LE;758;421;659;660;760;
+2_BR;761;422;661;662;762;
+2_RU;763;423;663;664;764;
+2_TR;765;424;665;666;766;
+2_PL;767;425;667;668;768;
+2_TH;769;426;669;670;770;
+2_VI;771;427;671;672;772;
+2_AR;773;428;673;674;774;
+3_EN;750;429;675;676;
+3_FR;752;430;675;677;
+3_DE;754;431;675;678;
+3_IT;756;432;675;679;
+3_ES;758;433;680;681;
+3_LE;758;434;682;681;
+3_BR;761;435;675;683;
+3_RU;763;436;675;684;
+3_TR;765;437;685;686;
+3_PL;767;438;675;687;
+3_TH;769;439;688;689;
+3_VI;771;440;675;690;
+3_AR;773;441;691;692;
+4_EN;750;442;693;694;751;775;443;776;
+4_FR;752;442;693;694;753;777;443;776;
+4_DE;754;442;693;694;755;778;443;776;
+4_IT;756;442;693;694;757;779;443;776;
+4_ES;758;442;693;694;759;780;443;776;
+4_LE;758;442;693;694;760;780;443;776;
+4_BR;761;442;693;694;762;781;443;776;
+4_RU;763;442;693;694;764;782;443;776;
+4_TR;765;442;693;694;766;783;443;776;
+4_PL;767;442;693;694;768;784;443;776;
+4_TH;769;442;693;694;770;785;443;776;
+4_VI;771;442;693;694;772;786;443;776;
+4_AR;773;442;693;694;774;787;443;776;
+6_EN;750;444;675;676;788;
+6_FR;752;445;675;677;788;
+6_DE;754;446;675;678;788;
+6_IT;756;447;675;679;788;
+6_ES;758;448;680;681;788;
+6_LE;758;449;682;681;788;
+6_BR;761;450;675;683;788;
+6_RU;763;451;675;684;789;
+6_TR;765;452;685;686;788;
+6_PL;767;453;675;687;788;
+6_TH;769;454;688;689;788;
+6_VI;771;455;675;690;788;
+6_AR;773;456;691;692;790;
+7_EN;750;457;675;676;
+7_FR;752;458;675;677;
+7_DE;754;459;675;678;
+7_IT;756;460;675;679;
+7_ES;758;461;680;681;
+7_LE;758;462;682;681;
+7_BR;761;463;675;683;
+7_RU;763;464;675;684;
+7_TR;765;465;685;686;
+7_PL;767;466;675;687;
+7_TH;769;467;688;689;
+7_VI;771;468;675;690;
+7_AR;773;469;691;692;
+8_EN;750;457;675;676;
+8_FR;752;458;675;677;
+8_DE;754;459;675;678;
+8_IT;756;460;675;679;
+8_ES;758;461;680;681;
+8_LE;758;462;682;681;
+8_BR;761;463;675;683;
+8_RU;763;464;675;684;
+8_TR;765;465;685;686;
+8_PL;767;466;675;687;
+8_TH;769;467;688;689;
+8_VI;771;468;675;690;
+8_AR;773;469;691;692;
+9_EN;750;470;675;676;791;
+9_FR;752;471;675;677;792;
+9_DE;754;472;675;678;793;
+9_IT;756;473;675;679;794;
+9_ES;758;474;680;681;795;
+9_LE;758;475;682;681;795;
+9_BR;761;476;675;683;796;
+9_RU;763;477;675;684;797;
+9_TR;765;478;685;686;798;
+9_PL;767;479;675;687;799;
+9_TH;769;480;688;689;800;
+9_VI;771;481;675;690;801;
+9_AR;773;482;691;692;802;
+10_EN;750;483;695;696;
+10_FR;752;484;697;698;
+10_DE;754;485;699;700;
+10_IT;756;486;701;702;
+10_ES;758;487;703;704;
+10_LE;758;488;703;704;
+10_BR;761;489;705;706;
+10_RU;763;490;707;708;
+10_TR;765;491;709;710;
+10_PL;767;492;711;712;
+10_TH;769;493;713;714;
+10_VI;771;494;715;716;
+10_AR;773;495;717;718;
+11_EN;750;496;719;720;;;;803;
+11_FR;752;496;719;720;;;;803;
+11_DE;754;496;719;720;;;;803;
+11_IT;756;496;719;720;;;;803;
+11_ES;758;496;719;720;;;;803;
+11_LE;758;496;719;720;;;;803;
+11_BR;761;496;719;720;;;;803;
+11_RU;763;496;719;720;;;;803;
+11_TR;765;496;719;720;;;;803;
+11_PL;767;496;719;720;;;;803;
+11_TH;769;496;719;720;;;;803;
+11_VI;771;496;719;720;;;;803;
+11_AR;773;496;719;720;;;;803;
+12_EN;750;497;675;676;804;
+12_FR;752;498;675;677;805;
+12_DE;754;499;675;678;806;
+12_IT;756;500;675;679;807;
+12_ES;758;501;680;681;808;
+12_LE;758;502;682;681;808;
+12_BR;761;503;675;683;809;
+12_RU;763;504;675;684;810;
+12_TR;765;505;685;686;811;
+12_PL;767;506;675;687;812;
+12_TH;769;507;688;689;813;
+12_VI;771;508;675;690;814;
+12_AR;773;509;691;692;815;
+13_EN;750;470;651;696;791;
+13_FR;752;471;653;698;792;
+13_DE;754;472;721;700;793;
+13_IT;756;473;657;702;794;
+13_ES;758;474;659;704;795;
+13_LE;758;475;659;704;795;
+13_BR;761;476;659;704;796;
+13_RU;763;477;663;708;797;
+13_TR;765;478;665;710;798;
+13_PL;767;479;667;712;799;
+13_TH;769;480;669;714;800;
+13_VI;771;481;671;716;801;
+13_AR;773;482;673;718;802;
+15_EN;750;510;675;676;
+15_FR;752;511;722;677;
+15_DE;754;512;723;678;
+15_IT;756;513;724;679;
+15_ES;758;514;680;681;
+15_LE;758;515;682;681;
+15_BR;761;516;725;683;
+15_RU;763;517;726;684;
+15_TR;765;518;685;686;
+15_PL;767;519;727;687;
+15_TH;769;520;688;689;
+15_VI;771;521;728;690;
+15_AR;773;522;691;692;
+16_EN;816;523;675;676;817;
+16_FR;818;524;675;677;819;
+16_DE;820;525;675;678;821;
+16_IT;822;526;675;679;823;
+16_ES;824;527;680;681;825;
+16_LE;826;528;682;681;825;
+16_BR;827;529;675;683;828;
+16_RU;829;530;675;684;830;
+16_TR;831;531;685;686;832;
+16_PL;833;532;675;687;834;
+16_TH;835;533;688;689;836;
+16_VI;837;534;675;690;838;
+16_AR;839;535;691;692;840;
+17_EN;750;536;651;696;804;
+17_FR;752;537;653;698;805;
+17_DE;754;538;721;700;806;
+17_IT;756;539;657;702;807;
+17_ES;758;540;659;704;841;
+17_LE;758;541;659;704;841;
+17_BR;761;542;659;704;809;
+17_RU;763;543;663;708;810;
+17_TR;765;544;665;710;811;
+17_PL;767;545;667;712;812;
+17_TH;769;546;669;714;813;
+17_VI;771;547;671;716;814;
+17_AR;773;548;673;718;815;
+18_EN;750;549;651;676;
+18_FR;752;550;653;677;
+18_DE;754;551;721;678;
+18_IT;756;552;657;679;
+18_ES;758;553;659;681;
+18_LE;758;553;659;681;
+18_BR;761;554;661;683;
+18_RU;763;555;663;684;
+18_TR;765;556;665;686;
+18_PL;767;557;667;687;
+18_TH;769;558;669;689;
+18_VI;771;559;671;690;
+18_AR;773;560;673;692;
+19_EN;750;561;729;730;;;;842;
+19_FR;752;561;729;730;;;;842;
+19_DE;754;561;729;730;;;;842;
+19_IT;756;561;729;730;;;;842;
+19_ES;758;561;729;730;;;;842;
+19_LE;758;561;729;730;;;;842;
+19_BR;761;561;729;730;;;;842;
+19_RU;763;561;729;730;;;;842;
+19_TR;765;561;729;730;;;;842;
+19_PL;767;561;729;730;;;;842;
+19_TH;769;561;729;730;;;;842;
+19_VI;771;561;729;730;;;;842;
+19_AR;773;561;729;730;;;;842;
+20_EN;750;562;675;676;;;;;
+20_FR;752;563;722;677;;;;;
+20_DE;754;564;723;678;;;;;
+20_IT;756;565;724;679;;;;;
+20_ES;758;566;680;681;;;;;
+20_LE;758;567;682;681;;;;;
+20_BR;761;568;725;683;;;;;
+20_RU;763;569;726;684;;;;;
+20_TR;765;570;685;686;;;;;
+20_PL;767;571;731;687;;;;767;
+20_TH;769;572;688;689;;;;;
+20_VI;771;573;728;690;;;;;
+20_AR;773;574;691;692;;;;;
+21_EN;750;575;732;733;;;;843;
+21_FR;752;575;732;733;;;;843;
+21_DE;754;575;732;733;;;;843;
+21_IT;756;575;732;733;;;;843;
+21_ES;758;575;732;733;;;;843;
+21_LE;758;575;732;733;;;;843;
+21_BR;761;575;732;733;;;;843;
+21_RU;763;575;732;733;;;;843;
+21_TR;765;575;732;733;;;;843;
+21_PL;767;575;732;733;;;;843;
+21_TH;769;575;732;733;;;;843;
+21_VI;771;575;732;733;;;;843;
+21_AR;773;575;732;733;;;;843;
+22_EN;750;576;675;676;844;
+22_FR;752;577;675;677;844;
+22_DE;754;578;675;678;844;
+22_IT;756;579;675;679;844;
+22_ES;758;580;680;681;844;
+22_LE;758;581;682;681;844;
+22_BR;761;582;675;683;844;
+22_RU;763;583;675;684;844;
+22_TR;765;584;685;686;844;
+22_PL;767;585;675;687;844;
+22_TH;769;586;688;689;844;
+22_VI;771;587;675;690;844;
+22_AR;773;588;691;692;844;
+23_EN;750;589;675;676;
+23_FR;752;589;675;676;;;;750;
+23_DE;754;589;675;676;;;;750;
+23_IT;756;589;675;676;;;;750;
+23_ES;758;589;675;676;;;;750;
+23_LE;758;589;675;676;;;;750;
+23_BR;761;589;675;676;;;;750;
+23_RU;763;590;675;684;
+23_TR;765;589;675;676;;;;750;
+23_PL;767;589;675;676;;;;750;
+23_TH;769;589;675;676;;;;750;
+23_VI;771;589;675;676;;;;750;
+23_AR;773;589;675;676;;;;750;
+24_EN;750;591;675;676;
+24_FR;752;592;675;677;
+24_DE;754;593;675;678;
+24_IT;756;594;675;679;
+24_ES;758;595;680;681;
+24_LE;758;596;682;681;
+24_BR;761;597;675;683;
+24_RU;763;598;675;684;
+24_TR;765;599;685;686;
+24_PL;767;600;675;687;
+24_TH;769;601;688;689;
+24_VI;771;602;675;690;
+24_AR;773;603;691;692;
+25_EN;750;604;675;676;
+25_FR;752;605;675;677;
+25_DE;754;606;675;678;
+25_IT;756;607;675;679;
+25_ES;758;608;680;681;
+25_LE;758;609;682;681;
+25_BR;761;610;675;683;
+25_RU;763;611;675;684;
+25_TR;765;612;685;686;
+25_PL;767;613;675;687;
+25_TH;769;614;688;689;
+25_VI;771;615;675;690;
+25_AR;773;616;691;692;
+26_EN;750;617;695;696;
+26_FR;752;618;697;698;
+26_DE;754;619;699;700;
+26_IT;756;620;701;702;
+26_ES;758;621;703;704;
+26_LE;758;622;703;704;
+26_BR;761;623;705;706;
+26_RU;763;624;707;708;
+26_TR;765;625;709;710;
+26_PL;767;626;711;712;
+26_TH;769;627;713;714;
+26_VI;771;628;715;716;
+26_AR;773;629;717;718;
+27_EN;750;630;675;676;
+27_FR;752;631;675;677;
+27_DE;754;632;675;678;
+27_IT;756;633;675;679;
+27_ES;758;634;680;681;
+27_LE;758;635;682;681;
+27_BR;761;636;675;683;
+27_RU;763;637;675;684;
+27_TR;765;638;685;686;
+27_PL;767;639;675;687;
+27_TH;769;640;688;689;;;;769;
+27_VI;771;641;675;690;
+27_AR;773;642;691;692;
+28_EN;750;643;734;735;;;;845;
+28_FR;752;643;734;735;;;;845;
+28_DE;754;643;734;735;;;;845;
+28_IT;756;643;734;735;;;;845;
+28_ES;758;643;734;735;;;;845;
+28_LE;758;643;734;735;;;;845;
+28_BR;761;643;734;735;;;;845;
+28_RU;763;643;734;735;;;;845;
+28_TR;765;643;734;735;;;;845;
+28_PL;767;643;734;735;;;;845;
+28_TH;769;643;734;735;;;;845;
+28_VI;771;643;734;735;;;;845;
+28_AR;773;643;734;735;;;;845;
+29_EN;750;644;736;737;;;;846;
+29_FR;752;644;736;737;;;;846;
+29_DE;754;644;736;737;;;;846;
+29_IT;756;644;736;737;;;;846;
+29_ES;758;644;736;737;;;;846;
+29_LE;758;644;736;737;;;;846;
+29_BR;761;644;736;737;;;;846;
+29_RU;763;644;736;737;;;;846;
+29_TR;765;644;736;737;;;;846;
+29_PL;767;644;736;737;;;;846;
+29_TH;769;644;736;737;;;;846;
+29_VI;771;644;736;737;;;;846;
+29_AR;773;644;736;737;;;;846;
+30_EN;750;645;738;739;;;;847;
+30_FR;752;645;738;739;;;;847;
+30_DE;754;645;738;739;;;;847;
+30_IT;756;645;738;739;;;;847;
+30_ES;758;645;738;739;;;;847;
+30_LE;758;645;738;739;;;;847;
+30_BR;761;645;738;739;;;;847;
+30_RU;763;645;738;739;;;;847;
+30_TR;765;645;738;739;;;;847;
+30_PL;767;645;738;739;;;;847;
+30_TH;769;645;738;739;;;;847;
+30_VI;771;645;738;739;;;;847;
+30_AR;773;645;738;739;;;;847;
+31_EN;750;646;740;741;;;;848;
+31_FR;752;646;740;741;;;;848;
+31_DE;754;646;740;741;;;;848;
+31_IT;756;646;740;741;;;;848;
+31_ES;758;646;740;741;;;;848;
+31_LE;758;646;740;741;;;;848;
+31_BR;761;646;740;741;;;;848;
+31_RU;763;646;740;741;;;;848;
+31_TR;765;646;740;741;;;;848;
+31_PL;767;646;740;741;;;;848;
+31_TH;769;646;740;741;;;;848;
+31_VI;771;646;740;741;;;;848;
+31_AR;773;646;740;741;;;;848;
+32_EN;750;647;742;743;;;;849;
+32_FR;752;647;742;743;;;;849;
+32_DE;754;647;742;743;;;;849;
+32_IT;756;647;742;743;;;;849;
+32_ES;758;647;742;743;;;;849;
+32_LE;758;647;742;743;;;;849;
+32_BR;761;647;742;743;;;;849;
+32_RU;763;647;742;743;;;;849;
+32_TR;765;647;742;743;;;;849;
+32_PL;767;647;742;743;;;;849;
+32_TH;769;647;742;743;;;;849;
+32_VI;771;647;742;743;;;;849;
+32_AR;773;647;742;743;;;;849;
+33_EN;750;648;744;745;;;;850;
+33_FR;752;648;744;745;;;;850;
+33_DE;754;648;744;745;;;;850;
+33_IT;756;648;744;745;;;;850;
+33_ES;758;648;744;745;;;;850;
+33_LE;758;648;744;745;;;;850;
+33_BR;761;648;744;745;;;;850;
+33_RU;763;648;744;745;;;;850;
+33_TR;765;648;744;745;;;;850;
+33_PL;767;648;744;745;;;;850;
+33_TH;769;648;744;745;;;;850;
+33_VI;771;648;744;745;;;;850;
+33_AR;773;648;744;745;;;;850;
+34_EN;750;649;746;747;;;;851;
+34_FR;752;649;746;747;;;;851;
+34_DE;754;649;746;747;;;;851;
+34_IT;756;649;746;747;;;;851;
+34_ES;758;649;746;747;;;;851;
+34_LE;758;649;746;747;;;;851;
+34_BR;761;649;746;747;;;;851;
+34_RU;763;649;746;747;;;;851;
+34_TR;765;649;746;747;;;;851;
+34_PL;767;649;746;747;;;;851;
+34_TH;769;649;746;747;;;;851;
+34_VI;771;649;746;747;;;;851;
+34_AR;773;649;746;747;;;;851;
+35_EN;750;650;748;749;;;;852;
+35_FR;752;650;748;749;;;;852;
+35_DE;754;650;748;749;;;;852;
+35_IT;756;650;748;749;;;;852;
+35_ES;758;650;748;749;;;;852;
+35_LE;758;650;748;749;;;;852;
+35_BR;761;650;748;749;;;;852;
+35_RU;763;650;748;749;;;;852;
+35_TR;765;650;748;749;;;;852;
+35_PL;767;650;748;749;;;;852;
+35_TH;769;650;748;749;;;;852;
+35_VI;771;650;748;749;;;;852;
+35_AR;773;650;748;749;;;;852;
+416;This additional feature will cost you %s0 + the price of 1 SMS (depending on your data plan).
+417;Cette option additionnelle sera facturée %s0 + le prix de 1 SMS (selon le forfait)
+418;Der Preis für dieses zusätzliche Feature beträgt %s0 + Gebühren für 1 SMS (je nach Tarif).
+419;Questa funzionalità aggiuntiva ti costerà %s0 + il costo di 1 SMS (a seconda del tuo piano dati).
+420;Esta función adicional te costará %s0 + el precio de 1 SMS (en función de tu plan de datos)
+421;Esta función adicional te costará %s0 + el precio de 1 SMS (según tu plan de datos)
+422;O custo desta função adicional é de %s0 + preço de 1 SMS (dependendo do seu plano de dados).
+423;Стоимость этого дополнения %s0 + стоимость 1 СМС (в зависимости от тарифного плана)
+424;Bu ek özelliğin fiyatı %s0 + 1 SMS ücreti (veri planına bağlı olarak değişebilir)
+425;Ta dodatkowa opcja kosztuje %s0 + cena 1 SMS (w zależności od taryfy).
+426;ฟีเจอร์|เพิ่มเติม|นี้|คิด|เป็น|ราคา |%s0 |+ |ค่า SMS |1 |ข้อความ |(ขึ้นอยู่|กับ|รูปแบบ|การคิด|ค่าบริการ|ของคุณ)
+427;Tính năng bổ sung này sẽ tốn %s0 + giá của 1 SMS (tùy theo gói thuê bao dữ liệu của bạn).
+428;هذه الميزة الإضافية ستكلفك %s0 + سعر رسالة قصيرة واحدة (حسب خطة البيانات الخاصة بك).
+429;You'll be charged %s0 for this item.\nYou must read and agree to the Terms and Conditions. Continue?\nIf you do not have enough credit in your account, the cost of this item will be charged in installments.\nCustomer Support: Turkcell Tel: 0 532 755 60 55 - Avea Tel: 0 555 738 54 00 - Vodafone Tel: 0 546 510 71 75
+430;La somme de %s0 vous sera facturée pour cet item.\nVous devez lire et accepter les Conditions générales. Continuer ?\nSi vous n'avez pas assez de fonds sur votre compte, le coût de cet item sera facturé en plusieurs fois.\nService Client : Tél. Turkcell : 0 532 755 60 55 - Tél. Avea : 0 555 738 54 00 - Tél. Vodafone : 0 546 510 71 75
+431;Für dieses Element werden dir %s0 berechnet.\nBitte lies die Geschäftsbedingungen und stimme ihnen zu. Fortfahren?\nFalls du nicht genügend Guthaben auf deinem Konto hast, wird das Element per Ratenzahlung abgerechnet.\nKundenbetreuung: Turkcell - Tel.: 0 532 755 60 55 / Avea - Tel.: 0 555 738 54 00 / Vodafone - Tel.: 0 546 510 71 75
+432;Il costo di questo oggetto è: %s0. Devi accettare i termini e le condizioni.\nVuoi continuare?\nSe non hai credito sufficiente, il prezzo dell'oggetto ti verrà addebitato a rate. \nServizio clienti: Turkcell Tel: 0 532 755 60 55 - Avea Tel: 0 555 738 54 00 - Vodafone Tel: 0 546 510 71 75
+433;Se te cobrará %s0 por este objeto.\nTienes que leer y aceptar los Términos y condiciones. ¿Continuar?\nSi no tienes suficiente crédito en tu cuenta, el coste de este objeto se te cobrará en cuotas.\nAtención al cliente: Turkcell (tlf.): 0 532 755 60 55 - Avea (tlf.): 0 555 738 54 00 - Vodafone (tlf.): 0 546 510 71 75
+434;Se te cobrará %s0 por este artículo.\nTienes que leer y aceptar los términos y condiciones. ¿Continuar?\nSi no tienes crédito suficiente en tu cuenta, el costo de este artículo se te cobrará en cuotas.\nAtención al cliente: Tel. Turkcell: 0 532 755 60 55 - Tel. Avea: 0 555 738 54 00 - Tel. Vodafone: 0 546 510 71 75
+435;Uma cobrança de %s0 será realizada por este item.\nVocê precisa ler e aceitar os Termos e Condições. Deseja continuar?\nCaso você não tenha crédito suficiente em sua conta, o valor será cobrado em prestações.\nSuporte ao cliente: Turkcell - tel.: 0 532 755 60 55, Avea - tel.: 0 555 738 54 00, Vodafone - tel.: 0 546 510 71 75
+436;Оплата за выбранную позицию составит %s0.\nВы должны прочесть и принять условия Пользовательского соглашения.\nВ случае, если на вашем счету недостаточно средств, оплата будет снята по частям.\nПоддержка пользователя: Turkcell Tel: 0 532 755 60 55 - Avea Tel: 0 555 738 54 00 - Vodafone Tel: 0 546 510 71 75
+437;Bu ürün için %s0 ücretlendirileceksin.\nŞart ve Koşulları okuyup onaylamalısın. Devam et?\nHesabında yeterli bakiye yoksa bu ürünün ücreti taksitli ödemeyle alınacak.\nMüşteri Destek: Turkcell Tel: 0 532 755 60 55 - Avea Tel: 0 555 738 54 00 - Vodafone Tel: 0 546 510 71 75
+438;Za ten element naliczona zostanie opłata w wysokości %s0.\nMusisz przeczytać i zgodzić się na warunki i zasady.\nKontynuować? Jeśli nie posiadasz wystarczających środków na koncie, opłata za element zostanie pobrana w ratach.\nObsługa klienta: Turkcell Tel: 0 532 755 60 55 - Avea Tel: 0 555 738 54 00 - Vodafone Tel: 0 546 510 71 75
+439;คุณ|จะต้อง|ชำระ|ค่า|ไอเท็ม|นี้|ใน|ราคา |%s0\nคุณ|ต้อง|อ่าน|และ|ยอมรับ|เงื่อนไข|และ|ข้อตกลง|ต่าง ๆ |ดำเนินการ|ต่อ|หรือไม่\nหาก|คุณ|มี|เครดิต|ใน|บัญชี|ของคุณ|ไม่|เพียงพอ |ราคา|ไอเท็ม|นี้|จะ|คิด|ผ่าน|การ|ผ่อน|ชำระ\nฝ่าย|บริการ|ลูกค้า: |Turkcell |โทร.: |0 532 755 60 55 - Avea |โทร.: |0 555 738 54 00 - |Vodafone |โทร.: |0 546 510 71 75
+440;Bạn sẽ bị tính %s0 cho món đồ này.\nBạn phải đọc và đồng ý với các Điều khoản và Điều kiện. Tiếp tục?\nNếu bạn không có đủ tiền trong tài khoản, chi phí của món đồ này sẽ được thanh toán bằng cách trả góp.\nHỗ trợ Khách hàng: Turkcell gọi: 0 532 755 60 55 - Avea gọi: 0 555 738 54 00 - Vodafone gọi: 0 546 510 71 75
+441;سيتم احتساب %s0 كثمن لهذا الغرض.\nيجب عليك قراءة الشروط والأحكام والموافقة عليها. هل تريد المتابعة؟\nإن لم تكن تملك رصيدًا كافيًا في حسابك، سيتم احتساب ثمن هذا الغرض عن طريق الدفع بالأقساط.\nدعم العملاء: Turkcell، هاتف: 05327556055 - Avea، هاتف: 05557385400 - Vodafone، هاتف: 05465107175
+442;Denne mulighed koster %s0 + sms-takst (afhængigt af dit telefonselskabs priser) 
+443;Denne mulighed koster %s0 + sms-takst (afhængigt af dit telefonselskabs priser) \nIngen genopladningsperiode på 14 dage
+444;Do you confirm the purchase of this item? Cost: %s0 + price of %s2 SMS.
+445;Confirmer l'achat de cet item ? Coût : %s0 + prix de %s2 SMS.
+446;Dieses Element wirklich kaufen? Kosten: %s0 + Preis für %s2 SMS
+447;Confermi l'acquisto di questo oggetto? Costo: %s0 + il costo di %s2 SMS.
+448;¿Confirmas la compra de este objeto? Precio: %s0 +  el precio de %s2 SMS
+449;¿Confirmas la compra de este artículo? Precio: %s0 +  el precio de %s2 SMS
+450;Você confirma a compra deste item? Custo: %s0 + preço de %s2 SMS.
+451;Подтверждаете покупку предмета? Стоимость: %s0  + стоимость %s2 СМС.
+452;Bu ürünün satın alma işlemini onaylıyor musun? Fiyatı: %s0 + %s2 SMS ücreti.
+453;Na pewno chcesz kupić ten element? Cena: %s0 + koszt %s2 wiadomości SMS.
+454;คุณ|ยืนยัน|การซื้อ|ไอเท็ม|นี้|หรือไม่ |ราคา: %s0 |+ |ค่าส่ง |SMS |%s2 |ข้อความ
+455;Bạn có xác nhận mua món đồ này? Giá: %s0 + phí %s2 SMS.
+456;هل تريد بالفعل شراء هذا العنصر؟ التكلفة: %s0 + سعر %s2 رسالة قصيرة.
+457;Are you sure you want to buy this item? Price: %s0
+458;Es-tu sûr de vouloir acheter cet item ? Prix : %s0
+459;Dieses Element wirklich kaufen? Preis: %s0
+460;Vuoi davvero comprare questo oggetto? Prezzo: %s0
+461;¿Seguro que quieres comprar este objeto? Precio: %s0
+462;¿Seguro que quieres comprar este artículo? Precio: %s0
+463;Tem certeza de que deseja comprar este item? Preço: %s0
+464;Хотите купить этот предмет? Цена: %s0
+465;Bu ürünü almak istediğine emin misin? Fiyatı: %s0
+466;Na pewno chcesz kupić ten element? Cena: %s0
+467;คุณแน่ใจหรือไม่ว่าต้องการซื้อไอเท็มชิ้นนี้| ราคา: %s0
+468;Bạn có chắc muốn mua món đồ này? Giá: %s0
+469;هل أنت متأكد من رغبتك في شراء هذا العنصر؟ السعر: %s0
+470;Are you sure you want to buy this item? Price: %s0 (VAT not included)
+471;Es-tu sûr de vouloir acheter cet item ? Prix : %s0 (hors TVA)
+472;Dieses Element wirklich kaufen? Preis: %s0 (zzgl. MwSt.)
+473;Vuoi davvero comprare questo oggetto? Prezzo: %s0 (IVA esclusa)
+474;¿Seguro que quieres comprar este objeto? Precio: %s0 (IVA no incl.)
+475;¿Seguro que quieres comprar este artículo? Precio: %s0 (IVA no incl.)
+476;Tem certeza de que deseja comprar este item? Preço: %s0 (VAT não incl.)
+477;Хотите купить этот предмет? Цена: %s0 (Без НДС)
+478;Bu ürünü almak istediğine emin misin? Fiyatı: %s0 (KDV hariç)
+479;Na pewno chcesz kupić ten element? Cena: %s0  (bez VAT)
+480;คุณแน่ใจหรือไม่ว่าต้องการซื้อไอเท็มชิ้นนี้| ราคา: %s0 (ไม่รวม |VAT)
+481;Bạn có chắc muốn mua món đồ này? Giá: %s0 (Không gồm VAT)
+482;هل أنت متأكد من رغبتك في شراء هذا العنصر؟ السعر: %s0 (غير شامل الضرائب)
+483;%s0 plus the cost of one standard-rate SMS will be charged to your mobile phone bill or deducted from your prepaid credit. \nBy selecting "Buy Now", you confirm that you are over the age of 16 and have the bill payer's permission to make this purchase.
+484;%s0 + le coût standard d'un SMS seront débités de votre facture de téléphone mobile ou déduits de votre solde prépayé. \nEn sélectionnant 'Acheter', vous confirmez que vous avez plus de 16 ans et que vous avez la permission de la personne qui paye la facture pour effectuer cet achat.
+485;%s0 zzgl. Kosten für eine Standard-SMS werden deiner Handyrechnung belastet oder von deinem Prepaid-Guthaben abgebucht. Wenn du 'Jetzt kaufen' wählst, bestätigst du, dass du über 16 Jahre alt bist und die Genehmigung des Zahlungspflichtigen hast, diesen Kauf zu tätigen.
+486;%s0 più il costo di un SMS verranno addebitati sulla bolletta del tuo telefono cellulare o prelevati dal tuo credito prepagato.\nScegliendo 'Acquista ora' confermi di aver compiuto 16 anni e di avere il permesso di chi paga la bolletta per completare questo acquisto.
+487;%s0 más el precio de un SMS que se incluirán en tu factura de teléfono móvil o se deducirán de tu crédito de prepago. \nEligiendo 'Comprar ahora', confirmas que eres mayor de 16 años y que tienes la autorización del titular de la factura para realizar esta compra. 
+488;%s0 más el costo de un SMS se incluirán en tu factura de teléfono móvil o se deducirán de tu saldo prepagado.\nAl elegir 'Comprar ahora' confirmas que eres mayor de 16 años y que tienes la autorización del titular de la factura para hacer esta compra.
+489;%s0 mais o custo padrão de uma mensagem de texto serão cobrados na sua conta ou debitados do seu saldo pré-pago. \nAo selecionar 'Comprar agora', você confirma ser maior de 16 anos de idade e ter a permissão da pessoa que paga a conta. 
+490;%s0 плюс стоимость обычного СМС-сообщения будут прибавлены к вашему счету за услуги или сняты с предоплаченного баланса. \nНажав на значок 'Купить', вы подтверждаете, что вам уже исполнилось 16 лет и у вас есть разрешение на совершение этой покупки.
+491;%s0 ve bir standart SMS ücreti mobil telefon faturasında alınacak ya da ön ödemeli kredilerden düşülecek.\n'Şimdi Al' seçeneğini seçerek 16 yaş üstü olduğunu ve bu satın alımı gerçekleştirmek için fatura sahibinin iznini aldığını onaylamış olursun.
+492;Opłata w wysokości %s0 oraz jednej wiadomości SMS (standardowa stawka) zostanie doliczona do rachunku za telefon lub potrącona z kredytu pre-paid.\nWybierając opcję 'Kup teraz' potwierdzasz, iż masz więcej niż 16 lat oraz posiadasz zgodę właściciela numeru na dokonanie tego zakupu.
+493;ค่าใช้จ่าย|ราคา |%s0 |และ|ค่า |SMS |ใน|ราคา|ปกติ|หนึ่ง|ข้อความ|จะ|ถูก|คิด|บน|ใบ|แจ้งหนี้|ค่า|โทรศัพท์|ของ|คุณ|หรือ|ถูก|หัก|ออก|จาก|เครดิต|ที่|คุณ|เติม|ไว้|ล่วงหน้า\nโดย|การเลือก |"ซื้อทันที" |คุณ|ได้|ยืนยัน|ว่า|คุณ|มี|อายุ|มากกว่า |16 |ปี|และ|ได้รับ|อนุญาต|จาก|ผู้|ชำระ|ใบ|แจ้งหนี้|ใน|การดำเนินการ|สั่งซื้อ|นี้|แล้ว
+494;%s0 cộng với giá của một tin SMS loại tiêu chuẩn sẽ được tính trong hóa đơn điện thoại di động hoặc trừ vào số tiền trả trước của bạn. \nBằng cách chọn 'Mua ngay', đồng nghĩa với việc bạn xác nhận là bạn trên 16 tuổi và có sự cho phép của người trả hóa đơn để mua món đồ này. 
+495;سوف يتم خصم %s0 من فاتورة هاتفك المحمول أو حسابك المدفوع مقدما بالإضافة إلى السعر المعتاد للرسالة القصيرة. \nبالنقر على "شراء الآن" فأنت تقر بأن عمرك يتجاوز 16 سنة ومن حصولك على إذن دافع الفاتورة لإتمام هذا الشراء.
+496;Are you sure you want to buy this item from Gameloft? Price: %s0 (Including PPN)? CS: 027-44469480.\n\nApakah Anda setuju untuk membeli item ini dari Gameloft seharga %s0 (termasuk PPN)? CS:027-44469480.
+497;Are you sure you want to buy this item? Price: %s0 (VAT included)
+498;Es-tu sûr de vouloir acheter cet item ? Prix : %s0 (TVA comprise)
+499;Dieses Element wirklich kaufen? Preis: %s0 (inkl. MwSt.)
+500;Vuoi davvero comprare questo oggetto? Prezzo: %s0 (IVA inclusa)
+501; ¿Seguro que quieres comprar este objeto? Precio: %s0 (IVA incluido)
+502;¿Seguro que quieres comprar este artículo? Precio: %s0 (IVA incluido) 
+503;Tem certeza de que deseja comprar este item? Preço: %s0 (VAT incluído)
+504;Хотите купить этот предмет? Цена: %s0 (включая НДС)
+505;Bu ürünü almak istediğine emin misin? Fiyatı: %s0 (KDV dahil)
+506;Na pewno chcesz kupić ten element? Cena: %s0  (z VAT)
+507;คุณแน่ใจหรือไม่ว่าต้องการซื้อไอเท็มชิ้นนี้ ราคา: %s0 (รวมภาษีมูลค่าเพิ่ม)
+508;Bạn có chắc muốn mua món đồ này? Giá: %s0 (Bao gồm VAT)
+509;هل أنت متأكد من رغبتك في شراء هذا العنصر؟ السعر: %s0 (شامل الضرائب)
+510;Please confirm that you wish to buy this item. The amount will be debited from your phone bill or prepaid balance. Price: %s0
+511;Veuillez confirmer que vous souhaitez acheter cet article. Le montant sera débité de votre facture téléphonique ou de votre solde prépayé. Prix : %s0
+512;Bestätige bitte, dass du dieses Element wirklich kaufen möchtest. Der Betrag wird deiner Handyrechnung belastet oder von deinem Prepaid-Guthaben abgebucht. Preis: %s0
+513;Vuoi davvero comprare questo oggetto? Il prezzo dell'oggetto verrà sottratto dal credito del tuo telefono o verrà addebitato alla tua bolletta. Prezzo: %s0
+514;Por favor, confirma que quieres comprar este objeto. Su coste se añadirá a tu factura telefónica o se deducirá de tu saldo prepago. Precio: %s0
+515;Por favor confirma que quieres comprar este artículo. Su costo se añadirá a tu factura telefónica o se deducirá de tu saldo prepagado. Precio: %s0
+516;Por favor, confirme a compra desse item. O valor será descontado dos créditos do seu celular ou será cobrado na sua conta. Valor: %s0
+517;Пожалуйста, подтвердите покупку этого предмета. C вашего счета или предоплаченного баланса будет снята сумма, равная стоимости покупки. Стоимость: %s0
+518;Lütfen bu ürünü satın almak istediğinizi onaylayın. Toplam tutar hasabınıza yüklü bakiyeden düşer veya telefon faturasından alınır. Ücret: %s0
+519;Potwierdź zakup tego elementu. Cena zostanie doliczona do rachunku lub odjęta od środków na karcie. Cena: %s0
+520;โปรดยืนยันว่าคุณต้องการซื้อไอเท็มนี้ ค่าใช้จ่ายจะถูกหักจากใบแจ้งหนี้ค่าโทรศัพท์ของคุณหรือจากยอดเงินที่คุณมีในโทรศัพท์ ราคา: %s0
+521;Xin xác nhận là bạn muốn mua món đồ này. Số tiền sẽ bị tính vào hóa đơn điện thoại hay tài khoản trả trước của bạn. Giá: %s0
+522;يرجى تأكيد رغبتك بشراء هذا الغرض. سيتم خصم الثمن من فاتورة هاتفتك المحمول أو حسابك مسبق الدفع. السعر: %s0
+523;Are you sure you want to buy this item? Price: %s0 (GST incl.), charged to your mobile account. Help: 1-800-443-881
+524;Êtes-vous sûr de vouloir acheter cet item ? Prix : %s0 (GST incl.), facturé sur votre compte mobile. Aide : 1-800-443-881
+525;Bist du sicher, dass du dieses Element kaufen möchtest? Preis: %s0 (inkl. MwSt.), wird deinem Handy-Konto belastet. Hilfe: 1-800-443-881
+526;Vuoi davvero comprare questo oggetto? Prezzo: %s0 (IVA incl.), addebitato sul tuo telefono. Assistenza: 1-800-443-881
+527;¿Seguro que quieres comprar este objeto? Precio: %s0 (GST incl.), que se cobrará en tu factura de móvil. Ayuda: 1-800-443-881
+528;¿Seguro que quieres comprar este artículo? Precio: %s0 (GST incl.), que se cobrará en tu factura de móvil. Ayuda: 1-800-443-881
+529;Tem certeza de que deseja comprar este item? Preço: %s0 (GST incl.), cobrado na conta de telefone. Ajuda: 1-800-443-881
+530;Вы хотите купить этот предмет? Цена: %s0 (с НДС). Сумма будет списана с вашего мобильного счета. Справка: 1-800-443-881
+531;Bu ürünü almak istediğine emin misin? Fiyatı: %s0 (GST dahil) mobil hesabından alınır.Yardım: 1-800-443-881
+532;Na pewno chcesz kupić ten element? Opłata: %s0 (z GST) zostanie doliczona do twojego rachunku za telefon. Pomoc: 1-800-443-881
+533;แน่ใจ|หรือไม่ว่า|คุณ|ต้องการ|ซื้อ|ไอเท็ม|นี้ |ราคา: %s0 (รวม GST) |โดย|คิดผ่าน|บัญชี|โทรศัพท์มือถือ|ของคุณ |ความช่วยเหลือ: 1-800-443-881
+534;Bạn có chắc muốn mua món đồ này? Giá: %s0 (Bao gồm GST), tính vào tài khoản di động của bạn. Trợ giúp: 1-800-443-881
+535;هل تريد شراء هذا الغرض بالفعل؟ السعر:  %s0 (شامل الضرائب) وسيتم خصمه من حساب الهاتف المحمول الخاص بك. خط المساعدة: 881-443-800-1
+536;Click and buy %s1 for %s0 (VAT included).\nOnce you've clicked on the Buy button, the cost of the purchase will be charged on your next Movistar bill or debited from your prepaid balance. This purchase will appear in the "Acceso a contenidos" section.
+537;Cliquez et achetez %s1 pour %s0 (TVA incluse).\nLorsque vous aurez cliqué sur l'icône Acheter, le coût de votre achat sera ajouté à votre prochaine facture Movistar ou déduit de votre solde prépayé. Cet achat apparaîtra dans la rubrique "Acceso a contenidos".
+538;Klicke und kaufe %s1 für %s0 (inkl. MwSt.)\nWenn du auf das Feld "Kaufen" klickst, wird dein Einkauf über deine nächste Movistar-Rechnung abgerechnet oder deinem Prepaid-Guthaben belastet und erscheint in der Rubrik "Acceso a contenidos".
+539;Clicca per comprare: %s1 a %s0 (IVA inclusa).\nCliccando su "Compra", il costo dell'acquisto verrà addebitato sulla tua prossima bolletta Movistar o detratto dal tuo credito prepagato. L'acquisto effettuato comparirà nella sezione "Acceso a contenidos".
+540;Haz clic y compra por %s0 IVA inc. el objeto %s1.\nUna vez que hagas clic en el botón de Comprar, se cargará el importe de la compra en tu próxima factura de Movistar o se deducirá del crédito de tu tarjeta prepago, y aparecerá dentro del apartado ‘Acceso a contenidos'.
+541;Haz clic y compra %s1 por %s0 IVA incluido.\nCuando hagas clic en el botón de Comprar, se cargará el importe de la compra en tu próxima factura de Movistar o se deducirá de tu saldo prepagado. Esta compra aparecerá dentro de la sección de "Acceso a contenidos".
+542;Clique para comprar %s1 por %s0 (VAT incluído)\nUma vez que você clicar no botão comprar, o custo da compra será cobrado na sua próxima conta Movistar ou debitado do seu saldo pré-pago. Esta compra aparecerá na seção "Acceso a contenidos".
+543;Нажмите и купите %s1 за %s0 (с НДС).\nПосле того, как вы нажмете на кнопку Купить, с вашего счета на Movistar или предоплаченного баланса будет снята сумма, равная стоимости покупки. Покупка появится в разделе "Acceso a contenidos".
+544;Tıkla ve %s0 (KDV dahil) karşılığında %s1 satın al.\nSatın al tuşuna tıkladıktan sonra satın alımın ücretlendirilmesi bir sonraki Movistar faturanıza yansır veya hesabınıza yüklü bakiyeden düşer. Bu satın alım, "Acceso a contenidos" bölümünde belirir.
+545;Kliknij i kup element "%s1" za %s0 (z VAT).\nGdy już klikniesz na ikonę zakupu, cena elementu zostanie doliczona do następnego rachunku Movistar lub odjęta od środków na karcie. Niniejszy zakup zostanie zafakturowany w sekcji "Acceso a contenidos".
+546;คลิกและซื้อ %s1 ในราคา %s0 (รวม |VAT)\nเมื่อคุณคลิกบนปุ่ม "ซื้อ" แล้ว ค่าใช้จ่ายในการซื้อจะคิดผ่านทางใบแจ้งหนี้ Movistar รอบถัดไปของคุณ หรือหักออกจากเงินที่คุณเติมไว้ล่วงหน้า การซื้อนี้จะปรากฏขึ้นในส่วนของ "Acceso a contenidos"
+547;Bấm để mua %s1 với giá %s0 (Đã gồm VAT).\nMột khi bạn đã bấm vào nút Mua, chi phí của việc mua hàng sẽ được tính vào hóa đơn Movistar lần tới hay trừ vào số dư trả trước của bạn. Việc mua hàng này sẽ xuất hiện trong phần "Acceso a contenidos".
+548;اضغط وقم بشراء %s1 مقابل %s0 (شامل الضرائب).\nبعد أن تضغط على زر "شراء"، سيتم إضافة الثمن إلى فاتورة Movistar القادمة أو سيتم خصمه من حسابك مسبق الدفع، وسيظهر الغرض الذي تم شراؤه في قسم "Acceso a contenidos".
+549;You have ordered: %s1. Price: %s0. To confirm, select "BUY." Customer Service:020-791-793, Gameloft
+550;Vous avez commandé : %s1. Prix : %s0. Pour confirmer, sélectionnez "ACHETER". Service Client : 020-791-793, Gameloft
+551;Du hast Folgendes bestellt: %s1. Preis: %s0. Wähle zur Bestätigung "KAUFEN". Kundenservice: 020-791-793, Gameloft
+552;Hai ordinato: %s1. Prezzo: %s0. Per confermare, seleziona "COMPRA". Servizio clienti 020-791-793, Gameloft
+553;Has encargado: %s1. Precio: %s0. Para confirmar, selecciona "COMPRAR". Atención al cliente: 020-791-793, Gameloft
+554;Você está comprando: %s1. Preço: %s0. Para confirmar, selecione a opção de comprar. Atendimento ao cliente: 020-791-793, Gameloft
+555;Ваш заказ: %s1. Цена: %s0. Выберите "КУПИТЬ" для подтверждения. Служба поддержки: 020-791-793, Gameloft
+556;Verdiğin sipariş: %s1. Fiyatı: %s0. Onaylamak için " SATIN AL" ı seç. Müşteri Destek:020-791-793, Gameloft
+557;Zamawiasz element: %s1. Cena: %s0. By potwierdzić, wybierz opcję "KUP". Obsługa klienta:020-791-793, Gameloft
+558;คุณได้สั่งซื้อ: %s1 ราคา: %s0 เพื่อยืนยันการสั่งซื้อนี้ โปรดเลือก "ซื้อ" ฝ่ายบริการลูกค้า: 020-791-793, Gameloft
+559;Bạn đã đặt: %s1. Giá: %s0. Để xác nhận, chọn "MUA". Dịch vụ Khách hàng: 020-791-793, Gameloft
+560;لقد طلبت: %s1. السعر: %s0. للتأكيد، قم باختيار "شراء". خدمة العملاء: 020-791-793, ، Gameloft
+561;Opravdu chcete koupit tuto položku? Cena: %s0 včetně DPH
+562;Are you sure you would like to buy this item? If so, %s0 will be charged via an SMS sent to %s3.
+563;Êtes-vous sûr de vouloir acheter cet item ? Si oui, %s0 vous seront facturés via un SMS envoyé à %s3.
+564;Möchtest du dieses Element wirklich kaufen? In diesem Fall werden dir per SMS an %s3 %s0 berechnet.
+565;Vuoi davvero effettuare l'acquisto? Il costo di %s0 ti verrà addebitato tramite un SMS inviato a: %s3.
+566;¿Seguro que quieres comprar este objeto? Tendrás que abonar %s0 a través de un SMS enviado a %s3.
+567;¿Seguro que quieres comprar este objeto? Se te cobrarán %s0 a través de un SMS enviado a %s3.
+568;Tem certeza de que você deseja comprar este item? Você será cobrado o valor de %s0 em um SMS enviado para %s3.
+569;Хотите купить этот предмет? Если да, с вас будет снято %s0 посредством СМС, отправленного на %s3.
+570;Bu ürünü almak istediğine emin misin? Öyleyse %s3 numaralı telefona gönderilen bir SMS'le %s0 ücretlendirileceksin.
+571;Na pewno chcesz kupić ten element? Jeśli tak, pobrana zostanie opłata %s0 w SMS wysłanym pod numer %s3.
+572;คุณแน่ใจหรือว่าต้องการซื้อไอเท็มนี้ หากคุณแน่ใจ ค่าใช้จ่าย %s0 จะถูกคิดผ่าน SMS ซึ่งส่งไปที่ %s3
+573;Bạn có chắc muốn mua món đồ này? Nếu có, một phí %s0 sẽ được tính bằng SMS gửi cho %s3.
+574;هل أنت متأكد أنك تريد شراء هذا الغرض؟ إذا كنت متأكدًا، سيتم خصم مبلغ %s من خلال رسالة قصيرة سيتم إرسالها إلى %s3.
+575;Дали сигурно сакате да ја купите оваа ставка? Цена: %s0
+576;Are you sure you want to buy this item? Price: %s0 + Tax
+577;Es-tu sûr de vouloir acheter cet item ? Prix : %s0 + Tax
+578;Dieses Element wirklich kaufen? Preis: %s0 + Tax
+579;Vuoi davvero comprare questo oggetto? Prezzo: %s0 + Tax
+580;¿Seguro que quieres comprar este objeto? Precio: %s0 + Tax
+581;¿Seguro que quieres comprar este artículo? Precio: %s0 + Tax
+582;Tem certeza de que deseja comprar este item? Preço: %s0 + Tax
+583;Хотите купить этот предмет? Цена: %s0 + Tax
+584;Bu ürünü almak istediğine emin misin? Fiyatı: %s0 + Tax
+585;Na pewno chcesz kupić ten element? Cena: %s0 + Tax
+586;คุณแน่ใจหรือไม่ว่าต้องการซื้อไอเท็มชิ้นนี้| ราคา: %s0 + Tax
+587;Bạn có chắc muốn mua món đồ này? Giá: %s0 + Tax
+588;هل أنت متأكد من رغبتك في شراء هذا العنصر؟ السعر: %s0 + Tax
+589;Want to by this item? Price: %s0 + SMS price according to your data plan 
+590;Хотите купить этот предмет? Цена: %s0 + стоимость отправки SMS согласно тарифному плану 
+591;Are you sure you want to buy this item from Gameloft? Price: %s0 (Including PPN). Customer Service: 027-44469480.
+592;Êtes-vous sûr de vouloir acheter cet item de Gameloft ? Prix : %s0 (PPN inclus). Service Client : 027-44469480.
+593;Bist du sicher, dass du dieses Element von Gameloft kaufen möchtest? Preis: %s0 (inkl. PPN). Kundenbetreuung: 027-44469480.
+594;Vuoi davvero comprare questo oggetto da Gameloft? Prezzo: %s0 (IVA inclusa). Servizio clienti: 027-44469480.
+595;¿Seguro que quieres comprar este objeto de Gameloft? Precio: %s0 (incluyendo PPN). Atención al cliente: 027-44469480.
+596;¿Seguro que quieres comprar este artículo de Gameloft? Precio: %s0 (incluyendo PPN). Atención al cliente: 027-44469480.
+597;Tem certeza que deseja comprar este item da Gameloft? Preço: %s0 (PPN incluso). Atendimento ao Cliente: 027-44469480.
+598;Хотите купить этот предмет у Gameloft? Стоимость: %s0 (включая PPN). Служба поддержки: 027-44469480.
+599;Bu ürünü Gameloft'tan satın almak istediğinize emin misiniz? Fiyatı: %s0 (PPN vergisi dahil). Müşteri Hizmetleri: 027-44469480.
+600;Na pewno chcesz kupić ten element od Gameloft? Cena: %s0 (z PPN). Obsługa klienta: 027-44469480.
+601;แน่ใจหรือว่าต้องการซื้อไอเท็มนี้จาก Gameloft ราคา: %s0 (รวม PPN) ฝ่ายบริการลูกค้า: 027-44469480
+602;Bạn có chắc muốn mua món đồ này từ Gameloft? Giá: %s0 (Bao gồm PPN). Dịch vụ Khách hàng: 027-44469480.
+603;هل أنت متأكد أنك تريد شراء هذا الغرض من Gameloft؟ السعر" %s0 (شامل PPN). خدمة العملاء: 027-44469480.
+604;Are you sure you want to buy this item? Price: %s0 + 1 SMS (not included in the package)
+605;Êtes-vous sûr de vouloir acheter cet item ? Prix : %s0 + 1 SMS (hors forfait)
+606;Bist du sicher, dass du dieses Element kaufen willst? Preis: %s0 + 1 SMS (nicht im Paket enthalten) 
+607;Vuoi davvero acquistare questo oggetto? Prezzo: %s0 + 1 SMS (non incluso nel pacchetto)
+608;¿Estás seguro de que quieres comprar este objeto? Precio: %s0 + 1 SMS (no incluido en el paquete)
+609;¿Estás seguro de que quieres comprar este objeto? Precio: %s0 + 1 SMS (no incluido en el paquete)
+610;Tem certeza que deseja comprar esse item? Preço: %s0 + 1 SMS (não incluso no pacote)
+611;Хотите купить этот предмет? Цена: %s0 + 1 СМС (не входит в стоимость)
+612;Bu ürünü satın almak istediğine emin misin? Fiyatı: %s0 + 1 SMS (pakete dahil değil)
+613;Na pewno chcesz kupić ten element? Cena: %s0 + 1 SMS (nie wliczony w cenę)
+614;คุณแน่ใจหรือไม่ว่าต้องการซื้อไอเท็มนี้ ราคา: %s0 + SMS 1 ข้อความ (ไม่รวมในแพ็คเกจนี้)
+615;Bạn có chắc muốn mua món đồ này? Giá: %s0 + 1 SMS (không bao gồm trong gói này)
+616;هل أنت متأكد أنك تريد شراء هذا الغرض؟ السعر:%s0 + 1 رسالة قصيرة (لم يتم إضافتها للحزمة)
+617;Are you sure you want to buy this item? Price: %s0 + the cost of one standard-rate SMS 
+618;Acheter cet item ? Prix : %s0 + coût d'un SMS standard 
+619;Bist du sicher, dass du dieses Element kaufen möchtest? Preis: %s0, zzgl. Standardkosten für eine SMS 
+620;Confermi di voler comprare questo oggetto? Prezzo: %s0 + il costo standard di un SMS 
+621;¿Seguro que quieres comprar este objeto? Precio: %s0 + el precio de un SMS (tarifa ordinaria) 
+622;¿Seguro que quieres comprar este artículo? Precio: %s0 + el costo de un SMS (tarifa ordinaria) 
+623;Deseja realmente comprar esse item? Preço: %s0 + custo de uma mensagem SMS 
+624;Вы хотите приобрести этот предмет? Цена: %s0 + стоимость 1 СМС. 
+625;Bu ürünü almak istediğine emin misin? Fiyatı: %s0 + bir standart SMS ücreti 
+626;Na pewno chcesz kupić ten element? Koszt: %s0 + cena 1 SMS. 
+627;แน่ใจหรือว่าคุณต้องการซื้อไอเท็มนี้ ราคา: %s0 + ค่าส่ง SMS ธรรมดา 1 ข้อความ 
+628;Bạn có chắc muốn mua món đồ này? Giá:%s0 + phí một tin SMS thông thường 
+629;هل أنت متأكد أنك تريد شراء هذا الغرض؟ السعر: %s0 + تكلفة رسالة قصيرة واحدة
+630;Do you want to buy %s5 of the following item for %s0: %s4? This will be charged on your mobile bill.
+631;Acheter %s5 exemplaire(s) de cet item pour %s0 : %s4 ? Ces frais seront ajoutés à votre facture de téléphone mobile.
+
+632;Möchtest du %s5 Exemplare des folgenden Elements für %s0 kaufen: %s4? Der Betrag wird deiner Handyrechnung belastet.
+633;Vuoi comprare questo oggetto (x%s5) per %s0: %s4? Il costo verrà addebitato sulla bolletta del tuo cellulare.
+634;¿Quieres comprar %s5 unidades de este objeto por %s0: %s4?
+El importe se cargará en tu factura de móvil.
+635;¿Quieres comprar %s5 unidad(es) de este objeto por %s0: %s4?
+El importe se cargará en tu factura de móvil.
+636;Deseja comprar %s5 unidades do seguinte item por %s0? %s4 Ele será cobrado em sua conta do celular.
+637;Хотите купить следующий предмет: %s4 за %s0: %s5?
+Средства будут сняты с вашего мобильного счета.
+638;%s0 karşılığında %s5 adet %s4 satın almak istiyor musun?
+Ücreti cep telefonu faturandan alınacak.
+639;Chcesz kupić %s5 szt. elementu "%s4" za %s0?
+Opłata zostanie doliczona do rachunku za telefon.
+640;คุณ|ต้องการ|ซื้อ%s4 |จำนวน %s5 |รายการ|ใน|ราคา %s0 |หรือไม่ |ระบบ|จะ|คิด|ค่าบริการ|จาก|หมายเลข|โทรศัพท์|นี้
+641;Bạn có muốn mua %s5 món đồ sau đây với giá %s0: %s4?
+Nó sẽ được tính vào hóa đơn di động của bạn.
+642;هل تريد شراء %s5 من الغرض التالي مقابل %s0: %s4؟ سيتم إضافة المبلغ لفاتورة هاتفك المحمول.
+643;Сигурни ли сте, че искате да купите този предмет? Цена: %s0
+644;Sigurno želite da kupite ovaj artikal? Cena: %s0
+645;Sigur dorești să cumperi acest articol? Preț: %s0
+646;Biztosan meg akarod venni ezt a terméket? Ára: %s0
+647;Naozaj chcete kúpiť túto položku? Cena: %s0
+648;Dali sigurno želite da kupite ovu stavku? Cjena: %s0
+649;Sigurno to želite kupiti? Cijena: %s0
+650;Ali ste prepričani, da želite kupiti ta izdelek? Cena: %s0
+651;Buy
+652;Back
+653;Acheter
+654;Retour
+655;Zahlungspflichtig bestellen
+656;Zurück
+657;Compra
+658;Indietro
+659;Comprar
+660;Atrás
+661;Comprar
+662;Voltar
+663;Купить
+664;Назад
+665;Satın Al
+666;Gerİ
+667;Kup
+668;Wstecz
+669;ซื้อ
+670;กลับ
+671;Mua
+672;Quay về
+673;شراء  
+674;عودة
+675;OK
+676;Later
+677;Plus tard
+678;Später
+679;Più tardi
+680;Aceptar
+681;Más tarde
+682;OK
+683;Depois
+684;Позже
+685;TAMAM
+686;Sonra
+687;Później
+688;ตกลง
+689;ภายหลัง
+690;Để sau
+691;موافق
+692;لاحقًا
+693;Køb nu
+694;Senere 
+695;Buy Now
+696;Cancel
+697;Acheter
+698;Annuler
+699;Jetzt kaufen
+700;Abbrechen
+701;Acquista ora
+702;Annulla
+703;Comprar ahora
+704;Cancelar
+705;Comprar agora
+706;Cancelar
+707;Купить
+708;Отмена
+709;Şimdi Al
+710;İptal
+711;Kup teraz
+712;Anuluj
+713;ซื้อทันที
+714;ยกเลิก
+715;Mua ngay
+716;Hủy bỏ
+717;شراء الآن
+718;إلغاء
+719;Beli
+720;Batal
+721;Kaufen
+722;OK
+723;OK
+724;OK
+725;OK
+726;ОК
+727;OK
+728;OK
+729;Zaplatit pomocí SMS
+730;Později
+731;Dobrze
+732;Во ред
+733;Подоцна
+734;Добре
+735;По-късно
+736;U redu
+737;Kasnije
+738;OK
+739;Mai târziu
+740;OK
+741;Később
+742;OK
+743;Neskôr
+744;OK
+745;Kasnije
+746;OK
+747;Kasnije
+748;V redu
+749;Kasneje
+750;Terms & Conditions
+751;+ price of 1 SMS
+752;Conditions générales
+753;+ prix d'1 SMS
+754;Nutzungsbedingungen 
+755;+ SMS-Preis 
+756;Termini e condizioni
+757;+ il costo di 1 SMS
+758;Términos y condiciones
+759;+ el coste de 1 SMS
+760;+ el costo de 1 SMS
+761;Termos e condições
+762;+ preço de 1 SMS
+763;Соглашение
+764;+ стоимость 1 СМС
+765;Şart & Koşullar
+766;+ 1 SMS Ücreti
+767;Zasady i warunki
+768;+ koszt 1 wiadomości SMS
+769;ข้อตกลง|และ|เงื่อนไข
+770;+ ค่าส่ง SMS 1 ข้อความ
+771;Điều khoản và Điều kiện
+772;+ giá 1 SMS
+773;البنود والشروط
+774;+ سعر رسالة قصيرة واحدة
+775;No 14-day cooling-off period
+776;Betingelser og vilkår
+777;Pas de période de rétractation de 14 jours
+778;Kein 14-tägiges Widerrufsrecht
+779;Nessun diritto di recesso di 14 giorni
+780;Sin periodo de reembolso de 14 días
+781;Sem direito a período de reembolso de 14 dias.
+782;Не подлежит возврату в 14-дневный срок
+783;14 günlük iade süresi geçerli değil
+784;Brak 14-dniowego prawa do zwrotu
+785;ไม่มีระยะปลอดพันธะ 14 วัน
+786;Không có thời hạn đổi ý 14 ngày
+787;لا يمكن استرجاع الثمن خلال 14 يومًا
+788;+ %s2 SMS
+789;+ %s2 СМС
+790;+ %s2 رسالة قصيرة
+791;(VAT not included)
+792;(hors TVA)
+793;(zzgl. MwSt.)
+794;(IVA esclusa)
+795;(IVA no incl.)
+796;(VAT não incl.)
+797;(Без НДС)
+798;(KDV hariç)
+799;(bez VAT)
+800;(ไม่รวม |VAT)
+801;(Không gồm VAT)
+802;(غير شامل الضرائب)
+803;Syarat & Ketentuan
+804;VAT included
+805;TVA comprise
+806;inkl. MwSt.
+807;IVA inclusa
+808;IVA incluido
+809;VAT incluído
+810;включая НДС
+811;KDV dahil
+812;z VAT
+813;รวมภาษีมูลค่าเพิ่ม
+814;Bao gồm VAT
+815;شامل الضرائب
+816;Payment T&C
+817;(GST incl.)
+818;CG paiement
+819;(GST incl.)
+820;Zahlungsbedingungen
+821;(inkl. MwSt.)
+822;Termini pagamento
+823;(IVA incl.)
+824;Pago y T&C
+825;(GST incl.)
+826;T&C de pago
+827;Condições de pagamento
+828;(GST incl.)
+829;Условия оплаты
+830;(с НДС)
+831;Ödeme Ş&K
+832;(GST dahil)
+833;Warunki płatności
+834;(z GST)
+835;ข้อตกลง|และ|เงื่อนไข|ใน|การชำระเงิน
+836;(รวม GST)
+837;ĐK & ĐK Thanh toán
+838;(Bao gồm GST)
+839;بنود وشروط السداد
+840;شامل الضرائب
+841;IVA inc.
+842;Smluvní podmínky
+843;Услови и одредби
+844;+ Tax
+845;Правила & условия
+846;Uslovi korišćenja
+847;Termeni și condiții
+848;ÁSZF
+849;Zmluvné podmienky
+850;Uvjeti i odredbe
+851;Uvjeti korištenja
+852;Pogoji in določila
+

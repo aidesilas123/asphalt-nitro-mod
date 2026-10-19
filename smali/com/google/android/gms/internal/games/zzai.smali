@@ -1,0 +1,116 @@
+###### Class com.google.android.gms.internal.games.zzai (com.google.android.gms.internal.games.zzai)
+.class public final Lcom/google/android/gms/internal/games/zzai;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/games/multiplayer/Invitations;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getInvitationInboxIntent(Lcom/google/android/gms/common/api/GoogleApiClient;)Landroid/content/Intent;
+    .registers 2
+
+    invoke-static {p1}, Lcom/google/android/gms/games/Games;->zza(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/games/internal/zze;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/google/android/gms/games/internal/zze;->zzz()Landroid/content/Intent;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final loadInvitations(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/common/api/PendingResult;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/common/api/GoogleApiClient;",
+            ")",
+            "Lcom/google/android/gms/common/api/PendingResult<",
+            "Lcom/google/android/gms/games/multiplayer/Invitations$LoadInvitationsResult;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/gms/internal/games/zzai;->loadInvitations(Lcom/google/android/gms/common/api/GoogleApiClient;I)Lcom/google/android/gms/common/api/PendingResult;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final loadInvitations(Lcom/google/android/gms/common/api/GoogleApiClient;I)Lcom/google/android/gms/common/api/PendingResult;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/common/api/GoogleApiClient;",
+            "I)",
+            "Lcom/google/android/gms/common/api/PendingResult<",
+            "Lcom/google/android/gms/games/multiplayer/Invitations$LoadInvitationsResult;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/internal/games/zzaj;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/google/android/gms/internal/games/zzaj;-><init>(Lcom/google/android/gms/internal/games/zzai;Lcom/google/android/gms/common/api/GoogleApiClient;I)V
+
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->enqueue(Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;)Lcom/google/android/gms/common/api/internal/BaseImplementation$ApiMethodImpl;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final registerInvitationListener(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/games/multiplayer/OnInvitationReceivedListener;)V
+    .registers 4
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/games/Games;->zza(Lcom/google/android/gms/common/api/GoogleApiClient;Z)Lcom/google/android/gms/games/internal/zze;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_e
+
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/common/api/GoogleApiClient;->registerListener(Ljava/lang/Object;)Lcom/google/android/gms/common/api/internal/ListenerHolder;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/games/internal/zze;->zzb(Lcom/google/android/gms/common/api/internal/ListenerHolder;)V
+
+    :cond_e
+    return-void
+.end method
+
+.method public final unregisterInvitationListener(Lcom/google/android/gms/common/api/GoogleApiClient;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/games/Games;->zza(Lcom/google/android/gms/common/api/GoogleApiClient;Z)Lcom/google/android/gms/games/internal/zze;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_a
+
+    invoke-virtual {p1}, Lcom/google/android/gms/games/internal/zze;->zzab()V
+
+    :cond_a
+    return-void
+.end method

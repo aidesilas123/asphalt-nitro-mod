@@ -1,0 +1,47 @@
+package com.facebook.ads.internal.exoplayer2.thirdparty.metadata.id3;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.facebook.ads.redexgen.X.DL;
+import java.util.Arrays;
+
+/* JADX WARN: Classes with same name are omitted, all sources:
+  assets.dex
+  assets/audience_network.dex
+ */
+/* JADX INFO: loaded from: assets.dex */
+public final class BinaryFrame extends Id3Frame {
+    public static final Parcelable.Creator<BinaryFrame> CREATOR = new DL();
+    public final byte[] A00;
+
+    public BinaryFrame(Parcel parcel) {
+        super(parcel.readString());
+        this.A00 = parcel.createByteArray();
+    }
+
+    public BinaryFrame(String str, byte[] bArr) {
+        super(str);
+        this.A00 = bArr;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        BinaryFrame binaryFrame = (BinaryFrame) obj;
+        return super.A00.equals(((Id3Frame) binaryFrame).A00) && Arrays.equals(this.A00, binaryFrame.A00);
+    }
+
+    public final int hashCode() {
+        return (((17 * 31) + super.A00.hashCode()) * 31) + Arrays.hashCode(this.A00);
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(super.A00);
+        parcel.writeByteArray(this.A00);
+    }
+}

@@ -1,0 +1,798 @@
+###### Class com.mbridge.msdk.mbsignalcommon.windvane.AbsFeedBackForH5 (com.mbridge.msdk.mbsignalcommon.windvane.AbsFeedBackForH5)
+.class public abstract Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+.super Lcom/mbridge/msdk/mbsignalcommon/windvane/h;
+.source "AbsFeedBackForH5.java"
+
+
+# static fields
+.field private static e:I = 0x0
+
+.field private static f:I = 0x1
+
+
+# instance fields
+.field private d:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 0
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/h;-><init>()V
+
+    const-string v0, "AbsFeedBackForH5"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->d:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 6
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "code"
+
+    sget v2, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->f:I
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "message"
+
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string p2, "data"
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-virtual {v0, p2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object p2
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_2f
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2f} :catch_30
+
+    goto :goto_3a
+
+    :catch_30
+    move-exception p1
+
+    iget-object p2, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3a
+    return-void
+.end method
+
+.method public callbackSuccess(Ljava/lang/Object;)V
+    .registers 5
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "code"
+
+    sget v2, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->e:I
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "message"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v1, "data"
+
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_31
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_31} :catch_32
+
+    goto :goto_43
+
+    :catch_32
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, p1, v1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_43
+    return-void
+.end method
+
+.method public callbackSuccessWithData(Ljava/lang/Object;Lorg/json/JSONObject;)V
+    .registers 6
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v1, "code"
+
+    sget v2, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->e:I
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v1, "message"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v1, "data"
+
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object p2
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_2c
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_2c} :catch_2d
+
+    goto :goto_3e
+
+    :catch_2d
+    move-exception p2
+
+    invoke-virtual {p2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->d:Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Lcom/mbridge/msdk/foundation/tools/aa;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_3e
+    return-void
+.end method
+
+.method public feedbackLayoutOperate(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 20
+
+    move-object/from16 v1, p1
+
+    const-string v0, ""
+
+    :try_start_4
+    invoke-static/range {p2 .. p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_6c
+
+    move-object v2, v1
+
+    check-cast v2, Lcom/mbridge/msdk/mbsignalcommon/windvane/a;
+
+    new-instance v2, Lorg/json/JSONObject;
+
+    move-object/from16 v3, p2
+
+    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "width"
+
+    const/4 v4, -0x1
+
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    const-string v3, "height"
+
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v8
+
+    const-string v3, "left"
+
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v3
+
+    const-string v5, "top"
+
+    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v4
+
+    const-string v5, "opacity"
+
+    const-wide/high16 v9, 0x3ff0000000000000L    # 1.0
+
+    invoke-virtual {v2, v5, v9, v10}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v5
+
+    const-string v9, "radius"
+
+    const/16 v10, 0x14
+
+    invoke-virtual {v2, v9, v10}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v9
+
+    const-string v10, "fontColor"
+
+    invoke-virtual {v2, v10, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    const-string v10, "bgColor"
+
+    invoke-virtual {v2, v10, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    const-string v10, "key"
+
+    invoke-virtual {v2, v10, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v10, "fontSize"
+
+    const-wide/high16 v11, -0x4010000000000000L    # -1.0
+
+    invoke-virtual {v2, v10, v11, v12}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+
+    move-result-wide v10
+
+    const-string v12, "padding"
+
+    invoke-virtual {v2, v12}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v16
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/c/b;->a()Lcom/mbridge/msdk/foundation/c/b;
+
+    move-result-object v2
+
+    int-to-float v3, v3
+
+    int-to-float v4, v4
+
+    double-to-float v12, v5
+
+    double-to-float v15, v10
+
+    move-object v5, v2
+
+    move-object v6, v0
+
+    move v10, v3
+
+    move v11, v4
+
+    invoke-virtual/range {v5 .. v16}, Lcom/mbridge/msdk/foundation/c/b;->a(Ljava/lang/String;IIIFFFLjava/lang/String;Ljava/lang/String;FLorg/json/JSONArray;)V
+
+    :cond_6c
+    invoke-virtual/range {p0 .. p1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackSuccess(Ljava/lang/Object;)V
+    :try_end_6f
+    .catchall {:try_start_4 .. :try_end_6f} :catchall_72
+
+    move-object/from16 v3, p0
+
+    goto :goto_7f
+
+    :catchall_72
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v3, p0
+
+    invoke-virtual {v3, v1, v2}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :goto_7f
+    return-void
+.end method
+
+.method public feedbackOperate(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 8
+
+    :try_start_0
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2c
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/mbridge/msdk/mbsignalcommon/windvane/a;
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string p2, "view_visible"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p2, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result p2
+
+    const-string v3, "key"
+
+    const-string v4, ""
+
+    invoke-virtual {v1, v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/c/b;->a()Lcom/mbridge/msdk/foundation/c/b;
+
+    move-result-object v3
+
+    if-ne p2, v2, :cond_26
+
+    const/16 p2, 0x8
+
+    goto :goto_27
+
+    :cond_26
+    const/4 p2, 0x0
+
+    :goto_27
+    iget-object v0, v0, Lcom/mbridge/msdk/mbsignalcommon/windvane/a;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v3, v1, p2, v0}, Lcom/mbridge/msdk/foundation/c/b;->a(Ljava/lang/String;ILandroid/view/ViewGroup;)V
+
+    :cond_2c
+    invoke-virtual {p0, p1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackSuccess(Ljava/lang/Object;)V
+    :try_end_2f
+    .catchall {:try_start_0 .. :try_end_2f} :catchall_30
+
+    goto :goto_3b
+
+    :catchall_30
+    move-exception p2
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :goto_3b
+    return-void
+.end method
+
+.method public feedbackPopupOperate(Ljava/lang/Object;Ljava/lang/String;)V
+    .registers 7
+
+    :try_start_0
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2b
+
+    move-object v0, p1
+
+    check-cast v0, Lcom/mbridge/msdk/mbsignalcommon/windvane/a;
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1, p2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string p2, "view_visible"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p2, v2}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result p2
+
+    const-string v2, "key"
+
+    const-string v3, ""
+
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/mbridge/msdk/mbsignalcommon/windvane/a;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    new-instance v2, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;
+
+    invoke-direct {v2, p0, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;-><init>(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/c/b;->a()Lcom/mbridge/msdk/foundation/c/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, p2, v2}, Lcom/mbridge/msdk/foundation/c/b;->a(Ljava/lang/String;ILcom/mbridge/msdk/foundation/c/a;)V
+
+    :cond_2b
+    invoke-virtual {p0, p1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackSuccess(Ljava/lang/Object;)V
+    :try_end_2e
+    .catchall {:try_start_0 .. :try_end_2e} :catchall_2f
+
+    goto :goto_3a
+
+    :catchall_2f
+    move-exception p2
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->callbackExcep(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :goto_3a
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbsignalcommon.windvane.AbsFeedBackForH5.AnonymousClass1 (com.mbridge.msdk.mbsignalcommon.windvane.AbsFeedBackForH5$1)
+.class final Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;
+.super Ljava/lang/Object;
+.source "AbsFeedBackForH5.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/foundation/c/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->feedbackPopupOperate(Ljava/lang/Object;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+.field final synthetic b:Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->b:Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+
+    iput-object p2, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 5
+
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_15
+
+    const-string v1, "status"
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    :cond_15
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_19
+    .catchall {:try_start_0 .. :try_end_19} :catchall_1a
+
+    goto :goto_2a
+
+    :catchall_1a
+    move-exception v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->b:Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->a(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, ""
+
+    :goto_2a
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    const-string v3, "onFeedbackAlertStatusNotify"
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;)V
+    .registers 5
+
+    const/4 p1, 0x2
+
+    :try_start_1
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_15
+
+    const-string v1, "status"
+
+    invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    :cond_15
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+    :try_end_19
+    .catchall {:try_start_1 .. :try_end_19} :catchall_1a
+
+    goto :goto_2a
+
+    :catchall_1a
+    move-exception v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->b:Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->a(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v0, ""
+
+    :goto_2a
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    const-string v2, "onFeedbackAlertStatusNotify"
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .registers 5
+
+    const/4 v0, 0x2
+
+    :try_start_1
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_15
+
+    const-string v2, "status"
+
+    invoke-virtual {v1, v2, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    :cond_15
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_19
+    .catchall {:try_start_1 .. :try_end_19} :catchall_1a
+
+    goto :goto_2a
+
+    :catchall_1a
+    move-exception v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->b:Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;->a(Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3, v1}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const-string v1, ""
+
+    :goto_2a
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a()Lcom/mbridge/msdk/mbsignalcommon/windvane/g;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbsignalcommon/windvane/AbsFeedBackForH5$1;->a:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    const-string v3, "onFeedbackAlertStatusNotify"
+
+    invoke-virtual {v1, v2, v3, v0}, Lcom/mbridge/msdk/mbsignalcommon/windvane/g;->a(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

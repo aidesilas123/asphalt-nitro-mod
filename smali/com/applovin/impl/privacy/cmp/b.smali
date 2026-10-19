@@ -1,0 +1,954 @@
+###### Class com.applovin.impl.privacy.cmp.b (com.applovin.impl.privacy.cmp.b)
+.class public Lcom/applovin/impl/privacy/cmp/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/applovin/impl/privacy/cmp/b$a;
+    }
+.end annotation
+
+
+# instance fields
+.field private axE:Lcom/google/android/ump/ConsentForm;
+
+.field private final logger:Lcom/applovin/impl/sdk/x;
+
+.field private final sdk:Lcom/applovin/impl/sdk/n;
+
+
+# direct methods
+.method public constructor <init>(Lcom/applovin/impl/sdk/n;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {p1}, Lcom/applovin/impl/sdk/n;->BN()Lcom/applovin/impl/sdk/x;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b;->logger:Lcom/applovin/impl/sdk/x;
+
+    invoke-static {}, Lcom/applovin/impl/sdk/n;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/android/ump/UserMessagingPlatform;->getConsentInformation(Landroid/content/Context;)Lcom/google/android/ump/ConsentInformation;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Initializing with SDK Version: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/applovin/impl/privacy/cmp/b;->getSdkVersion()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", consentStatus: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lcom/google/android/ump/ConsentInformation;->getConsentStatus()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", consentFormAvailable: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {p1}, Lcom/google/android/ump/ConsentInformation;->isConsentFormAvailable()Z
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/privacy/cmp/b;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private a(Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+    .registers 6
+
+    sget-object v0, Lcom/applovin/sdk/AppLovinCmpError$Code;->UNSPECIFIED:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    invoke-virtual {p1}, Lcom/google/android/ump/FormError;->getErrorCode()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_16
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_16
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_13
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_16
+
+    goto :goto_18
+
+    :cond_13
+    sget-object v0, Lcom/applovin/sdk/AppLovinCmpError$Code;->INTEGRATION_ERROR:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    goto :goto_18
+
+    :cond_16
+    sget-object v0, Lcom/applovin/sdk/AppLovinCmpError$Code;->FORM_UNAVAILABLE:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    :goto_18
+    new-instance v1, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    invoke-virtual {p1}, Lcom/google/android/ump/FormError;->getErrorCode()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Lcom/google/android/ump/FormError;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, v0, p2, v2, p1}, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;-><init>(Lcom/applovin/sdk/AppLovinCmpError$Code;Ljava/lang/String;ILjava/lang/String;)V
+
+    return-object v1
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/ConsentForm;)Lcom/google/android/ump/ConsentForm;
+    .registers 2
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b;->axE:Lcom/google/android/ump/ConsentForm;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/privacy/cmp/b;->d(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/privacy/cmp/b;->e(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private d(Ljava/lang/String;)V
+    .registers 4
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b;->logger:Lcom/applovin/impl/sdk/x;
+
+    const-string v1, "GoogleCmpAdapter"
+
+    invoke-virtual {v0, v1, p1}, Lcom/applovin/impl/sdk/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_d
+    return-void
+.end method
+
+.method private e(Ljava/lang/String;)V
+    .registers 4
+
+    invoke-static {}, Lcom/applovin/impl/sdk/x;->Fn()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b;->logger:Lcom/applovin/impl/sdk/x;
+
+    const-string v1, "GoogleCmpAdapter"
+
+    invoke-virtual {v0, v1, p1}, Lcom/applovin/impl/sdk/x;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_d
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/a;Lcom/applovin/impl/privacy/cmp/b$a;)V
+    .registers 7
+
+    new-instance v0, Lcom/google/android/ump/ConsentRequestParameters$Builder;
+
+    invoke-direct {v0}, Lcom/google/android/ump/ConsentRequestParameters$Builder;-><init>()V
+
+    invoke-static {}, Lcom/applovin/impl/sdk/n;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/applovin/impl/privacy/cmp/b;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-static {v1, v2}, Lcom/applovin/impl/sdk/utils/u;->b(Landroid/content/Context;Lcom/applovin/impl/sdk/n;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4f
+
+    invoke-virtual {p2}, Lcom/applovin/impl/privacy/cmp/a;->getDebugUserGeography()Lcom/applovin/sdk/AppLovinSdkConfiguration$ConsentFlowUserGeography;
+
+    move-result-object p2
+
+    sget-object v1, Lcom/applovin/sdk/AppLovinSdkConfiguration$ConsentFlowUserGeography;->GDPR:Lcom/applovin/sdk/AppLovinSdkConfiguration$ConsentFlowUserGeography;
+
+    if-ne p2, v1, :cond_4f
+
+    invoke-static {p1}, Lcom/google/android/ump/UserMessagingPlatform;->getConsentInformation(Landroid/content/Context;)Lcom/google/android/ump/ConsentInformation;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Lcom/google/android/ump/ConsentInformation;->reset()V
+
+    iget-object p2, p0, Lcom/applovin/impl/privacy/cmp/b;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-virtual {p2}, Lcom/applovin/impl/sdk/n;->getSettings()Lcom/applovin/sdk/AppLovinSdkSettings;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/applovin/sdk/AppLovinSdkSettings;->getExtraParameters()Ljava/util/Map;
+
+    move-result-object p2
+
+    const-string v1, "google_test_device_hashed_id"
+
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-static {p2}, Lcom/applovin/impl/sdk/utils/StringUtils;->emptyIfNull(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v1, Lcom/google/android/ump/ConsentDebugSettings$Builder;
+
+    invoke-direct {v1, p1}, Lcom/google/android/ump/ConsentDebugSettings$Builder;-><init>(Landroid/content/Context;)V
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Lcom/google/android/ump/ConsentDebugSettings$Builder;->setForceTesting(Z)Lcom/google/android/ump/ConsentDebugSettings$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Lcom/google/android/ump/ConsentDebugSettings$Builder;->setDebugGeography(I)Lcom/google/android/ump/ConsentDebugSettings$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Lcom/google/android/ump/ConsentDebugSettings$Builder;->addTestDeviceHashedId(Ljava/lang/String;)Lcom/google/android/ump/ConsentDebugSettings$Builder;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/google/android/ump/ConsentDebugSettings$Builder;->build()Lcom/google/android/ump/ConsentDebugSettings;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Lcom/google/android/ump/ConsentRequestParameters$Builder;->setConsentDebugSettings(Lcom/google/android/ump/ConsentDebugSettings;)Lcom/google/android/ump/ConsentRequestParameters$Builder;
+
+    :cond_4f
+    invoke-static {p1}, Lcom/google/android/ump/UserMessagingPlatform;->getConsentInformation(Landroid/content/Context;)Lcom/google/android/ump/ConsentInformation;
+
+    move-result-object p2
+
+    invoke-virtual {v0}, Lcom/google/android/ump/ConsentRequestParameters$Builder;->build()Lcom/google/android/ump/ConsentRequestParameters;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/applovin/impl/privacy/cmp/b$1;
+
+    invoke-direct {v1, p0, p1, p3}, Lcom/applovin/impl/privacy/cmp/b$1;-><init>(Lcom/applovin/impl/privacy/cmp/b;Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/b$a;)V
+
+    new-instance v2, Lcom/applovin/impl/privacy/cmp/b$2;
+
+    invoke-direct {v2, p0, p3}, Lcom/applovin/impl/privacy/cmp/b$2;-><init>(Lcom/applovin/impl/privacy/cmp/b;Lcom/applovin/impl/privacy/cmp/b$a;)V
+
+    invoke-interface {p2, p1, v0, v1, v2}, Lcom/google/android/ump/ConsentInformation;->requestConsentInfoUpdate(Landroid/app/Activity;Lcom/google/android/ump/ConsentRequestParameters;Lcom/google/android/ump/ConsentInformation$OnConsentInfoUpdateSuccessListener;Lcom/google/android/ump/ConsentInformation$OnConsentInfoUpdateFailureListener;)V
+
+    return-void
+.end method
+
+.method public b(Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/a;Lcom/applovin/impl/privacy/cmp/b$a;)V
+    .registers 5
+
+    iget-object p2, p0, Lcom/applovin/impl/privacy/cmp/b;->axE:Lcom/google/android/ump/ConsentForm;
+
+    if-nez p2, :cond_16
+
+    const-string p1, "Failed to show - not ready yet"
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/privacy/cmp/b;->e(Ljava/lang/String;)V
+
+    new-instance p1, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    sget-object p2, Lcom/applovin/sdk/AppLovinCmpError$Code;->FORM_UNAVAILABLE:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    const-string v0, "Consent form not ready"
+
+    invoke-direct {p1, p2, v0}, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;-><init>(Lcom/applovin/sdk/AppLovinCmpError$Code;Ljava/lang/String;)V
+
+    invoke-interface {p3, p1}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowShowFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+
+    :cond_16
+    const-string p2, "Showing consent form..."
+
+    invoke-direct {p0, p2}, Lcom/applovin/impl/privacy/cmp/b;->d(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lcom/applovin/impl/privacy/cmp/b;->axE:Lcom/google/android/ump/ConsentForm;
+
+    new-instance v0, Lcom/applovin/impl/privacy/cmp/b$3;
+
+    invoke-direct {v0, p0, p3}, Lcom/applovin/impl/privacy/cmp/b$3;-><init>(Lcom/applovin/impl/privacy/cmp/b;Lcom/applovin/impl/privacy/cmp/b$a;)V
+
+    invoke-interface {p2, p1, v0}, Lcom/google/android/ump/ConsentForm;->show(Landroid/app/Activity;Lcom/google/android/ump/ConsentForm$OnConsentFormDismissedListener;)V
+
+    return-void
+.end method
+
+.method public destroy()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b;->axE:Lcom/google/android/ump/ConsentForm;
+
+    if-eqz v0, :cond_7
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/applovin/impl/privacy/cmp/b;->axE:Lcom/google/android/ump/ConsentForm;
+
+    :cond_7
+    return-void
+.end method
+
+.method public getSdkVersion()Ljava/lang/String;
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public zS()V
+    .registers 2
+
+    const-string v0, "Resetting consent information"
+
+    invoke-direct {p0, v0}, Lcom/applovin/impl/privacy/cmp/b;->d(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/applovin/impl/sdk/n;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/ump/UserMessagingPlatform;->getConsentInformation(Landroid/content/Context;)Lcom/google/android/ump/ConsentInformation;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/google/android/ump/ConsentInformation;->reset()V
+
+    return-void
+.end method
+
+.method public zU()Z
+    .registers 2
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public zV()Z
+    .registers 2
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.AnonymousClass1 (com.applovin.impl.privacy.cmp.b$1)
+.class Lcom/applovin/impl/privacy/cmp/b$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/ump/ConsentInformation$OnConsentInfoUpdateSuccessListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/privacy/cmp/b;->a(Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/a;Lcom/applovin/impl/privacy/cmp/b$a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axB:Landroid/app/Activity;
+
+.field final synthetic axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+.field final synthetic axG:Lcom/applovin/impl/privacy/cmp/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/privacy/cmp/b;Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/b$a;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    iput-object p2, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axB:Landroid/app/Activity;
+
+    iput-object p3, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onConsentInfoUpdateSuccess()V
+    .registers 7
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axB:Landroid/app/Activity;
+
+    invoke-static {v0}, Lcom/google/android/ump/UserMessagingPlatform;->getConsentInformation(Landroid/content/Context;)Lcom/google/android/ump/ConsentInformation;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/google/android/ump/ConsentInformation;->isConsentFormAvailable()Z
+
+    move-result v1
+
+    invoke-interface {v0}, Lcom/google/android/ump/ConsentInformation;->getConsentStatus()I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Loaded parameters consentStatus: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v4, ", consentFormAvailable: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    if-nez v1, :cond_44
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v1, "Failed to load form."
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    new-instance v1, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    sget-object v2, Lcom/applovin/sdk/AppLovinCmpError$Code;->FORM_UNAVAILABLE:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    const-string v3, "Consent form unavailable"
+
+    invoke-direct {v1, v2, v3}, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;-><init>(Lcom/applovin/sdk/AppLovinCmpError$Code;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowLoadFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+
+    :cond_44
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_7b
+
+    iget-object v1, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Failed to load with consent status: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/applovin/impl/privacy/cmp/b;->b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    new-instance v2, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    sget-object v3, Lcom/applovin/sdk/AppLovinCmpError$Code;->FORM_NOT_REQUIRED:Lcom/applovin/sdk/AppLovinCmpError$Code;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Consent form not required for consent status: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v3, v0}, Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;-><init>(Lcom/applovin/sdk/AppLovinCmpError$Code;Ljava/lang/String;)V
+
+    invoke-interface {v1, v2}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowLoadFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+
+    :cond_7b
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v1, "Successfully requested consent info"
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v1, "Loading consent form..."
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1;->axB:Landroid/app/Activity;
+
+    new-instance v1, Lcom/applovin/impl/privacy/cmp/b$1$1;
+
+    invoke-direct {v1, p0}, Lcom/applovin/impl/privacy/cmp/b$1$1;-><init>(Lcom/applovin/impl/privacy/cmp/b$1;)V
+
+    new-instance v2, Lcom/applovin/impl/privacy/cmp/b$1$2;
+
+    invoke-direct {v2, p0}, Lcom/applovin/impl/privacy/cmp/b$1$2;-><init>(Lcom/applovin/impl/privacy/cmp/b$1;)V
+
+    invoke-static {v0, v1, v2}, Lcom/google/android/ump/UserMessagingPlatform;->loadConsentForm(Landroid/content/Context;Lcom/google/android/ump/UserMessagingPlatform$OnConsentFormLoadSuccessListener;Lcom/google/android/ump/UserMessagingPlatform$OnConsentFormLoadFailureListener;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.AnonymousClass1.C00781 (com.applovin.impl.privacy.cmp.b$1$1)
+.class Lcom/applovin/impl/privacy/cmp/b$1$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/ump/UserMessagingPlatform$OnConsentFormLoadSuccessListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/privacy/cmp/b$1;->onConsentInfoUpdateSuccess()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/privacy/cmp/b$1;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$1$1;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onConsentFormLoadSuccess(Lcom/google/android/ump/ConsentForm;)V
+    .registers 4
+    .param p1    # Lcom/google/android/ump/ConsentForm;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1$1;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    iget-object v0, v0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v1, "Successfully loaded consent form"
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1$1;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    iget-object v0, v0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    invoke-static {v0, p1}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/ConsentForm;)Lcom/google/android/ump/ConsentForm;
+
+    iget-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$1$1;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    iget-object p1, p1, Lcom/applovin/impl/privacy/cmp/b$1;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowLoaded(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.AnonymousClass1.AnonymousClass2 (com.applovin.impl.privacy.cmp.b$1$2)
+.class Lcom/applovin/impl/privacy/cmp/b$1$2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/ump/UserMessagingPlatform$OnConsentFormLoadFailureListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/privacy/cmp/b$1;->onConsentInfoUpdateSuccess()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/privacy/cmp/b$1;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$1$2;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onConsentFormLoadFailure(Lcom/google/android/ump/FormError;)V
+    .registers 5
+    .param p1    # Lcom/google/android/ump/FormError;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1$2;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    iget-object v0, v0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Failed to load with error: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$1$2;->axH:Lcom/applovin/impl/privacy/cmp/b$1;
+
+    iget-object v1, v0, Lcom/applovin/impl/privacy/cmp/b$1;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    iget-object v0, v0, Lcom/applovin/impl/privacy/cmp/b$1;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v2, "Consent form load failed"
+
+    invoke-static {v0, p1, v2}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    move-result-object p1
+
+    invoke-interface {v1, p1}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowLoadFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.AnonymousClass2 (com.applovin.impl.privacy.cmp.b$2)
+.class Lcom/applovin/impl/privacy/cmp/b$2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/ump/ConsentInformation$OnConsentInfoUpdateFailureListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/privacy/cmp/b;->a(Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/a;Lcom/applovin/impl/privacy/cmp/b$a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+.field final synthetic axG:Lcom/applovin/impl/privacy/cmp/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/privacy/cmp/b;Lcom/applovin/impl/privacy/cmp/b$a;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$2;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    iput-object p2, p0, Lcom/applovin/impl/privacy/cmp/b$2;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onConsentInfoUpdateFailure(Lcom/google/android/ump/FormError;)V
+    .registers 5
+    .param p1    # Lcom/google/android/ump/FormError;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$2;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Failed to request consent info with error: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$2;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    iget-object v1, p0, Lcom/applovin/impl/privacy/cmp/b$2;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v2, "Consent info update failed"
+
+    invoke-static {v1, p1, v2}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowLoadFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.AnonymousClass3 (com.applovin.impl.privacy.cmp.b$3)
+.class Lcom/applovin/impl/privacy/cmp/b$3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/ump/ConsentForm$OnConsentFormDismissedListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/privacy/cmp/b;->b(Landroid/app/Activity;Lcom/applovin/impl/privacy/cmp/a;Lcom/applovin/impl/privacy/cmp/b$a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+.field final synthetic axG:Lcom/applovin/impl/privacy/cmp/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/privacy/cmp/b;Lcom/applovin/impl/privacy/cmp/b$a;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    iput-object p2, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onConsentFormDismissed(Lcom/google/android/ump/FormError;)V
+    .registers 5
+    .param p1    # Lcom/google/android/ump/FormError;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    if-eqz p1, :cond_26
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Failed to show with error: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/applovin/impl/privacy/cmp/b;->b(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    iget-object v1, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v2, "Consent form show failed"
+
+    invoke-static {v1, p1, v2}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Lcom/google/android/ump/FormError;Ljava/lang/String;)Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowShowFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+
+    return-void
+
+    :cond_26
+    iget-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axG:Lcom/applovin/impl/privacy/cmp/b;
+
+    const-string v0, "Consent form finished showing"
+
+    invoke-static {p1, v0}, Lcom/applovin/impl/privacy/cmp/b;->a(Lcom/applovin/impl/privacy/cmp/b;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/applovin/impl/privacy/cmp/b$3;->axF:Lcom/applovin/impl/privacy/cmp/b$a;
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lcom/applovin/impl/privacy/cmp/b$a;->onFlowHidden(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.privacy.cmp.b.a (com.applovin.impl.privacy.cmp.b$a)
+.class public interface abstract Lcom/applovin/impl/privacy/cmp/b$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/applovin/impl/privacy/cmp/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation
+
+
+# virtual methods
+.method public abstract onFlowHidden(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract onFlowLoadFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+.end method
+
+.method public abstract onFlowLoaded(Landroid/os/Bundle;)V
+.end method
+
+.method public abstract onFlowShowFailed(Lcom/applovin/impl/privacy/cmp/CmpErrorImpl;)V
+.end method

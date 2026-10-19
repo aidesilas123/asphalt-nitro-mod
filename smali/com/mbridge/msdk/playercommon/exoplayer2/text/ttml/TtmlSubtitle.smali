@@ -1,0 +1,182 @@
+###### Class com.mbridge.msdk.playercommon.exoplayer2.text.ttml.TtmlSubtitle (com.mbridge.msdk.playercommon.exoplayer2.text.ttml.TtmlSubtitle)
+.class final Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;
+.super Ljava/lang/Object;
+.source "TtmlSubtitle.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/playercommon/exoplayer2/text/Subtitle;
+
+
+# instance fields
+.field private final eventTimesUs:[J
+
+.field private final globalStyles:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlStyle;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final regionMap:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlRegion;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final root:Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;
+
+
+# direct methods
+.method public constructor <init>(Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;Ljava/util/Map;Ljava/util/Map;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlStyle;",
+            ">;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlRegion;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;
+
+    iput-object p3, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->regionMap:Ljava/util/Map;
+
+    if-eqz p2, :cond_e
+
+    invoke-static {p2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p2
+
+    goto :goto_12
+
+    :cond_e
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
+
+    move-result-object p2
+
+    :goto_12
+    iput-object p2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;->getEventTimesUs()[J
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCues(J)Ljava/util/List;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(J)",
+            "Ljava/util/List<",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/Cue;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;
+
+    iget-object v1, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->regionMap:Ljava/util/Map;
+
+    invoke-virtual {v0, p1, p2, v1, v2}, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;->getCues(JLjava/util/Map;Ljava/util/Map;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final getEventTime(I)J
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
+
+    aget-wide v1, v0, p1
+
+    return-wide v1
+.end method
+
+.method public final getEventTimeCount()I
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method final getGlobalStyles()Ljava/util/Map;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlStyle;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method public final getNextEventTimeIndex(J)I
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, p2, v1, v1}, Lcom/mbridge/msdk/playercommon/exoplayer2/util/Util;->binarySearchCeil([JJZZ)I
+
+    move-result p1
+
+    iget-object p2, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
+
+    array-length p2, p2
+
+    if-ge p1, p2, :cond_d
+
+    goto :goto_e
+
+    :cond_d
+    const/4 p1, -0x1
+
+    :goto_e
+    return p1
+.end method
+
+.method final getRoot()Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlSubtitle;->root:Lcom/mbridge/msdk/playercommon/exoplayer2/text/ttml/TtmlNode;
+
+    return-object v0
+.end method

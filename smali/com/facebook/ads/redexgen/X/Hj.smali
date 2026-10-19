@@ -1,0 +1,25 @@
+###### Class com.facebook.ads.redexgen.X.InterfaceC1064Hj (com.facebook.ads.redexgen.X.Hj)
+.class public interface abstract Lcom/facebook/ads/redexgen/X/Hj;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract A5W(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
+.end method

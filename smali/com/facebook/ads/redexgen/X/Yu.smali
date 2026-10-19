@@ -1,0 +1,587 @@
+###### Class com.facebook.ads.redexgen.X.C1508Yu (com.facebook.ads.redexgen.X.Yu)
+.class public final Lcom/facebook/ads/redexgen/X/Yu;
+.super Lcom/facebook/ads/redexgen/X/5O;
+.source ""
+
+# interfaces
+.implements Lcom/facebook/ads/internal/api/AdOptionsViewApi;
+
+
+# static fields
+.field public static A03:[B
+
+.field public static final A04:I
+
+.field public static final A05:I
+
+
+# instance fields
+.field public final A00:Landroid/widget/ImageView;
+
+.field public final A01:Landroid/widget/ImageView;
+
+.field public final A02:Lcom/facebook/ads/AdOptionsView;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .registers 2
+
+    invoke-static {}, Lcom/facebook/ads/redexgen/X/Yu;->A02()V
+
+    sget v1, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
+
+    const/high16 v0, 0x41b80000    # 23.0f
+
+    mul-float/2addr v1, v0
+
+    float-to-int v0, v1
+
+    sput v0, Lcom/facebook/ads/redexgen/X/Yu;->A04:I
+
+    sget v1, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
+
+    const/high16 v0, 0x40800000    # 4.0f
+
+    mul-float/2addr v1, v0
+
+    float-to-int v0, v1
+
+    sput v0, Lcom/facebook/ads/redexgen/X/Yu;->A05:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/ads/NativeAdBase;Lcom/facebook/ads/NativeAdLayout;Lcom/facebook/ads/AdOptionsView$Orientation;ILcom/facebook/ads/AdOptionsView;)V
+    .registers 13
+
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/5O;-><init>()V
+
+    iput-object p6, p0, Lcom/facebook/ads/redexgen/X/Yu;->A02:Lcom/facebook/ads/AdOptionsView;
+
+    new-instance v3, Landroid/widget/LinearLayout;
+
+    invoke-direct {v3, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p6, v3}, Lcom/facebook/ads/AdOptionsView;->addView(Landroid/view/View;)V
+
+    sget-object v0, Lcom/facebook/ads/AdOptionsView$Orientation;->HORIZONTAL:Lcom/facebook/ads/AdOptionsView$Orientation;
+
+    if-ne p4, v0, :cond_66
+
+    const/4 v0, 0x0
+
+    :goto_12
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    sget-object v0, Lcom/facebook/ads/redexgen/X/Ld;->A0H:Lcom/facebook/ads/redexgen/X/Ld;
+
+    invoke-direct {p0, v0}, Lcom/facebook/ads/redexgen/X/Yu;->A00(Lcom/facebook/ads/redexgen/X/Ld;)Landroid/widget/ImageView;
+
+    move-result-object v5
+
+    iput-object v5, p0, Lcom/facebook/ads/redexgen/X/Yu;->A01:Landroid/widget/ImageView;
+
+    sget-object v0, Lcom/facebook/ads/redexgen/X/Ld;->A07:Lcom/facebook/ads/redexgen/X/Ld;
+
+    invoke-direct {p0, v0}, Lcom/facebook/ads/redexgen/X/Yu;->A00(Lcom/facebook/ads/redexgen/X/Ld;)Landroid/widget/ImageView;
+
+    move-result-object v4
+
+    iput-object v4, p0, Lcom/facebook/ads/redexgen/X/Yu;->A00:Landroid/widget/ImageView;
+
+    const/4 v2, 0x0
+
+    const/16 v1, 0x9
+
+    const/16 v0, 0x74
+
+    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/Yu;->A01(III)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v3, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, p5}, Lcom/facebook/ads/redexgen/X/Yu;->setIconSizeDp(I)V
+
+    const v0, -0x9f9890
+
+    invoke-virtual {p0, v0}, Lcom/facebook/ads/redexgen/X/Yu;->setIconColor(I)V
+
+    invoke-virtual {p2}, Lcom/facebook/ads/NativeAdBase;->getInternalNativeAd()Lcom/facebook/ads/internal/api/NativeAdBaseApi;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/UJ;->A0L(Lcom/facebook/ads/internal/api/NativeAdBaseApi;)Lcom/facebook/ads/redexgen/X/UJ;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p3}, Lcom/facebook/ads/redexgen/X/UJ;->A1S(Lcom/facebook/ads/NativeAdLayout;)V
+
+    invoke-virtual {v2, p0}, Lcom/facebook/ads/redexgen/X/UJ;->A1U(Lcom/facebook/ads/redexgen/X/Yu;)V
+
+    invoke-virtual {v2}, Lcom/facebook/ads/redexgen/X/UJ;->A0y()Lcom/facebook/ads/redexgen/X/ah;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_68
+
+    invoke-virtual {v1}, Lcom/facebook/ads/redexgen/X/ah;->A0T()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_68
+
+    invoke-virtual {v1}, Lcom/facebook/ads/redexgen/X/ah;->A0R()Z
+
+    move-result v0
+
+    if-nez v0, :cond_68
+
+    const/16 v0, 0x8
+
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    return-void
+
+    :cond_66
+    const/4 v0, 0x1
+
+    goto :goto_12
+
+    :cond_68
+    new-instance v0, Lcom/facebook/ads/redexgen/X/5B;
+
+    invoke-direct {v0, p0, v2, p1, v3}, Lcom/facebook/ads/redexgen/X/5B;-><init>(Lcom/facebook/ads/redexgen/X/Yu;Lcom/facebook/ads/redexgen/X/UJ;Landroid/content/Context;Landroid/widget/LinearLayout;)V
+
+    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    sget-object v0, Lcom/facebook/ads/redexgen/X/Kz;->A0B:Lcom/facebook/ads/redexgen/X/Kz;
+
+    invoke-static {p6, v0}, Lcom/facebook/ads/redexgen/X/Kz;->A04(Landroid/view/View;Lcom/facebook/ads/redexgen/X/Kz;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcom/facebook/ads/NativeAdBase;Lcom/facebook/ads/NativeAdLayout;Lcom/facebook/ads/AdOptionsView;)V
+    .registers 12
+
+    sget-object v4, Lcom/facebook/ads/AdOptionsView$Orientation;->HORIZONTAL:Lcom/facebook/ads/AdOptionsView$Orientation;
+
+    const/16 v5, 0x17
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v6, p4
+
+    invoke-direct/range {v0 .. v6}, Lcom/facebook/ads/redexgen/X/Yu;-><init>(Landroid/content/Context;Lcom/facebook/ads/NativeAdBase;Lcom/facebook/ads/NativeAdLayout;Lcom/facebook/ads/AdOptionsView$Orientation;ILcom/facebook/ads/AdOptionsView;)V
+
+    return-void
+.end method
+
+.method private A00(Lcom/facebook/ads/redexgen/X/Ld;)Landroid/widget/ImageView;
+    .registers 4
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Yu;->A02:Lcom/facebook/ads/AdOptionsView;
+
+    invoke-virtual {v0}, Lcom/facebook/ads/AdOptionsView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/widget/ImageView;
+
+    invoke-direct {v1, v0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    sget v0, Lcom/facebook/ads/redexgen/X/Yu;->A05:I
+
+    invoke-virtual {v1, v0, v0, v0, v0}, Landroid/widget/ImageView;->setPadding(IIII)V
+
+    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/Le;->A01(Lcom/facebook/ads/redexgen/X/Ld;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    return-object v1
+.end method
+
+.method public static A01(III)Ljava/lang/String;
+    .registers 5
+
+    sget-object v1, Lcom/facebook/ads/redexgen/X/Yu;->A03:[B
+
+    add-int v0, p0, p1
+
+    invoke-static {v1, p0, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    :goto_9
+    array-length v0, p0
+
+    if-ge v1, v0, :cond_17
+
+    aget-byte v0, p0, v1
+
+    xor-int/2addr v0, p2
+
+    xor-int/lit8 v0, v0, 0x7d
+
+    int-to-byte v0, v0
+
+    aput-byte v0, p0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_9
+
+    :cond_17
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
+
+    return-object v0
+.end method
+
+.method public static A02()V
+    .registers 1
+
+    const/16 v0, 0x9
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_a
+
+    sput-object v0, Lcom/facebook/ads/redexgen/X/Yu;->A03:[B
+
+    return-void
+
+    :array_a
+    .array-data 1
+        0x5bt
+        0x6ct
+        0x79t
+        0x66t
+        0x7bt
+        0x7dt
+        0x29t
+        0x48t
+        0x6dt
+    .end array-data
+.end method
+
+
+# virtual methods
+.method public final A03(Lcom/facebook/ads/redexgen/X/Ld;)V
+    .registers 4
+
+    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/Yu;->A01:Landroid/widget/ImageView;
+
+    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/Le;->A01(Lcom/facebook/ads/redexgen/X/Ld;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method
+
+.method public final getAdComponentViewApi()Lcom/facebook/ads/internal/api/AdComponentViewApi;
+    .registers 1
+
+    return-object p0
+.end method
+
+.method public final setIconColor(I)V
+    .registers 3
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Yu;->A01:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Yu;->A00:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setColorFilter(I)V
+
+    return-void
+.end method
+
+.method public final setIconSizeDp(I)V
+    .registers 5
+
+    sget v2, Lcom/facebook/ads/redexgen/X/Yu;->A04:I
+
+    sget v1, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
+
+    int-to-float v0, p1
+
+    mul-float/2addr v1, v0
+
+    float-to-int v0, v1
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v1, v0, v0}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Yu;->A01:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Yu;->A00:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public final setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    .registers 3
+
+    const/4 v0, -0x2
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-super {p0, p1}, Lcom/facebook/ads/redexgen/X/5O;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public final setSingleIcon(Z)V
+    .registers 4
+
+    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/Yu;->A01:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_a
+
+    const/16 v0, 0x8
+
+    :goto_6
+    invoke-static {v1, v0}, Lcom/facebook/ads/redexgen/X/LV;->A0N(Landroid/view/View;I)V
+
+    return-void
+
+    :cond_a
+    const/4 v0, 0x0
+
+    goto :goto_6
+.end method
+
+###### Class com.facebook.ads.redexgen.X.C5B (com.facebook.ads.redexgen.X.5B)
+.class public final Lcom/facebook/ads/redexgen/X/5B;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/facebook/ads/redexgen/X/Yu;-><init>(Landroid/content/Context;Lcom/facebook/ads/NativeAdBase;Lcom/facebook/ads/NativeAdLayout;Lcom/facebook/ads/AdOptionsView$Orientation;ILcom/facebook/ads/AdOptionsView;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# static fields
+.field public static A04:[Ljava/lang/String;
+
+
+# instance fields
+.field public final synthetic A00:Landroid/content/Context;
+
+.field public final synthetic A01:Landroid/widget/LinearLayout;
+
+.field public final synthetic A02:Lcom/facebook/ads/redexgen/X/Yu;
+
+.field public final synthetic A03:Lcom/facebook/ads/redexgen/X/UJ;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .registers 3
+
+    const/16 v0, 0x8
+
+    new-array v2, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v0, "KRKQmCMMKryGk4zgpNIytFvS3TD6bAeJ"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x1
+
+    const-string v0, "Xc6miAmzcu08Y"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x2
+
+    const-string v0, "37gtSV6CsPxBYDJYgwQ03wIm04Bn1UoS"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x3
+
+    const-string v0, "vc4nNQQkh46pzBlyEmkoOi4CgZODKTHg"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x4
+
+    const-string v0, "arJKEayC0J1tSfFqlaoS22WOKdh4xl60"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x5
+
+    const-string v0, "Efttk19GyNCXlxxyYR0mavkkkhSaw2Qp"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x6
+
+    const-string v0, "IGlWio493rL8eTjetjpBhFYcUhZqKyAr"
+
+    aput-object v0, v2, v1
+
+    const/4 v1, 0x7
+
+    const-string v0, ""
+
+    aput-object v0, v2, v1
+
+    sput-object v2, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/Yu;Lcom/facebook/ads/redexgen/X/UJ;Landroid/content/Context;Landroid/widget/LinearLayout;)V
+    .registers 5
+
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5B;->A02:Lcom/facebook/ads/redexgen/X/Yu;
+
+    iput-object p2, p0, Lcom/facebook/ads/redexgen/X/5B;->A03:Lcom/facebook/ads/redexgen/X/UJ;
+
+    iput-object p3, p0, Lcom/facebook/ads/redexgen/X/5B;->A00:Landroid/content/Context;
+
+    iput-object p4, p0, Lcom/facebook/ads/redexgen/X/5B;->A01:Landroid/widget/LinearLayout;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .registers 7
+
+    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return-void
+
+    :cond_7
+    move-object v4, p0
+
+    :try_start_8
+    iget-object v0, v4, Lcom/facebook/ads/redexgen/X/5B;->A03:Lcom/facebook/ads/redexgen/X/UJ;
+
+    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/UJ;->A1I()V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v0, 0x10
+
+    if-lt v1, v0, :cond_23
+
+    iget-object v0, v4, Lcom/facebook/ads/redexgen/X/5B;->A00:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/IP;->A1z(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    iget-object v2, v4, Lcom/facebook/ads/redexgen/X/5B;->A01:Landroid/widget/LinearLayout;
+
+    const/16 v1, 0x80
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2, v1, v0}, Landroid/widget/LinearLayout;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+
+    :cond_23
+    return-void
+    :try_end_24
+    .catchall {:try_start_8 .. :try_end_24} :catchall_24
+
+    :catchall_24
+    move-exception v3
+
+    sget-object v1, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    aget-object v1, v1, v0
+
+    const/4 v0, 0x5
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v1
+
+    const/16 v0, 0x7a
+
+    if-eq v1, v0, :cond_3e
+
+    sget-object v2, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
+
+    const-string v1, "upfEaDqgYzKFHRA83M0GBorRIFZJY191"
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    invoke-static {v3, v4}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_3e
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
+
+    throw v0
+.end method

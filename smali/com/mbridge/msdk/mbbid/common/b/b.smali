@@ -1,0 +1,136 @@
+###### Class com.mbridge.msdk.mbbid.common.b.b (com.mbridge.msdk.mbbid.common.b.b)
+.class public abstract Lcom/mbridge/msdk/mbbid/common/b/b;
+.super Lcom/mbridge/msdk/foundation/same/net/f;
+.source "BidResponseHandler.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/mbridge/msdk/foundation/same/net/f<",
+        "Lorg/json/JSONObject;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final a:Ljava/lang/String; = "b"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 0
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 3
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/foundation/same/net/f;-><init>()V
+
+    iput-object p2, p0, Lcom/mbridge/msdk/foundation/same/net/f;->unitId:Ljava/lang/String;
+
+    iput-object p1, p0, Lcom/mbridge/msdk/foundation/same/net/f;->placementId:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(ILjava/lang/String;)V
+.end method
+
+.method public abstract a(Lcom/mbridge/msdk/mbbid/common/BidResponsedEx;)V
+.end method
+
+.method public onError(Lcom/mbridge/msdk/foundation/same/net/b/a;)V
+    .registers 3
+
+    iget v0, p1, Lcom/mbridge/msdk/foundation/same/net/b/a;->a:I
+
+    invoke-static {p1}, Lcom/mbridge/msdk/foundation/same/net/g/a;->a(Lcom/mbridge/msdk/foundation/same/net/b/a;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, p1}, Lcom/mbridge/msdk/mbbid/common/b/b;->a(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onSuccess(Lcom/mbridge/msdk/foundation/same/net/l;)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/mbridge/msdk/foundation/same/net/l<",
+            "Lorg/json/JSONObject;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-super {p0, p1}, Lcom/mbridge/msdk/foundation/same/net/f;->onSuccess(Lcom/mbridge/msdk/foundation/same/net/l;)V
+
+    if-eqz p1, :cond_3c
+
+    iget-object v0, p1, Lcom/mbridge/msdk/foundation/same/net/l;->c:Lcom/mbridge/msdk/foundation/same/net/f/c;
+
+    if-eqz v0, :cond_3c
+
+    iget-object v0, v0, Lcom/mbridge/msdk/foundation/same/net/f/c;->d:Ljava/util/List;
+
+    iget-object p1, p1, Lcom/mbridge/msdk/foundation/same/net/l;->a:Ljava/lang/Object;
+
+    check-cast p1, Lorg/json/JSONObject;
+
+    const-string v0, "status"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    const/16 v1, 0xc8
+
+    const-string v2, "msg"
+
+    if-ne v1, v0, :cond_35
+
+    const-string v1, "data"
+
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/mbridge/msdk/foundation/same/net/f;->unitId:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lcom/mbridge/msdk/mbbid/common/BidResponsedEx;->parseBidResponsedEx(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/mbridge/msdk/mbbid/common/BidResponsedEx;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2d
+
+    invoke-virtual {p0, v1}, Lcom/mbridge/msdk/mbbid/common/b/b;->a(Lcom/mbridge/msdk/mbbid/common/BidResponsedEx;)V
+
+    goto :goto_3c
+
+    :cond_2d
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, p1}, Lcom/mbridge/msdk/mbbid/common/b/b;->a(ILjava/lang/String;)V
+
+    goto :goto_3c
+
+    :cond_35
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v0, p1}, Lcom/mbridge/msdk/mbbid/common/b/b;->a(ILjava/lang/String;)V
+
+    :cond_3c
+    :goto_3c
+    return-void
+.end method

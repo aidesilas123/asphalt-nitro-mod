@@ -1,0 +1,527 @@
+###### Class com.unity3d.ads.core.domain.GetAndroidAdDataRefreshRequest (com.unity3d.ads.core.domain.GetAndroidAdDataRefreshRequest)
+.class public final Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+.super Ljava/lang/Object;
+.source "GetAndroidAdDataRefreshRequest.kt"
+
+# interfaces
+.implements Lcom/unity3d/ads/core/domain/GetAdDataRefreshRequest;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0000\u0018\u00002\u00020\u0001B%\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0006\u0010\u0008\u001a\u00020\t\u00a2\u0006\u0002\u0010\nJ!\u0010\u000b\u001a\u00020\u000c2\u0006\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000eH\u0096B\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u0010R\u000e\u0010\u0008\u001a\u00020\tX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u0011"
+    }
+    d2 = {
+        "Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;",
+        "Lcom/unity3d/ads/core/domain/GetAdDataRefreshRequest;",
+        "getUniversalRequestForPayLoad",
+        "Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;",
+        "sessionRepository",
+        "Lcom/unity3d/ads/core/data/repository/SessionRepository;",
+        "deviceInfoRepository",
+        "Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;",
+        "campaignStateRepository",
+        "Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;",
+        "(Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;Lcom/unity3d/ads/core/data/repository/SessionRepository;Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;)V",
+        "invoke",
+        "Lgateway/v1/UniversalRequestOuterClass$UniversalRequest;",
+        "opportunityId",
+        "Lcom/google/protobuf/ByteString;",
+        "refreshToken",
+        "(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "unity-ads_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private final campaignStateRepository:Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;
+
+.field private final deviceInfoRepository:Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;
+
+.field private final getUniversalRequestForPayLoad:Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;
+
+.field private final sessionRepository:Lcom/unity3d/ads/core/data/repository/SessionRepository;
+
+
+# direct methods
+.method public constructor <init>(Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;Lcom/unity3d/ads/core/data/repository/SessionRepository;Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;)V
+    .registers 6
+
+    const-string v0, "getUniversalRequestForPayLoad"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "sessionRepository"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "deviceInfoRepository"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "campaignStateRepository"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->getUniversalRequestForPayLoad:Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;
+
+    iput-object p2, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->sessionRepository:Lcom/unity3d/ads/core/data/repository/SessionRepository;
+
+    iput-object p3, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->deviceInfoRepository:Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;
+
+    iput-object p4, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->campaignStateRepository:Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public invoke(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .registers 14
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/protobuf/ByteString;",
+            "Lcom/google/protobuf/ByteString;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lgateway/v1/UniversalRequestOuterClass$UniversalRequest;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    instance-of v0, p3, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;
+
+    if-eqz v0, :cond_13
+
+    move-object v0, p3
+
+    check-cast v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;
+
+    iget v1, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_13
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    goto :goto_18
+
+    :cond_13
+    new-instance v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;
+
+    invoke-direct {v0, p0, p3}, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;-><init>(Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;Lkotlin/coroutines/d;)V
+
+    :goto_18
+    iget-object p3, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->result:Ljava/lang/Object;
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget v2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    const-string v3, "newBuilder()"
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    if-eqz v2, :cond_70
+
+    if-eq v2, v6, :cond_54
+
+    if-eq v2, v5, :cond_3b
+
+    if-ne v2, v4, :cond_33
+
+    invoke-static {p3}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto/16 :goto_10f
+
+    :cond_33
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3b
+    iget-object p1, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$4:Ljava/lang/Object;
+
+    check-cast p1, Lgateway/v1/a;
+
+    iget-object p2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$3:Ljava/lang/Object;
+
+    check-cast p2, Lgateway/v1/a;
+
+    iget-object v2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$2:Ljava/lang/Object;
+
+    check-cast v2, Lgateway/v1/a;
+
+    iget-object v5, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$1:Ljava/lang/Object;
+
+    check-cast v5, Lcom/google/protobuf/ByteString;
+
+    iget-object v6, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$0:Ljava/lang/Object;
+
+    check-cast v6, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+
+    invoke-static {p3}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto/16 :goto_d2
+
+    :cond_54
+    iget-object p1, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$5:Ljava/lang/Object;
+
+    check-cast p1, Lgateway/v1/a;
+
+    iget-object p2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$4:Ljava/lang/Object;
+
+    check-cast p2, Lgateway/v1/a;
+
+    iget-object v2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$3:Ljava/lang/Object;
+
+    check-cast v2, Lgateway/v1/a;
+
+    iget-object v6, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$2:Ljava/lang/Object;
+
+    check-cast v6, Lcom/google/protobuf/ByteString;
+
+    iget-object v8, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$1:Ljava/lang/Object;
+
+    check-cast v8, Lcom/google/protobuf/ByteString;
+
+    iget-object v9, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$0:Ljava/lang/Object;
+
+    check-cast v9, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+
+    invoke-static {p3}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_a7
+
+    :cond_70
+    invoke-static {p3}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    sget-object p3, Lgateway/v1/a;->a:Lgateway/v1/a$a;
+
+    invoke-static {}, Lgateway/v1/AdDataRefreshRequestOuterClass$AdDataRefreshRequest;->newBuilder()Lgateway/v1/AdDataRefreshRequestOuterClass$AdDataRefreshRequest$a;
+
+    move-result-object v2
+
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p3, v2}, Lgateway/v1/a$a;->a(Lgateway/v1/AdDataRefreshRequestOuterClass$AdDataRefreshRequest$a;)Lgateway/v1/a;
+
+    move-result-object p3
+
+    iget-object v2, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->sessionRepository:Lcom/unity3d/ads/core/data/repository/SessionRepository;
+
+    invoke-interface {v2}, Lcom/unity3d/ads/core/data/repository/SessionRepository;->getSessionCounters()Lgateway/v1/SessionCountersOuterClass$SessionCounters;
+
+    move-result-object v2
+
+    invoke-virtual {p3, v2}, Lgateway/v1/a;->f(Lgateway/v1/SessionCountersOuterClass$SessionCounters;)V
+
+    iget-object v2, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->deviceInfoRepository:Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;
+
+    iput-object p0, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$0:Ljava/lang/Object;
+
+    iput-object p1, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$1:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$2:Ljava/lang/Object;
+
+    iput-object p3, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$3:Ljava/lang/Object;
+
+    iput-object p3, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$4:Ljava/lang/Object;
+
+    iput-object p3, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$5:Ljava/lang/Object;
+
+    iput v6, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    invoke-interface {v2, v0}, Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;->staticDeviceInfo(Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v2, v1, :cond_a0
+
+    return-object v1
+
+    :cond_a0
+    move-object v9, p0
+
+    move-object v8, p1
+
+    move-object v6, p2
+
+    move-object p1, p3
+
+    move-object p2, p1
+
+    move-object p3, v2
+
+    move-object v2, p2
+
+    :goto_a7
+    check-cast p3, Lgateway/v1/StaticDeviceInfoOuterClass$StaticDeviceInfo;
+
+    invoke-virtual {p1, p3}, Lgateway/v1/a;->g(Lgateway/v1/StaticDeviceInfoOuterClass$StaticDeviceInfo;)V
+
+    iget-object p1, v9, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->deviceInfoRepository:Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;
+
+    invoke-interface {p1}, Lcom/unity3d/ads/core/data/repository/DeviceInfoRepository;->getDynamicDeviceInfo()Lgateway/v1/DynamicDeviceInfoOuterClass$DynamicDeviceInfo;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lgateway/v1/a;->d(Lgateway/v1/DynamicDeviceInfoOuterClass$DynamicDeviceInfo;)V
+
+    invoke-virtual {p2, v8}, Lgateway/v1/a;->e(Lcom/google/protobuf/ByteString;)V
+
+    iget-object p1, v9, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->campaignStateRepository:Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;
+
+    iput-object v9, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$0:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$1:Ljava/lang/Object;
+
+    iput-object v2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$2:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$3:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$4:Ljava/lang/Object;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$5:Ljava/lang/Object;
+
+    iput v5, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    invoke-interface {p1, v0}, Lcom/unity3d/ads/core/data/repository/CampaignStateRepository;->getCampaignState(Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-ne p3, v1, :cond_cf
+
+    return-object v1
+
+    :cond_cf
+    move-object p1, p2
+
+    move-object v5, v6
+
+    move-object v6, v9
+
+    :goto_d2
+    check-cast p3, Lgateway/v1/CampaignStateOuterClass$CampaignState;
+
+    invoke-virtual {p1, p3}, Lgateway/v1/a;->c(Lgateway/v1/CampaignStateOuterClass$CampaignState;)V
+
+    invoke-virtual {v5}, Lcom/google/protobuf/ByteString;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_e0
+
+    invoke-virtual {p2, v5}, Lgateway/v1/a;->b(Lcom/google/protobuf/ByteString;)V
+
+    :cond_e0
+    invoke-virtual {v2}, Lgateway/v1/a;->a()Lgateway/v1/AdDataRefreshRequestOuterClass$AdDataRefreshRequest;
+
+    move-result-object p1
+
+    sget-object p2, Lgateway/v1/s0;->a:Lgateway/v1/s0;
+
+    sget-object p2, Lgateway/v1/t0;->a:Lgateway/v1/t0$a;
+
+    invoke-static {}, Lgateway/v1/UniversalRequestOuterClass$UniversalRequest$Payload;->newBuilder()Lgateway/v1/UniversalRequestOuterClass$UniversalRequest$Payload$a;
+
+    move-result-object p3
+
+    invoke-static {p3, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p2, p3}, Lgateway/v1/t0$a;->a(Lgateway/v1/UniversalRequestOuterClass$UniversalRequest$Payload$a;)Lgateway/v1/t0;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Lgateway/v1/t0;->b(Lgateway/v1/AdDataRefreshRequestOuterClass$AdDataRefreshRequest;)V
+
+    invoke-virtual {p2}, Lgateway/v1/t0;->a()Lgateway/v1/UniversalRequestOuterClass$UniversalRequest$Payload;
+
+    move-result-object p1
+
+    iget-object p2, v6, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->getUniversalRequestForPayLoad:Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$0:Ljava/lang/Object;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$1:Ljava/lang/Object;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$2:Ljava/lang/Object;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$3:Ljava/lang/Object;
+
+    iput-object v7, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->L$4:Ljava/lang/Object;
+
+    iput v4, v0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    invoke-interface {p2, p1, v0}, Lcom/unity3d/ads/core/domain/GetUniversalRequestForPayLoad;->invoke(Lgateway/v1/UniversalRequestOuterClass$UniversalRequest$Payload;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-ne p3, v1, :cond_10f
+
+    return-object v1
+
+    :cond_10f
+    :goto_10f
+    return-object p3
+.end method
+
+###### Class com.unity3d.ads.core.domain.GetAndroidAdDataRefreshRequest.AnonymousClass1 (com.unity3d.ads.core.domain.GetAndroidAdDataRefreshRequest$invoke$1)
+.class final Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;
+.super Lkotlin/coroutines/jvm/internal/c;
+.source "GetAndroidAdDataRefreshRequest.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->invoke(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;Lkotlin/coroutines/d;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/e;
+    c = "com.unity3d.ads.core.domain.GetAndroidAdDataRefreshRequest"
+    f = "GetAndroidAdDataRefreshRequest.kt"
+    i = {
+        0x0,
+        0x0,
+        0x0,
+        0x0,
+        0x1,
+        0x1,
+        0x1
+    }
+    l = {
+        0x18,
+        0x1b,
+        0x21
+    }
+    m = "invoke"
+    n = {
+        "this",
+        "opportunityId",
+        "refreshToken",
+        "$this$invoke_u24lambda_u240",
+        "this",
+        "refreshToken",
+        "$this$invoke_u24lambda_u240"
+    }
+    s = {
+        "L$0",
+        "L$1",
+        "L$2",
+        "L$4",
+        "L$0",
+        "L$1",
+        "L$3"
+    }
+.end annotation
+
+
+# instance fields
+.field L$0:Ljava/lang/Object;
+
+.field L$1:Ljava/lang/Object;
+
+.field L$2:Ljava/lang/Object;
+
+.field L$3:Ljava/lang/Object;
+
+.field L$4:Ljava/lang/Object;
+
+.field L$5:Ljava/lang/Object;
+
+.field label:I
+
+.field synthetic result:Ljava/lang/Object;
+
+.field final synthetic this$0:Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+
+
+# direct methods
+.method constructor <init>(Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;Lkotlin/coroutines/d;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->this$0:Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/c;-><init>(Lkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 3
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->result:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->label:I
+
+    iget-object p1, p0, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest$invoke$1;->this$0:Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lcom/unity3d/ads/core/domain/GetAndroidAdDataRefreshRequest;->invoke(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

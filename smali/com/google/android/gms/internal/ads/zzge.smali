@@ -1,0 +1,20 @@
+###### Class com.google.android.gms.internal.ads.zzge (com.google.android.gms.internal.ads.zzge)
+.class public final Lcom/google/android/gms/internal/ads/zzge;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# instance fields
+.field public final zza:I
+
+
+# direct methods
+.method public constructor <init>(IIZ)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lcom/google/android/gms/internal/ads/zzge;->zza:I
+
+    return-void
+.end method

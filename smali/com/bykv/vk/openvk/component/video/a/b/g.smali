@@ -1,0 +1,2627 @@
+###### Class com.bykv.vk.openvk.component.video.a.b.g (com.bykv.vk.openvk.component.video.a.b.g)
+.class Lcom/bykv/vk/openvk/component/video/a/b/g;
+.super Lcom/bykv/vk/openvk/component/video/a/b/a;
+.source "ProxyTask.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bykv/vk/openvk/component/video/a/b/g$a;,
+        Lcom/bykv/vk/openvk/component/video/a/b/g$b;,
+        Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+    }
+.end annotation
+
+
+# instance fields
+.field private final m:Ljava/net/Socket;
+
+.field private final n:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+.field private final o:Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+.field private volatile p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+.field private volatile q:Z
+
+
+# direct methods
+.method constructor <init>(Lcom/bykv/vk/openvk/component/video/a/b/g$a;)V
+    .registers 4
+
+    iget-object v0, p1, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v1, p1, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    invoke-direct {p0, v0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/a;-><init>(Lcom/bykv/vk/openvk/component/video/a/b/a/a;Lcom/bykv/vk/openvk/component/video/a/b/b/c;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->q:Z
+
+    iget-object v0, p1, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->c:Ljava/net/Socket;
+
+    iput-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    iget-object p1, p1, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->d:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->n:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+    invoke-static {}, Lcom/bykv/vk/openvk/component/video/a/b/d;->c()Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->o:Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/bykv/vk/openvk/component/video/a/b/g;)Lcom/bykv/vk/openvk/component/video/a/b/d;
+    .registers 1
+
+    iget-object p0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->o:Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    return-object p0
+.end method
+
+.method private a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Ljava/io/File;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    .registers 12
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;,
+            Lcom/bykv/vk/openvk/component/video/a/b/h$a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+        }
+    .end annotation
+
+    invoke-virtual {p3}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_15
+
+    invoke-direct {p0, p1, p3, p4}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)[B
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    if-nez v0, :cond_11
+
+    return-void
+
+    :cond_11
+    array-length v2, v0
+
+    invoke-virtual {p3, v0, v1, v2}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a([BII)V
+
+    :cond_15
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_68
+
+    iget-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-virtual {p1, v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object p1
+
+    if-nez p1, :cond_68
+
+    sget-boolean p1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p1, :cond_33
+
+    const-string p1, "TAG_PROXY_ProxyTask"
+
+    const-string v2, "failed to get video header info from db"
+
+    invoke-static {p1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_33
+    invoke-direct {p0, v0, p3, p4}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)[B
+
+    iget-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-virtual {p1, v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_47
+
+    goto :goto_68
+
+    :cond_47
+    new-instance p1, Lcom/bykv/vk/openvk/component/video/a/b/c/c;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "failed to get header, rawKey: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, ", url: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/c/c;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_68
+    :goto_68
+    invoke-virtual {p2}, Ljava/io/File;->length()J
+
+    move-result-wide v2
+
+    iget v4, p1, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    int-to-long v4, v4
+
+    cmp-long v6, v2, v4
+
+    if-gez v6, :cond_e4
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    if-eqz v2, :cond_83
+
+    invoke-virtual {v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->b()Z
+
+    move-result v3
+
+    if-nez v3, :cond_83
+
+    invoke-virtual {v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->d()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e4
+
+    :cond_83
+    new-instance v2, Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    invoke-direct {v2}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;-><init>()V
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Lcom/bykv/vk/openvk/component/video/a/b/a/a;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/c;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Ljava/lang/String;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->b(Ljava/lang/String;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/bykv/vk/openvk/component/video/a/b/l;
+
+    iget-object v4, p4, Lcom/bykv/vk/openvk/component/video/a/b/l$a;->a:Ljava/lang/String;
+
+    invoke-direct {v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/l;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Lcom/bykv/vk/openvk/component/video/a/b/l;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->f:Ljava/util/List;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Ljava/util/List;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Lcom/bykv/vk/openvk/component/video/a/b/i;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/bykv/vk/openvk/component/video/a/b/g$1;
+
+    invoke-direct {v3, p0}, Lcom/bykv/vk/openvk/component/video/a/b/g$1;-><init>(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a(Lcom/bykv/vk/openvk/component/video/a/b/b$b;)Lcom/bykv/vk/openvk/component/video/a/b/b$a;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/bykv/vk/openvk/component/video/a/b/b$a;->a()Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    new-instance v3, Lcom/bytedance/sdk/component/g/g;
+
+    const/16 v4, 0xa
+
+    const/4 v5, 0x1
+
+    invoke-direct {v3, v2, v0, v4, v5}, Lcom/bytedance/sdk/component/g/g;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;II)V
+
+    new-instance v2, Lcom/bykv/vk/openvk/component/video/a/b/g$2;
+
+    const-string v4, "processCacheNetWorkConcurrent"
+
+    invoke-direct {v2, p0, v4, v3}, Lcom/bykv/vk/openvk/component/video/a/b/g$2;-><init>(Lcom/bykv/vk/openvk/component/video/a/b/g;Ljava/lang/String;Lcom/bytedance/sdk/component/g/g;)V
+
+    invoke-static {v2}, Lcom/bytedance/sdk/component/g/f;->b(Lcom/bytedance/sdk/component/g/h;)V
+
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_e5
+
+    const-string v2, "TAG_PROXY_ProxyTask"
+
+    const-string v4, "fire download in process cache task"
+
+    invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_e5
+
+    :cond_e4
+    move-object v3, v0
+
+    :cond_e5
+    :goto_e5
+    const/16 v2, 0x2000
+
+    new-array v2, v2, [B
+
+    :try_start_e9
+    new-instance v4, Lcom/bykv/vk/openvk/component/video/a/b/h;
+
+    const-string v5, "r"
+
+    invoke-direct {v4, p2, v5}, Lcom/bykv/vk/openvk/component/video/a/b/h;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_f0
+    .catchall {:try_start_e9 .. :try_end_f0} :catchall_1c5
+
+    :try_start_f0
+    invoke-virtual {p3}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    int-to-long v5, p2
+
+    invoke-virtual {v4, v5, v6}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a(J)V
+
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->e:I
+
+    if-lez p2, :cond_10d
+
+    iget p1, p1, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->e:I
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    goto :goto_10f
+
+    :cond_10d
+    iget p1, p1, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    :goto_10f
+    invoke-virtual {p3}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    if-ge p2, p1, :cond_18b
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    invoke-virtual {v4, v2}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a([B)I
+
+    move-result p2
+
+    if-gtz p2, :cond_184
+
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    if-eqz p2, :cond_131
+
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/b;->i()Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+
+    move-result-object v0
+
+    if-nez v0, :cond_130
+
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/b;->h()Lcom/bykv/vk/openvk/component/video/a/b/h$a;
+
+    move-result-object v0
+
+    if-nez v0, :cond_12f
+
+    goto :goto_131
+
+    :cond_12f
+    throw v0
+
+    :cond_130
+    throw v0
+
+    :cond_131
+    :goto_131
+    if-eqz p2, :cond_158
+
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_158
+
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_140
+
+    goto :goto_158
+
+    :cond_140
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    iget-object v0, p2, Lcom/bykv/vk/openvk/component/video/a/b/b;->m:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_146
+    .catchall {:try_start_f0 .. :try_end_146} :catchall_1c2
+
+    :try_start_146
+    iget-object p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/b;->m:Ljava/lang/Object;
+
+    const-wide/16 v5, 0x3e8
+
+    invoke-virtual {p2, v5, v6}, Ljava/lang/Object;->wait(J)V
+    :try_end_14d
+    .catch Ljava/lang/InterruptedException; {:try_start_146 .. :try_end_14d} :catch_150
+    .catchall {:try_start_146 .. :try_end_14d} :catchall_14e
+
+    goto :goto_154
+
+    :catchall_14e
+    move-exception p1
+
+    goto :goto_156
+
+    :catch_150
+    move-exception p2
+
+    :try_start_151
+    invoke-virtual {p2}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    :goto_154
+    monitor-exit v0
+
+    goto :goto_187
+
+    :goto_156
+    monitor-exit v0
+    :try_end_157
+    .catchall {:try_start_151 .. :try_end_157} :catchall_14e
+
+    :try_start_157
+    throw p1
+
+    :cond_158
+    :goto_158
+    sget-boolean p1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p1, :cond_163
+
+    const-string p1, "TAG_PROXY_ProxyTask"
+
+    const-string p2, "download task has finished!!!"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_163
+    new-instance p1, Lcom/bykv/vk/openvk/component/video/a/b/c/c;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p3, "illegal state download task has finished, rawKey: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, ", url: "
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/c/c;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_184
+    invoke-virtual {p3, v2, v1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b([BII)V
+
+    :goto_187
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    goto :goto_10f
+
+    :cond_18b
+    sget-boolean p2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p2, :cond_1b1
+
+    const-string p2, "TAG_PROXY_ProxyTask"
+
+    new-instance p4, Ljava/lang/StringBuilder;
+
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "read cache file complete: "
+
+    invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p3
+
+    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p3, ", "
+
+    invoke-virtual {p4, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1b1
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->c()V
+    :try_end_1b4
+    .catchall {:try_start_157 .. :try_end_1b4} :catchall_1c2
+
+    invoke-virtual {v4}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a()V
+
+    if-eqz v3, :cond_1c1
+
+    :try_start_1b9
+    invoke-virtual {v3}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+    :try_end_1bc
+    .catchall {:try_start_1b9 .. :try_end_1bc} :catchall_1bd
+
+    goto :goto_1c1
+
+    :catchall_1bd
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_1c1
+    :goto_1c1
+    return-void
+
+    :catchall_1c2
+    move-exception p1
+
+    move-object v0, v4
+
+    goto :goto_1c6
+
+    :catchall_1c5
+    move-exception p1
+
+    :goto_1c6
+    if-eqz v0, :cond_1cb
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a()V
+
+    :cond_1cb
+    if-eqz v3, :cond_1d5
+
+    :try_start_1cd
+    invoke-virtual {v3}, Ljava/util/concurrent/FutureTask;->get()Ljava/lang/Object;
+    :try_end_1d0
+    .catchall {:try_start_1cd .. :try_end_1d0} :catchall_1d1
+
+    goto :goto_1d5
+
+    :catchall_1d1
+    move-exception p2
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_1d5
+    :goto_1d5
+    throw p1
+.end method
+
+.method private a(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;,
+            Ljava/io/IOException;,
+            Lcom/bykv/vk/openvk/component/video/a/b/h$a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v0, v0, Lcom/bykv/vk/openvk/component/video/a/b/i;->a:Lcom/bykv/vk/openvk/component/video/a/b/i$c;
+
+    iget-object v0, v0, Lcom/bykv/vk/openvk/component/video/a/b/i$c;->a:Ljava/lang/String;
+
+    const-string v1, "HEAD"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    invoke-direct {p0, p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g;->b(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+
+    goto :goto_15
+
+    :cond_12
+    invoke-direct {p0, p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g;->c(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+
+    :goto_15
+    return-void
+.end method
+
+.method private a(ZIIII)V
+    .registers 6
+
+    return-void
+.end method
+
+.method private a(Lcom/bykv/vk/openvk/component/video/a/b/g$b;)Z
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/c/a;
+        }
+    .end annotation
+
+    const-string v0, "TAG_PROXY_ProxyTask"
+
+    :cond_2
+    :goto_2
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->j:Lcom/bykv/vk/openvk/component/video/a/b/l;
+
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/component/video/a/b/l;->a()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_ab
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->j:Lcom/bykv/vk/openvk/component/video/a/b/l;
+
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/component/video/a/b/l;->b()Lcom/bykv/vk/openvk/component/video/a/b/l$a;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    :try_start_15
+    invoke-direct {p0, p1, v1}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    :try_end_18
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/c/c; {:try_start_15 .. :try_end_18} :catch_98
+    .catch Ljava/io/IOException; {:try_start_15 .. :try_end_18} :catch_5c
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/c/d; {:try_start_15 .. :try_end_18} :catch_4f
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/h$a; {:try_start_15 .. :try_end_18} :catch_33
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/c/b; {:try_start_15 .. :try_end_18} :catch_26
+    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_18} :catch_19
+
+    return v3
+
+    :catch_19
+    move-exception v1
+
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :catch_26
+    move-exception p1
+
+    sget-boolean v1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v1, :cond_32
+
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_32
+    return v2
+
+    :catch_33
+    move-exception v1
+
+    sget-boolean v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v3, :cond_3f
+
+    invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3f
+    iput-boolean v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->q:Z
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v2, v3, v1}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :catch_4f
+    move-exception p1
+
+    sget-boolean v1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v1, :cond_5b
+
+    invoke-static {p1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_5b
+    return v3
+
+    :catch_5c
+    move-exception v2
+
+    instance-of v3, v2, Ljava/net/SocketTimeoutException;
+
+    if-eqz v3, :cond_64
+
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/component/video/a/b/l$a;->b()V
+
+    :cond_64
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->b()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_89
+
+    sget-boolean v1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v2}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "Canceled"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_80
+
+    const-string v1, "okhttp call canceled"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :cond_80
+    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_2
+
+    :cond_89
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v3, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_2
+
+    :catch_98
+    move-exception v2
+
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/component/video/a/b/l$a;->a()V
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v1, v3, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto/16 :goto_2
+
+    :cond_ab
+    return v2
+.end method
+
+.method private a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)[B
+    .registers 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const-string v0, "TAG_PROXY_ProxyTask"
+
+    if-eqz p1, :cond_1c
+
+    sget-boolean p3, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p3, :cond_d
+
+    const-string p3, "get header from db"
+
+    invoke-static {v0, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_d
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    sget-object p2, Lcom/bykv/vk/openvk/component/video/a/c/a;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1c
+    const/4 p1, -0x1
+
+    const/4 v1, 0x0
+
+    const-string v2, "HEAD"
+
+    invoke-virtual {p0, p3, v1, p1, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/l$a;IILjava/lang/String;)Lcom/bykv/vk/openvk/component/video/a/b/e/a;
+
+    move-result-object p1
+
+    if-nez p1, :cond_28
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_28
+    :try_start_28
+    invoke-static {p1, v1, v1}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;ZZ)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-nez v1, :cond_5b
+
+    iget-object p3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v2, v2, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v2, v2, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-static {p1, p3, v1, v2}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;Lcom/bykv/vk/openvk/component/video/a/b/b/c;Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object p3
+
+    sget-boolean v1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v1, :cond_45
+
+    const-string v1, "get header from network"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_45
+    invoke-virtual {p2}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    invoke-static {p3, p2}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    sget-object p3, Lcom/bykv/vk/openvk/component/video/a/c/a;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+    :try_end_53
+    .catchall {:try_start_28 .. :try_end_53} :catchall_7f
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/e/a;->d()Ljava/io/InputStream;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/io/Closeable;)V
+
+    return-object p2
+
+    :cond_5b
+    :try_start_5b
+    new-instance p2, Lcom/bykv/vk/openvk/component/video/a/b/c/c;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", rawKey: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-direct {p2, p3}, Lcom/bykv/vk/openvk/component/video/a/b/c/c;-><init>(Ljava/lang/String;)V
+
+    throw p2
+    :try_end_7f
+    .catchall {:try_start_5b .. :try_end_7f} :catchall_7f
+
+    :catchall_7f
+    move-exception p2
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/e/a;->d()Ljava/io/InputStream;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/io/Closeable;)V
+
+    throw p2
+.end method
+
+.method private b(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v2, v2, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v2, v2, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-virtual {v0, v1, v2}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0, p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)[B
+
+    move-result-object p2
+
+    if-nez p2, :cond_15
+
+    return-void
+
+    :cond_15
+    const/4 v0, 0x0
+
+    array-length v1, p2
+
+    invoke-virtual {p1, p2, v0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a([BII)V
+
+    return-void
+.end method
+
+.method private c(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    .registers 15
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/h$a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;,
+            Ljava/io/IOException;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+        }
+    .end annotation
+
+    iget-boolean v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->q:Z
+
+    if-eqz v0, :cond_68
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/a/a;->c(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/io/File;->length()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-virtual {v2, v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object v7
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v5
+
+    int-to-long v2, v5
+
+    sub-long v2, v0, v2
+
+    long-to-int v4, v2
+
+    if-nez v7, :cond_2a
+
+    const/4 v8, -0x1
+
+    goto :goto_2c
+
+    :cond_2a
+    iget v8, v7, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    :goto_2c
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v9
+
+    int-to-long v9, v9
+
+    cmp-long v11, v0, v9
+
+    if-lez v11, :cond_5d
+
+    sget-boolean v9, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v9, :cond_4f
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, "cache hit, remainSize: "
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "TAG_PROXY_ProxyTask"
+
+    invoke-static {v3, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4f
+    const/4 v2, 0x1
+
+    long-to-int v9, v0
+
+    move-object v0, p0
+
+    move v1, v2
+
+    move v2, v4
+
+    move v3, v8
+
+    move v4, v9
+
+    invoke-direct/range {v0 .. v5}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(ZIIII)V
+
+    invoke-direct {p0, v7, v6, p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Ljava/io/File;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+
+    return-void
+
+    :cond_5d
+    const/4 v2, 0x0
+
+    long-to-int v6, v0
+
+    move-object v0, p0
+
+    move v1, v2
+
+    move v2, v4
+
+    move v3, v8
+
+    move v4, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(ZIIII)V
+
+    goto :goto_74
+
+    :cond_68
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v5
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(ZIIII)V
+
+    :goto_74
+    invoke-direct {p0, p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/g;->d(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+
+    return-void
+.end method
+
+.method private d(Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+    .registers 15
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;,
+            Ljava/io/IOException;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/a;,
+            Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+        }
+    .end annotation
+
+    invoke-direct {p0}, Lcom/bykv/vk/openvk/component/video/a/b/g;->i()V
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->e:I
+
+    const-string v4, "GET"
+
+    invoke-virtual {p0, p2, v2, v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/l$a;IILjava/lang/String;)Lcom/bykv/vk/openvk/component/video/a/b/e/a;
+
+    move-result-object v3
+
+    if-nez v3, :cond_1a
+
+    return-void
+
+    :cond_1a
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    :try_start_1d
+    invoke-static {v3, v6, v4}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;ZZ)Ljava/lang/String;
+
+    move-result-object v4
+    :try_end_21
+    .catchall {:try_start_1d .. :try_end_21} :catchall_1fe
+
+    const-string v7, ", rawKey: "
+
+    if-nez v4, :cond_1dc
+
+    :try_start_25
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v8, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->f()I
+
+    move-result v9
+
+    invoke-virtual {v4, v8, v9}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object v4
+
+    invoke-static {v3}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;)I
+
+    move-result v8
+    :try_end_35
+    .catchall {:try_start_25 .. :try_end_35} :catchall_1fe
+
+    const-string v9, "TAG_PROXY_ProxyTask"
+
+    if-eqz v4, :cond_a4
+
+    :try_start_39
+    iget v10, v4, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    if-eq v10, v8, :cond_a4
+
+    sget-boolean p1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p1, :cond_69
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Content-Length not match, old: "
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, v4, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", key: "
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v9, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_69
+    new-instance p1, Lcom/bykv/vk/openvk/component/video/a/b/c/b;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "Content-Length not match, old length: "
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v9, v4, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v9, ", new length: "
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v7, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ", currentUrl: "
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p2, ", previousInfo: "
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, v4, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->e:Ljava/lang/String;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/c/b;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_a4
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a()Z
+
+    move-result p2
+
+    if-nez p2, :cond_bb
+
+    invoke-static {v3, v2}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    sget-object v2, Lcom/bykv/vk/openvk/component/video/a/c/a;->a:Ljava/nio/charset/Charset;
+
+    invoke-virtual {p2, v2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object p2
+
+    array-length v2, p2
+
+    invoke-virtual {p1, p2, v6, v2}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a([BII)V
+
+    :cond_bb
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {p2, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a/a;->d(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p2
+
+    iget-boolean v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->q:Z
+    :try_end_c8
+    .catchall {:try_start_39 .. :try_end_c8} :catchall_1fe
+
+    const-string v4, ", from: "
+
+    if-eqz v2, :cond_127
+
+    if-eqz p2, :cond_127
+
+    :try_start_ce
+    invoke-virtual {p2}, Ljava/io/File;->length()J
+
+    move-result-wide v7
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v2
+
+    int-to-long v10, v2
+
+    cmp-long v2, v7, v10
+
+    if-ltz v2, :cond_127
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v7, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v8, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v8, v8, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v8, v8, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-static {v3, v2, v7, v8}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Lcom/bykv/vk/openvk/component/video/a/b/e/a;Lcom/bykv/vk/openvk/component/video/a/b/b/c;Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+    :try_end_e8
+    .catchall {:try_start_ce .. :try_end_e8} :catchall_1fe
+
+    :try_start_e8
+    new-instance v2, Lcom/bykv/vk/openvk/component/video/a/b/h;
+
+    const-string v7, "rwd"
+
+    invoke-direct {v2, p2, v7}, Lcom/bykv/vk/openvk/component/video/a/b/h;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    :try_end_ef
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/h$a; {:try_start_e8 .. :try_end_ef} :catch_fa
+    .catchall {:try_start_e8 .. :try_end_ef} :catchall_1fe
+
+    :try_start_ef
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v7
+
+    int-to-long v7, v7
+
+    invoke-virtual {v2, v7, v8}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a(J)V
+    :try_end_f7
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/h$a; {:try_start_ef .. :try_end_f7} :catch_f8
+    .catchall {:try_start_ef .. :try_end_f7} :catchall_1d9
+
+    goto :goto_100
+
+    :catch_f8
+    move-exception v7
+
+    goto :goto_fc
+
+    :catch_fa
+    move-exception v7
+
+    move-object v2, v5
+
+    :goto_fc
+    :try_start_fc
+    invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
+
+    move-object v2, v5
+
+    :goto_100
+    sget-boolean v7, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v7, :cond_14e
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "can write to cache file in network task, cache file size: "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/io/File;->length()J
+
+    move-result-wide v10
+
+    invoke-virtual {v7, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    invoke-virtual {v7, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_126
+    .catchall {:try_start_fc .. :try_end_126} :catchall_1d9
+
+    goto :goto_14e
+
+    :cond_127
+    :try_start_127
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_14d
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "can\'t write to cache file in network task, cache file size: "
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/io/File;->length()J
+
+    move-result-wide v7
+
+    invoke-virtual {v2, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result p2
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v9, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_14d
+    .catchall {:try_start_127 .. :try_end_14d} :catchall_1fe
+
+    :cond_14d
+    move-object v2, v5
+
+    :cond_14e
+    :goto_14e
+    :try_start_14e
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->f()I
+
+    move-result v7
+
+    invoke-virtual {p2, v4, v7}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object p2
+
+    if-nez p2, :cond_15e
+
+    const/4 p2, 0x0
+
+    goto :goto_160
+
+    :cond_15e
+    iget p2, p2, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    :goto_160
+    const/16 v4, 0x2000
+
+    new-array v4, v4, [B
+
+    invoke-virtual {v3}, Lcom/bykv/vk/openvk/component/video/a/b/e/a;->d()Ljava/io/InputStream;
+
+    move-result-object v7
+    :try_end_168
+    .catchall {:try_start_14e .. :try_end_168} :catchall_1d9
+
+    const/4 v8, 0x0
+
+    :goto_169
+    :try_start_169
+    invoke-virtual {v7, v4}, Ljava/io/InputStream;->read([B)I
+
+    move-result v10
+
+    if-ltz v10, :cond_1ad
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    if-lez v10, :cond_1a9
+
+    invoke-virtual {p1, v4, v6, v10}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b([BII)V
+    :try_end_177
+    .catchall {:try_start_169 .. :try_end_177} :catchall_1d5
+
+    add-int/2addr v8, v10
+
+    if-eqz v2, :cond_1a2
+
+    :try_start_17a
+    invoke-virtual {v2, v4, v6, v10}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a([BII)V
+    :try_end_17d
+    .catchall {:try_start_17a .. :try_end_17d} :catchall_17e
+
+    goto :goto_1a2
+
+    :catchall_17e
+    move-exception v10
+
+    :try_start_17f
+    invoke-virtual {v2}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a()V
+    :try_end_182
+    .catchall {:try_start_17f .. :try_end_182} :catchall_1d5
+
+    :try_start_182
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_19e
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "append to cache file error in network task!!! "
+
+    invoke-virtual {v2, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v10}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v9, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_19e
+    .catchall {:try_start_182 .. :try_end_19e} :catchall_1a0
+
+    :cond_19e
+    move-object v2, v5
+
+    goto :goto_1a2
+
+    :catchall_1a0
+    move-exception p1
+
+    goto :goto_1d7
+
+    :cond_1a2
+    :goto_1a2
+    :try_start_1a2
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b()I
+
+    move-result v10
+
+    invoke-virtual {p0, p2, v10}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(II)V
+
+    :cond_1a9
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->e()V
+
+    goto :goto_169
+
+    :cond_1ad
+    sget-boolean p1, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz p1, :cond_1b6
+
+    const-string p1, "read from net complete!"
+
+    invoke-static {v9, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1b6
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->c()V
+    :try_end_1b9
+    .catchall {:try_start_1a2 .. :try_end_1b9} :catchall_1d5
+
+    invoke-virtual {v3}, Lcom/bykv/vk/openvk/component/video/a/b/e/a;->d()Ljava/io/InputStream;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/io/Closeable;)V
+
+    if-eqz v2, :cond_1c5
+
+    invoke-virtual {v2}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a()V
+
+    :cond_1c5
+    iget-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1, v8}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    iget-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v0
+
+    invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    return-void
+
+    :catchall_1d5
+    move-exception p1
+
+    move-object v5, v2
+
+    :goto_1d7
+    move v6, v8
+
+    goto :goto_1ff
+
+    :catchall_1d9
+    move-exception p1
+
+    move-object v5, v2
+
+    goto :goto_1ff
+
+    :cond_1dc
+    :try_start_1dc
+    new-instance p1, Lcom/bykv/vk/openvk/component/video/a/b/c/c;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, ", url: "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Lcom/bykv/vk/openvk/component/video/a/b/c/c;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_1fe
+    .catchall {:try_start_1dc .. :try_end_1fe} :catchall_1fe
+
+    :catchall_1fe
+    move-exception p1
+
+    :goto_1ff
+    invoke-virtual {v3}, Lcom/bykv/vk/openvk/component/video/a/b/e/a;->d()Ljava/io/InputStream;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/io/Closeable;)V
+
+    if-eqz v5, :cond_20b
+
+    invoke-virtual {v5}, Lcom/bykv/vk/openvk/component/video/a/b/h;->a()V
+
+    :cond_20b
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p2, v6}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    iget-object p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    sub-long/2addr v2, v0
+
+    invoke-virtual {p2, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    throw p1
+.end method
+
+.method private h()Lcom/bykv/vk/openvk/component/video/a/b/g$b;
+    .registers 6
+
+    const-string v0, "TAG_PROXY_ProxyTask"
+
+    const/4 v1, 0x0
+
+    :try_start_3
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    invoke-virtual {v2}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/bykv/vk/openvk/component/video/a/b/i;->a(Ljava/io/InputStream;)Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    invoke-virtual {v2}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    const/4 v4, 0x1
+
+    if-ne v3, v4, :cond_21
+
+    sget-object v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/b;
+
+    goto :goto_23
+
+    :cond_21
+    sget-object v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->b:Lcom/bykv/vk/openvk/component/video/a/b/a/c;
+
+    :goto_23
+    if-nez v3, :cond_2f
+
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_2e
+
+    const-string v2, "cache is null"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2e
+    return-object v1
+
+    :cond_2f
+    iput-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->b:Ljava/lang/String;
+
+    iput-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->c:Ljava/lang/String;
+
+    iput-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    new-instance v3, Lcom/bykv/vk/openvk/component/video/a/b/l;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget-object v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->g:Ljava/util/List;
+
+    invoke-direct {v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/l;-><init>(Ljava/util/List;)V
+
+    iput-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->j:Lcom/bykv/vk/openvk/component/video/a/b/l;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v3, v3, Lcom/bykv/vk/openvk/component/video/a/b/i;->b:Ljava/util/List;
+
+    iput-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->f:Ljava/util/List;
+
+    sget-boolean v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v3, :cond_72
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "request from MediaPlayer:    "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    invoke-virtual {v4}, Lcom/bykv/vk/openvk/component/video/a/b/i;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_72
+    new-instance v3, Lcom/bykv/vk/openvk/component/video/a/b/g$b;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->d:I
+
+    invoke-direct {v3, v2, v4}, Lcom/bykv/vk/openvk/component/video/a/b/g$b;-><init>(Ljava/io/OutputStream;I)V
+    :try_end_7d
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_7d} :catch_a3
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/i$d; {:try_start_3 .. :try_end_7d} :catch_7e
+
+    return-object v3
+
+    :catch_7e
+    move-exception v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    invoke-static {v3}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/net/Socket;)V
+
+    sget-boolean v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v3, :cond_8f
+
+    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_8f
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    if-nez v0, :cond_95
+
+    move-object v0, v1
+
+    goto :goto_9d
+
+    :cond_95
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_9d
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, v3, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_c7
+
+    :catch_a3
+    move-exception v2
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    invoke-static {v3}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/net/Socket;)V
+
+    sget-boolean v3, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v3, :cond_b4
+
+    invoke-static {v2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_b4
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    if-nez v0, :cond_ba
+
+    move-object v0, v1
+
+    goto :goto_c2
+
+    :cond_ba
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_c2
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p0, v0, v3, v2}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a(Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_c7
+    return-object v1
+.end method
+
+.method private i()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->p:Lcom/bykv/vk/openvk/component/video/a/b/b;
+
+    if-eqz v0, :cond_a
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a()V
+
+    :cond_a
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
+    .registers 1
+
+    invoke-super {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->a()V
+
+    invoke-direct {p0}, Lcom/bykv/vk/openvk/component/video/a/b/g;->i()V
+
+    return-void
+.end method
+
+.method public run()V
+    .registers 8
+
+    const-string v0, "TAG_PROXY_ProxyTask"
+
+    invoke-direct {p0}, Lcom/bykv/vk/openvk/component/video/a/b/g;->h()Lcom/bykv/vk/openvk/component/video/a/b/g$b;
+
+    move-result-object v1
+
+    if-nez v1, :cond_9
+
+    return-void
+
+    :cond_9
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->n:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+    if-eqz v2, :cond_10
+
+    invoke-interface {v2, p0}, Lcom/bykv/vk/openvk/component/video/a/b/g$c;->a(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+
+    :cond_10
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bykv/vk/openvk/component/video/a/b/a/a;->a(Ljava/lang/String;)V
+
+    sget v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->h:I
+
+    if-eqz v2, :cond_49
+
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->i:Lcom/bykv/vk/openvk/component/video/a/b/i;
+
+    iget-object v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i;->c:Lcom/bykv/vk/openvk/component/video/a/b/i$a;
+
+    iget v4, v4, Lcom/bykv/vk/openvk/component/video/a/b/i$a;->a:I
+
+    invoke-virtual {v2, v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/b/c;->a(Ljava/lang/String;I)Lcom/bykv/vk/openvk/component/video/a/b/b/a;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3e
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/a/a;->c(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/io/File;->length()J
+
+    move-result-wide v3
+
+    iget v2, v2, Lcom/bykv/vk/openvk/component/video/a/b/b/a;->c:I
+
+    int-to-long v5, v2
+
+    cmp-long v2, v3, v5
+
+    if-gez v2, :cond_49
+
+    :cond_3e
+    iget-object v2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->o:Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v4}, Lcom/bykv/vk/openvk/component/video/a/b/d;->a(ZLjava/lang/String;)V
+
+    :cond_49
+    :try_start_49
+    invoke-direct {p0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/g$b;)Z
+    :try_end_4c
+    .catch Lcom/bykv/vk/openvk/component/video/a/b/c/a; {:try_start_49 .. :try_end_4c} :catch_5a
+    .catchall {:try_start_49 .. :try_end_4c} :catchall_4d
+
+    goto :goto_66
+
+    :catchall_4d
+    move-exception v1
+
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_66
+
+    invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_66
+
+    :catch_5a
+    move-exception v1
+
+    sget-boolean v2, Lcom/bykv/vk/openvk/component/video/a/b/e;->c:Z
+
+    if-eqz v2, :cond_66
+
+    invoke-static {v1}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_66
+    :goto_66
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+    iget-object v1, p0, Lcom/bykv/vk/openvk/component/video/a/b/a;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/a/a;->b(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->o:Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/bykv/vk/openvk/component/video/a/b/d;->a(ZLjava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a()V
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->m:Ljava/net/Socket;
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/component/video/a/c/a;->a(Ljava/net/Socket;)V
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g;->n:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+    if-eqz v0, :cond_86
+
+    invoke-interface {v0, p0}, Lcom/bykv/vk/openvk/component/video/a/b/g$c;->b(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+
+    :cond_86
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.a.b.g.AnonymousClass1 (com.bykv.vk.openvk.component.video.a.b.g$1)
+.class Lcom/bykv/vk/openvk/component/video/a/b/g$1;
+.super Ljava/lang/Object;
+.source "ProxyTask.java"
+
+# interfaces
+.implements Lcom/bykv/vk/openvk/component/video/a/b/b$b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Ljava/io/File;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+
+# direct methods
+.method constructor <init>(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$1;->a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/bykv/vk/openvk/component/video/a/b/b;)V
+    .registers 5
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$1;->a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    iget-object v0, v0, Lcom/bykv/vk/openvk/component/video/a/b/a;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v1, p1, Lcom/bykv/vk/openvk/component/video/a/b/a;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$1;->a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    iget-object v0, v0, Lcom/bykv/vk/openvk/component/video/a/b/a;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    iget-object v1, p1, Lcom/bykv/vk/openvk/component/video/a/b/a;->d:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+
+    iget-object v0, p1, Lcom/bykv/vk/openvk/component/video/a/b/b;->m:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_1d
+    iget-object v1, p1, Lcom/bykv/vk/openvk/component/video/a/b/b;->m:Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
+    :try_end_23
+    .catchall {:try_start_1d .. :try_end_23} :catchall_3a
+
+    invoke-virtual {p1}, Lcom/bykv/vk/openvk/component/video/a/b/a;->d()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_39
+
+    iget-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$1;->a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    invoke-static {p1}, Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/g;)Lcom/bykv/vk/openvk/component/video/a/b/d;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$1;->a:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/component/video/a/b/a;->g()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lcom/bykv/vk/openvk/component/video/a/b/d;->a(ZLjava/lang/String;)V
+
+    :cond_39
+    return-void
+
+    :catchall_3a
+    move-exception p1
+
+    :try_start_3b
+    monitor-exit v0
+    :try_end_3c
+    .catchall {:try_start_3b .. :try_end_3c} :catchall_3a
+
+    throw p1
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.a.b.g.AnonymousClass2 (com.bykv.vk.openvk.component.video.a.b.g$2)
+.class Lcom/bykv/vk/openvk/component/video/a/b/g$2;
+.super Lcom/bytedance/sdk/component/g/h;
+.source "ProxyTask.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bykv/vk/openvk/component/video/a/b/g;->a(Lcom/bykv/vk/openvk/component/video/a/b/b/a;Ljava/io/File;Lcom/bykv/vk/openvk/component/video/a/b/g$b;Lcom/bykv/vk/openvk/component/video/a/b/l$a;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bytedance/sdk/component/g/g;
+
+.field final synthetic b:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+
+# direct methods
+.method constructor <init>(Lcom/bykv/vk/openvk/component/video/a/b/g;Ljava/lang/String;Lcom/bytedance/sdk/component/g/g;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$2;->b:Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    iput-object p3, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$2;->a:Lcom/bytedance/sdk/component/g/g;
+
+    invoke-direct {p0, p2}, Lcom/bytedance/sdk/component/g/h;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$2;->a:Lcom/bytedance/sdk/component/g/g;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/FutureTask;->run()V
+
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.a.b.g.a (com.bykv.vk.openvk.component.video.a.b.g$a)
+.class final Lcom/bykv/vk/openvk/component/video/a/b/g$a;
+.super Ljava/lang/Object;
+.source "ProxyTask.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/component/video/a/b/g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field a:Lcom/bykv/vk/openvk/component/video/a/b/a/a;
+
+.field b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+.field c:Ljava/net/Socket;
+
+.field d:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method a(Lcom/bykv/vk/openvk/component/video/a/b/b/c;)Lcom/bykv/vk/openvk/component/video/a/b/g$a;
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    return-object p0
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "db == null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method a(Lcom/bykv/vk/openvk/component/video/a/b/g$c;)Lcom/bykv/vk/openvk/component/video/a/b/g$a;
+    .registers 2
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->d:Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+
+    return-object p0
+.end method
+
+.method a(Ljava/net/Socket;)Lcom/bykv/vk/openvk/component/video/a/b/g$a;
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->c:Ljava/net/Socket;
+
+    return-object p0
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "socket == null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method a()Lcom/bykv/vk/openvk/component/video/a/b/g;
+    .registers 2
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->b:Lcom/bykv/vk/openvk/component/video/a/b/b/c;
+
+    if-eqz v0, :cond_e
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$a;->c:Ljava/net/Socket;
+
+    if-eqz v0, :cond_e
+
+    new-instance v0, Lcom/bykv/vk/openvk/component/video/a/b/g;
+
+    invoke-direct {v0, p0}, Lcom/bykv/vk/openvk/component/video/a/b/g;-><init>(Lcom/bykv/vk/openvk/component/video/a/b/g$a;)V
+
+    return-object v0
+
+    :cond_e
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.a.b.g.b (com.bykv.vk.openvk.component.video.a.b.g$b)
+.class Lcom/bykv/vk/openvk/component/video/a/b/g$b;
+.super Ljava/lang/Object;
+.source "ProxyTask.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/component/video/a/b/g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "b"
+.end annotation
+
+
+# instance fields
+.field private final a:Ljava/io/OutputStream;
+
+.field private b:I
+
+.field private c:Z
+
+
+# direct methods
+.method constructor <init>(Ljava/io/OutputStream;I)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a:Ljava/io/OutputStream;
+
+    iput p2, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method a([BII)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;
+        }
+    .end annotation
+
+    iget-boolean v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->c:Z
+
+    if-nez v0, :cond_14
+
+    :try_start_4
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->c:Z
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_c} :catch_d
+
+    goto :goto_14
+
+    :catch_d
+    move-exception p1
+
+    new-instance p2, Lcom/bykv/vk/openvk/component/video/a/b/c/d;
+
+    invoke-direct {p2, p1}, Lcom/bykv/vk/openvk/component/video/a/b/c/d;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+
+    :cond_14
+    :goto_14
+    return-void
+.end method
+
+.method a()Z
+    .registers 2
+
+    iget-boolean v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->c:Z
+
+    return v0
+.end method
+
+.method b()I
+    .registers 2
+
+    iget v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b:I
+
+    return v0
+.end method
+
+.method b([BII)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/bykv/vk/openvk/component/video/a/b/c/d;
+        }
+    .end annotation
+
+    :try_start_0
+    iget-object v0, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->a:Ljava/io/OutputStream;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+
+    iget p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b:I
+
+    add-int/2addr p1, p3
+
+    iput p1, p0, Lcom/bykv/vk/openvk/component/video/a/b/g$b;->b:I
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_a} :catch_b
+
+    return-void
+
+    :catch_b
+    move-exception p1
+
+    new-instance p2, Lcom/bykv/vk/openvk/component/video/a/b/c/d;
+
+    invoke-direct {p2, p1}, Lcom/bykv/vk/openvk/component/video/a/b/c/d;-><init>(Ljava/lang/Throwable;)V
+
+    throw p2
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.a.b.g.c (com.bykv.vk.openvk.component.video.a.b.g$c)
+.class public interface abstract Lcom/bykv/vk/openvk/component/video/a/b/g$c;
+.super Ljava/lang/Object;
+.source "ProxyTask.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/component/video/a/b/g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "c"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+.end method
+
+.method public abstract b(Lcom/bykv/vk/openvk/component/video/a/b/g;)V
+.end method

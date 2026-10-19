@@ -1,0 +1,620 @@
+###### Class com.bytedance.sdk.openadsdk.component.d (com.bytedance.sdk.openadsdk.component.d)
+.class public Lcom/bytedance/sdk/openadsdk/component/d;
+.super Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAd;
+.source "PAGAppOpenAdImpl.java"
+
+
+# instance fields
+.field private final a:Landroid/content/Context;
+
+.field private final b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+.field private final c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+.field private d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+.field private final e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field private final f:Ljava/lang/String;
+
+.field private final g:Z
+
+.field private h:Z
+
+.field private i:Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/bytedance/sdk/openadsdk/core/model/q;ZLcom/bytedance/sdk/openadsdk/AdSlot;)V
+    .registers 7
+    .param p2    # Lcom/bytedance/sdk/openadsdk/core/model/q;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-direct {p0}, Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAd;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    iput-boolean p3, p0, Lcom/bytedance/sdk/openadsdk/component/d;->g:Z
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/utils/r;->a()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->f:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/bytedance/sdk/openadsdk/component/d;->c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/bytedance/sdk/openadsdk/component/d;)Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+    .registers 1
+
+    iget-object p0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    return-object p0
+.end method
+
+.method static synthetic a(Lcom/bytedance/sdk/openadsdk/component/d;Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;)Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+    .registers 2
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    return-object p1
+.end method
+
+.method private a()V
+    .registers 3
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/multipro/b;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/component/d$1;
+
+    const-string v1, "AppOpenAd_registerMultiProcessListener"
+
+    invoke-direct {v0, p0, v1}, Lcom/bytedance/sdk/openadsdk/component/d$1;-><init>(Lcom/bytedance/sdk/openadsdk/component/d;Ljava/lang/String;)V
+
+    const/4 v1, 0x5
+
+    invoke-static {v0, v1}, Lcom/bytedance/sdk/openadsdk/utils/aa;->c(Lcom/bytedance/sdk/component/g/h;I)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/bytedance/sdk/openadsdk/component/d;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->f:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public getMediaExtraInfo()Ljava/util/Map;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/core/model/q;->ai()Ljava/util/Map;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_9
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public loss(Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;)V
+    .registers 5
+
+    iget-boolean v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->i:Z
+
+    if-nez v0, :cond_c
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    invoke-static {v0, p1, p2, p3}, Lcom/bytedance/sdk/openadsdk/utils/w;->a(Lcom/bytedance/sdk/openadsdk/core/model/q;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->i:Z
+
+    :cond_c
+    return-void
+.end method
+
+.method public setAdInteractionCallback(Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAdInteractionCallback;)V
+    .registers 3
+
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/component/e;
+
+    invoke-direct {v0, p1}, Lcom/bytedance/sdk/openadsdk/component/e;-><init>(Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAdInteractionListener;)V
+
+    iput-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    invoke-direct {p0}, Lcom/bytedance/sdk/openadsdk/component/d;->a()V
+
+    return-void
+.end method
+
+.method public setAdInteractionListener(Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAdInteractionListener;)V
+    .registers 3
+
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/component/e;
+
+    invoke-direct {v0, p1}, Lcom/bytedance/sdk/openadsdk/component/e;-><init>(Lcom/bytedance/sdk/openadsdk/api/open/PAGAppOpenAdInteractionListener;)V
+
+    iput-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    invoke-direct {p0}, Lcom/bytedance/sdk/openadsdk/component/d;->a()V
+
+    return-void
+.end method
+
+.method public show(Landroid/app/Activity;)V
+    .registers 7
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_a
+
+    invoke-virtual {p1}, Landroid/app/Activity;->isFinishing()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_a
+
+    move-object p1, v0
+
+    :cond_a
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_14
+
+    return-void
+
+    :cond_14
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    if-ne v1, v3, :cond_c7
+
+    if-eqz p1, :cond_22
+
+    move-object v1, p1
+
+    goto :goto_24
+
+    :cond_22
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->a:Landroid/content/Context;
+
+    :goto_24
+    if-nez v1, :cond_2a
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/core/o;->a()Landroid/content/Context;
+
+    move-result-object v1
+
+    :cond_2a
+    const/4 v3, 0x0
+
+    :try_start_2b
+    invoke-virtual {p1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
+
+    move-result v3
+    :try_end_37
+    .catch Ljava/lang/Exception; {:try_start_2b .. :try_end_37} :catch_38
+
+    goto :goto_39
+
+    :catch_38
+    nop
+
+    :goto_39
+    new-instance p1, Landroid/content/Intent;
+
+    const-class v4, Lcom/bytedance/sdk/openadsdk/activity/TTAppOpenAdActivity;
+
+    invoke-direct {p1, v1, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string v4, "orientation_angle"
+
+    invoke-virtual {p1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    iget-boolean v3, p0, Lcom/bytedance/sdk/openadsdk/component/d;->g:Z
+
+    if-eqz v3, :cond_4b
+
+    const/4 v3, 0x1
+
+    goto :goto_4c
+
+    :cond_4b
+    const/4 v3, 0x2
+
+    :goto_4c
+    const-string v4, "ad_source"
+
+    invoke-virtual {p1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/multipro/b;->c()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6e
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/core/model/q;->ao()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "multi_process_materialmeta"
+
+    invoke-virtual {p1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->f:Ljava/lang/String;
+
+    const-string v3, "multi_process_meta_md5"
+
+    invoke-virtual {p1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    goto :goto_89
+
+    :cond_6e
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/core/s;->a()Lcom/bytedance/sdk/openadsdk/core/s;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/bytedance/sdk/openadsdk/core/s;->f()V
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/core/s;->a()Lcom/bytedance/sdk/openadsdk/core/s;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    invoke-virtual {v3, v4}, Lcom/bytedance/sdk/openadsdk/core/s;->a(Lcom/bytedance/sdk/openadsdk/core/model/q;)V
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/core/s;->a()Lcom/bytedance/sdk/openadsdk/core/s;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    invoke-virtual {v3, v4}, Lcom/bytedance/sdk/openadsdk/core/s;->a(Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;)V
+
+    iput-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->d:Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    :goto_89
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v3
+
+    const-string v0, "start_show_time"
+
+    invoke-virtual {p1, v0, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    new-instance v0, Lcom/bytedance/sdk/openadsdk/component/d$2;
+
+    invoke-direct {v0, p0}, Lcom/bytedance/sdk/openadsdk/component/d$2;-><init>(Lcom/bytedance/sdk/openadsdk/component/d;)V
+
+    invoke-static {v1, p1, v0}, Lcom/bytedance/sdk/component/utils/b;->a(Landroid/content/Context;Landroid/content/Intent;Lcom/bytedance/sdk/component/utils/b$a;)Z
+
+    iget-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+    if-eqz p1, :cond_c6
+
+    :try_start_9e
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/core/settings/o;->aj()Lcom/bytedance/sdk/openadsdk/core/settings/e;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/AdSlot;->getCodeId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/bytedance/sdk/openadsdk/core/settings/e;->x(Ljava/lang/String;)I
+
+    move-result p1
+
+    if-ne p1, v2, :cond_c6
+
+    iget-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->a:Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/bytedance/sdk/openadsdk/component/f;->a(Landroid/content/Context;)Lcom/bytedance/sdk/openadsdk/component/f;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+    invoke-virtual {v0}, Lcom/bytedance/sdk/openadsdk/AdSlot;->getCodeId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lcom/bytedance/sdk/openadsdk/component/f;->g(I)V
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->c:Lcom/bytedance/sdk/openadsdk/AdSlot;
+
+    invoke-virtual {p1, v0}, Lcom/bytedance/sdk/openadsdk/component/f;->a(Lcom/bytedance/sdk/openadsdk/AdSlot;)V
+    :try_end_c6
+    .catchall {:try_start_9e .. :try_end_c6} :catchall_c6
+
+    :catchall_c6
+    :cond_c6
+    return-void
+
+    :cond_c7
+    const-string p1, "TTAppOpenAdImpl"
+
+    const-string v0, "showTTAppOpenAd error: not main looper"
+
+    invoke-static {p1, v0}, Lcom/bytedance/sdk/component/utils/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Cannot be called in a child thread ---- TTAppOpenAdImpl.showAppOpenAd"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public win(Ljava/lang/Double;)V
+    .registers 3
+
+    iget-boolean v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->h:Z
+
+    if-nez v0, :cond_c
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d;->b:Lcom/bytedance/sdk/openadsdk/core/model/q;
+
+    invoke-static {v0, p1}, Lcom/bytedance/sdk/openadsdk/utils/w;->a(Lcom/bytedance/sdk/openadsdk/core/model/q;Ljava/lang/Double;)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lcom/bytedance/sdk/openadsdk/component/d;->h:Z
+
+    :cond_c
+    return-void
+.end method
+
+###### Class com.bytedance.sdk.openadsdk.component.d.AnonymousClass1 (com.bytedance.sdk.openadsdk.component.d$1)
+.class Lcom/bytedance/sdk/openadsdk/component/d$1;
+.super Lcom/bytedance/sdk/component/g/h;
+.source "PAGAppOpenAdImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/component/d;->a()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+
+# direct methods
+.method constructor <init>(Lcom/bytedance/sdk/openadsdk/component/d;Ljava/lang/String;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d$1;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    invoke-direct {p0, p2}, Lcom/bytedance/sdk/component/g/h;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .registers 5
+
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/multipro/aidl/a;->a()Lcom/bytedance/sdk/openadsdk/multipro/aidl/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/component/d$1;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    invoke-static {v1}, Lcom/bytedance/sdk/openadsdk/component/d;->a(Lcom/bytedance/sdk/openadsdk/component/d;)Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_48
+
+    const-string v1, "MultiProcess"
+
+    const-string v2, "start registerAppOpenListener ! "
+
+    invoke-static {v1, v2}, Lcom/bytedance/sdk/component/utils/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v2, 0x7
+
+    invoke-virtual {v0, v2}, Lcom/bytedance/sdk/openadsdk/multipro/aidl/a;->a(I)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bytedance/sdk/openadsdk/IListenerManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/bytedance/sdk/openadsdk/IListenerManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_48
+
+    :try_start_1e
+    new-instance v2, Lcom/bytedance/sdk/openadsdk/multipro/aidl/b/a;
+
+    iget-object v3, p0, Lcom/bytedance/sdk/openadsdk/component/d$1;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    invoke-static {v3}, Lcom/bytedance/sdk/openadsdk/component/d;->a(Lcom/bytedance/sdk/openadsdk/component/d;)Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/bytedance/sdk/openadsdk/multipro/aidl/b/a;-><init>(Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;)V
+
+    iget-object v3, p0, Lcom/bytedance/sdk/openadsdk/component/d$1;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    invoke-static {v3}, Lcom/bytedance/sdk/openadsdk/component/d;->b(Lcom/bytedance/sdk/openadsdk/component/d;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3, v2}, Lcom/bytedance/sdk/openadsdk/IListenerManager;->registerAppOpenAdListener(Ljava/lang/String;Lcom/bytedance/sdk/openadsdk/IAppOpenAdInteractionListener;)V
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/component/d$1;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2}, Lcom/bytedance/sdk/openadsdk/component/d;->a(Lcom/bytedance/sdk/openadsdk/component/d;Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;)Lcom/bytedance/sdk/openadsdk/apiImpl/c/b;
+
+    const-string v0, "end registerAppOpenAdListener ! "
+
+    invoke-static {v1, v0}, Lcom/bytedance/sdk/component/utils/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3d
+    .catch Landroid/os/RemoteException; {:try_start_1e .. :try_end_3d} :catch_3e
+
+    goto :goto_48
+
+    :catch_3e
+    move-exception v0
+
+    invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "TTAppOpenAdImpl"
+
+    invoke-static {v1, v0}, Lcom/bytedance/sdk/component/utils/l;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_48
+    :goto_48
+    return-void
+.end method
+
+###### Class com.bytedance.sdk.openadsdk.component.d.AnonymousClass2 (com.bytedance.sdk.openadsdk.component.d$2)
+.class Lcom/bytedance/sdk/openadsdk/component/d$2;
+.super Ljava/lang/Object;
+.source "PAGAppOpenAdImpl.java"
+
+# interfaces
+.implements Lcom/bytedance/sdk/component/utils/b$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/component/d;->show(Landroid/app/Activity;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+
+# direct methods
+.method constructor <init>(Lcom/bytedance/sdk/openadsdk/component/d;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/component/d$2;->a:Lcom/bytedance/sdk/openadsdk/component/d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()V
+    .registers 3
+
+    const-string v0, "TTAppOpenAdImpl"
+
+    const-string v1, "app open ad startActivitySuccess"
+
+    invoke-static {v0, v1}, Lcom/bytedance/sdk/component/utils/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Throwable;)V
+    .registers 3
+
+    const-string p1, "TTAppOpenAdImpl"
+
+    const-string v0, "app open ad startActivityFail"
+
+    invoke-static {p1, v0}, Lcom/bytedance/sdk/component/utils/l;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

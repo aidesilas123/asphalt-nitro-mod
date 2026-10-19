@@ -1,0 +1,14 @@
+###### Class com.google.android.gms.internal.ads.zzuz (com.google.android.gms.internal.ads.zzuz)
+.class public final Lcom/google/android/gms/internal/ads/zzuz;
+.super Ljava/io/IOException;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/io/IOException;-><init>()V
+
+    return-void
+.end method

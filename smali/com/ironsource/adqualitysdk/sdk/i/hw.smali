@@ -1,0 +1,56 @@
+###### Class com.json.adqualitysdk.sdk.i.hw (com.ironsource.adqualitysdk.sdk.i.hw)
+.class public final Lcom/ironsource/adqualitysdk/sdk/i/hw;
+.super Ljava/lang/Object;
+.source ""
+
+
+# static fields
+.field public static final ﻛ:[B
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    const/16 v0, 0x14
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_a
+
+    sput-object v0, Lcom/ironsource/adqualitysdk/sdk/i/hw;->ﻛ:[B
+
+    return-void
+
+    :array_a
+    .array-data 1
+        0x40t
+        -0x36t
+        -0x71t
+        -0x2ft
+        0x62t
+        -0x34t
+        0x57t
+        -0x66t
+        -0x41t
+        -0x7ft
+        0x59t
+        0x33t
+        -0xbt
+        -0x23t
+        0x1et
+        0x4dt
+        -0x2dt
+        0x4bt
+        -0x1at
+        0x3t
+    .end array-data
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

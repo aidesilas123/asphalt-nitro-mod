@@ -1,0 +1,452 @@
+###### Class com.applovin.exoplayer2.e.j.c (com.applovin.exoplayer2.e.j.c)
+.class final Lcom/applovin/exoplayer2/e/j/c;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/applovin/exoplayer2/e/j/c$a;
+    }
+.end annotation
+
+
+# direct methods
+.method public static aa(Lcom/applovin/exoplayer2/e/i;)Lcom/applovin/exoplayer2/e/j/b;
+    .registers 15
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/l/a;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lcom/applovin/exoplayer2/l/y;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lcom/applovin/exoplayer2/l/y;-><init>(I)V
+
+    invoke-static {p0, v0}, Lcom/applovin/exoplayer2/e/j/c$a;->a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+
+    move-result-object v2
+
+    iget v2, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    const/4 v3, 0x0
+
+    const v4, 0x52494646
+
+    if-eq v2, v4, :cond_17
+
+    return-object v3
+
+    :cond_17
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->hO()[B
+
+    move-result-object v2
+
+    const/4 v4, 0x4
+
+    const/4 v5, 0x0
+
+    invoke-interface {p0, v2, v5, v4}, Lcom/applovin/exoplayer2/e/i;->c([BII)V
+
+    invoke-virtual {v0, v5}, Lcom/applovin/exoplayer2/l/y;->fx(I)V
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->px()I
+
+    move-result v2
+
+    const v4, 0x57415645
+
+    if-eq v2, v4, :cond_43
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Unsupported RIFF format: "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "WavHeaderReader"
+
+    invoke-static {v0, p0}, Lcom/applovin/exoplayer2/l/q;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v3
+
+    :cond_43
+    invoke-static {p0, v0}, Lcom/applovin/exoplayer2/e/j/c$a;->a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+
+    move-result-object v2
+
+    :goto_47
+    iget v3, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    const v4, 0x666d7420
+
+    if-eq v3, v4, :cond_59
+
+    iget-wide v2, v2, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    long-to-int v3, v2
+
+    invoke-interface {p0, v3}, Lcom/applovin/exoplayer2/e/i;->bI(I)V
+
+    invoke-static {p0, v0}, Lcom/applovin/exoplayer2/e/j/c$a;->a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+
+    move-result-object v2
+
+    goto :goto_47
+
+    :cond_59
+    iget-wide v3, v2, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    const-wide/16 v6, 0x10
+
+    cmp-long v8, v3, v6
+
+    if-ltz v8, :cond_63
+
+    const/4 v3, 0x1
+
+    goto :goto_64
+
+    :cond_63
+    const/4 v3, 0x0
+
+    :goto_64
+    invoke-static {v3}, Lcom/applovin/exoplayer2/l/a;->checkState(Z)V
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->hO()[B
+
+    move-result-object v3
+
+    invoke-interface {p0, v3, v5, v1}, Lcom/applovin/exoplayer2/e/i;->c([BII)V
+
+    invoke-virtual {v0, v5}, Lcom/applovin/exoplayer2/l/y;->fx(I)V
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pq()I
+
+    move-result v7
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pq()I
+
+    move-result v8
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pE()I
+
+    move-result v9
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pE()I
+
+    move-result v10
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pq()I
+
+    move-result v11
+
+    invoke-virtual {v0}, Lcom/applovin/exoplayer2/l/y;->pq()I
+
+    move-result v12
+
+    iget-wide v2, v2, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    long-to-int v0, v2
+
+    sub-int/2addr v0, v1
+
+    if-lez v0, :cond_96
+
+    new-array v1, v0, [B
+
+    invoke-interface {p0, v1, v5, v0}, Lcom/applovin/exoplayer2/e/i;->c([BII)V
+
+    move-object v13, v1
+
+    goto :goto_99
+
+    :cond_96
+    sget-object p0, Lcom/applovin/exoplayer2/l/ai;->ada:[B
+
+    move-object v13, p0
+
+    :goto_99
+    new-instance p0, Lcom/applovin/exoplayer2/e/j/b;
+
+    move-object v6, p0
+
+    invoke-direct/range {v6 .. v13}, Lcom/applovin/exoplayer2/e/j/b;-><init>(IIIIII[B)V
+
+    return-object p0
+.end method
+
+.method public static ab(Lcom/applovin/exoplayer2/e/i;)Landroid/util/Pair;
+    .registers 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/applovin/exoplayer2/e/i;",
+            ")",
+            "Landroid/util/Pair<",
+            "Ljava/lang/Long;",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/l/a;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-interface {p0}, Lcom/applovin/exoplayer2/e/i;->ic()V
+
+    new-instance v0, Lcom/applovin/exoplayer2/l/y;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lcom/applovin/exoplayer2/l/y;-><init>(I)V
+
+    invoke-static {p0, v0}, Lcom/applovin/exoplayer2/e/j/c$a;->a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+
+    move-result-object v2
+
+    :goto_11
+    iget v3, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    const v4, 0x64617461
+
+    const-string v5, "WavHeaderReader"
+
+    if-eq v3, v4, :cond_6d
+
+    const v4, 0x52494646
+
+    if-eq v3, v4, :cond_3a
+
+    const v6, 0x666d7420
+
+    if-eq v3, v6, :cond_3a
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Ignoring unknown WAV chunk: "
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v6, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v5, v3}, Lcom/applovin/exoplayer2/l/q;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3a
+    const-wide/16 v5, 0x8
+
+    iget-wide v7, v2, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    add-long/2addr v7, v5
+
+    iget v3, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    if-ne v3, v4, :cond_45
+
+    const-wide/16 v7, 0xc
+
+    :cond_45
+    const-wide/32 v3, 0x7fffffff
+
+    cmp-long v5, v7, v3
+
+    if-gtz v5, :cond_55
+
+    long-to-int v2, v7
+
+    invoke-interface {p0, v2}, Lcom/applovin/exoplayer2/e/i;->bH(I)V
+
+    invoke-static {p0, v0}, Lcom/applovin/exoplayer2/e/j/c$a;->a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+
+    move-result-object v2
+
+    goto :goto_11
+
+    :cond_55
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "Chunk is too large (~2GB+) to skip; id: "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, v2, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/applovin/exoplayer2/ai;->p(Ljava/lang/String;)Lcom/applovin/exoplayer2/ai;
+
+    move-result-object p0
+
+    throw p0
+
+    :cond_6d
+    invoke-interface {p0, v1}, Lcom/applovin/exoplayer2/e/i;->bH(I)V
+
+    invoke-interface {p0}, Lcom/applovin/exoplayer2/e/i;->ie()J
+
+    move-result-wide v0
+
+    iget-wide v2, v2, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    add-long/2addr v2, v0
+
+    invoke-interface {p0}, Lcom/applovin/exoplayer2/e/i;->if()J
+
+    move-result-wide v6
+
+    const-wide/16 v8, -0x1
+
+    cmp-long p0, v6, v8
+
+    if-eqz p0, :cond_a2
+
+    cmp-long p0, v2, v6
+
+    if-lez p0, :cond_a2
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Data exceeds input length: "
+
+    invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ", "
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v5, p0}, Lcom/applovin/exoplayer2/l/q;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-wide v2, v6
+
+    :cond_a2
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+###### Class com.applovin.exoplayer2.e.j.c.a (com.applovin.exoplayer2.e.j.c$a)
+.class final Lcom/applovin/exoplayer2/e/j/c$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/applovin/exoplayer2/e/j/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field public final Gs:J
+
+.field public final zD:I
+
+
+# direct methods
+.method private constructor <init>(IJ)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lcom/applovin/exoplayer2/e/j/c$a;->zD:I
+
+    iput-wide p2, p0, Lcom/applovin/exoplayer2/e/j/c$a;->Gs:J
+
+    return-void
+.end method
+
+.method public static a(Lcom/applovin/exoplayer2/e/i;Lcom/applovin/exoplayer2/l/y;)Lcom/applovin/exoplayer2/e/j/c$a;
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Lcom/applovin/exoplayer2/l/y;->hO()[B
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x8
+
+    invoke-interface {p0, v0, v1, v2}, Lcom/applovin/exoplayer2/e/i;->c([BII)V
+
+    invoke-virtual {p1, v1}, Lcom/applovin/exoplayer2/l/y;->fx(I)V
+
+    invoke-virtual {p1}, Lcom/applovin/exoplayer2/l/y;->px()I
+
+    move-result p0
+
+    invoke-virtual {p1}, Lcom/applovin/exoplayer2/l/y;->pw()J
+
+    move-result-wide v0
+
+    new-instance p1, Lcom/applovin/exoplayer2/e/j/c$a;
+
+    invoke-direct {p1, p0, v0, v1}, Lcom/applovin/exoplayer2/e/j/c$a;-><init>(IJ)V
+
+    return-object p1
+.end method

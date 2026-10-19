@@ -1,0 +1,237 @@
+###### Class com.google.common.collect.r1 (com.google.common.collect.r1)
+.class abstract Lcom/google/common/collect/r1;
+.super Lcom/google/common/collect/ImmutableSet;
+.source "ImmutableMapEntrySet.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/common/collect/r1$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/google/common/collect/ImmutableSet<",
+        "Ljava/util/Map$Entry<",
+        "TK;TV;>;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/google/common/collect/ImmutableSet;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method abstract B()Lcom/google/common/collect/ImmutableMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/common/collect/ImmutableMap<",
+            "TK;TV;>;"
+        }
+    .end annotation
+.end method
+
+.method public contains(Ljava/lang/Object;)Z
+    .registers 5
+
+    instance-of v0, p1, Ljava/util/Map$Entry;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_20
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/google/common/collect/ImmutableMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_20
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_20
+
+    const/4 v1, 0x1
+
+    :cond_20
+    return v1
+.end method
+
+.method public hashCode()I
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method j()Z
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->j()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public size()I
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method writeReplace()Ljava/lang/Object;
+    .registers 3
+
+    new-instance v0, Lcom/google/common/collect/r1$a;
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/google/common/collect/r1$a;-><init>(Lcom/google/common/collect/ImmutableMap;)V
+
+    return-object v0
+.end method
+
+.method z()Z
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/common/collect/r1;->B()Lcom/google/common/collect/ImmutableMap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->i()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+###### Class com.google.common.collect.r1.a (com.google.common.collect.r1$a)
+.class Lcom/google/common/collect/r1$a;
+.super Ljava/lang/Object;
+.source "ImmutableMapEntrySet.java"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/r1;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J
+
+
+# instance fields
+.field final a:Lcom/google/common/collect/ImmutableMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/collect/ImmutableMap<",
+            "TK;TV;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Lcom/google/common/collect/ImmutableMap;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/common/collect/ImmutableMap<",
+            "TK;TV;>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/common/collect/r1$a;->a:Lcom/google/common/collect/ImmutableMap;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method readResolve()Ljava/lang/Object;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/common/collect/r1$a;->a:Lcom/google/common/collect/ImmutableMap;
+
+    invoke-virtual {v0}, Lcom/google/common/collect/ImmutableMap;->h()Lcom/google/common/collect/ImmutableSet;
+
+    move-result-object v0
+
+    return-object v0
+.end method

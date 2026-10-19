@@ -1,0 +1,33 @@
+###### Class com.json.mediationsdk.adunit.adapter.internal.listener.AdapterAdViewListener (com.ironsource.mediationsdk.adunit.adapter.internal.listener.AdapterAdViewListener)
+.class public interface abstract Lcom/ironsource/mediationsdk/adunit/adapter/internal/listener/AdapterAdViewListener;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/ironsource/mediationsdk/adunit/adapter/internal/listener/AdapterAdListener;
+
+
+# virtual methods
+.method public abstract synthetic onAdClicked()V
+.end method
+
+.method public abstract onAdLeftApplication()V
+.end method
+
+.method public abstract synthetic onAdLoadFailed(Lcom/ironsource/mediationsdk/adunit/adapter/utility/AdapterErrorType;ILjava/lang/String;)V
+.end method
+
+.method public abstract synthetic onAdLoadSuccess()V
+.end method
+
+.method public abstract onAdLoadSuccess(Landroid/view/View;Landroid/widget/FrameLayout$LayoutParams;)V
+.end method
+
+.method public abstract synthetic onAdOpened()V
+.end method
+
+.method public abstract onAdScreenDismissed()V
+.end method
+
+.method public abstract onAdScreenPresented()V
+.end method

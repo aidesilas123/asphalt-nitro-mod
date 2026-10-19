@@ -1,0 +1,138 @@
+###### Class com.google.android.gms.internal.ads.zzcf (com.google.android.gms.internal.ads.zzcf)
+.class public Lcom/google/android/gms/internal/ads/zzcf;
+.super Ljava/io/IOException;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# instance fields
+.field public final zza:Z
+
+.field public final zzb:I
+
+
+# direct methods
+.method protected constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;ZI)V
+    .registers 5
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-direct {p0, p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iput-boolean p3, p0, Lcom/google/android/gms/internal/ads/zzcf;->zza:Z
+
+    iput p4, p0, Lcom/google/android/gms/internal/ads/zzcf;->zzb:I
+
+    return-void
+.end method
+
+.method public static zza(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/gms/internal/ads/zzcf;
+    .registers 4
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzcf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1, v1}, Lcom/google/android/gms/internal/ads/zzcf;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ZI)V
+
+    return-object v0
+.end method
+
+.method public static zzb(Ljava/lang/String;Ljava/lang/Throwable;)Lcom/google/android/gms/internal/ads/zzcf;
+    .registers 5
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/Throwable;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzcf;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p0, p1, v1, v2}, Lcom/google/android/gms/internal/ads/zzcf;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ZI)V
+
+    return-object v0
+.end method
+
+.method public static zzc(Ljava/lang/String;)Lcom/google/android/gms/internal/ads/zzcf;
+    .registers 5
+    .param p0    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzcf;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/android/gms/internal/ads/zzcf;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ZI)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getMessage()Ljava/lang/String;
+    .registers 3
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    invoke-super {p0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "{contentIsMalformed="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/google/android/gms/internal/ads/zzcf;->zza:Z
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", dataType="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lcom/google/android/gms/internal/ads/zzcf;->zzb:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

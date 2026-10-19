@@ -1,0 +1,150 @@
+###### Class dagger.internal.DelegateFactory (dagger.internal.DelegateFactory)
+.class public final Ldagger/internal/DelegateFactory;
+.super Ljava/lang/Object;
+.source "DelegateFactory.java"
+
+# interfaces
+.implements Ldagger/internal/b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ldagger/internal/b<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Ldagger/internal/c;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ldagger/internal/c<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static a(Ldagger/internal/DelegateFactory;Ldagger/internal/c;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ldagger/internal/DelegateFactory<",
+            "TT;>;",
+            "Ldagger/internal/c<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    invoke-static {p1}, Ldagger/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Ldagger/internal/DelegateFactory;->a:Ldagger/internal/c;
+
+    if-nez v0, :cond_a
+
+    iput-object p1, p0, Ldagger/internal/DelegateFactory;->a:Ldagger/internal/c;
+
+    return-void
+
+    :cond_a
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static setDelegate(Ldagger/internal/c;Ldagger/internal/c;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ldagger/internal/c<",
+            "TT;>;",
+            "Ldagger/internal/c<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    check-cast p0, Ldagger/internal/DelegateFactory;
+
+    invoke-static {p0, p1}, Ldagger/internal/DelegateFactory;->a(Ldagger/internal/DelegateFactory;Ldagger/internal/c;)V
+
+    return-void
+.end method
+
+.method public static setDelegate(Le/a/a;Le/a/a;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Le/a/a<",
+            "TT;>;",
+            "Le/a/a<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    check-cast p0, Ldagger/internal/DelegateFactory;
+
+    invoke-static {p1}, Ldagger/internal/Providers;->asDaggerProvider(Le/a/a;)Ldagger/internal/c;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Ldagger/internal/DelegateFactory;->a(Ldagger/internal/DelegateFactory;Ldagger/internal/c;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public get()Ljava/lang/Object;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Ldagger/internal/DelegateFactory;->a:Ldagger/internal/c;
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_9
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+.end method

@@ -1,0 +1,121 @@
+package com.google.zxing.common;
+
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.nio.charset.StandardCharsets;
+import java.nio.charset.UnsupportedCharsetException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+/* JADX INFO: compiled from: ECIEncoderSet.java */
+/* JADX INFO: loaded from: classes3.dex */
+public final class d {
+    private static final List<CharsetEncoder> a = new ArrayList();
+    private final CharsetEncoder[] b;
+    private final int c;
+
+    static {
+        String[] strArr = {"IBM437", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "ISO-8859-10", "ISO-8859-11", "ISO-8859-13", "ISO-8859-14", "ISO-8859-15", "ISO-8859-16", "windows-1250", "windows-1251", "windows-1252", "windows-1256", "Shift_JIS"};
+        for (int i = 0; i < 20; i++) {
+            String str = strArr[i];
+            if (CharacterSetECI.getCharacterSetECIByName(str) != null) {
+                try {
+                    a.add(Charset.forName(str).newEncoder());
+                } catch (UnsupportedCharsetException unused) {
+                }
+            }
+        }
+    }
+
+    public d(String str, Charset charset, int i) {
+        boolean z;
+        ArrayList<CharsetEncoder> arrayList = new ArrayList();
+        arrayList.add(StandardCharsets.ISO_8859_1.newEncoder());
+        int i2 = 0;
+        boolean z2 = charset != null && charset.name().startsWith("UTF");
+        for (int i3 = 0; i3 < str.length(); i3++) {
+            for (CharsetEncoder charsetEncoder : arrayList) {
+                char cCharAt = str.charAt(i3);
+                if (cCharAt == i || charsetEncoder.canEncode(cCharAt)) {
+                    z = true;
+                    break;
+                }
+            }
+            z = false;
+            if (!z) {
+                Iterator<CharsetEncoder> it = a.iterator();
+                while (true) {
+                    if (!it.hasNext()) {
+                        break;
+                    }
+                    CharsetEncoder next = it.next();
+                    if (next.canEncode(str.charAt(i3))) {
+                        arrayList.add(next);
+                        z = true;
+                        break;
+                    }
+                }
+            }
+            if (!z) {
+                z2 = true;
+            }
+        }
+        if (arrayList.size() != 1 || z2) {
+            this.b = new CharsetEncoder[arrayList.size() + 2];
+            Iterator it2 = arrayList.iterator();
+            int i4 = 0;
+            while (it2.hasNext()) {
+                this.b[i4] = (CharsetEncoder) it2.next();
+                i4++;
+            }
+            this.b[i4] = StandardCharsets.UTF_8.newEncoder();
+            this.b[i4 + 1] = StandardCharsets.UTF_16BE.newEncoder();
+        } else {
+            this.b = new CharsetEncoder[]{(CharsetEncoder) arrayList.get(0)};
+        }
+        int i5 = -1;
+        if (charset != null) {
+            while (true) {
+                CharsetEncoder[] charsetEncoderArr = this.b;
+                if (i2 >= charsetEncoderArr.length) {
+                    break;
+                }
+                if (charsetEncoderArr[i2] != null && charset.name().equals(this.b[i2].charset().name())) {
+                    i5 = i2;
+                    break;
+                }
+                i2++;
+            }
+        }
+        this.c = i5;
+    }
+
+    public boolean a(char c, int i) {
+        return this.b[i].canEncode("" + c);
+    }
+
+    public byte[] b(char c, int i) {
+        return ("" + c).getBytes(this.b[i].charset());
+    }
+
+    public byte[] c(String str, int i) {
+        return str.getBytes(this.b[i].charset());
+    }
+
+    public Charset d(int i) {
+        return this.b[i].charset();
+    }
+
+    public int e(int i) {
+        return CharacterSetECI.getCharacterSetECI(this.b[i].charset()).f();
+    }
+
+    public int f() {
+        return this.c;
+    }
+
+    public int g() {
+        return this.b.length;
+    }
+}

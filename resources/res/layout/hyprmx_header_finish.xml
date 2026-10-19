@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:id="@+id/hyprmx_finish_container"
+    android:background="@drawable/hyprmx_rounded_corner"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/hyprmx_header_finish_text_size"
+        android:gravity="center"
+        android:id="@+id/hyprmx_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:includeFontPadding="false"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/hyprmx_finish_the_offer"/>
+    <ImageView
+        android:id="@+id/hyprmx_finish_chevron"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:layout_width="12dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/hyprmx_chevron"
+        android:layout_toRightOf="@+id/hyprmx_finish"
+        android:layout_alignTop="@+id/hyprmx_finish"
+        android:layout_alignBottom="@+id/hyprmx_finish"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

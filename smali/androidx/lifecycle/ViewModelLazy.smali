@@ -1,0 +1,403 @@
+###### Class androidx.lifecycle.ViewModelLazy (androidx.lifecycle.ViewModelLazy)
+.class public final Landroidx/lifecycle/ViewModelLazy;
+.super Ljava/lang/Object;
+.source "ViewModelLazy.kt"
+
+# interfaces
+.implements Lkotlin/i;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<VM:",
+        "Landroidx/lifecycle/ViewModel;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lkotlin/i<",
+        "TVM;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0000\u0018\u0000*\u0008\u0008\u0000\u0010\u0001*\u00020\u00022\u0008\u0012\u0004\u0012\u0002H\u00010\u0003BA\u0008\u0007\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005\u0012\u000c\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00020\u00080\u0007\u0012\u000c\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\n0\u0007\u0012\u000e\u0008\u0002\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\u0007\u00a2\u0006\u0002\u0010\rJ\u0008\u0010\u0013\u001a\u00020\u0014H\u0016R\u0012\u0010\u000e\u001a\u0004\u0018\u00018\u0000X\u0082\u000e\u00a2\u0006\u0004\n\u0002\u0010\u000fR\u0014\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\u0008\u0012\u0004\u0012\u00020\n0\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0006\u001a\u0008\u0012\u0004\u0012\u00020\u00080\u0007X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0010\u001a\u00028\u00008VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0011\u0010\u0012R\u0014\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0015"
+    }
+    d2 = {
+        "Landroidx/lifecycle/ViewModelLazy;",
+        "VM",
+        "Landroidx/lifecycle/ViewModel;",
+        "Lkotlin/Lazy;",
+        "viewModelClass",
+        "Lkotlin/reflect/KClass;",
+        "storeProducer",
+        "Lkotlin/Function0;",
+        "Landroidx/lifecycle/ViewModelStore;",
+        "factoryProducer",
+        "Landroidx/lifecycle/ViewModelProvider$Factory;",
+        "extrasProducer",
+        "Landroidx/lifecycle/viewmodel/CreationExtras;",
+        "(Lkotlin/reflect/KClass;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V",
+        "cached",
+        "Landroidx/lifecycle/ViewModel;",
+        "value",
+        "getValue",
+        "()Landroidx/lifecycle/ViewModel;",
+        "isInitialized",
+        "",
+        "lifecycle-viewmodel_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private cached:Landroidx/lifecycle/ViewModel;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TVM;"
+        }
+    .end annotation
+.end field
+
+.field private final extrasProducer:Lkotlin/jvm/b/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/b/a<",
+            "Landroidx/lifecycle/viewmodel/CreationExtras;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final factoryProducer:Lkotlin/jvm/b/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/b/a<",
+            "Landroidx/lifecycle/ViewModelProvider$Factory;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final storeProducer:Lkotlin/jvm/b/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/b/a<",
+            "Landroidx/lifecycle/ViewModelStore;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final viewModelClass:Lkotlin/reflect/KClass;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/reflect/KClass<",
+            "TVM;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    .registers 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/reflect/KClass<",
+            "TVM;>;",
+            "Lkotlin/jvm/b/a<",
+            "+",
+            "Landroidx/lifecycle/ViewModelStore;",
+            ">;",
+            "Lkotlin/jvm/b/a<",
+            "+",
+            "Landroidx/lifecycle/ViewModelProvider$Factory;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "viewModelClass"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "storeProducer"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "factoryProducer"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x8
+
+    const/4 v7, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v7}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/n;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/reflect/KClass<",
+            "TVM;>;",
+            "Lkotlin/jvm/b/a<",
+            "+",
+            "Landroidx/lifecycle/ViewModelStore;",
+            ">;",
+            "Lkotlin/jvm/b/a<",
+            "+",
+            "Landroidx/lifecycle/ViewModelProvider$Factory;",
+            ">;",
+            "Lkotlin/jvm/b/a<",
+            "+",
+            "Landroidx/lifecycle/viewmodel/CreationExtras;",
+            ">;)V"
+        }
+    .end annotation
+
+    const-string v0, "viewModelClass"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "storeProducer"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "factoryProducer"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "extrasProducer"
+
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lkotlin/reflect/KClass;
+
+    iput-object p2, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lkotlin/jvm/b/a;
+
+    iput-object p3, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lkotlin/jvm/b/a;
+
+    iput-object p4, p0, Landroidx/lifecycle/ViewModelLazy;->extrasProducer:Lkotlin/jvm/b/a;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/n;)V
+    .registers 7
+
+    and-int/lit8 p5, p5, 0x8
+
+    if-eqz p5, :cond_6
+
+    sget-object p4, Landroidx/lifecycle/ViewModelLazy$1;->INSTANCE:Landroidx/lifecycle/ViewModelLazy$1;
+
+    :cond_6
+    invoke-direct {p0, p1, p2, p3, p4}, Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue()Landroidx/lifecycle/ViewModel;
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TVM;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
+
+    if-nez v0, :cond_2d
+
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->factoryProducer:Lkotlin/jvm/b/a;
+
+    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/lifecycle/ViewModelProvider$Factory;
+
+    iget-object v1, p0, Landroidx/lifecycle/ViewModelLazy;->storeProducer:Lkotlin/jvm/b/a;
+
+    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/lifecycle/ViewModelStore;
+
+    new-instance v2, Landroidx/lifecycle/ViewModelProvider;
+
+    iget-object v3, p0, Landroidx/lifecycle/ViewModelLazy;->extrasProducer:Lkotlin/jvm/b/a;
+
+    invoke-interface {v3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/lifecycle/viewmodel/CreationExtras;
+
+    invoke-direct {v2, v1, v0, v3}, Landroidx/lifecycle/ViewModelProvider;-><init>(Landroidx/lifecycle/ViewModelStore;Landroidx/lifecycle/ViewModelProvider$Factory;Landroidx/lifecycle/viewmodel/CreationExtras;)V
+
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->viewModelClass:Lkotlin/reflect/KClass;
+
+    invoke-static {v0}, Lkotlin/jvm/JvmClassMappingKt;->getJavaClass(Lkotlin/reflect/KClass;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroidx/lifecycle/ViewModelProvider;->get(Ljava/lang/Class;)Landroidx/lifecycle/ViewModel;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
+
+    :cond_2d
+    return-object v0
+.end method
+
+.method public bridge synthetic getValue()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Landroidx/lifecycle/ViewModelLazy;->getValue()Landroidx/lifecycle/ViewModel;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isInitialized()Z
+    .registers 2
+
+    iget-object v0, p0, Landroidx/lifecycle/ViewModelLazy;->cached:Landroidx/lifecycle/ViewModel;
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x1
+
+    goto :goto_7
+
+    :cond_6
+    const/4 v0, 0x0
+
+    :goto_7
+    return v0
+.end method
+
+###### Class androidx.lifecycle.ViewModelLazy.AnonymousClass1 (androidx.lifecycle.ViewModelLazy$1)
+.class final Landroidx/lifecycle/ViewModelLazy$1;
+.super Lkotlin/jvm/internal/t;
+.source "ViewModelLazy.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/lifecycle/ViewModelLazy;-><init>(Lkotlin/reflect/KClass;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILkotlin/jvm/internal/n;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/a<",
+        "Landroidx/lifecycle/viewmodel/CreationExtras$Empty;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0008\u0008\u0000\u0010\u0002*\u00020\u0003H\n\u00a2\u0006\u0002\u0008\u0004"
+    }
+    d2 = {
+        "<anonymous>",
+        "Landroidx/lifecycle/viewmodel/CreationExtras$Empty;",
+        "VM",
+        "Landroidx/lifecycle/ViewModel;",
+        "invoke"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Landroidx/lifecycle/ViewModelLazy$1;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Landroidx/lifecycle/ViewModelLazy$1;
+
+    invoke-direct {v0}, Landroidx/lifecycle/ViewModelLazy$1;-><init>()V
+
+    sput-object v0, Landroidx/lifecycle/ViewModelLazy$1;->INSTANCE:Landroidx/lifecycle/ViewModelLazy$1;
+
+    return-void
+.end method
+
+.method constructor <init>()V
+    .registers 2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
+    .registers 2
+
+    sget-object v0, Landroidx/lifecycle/viewmodel/CreationExtras$Empty;->INSTANCE:Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Landroidx/lifecycle/ViewModelLazy$1;->invoke()Landroidx/lifecycle/viewmodel/CreationExtras$Empty;
+
+    move-result-object v0
+
+    return-object v0
+.end method

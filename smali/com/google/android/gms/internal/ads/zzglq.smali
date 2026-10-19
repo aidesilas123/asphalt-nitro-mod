@@ -1,0 +1,26 @@
+###### Class com.google.android.gms.internal.ads.zzglq (com.google.android.gms.internal.ads.zzglq)
+.class final Lcom/google/android/gms/internal/ads/zzglq;
+.super Ljava/lang/ThreadLocal;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic initialValue()Ljava/lang/Object;
+    .registers 2
+
+    invoke-static {}, Lcom/google/android/gms/internal/ads/zzglr;->zza()Ljava/security/SecureRandom;
+
+    move-result-object v0
+
+    return-object v0
+.end method

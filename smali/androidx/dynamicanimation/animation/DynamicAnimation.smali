@@ -1,0 +1,2179 @@
+###### Class androidx.dynamicanimation.animation.DynamicAnimation (androidx.dynamicanimation.animation.DynamicAnimation)
+.class public abstract Landroidx/dynamicanimation/animation/DynamicAnimation;
+.super Ljava/lang/Object;
+.source "DynamicAnimation.java"
+
+# interfaces
+.implements Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;,
+        Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;,
+        Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;,
+        Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Landroidx/dynamicanimation/animation/DynamicAnimation<",
+        "TT;>;>",
+        "Ljava/lang/Object;",
+        "Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final MIN_VISIBLE_CHANGE_ALPHA:F = 0.00390625f
+
+.field public static final MIN_VISIBLE_CHANGE_PIXELS:F = 1.0f
+
+.field public static final MIN_VISIBLE_CHANGE_ROTATION_DEGREES:F = 0.1f
+
+.field public static final MIN_VISIBLE_CHANGE_SCALE:F = 0.002f
+
+.field public static final ROTATION:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final ROTATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final ROTATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final SCALE_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final SCROLL_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final SCROLL_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field private static final THRESHOLD_MULTIPLIER:F = 0.75f
+
+.field public static final TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final TRANSLATION_Z:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field private static final UNSET:F = 3.4028235E38f
+
+.field public static final X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+.field public static final Z:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+
+# instance fields
+.field private final mEndListeners:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mLastFrameTime:J
+
+.field mMaxValue:F
+
+.field mMinValue:F
+
+.field private mMinVisibleChange:F
+
+.field final mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+.field mRunning:Z
+
+.field mStartValueIsSet:Z
+
+.field final mTarget:Ljava/lang/Object;
+
+.field private final mUpdateListeners:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field mValue:F
+
+.field mVelocity:F
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$1;
+
+    const-string v1, "translationX"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$1;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$2;
+
+    const-string v1, "translationY"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$2;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$3;
+
+    const-string v1, "translationZ"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$3;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Z:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$4;
+
+    const-string v1, "scaleX"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$4;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$5;
+
+    const-string v1, "scaleY"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$5;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$6;
+
+    const-string v1, "rotation"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$6;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$7;
+
+    const-string v1, "rotationX"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$7;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$8;
+
+    const-string v1, "rotationY"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$8;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$9;
+
+    const-string/jumbo v1, "x"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$9;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$10;
+
+    const-string/jumbo v1, "y"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$10;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$11;
+
+    const-string/jumbo v1, "z"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$11;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->Z:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$12;
+
+    const-string v1, "alpha"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$12;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$13;
+
+    const-string v1, "scrollX"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$13;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCROLL_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$14;
+
+    const-string v1, "scrollY"
+
+    invoke-direct {v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation$14;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCROLL_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    return-void
+.end method
+
+.method constructor <init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
+
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
+
+    iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
+
+    neg-float v0, v0
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
+
+    new-instance v0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;
+
+    const-string v1, "FloatValueHolder"
+
+    invoke-direct {v0, p0, v1, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$15;-><init>(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/String;Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    return-void
+.end method
+
+.method constructor <init>(Ljava/lang/Object;Landroidx/dynamicanimation/animation/FloatPropertyCompat;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            ">(TK;",
+            "Landroidx/dynamicanimation/animation/FloatPropertyCompat<",
+            "TK;>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
+
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
+
+    iput-boolean v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
+
+    neg-float v0, v0
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    iput-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
+
+    iput-object p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    if-eq p2, p1, :cond_52
+
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    if-eq p2, p1, :cond_52
+
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ROTATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    if-ne p2, p1, :cond_38
+
+    goto :goto_52
+
+    :cond_38
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    const/high16 v0, 0x3b800000    # 0.00390625f
+
+    if-ne p2, p1, :cond_41
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    goto :goto_57
+
+    :cond_41
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    if-eq p2, p1, :cond_4f
+
+    sget-object p1, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+
+    if-ne p2, p1, :cond_4a
+
+    goto :goto_4f
+
+    :cond_4a
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    goto :goto_57
+
+    :cond_4f
+    :goto_4f
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    goto :goto_57
+
+    :cond_52
+    :goto_52
+    const p1, 0x3dcccccd    # 0.1f
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    :goto_57
+    return-void
+.end method
+
+.method private endAnimationInternal(Z)V
+    .registers 6
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    invoke-static {}, Landroidx/dynamicanimation/animation/AnimationHandler;->getInstance()Landroidx/dynamicanimation/animation/AnimationHandler;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Landroidx/dynamicanimation/animation/AnimationHandler;->removeCallback(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;)V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
+
+    :goto_10
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_32
+
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2f
+
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;
+
+    iget v2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    iget v3, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
+
+    invoke-interface {v1, p0, p1, v2, v3}, Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;->onAnimationEnd(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+
+    :cond_2f
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_10
+
+    :cond_32
+    iget-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->removeNullEntries(Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method private getPropertyValue()F
+    .registers 3
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;->getValue(Ljava/lang/Object;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private static removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/ArrayList<",
+            "TT;>;TT;)V"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p1
+
+    if-ltz p1, :cond_a
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
+    return-void
+.end method
+
+.method private static removeNullEntries(Ljava/util/ArrayList;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/ArrayList<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    :goto_6
+    if-ltz v0, :cond_14
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_11
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    :cond_11
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_6
+
+    :cond_14
+    return-void
+.end method
+
+.method private startAnimationInternal()V
+    .registers 4
+
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    if-nez v0, :cond_31
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
+
+    if-nez v0, :cond_11
+
+    invoke-direct {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->getPropertyValue()F
+
+    move-result v0
+
+    iput v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    :cond_11
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    iget v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
+
+    cmpl-float v1, v0, v1
+
+    if-gtz v1, :cond_29
+
+    iget v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
+
+    cmpg-float v0, v0, v1
+
+    if-ltz v0, :cond_29
+
+    invoke-static {}, Landroidx/dynamicanimation/animation/AnimationHandler;->getInstance()Landroidx/dynamicanimation/animation/AnimationHandler;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x0
+
+    invoke-virtual {v0, p0, v1, v2}, Landroidx/dynamicanimation/animation/AnimationHandler;->addAnimationFrameCallback(Landroidx/dynamicanimation/animation/AnimationHandler$AnimationFrameCallback;J)V
+
+    goto :goto_31
+
+    :cond_29
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Starting value need to be in between min value and max value"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_31
+    :goto_31
+    return-void
+.end method
+
+
+# virtual methods
+.method public addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;",
+            ")TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_d
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_d
+    return-object p0
+.end method
+
+.method public addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;",
+            ")TT;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->isRunning()Z
+
+    move-result v0
+
+    if-nez v0, :cond_14
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_13
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_13
+    return-object p0
+
+    :cond_14
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Error: Update listeners must be added beforethe animation."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public cancel()V
+    .registers 3
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_13
+
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    if-eqz v0, :cond_12
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->endAnimationInternal(Z)V
+
+    :cond_12
+    return-void
+
+    :cond_13
+    new-instance v0, Landroid/util/AndroidRuntimeException;
+
+    const-string v1, "Animations may only be canceled on the main thread"
+
+    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public doAnimationFrame(J)Z
+    .registers 9
+    .annotation build Landroidx/annotation/RestrictTo;
+        value = {
+            .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY:Landroidx/annotation/RestrictTo$Scope;
+        }
+    .end annotation
+
+    iget-wide v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v5, v0, v3
+
+    if-nez v5, :cond_11
+
+    iput-wide p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    iget p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setPropertyValue(F)V
+
+    return v2
+
+    :cond_11
+    sub-long v0, p1, v0
+
+    iput-wide p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mLastFrameTime:J
+
+    invoke-virtual {p0, v0, v1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->updateValueAndVelocity(J)Z
+
+    move-result p1
+
+    iget p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p2
+
+    iput p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->max(FF)F
+
+    move-result p2
+
+    iput p2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    invoke-virtual {p0, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setPropertyValue(F)V
+
+    if-eqz p1, :cond_33
+
+    invoke-direct {p0, v2}, Landroidx/dynamicanimation/animation/DynamicAnimation;->endAnimationInternal(Z)V
+
+    :cond_33
+    return p1
+.end method
+
+.method abstract getAcceleration(FF)F
+.end method
+
+.method public getMinimumVisibleChange()F
+    .registers 2
+
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    return v0
+.end method
+
+.method getValueThreshold()F
+    .registers 3
+
+    iget v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    const/high16 v1, 0x3f400000    # 0.75f
+
+    mul-float v0, v0, v1
+
+    return v0
+.end method
+
+.method abstract isAtEquilibrium(FF)Z
+.end method
+
+.method public isRunning()Z
+    .registers 2
+
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    return v0
+.end method
+
+.method public removeEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)V
+    .registers 3
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-static {v0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public removeUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)V
+    .registers 3
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-static {v0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->removeEntry(Ljava/util/ArrayList;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public setMaxValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMaxValue:F
+
+    return-object p0
+.end method
+
+.method public setMinValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinValue:F
+
+    return-object p0
+.end method
+
+.method public setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 3
+    .param p1    # F
+        .annotation build Landroidx/annotation/FloatRange;
+            from = 0.0
+            fromInclusive = false
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    cmpg-float v0, p1, v0
+
+    if-lez v0, :cond_f
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mMinVisibleChange:F
+
+    const/high16 v0, 0x3f400000    # 0.75f
+
+    mul-float p1, p1, v0
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->setValueThreshold(F)V
+
+    return-object p0
+
+    :cond_f
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Minimum visible change must be positive."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method setPropertyValue(F)V
+    .registers 5
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+
+    iget-object v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mTarget:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1, p1}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;->setValue(Ljava/lang/Object;F)V
+
+    const/4 p1, 0x0
+
+    :goto_8
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_2a
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_27
+
+    iget-object v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+
+    iget v1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    iget v2, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
+
+    invoke-interface {v0, p0, v1, v2}, Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;->onAnimationUpdate(Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+
+    :cond_27
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_8
+
+    :cond_2a
+    iget-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mUpdateListeners:Ljava/util/ArrayList;
+
+    invoke-static {p1}, Landroidx/dynamicanimation/animation/DynamicAnimation;->removeNullEntries(Ljava/util/ArrayList;)V
+
+    return-void
+.end method
+
+.method public setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mValue:F
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mStartValueIsSet:Z
+
+    return-object p0
+.end method
+
+.method public setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    iput p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mVelocity:F
+
+    return-object p0
+.end method
+
+.method abstract setValueThreshold(F)V
+.end method
+
+.method public start()V
+    .registers 3
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_12
+
+    iget-boolean v0, p0, Landroidx/dynamicanimation/animation/DynamicAnimation;->mRunning:Z
+
+    if-nez v0, :cond_11
+
+    invoke-direct {p0}, Landroidx/dynamicanimation/animation/DynamicAnimation;->startAnimationInternal()V
+
+    :cond_11
+    return-void
+
+    :cond_12
+    new-instance v0, Landroid/util/AndroidRuntimeException;
+
+    const-string v1, "Animations may only be started on the main thread"
+
+    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method abstract updateValueAndVelocity(J)Z
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass1 (androidx.dynamicanimation.animation.DynamicAnimation$1)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$1;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$1;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$1;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass10 (androidx.dynamicanimation.animation.DynamicAnimation$10)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$10;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getY()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$10;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setY(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$10;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass11 (androidx.dynamicanimation.animation.DynamicAnimation$11)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$11;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getZ(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$11;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setZ(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$11;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass12 (androidx.dynamicanimation.animation.DynamicAnimation$12)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$12;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$12;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$12;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass13 (androidx.dynamicanimation.animation.DynamicAnimation$13)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$13;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$13;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    float-to-int p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScrollX(I)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$13;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass14 (androidx.dynamicanimation.animation.DynamicAnimation$14)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$14;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$14;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    float-to-int p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScrollY(I)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$14;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass15 (androidx.dynamicanimation.animation.DynamicAnimation$15)
+.class Landroidx/dynamicanimation/animation/DynamicAnimation$15;
+.super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;-><init>(Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Landroidx/dynamicanimation/animation/DynamicAnimation;
+
+.field final synthetic val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+
+# direct methods
+.method constructor <init>(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/String;Landroidx/dynamicanimation/animation/FloatValueHolder;)V
+    .registers 4
+
+    iput-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->this$0:Landroidx/dynamicanimation/animation/DynamicAnimation;
+
+    iput-object p3, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    invoke-direct {p0, p2}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    iget-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    invoke-virtual {p1}, Landroidx/dynamicanimation/animation/FloatValueHolder;->getValue()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    iget-object p1, p0, Landroidx/dynamicanimation/animation/DynamicAnimation$15;->val$floatValueHolder:Landroidx/dynamicanimation/animation/FloatValueHolder;
+
+    invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/FloatValueHolder;->setValue(F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass2 (androidx.dynamicanimation.animation.DynamicAnimation$2)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$2;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$2;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$2;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass3 (androidx.dynamicanimation.animation.DynamicAnimation$3)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$3;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-static {p1}, Landroidx/core/view/ViewCompat;->getTranslationZ(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$3;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-static {p1, p2}, Landroidx/core/view/ViewCompat;->setTranslationZ(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$3;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass4 (androidx.dynamicanimation.animation.DynamicAnimation$4)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$4;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$4;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$4;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass5 (androidx.dynamicanimation.animation.DynamicAnimation$5)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$5;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$5;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$5;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass6 (androidx.dynamicanimation.animation.DynamicAnimation$6)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$6;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotation()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$6;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotation(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$6;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass7 (androidx.dynamicanimation.animation.DynamicAnimation$7)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$7;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotationX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$7;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationX(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$7;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass8 (androidx.dynamicanimation.animation.DynamicAnimation$8)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$8;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getRotationY()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$8;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setRotationY(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$8;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.AnonymousClass9 (androidx.dynamicanimation.animation.DynamicAnimation$9)
+.class final Landroidx/dynamicanimation/animation/DynamicAnimation$9;
+.super Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 3
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getValue(Landroid/view/View;)F
+    .registers 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getX()F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic getValue(Ljava/lang/Object;)F
+    .registers 2
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$9;->getValue(Landroid/view/View;)F
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public setValue(Landroid/view/View;F)V
+    .registers 3
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setX(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setValue(Ljava/lang/Object;F)V
+    .registers 3
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/animation/DynamicAnimation$9;->setValue(Landroid/view/View;F)V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.MassState (androidx.dynamicanimation.animation.DynamicAnimation$MassState)
+.class Landroidx/dynamicanimation/animation/DynamicAnimation$MassState;
+.super Ljava/lang/Object;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "MassState"
+.end annotation
+
+
+# instance fields
+.field mValue:F
+
+.field mVelocity:F
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationEndListener (androidx.dynamicanimation.animation.DynamicAnimation$OnAnimationEndListener)
+.class public interface abstract Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;
+.super Ljava/lang/Object;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnAnimationEndListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onAnimationEnd(Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.OnAnimationUpdateListener (androidx.dynamicanimation.animation.DynamicAnimation$OnAnimationUpdateListener)
+.class public interface abstract Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;
+.super Ljava/lang/Object;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnAnimationUpdateListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onAnimationUpdate(Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+.end method
+
+###### Class androidx.dynamicanimation.animation.DynamicAnimation.ViewProperty (androidx.dynamicanimation.animation.DynamicAnimation$ViewProperty)
+.class public abstract Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
+.super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
+.source "DynamicAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/dynamicanimation/animation/DynamicAnimation;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "ViewProperty"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/dynamicanimation/animation/FloatPropertyCompat<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/String;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;Landroidx/dynamicanimation/animation/DynamicAnimation$1;)V
+    .registers 3
+
+    invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method

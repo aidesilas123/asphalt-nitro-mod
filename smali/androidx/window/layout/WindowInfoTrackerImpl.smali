@@ -1,0 +1,701 @@
+###### Class androidx.window.layout.WindowInfoTrackerImpl (androidx.window.layout.WindowInfoTrackerImpl)
+.class public final Landroidx/window/layout/WindowInfoTrackerImpl;
+.super Ljava/lang/Object;
+.source "WindowInfoTrackerImpl.kt"
+
+# interfaces
+.implements Landroidx/window/layout/WindowInfoTracker;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/window/layout/WindowInfoTrackerImpl$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0008\u0000\u0018\u0000 \u000c2\u00020\u0001:\u0001\u000cB\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006J\u0016\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\t0\u00082\u0006\u0010\n\u001a\u00020\u000bH\u0016R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u00a8\u0006\r"
+    }
+    d2 = {
+        "Landroidx/window/layout/WindowInfoTrackerImpl;",
+        "Landroidx/window/layout/WindowInfoTracker;",
+        "windowMetricsCalculator",
+        "Landroidx/window/layout/WindowMetricsCalculator;",
+        "windowBackend",
+        "Landroidx/window/layout/WindowBackend;",
+        "(Landroidx/window/layout/WindowMetricsCalculator;Landroidx/window/layout/WindowBackend;)V",
+        "windowLayoutInfo",
+        "Lkotlinx/coroutines/flow/Flow;",
+        "Landroidx/window/layout/WindowLayoutInfo;",
+        "activity",
+        "Landroid/app/Activity;",
+        "Companion",
+        "window_release"
+    }
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field private static final BUFFER_CAPACITY:I = 0xa
+
+.field public static final Companion:Landroidx/window/layout/WindowInfoTrackerImpl$Companion;
+
+
+# instance fields
+.field private final windowBackend:Landroidx/window/layout/WindowBackend;
+
+.field private final windowMetricsCalculator:Landroidx/window/layout/WindowMetricsCalculator;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    new-instance v0, Landroidx/window/layout/WindowInfoTrackerImpl$Companion;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Landroidx/window/layout/WindowInfoTrackerImpl$Companion;-><init>(Lkotlin/jvm/internal/n;)V
+
+    sput-object v0, Landroidx/window/layout/WindowInfoTrackerImpl;->Companion:Landroidx/window/layout/WindowInfoTrackerImpl$Companion;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroidx/window/layout/WindowMetricsCalculator;Landroidx/window/layout/WindowBackend;)V
+    .registers 4
+
+    const-string v0, "windowMetricsCalculator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "windowBackend"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/window/layout/WindowInfoTrackerImpl;->windowMetricsCalculator:Landroidx/window/layout/WindowMetricsCalculator;
+
+    iput-object p2, p0, Landroidx/window/layout/WindowInfoTrackerImpl;->windowBackend:Landroidx/window/layout/WindowBackend;
+
+    return-void
+.end method
+
+.method public static final synthetic access$getWindowBackend$p(Landroidx/window/layout/WindowInfoTrackerImpl;)Landroidx/window/layout/WindowBackend;
+    .registers 1
+
+    iget-object p0, p0, Landroidx/window/layout/WindowInfoTrackerImpl;->windowBackend:Landroidx/window/layout/WindowBackend;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public windowLayoutInfo(Landroid/app/Activity;)Lkotlinx/coroutines/flow/i;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/Activity;",
+            ")",
+            "Lkotlinx/coroutines/flow/i<",
+            "Landroidx/window/layout/WindowLayoutInfo;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "activity"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;-><init>(Landroidx/window/layout/WindowInfoTrackerImpl;Landroid/app/Activity;Lkotlin/coroutines/d;)V
+
+    invoke-static {v0}, Lkotlinx/coroutines/flow/FlowKt;->flow(Lkotlin/jvm/b/p;)Lkotlinx/coroutines/flow/i;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class androidx.window.layout.WindowInfoTrackerImpl.Companion (androidx.window.layout.WindowInfoTrackerImpl$Companion)
+.class public final Landroidx/window/layout/WindowInfoTrackerImpl$Companion;
+.super Ljava/lang/Object;
+.source "WindowInfoTrackerImpl.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/window/layout/WindowInfoTrackerImpl;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Companion"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0000\u0008\u0080\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082T\u00a2\u0006\u0002\n\u0000\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "Landroidx/window/layout/WindowInfoTrackerImpl$Companion;",
+        "",
+        "()V",
+        "BUFFER_CAPACITY",
+        "",
+        "window_release"
+    }
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/n;)V
+    .registers 2
+
+    invoke-direct {p0}, Landroidx/window/layout/WindowInfoTrackerImpl$Companion;-><init>()V
+
+    return-void
+.end method
+
+###### Class androidx.window.layout.WindowInfoTrackerImpl.AnonymousClass1 (androidx.window.layout.WindowInfoTrackerImpl$windowLayoutInfo$1)
+.class final Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;
+.super Lkotlin/coroutines/jvm/internal/j;
+.source "WindowInfoTrackerImpl.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/p;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/window/layout/WindowInfoTrackerImpl;->windowLayoutInfo(Landroid/app/Activity;)Lkotlinx/coroutines/flow/i;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/j;",
+        "Lkotlin/jvm/b/p<",
+        "Lkotlinx/coroutines/flow/j<",
+        "-",
+        "Landroidx/window/layout/WindowLayoutInfo;",
+        ">;",
+        "Lkotlin/coroutines/d<",
+        "-",
+        "Lkotlin/v;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u0008\u0012\u0004\u0012\u00020\u00030\u0002H\u008a@"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "Lkotlinx/coroutines/flow/FlowCollector;",
+        "Landroidx/window/layout/WindowLayoutInfo;"
+    }
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/e;
+    c = "androidx.window.layout.WindowInfoTrackerImpl$windowLayoutInfo$1"
+    f = "WindowInfoTrackerImpl.kt"
+    i = {
+        0x0,
+        0x0,
+        0x1,
+        0x1
+    }
+    l = {
+        0x36,
+        0x37
+    }
+    m = "invokeSuspend"
+    n = {
+        "$this$flow",
+        "listener",
+        "$this$flow",
+        "listener"
+    }
+    s = {
+        "L$0",
+        "L$1",
+        "L$0",
+        "L$1"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $activity:Landroid/app/Activity;
+
+.field private synthetic L$0:Ljava/lang/Object;
+
+.field L$1:Ljava/lang/Object;
+
+.field L$2:Ljava/lang/Object;
+
+.field label:I
+
+.field final synthetic this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+
+# direct methods
+.method constructor <init>(Landroidx/window/layout/WindowInfoTrackerImpl;Landroid/app/Activity;Lkotlin/coroutines/d;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/window/layout/WindowInfoTrackerImpl;",
+            "Landroid/app/Activity;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+    iput-object p2, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->$activity:Landroid/app/Activity;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lkotlin/coroutines/jvm/internal/j;-><init>(ILkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+.method private static final invokeSuspend$lambda-0(Lkotlinx/coroutines/channels/Channel;Landroidx/window/layout/WindowLayoutInfo;)V
+    .registers 3
+
+    const-string v0, "info"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-interface {p0, p1}, Lkotlinx/coroutines/channels/SendChannel;->y(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static synthetic k(Lkotlinx/coroutines/channels/Channel;Landroidx/window/layout/WindowLayoutInfo;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->invokeSuspend$lambda-0(Lkotlinx/coroutines/channels/Channel;Landroidx/window/layout/WindowLayoutInfo;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/d<",
+            "*>;)",
+            "Lkotlin/coroutines/d<",
+            "Lkotlin/v;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;
+
+    iget-object v1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+    iget-object v2, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->$activity:Landroid/app/Activity;
+
+    invoke-direct {v0, v1, v2, p2}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;-><init>(Landroidx/window/layout/WindowInfoTrackerImpl;Landroid/app/Activity;Lkotlin/coroutines/d;)V
+
+    iput-object p1, v0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 3
+
+    check-cast p1, Lkotlinx/coroutines/flow/j;
+
+    check-cast p2, Lkotlin/coroutines/d;
+
+    invoke-virtual {p0, p1, p2}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->invoke(Lkotlinx/coroutines/flow/j;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/flow/j;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/flow/j<",
+            "-",
+            "Landroidx/window/layout/WindowLayoutInfo;",
+            ">;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;
+
+    sget-object p2, Lkotlin/v;->a:Lkotlin/v;
+
+    invoke-virtual {p1, p2}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 11
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->label:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_39
+
+    if-eq v1, v3, :cond_27
+
+    if-ne v1, v2, :cond_1f
+
+    iget-object v1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$2:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v4, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$1:Ljava/lang/Object;
+
+    check-cast v4, Landroidx/core/util/Consumer;
+
+    iget-object v5, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    check-cast v5, Lkotlinx/coroutines/flow/j;
+
+    :try_start_1a
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    :try_end_1d
+    .catchall {:try_start_1a .. :try_end_1d} :catchall_a0
+
+    move-object p1, v5
+
+    goto :goto_60
+
+    :cond_1f
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_27
+    iget-object v1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$2:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v4, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$1:Ljava/lang/Object;
+
+    check-cast v4, Landroidx/core/util/Consumer;
+
+    iget-object v5, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    check-cast v5, Lkotlinx/coroutines/flow/j;
+
+    :try_start_33
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    :try_end_36
+    .catchall {:try_start_33 .. :try_end_36} :catchall_a0
+
+    move-object v6, v5
+
+    move-object v5, p0
+
+    goto :goto_73
+
+    :cond_39
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    check-cast p1, Lkotlinx/coroutines/flow/j;
+
+    const/16 v1, 0xa
+
+    sget-object v4, Lkotlinx/coroutines/channels/BufferOverflow;->b:Lkotlinx/coroutines/channels/BufferOverflow;
+
+    const/4 v5, 0x4
+
+    const/4 v6, 0x0
+
+    invoke-static {v1, v4, v6, v5, v6}, Lkotlinx/coroutines/channels/ChannelKt;->Channel$default(ILkotlinx/coroutines/channels/BufferOverflow;Lkotlin/jvm/b/l;ILjava/lang/Object;)Lkotlinx/coroutines/channels/Channel;
+
+    move-result-object v1
+
+    new-instance v4, Landroidx/window/layout/c;
+
+    invoke-direct {v4, v1}, Landroidx/window/layout/c;-><init>(Lkotlinx/coroutines/channels/Channel;)V
+
+    iget-object v5, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+    invoke-static {v5}, Landroidx/window/layout/WindowInfoTrackerImpl;->access$getWindowBackend$p(Landroidx/window/layout/WindowInfoTrackerImpl;)Landroidx/window/layout/WindowBackend;
+
+    move-result-object v5
+
+    iget-object v6, p0, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->$activity:Landroid/app/Activity;
+
+    sget-object v7, Landroidx/window/layout/a;->a:Landroidx/window/layout/a;
+
+    invoke-interface {v5, v6, v7, v4}, Landroidx/window/layout/WindowBackend;->registerLayoutChangeCallback(Landroid/app/Activity;Ljava/util/concurrent/Executor;Landroidx/core/util/Consumer;)V
+
+    :try_start_5c
+    invoke-interface {v1}, Lkotlinx/coroutines/channels/ReceiveChannel;->iterator()Lkotlinx/coroutines/channels/ChannelIterator;
+
+    move-result-object v1
+    :try_end_60
+    .catchall {:try_start_5c .. :try_end_60} :catchall_a0
+
+    :goto_60
+    move-object v5, p0
+
+    :goto_61
+    :try_start_61
+    iput-object p1, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    iput-object v4, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$1:Ljava/lang/Object;
+
+    iput-object v1, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$2:Ljava/lang/Object;
+
+    iput v3, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->label:I
+
+    invoke-interface {v1, v5}, Lkotlinx/coroutines/channels/ChannelIterator;->a(Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    if-ne v6, v0, :cond_70
+
+    return-object v0
+
+    :cond_70
+    move-object v8, v6
+
+    move-object v6, p1
+
+    move-object p1, v8
+
+    :goto_73
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_92
+
+    invoke-interface {v1}, Lkotlinx/coroutines/channels/ChannelIterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/window/layout/WindowLayoutInfo;
+
+    iput-object v6, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$0:Ljava/lang/Object;
+
+    iput-object v4, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$1:Ljava/lang/Object;
+
+    iput-object v1, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->L$2:Ljava/lang/Object;
+
+    iput v2, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->label:I
+
+    invoke-interface {v6, p1, v5}, Lkotlinx/coroutines/flow/j;->emit(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_8d
+    .catchall {:try_start_61 .. :try_end_8d} :catchall_9e
+
+    if-ne p1, v0, :cond_90
+
+    return-object v0
+
+    :cond_90
+    move-object p1, v6
+
+    goto :goto_61
+
+    :cond_92
+    iget-object p1, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+    invoke-static {p1}, Landroidx/window/layout/WindowInfoTrackerImpl;->access$getWindowBackend$p(Landroidx/window/layout/WindowInfoTrackerImpl;)Landroidx/window/layout/WindowBackend;
+
+    move-result-object p1
+
+    invoke-interface {p1, v4}, Landroidx/window/layout/WindowBackend;->unregisterLayoutChangeCallback(Landroidx/core/util/Consumer;)V
+
+    sget-object p1, Lkotlin/v;->a:Lkotlin/v;
+
+    return-object p1
+
+    :catchall_9e
+    move-exception p1
+
+    goto :goto_a2
+
+    :catchall_a0
+    move-exception p1
+
+    move-object v5, p0
+
+    :goto_a2
+    iget-object v0, v5, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->this$0:Landroidx/window/layout/WindowInfoTrackerImpl;
+
+    invoke-static {v0}, Landroidx/window/layout/WindowInfoTrackerImpl;->access$getWindowBackend$p(Landroidx/window/layout/WindowInfoTrackerImpl;)Landroidx/window/layout/WindowBackend;
+
+    move-result-object v0
+
+    invoke-interface {v0, v4}, Landroidx/window/layout/WindowBackend;->unregisterLayoutChangeCallback(Landroidx/core/util/Consumer;)V
+
+    throw p1
+.end method
+
+###### Class androidx.window.layout.a (androidx.window.layout.a)
+.class public final synthetic Landroidx/window/layout/a;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# static fields
+.field public static final synthetic a:Landroidx/window/layout/a;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Landroidx/window/layout/a;
+
+    invoke-direct {v0}, Landroidx/window/layout/a;-><init>()V
+
+    sput-object v0, Landroidx/window/layout/a;->a:Landroidx/window/layout/a;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .registers 2
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+###### Class androidx.window.layout.c (androidx.window.layout.c)
+.class public final synthetic Landroidx/window/layout/c;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Landroidx/core/util/Consumer;
+
+
+# instance fields
+.field public final synthetic a:Lkotlinx/coroutines/channels/Channel;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lkotlinx/coroutines/channels/Channel;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroidx/window/layout/c;->a:Lkotlinx/coroutines/channels/Channel;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .registers 3
+
+    iget-object v0, p0, Landroidx/window/layout/c;->a:Lkotlinx/coroutines/channels/Channel;
+
+    check-cast p1, Landroidx/window/layout/WindowLayoutInfo;
+
+    invoke-static {v0, p1}, Landroidx/window/layout/WindowInfoTrackerImpl$windowLayoutInfo$1;->k(Lkotlinx/coroutines/channels/Channel;Landroidx/window/layout/WindowLayoutInfo;)V
+
+    return-void
+.end method

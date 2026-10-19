@@ -1,0 +1,279 @@
+package com.google.common.primitives;
+
+import com.applovin.exoplayer2.common.base.Ascii;
+import com.google.common.base.Preconditions;
+import java.lang.reflect.Field;
+import java.nio.ByteOrder;
+import java.security.AccessController;
+import java.security.PrivilegedActionException;
+import java.security.PrivilegedExceptionAction;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Objects;
+import sun.misc.Unsafe;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class UnsignedBytes {
+
+    static class LexicographicalComparatorHolder {
+        static final String a = LexicographicalComparatorHolder.class.getName().concat("$UnsafeComparator");
+        static final Comparator<byte[]> b = a();
+
+        enum PureJavaComparator implements Comparator<byte[]> {
+            INSTANCE;
+
+            @Override // java.util.Comparator
+            /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+            public int compare(byte[] bArr, byte[] bArr2) {
+                int iMin = Math.min(bArr.length, bArr2.length);
+                for (int i = 0; i < iMin; i++) {
+                    int iCompare = UnsignedBytes.compare(bArr[i], bArr2[i]);
+                    if (iCompare != 0) {
+                        return iCompare;
+                    }
+                }
+                return bArr.length - bArr2.length;
+            }
+
+            @Override // java.lang.Enum
+            public String toString() {
+                return "UnsignedBytes.lexicographicalComparator() (pure Java version)";
+            }
+        }
+
+        enum UnsafeComparator implements Comparator<byte[]> {
+            INSTANCE;
+
+            static final boolean b = ByteOrder.nativeOrder().equals(ByteOrder.BIG_ENDIAN);
+            static final Unsafe c;
+
+            /* JADX INFO: renamed from: d, reason: collision with root package name */
+            static final int f3949d;
+
+            class a implements PrivilegedExceptionAction<Unsafe> {
+                a() {
+                }
+
+                @Override // java.security.PrivilegedExceptionAction
+                /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+                public Unsafe run() throws Exception {
+                    for (Field field : Unsafe.class.getDeclaredFields()) {
+                        field.setAccessible(true);
+                        Object obj = field.get(null);
+                        if (Unsafe.class.isInstance(obj)) {
+                            return (Unsafe) Unsafe.class.cast(obj);
+                        }
+                    }
+                    throw new NoSuchFieldError("the Unsafe");
+                }
+            }
+
+            static {
+                Unsafe unsafeG = g();
+                c = unsafeG;
+                int iArrayBaseOffset = unsafeG.arrayBaseOffset(byte[].class);
+                f3949d = iArrayBaseOffset;
+                if (!"64".equals(System.getProperty("sun.arch.data.model")) || iArrayBaseOffset % 8 != 0 || unsafeG.arrayIndexScale(byte[].class) != 1) {
+                    throw new Error();
+                }
+            }
+
+            private static Unsafe g() {
+                try {
+                    try {
+                        return Unsafe.getUnsafe();
+                    } catch (PrivilegedActionException e2) {
+                        throw new RuntimeException("Could not initialize intrinsics", e2.getCause());
+                    }
+                } catch (SecurityException unused) {
+                    return (Unsafe) AccessController.doPrivileged(new a());
+                }
+            }
+
+            @Override // java.util.Comparator
+            /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
+            public int compare(byte[] bArr, byte[] bArr2) {
+                int iMin = Math.min(bArr.length, bArr2.length);
+                int i = iMin & (-8);
+                int i2 = 0;
+                while (i2 < i) {
+                    Unsafe unsafe = c;
+                    int i3 = f3949d;
+                    long j = i2;
+                    long j2 = unsafe.getLong(bArr, ((long) i3) + j);
+                    long j3 = unsafe.getLong(bArr2, ((long) i3) + j);
+                    if (j2 != j3) {
+                        if (b) {
+                            return UnsignedLongs.compare(j2, j3);
+                        }
+                        int iNumberOfTrailingZeros = Long.numberOfTrailingZeros(j2 ^ j3) & (-8);
+                        return ((int) ((j2 >>> iNumberOfTrailingZeros) & 255)) - ((int) ((j3 >>> iNumberOfTrailingZeros) & 255));
+                    }
+                    i2 += 8;
+                }
+                while (i2 < iMin) {
+                    int iCompare = UnsignedBytes.compare(bArr[i2], bArr2[i2]);
+                    if (iCompare != 0) {
+                        return iCompare;
+                    }
+                    i2++;
+                }
+                return bArr.length - bArr2.length;
+            }
+
+            @Override // java.lang.Enum
+            public String toString() {
+                return "UnsignedBytes.lexicographicalComparator() (sun.misc.Unsafe version)";
+            }
+        }
+
+        LexicographicalComparatorHolder() {
+        }
+
+        static Comparator<byte[]> a() {
+            try {
+                Object[] enumConstants = Class.forName(a).getEnumConstants();
+                Objects.requireNonNull(enumConstants);
+                return (Comparator) enumConstants[0];
+            } catch (Throwable unused) {
+                return UnsignedBytes.b();
+            }
+        }
+    }
+
+    private UnsignedBytes() {
+    }
+
+    private static byte a(byte b) {
+        return (byte) (b ^ 128);
+    }
+
+    static Comparator<byte[]> b() {
+        return LexicographicalComparatorHolder.PureJavaComparator.INSTANCE;
+    }
+
+    public static byte checkedCast(long j) {
+        Preconditions.checkArgument((j >> 8) == 0, "out of range: %s", j);
+        return (byte) j;
+    }
+
+    public static int compare(byte b, byte b2) {
+        return toInt(b) - toInt(b2);
+    }
+
+    public static String join(String str, byte... bArr) {
+        Preconditions.checkNotNull(str);
+        if (bArr.length == 0) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder(bArr.length * (str.length() + 3));
+        sb.append(toInt(bArr[0]));
+        for (int i = 1; i < bArr.length; i++) {
+            sb.append(str);
+            sb.append(toString(bArr[i]));
+        }
+        return sb.toString();
+    }
+
+    public static Comparator<byte[]> lexicographicalComparator() {
+        return LexicographicalComparatorHolder.b;
+    }
+
+    public static byte max(byte... bArr) {
+        Preconditions.checkArgument(bArr.length > 0);
+        int i = toInt(bArr[0]);
+        for (int i2 = 1; i2 < bArr.length; i2++) {
+            int i3 = toInt(bArr[i2]);
+            if (i3 > i) {
+                i = i3;
+            }
+        }
+        return (byte) i;
+    }
+
+    public static byte min(byte... bArr) {
+        Preconditions.checkArgument(bArr.length > 0);
+        int i = toInt(bArr[0]);
+        for (int i2 = 1; i2 < bArr.length; i2++) {
+            int i3 = toInt(bArr[i2]);
+            if (i3 < i) {
+                i = i3;
+            }
+        }
+        return (byte) i;
+    }
+
+    public static byte parseUnsignedByte(String str) {
+        return parseUnsignedByte(str, 10);
+    }
+
+    public static byte parseUnsignedByte(String str, int i) {
+        int i2 = Integer.parseInt((String) Preconditions.checkNotNull(str), i);
+        if ((i2 >> 8) == 0) {
+            return (byte) i2;
+        }
+        StringBuilder sb = new StringBuilder(25);
+        sb.append("out of range: ");
+        sb.append(i2);
+        throw new NumberFormatException(sb.toString());
+    }
+
+    public static byte saturatedCast(long j) {
+        if (j > toInt((byte) -1)) {
+            return (byte) -1;
+        }
+        if (j < 0) {
+            return (byte) 0;
+        }
+        return (byte) j;
+    }
+
+    public static void sort(byte[] bArr) {
+        Preconditions.checkNotNull(bArr);
+        sort(bArr, 0, bArr.length);
+    }
+
+    public static void sort(byte[] bArr, int i, int i2) {
+        Preconditions.checkNotNull(bArr);
+        Preconditions.checkPositionIndexes(i, i2, bArr.length);
+        for (int i3 = i; i3 < i2; i3++) {
+            bArr[i3] = a(bArr[i3]);
+        }
+        Arrays.sort(bArr, i, i2);
+        while (i < i2) {
+            bArr[i] = a(bArr[i]);
+            i++;
+        }
+    }
+
+    public static void sortDescending(byte[] bArr) {
+        Preconditions.checkNotNull(bArr);
+        sortDescending(bArr, 0, bArr.length);
+    }
+
+    public static void sortDescending(byte[] bArr, int i, int i2) {
+        Preconditions.checkNotNull(bArr);
+        Preconditions.checkPositionIndexes(i, i2, bArr.length);
+        for (int i3 = i; i3 < i2; i3++) {
+            bArr[i3] = (byte) (bArr[i3] ^ Ascii.DEL);
+        }
+        Arrays.sort(bArr, i, i2);
+        while (i < i2) {
+            bArr[i] = (byte) (bArr[i] ^ Ascii.DEL);
+            i++;
+        }
+    }
+
+    public static int toInt(byte b) {
+        return b & 255;
+    }
+
+    public static String toString(byte b) {
+        return toString(b, 10);
+    }
+
+    public static String toString(byte b, int i) {
+        Preconditions.checkArgument(i >= 2 && i <= 36, "radix (%s) must be between Character.MIN_RADIX and Character.MAX_RADIX", i);
+        return Integer.toString(toInt(b), i);
+    }
+}

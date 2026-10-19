@@ -1,0 +1,171 @@
+###### Class com.fyber.inneractive.sdk.factories.b (com.fyber.inneractive.sdk.factories.b)
+.class public final Lcom/fyber/inneractive/sdk/factories/b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/fyber/inneractive/sdk/factories/b$b;,
+        Lcom/fyber/inneractive/sdk/factories/b$a;
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Lcom/fyber/inneractive/sdk/response/a;",
+            "Lcom/fyber/inneractive/sdk/factories/b$b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/fyber/inneractive/sdk/factories/b;->a:Ljava/util/HashMap;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/fyber/inneractive/sdk/response/a;)Lcom/fyber/inneractive/sdk/response/b;
+    .registers 3
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/factories/b;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/fyber/inneractive/sdk/factories/b$b;
+
+    if-eqz p1, :cond_f
+
+    invoke-interface {p1}, Lcom/fyber/inneractive/sdk/factories/b$b;->b()Lcom/fyber/inneractive/sdk/response/b;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_f
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public a(Lcom/fyber/inneractive/sdk/response/a;Lcom/fyber/inneractive/sdk/factories/b$b;)V
+    .registers 4
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/factories/b;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    const/4 p2, 0x2
+
+    new-array p2, p2, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p1, p2, v0
+
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/factories/b;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    aput-object p1, p2, v0
+
+    const-string p1, "Handler already exists for ad type %s! : %s"
+
+    invoke-static {p1, p2}, Lcom/fyber/inneractive/sdk/util/IAlog;->e(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_22
+
+    :cond_1d
+    iget-object v0, p0, Lcom/fyber/inneractive/sdk/factories/b;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_22
+    return-void
+.end method
+
+###### Class com.fyber.inneractive.sdk.factories.b.a (com.fyber.inneractive.sdk.factories.b$a)
+.class public Lcom/fyber/inneractive/sdk/factories/b$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/fyber/inneractive/sdk/factories/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# static fields
+.field public static a:Lcom/fyber/inneractive/sdk/factories/b;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/fyber/inneractive/sdk/factories/b;
+
+    invoke-direct {v0}, Lcom/fyber/inneractive/sdk/factories/b;-><init>()V
+
+    sput-object v0, Lcom/fyber/inneractive/sdk/factories/b$a;->a:Lcom/fyber/inneractive/sdk/factories/b;
+
+    return-void
+.end method
+
+###### Class com.fyber.inneractive.sdk.factories.b.InterfaceC0159b (com.fyber.inneractive.sdk.factories.b$b)
+.class public interface abstract Lcom/fyber/inneractive/sdk/factories/b$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/fyber/inneractive/sdk/factories/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "b"
+.end annotation
+
+
+# virtual methods
+.method public abstract a()Lcom/fyber/inneractive/sdk/interfaces/a;
+.end method
+
+.method public abstract b()Lcom/fyber/inneractive/sdk/response/b;
+.end method

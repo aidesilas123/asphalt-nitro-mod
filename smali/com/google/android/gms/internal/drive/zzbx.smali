@@ -1,0 +1,44 @@
+###### Class com.google.android.gms.internal.drive.zzbx (com.google.android.gms.internal.drive.zzbx)
+.class final Lcom/google/android/gms/internal/drive/zzbx;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/drive/DriveFolder$DriveFileResult;
+
+
+# instance fields
+.field private final zzdw:Lcom/google/android/gms/common/api/Status;
+
+.field private final zzfg:Lcom/google/android/gms/drive/DriveFile;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/drive/DriveFile;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/drive/zzbx;->zzdw:Lcom/google/android/gms/common/api/Status;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/drive/zzbx;->zzfg:Lcom/google/android/gms/drive/DriveFile;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getDriveFile()Lcom/google/android/gms/drive/DriveFile;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/drive/zzbx;->zzfg:Lcom/google/android/gms/drive/DriveFile;
+
+    return-object v0
+.end method
+
+.method public final getStatus()Lcom/google/android/gms/common/api/Status;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/drive/zzbx;->zzdw:Lcom/google/android/gms/common/api/Status;
+
+    return-object v0
+.end method

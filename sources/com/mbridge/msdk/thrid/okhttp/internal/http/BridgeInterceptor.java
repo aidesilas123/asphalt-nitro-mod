@@ -1,0 +1,89 @@
+package com.mbridge.msdk.thrid.okhttp.internal.http;
+
+import com.json.b4;
+import com.mbridge.msdk.foundation.download.Command;
+import com.mbridge.msdk.thrid.okhttp.Cookie;
+import com.mbridge.msdk.thrid.okhttp.CookieJar;
+import com.mbridge.msdk.thrid.okhttp.Interceptor;
+import com.mbridge.msdk.thrid.okhttp.MediaType;
+import com.mbridge.msdk.thrid.okhttp.Request;
+import com.mbridge.msdk.thrid.okhttp.RequestBody;
+import com.mbridge.msdk.thrid.okhttp.Response;
+import com.mbridge.msdk.thrid.okhttp.internal.Util;
+import com.mbridge.msdk.thrid.okhttp.internal.Version;
+import com.mbridge.msdk.thrid.okio.GzipSource;
+import com.mbridge.msdk.thrid.okio.Okio;
+import java.io.IOException;
+import java.util.List;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class BridgeInterceptor implements Interceptor {
+    private final CookieJar cookieJar;
+
+    public BridgeInterceptor(CookieJar cookieJar) {
+        this.cookieJar = cookieJar;
+    }
+
+    private String cookieHeader(List<Cookie> list) {
+        StringBuilder sb = new StringBuilder();
+        int size = list.size();
+        for (int i = 0; i < size; i++) {
+            if (i > 0) {
+                sb.append("; ");
+            }
+            Cookie cookie = list.get(i);
+            sb.append(cookie.name());
+            sb.append(b4.R);
+            sb.append(cookie.value());
+        }
+        return sb.toString();
+    }
+
+    @Override // com.mbridge.msdk.thrid.okhttp.Interceptor
+    public Response intercept(Interceptor.Chain chain) throws IOException {
+        Request request = chain.request();
+        Request.Builder builderNewBuilder = request.newBuilder();
+        RequestBody requestBodyBody = request.body();
+        if (requestBodyBody != null) {
+            MediaType mediaTypeContentType = requestBodyBody.contentType();
+            if (mediaTypeContentType != null) {
+                builderNewBuilder.header(b4.I, mediaTypeContentType.toString());
+            }
+            long jContentLength = requestBodyBody.contentLength();
+            if (jContentLength != -1) {
+                builderNewBuilder.header("Content-Length", Long.toString(jContentLength));
+                builderNewBuilder.removeHeader("Transfer-Encoding");
+            } else {
+                builderNewBuilder.header("Transfer-Encoding", "chunked");
+                builderNewBuilder.removeHeader("Content-Length");
+            }
+        }
+        boolean z = false;
+        if (request.header("Host") == null) {
+            builderNewBuilder.header("Host", Util.hostHeader(request.url(), false));
+        }
+        if (request.header("Connection") == null) {
+            builderNewBuilder.header("Connection", "Keep-Alive");
+        }
+        if (request.header("Accept-Encoding") == null && request.header(Command.HTTP_HEADER_RANGE) == null) {
+            z = true;
+            builderNewBuilder.header("Accept-Encoding", "gzip");
+        }
+        List<Cookie> listLoadForRequest = this.cookieJar.loadForRequest(request.url());
+        if (!listLoadForRequest.isEmpty()) {
+            builderNewBuilder.header("Cookie", cookieHeader(listLoadForRequest));
+        }
+        if (request.header(Command.HTTP_HEADER_USER_AGENT) == null) {
+            builderNewBuilder.header(Command.HTTP_HEADER_USER_AGENT, Version.userAgent());
+        }
+        Response responseProceed = chain.proceed(builderNewBuilder.build());
+        HttpHeaders.receiveHeaders(this.cookieJar, request.url(), responseProceed.headers());
+        Response.Builder builderRequest = responseProceed.newBuilder().request(request);
+        if (z && "gzip".equalsIgnoreCase(responseProceed.header("Content-Encoding")) && HttpHeaders.hasBody(responseProceed)) {
+            GzipSource gzipSource = new GzipSource(responseProceed.body().source());
+            builderRequest.headers(responseProceed.headers().newBuilder().removeAll("Content-Encoding").removeAll("Content-Length").build());
+            builderRequest.body(new RealResponseBody(responseProceed.header(b4.I), -1L, Okio.buffer(gzipSource)));
+        }
+        return builderRequest.build();
+    }
+}

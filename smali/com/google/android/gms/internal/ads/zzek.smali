@@ -1,0 +1,4 @@
+###### Class com.google.android.gms.internal.ads.zzek (com.google.android.gms.internal.ads.zzek)
+.class public interface abstract Lcom/google/android/gms/internal/ads/zzek;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"

@@ -1,0 +1,35 @@
+package kotlinx.coroutines;
+
+import kotlin.Metadata;
+
+/* JADX INFO: renamed from: kotlinx.coroutines.c0, reason: from Kotlin metadata */
+/* JADX INFO: compiled from: JobSupport.kt */
+/* JADX INFO: loaded from: classes5.dex */
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\b\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\n\u001a\u00020\u000bH\u0016R\u0014\u0010\u0002\u001a\u00020\u0003X\u0096\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0002\u0010\u0005R\u0016\u0010\u0006\u001a\u0004\u0018\u00010\u00078VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\b\u0010\t¨\u0006\f"}, d2 = {"Lkotlinx/coroutines/Empty;", "Lkotlinx/coroutines/Incomplete;", "isActive", "", "(Z)V", "()Z", "list", "Lkotlinx/coroutines/NodeList;", "getList", "()Lkotlinx/coroutines/NodeList;", "toString", "", "kotlinx-coroutines-core"}, mv = {1, 9, 0}, xi = 48)
+final class Empty implements Incomplete {
+    private final boolean a;
+
+    public Empty(boolean z) {
+        this.a = z;
+    }
+
+    @Override // kotlinx.coroutines.Incomplete
+    /* JADX INFO: renamed from: c */
+    public NodeList getF10002d() {
+        return null;
+    }
+
+    @Override // kotlinx.coroutines.Incomplete
+    /* JADX INFO: renamed from: isActive, reason: from getter */
+    public boolean getA() {
+        return this.a;
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empty{");
+        sb.append(getA() ? "Active" : "New");
+        sb.append('}');
+        return sb.toString();
+    }
+}

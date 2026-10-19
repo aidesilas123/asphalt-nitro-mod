@@ -1,0 +1,50 @@
+###### Class com.bykv.vk.openvk.component.video.api.renderview.b (com.bykv.vk.openvk.component.video.api.renderview.b)
+.class public interface abstract Lcom/bykv/vk/openvk/component/video/api/renderview/b;
+.super Ljava/lang/Object;
+.source "IRenderView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bykv/vk/openvk/component/video/api/renderview/b$a;
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a(II)V
+.end method
+
+.method public abstract a(Lcom/bykv/vk/openvk/component/video/api/renderview/a;)V
+.end method
+
+.method public abstract getHolder()Landroid/view/SurfaceHolder;
+.end method
+
+.method public abstract getView()Landroid/view/View;
+.end method
+
+.method public abstract setVisibility(I)V
+.end method
+
+###### Class com.bykv.vk.openvk.component.video.api.renderview.b.a (com.bykv.vk.openvk.component.video.api.renderview.b$a)
+.class public interface abstract Lcom/bykv/vk/openvk/component/video/api/renderview/b$a;
+.super Ljava/lang/Object;
+.source "IRenderView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/component/video/api/renderview/b;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(I)V
+.end method

@@ -1,0 +1,45 @@
+###### Class com.google.android.gms.internal.ads.zzgog (com.google.android.gms.internal.ads.zzgog)
+.class public final Lcom/google/android/gms/internal/ads/zzgog;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzgmx;
+
+
+# instance fields
+.field private final zza:Lcom/google/android/gms/internal/ads/zzgne;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/ads/zzgne;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lcom/google/android/gms/internal/ads/zzgjl;->zza(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzgog;->zza:Lcom/google/android/gms/internal/ads/zzgne;
+
+    return-void
+
+    :cond_d
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    const-string v0, "Can not use HMAC in FIPS-mode, as BoringCrypto module is not available."
+
+    invoke-direct {p1, v0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

@@ -1,0 +1,4 @@
+###### Class com.google.android.gms.internal.ads.zzgnp (com.google.android.gms.internal.ads.zzgnp)
+.class public final synthetic Lcom/google/android/gms/internal/ads/zzgnp;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-base@@22.6.0"

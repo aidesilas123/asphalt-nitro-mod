@@ -1,0 +1,95 @@
+package kotlin.jvm.internal;
+
+import kotlin.reflect.KCallable;
+import kotlin.reflect.KFunction;
+
+/* JADX INFO: compiled from: FunctionReference.java */
+/* JADX INFO: loaded from: classes5.dex */
+public class q extends l implements FunctionBase, KFunction {
+    private final int arity;
+    private final int flags;
+
+    public q(int i) {
+        this(i, l.NO_RECEIVER, null, null, null, 0);
+    }
+
+    public q(int i, Object obj) {
+        this(i, obj, null, null, null, 0);
+    }
+
+    public q(int i, Object obj, Class cls, String str, String str2, int i2) {
+        super(obj, cls, str, str2, (i2 & 1) == 1);
+        this.arity = i;
+        this.flags = i2 >> 1;
+    }
+
+    @Override // kotlin.jvm.internal.l
+    protected KCallable computeReflected() {
+        return Reflection.function(this);
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof q) {
+            q qVar = (q) obj;
+            return getName().equals(qVar.getName()) && getSignature().equals(qVar.getSignature()) && this.flags == qVar.flags && this.arity == qVar.arity && Intrinsics.areEqual(getBoundReceiver(), qVar.getBoundReceiver()) && Intrinsics.areEqual(getOwner(), qVar.getOwner());
+        }
+        if (obj instanceof KFunction) {
+            return obj.equals(compute());
+        }
+        return false;
+    }
+
+    @Override // kotlin.jvm.internal.FunctionBase
+    public int getArity() {
+        return this.arity;
+    }
+
+    /* JADX INFO: Access modifiers changed from: protected */
+    @Override // kotlin.jvm.internal.l
+    public KFunction getReflected() {
+        return (KFunction) super.getReflected();
+    }
+
+    public int hashCode() {
+        return (((getOwner() == null ? 0 : getOwner().hashCode() * 31) + getName().hashCode()) * 31) + getSignature().hashCode();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    public boolean isExternal() {
+        return getReflected().isExternal();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    public boolean isInfix() {
+        return getReflected().isInfix();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    public boolean isInline() {
+        return getReflected().isInline();
+    }
+
+    @Override // kotlin.reflect.KFunction
+    public boolean isOperator() {
+        return getReflected().isOperator();
+    }
+
+    @Override // kotlin.jvm.internal.l, kotlin.reflect.KCallable
+    public boolean isSuspend() {
+        return getReflected().isSuspend();
+    }
+
+    public String toString() {
+        KCallable kCallableCompute = compute();
+        if (kCallableCompute != this) {
+            return kCallableCompute.toString();
+        }
+        if ("<init>".equals(getName())) {
+            return "constructor (Kotlin reflection is not available)";
+        }
+        return "function " + getName() + " (Kotlin reflection is not available)";
+    }
+}

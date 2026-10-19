@@ -1,0 +1,60 @@
+package com.iab.omid.library.gameloft.a;
+
+import android.content.Context;
+import android.database.ContentObserver;
+import android.media.AudioManager;
+import android.os.Handler;
+import android.provider.Settings;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class d extends ContentObserver {
+    private final Context a;
+    private final AudioManager b;
+    private final a c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    private final c f4874d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    private float f4875e;
+
+    public d(Handler handler, Context context, a aVar, c cVar) {
+        super(handler);
+        this.a = context;
+        this.b = (AudioManager) context.getSystemService("audio");
+        this.c = aVar;
+        this.f4874d = cVar;
+    }
+
+    private boolean a(float f2) {
+        return f2 != this.f4875e;
+    }
+
+    private float c() {
+        return this.c.a(this.b.getStreamVolume(3), this.b.getStreamMaxVolume(3));
+    }
+
+    private void d() {
+        this.f4874d.a(this.f4875e);
+    }
+
+    public void a() {
+        this.f4875e = c();
+        d();
+        this.a.getContentResolver().registerContentObserver(Settings.System.CONTENT_URI, true, this);
+    }
+
+    public void b() {
+        this.a.getContentResolver().unregisterContentObserver(this);
+    }
+
+    @Override // android.database.ContentObserver
+    public void onChange(boolean z) {
+        super.onChange(z);
+        float fC = c();
+        if (a(fC)) {
+            this.f4875e = fC;
+            d();
+        }
+    }
+}

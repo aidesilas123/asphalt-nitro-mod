@@ -1,0 +1,28 @@
+###### Class com.google.common.base.k (com.google.common.base.k)
+.class public interface abstract Lcom/google/common/base/k;
+.super Ljava/lang/Object;
+.source "Predicate.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract apply(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract equals(Ljava/lang/Object;)Z
+.end method

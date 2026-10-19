@@ -1,0 +1,17 @@
+###### Class com.google.android.gms.internal.ads.zzbhz (com.google.android.gms.internal.ads.zzbhz)
+.class public interface abstract Lcom/google/android/gms/internal/ads/zzbhz;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+# interfaces
+.implements Landroid/os/IInterface;
+
+
+# virtual methods
+.method public abstract zzb(Lcom/google/android/gms/dynamic/IObjectWrapper;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method

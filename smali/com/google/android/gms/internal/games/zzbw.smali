@@ -1,0 +1,48 @@
+###### Class com.google.android.gms.internal.games.zzbw (com.google.android.gms.internal.games.zzbw)
+.class final Lcom/google/android/gms/internal/games/zzbw;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/google/android/gms/games/quest/Quests$ClaimMilestoneResult;
+
+
+# instance fields
+.field private final synthetic zzbc:Lcom/google/android/gms/common/api/Status;
+
+
+# direct methods
+.method constructor <init>(Lcom/google/android/gms/internal/games/zzbv;Lcom/google/android/gms/common/api/Status;)V
+    .registers 3
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/games/zzbw;->zzbc:Lcom/google/android/gms/common/api/Status;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getMilestone()Lcom/google/android/gms/games/quest/Milestone;
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getQuest()Lcom/google/android/gms/games/quest/Quest;
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getStatus()Lcom/google/android/gms/common/api/Status;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/games/zzbw;->zzbc:Lcom/google/android/gms/common/api/Status;
+
+    return-object v0
+.end method

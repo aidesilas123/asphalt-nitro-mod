@@ -1,0 +1,54 @@
+###### Class com.mbridge.msdk.dycreator.binding.response.SplashResData (com.mbridge.msdk.dycreator.binding.response.SplashResData)
+.class public Lcom/mbridge/msdk/dycreator/binding/response/SplashResData;
+.super Lcom/mbridge/msdk/dycreator/binding/response/base/BaseRespData;
+.source "SplashResData.java"
+
+
+# instance fields
+.field private a:Lcom/mbridge/msdk/dycreator/f/a/a;
+
+.field private b:Lcom/mbridge/msdk/dycreator/listener/action/EAction;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/dycreator/binding/response/base/BaseRespData;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getBaseViewData()Lcom/mbridge/msdk/dycreator/f/a/a;
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/dycreator/binding/response/SplashResData;->a:Lcom/mbridge/msdk/dycreator/f/a/a;
+
+    return-object v0
+.end method
+
+.method public geteAction()Lcom/mbridge/msdk/dycreator/listener/action/EAction;
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/dycreator/binding/response/SplashResData;->b:Lcom/mbridge/msdk/dycreator/listener/action/EAction;
+
+    return-object v0
+.end method
+
+.method public setBaseViewData(Lcom/mbridge/msdk/dycreator/f/a/a;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/dycreator/binding/response/SplashResData;->a:Lcom/mbridge/msdk/dycreator/f/a/a;
+
+    return-void
+.end method
+
+.method public seteAction(Lcom/mbridge/msdk/dycreator/listener/action/EAction;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/dycreator/binding/response/SplashResData;->b:Lcom/mbridge/msdk/dycreator/listener/action/EAction;
+
+    return-void
+.end method

@@ -1,0 +1,4498 @@
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel (com.mbridge.msdk.video.dynview.moffer.MOfferModel)
+.class public Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/system/NoProGuard;
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "MOfferModel"
+
+
+# instance fields
+.field private final AD_NUM:Ljava/lang/String;
+
+.field private final API_VERSION:Ljava/lang/String;
+
+.field private final APP_ID:Ljava/lang/String;
+
+.field private final CATEGORY:Ljava/lang/String;
+
+.field private final COUNTRY_CODE:Ljava/lang/String;
+
+.field private final CRT_CID:Ljava/lang/String;
+
+.field private final CRT_RID:Ljava/lang/String;
+
+.field private final DEFAULT_PATH_V3:Ljava/lang/String;
+
+.field private final DO_ACTION_IMPRESSION:I
+
+.field private final DO_ACTION_ONLY_IMPRESSION:I
+
+.field private final DY_VIEW:Ljava/lang/String;
+
+.field private final E:Ljava/lang/String;
+
+.field private final EC_ID:Ljava/lang/String;
+
+.field private final H5_T:Ljava/lang/String;
+
+.field private final H5_TYPE:Ljava/lang/String;
+
+.field private final HTTP_REQ:Ljava/lang/String;
+
+.field private final IMEI:Ljava/lang/String;
+
+.field private final I_FMD5:Ljava/lang/String;
+
+.field private final K:Ljava/lang/String;
+
+.field private final MCC:Ljava/lang/String;
+
+.field private final MNC:Ljava/lang/String;
+
+.field private final MOF:Ljava/lang/String;
+
+.field private final MOF_CALLBACK_DATE:Ljava/lang/String;
+
+.field private final MOF_DATA:Ljava/lang/String;
+
+.field private final MOF_DOMAIN:Ljava/lang/String;
+
+.field private final MOF_PARENT_ID:Ljava/lang/String;
+
+.field private final MOF_T:Ljava/lang/String;
+
+.field private final MOF_TEST_UID:Ljava/lang/String;
+
+.field private final MOF_TYPE:Ljava/lang/String;
+
+.field private final MOF_UID:Ljava/lang/String;
+
+.field private final MOF_VER:Ljava/lang/String;
+
+.field private final MORE_OFFER_CLICK:Ljava/lang/String;
+
+.field private final MORE_OFFER_DEFAULT_APP_ID:Ljava/lang/String;
+
+.field private final MORE_OFFER_DEFAULT_APP_KEY:Ljava/lang/String;
+
+.field private final MORE_OFFER_DEFAULT_UNIT_ID:Ljava/lang/String;
+
+.field private final MORE_OFFER_LOAD_FAILED:Ljava/lang/String;
+
+.field private final MORE_OFFER_LOAD_SUCCESS:Ljava/lang/String;
+
+.field private final MORE_OFFER_SHOW:Ljava/lang/String;
+
+.field private final MORE_OFFER_SHOW_FAILED:Ljava/lang/String;
+
+.field private final OFFER_ID:Ljava/lang/String;
+
+.field private final OFF_SET:Ljava/lang/String;
+
+.field private final ONE_ID:Ljava/lang/String;
+
+.field private final ONLY_IMPRESSION:Ljava/lang/String;
+
+.field private final PARENT_AD_TYPE:Ljava/lang/String;
+
+.field private final PARENT_EXCHANGE:Ljava/lang/String;
+
+.field private final PARENT_ID:Ljava/lang/String;
+
+.field private final PARENT_TEMPLATE_ID:Ljava/lang/String;
+
+.field private final PARENT_UNIT:Ljava/lang/String;
+
+.field private final PING_MODE:Ljava/lang/String;
+
+.field private final RV_TID:Ljava/lang/String;
+
+.field private final R_ID:Ljava/lang/String;
+
+.field private final SIGN:Ljava/lang/String;
+
+.field private final TNUM:Ljava/lang/String;
+
+.field private final TP_LGP:Ljava/lang/String;
+
+.field private final UC_PARENT_UNIT:Ljava/lang/String;
+
+.field private final UNIT_ID:Ljava/lang/String;
+
+.field private final VALUE_AD_NUM:Ljava/lang/String;
+
+.field private final VALUE_API_VERSION:Ljava/lang/String;
+
+.field private final VALUE_CATEGORY:Ljava/lang/String;
+
+.field private final VALUE_COUNTRY_CODE:Ljava/lang/String;
+
+.field private final VALUE_DEFAULT_VIDEO_TEMP_ID:Ljava/lang/String;
+
+.field private final VALUE_H5_TYPE:Ljava/lang/String;
+
+.field private final VALUE_HTTP_REQ:Ljava/lang/String;
+
+.field private final VALUE_MOF:Ljava/lang/String;
+
+.field private final VALUE_MOF_TYPE:Ljava/lang/String;
+
+.field private final VALUE_MOF_VER:Ljava/lang/String;
+
+.field private final VALUE_OFF_SET:Ljava/lang/String;
+
+.field private final VALUE_ONLY_IMPRESSION:Ljava/lang/String;
+
+.field private final VALUE_PING_MODE:Ljava/lang/String;
+
+.field private final VALUE_TNUM:Ljava/lang/String;
+
+.field private final V_FMD5:Ljava/lang/String;
+
+.field private admf:I
+
+.field private admftm:I
+
+.field private bitmapSuccessCount:I
+
+.field private cacheImpressionReportList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private cacheOnlyImpressionReportList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private volatile hasReportMoreOfferLoad:Z
+
+.field private volatile hasReportMoreOfferShow:Z
+
+.field private isOnlyImpShow:Z
+
+.field private isShowMoreOffer:Z
+
+.field private mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+.field private mContext:Landroid/content/Context;
+
+.field private mControlShowSize:I
+
+.field private mFromType:I
+
+.field private mImpressionId:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mLinearLayout:Landroid/widget/LinearLayout;
+
+.field private mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+.field private mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+.field private mMoreOfferShowCallBack:Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+.field private mNotifyListener:Lcom/mbridge/msdk/video/module/a/a;
+
+.field private mObservableScrollView:Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+.field private mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+.field private mRid:Ljava/lang/String;
+
+.field private mUnitId:Ljava/lang/String;
+
+.field private onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+.field private viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "1"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_MOF_TYPE:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_H5_TYPE:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_MOF:Ljava/lang/String;
+
+    const-string v1, "CN"
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_COUNTRY_CODE:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_MOF_VER:Ljava/lang/String;
+
+    const-string v1, "0"
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_OFF_SET:Ljava/lang/String;
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_CATEGORY:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_ONLY_IMPRESSION:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_PING_MODE:Ljava/lang/String;
+
+    const-string v0, "2"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_HTTP_REQ:Ljava/lang/String;
+
+    const-string v0, "20"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_AD_NUM:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_TNUM:Ljava/lang/String;
+
+    const-string v0, "2.3"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_API_VERSION:Ljava/lang/String;
+
+    const-string v0, "404"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->VALUE_DEFAULT_VIDEO_TEMP_ID:Ljava/lang/String;
+
+    const-string v0, "k"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->K:Ljava/lang/String;
+
+    const-string v0, "mof_testuid"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_TEST_UID:Ljava/lang/String;
+
+    const-string v0, "mcc"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MCC:Ljava/lang/String;
+
+    const-string v0, "mof_uid"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_UID:Ljava/lang/String;
+
+    const-string v0, "mnc"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MNC:Ljava/lang/String;
+
+    const-string v0, "rv_tid"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->RV_TID:Ljava/lang/String;
+
+    const-string v0, "ec_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->EC_ID:Ljava/lang/String;
+
+    const-string v0, "tplgp"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->TP_LGP:Ljava/lang/String;
+
+    const-string v0, "v_fmd5"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->V_FMD5:Ljava/lang/String;
+
+    const-string v0, "i_fmd5"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->I_FMD5:Ljava/lang/String;
+
+    const-string v0, "app_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->APP_ID:Ljava/lang/String;
+
+    const-string v0, "sign"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->SIGN:Ljava/lang/String;
+
+    const-string v0, "parent_unit"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PARENT_UNIT:Ljava/lang/String;
+
+    const-string v0, "e"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->E:Ljava/lang/String;
+
+    const-string v0, "mof_type"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_TYPE:Ljava/lang/String;
+
+    const-string v0, "h5_type"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->H5_TYPE:Ljava/lang/String;
+
+    const-string v0, "mof"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF:Ljava/lang/String;
+
+    const-string v0, "country_code"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->COUNTRY_CODE:Ljava/lang/String;
+
+    const-string v0, "mof_ver"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_VER:Ljava/lang/String;
+
+    const-string v0, "crt_cid"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->CRT_CID:Ljava/lang/String;
+
+    const-string v0, "crt_rid"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->CRT_RID:Ljava/lang/String;
+
+    const-string v0, "h5_t"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->H5_T:Ljava/lang/String;
+
+    const-string v0, "mof_t"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_T:Ljava/lang/String;
+
+    const-string v0, "mof_data"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_DATA:Ljava/lang/String;
+
+    const-string v0, "imei"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->IMEI:Ljava/lang/String;
+
+    const-string v0, "offer_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->OFFER_ID:Ljava/lang/String;
+
+    const-string v0, "offset"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->OFF_SET:Ljava/lang/String;
+
+    const-string v0, "category"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->CATEGORY:Ljava/lang/String;
+
+    const-string v0, "only_impression"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->ONLY_IMPRESSION:Ljava/lang/String;
+
+    const-string v0, "ping_mode"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PING_MODE:Ljava/lang/String;
+
+    const-string v0, "http_req"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->HTTP_REQ:Ljava/lang/String;
+
+    const-string v0, "ad_num"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->AD_NUM:Ljava/lang/String;
+
+    const-string v0, "tnum"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->TNUM:Ljava/lang/String;
+
+    const-string v0, "api_version"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->API_VERSION:Ljava/lang/String;
+
+    const-string v0, "mof_domain"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_DOMAIN:Ljava/lang/String;
+
+    const-string v0, "parent_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PARENT_ID:Ljava/lang/String;
+
+    const-string v0, "mof_parent_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_PARENT_ID:Ljava/lang/String;
+
+    const-string v0, "mcd"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MOF_CALLBACK_DATE:Ljava/lang/String;
+
+    const-string v0, "uc_parent_unit"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->UC_PARENT_UNIT:Ljava/lang/String;
+
+    const-string v0, "/openapi/ad/v3"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->DEFAULT_PATH_V3:Ljava/lang/String;
+
+    const-string v0, "parent_exchange"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PARENT_EXCHANGE:Ljava/lang/String;
+
+    const-string v0, "parent_ad_type"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PARENT_AD_TYPE:Ljava/lang/String;
+
+    const-string v0, "parent_template_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->PARENT_TEMPLATE_ID:Ljava/lang/String;
+
+    const-string v0, "oneId"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->ONE_ID:Ljava/lang/String;
+
+    const-string v0, "dy_view"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->DY_VIEW:Ljava/lang/String;
+
+    const-string v0, "117361"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_DEFAULT_UNIT_ID:Ljava/lang/String;
+
+    const-string v0, "92762"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_DEFAULT_APP_ID:Ljava/lang/String;
+
+    const-string v0, "936dcbdd57fe235fd7cf61c2e93da3c4"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_DEFAULT_APP_KEY:Ljava/lang/String;
+
+    const-string v0, "more offer load success"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_LOAD_SUCCESS:Ljava/lang/String;
+
+    const-string v0, "more offer load failed"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_LOAD_FAILED:Ljava/lang/String;
+
+    const-string v0, "more offer show"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_SHOW:Ljava/lang/String;
+
+    const-string v0, "more offer click"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_CLICK:Ljava/lang/String;
+
+    const-string v0, "more offer show fail"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->MORE_OFFER_SHOW_FAILED:Ljava/lang/String;
+
+    const-string v0, "unit_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->UNIT_ID:Ljava/lang/String;
+
+    const-string v0, "r_id"
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->R_ID:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->DO_ACTION_IMPRESSION:I
+
+    const/4 v1, 0x1
+
+    iput v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->DO_ACTION_ONLY_IMPRESSION:I
+
+    iput-boolean v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferLoad:Z
+
+    iput-boolean v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferShow:Z
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->bitmapSuccessCount:I
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    iput-boolean v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isOnlyImpShow:Z
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mFromType:I
+
+    new-instance v0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;
+
+    invoke-direct {v0, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+    new-instance v0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;
+
+    invoke-direct {v0, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferShowCallBack:Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    return-object p0
+.end method
+
+.method static synthetic access$100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferShow:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/e/f;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+    return-object p0
+.end method
+
+.method static synthetic access$102(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+    .registers 2
+
+    iput-boolean p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferShow:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+    .registers 1
+
+    iget p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    return p0
+.end method
+
+.method static synthetic access$1300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+    .registers 1
+
+    iget p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admftm:I
+
+    return p0
+.end method
+
+.method static synthetic access$1400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->doControllableImpOnRequest()V
+
+    return-void
+.end method
+
+.method static synthetic access$1500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferLoad:Z
+
+    return p0
+.end method
+
+.method static synthetic access$1502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+    .registers 2
+
+    iput-boolean p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->hasReportMoreOfferLoad:Z
+
+    return p1
+.end method
+
+.method static synthetic access$1600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->createMoreOfferView()V
+
+    return-void
+.end method
+
+.method static synthetic access$1700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Landroid/content/Context;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->release()V
+
+    return-void
+.end method
+
+.method static synthetic access$1900(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/module/a/a;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mNotifyListener:Lcom/mbridge/msdk/video/module/a/a;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/video/module/a/a;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->callBackClick(Lcom/mbridge/msdk/video/module/a/a;)V
+
+    return-void
+.end method
+
+.method static synthetic access$2100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+    .registers 1
+
+    iget p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->bitmapSuccessCount:I
+
+    return p0
+.end method
+
+.method static synthetic access$2108(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+    .registers 3
+
+    iget v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->bitmapSuccessCount:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->bitmapSuccessCount:I
+
+    return v0
+.end method
+
+.method static synthetic access$2200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isShowMoreOffer:Z
+
+    return p0
+.end method
+
+.method static synthetic access$2202(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+    .registers 2
+
+    iput-boolean p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isShowMoreOffer:Z
+
+    return p1
+.end method
+
+.method static synthetic access$2300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/moffer/c;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferShowCallBack:Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mObservableScrollView:Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    return-object p0
+.end method
+
+.method static synthetic access$2500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Landroid/widget/LinearLayout;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    return-object p0
+.end method
+
+.method static synthetic access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mUnitId:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$302(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mUnitId:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mRid:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static synthetic access$402(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mRid:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    return-object p0
+.end method
+
+.method static synthetic access$502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/foundation/entity/CampaignUnit;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    return-object p1
+.end method
+
+.method static synthetic access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheImpressionReportList:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic access$602(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/util/List;)Ljava/util/List;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheImpressionReportList:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method static synthetic access$700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isOnlyImpShow:Z
+
+    return p0
+.end method
+
+.method static synthetic access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheOnlyImpressionReportList:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic access$802(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/util/List;)Ljava/util/List;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheOnlyImpressionReportList:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method static synthetic access$900(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)I
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->findID(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private addLikeTextView()V
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    const-string v1, "mbridge_reward_end_card_like_tv"
+
+    invoke-direct {p0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->findID(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    if-nez v0, :cond_14
+
+    return-void
+
+    :cond_14
+    const-string v1, "#FF000000"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/high16 v1, 0x41200000    # 10.0f
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/mbridge/msdk/foundation/tools/w;->g(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "zh"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_54
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEms(I)V
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/high16 v3, 0x41f00000    # 30.0f
+
+    invoke-static {v2, v3}, Lcom/mbridge/msdk/foundation/tools/af;->b(Landroid/content/Context;F)I
+
+    move-result v2
+
+    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    const-string v1, "\u731c\u4f60\u559c\u6b22"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_59
+
+    :cond_54
+    const-string v1, "Just\nfor\nYou"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_59
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;
+
+    invoke-direct {v1, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method private buildItemView(I)Landroid/view/View;
+    .registers 7
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_6
+
+    return-object v1
+
+    :cond_6
+    const-string v2, "mbridge_reward_end_card_more_offer_item"
+
+    const-string v3, "layout"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/tools/t;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    const-string v3, "mbridge_reward_end_card_item_iv"
+
+    const-string v4, "id"
+
+    invoke-static {v2, v3, v4}, Lcom/mbridge/msdk/foundation/tools/t;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-nez v0, :cond_26
+
+    return-object v1
+
+    :cond_26
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    const-string v3, "mbridge_reward_end_card_item_title_tv"
+
+    invoke-static {v2, v3, v4}, Lcom/mbridge/msdk/foundation/tools/t;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-virtual {v3}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    invoke-direct {p0, v3, p1, v1, v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setOfferData(Ljava/util/List;ILcom/mbridge/msdk/videocommon/view/RoundImageView;Landroid/widget/TextView;)V
+
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;
+
+    invoke-direct {v1, p0, p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;ILandroid/view/View;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-object v0
+.end method
+
+.method private buildRequestParams(Lcom/mbridge/msdk/foundation/entity/CampaignEx;)V
+    .registers 30
+
+    move-object/from16 v1, p0
+
+    const-string v0, "CN"
+
+    if-nez p1, :cond_7
+
+    return-void
+
+    :cond_7
+    new-instance v2, Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-direct {v2}, Lcom/mbridge/msdk/foundation/same/net/h/d;-><init>()V
+
+    iput-object v2, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getCampaignUnitId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/out/Campaign;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getRequestIdNotice()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "mof_testuid"
+
+    invoke-static {v5, v6}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_34
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "mof_uid"
+
+    invoke-static {v5, v6}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_34
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/mbridge/msdk/foundation/controller/b;->h()Ljava/lang/String;
+
+    move-result-object v6
+
+    :try_start_3c
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_59
+
+    invoke-static {}, Lcom/mbridge/msdk/c/f;->a()Lcom/mbridge/msdk/c/f;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Lcom/mbridge/msdk/c/f;->b(Ljava/lang/String;)Lcom/mbridge/msdk/c/e;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_59
+
+    invoke-static {}, Lcom/mbridge/msdk/c/f;->a()Lcom/mbridge/msdk/c/f;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Lcom/mbridge/msdk/c/f;->b(Ljava/lang/String;)Lcom/mbridge/msdk/c/e;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/mbridge/msdk/c/e;->aH()Ljava/lang/String;
+
+    move-result-object v7
+    :try_end_58
+    .catch Ljava/lang/Exception; {:try_start_3c .. :try_end_58} :catch_59
+
+    goto :goto_5a
+
+    :catch_59
+    :cond_59
+    move-object v7, v0
+
+    :goto_5a
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v9, "mcc"
+
+    invoke-static {v8, v9}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v10
+
+    const-string v11, "mnc"
+
+    invoke-static {v10, v11}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v12
+
+    const-string v13, "rv_tid"
+
+    invoke-static {v12, v13}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v14
+
+    const-string v15, "ec_id"
+
+    invoke-static {v14, v15}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    move-object/from16 v16, v0
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v17, v15
+
+    const-string v15, "tplgp"
+
+    invoke-static {v0, v15}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v18, v0
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v19, v15
+
+    const-string v15, "v_fmd5"
+
+    invoke-static {v0, v15}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v20, v0
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v21, v15
+
+    const-string v15, "i_fmd5"
+
+    invoke-static {v0, v15}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object/from16 v22, v0
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v23
+
+    move-object/from16 v24, v15
+
+    invoke-virtual/range {v23 .. v23}, Lcom/mbridge/msdk/foundation/controller/b;->h()Ljava/lang/String;
+
+    move-result-object v15
+
+    move-object/from16 v23, v12
+
+    const-string v12, "app_id"
+
+    invoke-static {v0, v12, v15}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/mbridge/msdk/foundation/controller/b;->j()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Lcom/mbridge/msdk/foundation/tools/SameMD5;->getMD5(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v15, "sign"
+
+    invoke-static {v0, v15, v6}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    move-object/from16 v25, v15
+
+    const-string v15, ""
+
+    if-eqz v6, :cond_f3
+
+    move-object/from16 v26, v12
+
+    move-object v6, v15
+
+    goto :goto_f6
+
+    :cond_f3
+    move-object v6, v4
+
+    move-object/from16 v26, v12
+
+    :goto_f6
+    const-string v12, "r_id"
+
+    invoke-static {v0, v12, v6}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const/4 v6, 0x1
+
+    new-array v12, v6, [Ljava/lang/String;
+
+    const/16 v27, 0x0
+
+    aput-object v3, v12, v27
+
+    invoke-static {v12}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v12
+
+    const-string v6, "e"
+
+    invoke-static {v0, v6, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "mof_type"
+
+    const-string v12, "1"
+
+    invoke-static {v0, v6, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "h5_type"
+
+    invoke-static {v0, v6, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "mof"
+
+    invoke-static {v0, v6, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12d
+
+    move-object/from16 v0, v16
+
+    goto :goto_12e
+
+    :cond_12d
+    move-object v0, v7
+
+    :goto_12e
+    iget-object v6, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v7, "country_code"
+
+    invoke-static {v6, v7, v0}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "mof_ver"
+
+    invoke-static {v0, v6, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "parent_exchange"
+
+    invoke-virtual {v0, v6, v15}, Lcom/mbridge/msdk/foundation/same/net/h/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getAdType()I
+
+    move-result v0
+
+    const/16 v6, 0x5e
+
+    if-eq v0, v6, :cond_154
+
+    const/16 v6, 0x11f
+
+    if-eq v0, v6, :cond_151
+
+    move-object v0, v15
+
+    goto :goto_156
+
+    :cond_151
+    const-string v0, "interstitial_video"
+
+    goto :goto_156
+
+    :cond_154
+    const-string v0, "rewarded_video"
+
+    :goto_156
+    iget-object v6, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v7, "parent_ad_type"
+
+    invoke-virtual {v6, v7, v0}, Lcom/mbridge/msdk/foundation/same/net/h/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getReq_ext_data()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "oneId"
+
+    invoke-virtual {v0, v7, v6}, Lcom/mbridge/msdk/foundation/same/net/h/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v14}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const-string v6, "parent_template_id"
+
+    if-nez v0, :cond_176
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-virtual {v0, v6, v14}, Lcom/mbridge/msdk/foundation/same/net/h/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_17d
+
+    :cond_176
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v7, "404"
+
+    invoke-virtual {v0, v6, v7}, Lcom/mbridge/msdk/foundation/same/net/h/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_17d
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_18b
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "uc_parent_unit"
+
+    invoke-static {v0, v6, v2}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_192
+
+    :cond_18b
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v6, "parent_unit"
+
+    invoke-static {v0, v6, v2}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_192
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {v0, v11, v10}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {v0, v9, v8}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_1a1
+    const-string v0, "crt_cid"
+
+    invoke-virtual {v2, v0, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v0, "crt_rid"
+
+    invoke-virtual {v2, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object/from16 v0, v23
+
+    invoke-virtual {v2, v13, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v2, v0, v14}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object/from16 v0, v18
+
+    move-object/from16 v4, v19
+
+    invoke-virtual {v2, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object/from16 v0, v20
+
+    move-object/from16 v4, v21
+
+    invoke-virtual {v2, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    move-object/from16 v0, v22
+
+    move-object/from16 v4, v24
+
+    invoke-virtual {v2, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v0, "h5_t"
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v0, "mof_t"
+
+    invoke-virtual {v2, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+    :try_end_1d5
+    .catch Ljava/lang/Exception; {:try_start_1a1 .. :try_end_1d5} :catch_1d6
+
+    goto :goto_1da
+
+    :catch_1d6
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_1da
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v4, "mof_data"
+
+    invoke-static {v2, v4, v0}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "imei"
+
+    invoke-static {v0, v2, v15}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "offer_id"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "offset"
+
+    const-string v3, "0"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "category"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "only_impression"
+
+    invoke-static {v0, v2, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "ping_mode"
+
+    invoke-static {v0, v2, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "http_req"
+
+    const-string v3, "2"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "ad_num"
+
+    const-string v3, "20"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "tnum"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "api_version"
+
+    const-string v3, "2.3"
+
+    invoke-static {v0, v2, v3}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_251
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "92762"
+
+    move-object/from16 v3, v26
+
+    invoke-static {v0, v3, v2}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "92762936dcbdd57fe235fd7cf61c2e93da3c4"
+
+    invoke-static {v2}, Lcom/mbridge/msdk/foundation/tools/SameMD5;->getMD5(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object/from16 v3, v25
+
+    invoke-static {v0, v3, v2}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "117361"
+
+    :cond_251
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "unit_id"
+
+    invoke-static {v0, v2, v5}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v2, "dy_view"
+
+    invoke-static {v0, v2, v12}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private buildScrollViewGroup()V
+    .registers 4
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_58
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    if-eqz v0, :cond_58
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-nez v0, :cond_d
+
+    goto :goto_58
+
+    :cond_d
+    new-instance v0, Landroid/widget/LinearLayout;
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v1, -0x2
+
+    const/4 v2, -0x1
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    const/16 v2, 0x11
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setGravity(I)V
+
+    :goto_2f
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    iget-object v0, v0, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->ads:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_47
+
+    invoke-direct {p0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->buildItemView(I)Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_44
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    :cond_44
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2f
+
+    :cond_47
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mObservableScrollView:Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->addView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mObservableScrollView:Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$6;
+
+    invoke-direct {v1, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$6;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/HorizontalScrollView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    :cond_58
+    :goto_58
+    return-void
+.end method
+
+.method private callBackClick(Lcom/mbridge/msdk/video/module/a/a;)V
+    .registers 4
+
+    if-nez p1, :cond_3
+
+    return-void
+
+    :cond_3
+    const/16 v0, 0x80
+
+    const-string v1, ""
+
+    invoke-interface {p1, v0, v1}, Lcom/mbridge/msdk/video/module/a/a;->a(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method private createMoreOfferList()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    const-string v1, "mbridge_moreoffer_hls"
+
+    invoke-direct {p0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->findID(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mObservableScrollView:Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->buildScrollViewGroup()V
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->addLikeTextView()V
+
+    invoke-virtual {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->showView()V
+
+    return-void
+.end method
+
+.method private createMoreOfferView()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    if-eqz v0, :cond_23
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-nez v1, :cond_9
+
+    goto :goto_23
+
+    :cond_9
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-nez v0, :cond_10
+
+    return-void
+
+    :cond_10
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1d
+
+    return-void
+
+    :cond_1d
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setMoreOfferLayoutCallBack()V
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->createMoreOfferList()V
+
+    :cond_23
+    :goto_23
+    return-void
+.end method
+
+.method private doAdmfContorl()V
+    .registers 7
+
+    const-string v0, "admf"
+
+    const-string v1, "admftm"
+
+    :try_start_4
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-eqz v2, :cond_51
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getMoreOfferJsonData()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_13
+
+    goto :goto_51
+
+    :cond_13
+    new-instance v2, Lorg/json/JSONObject;
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-virtual {v3}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getMoreOfferJsonData()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const/4 v3, 0x0
+
+    iget v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mFromType:I
+
+    const/4 v5, 0x1
+
+    if-eq v4, v5, :cond_2f
+
+    const/4 v5, 0x2
+
+    if-eq v4, v5, :cond_28
+
+    goto :goto_35
+
+    :cond_28
+    const-string v3, "endcard_url"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    goto :goto_35
+
+    :cond_2f
+    const-string v3, "template_url"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    :goto_35
+    if-nez v3, :cond_38
+
+    return-void
+
+    :cond_38
+    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_44
+
+    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    iput v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admftm:I
+
+    :cond_44
+    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5c
+
+    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+    :try_end_50
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_50} :catch_52
+
+    goto :goto_5c
+
+    :cond_51
+    :goto_51
+    return-void
+
+    :catch_52
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MOfferModel"
+
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_5c
+    :goto_5c
+    return-void
+.end method
+
+.method private doControllableImpOnRequest()V
+    .registers 6
+
+    const-string v0, "117361"
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    if-nez v1, :cond_7
+
+    return-void
+
+    :cond_7
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    :try_start_9
+    invoke-static {v1, v3, v2, v0}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    iput-boolean v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isOnlyImpShow:Z
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    if-nez v1, :cond_17
+
+    return-void
+
+    :cond_17
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    if-lt v2, v1, :cond_27
+
+    iput v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    :cond_27
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    if-nez v1, :cond_32
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    :cond_32
+    const/4 v1, 0x0
+
+    :goto_33
+    iget v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    if-ge v1, v2, :cond_5f
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v2, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_44
+
+    goto :goto_52
+
+    :cond_44
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-static {v2, v1, v3, v0}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_52
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_52} :catch_55
+
+    :goto_52
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_33
+
+    :catch_55
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MOfferModel"
+
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_5f
+    return-void
+.end method
+
+.method private doControllableImpOnShow(I)V
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    if-nez v0, :cond_c
+
+    return-void
+
+    :cond_c
+    :try_start_c
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    iget v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    if-nez v1, :cond_1f
+
+    iget v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    add-int/2addr v1, p1
+
+    iput v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    :cond_1f
+    iget v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    if-lt v1, v0, :cond_25
+
+    iput v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    :cond_25
+    :goto_25
+    iget v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mControlShowSize:I
+
+    if-ge p1, v0, :cond_54
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_36
+
+    goto :goto_47
+
+    :cond_36
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    const/4 v1, 0x0
+
+    const-string v2, "117361"
+
+    invoke-static {v0, p1, v1, v2}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_47
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_47} :catch_4a
+
+    :goto_47
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_25
+
+    :catch_4a
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "MOfferModel"
+
+    invoke-static {v0, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_54
+    return-void
+.end method
+
+.method private findID(Ljava/lang/String;)I
+    .registers 4
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "id"
+
+    invoke-static {v0, p1, v1}, Lcom/mbridge/msdk/foundation/tools/t;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method private initData()V
+    .registers 11
+
+    const-string v0, "mcd"
+
+    const-string v1, "oneId"
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-eqz v2, :cond_b9
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-nez v3, :cond_e
+
+    goto/16 :goto_b9
+
+    :cond_e
+    invoke-direct {p0, v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->buildRequestParams(Lcom/mbridge/msdk/foundation/entity/CampaignEx;)V
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    if-nez v2, :cond_16
+
+    return-void
+
+    :cond_16
+    new-instance v3, Lcom/mbridge/msdk/video/dynview/f/b;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    invoke-direct {v3, v2}, Lcom/mbridge/msdk/video/dynview/f/b;-><init>(Landroid/content/Context;)V
+
+    new-instance v8, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;
+
+    invoke-direct {v8, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/same/net/g/d;->a()Lcom/mbridge/msdk/foundation/same/net/g/d;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/mbridge/msdk/foundation/same/net/g/d;->t:Ljava/lang/String;
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-virtual {v4}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getReq_ext_data()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_a9
+
+    :try_start_34
+    new-instance v4, Lorg/json/JSONObject;
+
+    iget-object v5, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-virtual {v5}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getReq_ext_data()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v5, "mof_domain"
+
+    invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_5c
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, "/openapi/ad/v3"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_5c
+    const-string v5, "parent_id"
+
+    invoke-virtual {v4, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_6f
+
+    iget-object v6, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    const-string v7, "mof_parent_id"
+
+    invoke-static {v6, v7, v5}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_6f
+    invoke-virtual {v4, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_7e
+
+    iget-object v6, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {v6, v1, v5}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_7e
+    invoke-virtual {v4, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_8d
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    invoke-static {v4, v0, v1}, Lcom/mbridge/msdk/foundation/same/net/g/b;->a(Lcom/mbridge/msdk/foundation/same/net/h/d;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8d
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getCampaignUnitId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v8, v0}, Lcom/mbridge/msdk/foundation/same/net/f;->setUnitId(Ljava/lang/String;)V
+    :try_end_96
+    .catch Ljava/lang/Exception; {:try_start_34 .. :try_end_96} :catch_97
+
+    goto :goto_a9
+
+    :catch_97
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MOfferModel"
+
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/same/net/g/d;->a()Lcom/mbridge/msdk/foundation/same/net/g/d;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/mbridge/msdk/foundation/same/net/g/d;->t:Ljava/lang/String;
+
+    move-object v5, v0
+
+    goto :goto_aa
+
+    :cond_a9
+    :goto_a9
+    move-object v5, v2
+
+    :goto_aa
+    const/4 v4, 0x1
+
+    iget-object v6, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mParam:Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    new-instance v7, Lcom/mbridge/msdk/foundation/same/net/b;
+
+    invoke-direct {v7}, Lcom/mbridge/msdk/foundation/same/net/b;-><init>()V
+
+    const/4 v9, 0x1
+
+    invoke-virtual/range {v3 .. v9}, Lcom/mbridge/msdk/foundation/same/net/h/b;->getLoadOrSetting(ILjava/lang/String;Lcom/mbridge/msdk/foundation/same/net/h/d;Lcom/mbridge/msdk/foundation/same/net/m;Lcom/mbridge/msdk/foundation/same/net/e;Z)V
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->doAdmfContorl()V
+
+    :cond_b9
+    :goto_b9
+    return-void
+.end method
+
+.method private initView()V
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    const-string v1, "mbridge_reward_more_offer_view"
+
+    const-string v2, "layout"
+
+    invoke-static {v0, v1, v2}, Lcom/mbridge/msdk/foundation/tools/t;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    return-void
+.end method
+
+.method private release()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheImpressionReportList:Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_a
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheImpressionReportList:Ljava/util/List;
+
+    :cond_a
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheOnlyImpressionReportList:Ljava/util/List;
+
+    if-eqz v0, :cond_13
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->cacheOnlyImpressionReportList:Ljava/util/List;
+
+    :cond_13
+    return-void
+.end method
+
+.method private setCallbackForLogicVisibleView(Landroid/view/View;I)V
+    .registers 6
+
+    if-nez p1, :cond_3
+
+    return-void
+
+    :cond_3
+    :try_start_3
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p1
+
+    div-int/lit8 p1, p1, 0x5
+
+    const/4 v2, 0x1
+
+    if-le v0, p1, :cond_1b
+
+    const/4 p1, 0x1
+
+    goto :goto_1c
+
+    :cond_1b
+    const/4 p1, 0x0
+
+    :goto_1c
+    if-eqz v1, :cond_42
+
+    if-eqz p1, :cond_42
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    if-eqz p1, :cond_54
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+    if-eqz v0, :cond_54
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_33
+
+    return-void
+
+    :cond_33
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mImpressionId:Ljava/util/List;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+    invoke-interface {p1, v2, p2}, Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;->onItemViewVisible(ZI)V
+
+    goto :goto_54
+
+    :cond_42
+    iget p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->admf:I
+
+    if-eqz p1, :cond_54
+
+    invoke-direct {p0, p2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->doControllableImpOnShow(I)V
+    :try_end_49
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_49} :catch_4a
+
+    goto :goto_54
+
+    :catch_4a
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "MOfferModel"
+
+    invoke-static {p2, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_54
+    :goto_54
+    return-void
+.end method
+
+.method private setMoreOfferLayoutCallBack()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;
+
+    invoke-direct {v1, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    invoke-virtual {v0, v1}, Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;->setMoreOfferCacheReportCallBack(Lcom/mbridge/msdk/video/dynview/moffer/b;)V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;
+
+    invoke-direct {v1, p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    invoke-virtual {v0, v1}, Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;->setMoreOfferShowFailedCallBack(Lcom/mbridge/msdk/video/dynview/moffer/d;)V
+
+    return-void
+.end method
+
+.method private setOfferData(Ljava/util/List;ILcom/mbridge/msdk/videocommon/view/RoundImageView;Landroid/widget/TextView;)V
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/mbridge/msdk/foundation/entity/CampaignEx;",
+            ">;I",
+            "Lcom/mbridge/msdk/videocommon/view/RoundImageView;",
+            "Landroid/widget/TextView;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p3, :cond_66
+
+    if-eqz p4, :cond_66
+
+    if-nez p1, :cond_7
+
+    goto :goto_66
+
+    :cond_7
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-eqz v0, :cond_66
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-nez v0, :cond_10
+
+    goto :goto_66
+
+    :cond_10
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_66
+
+    invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-nez p1, :cond_1f
+
+    return-void
+
+    :cond_1f
+    const/4 p2, 0x0
+
+    invoke-virtual {p3, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    invoke-static {p2}, Lcom/mbridge/msdk/foundation/same/c/b;->a(Landroid/content/Context;)Lcom/mbridge/msdk/foundation/same/c/b;
+
+    move-result-object p2
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/out/Campaign;->getIconUrl()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;
+
+    invoke-direct {v1, p0, p3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;-><init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/videocommon/view/RoundImageView;)V
+
+    invoke-virtual {p2, v0, v1}, Lcom/mbridge/msdk/foundation/same/c/b;->a(Ljava/lang/String;Lcom/mbridge/msdk/foundation/same/c/c;)V
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/out/Campaign;->getAppName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_66
+
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-virtual {p2}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getendcard_url()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string p3, "mof_textmod"
+
+    invoke-static {p2, p3}, Lcom/mbridge/msdk/foundation/tools/al;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_61
+
+    const-string p3, "1"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_61
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/out/Campaign;->getAppName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_66
+
+    :cond_61
+    const/16 p1, 0x8
+
+    invoke-virtual {p4, p1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :cond_66
+    :goto_66
+    return-void
+.end method
+
+
+# virtual methods
+.method public buildMofferAd(Lcom/mbridge/msdk/foundation/entity/CampaignEx;)V
+    .registers 3
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mContext:Landroid/content/Context;
+
+    if-nez v0, :cond_d
+
+    return-void
+
+    :cond_d
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMainOfferCampaignEx:Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->initView()V
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->initData()V
+
+    return-void
+.end method
+
+.method public checkViewVisiableState()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    const/4 v0, 0x0
+
+    :goto_6
+    :try_start_6
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_24
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mLinearLayout:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setCallbackForLogicVisibleView(Landroid/view/View;I)V
+    :try_end_17
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_17} :catch_1a
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6
+
+    :catch_1a
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MOfferModel"
+
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_24
+    return-void
+.end method
+
+.method public mofDestroy()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_7
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+    :cond_7
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+    if-eqz v0, :cond_d
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->onItemExposeListener:Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+    :cond_d
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferShowCallBack:Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    if-eqz v0, :cond_13
+
+    iput-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferShowCallBack:Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    :cond_13
+    return-void
+.end method
+
+.method public setFromType(I)V
+    .registers 2
+
+    iput p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mFromType:I
+
+    return-void
+.end method
+
+.method public setMoreOfferListener(Lcom/mbridge/msdk/video/dynview/e/f;Lcom/mbridge/msdk/video/module/a/a;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+    iput-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mNotifyListener:Lcom/mbridge/msdk/video/module/a/a;
+
+    return-void
+.end method
+
+.method public showView()V
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mMoreOfferLayoutListener:Lcom/mbridge/msdk/video/dynview/e/f;
+
+    if-nez v0, :cond_5
+
+    return-void
+
+    :cond_5
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->viewMofferLayout:Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    if-eqz v1, :cond_1f
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    if-nez v2, :cond_e
+
+    goto :goto_1f
+
+    :cond_e
+    invoke-interface {v0, v1, v2}, Lcom/mbridge/msdk/video/dynview/e/f;->a(Landroid/view/ViewGroup;Lcom/mbridge/msdk/foundation/entity/CampaignUnit;)V
+
+    iget-boolean v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->isOnlyImpShow:Z
+
+    if-nez v0, :cond_1e
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->mCampaignUnit:Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    const-string v3, "117361"
+
+    invoke-static {v0, v1, v2, v3}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    :cond_1e
+    return-void
+
+    :cond_1f
+    :goto_1f
+    const/4 v1, -0x1
+
+    const-string v2, "more Offer create fail"
+
+    invoke-interface {v0, v1, v2}, Lcom/mbridge/msdk/video/dynview/e/f;->a(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass1 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$1)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/video/dynview/endcard/expose/OnItemExposeListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onItemViewFirstVisible()V
+    .registers 5
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4f
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_11
+
+    goto :goto_4f
+
+    :cond_11
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_30
+
+    :try_start_1e
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    const-string v3, "117361"
+
+    invoke-static {v0, v1, v2, v3}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+    :try_end_2a
+    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_2a} :catch_2b
+
+    goto :goto_4f
+
+    :catch_2b
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_4f
+
+    :cond_30
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-nez v0, :cond_42
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v0, v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$802(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/util/List;)Ljava/util/List;
+
+    :cond_42
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_4f
+    :goto_4f
+    return-void
+.end method
+
+.method public final onItemViewVisible(ZI)V
+    .registers 7
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object p1
+
+    if-nez p1, :cond_9
+
+    return-void
+
+    :cond_9
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result p1
+
+    if-nez p1, :cond_54
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_42
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object p1
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "more offer show"
+
+    invoke-static {p1, v0, v3, v1, v2}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$102(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    :cond_42
+    :try_start_42
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    const-string v1, "117361"
+
+    invoke-static {p1, p2, v0, v1}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+    :try_end_4e
+    .catch Ljava/lang/Exception; {:try_start_42 .. :try_end_4e} :catch_4f
+
+    goto :goto_83
+
+    :catch_4f
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_83
+
+    :cond_54
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object p1
+
+    if-nez p1, :cond_66
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$602(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/util/List;)Ljava/util/List;
+
+    :cond_66
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_83
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$1;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p2
+
+    invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_83
+    :goto_83
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass2 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$2)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object p1
+
+    if-nez p1, :cond_9
+
+    return-void
+
+    :cond_9
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$2;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    const-string v1, "mbridge_reward_end_card_like_tv"
+
+    invoke-static {v0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$900(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    if-eqz p1, :cond_23
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :cond_23
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass3 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$3)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;
+.super Lcom/mbridge/msdk/video/dynview/f/a/a;
+.source "MOfferModel.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->initData()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/video/dynview/f/a/a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(ILjava/lang/String;)V
+    .registers 7
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object v0
+
+    if-nez v0, :cond_10
+
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+
+    return-void
+
+    :cond_10
+    :try_start_10
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/same/net/h/d;->c()Ljava/util/Map;
+
+    move-result-object v1
+
+    const-string v2, "unit_id"
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$302(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/same/net/h/d;->c()Ljava/util/Map;
+
+    move-result-object v1
+
+    const-string v2, "r_id"
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$402(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7e
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "more offer load failed errorCode:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "errorMsg:"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, p1, p2, v2}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    :cond_7e
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+    :try_end_85
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_85} :catch_86
+
+    goto :goto_97
+
+    :catch_86
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "MOfferModel"
+
+    invoke-static {p2, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+
+    :goto_97
+    return-void
+.end method
+
+.method public final a(Ljava/util/List;Lcom/mbridge/msdk/foundation/entity/CampaignUnit;)V
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/mbridge/msdk/foundation/same/net/d/b;",
+            ">;",
+            "Lcom/mbridge/msdk/foundation/entity/CampaignUnit;",
+            ")V"
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_da
+
+    if-nez p2, :cond_c
+
+    goto/16 :goto_da
+
+    :cond_c
+    :try_start_c
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/same/net/h/d;->c()Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v1, "unit_id"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$302(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/same/net/h/d;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/same/net/h/d;->c()Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v1, "r_id"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$402(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Ljava/lang/String;)Ljava/lang/String;
+
+    invoke-virtual {p2}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_94
+
+    invoke-virtual {p2}, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->getAds()Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    const/4 v1, 0x5
+
+    if-lt p1, v1, :cond_94
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1, p2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/foundation/entity/CampaignUnit;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+
+    move-result p1
+
+    if-lez p1, :cond_62
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+
+    move-result p1
+
+    if-ne p1, v0, :cond_62
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    :cond_62
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8e
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object p1
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object p2
+
+    const-string v1, "more offer load success"
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1, p2, v1, v2, v3}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    :cond_8e
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    goto :goto_d9
+
+    :cond_94
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_c0
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object p1
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object p2
+
+    const-string v1, "more offer load failed errorCode: -999 errorMsg: The campaign quantity less than 5."
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {p1, p2, v1, v2, v3}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$3;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1502(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    :cond_c0
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+    :try_end_c7
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c7} :catch_c8
+
+    goto :goto_d9
+
+    :catch_c8
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "MOfferModel"
+
+    invoke-static {p2, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+
+    :goto_d9
+    return-void
+
+    :cond_da
+    :goto_da
+    invoke-static {}, Lcom/mbridge/msdk/video/dynview/moffer/a;->a()Lcom/mbridge/msdk/video/dynview/moffer/a;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/a;->b()V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass4 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$4)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/video/dynview/moffer/b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setMoreOfferLayoutCallBack()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 10
+
+    :try_start_0
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v0
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_6} :catch_9d
+
+    const-string v1, "117361"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_5f
+
+    const/4 v0, 0x0
+
+    :goto_d
+    :try_start_d
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-ge v0, v4, :cond_5f
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_43
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v5}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Landroid/content/Context;
+
+    move-result-object v5
+
+    const-string v6, "more offer show"
+
+    iget-object v7, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v7}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v7
+
+    iget-object v8, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v8}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v4, v5, v6, v7, v8}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4, v3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$102(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    :cond_43
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v5}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$600(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-interface {v5, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
+
+    move-result v5
+
+    invoke-static {v4, v5, v2, v1}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_d
+
+    :cond_5f
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-nez v0, :cond_6f
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_97
+
+    :cond_6f
+    :goto_6f
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_97
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object v0
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/util/List;
+
+    move-result-object v4
+
+    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Integer;
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    invoke-static {v0, v4, v3, v1}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignUnit;IILjava/lang/String;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_6f
+
+    :cond_97
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$4;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    :try_end_9c
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_9c} :catch_9d
+
+    goto :goto_a7
+
+    :catch_9d
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "MOfferModel"
+
+    invoke-static {v1, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_a7
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass5 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$5)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/video/dynview/moffer/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setMoreOfferLayoutCallBack()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 6
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_31
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/MBridgeRelativeLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result v0
+
+    if-eqz v0, :cond_31
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1700(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "more offer show fail"
+
+    invoke-static {v0, v1, v4, v2, v3}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_31
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$5;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1800(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass6 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$6)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$6;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->buildScrollViewGroup()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$6;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .registers 3
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    const/4 p2, 0x1
+
+    if-ne p1, p2, :cond_c
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$6;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->checkViewVisiableState()V
+
+    :cond_c
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass7 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$7)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->buildItemView(I)Landroid/view/View;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:I
+
+.field final synthetic b:Landroid/view/View;
+
+.field final synthetic c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;ILandroid/view/View;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    iput p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->a:I
+
+    iput-object p3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->b:Landroid/view/View;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .registers 7
+
+    :try_start_0
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_80
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->ads:Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_80
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->ads:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_80
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignUnit;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/mbridge/msdk/foundation/entity/CampaignUnit;->ads:Ljava/util/ArrayList;
+
+    iget v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->a:I
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-eqz p1, :cond_80
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1900(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/module/a/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_43
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$1900(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/module/a/a;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2000(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/video/module/a/a;)V
+
+    :cond_43
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "more offer click"
+
+    iget-object v3, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v3}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v4}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->c:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$7;->b:Landroid/view/View;
+
+    invoke-static {v0, p1, v1, v2}, Lcom/mbridge/msdk/video/dynview/f/a;->a(Landroid/content/Context;Lcom/mbridge/msdk/foundation/entity/CampaignEx;Ljava/lang/String;Landroid/view/View;)V
+    :try_end_75
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_75} :catch_76
+
+    goto :goto_80
+
+    :catch_76
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "MOfferModel"
+
+    invoke-static {v0, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_80
+    :goto_80
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass8 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$8)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/foundation/same/c/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->setOfferData(Ljava/util/List;ILcom/mbridge/msdk/videocommon/view/RoundImageView;Landroid/widget/TextView;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+.field final synthetic b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Lcom/mbridge/msdk/videocommon/view/RoundImageView;)V
+    .registers 3
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    iput-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->a:Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onFailedLoad(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 3
+
+    return-void
+.end method
+
+.method public final onSuccessLoad(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    .registers 4
+
+    :try_start_0
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->a:Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+    if-eqz p2, :cond_18
+
+    if-eqz p1, :cond_18
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result p2
+
+    if-nez p2, :cond_18
+
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->a:Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+    const/16 v0, 0xd
+
+    invoke-virtual {p2, v0}, Lcom/mbridge/msdk/videocommon/view/RoundImageView;->setBorderRadius(I)V
+
+    iget-object p2, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->a:Lcom/mbridge/msdk/videocommon/view/RoundImageView;
+
+    invoke-virtual {p2, p1}, Lcom/mbridge/msdk/widget/MBImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    :cond_18
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2108(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2200(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_51
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2100(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)I
+
+    move-result p1
+
+    const/4 p2, 0x5
+
+    if-lt p1, p2, :cond_51
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_51
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    const/4 p2, 0x1
+
+    invoke-static {p1, p2}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2202(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;Z)Z
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$8;->b:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2300(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/moffer/c;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-interface {p1, p2}, Lcom/mbridge/msdk/video/dynview/moffer/c;->a(Ljava/util/List;)V
+    :try_end_46
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_46} :catch_47
+
+    goto :goto_51
+
+    :catch_47
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "MOfferModel"
+
+    invoke-static {p2, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_51
+    :goto_51
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.video.dynview.moffer.MOfferModel.AnonymousClass9 (com.mbridge.msdk.video.dynview.moffer.MOfferModel$9)
+.class final Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;
+.super Ljava/lang/Object;
+.source "MOfferModel.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->addLikeTextView()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .registers 5
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_2a
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/widget/HorizontalScrollView;->getVisibility()I
+
+    move-result p1
+
+    if-nez p1, :cond_20
+
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    move-result-object p1
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    goto :goto_2a
+
+    :cond_20
+    iget-object p1, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2400(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Lcom/mbridge/msdk/video/dynview/widget/ObservableScrollView;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->setVisibility(I)V
+
+    :cond_2a
+    :goto_2a
+    :try_start_2a
+    new-instance p1, Lcom/mbridge/msdk/video/dynview/h/b;
+
+    invoke-direct {p1}, Lcom/mbridge/msdk/video/dynview/h/b;-><init>()V
+
+    iget-object v0, p0, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel$9;->a:Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;->access$2500(Lcom/mbridge/msdk/video/dynview/moffer/MOfferModel;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x12c
+
+    invoke-virtual {p1, v0, v1, v2}, Lcom/mbridge/msdk/video/dynview/h/b;->a(Landroid/view/View;J)V
+    :try_end_3a
+    .catch Ljava/lang/Exception; {:try_start_2a .. :try_end_3a} :catch_3b
+
+    goto :goto_45
+
+    :catch_3b
+    move-exception p1
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "MOfferModel"
+
+    invoke-static {v0, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_45
+    return-void
+.end method

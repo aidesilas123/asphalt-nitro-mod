@@ -1,0 +1,122 @@
+###### Class com.google.android.datatransport.runtime.scheduling.persistence.EventStoreModule_SchemaVersionFactory (com.google.android.datatransport.runtime.scheduling.persistence.EventStoreModule_SchemaVersionFactory)
+.class public final Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+.super Ljava/lang/Object;
+.source "EventStoreModule_SchemaVersionFactory.java"
+
+# interfaces
+.implements Lcom/google/android/datatransport/runtime/dagger/internal/b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/android/datatransport/runtime/dagger/internal/b<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static create()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+    .registers 1
+
+    invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory$a;->a()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static schemaVersion()I
+    .registers 1
+
+    invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/l0;->c()I
+
+    move-result v0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/Integer;
+    .registers 2
+
+    invoke-static {}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;->schemaVersion()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic get()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;->a()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class com.google.android.datatransport.runtime.scheduling.persistence.EventStoreModule_SchemaVersionFactory.a (com.google.android.datatransport.runtime.scheduling.persistence.EventStoreModule_SchemaVersionFactory$a)
+.class final Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory$a;
+.super Ljava/lang/Object;
+.source "EventStoreModule_SchemaVersionFactory.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "a"
+.end annotation
+
+
+# static fields
+.field private static final a:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+
+    invoke-direct {v0}, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;-><init>()V
+
+    sput-object v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory$a;->a:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+
+    return-void
+.end method
+
+.method static synthetic a()Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+    .registers 1
+
+    sget-object v0, Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory$a;->a:Lcom/google/android/datatransport/runtime/scheduling/persistence/EventStoreModule_SchemaVersionFactory;
+
+    return-object v0
+.end method

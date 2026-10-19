@@ -1,0 +1,139 @@
+###### Class com.bytedance.sdk.openadsdk.e.a (com.bytedance.sdk.openadsdk.e.a)
+.class public abstract Lcom/bytedance/sdk/openadsdk/e/a;
+.super Ljava/lang/Object;
+.source "BaseHook.java"
+
+# interfaces
+.implements Lcom/bytedance/sdk/openadsdk/e/c;
+
+
+# instance fields
+.field private final a:Landroid/util/SparseArray;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/SparseArray<",
+            "Ljava/lang/reflect/Method;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private b:Ljava/lang/Object;
+
+
+# virtual methods
+.method public varargs a(I[Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(I[",
+            "Ljava/lang/Object;",
+            ")TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/bytedance/sdk/openadsdk/e/a;->a:Landroid/util/SparseArray;
+
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/reflect/Method;
+
+    const-string v1, "call method "
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_44
+
+    iget-object v3, p0, Lcom/bytedance/sdk/openadsdk/e/a;->b:Ljava/lang/Object;
+
+    if-nez v3, :cond_12
+
+    goto :goto_44
+
+    :cond_12
+    :try_start_12
+    instance-of v4, v3, Ljava/lang/Class;
+
+    if-eqz v4, :cond_1b
+
+    invoke-virtual {v0, v2, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_1b
+    invoke-virtual {v0, v3, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1f
+    .catchall {:try_start_12 .. :try_end_1f} :catchall_20
+
+    return-object p1
+
+    :catchall_20
+    move-exception p2
+
+    invoke-virtual {p0}, Lcom/bytedance/sdk/openadsdk/e/a;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " failed: "
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lcom/bytedance/sdk/component/utils/l;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
+
+    :cond_44
+    :goto_44
+    invoke-virtual {p0}, Lcom/bytedance/sdk/openadsdk/e/a;->a()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " failed for null "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Lcom/bytedance/sdk/component/utils/l;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v2
+.end method
+
+.method public abstract a()Ljava/lang/String;
+.end method

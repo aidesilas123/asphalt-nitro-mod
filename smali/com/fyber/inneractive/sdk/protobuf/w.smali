@@ -1,0 +1,145 @@
+###### Class com.fyber.inneractive.sdk.protobuf.w (com.fyber.inneractive.sdk.protobuf.w)
+.class public Lcom/fyber/inneractive/sdk/protobuf/w;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/fyber/inneractive/sdk/protobuf/n0;
+
+
+# static fields
+.field public static final a:Lcom/fyber/inneractive/sdk/protobuf/w;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/fyber/inneractive/sdk/protobuf/w;
+
+    invoke-direct {v0}, Lcom/fyber/inneractive/sdk/protobuf/w;-><init>()V
+
+    sput-object v0, Lcom/fyber/inneractive/sdk/protobuf/w;->a:Lcom/fyber/inneractive/sdk/protobuf/w;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Class;)Z
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    const-class v0, Lcom/fyber/inneractive/sdk/protobuf/GeneratedMessageLite;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public b(Ljava/lang/Class;)Lcom/fyber/inneractive/sdk/protobuf/m0;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/fyber/inneractive/sdk/protobuf/m0;"
+        }
+    .end annotation
+
+    const-class v0, Lcom/fyber/inneractive/sdk/protobuf/GeneratedMessageLite;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_33
+
+    :try_start_8
+    invoke-virtual {p1, v0}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/fyber/inneractive/sdk/protobuf/GeneratedMessageLite;->getDefaultInstance(Ljava/lang/Class;)Lcom/fyber/inneractive/sdk/protobuf/GeneratedMessageLite;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/fyber/inneractive/sdk/protobuf/GeneratedMessageLite;->buildMessageInfo()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/fyber/inneractive/sdk/protobuf/m0;
+    :try_end_16
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_16} :catch_17
+
+    return-object v0
+
+    :catch_17
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Unable to get message info for "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_33
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unsupported message type: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method

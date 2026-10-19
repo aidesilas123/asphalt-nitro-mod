@@ -1,0 +1,6 @@
+package d;
+
+/* JADX INFO: compiled from: MembersInjector.java */
+/* JADX INFO: loaded from: classes4.dex */
+public interface b<T> {
+}

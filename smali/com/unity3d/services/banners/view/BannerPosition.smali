@@ -1,0 +1,435 @@
+###### Class com.unity3d.services.banners.view.BannerPosition (com.unity3d.services.banners.view.BannerPosition)
+.class public final enum Lcom/unity3d/services/banners/view/BannerPosition;
+.super Ljava/lang/Enum;
+.source "BannerPosition.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/unity3d/services/banners/view/BannerPosition;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final synthetic $VALUES:[Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum BOTTOM_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum BOTTOM_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum BOTTOM_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum NONE:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum TOP_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum TOP_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+.field public static final enum TOP_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+
+# instance fields
+.field private _gravity:I
+
+.field private final _rules:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 16
+
+    new-instance v0, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [I
+
+    fill-array-data v2, :array_9e
+
+    const-string v3, "TOP_LEFT"
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0x33
+
+    invoke-direct {v0, v3, v4, v2, v5}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v0, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v2, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v3, v1, [I
+
+    fill-array-data v3, :array_a6
+
+    const-string v5, "TOP_CENTER"
+
+    const/4 v6, 0x1
+
+    const/16 v7, 0x31
+
+    invoke-direct {v2, v5, v6, v3, v7}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v2, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v3, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v5, v1, [I
+
+    fill-array-data v5, :array_ae
+
+    const-string v7, "TOP_RIGHT"
+
+    const/16 v8, 0x35
+
+    invoke-direct {v3, v7, v1, v5, v8}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v3, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v5, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v7, v1, [I
+
+    fill-array-data v7, :array_b6
+
+    const-string v8, "BOTTOM_LEFT"
+
+    const/4 v9, 0x3
+
+    const/16 v10, 0x53
+
+    invoke-direct {v5, v8, v9, v7, v10}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v5, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v7, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v8, v1, [I
+
+    fill-array-data v8, :array_be
+
+    const-string v10, "BOTTOM_CENTER"
+
+    const/4 v11, 0x4
+
+    const/16 v12, 0x51
+
+    invoke-direct {v7, v10, v11, v8, v12}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v7, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v8, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v10, v1, [I
+
+    fill-array-data v10, :array_c6
+
+    const-string v12, "BOTTOM_RIGHT"
+
+    const/4 v13, 0x5
+
+    const/16 v14, 0x55
+
+    invoke-direct {v8, v12, v13, v10, v14}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v8, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v10, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v12, v6, [I
+
+    const/16 v14, 0xd
+
+    aput v14, v12, v4
+
+    const-string v14, "CENTER"
+
+    const/4 v15, 0x6
+
+    const/16 v13, 0x11
+
+    invoke-direct {v10, v14, v15, v12, v13}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v10, Lcom/unity3d/services/banners/view/BannerPosition;->CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-instance v12, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    new-array v13, v4, [I
+
+    const-string v14, "NONE"
+
+    const/4 v15, 0x7
+
+    invoke-direct {v12, v14, v15, v13, v4}, Lcom/unity3d/services/banners/view/BannerPosition;-><init>(Ljava/lang/String;I[II)V
+
+    sput-object v12, Lcom/unity3d/services/banners/view/BannerPosition;->NONE:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    const/16 v13, 0x8
+
+    new-array v13, v13, [Lcom/unity3d/services/banners/view/BannerPosition;
+
+    aput-object v0, v13, v4
+
+    aput-object v2, v13, v6
+
+    aput-object v3, v13, v1
+
+    aput-object v5, v13, v9
+
+    aput-object v7, v13, v11
+
+    const/4 v0, 0x5
+
+    aput-object v8, v13, v0
+
+    const/4 v0, 0x6
+
+    aput-object v10, v13, v0
+
+    aput-object v12, v13, v15
+
+    sput-object v13, Lcom/unity3d/services/banners/view/BannerPosition;->$VALUES:[Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-void
+
+    nop
+
+    :array_9e
+    .array-data 4
+        0xa
+        0x9
+    .end array-data
+
+    :array_a6
+    .array-data 4
+        0xa
+        0xe
+    .end array-data
+
+    :array_ae
+    .array-data 4
+        0xa
+        0xb
+    .end array-data
+
+    :array_b6
+    .array-data 4
+        0xc
+        0x9
+    .end array-data
+
+    :array_be
+    .array-data 4
+        0xc
+        0xe
+    .end array-data
+
+    :array_c6
+    .array-data 4
+        0xc
+        0xb
+    .end array-data
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I[II)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([II)V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lcom/unity3d/services/banners/view/BannerPosition;->_rules:[I
+
+    iput p4, p0, Lcom/unity3d/services/banners/view/BannerPosition;->_gravity:I
+
+    return-void
+.end method
+
+.method public static fromString(Ljava/lang/String;)Lcom/unity3d/services/banners/view/BannerPosition;
+    .registers 2
+
+    if-eqz p0, :cond_5b
+
+    const-string v0, "none"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    goto :goto_5b
+
+    :cond_b
+    const-string v0, "topleft"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_16
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_16
+    const-string v0, "topright"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_21
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_21
+    const-string v0, "topcenter"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2c
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->TOP_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_2c
+    const-string v0, "bottomleft"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_37
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_LEFT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_37
+    const-string v0, "bottomright"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_42
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_RIGHT:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_42
+    const-string v0, "bottomcenter"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4d
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->BOTTOM_CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_4d
+    const-string v0, "center"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_58
+
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->CENTER:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_58
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->NONE:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+
+    :cond_5b
+    :goto_5b
+    sget-object p0, Lcom/unity3d/services/banners/view/BannerPosition;->NONE:Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/unity3d/services/banners/view/BannerPosition;
+    .registers 2
+
+    const-class v0, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcom/unity3d/services/banners/view/BannerPosition;
+    .registers 1
+
+    sget-object v0, Lcom/unity3d/services/banners/view/BannerPosition;->$VALUES:[Lcom/unity3d/services/banners/view/BannerPosition;
+
+    invoke-virtual {v0}, [Lcom/unity3d/services/banners/view/BannerPosition;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/unity3d/services/banners/view/BannerPosition;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public addLayoutRules(Landroid/widget/RelativeLayout$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
+    .registers 6
+
+    iget-object v0, p0, Lcom/unity3d/services/banners/view/BannerPosition;->_rules:[I
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_4
+    if-ge v2, v1, :cond_e
+
+    aget v3, v0, v2
+
+    invoke-virtual {p1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_4
+
+    :cond_e
+    return-object p1
+.end method
+
+.method public getGravity()I
+    .registers 2
+
+    iget v0, p0, Lcom/unity3d/services/banners/view/BannerPosition;->_gravity:I
+
+    return v0
+.end method

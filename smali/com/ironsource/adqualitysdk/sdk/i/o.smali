@@ -1,0 +1,23 @@
+###### Class com.json.adqualitysdk.sdk.i.o (com.ironsource.adqualitysdk.sdk.i.o)
+.class public final Lcom/ironsource/adqualitysdk/sdk/i/o;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field public static ﻛ:I
+
+.field public static final ﾇ:Ljava/lang/Object;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcom/ironsource/adqualitysdk/sdk/i/o;->ﾇ:Ljava/lang/Object;
+
+    return-void
+.end method

@@ -1,0 +1,56 @@
+package com.mbridge.msdk.thrid.okhttp;
+
+import com.json.mediationsdk.logger.IronSourceError;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.util.Objects;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class Route {
+    final Address address;
+    final InetSocketAddress inetSocketAddress;
+    final Proxy proxy;
+
+    public Route(Address address, Proxy proxy, InetSocketAddress inetSocketAddress) {
+        Objects.requireNonNull(address, "address == null");
+        Objects.requireNonNull(proxy, "proxy == null");
+        Objects.requireNonNull(inetSocketAddress, "inetSocketAddress == null");
+        this.address = address;
+        this.proxy = proxy;
+        this.inetSocketAddress = inetSocketAddress;
+    }
+
+    public Address address() {
+        return this.address;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof Route) {
+            Route route = (Route) obj;
+            if (route.address.equals(this.address) && route.proxy.equals(this.proxy) && route.inetSocketAddress.equals(this.inetSocketAddress)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        return ((((IronSourceError.ERROR_NON_EXISTENT_INSTANCE + this.address.hashCode()) * 31) + this.proxy.hashCode()) * 31) + this.inetSocketAddress.hashCode();
+    }
+
+    public Proxy proxy() {
+        return this.proxy;
+    }
+
+    public boolean requiresTunnel() {
+        return this.address.sslSocketFactory != null && this.proxy.type() == Proxy.Type.HTTP;
+    }
+
+    public InetSocketAddress socketAddress() {
+        return this.inetSocketAddress;
+    }
+
+    public String toString() {
+        return "Route{" + this.inetSocketAddress + "}";
+    }
+}

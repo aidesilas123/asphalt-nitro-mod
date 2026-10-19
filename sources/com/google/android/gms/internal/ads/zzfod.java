@@ -1,0 +1,13 @@
+package com.google.android.gms.internal.ads;
+
+import android.content.Context;
+import com.google.android.gms.common.internal.ShowFirstParty;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads@@22.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
+@ShowFirstParty
+public final class zzfod {
+    public static zzfpm zza(Context context, int i, int i2, String str, String str2, String str3, zzfnt zzfntVar) {
+        return new zzfoc(context, 1, i2, str, str2, "1", zzfntVar).zzb(50000);
+    }
+}

@@ -1,0 +1,202 @@
+###### Class com.google.android.gms.internal.ads.zzeqn (com.google.android.gms.internal.ads.zzeqn)
+.class public final Lcom/google/android/gms/internal/ads/zzeqn;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzeuy;
+
+
+# instance fields
+.field private final zza:Lcom/google/android/gms/internal/ads/zzgbl;
+
+.field private final zzb:Landroid/content/Context;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/ads/zzgbl;Landroid/content/Context;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzeqn;->zza:Lcom/google/android/gms/internal/ads/zzgbl;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zzeqn;->zzb:Landroid/content/Context;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()I
+    .registers 2
+
+    const/16 v0, 0xd
+
+    return v0
+.end method
+
+.method public final zzb()Lcom/google/common/util/concurrent/h0;
+    .registers 3
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzeqm;
+
+    invoke-direct {v0, p0}, Lcom/google/android/gms/internal/ads/zzeqm;-><init>(Lcom/google/android/gms/internal/ads/zzeqn;)V
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzeqn;->zza:Lcom/google/android/gms/internal/ads/zzgbl;
+
+    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/ads/zzgbl;->zzb(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/h0;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method final synthetic zzc()Lcom/google/android/gms/internal/ads/zzeqo;
+    .registers 13
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzeqn;->zzb:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    invoke-virtual {v0}, Landroid/media/AudioManager;->getMode()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/media/AudioManager;->isMusicActive()Z
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/media/AudioManager;->isSpeakerphoneOn()Z
+
+    move-result v4
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
+
+    move-result v5
+
+    sget-object v6, Lcom/google/android/gms/internal/ads/zzbdc;->zzki:Lcom/google/android/gms/internal/ads/zzbcu;
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzba;->zzc()Lcom/google/android/gms/internal/ads/zzbda;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v6}, Lcom/google/android/gms/internal/ads/zzbda;->zza(Lcom/google/android/gms/internal/ads/zzbcu;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/Boolean;
+
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-eqz v6, :cond_3c
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzt;->zzq()Lcom/google/android/gms/ads/internal/util/zzab;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v0}, Lcom/google/android/gms/ads/internal/util/zzab;->zzk(Landroid/media/AudioManager;)I
+
+    move-result v6
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
+
+    move-result v1
+
+    move v7, v1
+
+    goto :goto_3d
+
+    :cond_3c
+    const/4 v6, -0x1
+
+    :goto_3d
+    invoke-virtual {v0}, Landroid/media/AudioManager;->getRingerMode()I
+
+    move-result v8
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->getStreamVolume(I)I
+
+    move-result v9
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzt;->zzr()Lcom/google/android/gms/ads/internal/util/zzac;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/util/zzac;->zza()F
+
+    move-result v10
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/zzt;->zzr()Lcom/google/android/gms/ads/internal/util/zzac;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/android/gms/ads/internal/util/zzac;->zze()Z
+
+    move-result v11
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzeqo;
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v11}, Lcom/google/android/gms/internal/ads/zzeqo;-><init>(IZZIIIIIFZ)V
+
+    return-object v0
+.end method
+
+###### Class com.google.android.gms.internal.ads.zzeqm (com.google.android.gms.internal.ads.zzeqm)
+.class public final synthetic Lcom/google/android/gms/internal/ads/zzeqm;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/ads/zzeqn;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzeqn;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzeqm;->zza:Lcom/google/android/gms/internal/ads/zzeqn;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzeqm;->zza:Lcom/google/android/gms/internal/ads/zzeqn;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzeqn;->zzc()Lcom/google/android/gms/internal/ads/zzeqo;
+
+    move-result-object v0
+
+    return-object v0
+.end method

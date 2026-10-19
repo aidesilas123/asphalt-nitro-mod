@@ -1,0 +1,308 @@
+###### Class com.json.rc (com.ironsource.rc)
+.class public final Lcom/ironsource/rc;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/ironsource/rc$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0004\u0018\u0000 \u00042\u00020\u0001:\u0001\u0004B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "Lcom/ironsource/rc;",
+        "",
+        "<init>",
+        "()V",
+        "a",
+        "mediationsdk_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Lcom/ironsource/rc$a;
+
+.field private static final b:[Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 74
+
+    new-instance v0, Lcom/ironsource/rc$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/ironsource/rc$a;-><init>(Lkotlin/jvm/internal/n;)V
+
+    sput-object v0, Lcom/ironsource/rc;->a:Lcom/ironsource/rc$a;
+
+    const-string v2, "tkv"
+
+    const-string v3, "apm"
+
+    const-string v4, "apor"
+
+    const-string v5, "apv"
+
+    const-string v6, "bat"
+
+    const-string v7, "bid"
+
+    const-string v8, "chrgt"
+
+    const-string v9, "cncdn"
+
+    const-string v10, "connt"
+
+    const-string v11, "apilvl"
+
+    const-string v12, "scrnh"
+
+    const-string v13, "dfs"
+
+    const-string v14, "lang"
+
+    const-string v15, "make"
+
+    const-string v16, "model"
+
+    const-string v17, "os"
+
+    const-string v18, "osv"
+
+    const-string v19, "osvf"
+
+    const-string v20, "mem"
+
+    const-string v21, "sscl"
+
+    const-string v22, "vol"
+
+    const-string v23, "scrnw"
+
+    const-string v24, "tai"
+
+    const-string v25, "imm"
+
+    const-string v26, "instlr"
+
+    const-string v27, "chrg"
+
+    const-string v28, "lat"
+
+    const-string v29, "tsu"
+
+    const-string v30, "md"
+
+    const-string v31, "medv"
+
+    const-string v32, "ompv"
+
+    const-string v33, "omv"
+
+    const-string v34, "owp"
+
+    const-string v35, "plugin"
+
+    const-string v36, "ptype"
+
+    const-string v37, "rt"
+
+    const-string v38, "sdcrd"
+
+    const-string v39, "sdia"
+
+    const-string v40, "sdra"
+
+    const-string v41, "sdkv"
+
+    const-string v42, "simop"
+
+    const-string v43, "ua"
+
+    const-string v44, "usid"
+
+    const-string v45, "gaid"
+
+    const-string v46, "apky"
+
+    const-string v47, "auid"
+
+    const-string v48, "cnst"
+
+    const-string v49, "gpi"
+
+    const-string v50, "icc"
+
+    const-string v51, "ltime"
+
+    const-string v52, "lpm"
+
+    const-string v53, "carrier"
+
+    const-string v54, "mcc"
+
+    const-string v55, "mnc"
+
+    const-string v56, "sid"
+
+    const-string v57, "tkgp"
+
+    const-string v58, "tz"
+
+    const-string v59, "tzoff"
+
+    const-string v60, "vpn"
+
+    const-string v61, "debug"
+
+    const-string v62, "ctgp"
+
+    const-string v63, "sdba"
+
+    const-string v64, "tca"
+
+    const-string v65, "tcs"
+
+    const-string v66, "asid"
+
+    const-string v67, "itp"
+
+    const-string v68, "stid"
+
+    const-string v69, "eof"
+
+    const-string v70, "do"
+
+    const-string v71, "mt"
+
+    const-string v72, "cte"
+
+    const-string v73, "cmpid"
+
+    filled-new-array/range {v2 .. v73}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/ironsource/rc;->b:[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static final synthetic a()[Ljava/lang/String;
+    .registers 1
+
+    sget-object v0, Lcom/ironsource/rc;->b:[Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public static final b()[Ljava/lang/String;
+    .registers 1
+
+    sget-object v0, Lcom/ironsource/rc;->a:Lcom/ironsource/rc$a;
+
+    invoke-virtual {v0}, Lcom/ironsource/rc$a;->a()[Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class com.json.rc.Companion (com.ironsource.rc$a)
+.class public final Lcom/ironsource/rc$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/ironsource/rc;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0002\u0008\u0008\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\n\u0010\tR&\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00028\u0006X\u0087\u0004\u00a2\u0006\u0012\n\u0004\u0008\u0004\u0010\u0005\u0012\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\u0006\u0010\u0007\u00a8\u0006\u000b"
+    }
+    d2 = {
+        "Lcom/ironsource/rc$a;",
+        "",
+        "",
+        "",
+        "baseKeys",
+        "[Ljava/lang/String;",
+        "a",
+        "()[Ljava/lang/String;",
+        "getBaseKeys$annotations",
+        "()V",
+        "<init>",
+        "mediationsdk_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/n;)V
+    .registers 2
+
+    invoke-direct {p0}, Lcom/ironsource/rc$a;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic b()V
+    .registers 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()[Ljava/lang/String;
+    .registers 2
+
+    invoke-static {}, Lcom/ironsource/rc;->a()[Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

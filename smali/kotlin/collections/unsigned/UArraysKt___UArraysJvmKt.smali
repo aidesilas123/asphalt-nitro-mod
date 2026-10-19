@@ -1,0 +1,1787 @@
+###### Class kotlin.collections.unsigned.UArraysKt___UArraysJvmKt (kotlin.collections.unsigned.UArraysKt___UArraysJvmKt)
+.class Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;
+.super Ljava/lang/Object;
+.source "_UArraysJvm.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000h\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008 \n\u0002\u0010\u000f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0018\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\t\u001a\u0019\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u0001*\u00020\u0003H\u0007\u00a2\u0006\u0004\u0008\u0004\u0010\u0005\u001a\u0019\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0001*\u00020\u0007H\u0007\u00a2\u0006\u0004\u0008\u0008\u0010\t\u001a\u0019\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u00020\n0\u0001*\u00020\u000bH\u0007\u00a2\u0006\u0004\u0008\u000c\u0010\r\u001a\u0019\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u00020\u000e0\u0001*\u00020\u000fH\u0007\u00a2\u0006\u0004\u0008\u0010\u0010\u0011\u001a/\u0010\u0012\u001a\u00020\u0013*\u00020\u00032\u0006\u0010\u0014\u001a\u00020\u00022\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u00132\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0013H\u0007\u00a2\u0006\u0004\u0008\u0017\u0010\u0018\u001a/\u0010\u0012\u001a\u00020\u0013*\u00020\u00072\u0006\u0010\u0014\u001a\u00020\u00062\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u00132\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0013H\u0007\u00a2\u0006\u0004\u0008\u0019\u0010\u001a\u001a/\u0010\u0012\u001a\u00020\u0013*\u00020\u000b2\u0006\u0010\u0014\u001a\u00020\n2\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u00132\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0013H\u0007\u00a2\u0006\u0004\u0008\u001b\u0010\u001c\u001a/\u0010\u0012\u001a\u00020\u0013*\u00020\u000f2\u0006\u0010\u0014\u001a\u00020\u000e2\u0008\u0008\u0002\u0010\u0015\u001a\u00020\u00132\u0008\u0008\u0002\u0010\u0016\u001a\u00020\u0013H\u0007\u00a2\u0006\u0004\u0008\u001d\u0010\u001e\u001a\u001c\u0010\u001f\u001a\u00020\u0002*\u00020\u00032\u0006\u0010 \u001a\u00020\u0013H\u0087\u0008\u00a2\u0006\u0004\u0008!\u0010\"\u001a\u001c\u0010\u001f\u001a\u00020\u0006*\u00020\u00072\u0006\u0010 \u001a\u00020\u0013H\u0087\u0008\u00a2\u0006\u0004\u0008#\u0010$\u001a\u001c\u0010\u001f\u001a\u00020\n*\u00020\u000b2\u0006\u0010 \u001a\u00020\u0013H\u0087\u0008\u00a2\u0006\u0004\u0008%\u0010&\u001a\u001c\u0010\u001f\u001a\u00020\u000e*\u00020\u000f2\u0006\u0010 \u001a\u00020\u0013H\u0087\u0008\u00a2\u0006\u0004\u0008\'\u0010(\u001a\u0015\u0010)\u001a\u0004\u0018\u00010\u0002*\u00020\u0003H\u0007\u00a2\u0006\u0004\u0008*\u0010+\u001a\u0015\u0010)\u001a\u0004\u0018\u00010\u0006*\u00020\u0007H\u0007\u00a2\u0006\u0004\u0008,\u0010-\u001a\u0015\u0010)\u001a\u0004\u0018\u00010\n*\u00020\u000bH\u0007\u00a2\u0006\u0004\u0008.\u0010/\u001a\u0015\u0010)\u001a\u0004\u0018\u00010\u000e*\u00020\u000fH\u0007\u00a2\u0006\u0004\u00080\u00101\u001a=\u00102\u001a\u0004\u0018\u00010\u0002\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u00032\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u00087\u00108\u001a=\u00102\u001a\u0004\u0018\u00010\u0006\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u00072\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u00089\u0010:\u001a=\u00102\u001a\u0004\u0018\u00010\n\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u000b2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008;\u0010<\u001a=\u00102\u001a\u0004\u0018\u00010\u000e\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u000f2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008=\u0010>\u001a1\u0010?\u001a\u0004\u0018\u00010\u0002*\u00020\u00032\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u00020Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u0002`BH\u0007\u00a2\u0006\u0004\u0008C\u0010D\u001a1\u0010?\u001a\u0004\u0018\u00010\u0006*\u00020\u00072\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u00060Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u0006`BH\u0007\u00a2\u0006\u0004\u0008E\u0010F\u001a1\u0010?\u001a\u0004\u0018\u00010\n*\u00020\u000b2\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\n0Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\n`BH\u0007\u00a2\u0006\u0004\u0008G\u0010H\u001a1\u0010?\u001a\u0004\u0018\u00010\u000e*\u00020\u000f2\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u000e0Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u000e`BH\u0007\u00a2\u0006\u0004\u0008I\u0010J\u001a\u0015\u0010K\u001a\u0004\u0018\u00010\u0002*\u00020\u0003H\u0007\u00a2\u0006\u0004\u0008L\u0010+\u001a\u0015\u0010K\u001a\u0004\u0018\u00010\u0006*\u00020\u0007H\u0007\u00a2\u0006\u0004\u0008M\u0010-\u001a\u0015\u0010K\u001a\u0004\u0018\u00010\n*\u00020\u000bH\u0007\u00a2\u0006\u0004\u0008N\u0010/\u001a\u0015\u0010K\u001a\u0004\u0018\u00010\u000e*\u00020\u000fH\u0007\u00a2\u0006\u0004\u0008O\u00101\u001a=\u0010P\u001a\u0004\u0018\u00010\u0002\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u00032\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008Q\u00108\u001a=\u0010P\u001a\u0004\u0018\u00010\u0006\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u00072\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008R\u0010:\u001a=\u0010P\u001a\u0004\u0018\u00010\n\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u000b2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008S\u0010<\u001a=\u0010P\u001a\u0004\u0018\u00010\u000e\"\u000e\u0008\u0000\u00103*\u0008\u0012\u0004\u0012\u0002H304*\u00020\u000f2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u0002H306H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008T\u0010>\u001a1\u0010U\u001a\u0004\u0018\u00010\u0002*\u00020\u00032\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u00020Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u0002`BH\u0007\u00a2\u0006\u0004\u0008V\u0010D\u001a1\u0010U\u001a\u0004\u0018\u00010\u0006*\u00020\u00072\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u00060Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u0006`BH\u0007\u00a2\u0006\u0004\u0008W\u0010F\u001a1\u0010U\u001a\u0004\u0018\u00010\n*\u00020\u000b2\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\n0Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\n`BH\u0007\u00a2\u0006\u0004\u0008X\u0010H\u001a1\u0010U\u001a\u0004\u0018\u00010\u000e*\u00020\u000f2\u001a\u0010@\u001a\u0016\u0012\u0006\u0008\u0000\u0012\u00020\u000e0Aj\n\u0012\u0006\u0008\u0000\u0012\u00020\u000e`BH\u0007\u00a2\u0006\u0004\u0008Y\u0010J\u001a+\u0010Z\u001a\u00020[*\u00020\u00032\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020[06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\\\u0010]\u001a+\u0010Z\u001a\u00020^*\u00020\u00032\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020^06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008_\u0010`\u001a+\u0010Z\u001a\u00020[*\u00020\u00072\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020[06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\\\u0010a\u001a+\u0010Z\u001a\u00020^*\u00020\u00072\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020^06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008_\u0010b\u001a+\u0010Z\u001a\u00020[*\u00020\u000b2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020[06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\\\u0010c\u001a+\u0010Z\u001a\u00020^*\u00020\u000b2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020^06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008_\u0010d\u001a+\u0010Z\u001a\u00020[*\u00020\u000f2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020[06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\\\u0010e\u001a+\u0010Z\u001a\u00020^*\u00020\u000f2\u0012\u00105\u001a\u000e\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00020^06H\u0087\u0008\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008_\u0010f\u0082\u0002\u0007\n\u0005\u0008\u009920\u0001\u00a8\u0006g"
+    }
+    d2 = {
+        "asList",
+        "",
+        "Lkotlin/UByte;",
+        "Lkotlin/UByteArray;",
+        "asList-GBYM_sE",
+        "([B)Ljava/util/List;",
+        "Lkotlin/UInt;",
+        "Lkotlin/UIntArray;",
+        "asList--ajY-9A",
+        "([I)Ljava/util/List;",
+        "Lkotlin/ULong;",
+        "Lkotlin/ULongArray;",
+        "asList-QwZRm1k",
+        "([J)Ljava/util/List;",
+        "Lkotlin/UShort;",
+        "Lkotlin/UShortArray;",
+        "asList-rL5Bavg",
+        "([S)Ljava/util/List;",
+        "binarySearch",
+        "",
+        "element",
+        "fromIndex",
+        "toIndex",
+        "binarySearch-WpHrYlw",
+        "([BBII)I",
+        "binarySearch-2fe2U9s",
+        "([IIII)I",
+        "binarySearch-K6DWlUc",
+        "([JJII)I",
+        "binarySearch-EtDCXyQ",
+        "([SSII)I",
+        "elementAt",
+        "index",
+        "elementAt-PpDY95g",
+        "([BI)B",
+        "elementAt-qFRl0hI",
+        "([II)I",
+        "elementAt-r7IrZao",
+        "([JI)J",
+        "elementAt-nggk6HY",
+        "([SI)S",
+        "max",
+        "max-GBYM_sE",
+        "([B)Lkotlin/UByte;",
+        "max--ajY-9A",
+        "([I)Lkotlin/UInt;",
+        "max-QwZRm1k",
+        "([J)Lkotlin/ULong;",
+        "max-rL5Bavg",
+        "([S)Lkotlin/UShort;",
+        "maxBy",
+        "R",
+        "",
+        "selector",
+        "Lkotlin/Function1;",
+        "maxBy-JOV_ifY",
+        "([BLkotlin/jvm/functions/Function1;)Lkotlin/UByte;",
+        "maxBy-jgv0xPQ",
+        "([ILkotlin/jvm/functions/Function1;)Lkotlin/UInt;",
+        "maxBy-MShoTSo",
+        "([JLkotlin/jvm/functions/Function1;)Lkotlin/ULong;",
+        "maxBy-xTcfx_M",
+        "([SLkotlin/jvm/functions/Function1;)Lkotlin/UShort;",
+        "maxWith",
+        "comparator",
+        "Ljava/util/Comparator;",
+        "Lkotlin/Comparator;",
+        "maxWith-XMRcp5o",
+        "([BLjava/util/Comparator;)Lkotlin/UByte;",
+        "maxWith-YmdZ_VM",
+        "([ILjava/util/Comparator;)Lkotlin/UInt;",
+        "maxWith-zrEWJaI",
+        "([JLjava/util/Comparator;)Lkotlin/ULong;",
+        "maxWith-eOHTfZs",
+        "([SLjava/util/Comparator;)Lkotlin/UShort;",
+        "min",
+        "min-GBYM_sE",
+        "min--ajY-9A",
+        "min-QwZRm1k",
+        "min-rL5Bavg",
+        "minBy",
+        "minBy-JOV_ifY",
+        "minBy-jgv0xPQ",
+        "minBy-MShoTSo",
+        "minBy-xTcfx_M",
+        "minWith",
+        "minWith-XMRcp5o",
+        "minWith-YmdZ_VM",
+        "minWith-zrEWJaI",
+        "minWith-eOHTfZs",
+        "sumOf",
+        "Ljava/math/BigDecimal;",
+        "sumOfBigDecimal",
+        "([BLkotlin/jvm/functions/Function1;)Ljava/math/BigDecimal;",
+        "Ljava/math/BigInteger;",
+        "sumOfBigInteger",
+        "([BLkotlin/jvm/functions/Function1;)Ljava/math/BigInteger;",
+        "([ILkotlin/jvm/functions/Function1;)Ljava/math/BigDecimal;",
+        "([ILkotlin/jvm/functions/Function1;)Ljava/math/BigInteger;",
+        "([JLkotlin/jvm/functions/Function1;)Ljava/math/BigDecimal;",
+        "([JLkotlin/jvm/functions/Function1;)Ljava/math/BigInteger;",
+        "([SLkotlin/jvm/functions/Function1;)Ljava/math/BigDecimal;",
+        "([SLkotlin/jvm/functions/Function1;)Ljava/math/BigInteger;",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x31
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static final asList--ajY-9A([I)Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([I)",
+            "Ljava/util/List<",
+            "Lkotlin/UInt;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asList"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;
+
+    invoke-direct {v0, p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;-><init>([I)V
+
+    return-object v0
+.end method
+
+.method public static final asList-GBYM_sE([B)Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([B)",
+            "Ljava/util/List<",
+            "Lkotlin/UByte;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asList"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;
+
+    invoke-direct {v0, p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;-><init>([B)V
+
+    return-object v0
+.end method
+
+.method public static final asList-QwZRm1k([J)Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([J)",
+            "Ljava/util/List<",
+            "Lkotlin/ULong;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asList"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;
+
+    invoke-direct {v0, p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;-><init>([J)V
+
+    return-object v0
+.end method
+
+.method public static final asList-rL5Bavg([S)Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([S)",
+            "Ljava/util/List<",
+            "Lkotlin/UShort;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asList"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;
+
+    invoke-direct {v0, p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;-><init>([S)V
+
+    return-object v0
+.end method
+
+.method public static final binarySearch-2fe2U9s([IIII)I
+    .registers 6
+
+    const-string v0, "$this$binarySearch"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/collections/c;->a:Lkotlin/collections/c$a;
+
+    invoke-static {p0}, Lkotlin/UIntArray;->getSize-impl([I)I
+
+    move-result v1
+
+    invoke-virtual {v0, p2, p3, v1}, Lkotlin/collections/c$a;->d(III)V
+
+    add-int/lit8 p3, p3, -0x1
+
+    :goto_10
+    if-gt p2, p3, :cond_27
+
+    add-int v0, p2, p3
+
+    ushr-int/lit8 v0, v0, 0x1
+
+    aget v1, p0, v0
+
+    invoke-static {v1, p1}, Lkotlin/UnsignedKt;->uintCompare(II)I
+
+    move-result v1
+
+    if-gez v1, :cond_21
+
+    add-int/lit8 p2, v0, 0x1
+
+    goto :goto_10
+
+    :cond_21
+    if-lez v1, :cond_26
+
+    add-int/lit8 p3, v0, -0x1
+
+    goto :goto_10
+
+    :cond_26
+    return v0
+
+    :cond_27
+    add-int/lit8 p2, p2, 0x1
+
+    neg-int p0, p2
+
+    return p0
+.end method
+
+.method public static synthetic binarySearch-2fe2U9s$default([IIIIILjava/lang/Object;)I
+    .registers 6
+
+    and-int/lit8 p5, p4, 0x2
+
+    if-eqz p5, :cond_5
+
+    const/4 p2, 0x0
+
+    :cond_5
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_d
+
+    invoke-static {p0}, Lkotlin/UIntArray;->getSize-impl([I)I
+
+    move-result p3
+
+    :cond_d
+    invoke-static {p0, p1, p2, p3}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->binarySearch-2fe2U9s([IIII)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final binarySearch-EtDCXyQ([SSII)I
+    .registers 6
+
+    const-string v0, "$this$binarySearch"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/collections/c;->a:Lkotlin/collections/c$a;
+
+    invoke-static {p0}, Lkotlin/UShortArray;->getSize-impl([S)I
+
+    move-result v1
+
+    invoke-virtual {v0, p2, p3, v1}, Lkotlin/collections/c$a;->d(III)V
+
+    const v0, 0xffff
+
+    and-int/2addr p1, v0
+
+    add-int/lit8 p3, p3, -0x1
+
+    :goto_14
+    if-gt p2, p3, :cond_2b
+
+    add-int v0, p2, p3
+
+    ushr-int/lit8 v0, v0, 0x1
+
+    aget-short v1, p0, v0
+
+    invoke-static {v1, p1}, Lkotlin/UnsignedKt;->uintCompare(II)I
+
+    move-result v1
+
+    if-gez v1, :cond_25
+
+    add-int/lit8 p2, v0, 0x1
+
+    goto :goto_14
+
+    :cond_25
+    if-lez v1, :cond_2a
+
+    add-int/lit8 p3, v0, -0x1
+
+    goto :goto_14
+
+    :cond_2a
+    return v0
+
+    :cond_2b
+    add-int/lit8 p2, p2, 0x1
+
+    neg-int p0, p2
+
+    return p0
+.end method
+
+.method public static synthetic binarySearch-EtDCXyQ$default([SSIIILjava/lang/Object;)I
+    .registers 6
+
+    and-int/lit8 p5, p4, 0x2
+
+    if-eqz p5, :cond_5
+
+    const/4 p2, 0x0
+
+    :cond_5
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_d
+
+    invoke-static {p0}, Lkotlin/UShortArray;->getSize-impl([S)I
+
+    move-result p3
+
+    :cond_d
+    invoke-static {p0, p1, p2, p3}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->binarySearch-EtDCXyQ([SSII)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final binarySearch-K6DWlUc([JJII)I
+    .registers 8
+
+    const-string v0, "$this$binarySearch"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/collections/c;->a:Lkotlin/collections/c$a;
+
+    invoke-static {p0}, Lkotlin/ULongArray;->getSize-impl([J)I
+
+    move-result v1
+
+    invoke-virtual {v0, p3, p4, v1}, Lkotlin/collections/c$a;->d(III)V
+
+    add-int/lit8 p4, p4, -0x1
+
+    :goto_10
+    if-gt p3, p4, :cond_27
+
+    add-int v0, p3, p4
+
+    ushr-int/lit8 v0, v0, 0x1
+
+    aget-wide v1, p0, v0
+
+    invoke-static {v1, v2, p1, p2}, Lkotlin/UnsignedKt;->ulongCompare(JJ)I
+
+    move-result v1
+
+    if-gez v1, :cond_21
+
+    add-int/lit8 p3, v0, 0x1
+
+    goto :goto_10
+
+    :cond_21
+    if-lez v1, :cond_26
+
+    add-int/lit8 p4, v0, -0x1
+
+    goto :goto_10
+
+    :cond_26
+    return v0
+
+    :cond_27
+    add-int/lit8 p3, p3, 0x1
+
+    neg-int p0, p3
+
+    return p0
+.end method
+
+.method public static synthetic binarySearch-K6DWlUc$default([JJIIILjava/lang/Object;)I
+    .registers 7
+
+    and-int/lit8 p6, p5, 0x2
+
+    if-eqz p6, :cond_5
+
+    const/4 p3, 0x0
+
+    :cond_5
+    and-int/lit8 p5, p5, 0x4
+
+    if-eqz p5, :cond_d
+
+    invoke-static {p0}, Lkotlin/ULongArray;->getSize-impl([J)I
+
+    move-result p4
+
+    :cond_d
+    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->binarySearch-K6DWlUc([JJII)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final binarySearch-WpHrYlw([BBII)I
+    .registers 6
+
+    const-string v0, "$this$binarySearch"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object v0, Lkotlin/collections/c;->a:Lkotlin/collections/c$a;
+
+    invoke-static {p0}, Lkotlin/UByteArray;->getSize-impl([B)I
+
+    move-result v1
+
+    invoke-virtual {v0, p2, p3, v1}, Lkotlin/collections/c$a;->d(III)V
+
+    and-int/lit16 p1, p1, 0xff
+
+    add-int/lit8 p3, p3, -0x1
+
+    :goto_12
+    if-gt p2, p3, :cond_29
+
+    add-int v0, p2, p3
+
+    ushr-int/lit8 v0, v0, 0x1
+
+    aget-byte v1, p0, v0
+
+    invoke-static {v1, p1}, Lkotlin/UnsignedKt;->uintCompare(II)I
+
+    move-result v1
+
+    if-gez v1, :cond_23
+
+    add-int/lit8 p2, v0, 0x1
+
+    goto :goto_12
+
+    :cond_23
+    if-lez v1, :cond_28
+
+    add-int/lit8 p3, v0, -0x1
+
+    goto :goto_12
+
+    :cond_28
+    return v0
+
+    :cond_29
+    add-int/lit8 p2, p2, 0x1
+
+    neg-int p0, p2
+
+    return p0
+.end method
+
+.method public static synthetic binarySearch-WpHrYlw$default([BBIIILjava/lang/Object;)I
+    .registers 6
+
+    and-int/lit8 p5, p4, 0x2
+
+    if-eqz p5, :cond_5
+
+    const/4 p2, 0x0
+
+    :cond_5
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_d
+
+    invoke-static {p0}, Lkotlin/UByteArray;->getSize-impl([B)I
+
+    move-result p3
+
+    :cond_d
+    invoke-static {p0, p1, p2, p3}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->binarySearch-WpHrYlw([BBII)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final synthetic max--ajY-9A([I)Lkotlin/UInt;
+    .registers 2
+
+    const-string v0, "$this$max"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxOrNull--ajY-9A([I)Lkotlin/UInt;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic max-GBYM_sE([B)Lkotlin/UByte;
+    .registers 2
+
+    const-string v0, "$this$max"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxOrNull-GBYM_sE([B)Lkotlin/UByte;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic max-QwZRm1k([J)Lkotlin/ULong;
+    .registers 2
+
+    const-string v0, "$this$max"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxOrNull-QwZRm1k([J)Lkotlin/ULong;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic max-rL5Bavg([S)Lkotlin/UShort;
+    .registers 2
+
+    const-string v0, "$this$max"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxOrNull-rL5Bavg([S)Lkotlin/UShort;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic maxWith-XMRcp5o([BLjava/util/Comparator;)Lkotlin/UByte;
+    .registers 3
+
+    const-string v0, "$this$maxWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxWithOrNull-XMRcp5o([BLjava/util/Comparator;)Lkotlin/UByte;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic maxWith-YmdZ_VM([ILjava/util/Comparator;)Lkotlin/UInt;
+    .registers 3
+
+    const-string v0, "$this$maxWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxWithOrNull-YmdZ_VM([ILjava/util/Comparator;)Lkotlin/UInt;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic maxWith-eOHTfZs([SLjava/util/Comparator;)Lkotlin/UShort;
+    .registers 3
+
+    const-string v0, "$this$maxWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxWithOrNull-eOHTfZs([SLjava/util/Comparator;)Lkotlin/UShort;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic maxWith-zrEWJaI([JLjava/util/Comparator;)Lkotlin/ULong;
+    .registers 3
+
+    const-string v0, "$this$maxWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->maxWithOrNull-zrEWJaI([JLjava/util/Comparator;)Lkotlin/ULong;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic min--ajY-9A([I)Lkotlin/UInt;
+    .registers 2
+
+    const-string v0, "$this$min"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minOrNull--ajY-9A([I)Lkotlin/UInt;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic min-GBYM_sE([B)Lkotlin/UByte;
+    .registers 2
+
+    const-string v0, "$this$min"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minOrNull-GBYM_sE([B)Lkotlin/UByte;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic min-QwZRm1k([J)Lkotlin/ULong;
+    .registers 2
+
+    const-string v0, "$this$min"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minOrNull-QwZRm1k([J)Lkotlin/ULong;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic min-rL5Bavg([S)Lkotlin/UShort;
+    .registers 2
+
+    const-string v0, "$this$min"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minOrNull-rL5Bavg([S)Lkotlin/UShort;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic minWith-XMRcp5o([BLjava/util/Comparator;)Lkotlin/UByte;
+    .registers 3
+
+    const-string v0, "$this$minWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minWithOrNull-XMRcp5o([BLjava/util/Comparator;)Lkotlin/UByte;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic minWith-YmdZ_VM([ILjava/util/Comparator;)Lkotlin/UInt;
+    .registers 3
+
+    const-string v0, "$this$minWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minWithOrNull-YmdZ_VM([ILjava/util/Comparator;)Lkotlin/UInt;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic minWith-eOHTfZs([SLjava/util/Comparator;)Lkotlin/UShort;
+    .registers 3
+
+    const-string v0, "$this$minWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minWithOrNull-eOHTfZs([SLjava/util/Comparator;)Lkotlin/UShort;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic minWith-zrEWJaI([JLjava/util/Comparator;)Lkotlin/ULong;
+    .registers 3
+
+    const-string v0, "$this$minWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "comparator"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysKt;->minWithOrNull-zrEWJaI([JLjava/util/Comparator;)Lkotlin/ULong;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+###### Class kotlin.collections.unsigned.UArraysKt___UArraysJvmKt.a (kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$a)
+.class public final Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;
+.super Lkotlin/collections/c;
+.source "_UArraysJvm.kt"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->asList--ajY-9A([I)Ljava/util/List;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/collections/c<",
+        "Lkotlin/UInt;",
+        ">;",
+        "Ljava/util/RandomAccess;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\'\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\r*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u0002H\u0096\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u001b\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u0006H\u0096\u0002\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0011J\u0008\u0010\u0014\u001a\u00020\nH\u0016J\u0017\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0011R\u0014\u0010\u0005\u001a\u00020\u00068VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008\u0082\u0002\u0004\n\u0002\u0008!\u00a8\u0006\u0017"
+    }
+    d2 = {
+        "kotlin/collections/unsigned/UArraysKt___UArraysJvmKt$asList$1",
+        "Lkotlin/collections/AbstractList;",
+        "Lkotlin/UInt;",
+        "Ljava/util/RandomAccess;",
+        "Lkotlin/collections/RandomAccess;",
+        "size",
+        "",
+        "getSize",
+        "()I",
+        "contains",
+        "",
+        "element",
+        "contains-WZ4Q5Ns",
+        "(I)Z",
+        "get",
+        "index",
+        "get-pVg5ArA",
+        "(I)I",
+        "indexOf",
+        "indexOf-WZ4Q5Ns",
+        "isEmpty",
+        "lastIndexOf",
+        "lastIndexOf-WZ4Q5Ns",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic b:[I
+
+
+# direct methods
+.method constructor <init>([I)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-direct {p0}, Lkotlin/collections/c;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UInt;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UInt;
+
+    invoke-virtual {p1}, Lkotlin/UInt;->e()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->f(I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e()I
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0}, Lkotlin/UIntArray;->getSize-impl([I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f(I)Z
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0, p1}, Lkotlin/UIntArray;->contains-WZ4Q5Ns([II)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic get(I)Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->h(I)I
+
+    move-result p1
+
+    invoke-static {p1}, Lkotlin/UInt;->box-impl(I)Lkotlin/UInt;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public h(I)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0, p1}, Lkotlin/UIntArray;->get-pVg5ArA([II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public i(I)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->indexOf([II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UInt;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UInt;
+
+    invoke-virtual {p1}, Lkotlin/UInt;->e()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->i(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public isEmpty()Z
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0}, Lkotlin/UIntArray;->isEmpty-impl([I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j(I)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->b:[I
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->lastIndexOf([II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UInt;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UInt;
+
+    invoke-virtual {p1}, Lkotlin/UInt;->e()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$a;->j(I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+###### Class kotlin.collections.unsigned.UArraysKt___UArraysJvmKt.b (kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$b)
+.class public final Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;
+.super Lkotlin/collections/c;
+.source "_UArraysJvm.kt"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->asList-QwZRm1k([J)Ljava/util/List;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/collections/c<",
+        "Lkotlin/ULong;",
+        ">;",
+        "Ljava/util/RandomAccess;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\'\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000e*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u0002H\u0096\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u001b\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u0006H\u0096\u0002\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0008\u0010\u0015\u001a\u00020\nH\u0016J\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00068VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008\u0082\u0002\u0004\n\u0002\u0008!\u00a8\u0006\u0018"
+    }
+    d2 = {
+        "kotlin/collections/unsigned/UArraysKt___UArraysJvmKt$asList$2",
+        "Lkotlin/collections/AbstractList;",
+        "Lkotlin/ULong;",
+        "Ljava/util/RandomAccess;",
+        "Lkotlin/collections/RandomAccess;",
+        "size",
+        "",
+        "getSize",
+        "()I",
+        "contains",
+        "",
+        "element",
+        "contains-VKZWuLQ",
+        "(J)Z",
+        "get",
+        "index",
+        "get-s-VKNKU",
+        "(I)J",
+        "indexOf",
+        "indexOf-VKZWuLQ",
+        "(J)I",
+        "isEmpty",
+        "lastIndexOf",
+        "lastIndexOf-VKZWuLQ",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic b:[J
+
+
+# direct methods
+.method constructor <init>([J)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-direct {p0}, Lkotlin/collections/c;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .registers 4
+
+    instance-of v0, p1, Lkotlin/ULong;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/ULong;
+
+    invoke-virtual {p1}, Lkotlin/ULong;->e()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->f(J)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e()I
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0}, Lkotlin/ULongArray;->getSize-impl([J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f(J)Z
+    .registers 4
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0, p1, p2}, Lkotlin/ULongArray;->contains-VKZWuLQ([JJ)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic get(I)Ljava/lang/Object;
+    .registers 4
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->h(I)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lkotlin/ULong;->box-impl(J)Lkotlin/ULong;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public h(I)J
+    .registers 4
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0, p1}, Lkotlin/ULongArray;->get-s-VKNKU([JI)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public i(J)I
+    .registers 4
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0, p1, p2}, Lkotlin/collections/k;->indexOf([JJ)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .registers 4
+
+    instance-of v0, p1, Lkotlin/ULong;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/ULong;
+
+    invoke-virtual {p1}, Lkotlin/ULong;->e()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->i(J)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public isEmpty()Z
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0}, Lkotlin/ULongArray;->isEmpty-impl([J)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j(J)I
+    .registers 4
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->b:[J
+
+    invoke-static {v0, p1, p2}, Lkotlin/collections/k;->lastIndexOf([JJ)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .registers 4
+
+    instance-of v0, p1, Lkotlin/ULong;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/ULong;
+
+    invoke-virtual {p1}, Lkotlin/ULong;->e()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$b;->j(J)I
+
+    move-result p1
+
+    return p1
+.end method
+
+###### Class kotlin.collections.unsigned.UArraysKt___UArraysJvmKt.c (kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$c)
+.class public final Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;
+.super Lkotlin/collections/c;
+.source "_UArraysJvm.kt"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->asList-GBYM_sE([B)Ljava/util/List;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/collections/c<",
+        "Lkotlin/UByte;",
+        ">;",
+        "Ljava/util/RandomAccess;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\'\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000e*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u0002H\u0096\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u001b\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u0006H\u0096\u0002\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0008\u0010\u0015\u001a\u00020\nH\u0016J\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00068VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008\u0082\u0002\u0004\n\u0002\u0008!\u00a8\u0006\u0018"
+    }
+    d2 = {
+        "kotlin/collections/unsigned/UArraysKt___UArraysJvmKt$asList$3",
+        "Lkotlin/collections/AbstractList;",
+        "Lkotlin/UByte;",
+        "Ljava/util/RandomAccess;",
+        "Lkotlin/collections/RandomAccess;",
+        "size",
+        "",
+        "getSize",
+        "()I",
+        "contains",
+        "",
+        "element",
+        "contains-7apg3OU",
+        "(B)Z",
+        "get",
+        "index",
+        "get-w2LRezQ",
+        "(I)B",
+        "indexOf",
+        "indexOf-7apg3OU",
+        "(B)I",
+        "isEmpty",
+        "lastIndexOf",
+        "lastIndexOf-7apg3OU",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic b:[B
+
+
+# direct methods
+.method constructor <init>([B)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-direct {p0}, Lkotlin/collections/c;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UByte;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UByte;
+
+    invoke-virtual {p1}, Lkotlin/UByte;->e()B
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->f(B)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e()I
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0}, Lkotlin/UByteArray;->getSize-impl([B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f(B)Z
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0, p1}, Lkotlin/UByteArray;->contains-7apg3OU([BB)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic get(I)Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->h(I)B
+
+    move-result p1
+
+    invoke-static {p1}, Lkotlin/UByte;->box-impl(B)Lkotlin/UByte;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public h(I)B
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0, p1}, Lkotlin/UByteArray;->get-w2LRezQ([BI)B
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public i(B)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->indexOf([BB)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UByte;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UByte;
+
+    invoke-virtual {p1}, Lkotlin/UByte;->e()B
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->i(B)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public isEmpty()Z
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0}, Lkotlin/UByteArray;->isEmpty-impl([B)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j(B)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->b:[B
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->lastIndexOf([BB)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UByte;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UByte;
+
+    invoke-virtual {p1}, Lkotlin/UByte;->e()B
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$c;->j(B)I
+
+    move-result p1
+
+    return p1
+.end method
+
+###### Class kotlin.collections.unsigned.UArraysKt___UArraysJvmKt.d (kotlin.collections.unsigned.UArraysKt___UArraysJvmKt$d)
+.class public final Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;
+.super Lkotlin/collections/c;
+.source "_UArraysJvm.kt"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt;->asList-rL5Bavg([S)Ljava/util/List;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/collections/c<",
+        "Lkotlin/UShort;",
+        ">;",
+        "Ljava/util/RandomAccess;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\'\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u000e*\u0001\u0000\u0008\n\u0018\u00002\u0008\u0012\u0004\u0012\u00020\u00020\u00012\u00060\u0003j\u0002`\u0004J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\u0002H\u0096\u0002\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u001b\u0010\u000e\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u0006H\u0096\u0002\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0008\u0010\u0015\u001a\u00020\nH\u0016J\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00068VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008\u0082\u0002\u0004\n\u0002\u0008!\u00a8\u0006\u0018"
+    }
+    d2 = {
+        "kotlin/collections/unsigned/UArraysKt___UArraysJvmKt$asList$4",
+        "Lkotlin/collections/AbstractList;",
+        "Lkotlin/UShort;",
+        "Ljava/util/RandomAccess;",
+        "Lkotlin/collections/RandomAccess;",
+        "size",
+        "",
+        "getSize",
+        "()I",
+        "contains",
+        "",
+        "element",
+        "contains-xj2QHRw",
+        "(S)Z",
+        "get",
+        "index",
+        "get-Mh2AYeg",
+        "(I)S",
+        "indexOf",
+        "indexOf-xj2QHRw",
+        "(S)I",
+        "isEmpty",
+        "lastIndexOf",
+        "lastIndexOf-xj2QHRw",
+        "kotlin-stdlib"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic b:[S
+
+
+# direct methods
+.method constructor <init>([S)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-direct {p0}, Lkotlin/collections/c;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UShort;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UShort;
+
+    invoke-virtual {p1}, Lkotlin/UShort;->e()S
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->f(S)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public e()I
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0}, Lkotlin/UShortArray;->getSize-impl([S)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f(S)Z
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0, p1}, Lkotlin/UShortArray;->contains-xj2QHRw([SS)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic get(I)Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->h(I)S
+
+    move-result p1
+
+    invoke-static {p1}, Lkotlin/UShort;->box-impl(S)Lkotlin/UShort;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public h(I)S
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0, p1}, Lkotlin/UShortArray;->get-Mh2AYeg([SI)S
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public i(S)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->indexOf([SS)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge indexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UShort;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UShort;
+
+    invoke-virtual {p1}, Lkotlin/UShort;->e()S
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->i(S)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public isEmpty()Z
+    .registers 2
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0}, Lkotlin/UShortArray;->isEmpty-impl([S)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public j(S)I
+    .registers 3
+
+    iget-object v0, p0, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->b:[S
+
+    invoke-static {v0, p1}, Lkotlin/collections/k;->lastIndexOf([SS)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .registers 3
+
+    instance-of v0, p1, Lkotlin/UShort;
+
+    if-nez v0, :cond_6
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_6
+    check-cast p1, Lkotlin/UShort;
+
+    invoke-virtual {p1}, Lkotlin/UShort;->e()S
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlin/collections/unsigned/UArraysKt___UArraysJvmKt$d;->j(S)I
+
+    move-result p1
+
+    return p1
+.end method

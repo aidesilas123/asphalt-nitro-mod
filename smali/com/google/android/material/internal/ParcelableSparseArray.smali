@@ -1,0 +1,288 @@
+###### Class com.google.android.material.internal.ParcelableSparseArray (com.google.android.material.internal.ParcelableSparseArray)
+.class public Lcom/google/android/material/internal/ParcelableSparseArray;
+.super Landroid/util/SparseArray;
+.source "ParcelableSparseArray.java"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+    value = {
+        .enum Landroidx/annotation/RestrictTo$Scope;->LIBRARY_GROUP:Landroidx/annotation/RestrictTo$Scope;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/util/SparseArray<",
+        "Landroid/os/Parcelable;",
+        ">;",
+        "Landroid/os/Parcelable;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcom/google/android/material/internal/ParcelableSparseArray;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/android/material/internal/ParcelableSparseArray$a;
+
+    invoke-direct {v0}, Lcom/google/android/material/internal/ParcelableSparseArray$a;-><init>()V
+
+    sput-object v0, Lcom/google/android/material/internal/ParcelableSparseArray;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .registers 7
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-direct {p0}, Landroid/util/SparseArray;-><init>()V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    new-array v1, v0, [I
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    :goto_11
+    if-ge p2, v0, :cond_1d
+
+    aget v2, v1, p2
+
+    aget-object v3, p1, p2
+
+    invoke-virtual {p0, v2, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_11
+
+    :cond_1d
+    return-void
+.end method
+
+
+# virtual methods
+.method public describeContents()I
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public writeToParcel(Landroid/os/Parcel;I)V
+    .registers 8
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
+
+    move-result v0
+
+    new-array v1, v0, [I
+
+    new-array v2, v0, [Landroid/os/Parcelable;
+
+    const/4 v3, 0x0
+
+    :goto_9
+    if-ge v3, v0, :cond_1c
+
+    invoke-virtual {p0, v3}, Landroid/util/SparseArray;->keyAt(I)I
+
+    move-result v4
+
+    aput v4, v1, v3
+
+    invoke-virtual {p0, v3}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Landroid/os/Parcelable;
+
+    aput-object v4, v2, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_9
+
+    :cond_1c
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeIntArray([I)V
+
+    invoke-virtual {p1, v2, p2}, Landroid/os/Parcel;->writeParcelableArray([Landroid/os/Parcelable;I)V
+
+    return-void
+.end method
+
+###### Class com.google.android.material.internal.ParcelableSparseArray.a (com.google.android.material.internal.ParcelableSparseArray$a)
+.class Lcom/google/android/material/internal/ParcelableSparseArray$a;
+.super Ljava/lang/Object;
+.source "ParcelableSparseArray.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$ClassLoaderCreator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/material/internal/ParcelableSparseArray;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$ClassLoaderCreator<",
+        "Lcom/google/android/material/internal/ParcelableSparseArray;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/os/Parcel;)Lcom/google/android/material/internal/ParcelableSparseArray;
+    .registers 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    new-instance v0, Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcom/google/android/material/internal/ParcelableSparseArray;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/google/android/material/internal/ParcelableSparseArray;
+    .registers 4
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance v0, Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    invoke-direct {v0, p1, p2}, Lcom/google/android/material/internal/ParcelableSparseArray;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public c(I)[Lcom/google/android/material/internal/ParcelableSparseArray;
+    .registers 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-array p1, p1, [Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    return-object p1
+.end method
+
+.method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .registers 2
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ParcelableSparseArray$a;->a(Landroid/os/Parcel;)Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .registers 3
+    .param p1    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lcom/google/android/material/internal/ParcelableSparseArray$a;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic newArray(I)[Ljava/lang/Object;
+    .registers 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/google/android/material/internal/ParcelableSparseArray$a;->c(I)[Lcom/google/android/material/internal/ParcelableSparseArray;
+
+    move-result-object p1
+
+    return-object p1
+.end method

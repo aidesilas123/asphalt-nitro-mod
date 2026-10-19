@@ -1,0 +1,611 @@
+###### Class com.applovin.impl.mediation.debugger.ui.a.d (com.applovin.impl.mediation.debugger.ui.a.d)
+.class public Lcom/applovin/impl/mediation/debugger/ui/a/d;
+.super Lcom/applovin/impl/mediation/debugger/ui/a;
+.source "SourceFile"
+
+
+# instance fields
+.field private akx:Landroid/widget/ListView;
+
+.field private aqC:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/debugger/ui/d/c;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private aqD:Z
+
+.field private aqw:Lcom/applovin/impl/mediation/debugger/ui/d/d;
+
+.field private sdk:Lcom/applovin/impl/sdk/n;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/applovin/impl/mediation/debugger/ui/a;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/applovin/impl/mediation/debugger/ui/a/d;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqC:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method private static synthetic a(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;)V
+    .registers 4
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p0, v0, v0, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/a;->initialize(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/mediation/debugger/b/a/b;Lcom/applovin/impl/mediation/debugger/b/a/e;Lcom/applovin/impl/sdk/n;)V
+
+    return-void
+.end method
+
+.method private static synthetic a(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;)V
+    .registers 3
+
+    invoke-virtual {p2, p0, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/c;->initialize(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;)V
+
+    return-void
+.end method
+
+.method private synthetic a(Ljava/util/List;Lcom/applovin/impl/sdk/n;Lcom/applovin/impl/mediation/debugger/ui/d/a;Lcom/applovin/impl/mediation/debugger/ui/d/c;)V
+    .registers 6
+
+    invoke-virtual {p3}, Lcom/applovin/impl/mediation/debugger/ui/d/a;->wQ()I
+
+    move-result p3
+
+    invoke-interface {p1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/debugger/b/a/a;->uH()Ljava/util/List;
+
+    move-result-object p3
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result p3
+
+    const/4 p4, 0x1
+
+    if-ne p3, p4, :cond_24
+
+    const-class p3, Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;
+
+    invoke-virtual {p2}, Lcom/applovin/impl/sdk/n;->BM()Lcom/applovin/impl/sdk/a;
+
+    move-result-object p4
+
+    new-instance v0, Lcom/applovin/impl/mediation/debugger/ui/a/o;
+
+    invoke-direct {v0, p1, p2}, Lcom/applovin/impl/mediation/debugger/ui/a/o;-><init>(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;)V
+
+    invoke-static {p0, p3, p4, v0}, Lcom/applovin/impl/sdk/utils/b;->a(Landroid/content/Context;Ljava/lang/Class;Lcom/applovin/impl/sdk/a;Lcom/applovin/impl/sdk/utils/b$a;)V
+
+    goto :goto_32
+
+    :cond_24
+    const-class p3, Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;
+
+    invoke-virtual {p2}, Lcom/applovin/impl/sdk/n;->BM()Lcom/applovin/impl/sdk/a;
+
+    move-result-object p4
+
+    new-instance v0, Lcom/applovin/impl/mediation/debugger/ui/a/n;
+
+    invoke-direct {v0, p1, p2}, Lcom/applovin/impl/mediation/debugger/ui/a/n;-><init>(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;)V
+
+    invoke-static {p0, p3, p4, v0}, Lcom/applovin/impl/sdk/utils/b;->a(Landroid/content/Context;Ljava/lang/Class;Lcom/applovin/impl/sdk/a;Lcom/applovin/impl/sdk/utils/b$a;)V
+
+    :goto_32
+    return-void
+.end method
+
+.method public static synthetic b(Lcom/applovin/impl/mediation/debugger/ui/a/d;Ljava/util/List;Lcom/applovin/impl/sdk/n;Lcom/applovin/impl/mediation/debugger/ui/d/a;Lcom/applovin/impl/mediation/debugger/ui/d/c;)V
+    .registers 5
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->a(Ljava/util/List;Lcom/applovin/impl/sdk/n;Lcom/applovin/impl/mediation/debugger/ui/d/a;Lcom/applovin/impl/mediation/debugger/ui/d/c;)V
+
+    return-void
+.end method
+
+.method public static synthetic c(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;)V
+    .registers 3
+
+    invoke-static {p0, p1, p2}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->a(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;)V
+
+    return-void
+.end method
+
+.method public static synthetic d(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;)V
+    .registers 3
+
+    invoke-static {p0, p1, p2}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->a(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;)V
+
+    return-void
+.end method
+
+.method private r(Ljava/util/List;)Ljava/util/List;
+    .registers 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/debugger/b/a/a;",
+            ">;)",
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/debugger/ui/d/c;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_d
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_80
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    new-instance v2, Landroid/text/SpannableStringBuilder;
+
+    const-string v3, "ID\t\t\t\t\t\t"
+
+    const v4, -0x777778
+
+    invoke-static {v3, v4}, Lcom/applovin/impl/sdk/utils/StringUtils;->createListItemDetailSubSpannedString(Ljava/lang/String;I)Landroid/text/SpannedString;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1}, Lcom/applovin/impl/mediation/debugger/b/a/a;->mQ()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/high16 v5, -0x1000000
+
+    invoke-static {v3, v5}, Lcom/applovin/impl/sdk/utils/StringUtils;->createListItemDetailSpannedString(Ljava/lang/String;I)Landroid/text/SpannedString;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    new-instance v3, Landroid/text/SpannedString;
+
+    const-string v6, "\n"
+
+    invoke-direct {v3, v6}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    const-string v3, "FORMAT  "
+
+    invoke-static {v3, v4}, Lcom/applovin/impl/sdk/utils/StringUtils;->createListItemDetailSubSpannedString(Ljava/lang/String;I)Landroid/text/SpannedString;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v1}, Lcom/applovin/impl/mediation/debugger/b/a/a;->tG()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3, v5}, Lcom/applovin/impl/sdk/utils/StringUtils;->createListItemDetailSpannedString(Ljava/lang/String;I)Landroid/text/SpannedString;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+
+    sget-object v3, Lcom/applovin/impl/mediation/debugger/ui/d/c$b;->asF:Lcom/applovin/impl/mediation/debugger/ui/d/c$b;
+
+    invoke-static {v3}, Lcom/applovin/impl/mediation/debugger/ui/d/c;->a(Lcom/applovin/impl/mediation/debugger/ui/d/c$b;)Lcom/applovin/impl/mediation/debugger/ui/d/c$a;
+
+    move-result-object v3
+
+    invoke-virtual {v1}, Lcom/applovin/impl/mediation/debugger/b/a/a;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v4, 0x12
+
+    const/4 v6, 0x1
+
+    invoke-static {v1, v5, v4, v6}, Lcom/applovin/impl/sdk/utils/StringUtils;->createSpannedString(Ljava/lang/String;III)Landroid/text/SpannedString;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Lcom/applovin/impl/mediation/debugger/ui/d/c$a;->a(Landroid/text/SpannedString;)Lcom/applovin/impl/mediation/debugger/ui/d/c$a;
+
+    move-result-object v1
+
+    new-instance v3, Landroid/text/SpannedString;
+
+    invoke-direct {v3, v2}, Landroid/text/SpannedString;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v1, v3}, Lcom/applovin/impl/mediation/debugger/ui/d/c$a;->b(Landroid/text/SpannedString;)Lcom/applovin/impl/mediation/debugger/ui/d/c$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Lcom/applovin/impl/mediation/debugger/ui/d/c$a;->y(Landroid/content/Context;)Lcom/applovin/impl/mediation/debugger/ui/d/c$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v6}, Lcom/applovin/impl/mediation/debugger/ui/d/c$a;->aF(Z)Lcom/applovin/impl/mediation/debugger/ui/d/c$a;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/applovin/impl/mediation/debugger/ui/d/c$a;->wX()Lcom/applovin/impl/mediation/debugger/ui/d/c;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_d
+
+    :cond_80
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected getSdk()Lcom/applovin/impl/sdk/n;
+    .registers 2
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    return-object v0
+.end method
+
+.method public initialize(Ljava/util/List;ZLcom/applovin/impl/sdk/n;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/debugger/b/a/a;",
+            ">;Z",
+            "Lcom/applovin/impl/sdk/n;",
+            ")V"
+        }
+    .end annotation
+
+    iput-boolean p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqD:Z
+
+    iput-object p3, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->sdk:Lcom/applovin/impl/sdk/n;
+
+    invoke-direct {p0, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->r(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqC:Ljava/util/List;
+
+    new-instance p2, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;
+
+    invoke-direct {p2, p0, p0, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;-><init>(Lcom/applovin/impl/mediation/debugger/ui/a/d;Landroid/content/Context;Ljava/util/List;)V
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqw:Lcom/applovin/impl/mediation/debugger/ui/d/d;
+
+    new-instance v0, Lcom/applovin/impl/mediation/debugger/ui/a/m;
+
+    invoke-direct {v0, p0, p1, p3}, Lcom/applovin/impl/mediation/debugger/ui/a/m;-><init>(Lcom/applovin/impl/mediation/debugger/ui/a/d;Ljava/util/List;Lcom/applovin/impl/sdk/n;)V
+
+    invoke-virtual {p2, v0}, Lcom/applovin/impl/mediation/debugger/ui/d/d;->a(Lcom/applovin/impl/mediation/debugger/ui/d/d$a;)V
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqw:Lcom/applovin/impl/mediation/debugger/ui/d/d;
+
+    invoke-virtual {p1}, Lcom/applovin/impl/mediation/debugger/ui/d/d;->notifyDataSetChanged()V
+
+    return-void
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
+    .registers 3
+
+    invoke-super {p0, p1}, Lcom/applovin/impl/mediation/debugger/ui/a;->onCreate(Landroid/os/Bundle;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-boolean v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqD:Z
+
+    if-eqz v0, :cond_f
+
+    const-string v0, "Selective Init "
+
+    goto :goto_11
+
+    :cond_f
+    const-string v0, ""
+
+    :goto_11
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "Ad Units"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setTitle(Ljava/lang/CharSequence;)V
+
+    sget p1, Lcom/applovin/sdk/R$layout;->mediation_debugger_list_view:I
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setContentView(I)V
+
+    sget p1, Lcom/applovin/sdk/R$id;->listView:I
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ListView;
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->akx:Landroid/widget/ListView;
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d;->aqw:Lcom/applovin/impl/mediation/debugger/ui/d/d;
+
+    invoke-virtual {p1, v0}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.debugger.ui.a.d.AnonymousClass1 (com.applovin.impl.mediation.debugger.ui.a.d$1)
+.class Lcom/applovin/impl/mediation/debugger/ui/a/d$1;
+.super Lcom/applovin/impl/mediation/debugger/ui/d/d;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/applovin/impl/mediation/debugger/ui/a/d;->initialize(Ljava/util/List;ZLcom/applovin/impl/sdk/n;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic aqE:Ljava/util/List;
+
+.field final synthetic aqF:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+
+# direct methods
+.method constructor <init>(Lcom/applovin/impl/mediation/debugger/ui/a/d;Landroid/content/Context;Ljava/util/List;)V
+    .registers 4
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;->aqF:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+    iput-object p3, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;->aqE:Ljava/util/List;
+
+    invoke-direct {p0, p2}, Lcom/applovin/impl/mediation/debugger/ui/d/d;-><init>(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected gg(I)I
+    .registers 2
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;->aqE:Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected gh(I)Lcom/applovin/impl/mediation/debugger/ui/d/c;
+    .registers 3
+
+    new-instance p1, Lcom/applovin/impl/mediation/debugger/ui/d/e;
+
+    const-string v0, ""
+
+    invoke-direct {p1, v0}, Lcom/applovin/impl/mediation/debugger/ui/d/e;-><init>(Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method protected gi(I)Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Lcom/applovin/impl/mediation/debugger/ui/d/c;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/d$1;->aqF:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+    invoke-static {p1}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->a(Lcom/applovin/impl/mediation/debugger/ui/a/d;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method protected tM()I
+    .registers 2
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+###### Class com.applovin.impl.mediation.debugger.ui.a.m (com.applovin.impl.mediation.debugger.ui.a.m)
+.class public final synthetic Lcom/applovin/impl/mediation/debugger/ui/a/m;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/applovin/impl/mediation/debugger/ui/d/d$a;
+
+
+# instance fields
+.field public final synthetic a:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+.field public final synthetic b:Ljava/util/List;
+
+.field public final synthetic c:Lcom/applovin/impl/sdk/n;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/applovin/impl/mediation/debugger/ui/a/d;Ljava/util/List;Lcom/applovin/impl/sdk/n;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->a:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->b:Ljava/util/List;
+
+    iput-object p3, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->c:Lcom/applovin/impl/sdk/n;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Lcom/applovin/impl/mediation/debugger/ui/d/a;Lcom/applovin/impl/mediation/debugger/ui/d/c;)V
+    .registers 6
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->a:Lcom/applovin/impl/mediation/debugger/ui/a/d;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->b:Ljava/util/List;
+
+    iget-object v2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/m;->c:Lcom/applovin/impl/sdk/n;
+
+    invoke-static {v0, v1, v2, p1, p2}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->b(Lcom/applovin/impl/mediation/debugger/ui/a/d;Ljava/util/List;Lcom/applovin/impl/sdk/n;Lcom/applovin/impl/mediation/debugger/ui/d/a;Lcom/applovin/impl/mediation/debugger/ui/d/c;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.debugger.ui.a.n (com.applovin.impl.mediation.debugger.ui.a.n)
+.class public final synthetic Lcom/applovin/impl/mediation/debugger/ui/a/n;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/applovin/impl/sdk/utils/b$a;
+
+
+# instance fields
+.field public final synthetic a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+.field public final synthetic b:Lcom/applovin/impl/sdk/n;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/n;->a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/n;->b:Lcom/applovin/impl/sdk/n;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onActivityCreated(Landroid/app/Activity;)V
+    .registers 4
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/n;->a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/n;->b:Lcom/applovin/impl/sdk/n;
+
+    check-cast p1, Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;
+
+    invoke-static {v0, v1, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->c(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitWaterfallsListActivity;)V
+
+    return-void
+.end method
+
+###### Class com.applovin.impl.mediation.debugger.ui.a.o (com.applovin.impl.mediation.debugger.ui.a.o)
+.class public final synthetic Lcom/applovin/impl/mediation/debugger/ui/a/o;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/applovin/impl/sdk/utils/b$a;
+
+
+# instance fields
+.field public final synthetic a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+.field public final synthetic b:Lcom/applovin/impl/sdk/n;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/o;->a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    iput-object p2, p0, Lcom/applovin/impl/mediation/debugger/ui/a/o;->b:Lcom/applovin/impl/sdk/n;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onActivityCreated(Landroid/app/Activity;)V
+    .registers 4
+
+    iget-object v0, p0, Lcom/applovin/impl/mediation/debugger/ui/a/o;->a:Lcom/applovin/impl/mediation/debugger/b/a/a;
+
+    iget-object v1, p0, Lcom/applovin/impl/mediation/debugger/ui/a/o;->b:Lcom/applovin/impl/sdk/n;
+
+    check-cast p1, Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;
+
+    invoke-static {v0, v1, p1}, Lcom/applovin/impl/mediation/debugger/ui/a/d;->d(Lcom/applovin/impl/mediation/debugger/b/a/a;Lcom/applovin/impl/sdk/n;Lcom/applovin/mediation/MaxDebuggerAdUnitDetailActivity;)V
+
+    return-void
+.end method

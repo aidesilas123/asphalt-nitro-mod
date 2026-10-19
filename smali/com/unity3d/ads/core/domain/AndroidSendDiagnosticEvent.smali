@@ -1,0 +1,329 @@
+###### Class com.unity3d.ads.core.domain.AndroidSendDiagnosticEvent (com.unity3d.ads.core.domain.AndroidSendDiagnosticEvent)
+.class public final Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;
+.super Ljava/lang/Object;
+.source "AndroidSendDiagnosticEvent.kt"
+
+# interfaces
+.implements Lcom/unity3d/ads/core/domain/SendDiagnosticEvent;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010$\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0008\u0000\u0018\u00002\u00020\u0001B\u0015\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u00a2\u0006\u0002\u0010\u0006JO\u0010\u0007\u001a\u00020\u00082\u0006\u0010\t\u001a\u00020\n2\u0008\u0010\u000b\u001a\u0004\u0018\u00010\u000c2\u0014\u0010\r\u001a\u0010\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\n\u0018\u00010\u000e2\u0014\u0010\u000f\u001a\u0010\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00020\u0010\u0018\u00010\u000eH\u0096B\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u0011R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u000e\u0010\u0004\u001a\u00020\u0005X\u0082\u0004\u00a2\u0006\u0002\n\u0000\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;",
+        "Lcom/unity3d/ads/core/domain/SendDiagnosticEvent;",
+        "diagnosticEventRepository",
+        "Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;",
+        "getDiagnosticEventRequest",
+        "Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;",
+        "(Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;)V",
+        "invoke",
+        "",
+        "event",
+        "",
+        "value",
+        "",
+        "tags",
+        "",
+        "intTags",
+        "",
+        "(Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "unity-ads_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private final diagnosticEventRepository:Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;
+
+.field private final getDiagnosticEventRequest:Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;
+
+
+# direct methods
+.method public constructor <init>(Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;)V
+    .registers 4
+
+    const-string v0, "diagnosticEventRepository"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "getDiagnosticEventRequest"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->diagnosticEventRepository:Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;
+
+    iput-object p2, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->getDiagnosticEventRequest:Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public invoke(Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .registers 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/Long;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    instance-of v0, p5, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;
+
+    if-eqz v0, :cond_13
+
+    move-object v0, p5
+
+    check-cast v0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;
+
+    iget v1, v0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_13
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    goto :goto_18
+
+    :cond_13
+    new-instance v0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;
+
+    invoke-direct {v0, p0, p5}, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;-><init>(Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;Lkotlin/coroutines/d;)V
+
+    :goto_18
+    move-object v6, v0
+
+    iget-object p5, v6, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->result:Ljava/lang/Object;
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, v6, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_36
+
+    if-ne v1, v2, :cond_2e
+
+    iget-object p1, v6, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->L$0:Ljava/lang/Object;
+
+    check-cast p1, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;
+
+    invoke-static {p5}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_5e
+
+    :cond_2e
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_36
+    invoke-static {p5}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    if-eqz p2, :cond_4b
+
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v3
+
+    sget-object p2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v3
+
+    long-to-double v3, v3
+
+    invoke-static {v3, v4}, Lkotlin/coroutines/jvm/internal/Boxing;->boxDouble(D)Ljava/lang/Double;
+
+    move-result-object p2
+
+    goto :goto_4c
+
+    :cond_4b
+    const/4 p2, 0x0
+
+    :goto_4c
+    move-object v5, p2
+
+    iget-object v1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->getDiagnosticEventRequest:Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;
+
+    iput-object p0, v6, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->L$0:Ljava/lang/Object;
+
+    iput v2, v6, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    move-object v2, p1
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    invoke-virtual/range {v1 .. v6}, Lcom/unity3d/ads/core/domain/events/GetDiagnosticEventRequest;->invoke(Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/Double;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p5
+
+    if-ne p5, v0, :cond_5d
+
+    return-object v0
+
+    :cond_5d
+    move-object p1, p0
+
+    :goto_5e
+    check-cast p5, Lgateway/v1/DiagnosticEventRequestOuterClass$DiagnosticEvent;
+
+    iget-object p1, p1, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->diagnosticEventRepository:Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;
+
+    invoke-interface {p1, p5}, Lcom/unity3d/ads/core/data/repository/DiagnosticEventRepository;->addDiagnosticEvent(Lgateway/v1/DiagnosticEventRequestOuterClass$DiagnosticEvent;)V
+
+    sget-object p1, Lkotlin/v;->a:Lkotlin/v;
+
+    return-object p1
+.end method
+
+###### Class com.unity3d.ads.core.domain.AndroidSendDiagnosticEvent.AnonymousClass1 (com.unity3d.ads.core.domain.AndroidSendDiagnosticEvent$invoke$1)
+.class final Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;
+.super Lkotlin/coroutines/jvm/internal/c;
+.source "AndroidSendDiagnosticEvent.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->invoke(Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lkotlin/coroutines/d;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/e;
+    c = "com.unity3d.ads.core.domain.AndroidSendDiagnosticEvent"
+    f = "AndroidSendDiagnosticEvent.kt"
+    i = {
+        0x0
+    }
+    l = {
+        0x13
+    }
+    m = "invoke"
+    n = {
+        "this"
+    }
+    s = {
+        "L$0"
+    }
+.end annotation
+
+
+# instance fields
+.field L$0:Ljava/lang/Object;
+
+.field label:I
+
+.field synthetic result:Ljava/lang/Object;
+
+.field final synthetic this$0:Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;
+
+
+# direct methods
+.method constructor <init>(Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;Lkotlin/coroutines/d;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->this$0:Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;
+
+    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/c;-><init>(Lkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 8
+
+    iput-object p1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->result:Ljava/lang/Object;
+
+    iget p1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->label:I
+
+    iget-object v0, p0, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent$invoke$1;->this$0:Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcom/unity3d/ads/core/domain/AndroidSendDiagnosticEvent;->invoke(Ljava/lang/String;Ljava/lang/Long;Ljava/util/Map;Ljava/util/Map;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

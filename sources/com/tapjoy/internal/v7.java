@@ -1,0 +1,59 @@
+package com.tapjoy.internal;
+
+import java.io.Serializable;
+import java.util.AbstractSet;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.WeakHashMap;
+
+/* JADX INFO: loaded from: classes4.dex */
+public final class v7 extends AbstractSet implements Set, Serializable {
+    public final transient WeakHashMap a;
+
+    public v7(WeakHashMap weakHashMap) {
+        this.a = weakHashMap;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean add(Object obj) {
+        return this.a.put(obj, this) == null;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final void clear() {
+        this.a.clear();
+    }
+
+    public final Object clone() {
+        try {
+            return (v7) super.clone();
+        } catch (CloneNotSupportedException e2) {
+            throw new AssertionError(e2);
+        }
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean contains(Object obj) {
+        return this.a.containsKey(obj);
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean isEmpty() {
+        return this.a.isEmpty();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
+    public final Iterator iterator() {
+        return this.a.keySet().iterator();
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final boolean remove(Object obj) {
+        return this.a.remove(obj) != null;
+    }
+
+    @Override // java.util.AbstractCollection, java.util.Collection, java.util.Set
+    public final int size() {
+        return this.a.size();
+    }
+}

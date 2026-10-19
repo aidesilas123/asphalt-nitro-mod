@@ -1,0 +1,77 @@
+###### Class com.google.firebase.messaging.ProtoEncoderDoNotUse (com.google.firebase.messaging.ProtoEncoderDoNotUse)
+.class public abstract Lcom/google/firebase/messaging/ProtoEncoderDoNotUse;
+.super Ljava/lang/Object;
+.source "ProtoEncoderDoNotUse.java"
+
+
+# annotations
+.annotation runtime Lcom/google/firebase/encoders/annotations/Encodable;
+.end annotation
+
+
+# static fields
+.field private static final a:Lcom/google/firebase/encoders/proto/ProtobufEncoder;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 2
+
+    invoke-static {}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->builder()Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/google/firebase/messaging/AutoProtoEncoderDoNotUseEncoder;->a:Lcom/google/firebase/encoders/config/Configurator;
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->c(Lcom/google/firebase/encoders/config/Configurator;)Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/firebase/encoders/proto/ProtobufEncoder$Builder;->b()Lcom/google/firebase/encoders/proto/ProtobufEncoder;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/firebase/messaging/ProtoEncoderDoNotUse;->a:Lcom/google/firebase/encoders/proto/ProtobufEncoder;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static encode(Ljava/lang/Object;Ljava/io/OutputStream;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    sget-object v0, Lcom/google/firebase/messaging/ProtoEncoderDoNotUse;->a:Lcom/google/firebase/encoders/proto/ProtobufEncoder;
+
+    invoke-virtual {v0, p0, p1}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->a(Ljava/lang/Object;Ljava/io/OutputStream;)V
+
+    return-void
+.end method
+
+.method public static encode(Ljava/lang/Object;)[B
+    .registers 2
+
+    sget-object v0, Lcom/google/firebase/messaging/ProtoEncoderDoNotUse;->a:Lcom/google/firebase/encoders/proto/ProtobufEncoder;
+
+    invoke-virtual {v0, p0}, Lcom/google/firebase/encoders/proto/ProtobufEncoder;->b(Ljava/lang/Object;)[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public abstract a()Lcom/google/firebase/messaging/reporting/MessagingClientEventExtension;
+.end method

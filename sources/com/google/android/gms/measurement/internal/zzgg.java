@@ -1,0 +1,7 @@
+package com.google.android.gms.measurement.internal;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-measurement-impl@@20.1.2 */
+/* JADX INFO: loaded from: classes3.dex */
+public final /* synthetic */ class zzgg {
+    public final /* synthetic */ zzgi zza;
+}

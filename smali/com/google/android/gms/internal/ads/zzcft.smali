@@ -1,0 +1,406 @@
+###### Class com.google.android.gms.internal.ads.zzcft (com.google.android.gms.internal.ads.zzcft)
+.class public final Lcom/google/android/gms/internal/ads/zzcft;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/ads/zzkw;
+
+
+# instance fields
+.field private final zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+.field private zzc:J
+
+.field private zzd:J
+
+.field private zze:J
+
+.field private zzf:J
+
+.field private zzg:I
+
+.field private zzh:Z
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/google/android/gms/internal/ads/zzyn;
+
+    const/4 v1, 0x1
+
+    const/high16 v2, 0x10000
+
+    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/ads/zzyn;-><init>(ZI)V
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+    const-wide/32 v0, 0xe4e1c0
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzc:J
+
+    const-wide/32 v0, 0x1c9c380
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzd:J
+
+    const-wide/32 v0, 0x2625a0
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zze:J
+
+    const-wide/32 v0, 0x4c4b40
+
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzf:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()J
+    .registers 3
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+.end method
+
+.method public final zzb()V
+    .registers 2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ads/zzcft;->zzj(Z)V
+
+    return-void
+.end method
+
+.method public final zzc()V
+    .registers 2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ads/zzcft;->zzj(Z)V
+
+    return-void
+.end method
+
+.method public final zzd()V
+    .registers 2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/internal/ads/zzcft;->zzj(Z)V
+
+    return-void
+.end method
+
+.method public final synthetic zze(Lcom/google/android/gms/internal/ads/zzda;Lcom/google/android/gms/internal/ads/zzuk;[Lcom/google/android/gms/internal/ads/zzlz;Lcom/google/android/gms/internal/ads/zzwl;[Lcom/google/android/gms/internal/ads/zzxy;)V
+    .registers 7
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    :goto_3
+    array-length p2, p3
+
+    const/4 p2, 0x2
+
+    if-ge p1, p2, :cond_21
+
+    aget-object p2, p5, p1
+
+    if-eqz p2, :cond_1e
+
+    iget p2, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    aget-object p4, p3, p1
+
+    invoke-interface {p4}, Lcom/google/android/gms/internal/ads/zzlz;->zzb()I
+
+    move-result p4
+
+    const/4 v0, 0x1
+
+    if-eq p4, v0, :cond_19
+
+    const/high16 p4, 0x7d00000
+
+    goto :goto_1b
+
+    :cond_19
+    const/high16 p4, 0xc80000
+
+    :goto_1b
+    add-int/2addr p2, p4
+
+    iput p2, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    :cond_1e
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_3
+
+    :cond_21
+    iget-object p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+    iget p2, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    invoke-virtual {p1, p2}, Lcom/google/android/gms/internal/ads/zzyn;->zzf(I)V
+
+    return-void
+.end method
+
+.method public final zzf()Z
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final zzg(JJF)Z
+    .registers 9
+
+    iget-wide p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzd:J
+
+    const/4 p5, 0x2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    cmp-long v2, p3, p1
+
+    if-lez v2, :cond_b
+
+    const/4 p1, 0x0
+
+    goto :goto_14
+
+    :cond_b
+    iget-wide p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzc:J
+
+    cmp-long v2, p3, p1
+
+    if-gez v2, :cond_13
+
+    const/4 p1, 0x2
+
+    goto :goto_14
+
+    :cond_13
+    const/4 p1, 0x1
+
+    :goto_14
+    iget-object p2, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+    invoke-virtual {p2}, Lcom/google/android/gms/internal/ads/zzyn;->zza()I
+
+    move-result p2
+
+    iget p3, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    if-eq p1, p5, :cond_28
+
+    if-ne p1, v0, :cond_27
+
+    iget-boolean p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzh:Z
+
+    if-eqz p1, :cond_27
+
+    if-ge p2, p3, :cond_27
+
+    goto :goto_28
+
+    :cond_27
+    const/4 v0, 0x0
+
+    :cond_28
+    :goto_28
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzh:Z
+
+    return v0
+.end method
+
+.method public final synthetic zzh(Lcom/google/android/gms/internal/ads/zzda;Lcom/google/android/gms/internal/ads/zzuk;JFZJ)Z
+    .registers 9
+
+    if-eqz p6, :cond_5
+
+    iget-wide p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzf:J
+
+    goto :goto_7
+
+    :cond_5
+    iget-wide p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zze:J
+
+    :goto_7
+    const-wide/16 p5, 0x0
+
+    cmp-long p7, p1, p5
+
+    if-lez p7, :cond_14
+
+    cmp-long p5, p3, p1
+
+    if-ltz p5, :cond_12
+
+    goto :goto_14
+
+    :cond_12
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_14
+    :goto_14
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final zzi()Lcom/google/android/gms/internal/ads/zzyn;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+    return-object v0
+.end method
+
+.method final zzj(Z)V
+    .registers 3
+    .annotation build Landroidx/annotation/VisibleForTesting;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzg:I
+
+    iput-boolean v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzh:Z
+
+    if-eqz p1, :cond_c
+
+    iget-object p1, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzb:Lcom/google/android/gms/internal/ads/zzyn;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzyn;->zze()V
+
+    :cond_c
+    return-void
+.end method
+
+.method public final declared-synchronized zzk(I)V
+    .registers 6
+
+    monitor-enter p0
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x3e8
+
+    mul-long v0, v0, v2
+
+    :try_start_6
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zze:J
+    :try_end_8
+    .catchall {:try_start_6 .. :try_end_8} :catchall_a
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_a
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized zzl(I)V
+    .registers 6
+
+    monitor-enter p0
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x3e8
+
+    mul-long v0, v0, v2
+
+    :try_start_6
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzf:J
+    :try_end_8
+    .catchall {:try_start_6 .. :try_end_8} :catchall_a
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_a
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized zzm(I)V
+    .registers 6
+
+    monitor-enter p0
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x3e8
+
+    mul-long v0, v0, v2
+
+    :try_start_6
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzd:J
+    :try_end_8
+    .catchall {:try_start_6 .. :try_end_8} :catchall_a
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_a
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method
+
+.method public final declared-synchronized zzn(I)V
+    .registers 6
+
+    monitor-enter p0
+
+    int-to-long v0, p1
+
+    const-wide/16 v2, 0x3e8
+
+    mul-long v0, v0, v2
+
+    :try_start_6
+    iput-wide v0, p0, Lcom/google/android/gms/internal/ads/zzcft;->zzc:J
+    :try_end_8
+    .catchall {:try_start_6 .. :try_end_8} :catchall_a
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_a
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method

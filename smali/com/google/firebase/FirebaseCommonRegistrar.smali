@@ -1,0 +1,558 @@
+###### Class com.google.firebase.FirebaseCommonRegistrar (com.google.firebase.FirebaseCommonRegistrar)
+.class public Lcom/google/firebase/FirebaseCommonRegistrar;
+.super Ljava/lang/Object;
+.source "FirebaseCommonRegistrar.java"
+
+# interfaces
+.implements Lcom/google/firebase/components/ComponentRegistrar;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic a(Landroid/content/Context;)Ljava/lang/String;
+    .registers 1
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_d
+
+    iget p0, p0, Landroid/content/pm/ApplicationInfo;->targetSdkVersion:I
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_d
+    const-string p0, ""
+
+    return-object p0
+.end method
+
+.method static synthetic b(Landroid/content/Context;)Ljava/lang/String;
+    .registers 3
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_13
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x18
+
+    if-lt v0, v1, :cond_13
+
+    iget p0, p0, Landroid/content/pm/ApplicationInfo;->minSdkVersion:I
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_13
+    const-string p0, ""
+
+    return-object p0
+.end method
+
+.method static synthetic c(Landroid/content/Context;)Ljava/lang/String;
+    .registers 4
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_15
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    const-string v2, "android.hardware.type.television"
+
+    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_15
+
+    const-string p0, "tv"
+
+    return-object p0
+
+    :cond_15
+    const/16 v1, 0x14
+
+    if-lt v0, v1, :cond_28
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    const-string v2, "android.hardware.type.watch"
+
+    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_28
+
+    const-string p0, "watch"
+
+    return-object p0
+
+    :cond_28
+    const/16 v1, 0x17
+
+    if-lt v0, v1, :cond_3b
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    const-string v2, "android.hardware.type.automotive"
+
+    invoke-virtual {v1, v2}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3b
+
+    const-string p0, "auto"
+
+    return-object p0
+
+    :cond_3b
+    const/16 v1, 0x1a
+
+    if-lt v0, v1, :cond_4e
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    const-string v0, "android.hardware.type.embedded"
+
+    invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4e
+
+    const-string p0, "embedded"
+
+    return-object p0
+
+    :cond_4e
+    const-string p0, ""
+
+    return-object p0
+.end method
+
+.method static synthetic d(Landroid/content/Context;)Ljava/lang/String;
+    .registers 2
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Landroid/content/pm/PackageManager;->getInstallerPackageName(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_13
+
+    invoke-static {p0}, Lcom/google/firebase/FirebaseCommonRegistrar;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_15
+
+    :cond_13
+    const-string p0, ""
+
+    :goto_15
+    return-object p0
+.end method
+
+.method private static e(Ljava/lang/String;)Ljava/lang/String;
+    .registers 3
+
+    const/16 v0, 0x20
+
+    const/16 v1, 0x5f
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/16 v0, 0x2f
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public getComponents()Ljava/util/List;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/google/firebase/components/Component<",
+            "*>;>;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lcom/google/firebase/platforminfo/DefaultUserAgentPublisher;->component()Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Lcom/google/firebase/heartbeatinfo/DefaultHeartBeatController;->component()Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "fire-android"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "fire-core"
+
+    const-string v2, "20.1.0"
+
+    invoke-static {v1, v2}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/google/firebase/FirebaseCommonRegistrar;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "device-name"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/google/firebase/FirebaseCommonRegistrar;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "device-model"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/google/firebase/FirebaseCommonRegistrar;->e(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "device-brand"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Lcom/google/firebase/d;->a:Lcom/google/firebase/d;
+
+    const-string v2, "android-target-sdk"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->fromContext(Ljava/lang/String;Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Lcom/google/firebase/e;->a:Lcom/google/firebase/e;
+
+    const-string v2, "android-min-sdk"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->fromContext(Ljava/lang/String;Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Lcom/google/firebase/f;->a:Lcom/google/firebase/f;
+
+    const-string v2, "android-platform"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->fromContext(Ljava/lang/String;Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    sget-object v1, Lcom/google/firebase/c;->a:Lcom/google/firebase/c;
+
+    const-string v2, "android-installer"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->fromContext(Ljava/lang/String;Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Lcom/google/firebase/platforminfo/KotlinDetector;->detectVersion()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_95
+
+    const-string v2, "kotlin"
+
+    invoke-static {v2, v1}, Lcom/google/firebase/platforminfo/LibraryVersionComponent;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/google/firebase/components/Component;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_95
+    return-object v0
+.end method
+
+###### Class com.google.firebase.c (com.google.firebase.c)
+.class public final synthetic Lcom/google/firebase/c;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
+
+
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/c;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/firebase/c;
+
+    invoke-direct {v0}, Lcom/google/firebase/c;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/c;->a:Lcom/google/firebase/c;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .registers 2
+
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->d(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class com.google.firebase.d (com.google.firebase.d)
+.class public final synthetic Lcom/google/firebase/d;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
+
+
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/d;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/firebase/d;
+
+    invoke-direct {v0}, Lcom/google/firebase/d;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/d;->a:Lcom/google/firebase/d;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .registers 2
+
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class com.google.firebase.e (com.google.firebase.e)
+.class public final synthetic Lcom/google/firebase/e;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
+
+
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/e;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/firebase/e;
+
+    invoke-direct {v0}, Lcom/google/firebase/e;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/e;->a:Lcom/google/firebase/e;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .registers 2
+
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class com.google.firebase.f (com.google.firebase.f)
+.class public final synthetic Lcom/google/firebase/f;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/google/firebase/platforminfo/LibraryVersionComponent$VersionExtractor;
+
+
+# static fields
+.field public static final synthetic a:Lcom/google/firebase/f;
+
+
+# direct methods
+.method static synthetic constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Lcom/google/firebase/f;
+
+    invoke-direct {v0}, Lcom/google/firebase/f;-><init>()V
+
+    sput-object v0, Lcom/google/firebase/f;->a:Lcom/google/firebase/f;
+
+    return-void
+.end method
+
+.method private synthetic constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .registers 2
+
+    check-cast p1, Landroid/content/Context;
+
+    invoke-static {p1}, Lcom/google/firebase/FirebaseCommonRegistrar;->c(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method

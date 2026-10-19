@@ -1,0 +1,132 @@
+###### Class com.mbridge.msdk.foundation.same.net.e.e (com.mbridge.msdk.foundation.same.net.e.e)
+.class public abstract Lcom/mbridge/msdk/foundation/same/net/e/e;
+.super Lcom/mbridge/msdk/foundation/same/net/j;
+.source "JsonRequest.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/mbridge/msdk/foundation/same/net/j<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final c:Ljava/lang/String;
+
+
+# instance fields
+.field private final d:Ljava/lang/String;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    const-class v0, Lcom/mbridge/msdk/foundation/same/net/e/e;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/mbridge/msdk/foundation/same/net/e/e;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Lcom/mbridge/msdk/foundation/same/net/e;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/foundation/same/net/e<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2, p4}, Lcom/mbridge/msdk/foundation/same/net/j;-><init>(ILjava/lang/String;Lcom/mbridge/msdk/foundation/same/net/e;)V
+
+    iput-object p3, p0, Lcom/mbridge/msdk/foundation/same/net/e/e;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/lang/String;Ljava/lang/String;Lcom/mbridge/msdk/foundation/same/net/e;Z)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Lcom/mbridge/msdk/foundation/same/net/e<",
+            "TT;>;Z)V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1, p2, p4, p5}, Lcom/mbridge/msdk/foundation/same/net/j;-><init>(ILjava/lang/String;Lcom/mbridge/msdk/foundation/same/net/e;Z)V
+
+    iput-object p3, p0, Lcom/mbridge/msdk/foundation/same/net/e/e;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final f()[B
+    .registers 5
+
+    const/4 v0, 0x0
+
+    :try_start_1
+    iget-object v1, p0, Lcom/mbridge/msdk/foundation/same/net/e/e;->d:Ljava/lang/String;
+
+    if-nez v1, :cond_6
+
+    goto :goto_c
+
+    :cond_6
+    const-string v2, "utf-8"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v0
+    :try_end_c
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_c} :catch_d
+
+    :goto_c
+    return-object v0
+
+    :catch_d
+    sget-object v1, Lcom/mbridge/msdk/foundation/same/net/e/e;->c:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Unsupported Encoding while trying to get the bytes of "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/mbridge/msdk/foundation/same/net/e/e;->d:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " using utf-8"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method

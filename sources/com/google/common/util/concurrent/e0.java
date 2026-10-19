@@ -1,0 +1,8 @@
+package com.google.common.util.concurrent;
+
+/* JADX INFO: compiled from: GwtFuturesCatchingSpecialization.java */
+/* JADX INFO: loaded from: classes3.dex */
+abstract class e0 {
+    e0() {
+    }
+}

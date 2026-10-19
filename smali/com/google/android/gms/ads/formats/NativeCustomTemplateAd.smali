@@ -1,0 +1,173 @@
+###### Class com.google.android.gms.ads.formats.NativeCustomTemplateAd (com.google.android.gms.ads.formats.NativeCustomTemplateAd)
+.class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$DisplayOpenMeasurement;,
+        Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;,
+        Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# static fields
+.field public static final ASSET_NAME_VIDEO:Ljava/lang/String; = "_videoMediaView"
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end field
+
+
+# virtual methods
+.method public abstract destroy()V
+.end method
+
+.method public abstract getAvailableAssetNames()Ljava/util/List;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getCustomTemplateId()Ljava/lang/String;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getDisplayOpenMeasurement()Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$DisplayOpenMeasurement;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getImage(Ljava/lang/String;)Lcom/google/android/gms/ads/formats/NativeAd$Image;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getText(Ljava/lang/String;)Ljava/lang/CharSequence;
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getVideoController()Lcom/google/android/gms/ads/VideoController;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract getVideoMediaView()Lcom/google/android/gms/ads/formats/MediaView;
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+.end method
+
+.method public abstract performClick(Ljava/lang/String;)V
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract recordImpression()V
+.end method
+
+###### Class com.google.android.gms.ads.formats.NativeCustomTemplateAd.DisplayOpenMeasurement (com.google.android.gms.ads.formats.NativeCustomTemplateAd$DisplayOpenMeasurement)
+.class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$DisplayOpenMeasurement;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "DisplayOpenMeasurement"
+.end annotation
+
+
+# virtual methods
+.method public abstract setView(Landroid/view/View;)V
+    .param p1    # Landroid/view/View;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+.method public abstract start()Z
+.end method
+
+###### Class com.google.android.gms.ads.formats.NativeCustomTemplateAd.OnCustomClickListener (com.google.android.gms.ads.formats.NativeCustomTemplateAd$OnCustomClickListener)
+.class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomClickListener;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnCustomClickListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onCustomClick(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;Ljava/lang/String;)V
+    .param p1    # Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method
+
+###### Class com.google.android.gms.ads.formats.NativeCustomTemplateAd.OnCustomTemplateAdLoadedListener (com.google.android.gms.ads.formats.NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener)
+.class public interface abstract Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd$OnCustomTemplateAdLoadedListener;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads-lite@@22.6.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnCustomTemplateAdLoadedListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onCustomTemplateAdLoaded(Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;)V
+    .param p1    # Lcom/google/android/gms/ads/formats/NativeCustomTemplateAd;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+.end method

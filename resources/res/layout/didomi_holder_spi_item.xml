@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:paddingStart="@dimen/didomi_list_item_horizontal_padding"
+    android:paddingEnd="@dimen/didomi_list_item_horizontal_padding">
+    <TextView
+        android:id="@+id/text_holder_spi_item_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_weight="1"
+        android:layout_marginEnd="16dp"
+        style="@style/DidomiAction"/>
+    <io.didomi.drawable.view.mobile.DidomiToggle
+        android:id="@+id/switch_holder_spi_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_holder_spi_item_arrow"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:scaleType="centerInside"
+        android:layout_marginEnd="8dp"
+        app:srcCompat="@drawable/didomi_ic_small_arrow"/>
+</LinearLayout>

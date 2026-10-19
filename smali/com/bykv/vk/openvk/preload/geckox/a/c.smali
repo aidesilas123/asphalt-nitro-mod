@@ -1,0 +1,673 @@
+###### Class com.bykv.vk.openvk.preload.geckox.a.c (com.bykv.vk.openvk.preload.geckox.a.c)
+.class public final Lcom/bykv/vk/openvk/preload/geckox/a/c;
+.super Ljava/lang/Object;
+.source "ChannelCleanHelper.java"
+
+
+# direct methods
+.method private static a([Ljava/io/File;)Ljava/util/List;
+    .registers 15
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Ljava/io/File;",
+            ")",
+            "Ljava/util/List<",
+            "Ljava/io/File;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    array-length v2, p0
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, -0x1
+
+    const/4 v6, 0x0
+
+    move-wide v8, v4
+
+    const/4 v7, 0x0
+
+    :goto_11
+    const-string v10, "--updating"
+
+    if-ge v7, v2, :cond_4e
+
+    aget-object v11, p0, v7
+
+    invoke-virtual {v11}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-virtual {v12, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_25
+
+    invoke-interface {v0, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_4b
+
+    :cond_25
+    const-string v10, "--pending-delete"
+
+    invoke-virtual {v12, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_31
+
+    invoke-static {v11}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/io/File;)V
+
+    goto :goto_4b
+
+    :cond_31
+    :try_start_31
+    invoke-static {v12}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v12
+    :try_end_35
+    .catch Ljava/lang/Exception; {:try_start_31 .. :try_end_35} :catch_48
+
+    cmp-long v10, v12, v8
+
+    if-lez v10, :cond_44
+
+    if-eqz v6, :cond_41
+
+    :try_start_3b
+    invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_3e
+    .catch Ljava/lang/Exception; {:try_start_3b .. :try_end_3e} :catch_3f
+
+    goto :goto_41
+
+    :catch_3f
+    move-wide v8, v12
+
+    goto :goto_48
+
+    :cond_41
+    :goto_41
+    move-object v6, v11
+
+    move-wide v8, v12
+
+    goto :goto_4b
+
+    :cond_44
+    :try_start_44
+    invoke-interface {v1, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_47
+    .catch Ljava/lang/Exception; {:try_start_44 .. :try_end_47} :catch_48
+
+    goto :goto_4b
+
+    :catch_48
+    :goto_48
+    invoke-static {v11}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/io/File;)V
+
+    :goto_4b
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_11
+
+    :cond_4e
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_52
+    :goto_52
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_83
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v10}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v6
+
+    const/4 v7, -0x1
+
+    if-ne v6, v7, :cond_6d
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/io/File;)V
+
+    goto :goto_52
+
+    :cond_6d
+    invoke-virtual {v2, v3, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    :try_start_71
+    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v6
+    :try_end_75
+    .catch Ljava/lang/NumberFormatException; {:try_start_71 .. :try_end_75} :catch_76
+
+    goto :goto_7b
+
+    :catch_76
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/lang/NumberFormatException;->printStackTrace()V
+
+    move-wide v6, v4
+
+    :goto_7b
+    cmp-long v2, v6, v8
+
+    if-gtz v2, :cond_52
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/io/File;)V
+
+    goto :goto_52
+
+    :cond_83
+    return-object v1
+.end method
+
+.method private static a(Ljava/io/File;)V
+    .registers 3
+
+    invoke-static {}, Lcom/bykv/vk/openvk/preload/geckox/utils/e;->a()Lcom/bykv/vk/openvk/preload/geckox/utils/e;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bykv/vk/openvk/preload/geckox/a/c$3;
+
+    invoke-direct {v1, p0}, Lcom/bykv/vk/openvk/preload/geckox/a/c$3;-><init>(Ljava/io/File;)V
+
+    invoke-virtual {v0, v1}, Lcom/bykv/vk/openvk/preload/geckox/utils/e;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)V
+    .registers 3
+
+    invoke-static {}, Lcom/bykv/vk/openvk/preload/geckox/utils/i;->a()Lcom/bykv/vk/openvk/preload/geckox/utils/i;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/bykv/vk/openvk/preload/geckox/a/c$1;
+
+    invoke-direct {v1, p0}, Lcom/bykv/vk/openvk/preload/geckox/a/c$1;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/bykv/vk/openvk/preload/geckox/utils/i;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .registers 5
+
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "update.lock"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a(Ljava/lang/String;)Lcom/bykv/vk/openvk/preload/geckox/g/a;
+
+    move-result-object v0
+    :try_end_1a
+    .catchall {:try_start_0 .. :try_end_1a} :catchall_4a
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_1e
+
+    return v2
+
+    :cond_1e
+    :try_start_1e
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "select.lock"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a(Ljava/lang/String;)Lcom/bykv/vk/openvk/preload/geckox/g/b;
+
+    move-result-object v1
+    :try_end_36
+    .catchall {:try_start_1e .. :try_end_36} :catchall_45
+
+    :try_start_36
+    new-instance v3, Ljava/io/File;
+
+    invoke-direct {v3, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v3}, Lcom/bykv/vk/openvk/preload/geckox/utils/c;->b(Ljava/io/File;)Z
+    :try_end_3e
+    .catchall {:try_start_36 .. :try_end_3e} :catchall_3e
+
+    :catchall_3e
+    :try_start_3e
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a()V
+    :try_end_41
+    .catchall {:try_start_3e .. :try_end_41} :catchall_45
+
+    :try_start_41
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a()V
+
+    return v2
+
+    :catchall_45
+    move-exception p0
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a()V
+
+    throw p0
+    :try_end_4a
+    .catchall {:try_start_41 .. :try_end_4a} :catchall_4a
+
+    :catchall_4a
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method static synthetic c(Ljava/lang/String;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "update.lock"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a(Ljava/lang/String;)Lcom/bykv/vk/openvk/preload/geckox/g/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_a1
+
+    :try_start_1c
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "select.lock"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a(Ljava/lang/String;)Lcom/bykv/vk/openvk/preload/geckox/g/b;
+
+    move-result-object v1
+    :try_end_34
+    .catchall {:try_start_1c .. :try_end_34} :catchall_9c
+
+    :try_start_34
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    new-instance p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$2;
+
+    invoke-direct {p0}, Lcom/bykv/vk/openvk/preload/geckox/a/c$2;-><init>()V
+
+    invoke-virtual {v2, p0}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_51
+
+    array-length v2, p0
+
+    if-eqz v2, :cond_51
+
+    array-length v2, p0
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_4c
+
+    goto :goto_51
+
+    :cond_4c
+    invoke-static {p0}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->a([Ljava/io/File;)Ljava/util/List;
+
+    move-result-object p0
+
+    goto :goto_52
+
+    :cond_51
+    :goto_51
+    const/4 p0, 0x0
+
+    :goto_52
+    if-eqz p0, :cond_90
+
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5b
+
+    goto :goto_90
+
+    :cond_5b
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_5f
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_89
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/io/File;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "using.lock"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/bykv/vk/openvk/preload/geckox/g/c;->c(Ljava/lang/String;)V
+    :try_end_88
+    .catchall {:try_start_34 .. :try_end_88} :catchall_97
+
+    goto :goto_5f
+
+    :cond_89
+    :try_start_89
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a()V
+    :try_end_8c
+    .catchall {:try_start_89 .. :try_end_8c} :catchall_9c
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a()V
+
+    return-void
+
+    :cond_90
+    :goto_90
+    :try_start_90
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a()V
+    :try_end_93
+    .catchall {:try_start_90 .. :try_end_93} :catchall_9c
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a()V
+
+    return-void
+
+    :catchall_97
+    move-exception p0
+
+    :try_start_98
+    invoke-virtual {v1}, Lcom/bykv/vk/openvk/preload/geckox/g/b;->a()V
+
+    throw p0
+    :try_end_9c
+    .catchall {:try_start_98 .. :try_end_9c} :catchall_9c
+
+    :catchall_9c
+    move-exception p0
+
+    invoke-virtual {v0}, Lcom/bykv/vk/openvk/preload/geckox/g/a;->a()V
+
+    throw p0
+
+    :cond_a1
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.preload.geckox.a.c.AnonymousClass1 (com.bykv.vk.openvk.preload.geckox.a.c$1)
+.class final Lcom/bykv/vk/openvk/preload/geckox/a/c$1;
+.super Ljava/lang/Object;
+.source "ChannelCleanHelper.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$1;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 5
+
+    :try_start_0
+    iget-object v0, p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$1;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/a/c;->c(Ljava/lang/String;)V
+    :try_end_5
+    .catchall {:try_start_0 .. :try_end_5} :catchall_6
+
+    return-void
+
+    :catchall_6
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "delete old channel version failed\uff0cpath\uff1a"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$1;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lcom/bykv/vk/openvk/preload/geckox/utils/b;->a(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+###### Class com.bykv.vk.openvk.preload.geckox.a.c.AnonymousClass2 (com.bykv.vk.openvk.preload.geckox.a.c$2)
+.class final Lcom/bykv/vk/openvk/preload/geckox/a/c$2;
+.super Ljava/lang/Object;
+.source "ChannelCleanHelper.java"
+
+# interfaces
+.implements Ljava/io/FileFilter;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bykv/vk/openvk/preload/geckox/a/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/io/File;)Z
+    .registers 2
+
+    invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
+
+    move-result p1
+
+    return p1
+.end method
+
+###### Class com.bykv.vk.openvk.preload.geckox.a.c.AnonymousClass3 (com.bykv.vk.openvk.preload.geckox.a.c$3)
+.class final Lcom/bykv/vk/openvk/preload/geckox/a/c$3;
+.super Ljava/lang/Object;
+.source "ChannelCleanHelper.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bykv/vk/openvk/preload/geckox/a/c;->a(Ljava/io/File;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Ljava/io/File;
+
+
+# direct methods
+.method constructor <init>(Ljava/io/File;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$3;->a:Ljava/io/File;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/bykv/vk/openvk/preload/geckox/a/c$3;->a:Ljava/io/File;
+
+    invoke-static {v0}, Lcom/bykv/vk/openvk/preload/geckox/utils/c;->a(Ljava/io/File;)Z
+
+    return-void
+.end method

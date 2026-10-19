@@ -1,0 +1,354 @@
+###### Class com.unity3d.ads.adplayer.AdPlayer (com.unity3d.ads.adplayer.AdPlayer)
+.class public interface abstract Lcom/unity3d/ads/adplayer/AdPlayer;
+.super Ljava/lang/Object;
+.source "AdPlayer.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000^\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0010\u000b\n\u0002\u0008\u0008\n\u0002\u0010\u0006\n\u0002\u0008\u0003\u0008f\u0018\u0000 .2\u00020\u0001:\u0001.J\u0019\u0010\u0017\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u0019H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001aJ\u0019\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u001c\u001a\u00020\u001dH\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010\u001eJ\u0011\u0010\u001f\u001a\u00020\u0004H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010 J\u0019\u0010!\u001a\u00020\u00042\u0006\u0010\"\u001a\u00020#H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010$J\u0019\u0010%\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u0014H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010&J\u0019\u0010\'\u001a\u00020\u00042\u0006\u0010\u0018\u001a\u00020\u0014H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010&J\u0019\u0010(\u001a\u00020\u00042\u0006\u0010)\u001a\u00020#H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010$J\u0019\u0010*\u001a\u00020\u00042\u0006\u0010+\u001a\u00020,H\u00a6@\u00f8\u0001\u0000\u00a2\u0006\u0002\u0010-R\u0018\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0003X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0005\u0010\u0006R\u0018\u0010\u0007\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0008X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\t\u0010\nR\u0018\u0010\u000b\u001a\u0008\u0012\u0004\u0012\u00020\u000c0\u0008X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\r\u0010\nR\u0012\u0010\u000e\u001a\u00020\u000fX\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0010\u0010\u0011R$\u0010\u0012\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0014\u0012\u0004\u0012\u00020\u00150\u00130\u0008X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0016\u0010\n\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006/"
+    }
+    d2 = {
+        "Lcom/unity3d/ads/adplayer/AdPlayer;",
+        "",
+        "loadEvent",
+        "Lkotlinx/coroutines/Deferred;",
+        "",
+        "getLoadEvent",
+        "()Lkotlinx/coroutines/Deferred;",
+        "markCampaignStateAsShown",
+        "Lkotlinx/coroutines/flow/Flow;",
+        "getMarkCampaignStateAsShown",
+        "()Lkotlinx/coroutines/flow/Flow;",
+        "onShowEvent",
+        "Lcom/unity3d/ads/core/data/model/ShowEvent;",
+        "getOnShowEvent",
+        "scope",
+        "Lkotlinx/coroutines/CoroutineScope;",
+        "getScope",
+        "()Lkotlinx/coroutines/CoroutineScope;",
+        "updateCampaignState",
+        "Lkotlin/Pair;",
+        "Lcom/google/protobuf/ByteString;",
+        "",
+        "getUpdateCampaignState",
+        "onAllowedPiiChange",
+        "value",
+        "Lgateway/v1/AllowedPiiOuterClass$AllowedPii;",
+        "(Lgateway/v1/AllowedPiiOuterClass$AllowedPii;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "onBroadcastEvent",
+        "event",
+        "Lorg/json/JSONObject;",
+        "(Lorg/json/JSONObject;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "requestShow",
+        "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "sendMuteChange",
+        "isMuted",
+        "",
+        "(ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "sendPrivacyFsmChange",
+        "(Lcom/google/protobuf/ByteString;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "sendUserConsentChange",
+        "sendVisibilityChange",
+        "isVisible",
+        "sendVolumeChange",
+        "volume",
+        "",
+        "(DLkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "Companion",
+        "unity-ads_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final Companion:Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    sget-object v0, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;->$$INSTANCE:Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+    sput-object v0, Lcom/unity3d/ads/adplayer/AdPlayer;->Companion:Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract getLoadEvent()Lkotlinx/coroutines/Deferred;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/coroutines/Deferred<",
+            "Lkotlin/v;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getMarkCampaignStateAsShown()Lkotlinx/coroutines/flow/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/coroutines/flow/i<",
+            "Lkotlin/v;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getOnShowEvent()Lkotlinx/coroutines/flow/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/coroutines/flow/i<",
+            "Lcom/unity3d/ads/core/data/model/ShowEvent;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getScope()Lkotlinx/coroutines/s;
+.end method
+
+.method public abstract getUpdateCampaignState()Lkotlinx/coroutines/flow/i;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/coroutines/flow/i<",
+            "Lkotlin/Pair<",
+            "Lcom/google/protobuf/ByteString;",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
+.end method
+
+.method public abstract onAllowedPiiChange(Lgateway/v1/AllowedPiiOuterClass$AllowedPii;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lgateway/v1/AllowedPiiOuterClass$AllowedPii;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract onBroadcastEvent(Lorg/json/JSONObject;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/json/JSONObject;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract requestShow(Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract sendMuteChange(ZLkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract sendPrivacyFsmChange(Lcom/google/protobuf/ByteString;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/protobuf/ByteString;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract sendUserConsentChange(Lcom/google/protobuf/ByteString;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/protobuf/ByteString;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract sendVisibilityChange(ZLkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+.method public abstract sendVolumeChange(DLkotlin/coroutines/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(D",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
+
+###### Class com.unity3d.ads.adplayer.AdPlayer.Companion (com.unity3d.ads.adplayer.AdPlayer$Companion)
+.class public final Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+.super Ljava/lang/Object;
+.source "AdPlayer.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/unity3d/ads/adplayer/AdPlayer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Companion"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\u0008\u0002\u00a2\u0006\u0002\u0010\u0002R\u0017\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00020\u00050\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u0006\u0010\u0007\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "Lcom/unity3d/ads/adplayer/AdPlayer$Companion;",
+        "",
+        "()V",
+        "broadcastEventChannel",
+        "Lkotlinx/coroutines/flow/MutableSharedFlow;",
+        "Lorg/json/JSONObject;",
+        "getBroadcastEventChannel",
+        "()Lkotlinx/coroutines/flow/MutableSharedFlow;",
+        "unity-ads_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field static final synthetic $$INSTANCE:Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+.field private static final broadcastEventChannel:Lkotlinx/coroutines/flow/k;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/flow/k<",
+            "Lorg/json/JSONObject;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    new-instance v0, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+    invoke-direct {v0}, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;-><init>()V
+
+    sput-object v0, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;->$$INSTANCE:Lcom/unity3d/ads/adplayer/AdPlayer$Companion;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v0, v1, v2, v1}, Lkotlinx/coroutines/flow/SharedFlowKt;->MutableSharedFlow$default(IILkotlinx/coroutines/channels/BufferOverflow;ILjava/lang/Object;)Lkotlinx/coroutines/flow/k;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;->broadcastEventChannel:Lkotlinx/coroutines/flow/k;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getBroadcastEventChannel()Lkotlinx/coroutines/flow/k;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlinx/coroutines/flow/k<",
+            "Lorg/json/JSONObject;",
+            ">;"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/unity3d/ads/adplayer/AdPlayer$Companion;->broadcastEventChannel:Lkotlinx/coroutines/flow/k;
+
+    return-object v0
+.end method

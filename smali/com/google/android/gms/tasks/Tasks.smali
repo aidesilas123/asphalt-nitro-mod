@@ -1,0 +1,1007 @@
+###### Class com.google.android.gms.tasks.Tasks (com.google.android.gms.tasks.Tasks)
+.class public final Lcom/google/android/gms/tasks/Tasks;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tasks@@18.0.1"
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static await(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+    .registers 3
+    .param p0    # Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;)TTResult;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotMainThread()V
+
+    const-string v0, "Task must not be null"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isComplete()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_13
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_13
+    new-instance v0, Lcom/google/android/gms/tasks/zzad;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/tasks/zzad;-><init>(Lcom/google/android/gms/tasks/zzac;)V
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/tasks/Tasks;->zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/tasks/zzad;->zza()V
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static await(Lcom/google/android/gms/tasks/Task;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .registers 6
+    .param p0    # Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/concurrent/TimeUnit;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")TTResult;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;,
+            Ljava/lang/InterruptedException;,
+            Ljava/util/concurrent/TimeoutException;
+        }
+    .end annotation
+
+    invoke-static {}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotMainThread()V
+
+    const-string v0, "Task must not be null"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "TimeUnit must not be null"
+
+    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isComplete()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_18
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_18
+    new-instance v0, Lcom/google/android/gms/tasks/zzad;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/google/android/gms/tasks/zzad;-><init>(Lcom/google/android/gms/tasks/zzac;)V
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/tasks/Tasks;->zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/google/android/gms/tasks/zzad;->zzb(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2c
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2c
+    new-instance p0, Ljava/util/concurrent/TimeoutException;
+
+    const-string p1, "Timed out waiting for Task"
+
+    invoke-direct {p0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static call(Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .param p0    # Ljava/util/concurrent/Callable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Callable<",
+            "TTResult;>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    sget-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, p0}, Lcom/google/android/gms/tasks/Tasks;->call(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static call(Ljava/util/concurrent/Executor;Ljava/util/concurrent/Callable;)Lcom/google/android/gms/tasks/Task;
+    .registers 4
+    .param p0    # Ljava/util/concurrent/Executor;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/concurrent/Callable;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/concurrent/Executor;",
+            "Ljava/util/concurrent/Callable<",
+            "TTResult;>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const-string v0, "Executor must not be null"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v0, "Callback must not be null"
+
+    invoke-static {p1, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lcom/google/android/gms/tasks/zzw;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
+
+    new-instance v1, Lcom/google/android/gms/tasks/zzz;
+
+    invoke-direct {v1, v0, p1}, Lcom/google/android/gms/tasks/zzz;-><init>(Lcom/google/android/gms/tasks/zzw;Ljava/util/concurrent/Callable;)V
+
+    invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-object v0
+.end method
+
+.method public static forCanceled()Lcom/google/android/gms/tasks/Task;
+    .registers 1
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">()",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/tasks/zzw;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
+
+    invoke-virtual {v0}, Lcom/google/android/gms/tasks/zzw;->zzc()Z
+
+    return-object v0
+.end method
+
+.method public static forException(Ljava/lang/Exception;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .param p0    # Ljava/lang/Exception;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Exception;",
+            ")",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/tasks/zzw;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
+
+    invoke-virtual {v0, p0}, Lcom/google/android/gms/tasks/zzw;->zza(Ljava/lang/Exception;)V
+
+    return-object v0
+.end method
+
+.method public static forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(TTResult;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/android/gms/tasks/zzw;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
+
+    invoke-virtual {v0, p0}, Lcom/google/android/gms/tasks/zzw;->zzb(Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static whenAll(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+    .registers 4
+    .param p0    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_42
+
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_42
+
+    :cond_9
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_d
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1f
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/google/android/gms/tasks/Task;
+
+    const-string v2, "null tasks are not accepted"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    goto :goto_d
+
+    :cond_1f
+    new-instance v0, Lcom/google/android/gms/tasks/zzw;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzw;-><init>()V
+
+    new-instance v1, Lcom/google/android/gms/tasks/zzaf;
+
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result v2
+
+    invoke-direct {v1, v2, v0}, Lcom/google/android/gms/tasks/zzaf;-><init>(ILcom/google/android/gms/tasks/zzw;)V
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_31
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_41
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/google/android/gms/tasks/Task;
+
+    invoke-static {v2, v1}, Lcom/google/android/gms/tasks/Tasks;->zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
+
+    goto :goto_31
+
+    :cond_41
+    return-object v0
+
+    :cond_42
+    :goto_42
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static varargs whenAll([Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .param p0    # [Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_f
+
+    array-length v0, p0
+
+    if-nez v0, :cond_6
+
+    goto :goto_f
+
+    :cond_6
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->whenAll(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_f
+    :goto_f
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static whenAllComplete(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+    .registers 3
+    .param p0    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;>;>;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_19
+
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_19
+
+    :cond_9
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->whenAll(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/google/android/gms/tasks/zzab;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/tasks/zzab;-><init>(Ljava/util/Collection;)V
+
+    sget-object p0, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0, p0, v1}, Lcom/google/android/gms/tasks/Task;->continueWithTask(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_19
+    :goto_19
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static varargs whenAllComplete([Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .param p0    # [Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/util/List<",
+            "Lcom/google/android/gms/tasks/Task<",
+            "*>;>;>;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_f
+
+    array-length v0, p0
+
+    if-nez v0, :cond_6
+
+    goto :goto_f
+
+    :cond_6
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->whenAllComplete(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_f
+    :goto_f
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static whenAllSuccess(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+    .registers 3
+    .param p0    # Ljava/util/Collection;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/Collection<",
+            "+",
+            "Lcom/google/android/gms/tasks/Task;",
+            ">;)",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/util/List<",
+            "TTResult;>;>;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_19
+
+    invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    goto :goto_19
+
+    :cond_9
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->whenAll(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/google/android/gms/tasks/zzaa;
+
+    invoke-direct {v1, p0}, Lcom/google/android/gms/tasks/zzaa;-><init>(Ljava/util/Collection;)V
+
+    sget-object p0, Lcom/google/android/gms/tasks/TaskExecutors;->MAIN_THREAD:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0, p0, v1}, Lcom/google/android/gms/tasks/Task;->continueWith(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/Continuation;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_19
+    :goto_19
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static varargs whenAllSuccess([Lcom/google/android/gms/tasks/Task;)Lcom/google/android/gms/tasks/Task;
+    .registers 2
+    .param p0    # [Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">([",
+            "Lcom/google/android/gms/tasks/Task;",
+            ")",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/util/List<",
+            "TTResult;>;>;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_f
+
+    array-length v0, p0
+
+    if-nez v0, :cond_6
+
+    goto :goto_f
+
+    :cond_6
+    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->whenAllSuccess(Ljava/util/Collection;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_f
+    :goto_f
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/google/android/gms/tasks/Tasks;->forResult(Ljava/lang/Object;)Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static withTimeout(Lcom/google/android/gms/tasks/Task;JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/tasks/Task;
+    .registers 8
+    .param p0    # Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .param p3    # Ljava/util/concurrent/TimeUnit;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TT;>;J",
+            "Ljava/util/concurrent/TimeUnit;",
+            ")",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "Task must not be null"
+
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    if-lez v2, :cond_d
+
+    const/4 v0, 0x1
+
+    goto :goto_e
+
+    :cond_d
+    const/4 v0, 0x0
+
+    :goto_e
+    const-string v1, "Timeout must be positive"
+
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/Preconditions;->checkArgument(ZLjava/lang/Object;)V
+
+    const-string v0, "TimeUnit must not be null"
+
+    invoke-static {p3, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v0, Lcom/google/android/gms/tasks/zzb;
+
+    invoke-direct {v0}, Lcom/google/android/gms/tasks/zzb;-><init>()V
+
+    new-instance v1, Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    invoke-direct {v1, v0}, Lcom/google/android/gms/tasks/TaskCompletionSource;-><init>(Lcom/google/android/gms/tasks/CancellationToken;)V
+
+    new-instance v2, Lcom/google/android/gms/internal/tasks/zza;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lcom/google/android/gms/internal/tasks/zza;-><init>(Landroid/os/Looper;)V
+
+    new-instance v3, Lcom/google/android/gms/tasks/zzy;
+
+    invoke-direct {v3, v1}, Lcom/google/android/gms/tasks/zzy;-><init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p1
+
+    invoke-virtual {v2, v3, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    new-instance p1, Lcom/google/android/gms/tasks/zzx;
+
+    invoke-direct {p1, v2, v1, v0}, Lcom/google/android/gms/tasks/zzx;-><init>(Lcom/google/android/gms/internal/tasks/zza;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/tasks/zzb;)V
+
+    invoke-virtual {p0, p1}, Lcom/google/android/gms/tasks/Task;->addOnCompleteListener(Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->getTask()Lcom/google/android/gms/tasks/Task;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private static zza(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
+    .registers 2
+    .param p0    # Lcom/google/android/gms/tasks/Task;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<TResult:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TTResult;>;)TTResult;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/util/concurrent/ExecutionException;
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_b
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->isCanceled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_19
+
+    new-instance p0, Ljava/util/concurrent/CancellationException;
+
+    const-string v0, "Task is already canceled"
+
+    invoke-direct {p0, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_19
+    new-instance v0, Ljava/util/concurrent/ExecutionException;
+
+    invoke-virtual {p0}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
+.method private static zzb(Lcom/google/android/gms/tasks/Task;Lcom/google/android/gms/tasks/zzae;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "TT;>;",
+            "Lcom/google/android/gms/tasks/zzae<",
+            "-TT;>;)V"
+        }
+    .end annotation
+
+    sget-object v0, Lcom/google/android/gms/tasks/TaskExecutors;->zza:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnSuccessListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnSuccessListener;)Lcom/google/android/gms/tasks/Task;
+
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnFailureListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnFailureListener;)Lcom/google/android/gms/tasks/Task;
+
+    invoke-virtual {p0, v0, p1}, Lcom/google/android/gms/tasks/Task;->addOnCanceledListener(Ljava/util/concurrent/Executor;Lcom/google/android/gms/tasks/OnCanceledListener;)Lcom/google/android/gms/tasks/Task;
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.tasks.zzx (com.google.android.gms.tasks.zzx)
+.class public final synthetic Lcom/google/android/gms/tasks/zzx;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tasks@@18.0.1"
+
+# interfaces
+.implements Lcom/google/android/gms/tasks/OnCompleteListener;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/internal/tasks/zza;
+
+.field public final synthetic zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+.field public final synthetic zzc:Lcom/google/android/gms/tasks/zzb;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/tasks/zza;Lcom/google/android/gms/tasks/TaskCompletionSource;Lcom/google/android/gms/tasks/zzb;)V
+    .registers 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/tasks/zzx;->zza:Lcom/google/android/gms/internal/tasks/zza;
+
+    iput-object p2, p0, Lcom/google/android/gms/tasks/zzx;->zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    iput-object p3, p0, Lcom/google/android/gms/tasks/zzx;->zzc:Lcom/google/android/gms/tasks/zzb;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onComplete(Lcom/google/android/gms/tasks/Task;)V
+    .registers 6
+
+    iget-object v0, p0, Lcom/google/android/gms/tasks/zzx;->zza:Lcom/google/android/gms/internal/tasks/zza;
+
+    iget-object v1, p0, Lcom/google/android/gms/tasks/zzx;->zzb:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    iget-object v2, p0, Lcom/google/android/gms/tasks/zzx;->zzc:Lcom/google/android/gms/tasks/zzb;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_18
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetResult(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_18
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isCanceled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_22
+
+    invoke-virtual {v2}, Lcom/google/android/gms/tasks/zzb;->zza()V
+
+    return-void
+
+    :cond_22
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v1, p1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetException(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.tasks.zzy (com.google.android.gms.tasks.zzy)
+.class public final synthetic Lcom/google/android/gms/tasks/zzy;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-tasks@@18.0.1"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/tasks/TaskCompletionSource;)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/tasks/zzy;->zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/gms/tasks/zzy;->zza:Lcom/google/android/gms/tasks/TaskCompletionSource;
+
+    new-instance v1, Ljava/util/concurrent/TimeoutException;
+
+    invoke-direct {v1}, Ljava/util/concurrent/TimeoutException;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcom/google/android/gms/tasks/TaskCompletionSource;->trySetException(Ljava/lang/Exception;)Z
+
+    return-void
+.end method

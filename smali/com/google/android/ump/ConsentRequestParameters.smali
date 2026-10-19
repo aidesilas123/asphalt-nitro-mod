@@ -1,0 +1,205 @@
+###### Class com.google.android.ump.ConsentRequestParameters (com.google.android.ump.ConsentRequestParameters)
+.class public Lcom/google/android/ump/ConsentRequestParameters;
+.super Ljava/lang/Object;
+.source "com.google.android.ump:user-messaging-platform@@2.1.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/ump/ConsentRequestParameters$Builder;
+    }
+.end annotation
+
+
+# instance fields
+.field private final a:Z
+
+.field private final b:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private final c:Lcom/google/android/ump/ConsentDebugSettings;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method synthetic constructor <init>(Lcom/google/android/ump/ConsentRequestParameters$Builder;Lcom/google/android/ump/zzb;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Lcom/google/android/ump/ConsentRequestParameters$Builder;->c(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Z
+
+    move-result p2
+
+    iput-boolean p2, p0, Lcom/google/android/ump/ConsentRequestParameters;->a:Z
+
+    invoke-static {p1}, Lcom/google/android/ump/ConsentRequestParameters$Builder;->b(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/google/android/ump/ConsentRequestParameters;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/google/android/ump/ConsentRequestParameters$Builder;->a(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Lcom/google/android/ump/ConsentDebugSettings;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/ump/ConsentRequestParameters;->c:Lcom/google/android/ump/ConsentDebugSettings;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getConsentDebugSettings()Lcom/google/android/ump/ConsentDebugSettings;
+    .registers 2
+    .annotation build Landroidx/annotation/RecentlyNullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/ump/ConsentRequestParameters;->c:Lcom/google/android/ump/ConsentDebugSettings;
+
+    return-object v0
+.end method
+
+.method public isTagForUnderAgeOfConsent()Z
+    .registers 2
+
+    iget-boolean v0, p0, Lcom/google/android/ump/ConsentRequestParameters;->a:Z
+
+    return v0
+.end method
+
+.method public final zza()Ljava/lang/String;
+    .registers 2
+    .annotation build Landroidx/annotation/RecentlyNullable;
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/ump/ConsentRequestParameters;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+###### Class com.google.android.ump.ConsentRequestParameters.Builder (com.google.android.ump.ConsentRequestParameters$Builder)
+.class public final Lcom/google/android/ump/ConsentRequestParameters$Builder;
+.super Ljava/lang/Object;
+.source "com.google.android.ump:user-messaging-platform@@2.1.0"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/ump/ConsentRequestParameters;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field private a:Z
+
+.field private b:Ljava/lang/String;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+.field private c:Lcom/google/android/ump/ConsentDebugSettings;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static bridge synthetic a(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Lcom/google/android/ump/ConsentDebugSettings;
+    .registers 1
+
+    iget-object p0, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->c:Lcom/google/android/ump/ConsentDebugSettings;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic b(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Ljava/lang/String;
+    .registers 1
+
+    iget-object p0, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->b:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method static bridge synthetic c(Lcom/google/android/ump/ConsentRequestParameters$Builder;)Z
+    .registers 1
+
+    iget-boolean p0, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->a:Z
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public build()Lcom/google/android/ump/ConsentRequestParameters;
+    .registers 3
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    new-instance v0, Lcom/google/android/ump/ConsentRequestParameters;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/google/android/ump/ConsentRequestParameters;-><init>(Lcom/google/android/ump/ConsentRequestParameters$Builder;Lcom/google/android/ump/zzb;)V
+
+    return-object v0
+.end method
+
+.method public setAdMobAppId(Ljava/lang/String;)Lcom/google/android/ump/ConsentRequestParameters$Builder;
+    .registers 2
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    .annotation build Lcom/google/android/gms/common/annotation/KeepForSdk;
+    .end annotation
+
+    iput-object p1, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->b:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public setConsentDebugSettings(Lcom/google/android/ump/ConsentDebugSettings;)Lcom/google/android/ump/ConsentRequestParameters$Builder;
+    .registers 2
+    .param p1    # Lcom/google/android/ump/ConsentDebugSettings;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    iput-object p1, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->c:Lcom/google/android/ump/ConsentDebugSettings;
+
+    return-object p0
+.end method
+
+.method public setTagForUnderAgeOfConsent(Z)Lcom/google/android/ump/ConsentRequestParameters$Builder;
+    .registers 2
+    .annotation build Landroidx/annotation/RecentlyNonNull;
+    .end annotation
+
+    iput-boolean p1, p0, Lcom/google/android/ump/ConsentRequestParameters$Builder;->a:Z
+
+    return-object p0
+.end method

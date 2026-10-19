@@ -1,0 +1,1428 @@
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog)
+.class public Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.super Landroid/app/Dialog;
+.source "BannerExpandDialog.java"
+
+
+# instance fields
+.field private final a:Ljava/lang/String;
+
+.field private b:Ljava/lang/String;
+
+.field private c:Z
+
+.field private d:Landroid/widget/FrameLayout;
+
+.field private e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+.field private f:Landroid/widget/TextView;
+
+.field private g:Ljava/lang/String;
+
+.field private h:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/mbridge/msdk/foundation/entity/CampaignEx;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private i:Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+.field private j:Lcom/mbridge/msdk/mbsignalcommon/mraid/b;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Bundle;Lcom/mbridge/msdk/mbbanner/common/b/a;)V
+    .registers 4
+
+    invoke-direct {p0, p1}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
+
+    const-string p1, "BannerExpandDialog"
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a:Ljava/lang/String;
+
+    new-instance p1, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;
+
+    invoke-direct {p1, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->j:Lcom/mbridge/msdk/mbsignalcommon/mraid/b;
+
+    if-eqz p2, :cond_20
+
+    const-string p1, "url"
+
+    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->b:Ljava/lang/String;
+
+    const-string p1, "shouldUseCustomClose"
+
+    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c:Z
+
+    :cond_20
+    iput-object p3, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->i:Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;Lcom/mbridge/msdk/mbbanner/common/b/a;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->i:Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    return-object p1
+.end method
+
+.method private a()V
+    .registers 4
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4b
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_4b
+
+    const/16 v1, 0x207
+
+    const/16 v2, 0x13
+
+    if-lt v0, v2, :cond_40
+
+    const/16 v1, 0x1207
+
+    :cond_40
+    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
+
+    :cond_4b
+    return-void
+.end method
+
+.method static synthetic a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 23
+
+    move-object/from16 v0, p0
+
+    const-string v1, "true"
+
+    :try_start_4
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/content/res/Configuration;->orientation:I
+
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v4, "orientation"
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
+
+    if-ne v2, v5, :cond_24
+
+    const-string v2, "landscape"
+
+    goto :goto_2b
+
+    :cond_24
+    if-ne v2, v6, :cond_29
+
+    const-string v2, "portrait"
+
+    goto :goto_2b
+
+    :cond_29
+    const-string v2, "undefined"
+
+    :goto_2b
+    invoke-virtual {v3, v4, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    const-string v2, "locked"
+
+    invoke-virtual {v3, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/mbridge/msdk/foundation/tools/w;->l(Landroid/content/Context;)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/mbridge/msdk/foundation/tools/w;->m(Landroid/content/Context;)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/mbridge/msdk/foundation/tools/w;->n(Landroid/content/Context;)Ljava/util/HashMap;
+
+    move-result-object v7
+
+    const-string v8, "width"
+
+    invoke-virtual {v7, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Integer;
+
+    invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
+
+    move-result v8
+
+    const-string v9, "height"
+
+    invoke-virtual {v7, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/Integer;
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    new-instance v9, Ljava/util/HashMap;
+
+    invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
+
+    const-string v10, "placementType"
+
+    const-string v11, "Interstitial"
+
+    invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v10, "state"
+
+    const-string v11, "expanded"
+
+    invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v10, "viewable"
+
+    invoke-virtual {v9, v10, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "currentAppOrientation"
+
+    invoke-virtual {v9, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-array v1, v5, [I
+
+    iget-object v3, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v3, v1}, Landroid/webkit/WebView;->getLocationInWindow([I)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v10
+
+    iget-object v11, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    const/4 v3, 0x0
+
+    aget v5, v1, v3
+
+    int-to-float v12, v5
+
+    aget v5, v1, v6
+
+    int-to-float v13, v5
+
+    invoke-virtual {v11}, Landroid/webkit/WebView;->getWidth()I
+
+    move-result v5
+
+    int-to-float v14, v5
+
+    iget-object v5, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v5}, Landroid/webkit/WebView;->getHeight()I
+
+    move-result v5
+
+    int-to-float v15, v5
+
+    invoke-virtual/range {v10 .. v15}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a(Landroid/webkit/WebView;FFFF)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v16
+
+    iget-object v5, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    aget v3, v1, v3
+
+    int-to-float v3, v3
+
+    aget v1, v1, v6
+
+    int-to-float v1, v1
+
+    invoke-virtual {v5}, Landroid/webkit/WebView;->getWidth()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    iget-object v10, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v10}, Landroid/webkit/WebView;->getHeight()I
+
+    move-result v10
+
+    int-to-float v10, v10
+
+    move-object/from16 v17, v5
+
+    move/from16 v18, v3
+
+    move/from16 v19, v1
+
+    move/from16 v20, v6
+
+    move/from16 v21, v10
+
+    invoke-virtual/range {v16 .. v21}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->b(Landroid/webkit/WebView;FFFF)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v1
+
+    iget-object v3, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v1, v3, v2, v4}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->b(Landroid/webkit/WebView;FF)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    int-to-float v3, v8
+
+    int-to-float v4, v7
+
+    invoke-virtual {v1, v2, v3, v4}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->c(Landroid/webkit/WebView;FF)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v1, v2, v9}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a(Landroid/webkit/WebView;Ljava/util/Map;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a()Lcom/mbridge/msdk/mbsignalcommon/mraid/a;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {v1, v0}, Lcom/mbridge/msdk/mbsignalcommon/mraid/a;->a(Landroid/webkit/WebView;)V
+    :try_end_fc
+    .catchall {:try_start_4 .. :try_end_fc} :catchall_fd
+
+    goto :goto_105
+
+    :catchall_fd
+    move-exception v0
+
+    const-string v1, "BannerExpandDialog"
+
+    const-string v2, "notifyMraid"
+
+    invoke-static {v1, v2, v0}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_105
+    return-void
+.end method
+
+.method static synthetic b(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 1
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a()V
+
+    return-void
+.end method
+
+.method static synthetic c(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->i:Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    return-object p0
+.end method
+
+.method static synthetic d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    return-object p0
+.end method
+
+.method static synthetic e(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Landroid/widget/FrameLayout;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    return-object p0
+.end method
+
+.method static synthetic f(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Ljava/util/List;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->h:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic g(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Landroid/widget/TextView;
+    .registers 1
+
+    iget-object p0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method protected onCreate(Landroid/os/Bundle;)V
+    .registers 7
+
+    invoke-super {p0, p1}, Landroid/app/Dialog;->onCreate(Landroid/os/Bundle;)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/app/Dialog;->requestWindowFeature(I)Z
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/app/Dialog;->setCancelable(Z)V
+
+    new-instance p1, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x1
+
+    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance p1, Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v1}, Landroid/webkit/WebView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+
+    new-instance p1, Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {p1, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundColor(I)V
+
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/16 v1, 0x60
+
+    invoke-direct {p1, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const v1, 0x800035
+
+    iput v1, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    const/16 v1, 0x1e
+
+    invoke-virtual {p1, v1, v1, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    iget-boolean v3, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c:Z
+
+    if-eqz v3, :cond_6c
+
+    const/4 v3, 0x4
+
+    goto :goto_6d
+
+    :cond_6c
+    const/4 v3, 0x0
+
+    :goto_6d
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    new-instance v3, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$1;
+
+    invoke-direct {v3, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$1;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->g:Ljava/lang/String;
+
+    const/16 v4, 0x128
+
+    invoke-virtual {v1, v3, v4}, Lcom/mbridge/msdk/foundation/controller/b;->a(Ljava/lang/String;I)Landroid/graphics/drawable/BitmapDrawable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_ac
+
+    new-instance v3, Landroid/widget/ImageView;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+
+    iget-object v4, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v4}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    invoke-static {v3, v1, v4}, Lcom/mbridge/msdk/foundation/tools/af;->a(Landroid/widget/ImageView;Landroid/graphics/drawable/BitmapDrawable;Landroid/util/DisplayMetrics;)Landroid/widget/ImageView;
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    new-instance v4, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v4, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v1, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_ac
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p0, v1}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a()V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    new-instance v2, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;
+
+    invoke-direct {v2, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    invoke-virtual {v1, v2}, Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;->setWebViewListener(Lcom/mbridge/msdk/mbsignalcommon/windvane/d;)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->j:Lcom/mbridge/msdk/mbsignalcommon/mraid/b;
+
+    invoke-virtual {v1, v2}, Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;->setObject(Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e:Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->h:Ljava/util/List;
+
+    if-eqz v1, :cond_135
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_135
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->h:Ljava/util/List;
+
+    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    if-eqz v0, :cond_135
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/foundation/entity/CampaignEx;->getPrivacyButtonTemplateVisibility()I
+
+    move-result v1
+
+    if-eqz v1, :cond_135
+
+    new-instance v1, Lcom/mbridge/msdk/widget/MBAdChoice;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/mbridge/msdk/widget/MBAdChoice;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {v1, v0}, Lcom/mbridge/msdk/widget/MBAdChoice;->setCampaign(Lcom/mbridge/msdk/out/Campaign;)V
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/high16 v3, 0x41400000    # 12.0f
+
+    invoke-static {v2, v3}, Lcom/mbridge/msdk/foundation/tools/af;->b(Landroid/content/Context;F)I
+
+    move-result v2
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4, v3}, Lcom/mbridge/msdk/foundation/tools/af;->b(Landroid/content/Context;F)I
+
+    move-result v3
+
+    invoke-direct {v0, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    const/16 v2, 0x55
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+
+    iget v2, p1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+
+    iget p1, p1, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    new-instance p1, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;
+
+    invoke-direct {p1, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    invoke-virtual {v1, p1}, Lcom/mbridge/msdk/widget/MBAdChoice;->setFeedbackDialogEventListener(Lcom/mbridge/msdk/foundation/c/a;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1, v1, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_135
+    new-instance p1, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;
+
+    invoke-direct {p1, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    invoke-virtual {p0, p1}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+
+    return-void
+.end method
+
+.method public setCampaignList(Ljava/lang/String;Ljava/util/List;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Lcom/mbridge/msdk/foundation/entity/CampaignEx;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->g:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->h:Ljava/util/List;
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass1 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$1)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$1;
+.super Ljava/lang/Object;
+.source "BannerExpandDialog.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$1;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .registers 2
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$1;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->dismiss()V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass2 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$2)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;
+.super Lcom/mbridge/msdk/mbsignalcommon/b/b;
+.source "BannerExpandDialog.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-direct {p0}, Lcom/mbridge/msdk/mbsignalcommon/b/b;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .registers 5
+
+    invoke-super {p0, p1, p2}, Lcom/mbridge/msdk/mbsignalcommon/b/b;->a(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string v0, "javascript:"
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/mbridge/msdk/c/b/a;->a()Lcom/mbridge/msdk/c/b/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/mbridge/msdk/c/b/a;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x13
+
+    if-gt v0, v1, :cond_23
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+
+    goto :goto_2f
+
+    :cond_23
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2$1;
+
+    invoke-direct {v0, p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2$1;-><init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;)V
+
+    invoke-virtual {p1, p2, v0}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    :goto_2f
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass2.AnonymousClass1 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$2$1)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2$1;
+.super Ljava/lang/Object;
+.source "BannerExpandDialog.java"
+
+# interfaces
+.implements Landroid/webkit/ValueCallback;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;->a(Landroid/webkit/WebView;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/webkit/ValueCallback<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2$1;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic onReceiveValue(Ljava/lang/Object;)V
+    .registers 2
+
+    check-cast p1, Ljava/lang/String;
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass3 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$3)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;
+.super Ljava/lang/Object;
+.source "BannerExpandDialog.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/foundation/c/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .registers 1
+
+    return-void
+.end method
+
+.method public final a(Ljava/lang/String;)V
+    .registers 2
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->b(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    return-void
+.end method
+
+.method public final b()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$3;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->b(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass4 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$4)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;
+.super Ljava/lang/Object;
+.source "BannerExpandDialog.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnDismissListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .registers 8
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_12
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lcom/mbridge/msdk/mbbanner/common/b/a;->a(Z)V
+
+    :cond_12
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    const/4 v5, 0x0
+
+    const-string v2, ""
+
+    const-string v3, "text/html"
+
+    const-string v4, "utf-8"
+
+    invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->e(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Landroid/widget/FrameLayout;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;->release()V
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    iget-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$4;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {p1, v0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->a(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;Lcom/mbridge/msdk/mbbanner/common/b/a;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    return-void
+.end method
+
+###### Class com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog.AnonymousClass5 (com.mbridge.msdk.mbbanner.common.bridge.BannerExpandDialog$5)
+.class final Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;
+.super Ljava/lang/Object;
+.source "BannerExpandDialog.java"
+
+# interfaces
+.implements Lcom/mbridge/msdk/mbsignalcommon/mraid/b;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+
+# direct methods
+.method constructor <init>(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final close()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
+
+    return-void
+.end method
+
+.method public final expand(Ljava/lang/String;Z)V
+    .registers 3
+
+    return-void
+.end method
+
+.method public final getMraidCampaign()Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+    .registers 2
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final open(Ljava/lang/String;)V
+    .registers 8
+
+    const-string v0, "BannerExpandDialog"
+
+    :try_start_2
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3e
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    iget-object v3, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v3}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object v3
+
+    iget-wide v3, v3, Lcom/mbridge/msdk/mbsignalcommon/base/BaseWebView;->lastTouchTime:J
+
+    sub-long/2addr v1, v3
+
+    sget v3, Lcom/mbridge/msdk/click/b/a;->c:I
+
+    int-to-long v3, v3
+
+    cmp-long v5, v1, v3
+
+    if-lez v5, :cond_3e
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Ljava/util/List;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/mbridge/msdk/foundation/entity/CampaignEx;
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->d(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbsignalcommon/windvane/WindVaneWebView;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Lcom/mbridge/msdk/click/b/a;->a:I
+
+    invoke-static {v1, v2, v3}, Lcom/mbridge/msdk/click/b/a;->a(Lcom/mbridge/msdk/foundation/entity/CampaignEx;Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3e
+
+    return-void
+
+    :cond_3e
+    invoke-static {v0, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v2}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->f(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    if-le v2, v3, :cond_66
+
+    invoke-static {}, Lcom/mbridge/msdk/foundation/controller/b;->d()Lcom/mbridge/msdk/foundation/controller/b;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/mbridge/msdk/foundation/controller/b;->g()Landroid/content/Context;
+
+    move-result-object v2
+
+    new-instance v4, Landroid/content/Intent;
+
+    const-string v5, "android.intent.action.VIEW"
+
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    invoke-direct {v4, v5, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v2, v4}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    move-object p1, v1
+
+    :cond_66
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_7e
+
+    iget-object v1, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v1}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->c(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Lcom/mbridge/msdk/mbbanner/common/b/a;
+
+    move-result-object v1
+
+    invoke-interface {v1, v3, p1}, Lcom/mbridge/msdk/mbbanner/common/b/a;->a(ZLjava/lang/String;)V
+    :try_end_77
+    .catchall {:try_start_2 .. :try_end_77} :catchall_78
+
+    goto :goto_7e
+
+    :catchall_78
+    move-exception p1
+
+    const-string v1, "open"
+
+    invoke-static {v0, v1, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7e
+    :goto_7e
+    return-void
+.end method
+
+.method public final unload()V
+    .registers 1
+
+    invoke-virtual {p0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->close()V
+
+    return-void
+.end method
+
+.method public final useCustomClose(Z)V
+    .registers 4
+
+    :try_start_0
+    iget-object v0, p0, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog$5;->a:Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;
+
+    invoke-static {v0}, Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;->g(Lcom/mbridge/msdk/mbbanner/common/bridge/BannerExpandDialog;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    if-eqz p1, :cond_a
+
+    const/4 p1, 0x4
+
+    goto :goto_b
+
+    :cond_a
+    const/4 p1, 0x0
+
+    :goto_b
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
+    :try_end_e
+    .catchall {:try_start_0 .. :try_end_e} :catchall_f
+
+    goto :goto_17
+
+    :catchall_f
+    move-exception p1
+
+    const-string v0, "BannerExpandDialog"
+
+    const-string v1, "useCustomClose"
+
+    invoke-static {v0, v1, p1}, Lcom/mbridge/msdk/foundation/tools/aa;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_17
+    return-void
+.end method

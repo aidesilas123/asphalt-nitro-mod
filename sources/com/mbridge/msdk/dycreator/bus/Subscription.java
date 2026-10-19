@@ -1,0 +1,24 @@
+package com.mbridge.msdk.dycreator.bus;
+
+/* JADX INFO: loaded from: classes4.dex */
+final class Subscription {
+    final Object a;
+    final SubscriberMethod b;
+
+    Subscription(Object obj, SubscriberMethod subscriberMethod) {
+        this.a = obj;
+        this.b = subscriberMethod;
+    }
+
+    public final boolean equals(Object obj) {
+        if (!(obj instanceof Subscription)) {
+            return false;
+        }
+        Subscription subscription = (Subscription) obj;
+        return this.a == subscription.a && this.b.equals(subscription.b);
+    }
+
+    public final int hashCode() {
+        return this.a.hashCode() + this.b.f6917d.hashCode();
+    }
+}

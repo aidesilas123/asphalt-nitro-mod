@@ -1,0 +1,28 @@
+package com.google.android.gms.internal.ads;
+
+import android.os.IBinder;
+import java.util.Iterator;
+
+/* JADX INFO: compiled from: com.google.android.gms:play-services-ads@@22.6.0 */
+/* JADX INFO: loaded from: classes3.dex */
+final class zzfsv extends zzfsp {
+    final /* synthetic */ IBinder zza;
+    final /* synthetic */ zzfsy zzb;
+
+    zzfsv(zzfsy zzfsyVar, IBinder iBinder) {
+        this.zzb = zzfsyVar;
+        this.zza = iBinder;
+    }
+
+    @Override // com.google.android.gms.internal.ads.zzfsp
+    public final void zza() {
+        this.zzb.zza.zzn = zzfsk.zzb(this.zza);
+        zzfsz.zzq(this.zzb.zza);
+        this.zzb.zza.zzh = false;
+        Iterator it = this.zzb.zza.zze.iterator();
+        while (it.hasNext()) {
+            ((Runnable) it.next()).run();
+        }
+        this.zzb.zza.zze.clear();
+    }
+}

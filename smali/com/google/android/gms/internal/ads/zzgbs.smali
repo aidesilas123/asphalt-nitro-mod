@@ -1,0 +1,23 @@
+###### Class com.google.android.gms.internal.ads.zzgbs (com.google.android.gms.internal.ads.zzgbs)
+.class final Lcom/google/android/gms/internal/ads/zzgbs;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# direct methods
+.method static zza(Ljava/lang/Throwable;)V
+    .registers 1
+
+    instance-of p0, p0, Ljava/lang/InterruptedException;
+
+    if-eqz p0, :cond_b
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_b
+    return-void
+.end method

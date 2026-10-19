@@ -1,0 +1,1319 @@
+###### Class kotlinx.serialization.internal.PluginGeneratedSerialDescriptor (kotlinx.serialization.internal.PluginGeneratedSerialDescriptor)
+.class public Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+.super Ljava/lang/Object;
+.source "PluginGeneratedSerialDescriptor.kt"
+
+# interfaces
+.implements Lkotlinx/serialization/descriptors/SerialDescriptor;
+.implements Lkotlinx/serialization/internal/k;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000v\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0008\n\u0002\u0010 \n\u0002\u0010\u001b\n\u0002\u0008\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010!\n\u0002\u0008\u0002\n\u0002\u0010\u0018\n\u0000\n\u0002\u0010$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0010\"\n\u0002\u0008\u0007\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0003\n\u0002\u0010\u0000\n\u0002\u0008\r\u0008\u0011\u0018\u00002\u00020\u00012\u00020\u0002B%\u0012\u0006\u0010\u0003\u001a\u00020\u0004\u0012\u000e\u0008\u0002\u0010\u0005\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0006\u0012\u0006\u0010\u0007\u001a\u00020\u0008\u00a2\u0006\u0002\u0010\tJ\u0018\u00104\u001a\u0002052\u0006\u00106\u001a\u00020\u00042\u0008\u0008\u0002\u00107\u001a\u000208J\u0014\u00109\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00080!H\u0002J\u0013\u0010:\u001a\u0002082\u0008\u0010;\u001a\u0004\u0018\u00010<H\u0096\u0002J\u0016\u0010=\u001a\u0008\u0012\u0004\u0012\u00020\u00120\u00112\u0006\u0010>\u001a\u00020\u0008H\u0016J\u0010\u0010?\u001a\u00020\u00012\u0006\u0010>\u001a\u00020\u0008H\u0016J\u0010\u0010@\u001a\u00020\u00082\u0006\u00106\u001a\u00020\u0004H\u0016J\u0010\u0010A\u001a\u00020\u00042\u0006\u0010>\u001a\u00020\u0008H\u0016J\u0008\u0010B\u001a\u00020\u0008H\u0016J\u0010\u0010C\u001a\u0002082\u0006\u0010>\u001a\u00020\u0008H\u0016J\u000e\u0010D\u001a\u0002052\u0006\u0010E\u001a\u00020\u0012J\u000e\u0010F\u001a\u0002052\u0006\u0010G\u001a\u00020\u0012J\u0008\u0010H\u001a\u00020\u0004H\u0016R\u001b\u0010\n\u001a\u00020\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\u000e\u001a\u0004\u0008\u000b\u0010\u000cR\u000e\u0010\u000f\u001a\u00020\u0008X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u001a\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\u00120\u00118VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0013\u0010\u0014R%\u0010\u0015\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00170\u00168BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001a\u0010\u000e\u001a\u0004\u0008\u0018\u0010\u0019R\u0016\u0010\u001b\u001a\n\u0012\u0004\u0012\u00020\u0012\u0018\u00010\u001cX\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0011\u0010\u0007\u001a\u00020\u0008\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008\u001d\u0010\u000cR\u000e\u0010\u001e\u001a\u00020\u001fX\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u0014\u0010\u0005\u001a\u0008\u0012\u0002\u0008\u0003\u0018\u00010\u0006X\u0082\u0004\u00a2\u0006\u0002\n\u0000R\u001a\u0010 \u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00080!X\u0082\u000e\u00a2\u0006\u0002\n\u0000R\u0014\u0010\"\u001a\u00020#8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008$\u0010%R\u0016\u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0016X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010\'R\u001e\u0010(\u001a\u0010\u0012\u000c\u0012\n\u0012\u0004\u0012\u00020\u0012\u0018\u00010\u001c0\u0016X\u0082\u0004\u00a2\u0006\u0004\n\u0002\u0010)R\u0014\u0010\u0003\u001a\u00020\u0004X\u0096\u0004\u00a2\u0006\u0008\n\u0000\u001a\u0004\u0008*\u0010+R\u001a\u0010,\u001a\u0008\u0012\u0004\u0012\u00020\u00040-8VX\u0096\u0004\u00a2\u0006\u0006\u001a\u0004\u0008.\u0010/R!\u00100\u001a\u0008\u0012\u0004\u0012\u00020\u00010\u00168@X\u0080\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00083\u0010\u000e\u001a\u0004\u00081\u00102\u00a8\u0006I"
+    }
+    d2 = {
+        "Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "Lkotlinx/serialization/internal/CachedNames;",
+        "serialName",
+        "",
+        "generatedSerializer",
+        "Lkotlinx/serialization/internal/GeneratedSerializer;",
+        "elementsCount",
+        "",
+        "(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V",
+        "_hashCode",
+        "get_hashCode",
+        "()I",
+        "_hashCode$delegate",
+        "Lkotlin/Lazy;",
+        "added",
+        "annotations",
+        "",
+        "",
+        "getAnnotations",
+        "()Ljava/util/List;",
+        "childSerializers",
+        "",
+        "Lkotlinx/serialization/KSerializer;",
+        "getChildSerializers",
+        "()[Lkotlinx/serialization/KSerializer;",
+        "childSerializers$delegate",
+        "classAnnotations",
+        "",
+        "getElementsCount",
+        "elementsOptionality",
+        "",
+        "indices",
+        "",
+        "kind",
+        "Lkotlinx/serialization/descriptors/SerialKind;",
+        "getKind",
+        "()Lkotlinx/serialization/descriptors/SerialKind;",
+        "names",
+        "[Ljava/lang/String;",
+        "propertiesAnnotations",
+        "[Ljava/util/List;",
+        "getSerialName",
+        "()Ljava/lang/String;",
+        "serialNames",
+        "",
+        "getSerialNames",
+        "()Ljava/util/Set;",
+        "typeParameterDescriptors",
+        "getTypeParameterDescriptors$kotlinx_serialization_core",
+        "()[Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "typeParameterDescriptors$delegate",
+        "addElement",
+        "",
+        "name",
+        "isOptional",
+        "",
+        "buildIndices",
+        "equals",
+        "other",
+        "",
+        "getElementAnnotations",
+        "index",
+        "getElementDescriptor",
+        "getElementIndex",
+        "getElementName",
+        "hashCode",
+        "isElementOptional",
+        "pushAnnotation",
+        "annotation",
+        "pushClassAnnotation",
+        "a",
+        "toString",
+        "kotlinx-serialization-core"
+    }
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private final a:Ljava/lang/String;
+
+.field private final b:Lkotlinx/serialization/internal/GeneratedSerializer;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/serialization/internal/GeneratedSerializer<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+.field private final c:I
+
+.field private d:I
+
+.field private final e:[Ljava/lang/String;
+
+.field private final f:[Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private g:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final h:[Z
+
+.field private i:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final j:Lkotlin/i;
+
+.field private final k:Lkotlin/i;
+
+.field private final l:Lkotlin/i;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lkotlinx/serialization/internal/GeneratedSerializer<",
+            "*>;I)V"
+        }
+    .end annotation
+
+    const-string v0, "serialName"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->b:Lkotlinx/serialization/internal/GeneratedSerializer;
+
+    iput p3, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->c:I
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->d:I
+
+    new-array p1, p3, [Ljava/lang/String;
+
+    const/4 p2, 0x0
+
+    :goto_14
+    if-ge p2, p3, :cond_1d
+
+    const-string v0, "[UNINITIALIZED]"
+
+    aput-object v0, p1, p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_14
+
+    :cond_1d
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e:[Ljava/lang/String;
+
+    iget p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->c:I
+
+    new-array p2, p1, [Ljava/util/List;
+
+    iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->f:[Ljava/util/List;
+
+    new-array p1, p1, [Z
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->h:[Z
+
+    invoke-static {}, Lkotlin/collections/d0;->emptyMap()Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->i:Ljava/util/Map;
+
+    sget-object p1, Lkotlin/LazyThreadSafetyMode;->b:Lkotlin/LazyThreadSafetyMode;
+
+    new-instance p2, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;
+
+    invoke-direct {p2, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+
+    invoke-static {p1, p2}, Lkotlin/j;->lazy(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->j:Lkotlin/i;
+
+    new-instance p2, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;
+
+    invoke-direct {p2, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+
+    invoke-static {p1, p2}, Lkotlin/j;->lazy(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->k:Lkotlin/i;
+
+    new-instance p2, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;
+
+    invoke-direct {p2, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+
+    invoke-static {p1, p2}, Lkotlin/j;->lazy(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->l:Lkotlin/i;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;IILkotlin/jvm/internal/n;)V
+    .registers 6
+
+    and-int/lit8 p4, p4, 0x2
+
+    if-eqz p4, :cond_5
+
+    const/4 p2, 0x0
+
+    :cond_5
+    invoke-direct {p0, p1, p2, p3}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;
+    .registers 1
+
+    iget-object p0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->b:Lkotlinx/serialization/internal/GeneratedSerializer;
+
+    return-object p0
+.end method
+
+.method public static synthetic addElement$default(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;Ljava/lang/String;ZILjava/lang/Object;)V
+    .registers 5
+
+    if-nez p4, :cond_b
+
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_7
+
+    const/4 p2, 0x0
+
+    :cond_7
+    invoke-virtual {p0, p1, p2}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->j(Ljava/lang/String;Z)V
+
+    return-void
+
+    :cond_b
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Super calls with default arguments not supported in this target, function: addElement"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private final k()Ljava/util/Map;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e:[Ljava/lang/String;
+
+    array-length v1, v1
+
+    const/4 v2, 0x0
+
+    :goto_9
+    if-ge v2, v1, :cond_19
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e:[Ljava/lang/String;
+
+    aget-object v4, v4, v2
+
+    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_9
+
+    :cond_19
+    return-object v0
+.end method
+
+.method private final l()[Lkotlinx/serialization/c;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Lkotlinx/serialization/c<",
+            "*>;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->j:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkotlinx/serialization/c;
+
+    return-object v0
+.end method
+
+.method private final n()I
+    .registers 2
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->l:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public a()Ljava/util/Set;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->i:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public b()Z
+    .registers 2
+
+    invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isNullable(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c(Ljava/lang/String;)I
+    .registers 3
+
+    const-string v0, "name"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->i:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    if-eqz p1, :cond_14
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    goto :goto_15
+
+    :cond_14
+    const/4 p1, -0x3
+
+    :goto_15
+    return p1
+.end method
+
+.method public final d()I
+    .registers 2
+
+    iget v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->c:I
+
+    return v0
+.end method
+
+.method public e(I)Ljava/lang/String;
+    .registers 3
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e:[Ljava/lang/String;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .registers 8
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    if-ne p0, p1, :cond_6
+
+    goto/16 :goto_72
+
+    :cond_6
+    instance-of v2, p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    if-nez v2, :cond_c
+
+    :goto_a
+    const/4 v0, 0x0
+
+    goto :goto_72
+
+    :cond_c
+    invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object v3, p1
+
+    check-cast v3, Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    invoke-interface {v3}, Lkotlinx/serialization/descriptors/SerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1e
+
+    goto :goto_a
+
+    :cond_1e
+    check-cast p1, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->m()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->m()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p1
+
+    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2f
+
+    goto :goto_a
+
+    :cond_2f
+    invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->d()I
+
+    move-result p1
+
+    invoke-interface {v3}, Lkotlinx/serialization/descriptors/SerialDescriptor;->d()I
+
+    move-result v2
+
+    if-eq p1, v2, :cond_3a
+
+    goto :goto_a
+
+    :cond_3a
+    invoke-interface {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor;->d()I
+
+    move-result p1
+
+    const/4 v2, 0x0
+
+    :goto_3f
+    if-ge v2, p1, :cond_72
+
+    invoke-interface {p0, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lkotlinx/serialization/descriptors/SerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-interface {v3, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lkotlinx/serialization/descriptors/SerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_58
+
+    goto :goto_a
+
+    :cond_58
+    invoke-interface {p0, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/d;
+
+    move-result-object v4
+
+    invoke-interface {v3, v2}, Lkotlinx/serialization/descriptors/SerialDescriptor;->g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lkotlinx/serialization/descriptors/SerialDescriptor;->getKind()Lkotlinx/serialization/descriptors/d;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_6f
+
+    goto :goto_a
+
+    :cond_6f
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_3f
+
+    :cond_72
+    :goto_72
+    return v0
+.end method
+
+.method public f(I)Ljava/util/List;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->f:[Ljava/util/List;
+
+    aget-object p1, v0, p1
+
+    if-nez p1, :cond_a
+
+    invoke-static {}, Lkotlin/collections/p;->emptyList()Ljava/util/List;
+
+    move-result-object p1
+
+    :cond_a
+    return-object p1
+.end method
+
+.method public g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+    .registers 3
+
+    invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->l()[Lkotlinx/serialization/c;
+
+    move-result-object v0
+
+    aget-object p1, v0, p1
+
+    invoke-interface {p1}, Lkotlinx/serialization/c;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getAnnotations()Ljava/util/List;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/annotation/Annotation;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->g:Ljava/util/List;
+
+    if-nez v0, :cond_8
+
+    invoke-static {}, Lkotlin/collections/p;->emptyList()Ljava/util/List;
+
+    move-result-object v0
+
+    :cond_8
+    return-object v0
+.end method
+
+.method public getKind()Lkotlinx/serialization/descriptors/d;
+    .registers 2
+
+    sget-object v0, Lkotlinx/serialization/descriptors/e$a;->a:Lkotlinx/serialization/descriptors/e$a;
+
+    return-object v0
+.end method
+
+.method public h()Ljava/lang/String;
+    .registers 2
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .registers 2
+
+    invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->n()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public i(I)Z
+    .registers 3
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->h:[Z
+
+    aget-boolean p1, v0, p1
+
+    return p1
+.end method
+
+.method public isInline()Z
+    .registers 2
+
+    invoke-static {p0}, Lkotlinx/serialization/descriptors/SerialDescriptor$DefaultImpls;->isInline(Lkotlinx/serialization/descriptors/SerialDescriptor;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final j(Ljava/lang/String;Z)V
+    .registers 5
+
+    const-string v0, "name"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e:[Ljava/lang/String;
+
+    iget v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->d:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->d:I
+
+    aput-object p1, v0, v1
+
+    iget-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->h:[Z
+
+    aput-boolean p2, p1, v1
+
+    iget-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->f:[Ljava/util/List;
+
+    const/4 p2, 0x0
+
+    aput-object p2, p1, v1
+
+    iget p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->c:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    if-ne v1, p1, :cond_24
+
+    invoke-direct {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->k()Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->i:Ljava/util/Map;
+
+    :cond_24
+    return-void
+.end method
+
+.method public final m()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+    .registers 2
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->k:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/annotation/Annotation;)V
+    .registers 5
+
+    const-string v0, "annotation"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->f:[Ljava/util/List;
+
+    iget v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->d:I
+
+    aget-object v0, v0, v1
+
+    if-nez v0, :cond_19
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iget-object v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->f:[Ljava/util/List;
+
+    iget v2, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->d:I
+
+    aput-object v0, v1, v2
+
+    :cond_19
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 12
+
+    iget v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->c:I
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, v0}, Lkotlin/ranges/m;->until(II)Lkotlin/ranges/IntRange;
+
+    move-result-object v2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x28
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v8, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;
+
+    invoke-direct {v8, p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;-><init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+
+    const-string v3, ", "
+
+    const-string v5, ")"
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/16 v9, 0x18
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/p;->joinToString$default(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/l;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class kotlinx.serialization.internal.PluginGeneratedSerialDescriptor.a (kotlinx.serialization.internal.PluginGeneratedSerialDescriptor$a)
+.class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;
+.super Lkotlin/jvm/internal/t;
+.source "PluginGeneratedSerialDescriptor.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/a<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\n\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0002\u0010\u0000\u001a\u00020\u0001H\n\u00a2\u0006\u0004\u0008\u0002\u0010\u0003"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "invoke",
+        "()Ljava/lang/Integer;"
+    }
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()Ljava/lang/Integer;
+    .registers 3
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-virtual {v0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->m()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptorKt;->hashCodeImpl(Lkotlinx/serialization/descriptors/SerialDescriptor;[Lkotlinx/serialization/descriptors/SerialDescriptor;)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$a;->c()Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class kotlinx.serialization.internal.PluginGeneratedSerialDescriptor.b (kotlinx.serialization.internal.PluginGeneratedSerialDescriptor$b)
+.class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;
+.super Lkotlin/jvm/internal/t;
+.source "PluginGeneratedSerialDescriptor.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/a<",
+        "[",
+        "Lkotlinx/serialization/c<",
+        "*>;>;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0000\u001a\u000c\u0012\u0008\u0012\u0006\u0012\u0002\u0008\u00030\u00020\u0001H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "Lkotlinx/serialization/KSerializer;",
+        "invoke",
+        "()[Lkotlinx/serialization/KSerializer;"
+    }
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()[Lkotlinx/serialization/c;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()[",
+            "Lkotlinx/serialization/c<",
+            "*>;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-static {v0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_e
+
+    invoke-interface {v0}, Lkotlinx/serialization/internal/GeneratedSerializer;->childSerializers()[Lkotlinx/serialization/c;
+
+    move-result-object v0
+
+    if-nez v0, :cond_10
+
+    :cond_e
+    sget-object v0, Lkotlinx/serialization/internal/PluginHelperInterfacesKt;->a:[Lkotlinx/serialization/c;
+
+    :cond_10
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$b;->c()[Lkotlinx/serialization/c;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+###### Class kotlinx.serialization.internal.PluginGeneratedSerialDescriptor.c (kotlinx.serialization.internal.PluginGeneratedSerialDescriptor$c)
+.class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;
+.super Lkotlin/jvm/internal/t;
+.source "PluginGeneratedSerialDescriptor.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->toString()Ljava/lang/String;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/l<",
+        "Ljava/lang/Integer;",
+        "Ljava/lang/CharSequence;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0010\r\n\u0000\n\u0002\u0010\u0008\n\u0000\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n\u00a2\u0006\u0002\u0008\u0004"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "i",
+        "",
+        "invoke"
+    }
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c(I)Ljava/lang/CharSequence;
+    .registers 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-virtual {v1, p1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-virtual {v1, p1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->g(I)Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lkotlinx/serialization/descriptors/SerialDescriptor;->h()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$c;->c(I)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+###### Class kotlinx.serialization.internal.PluginGeneratedSerialDescriptor.d (kotlinx.serialization.internal.PluginGeneratedSerialDescriptor$d)
+.class final Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;
+.super Lkotlin/jvm/internal/t;
+.source "PluginGeneratedSerialDescriptor.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;-><init>(Ljava/lang/String;Lkotlinx/serialization/internal/GeneratedSerializer;I)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/a<",
+        "[",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0000\u001a\u0008\u0012\u0004\u0012\u00020\u00020\u0001H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "Lkotlinx/serialization/descriptors/SerialDescriptor;",
+        "invoke",
+        "()[Lkotlinx/serialization/descriptors/SerialDescriptor;"
+    }
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final c()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+    .registers 6
+
+    iget-object v0, p0, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;->a:Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;
+
+    invoke-static {v0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;->access$getGeneratedSerializer$p(Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor;)Lkotlinx/serialization/internal/GeneratedSerializer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_24
+
+    invoke-interface {v0}, Lkotlinx/serialization/internal/GeneratedSerializer;->typeParametersSerializers()[Lkotlinx/serialization/c;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_24
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    array-length v2, v0
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v2, 0x0
+
+    array-length v3, v0
+
+    :goto_16
+    if-ge v2, v3, :cond_25
+
+    aget-object v4, v0, v2
+
+    invoke-interface {v4}, Lkotlinx/serialization/c;->getDescriptor()Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v4
+
+    invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_16
+
+    :cond_24
+    const/4 v1, 0x0
+
+    :cond_25
+    invoke-static {v1}, Lkotlinx/serialization/internal/Platform_commonKt;->compactArray(Ljava/util/List;)[Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .registers 2
+
+    invoke-virtual {p0}, Lkotlinx/serialization/internal/PluginGeneratedSerialDescriptor$d;->c()[Lkotlinx/serialization/descriptors/SerialDescriptor;
+
+    move-result-object v0
+
+    return-object v0
+.end method

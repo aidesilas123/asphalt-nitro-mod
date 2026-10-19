@@ -1,0 +1,143 @@
+###### Class kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration (kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration)
+.class public interface abstract Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration;
+.super Ljava/lang/Object;
+.source "typeSignatureMapping.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration$DefaultImpls;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Lkotlin/reflect/jvm/internal/impl/descriptors/d;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/reflect/jvm/internal/impl/descriptors/d;",
+            ")TT;"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Lkotlin/reflect/jvm/internal/impl/descriptors/d;)Ljava/lang/String;
+.end method
+
+.method public abstract c(Lkotlin/reflect/jvm/internal/impl/descriptors/d;)Ljava/lang/String;
+.end method
+
+.method public abstract d(Lkotlin/reflect/jvm/internal/impl/types/u;)Lkotlin/reflect/jvm/internal/impl/types/u;
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f(Lkotlin/reflect/jvm/internal/impl/types/u;Lkotlin/reflect/jvm/internal/impl/descriptors/d;)V
+.end method
+
+.method public abstract g(Ljava/util/Collection;)Lkotlin/reflect/jvm/internal/impl/types/u;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Collection<",
+            "Lkotlin/reflect/jvm/internal/impl/types/u;",
+            ">;)",
+            "Lkotlin/reflect/jvm/internal/impl/types/u;"
+        }
+    .end annotation
+.end method
+
+###### Class kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration.DefaultImpls (kotlin.reflect.jvm.internal.impl.load.kotlin.TypeMappingConfiguration$DefaultImpls)
+.class public final Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration$DefaultImpls;
+.super Ljava/lang/Object;
+.source "typeSignatureMapping.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "DefaultImpls"
+.end annotation
+
+
+# direct methods
+.method public static getPredefinedFullInternalNameForClass(Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration;Lkotlin/reflect/jvm/internal/impl/descriptors/d;)Ljava/lang/String;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration<",
+            "+TT;>;",
+            "Lkotlin/reflect/jvm/internal/impl/descriptors/d;",
+            ")",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    const-string p0, "classDescriptor"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static preprocessType(Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration;Lkotlin/reflect/jvm/internal/impl/types/u;)Lkotlin/reflect/jvm/internal/impl/types/u;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration<",
+            "+TT;>;",
+            "Lkotlin/reflect/jvm/internal/impl/types/u;",
+            ")",
+            "Lkotlin/reflect/jvm/internal/impl/types/u;"
+        }
+    .end annotation
+
+    const-string p0, "kotlinType"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static releaseCoroutines(Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration;)Z
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/reflect/jvm/internal/impl/load/kotlin/TypeMappingConfiguration<",
+            "+TT;>;)Z"
+        }
+    .end annotation
+
+    const/4 p0, 0x1
+
+    return p0
+.end method

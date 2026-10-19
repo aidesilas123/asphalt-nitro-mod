@@ -1,0 +1,213 @@
+###### Class com.google.android.gms.drive.OpenFileActivityOptions (com.google.android.gms.drive.OpenFileActivityOptions)
+.class public final Lcom/google/android/gms/drive/OpenFileActivityOptions;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+    }
+.end annotation
+
+
+# static fields
+.field public static final EXTRA_RESPONSE_DRIVE_ID:Ljava/lang/String; = "response_drive_id"
+
+
+# instance fields
+.field public final zzay:Ljava/lang/String;
+
+.field public final zzaz:[Ljava/lang/String;
+
+.field public final zzbb:Lcom/google/android/gms/drive/DriveId;
+
+.field public final zzbc:Lcom/google/android/gms/drive/query/internal/FilterHolder;
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/String;[Ljava/lang/String;Lcom/google/android/gms/drive/query/Filter;Lcom/google/android/gms/drive/DriveId;)V
+    .registers 5
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions;->zzay:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions;->zzaz:[Ljava/lang/String;
+
+    if-nez p3, :cond_b
+
+    const/4 p1, 0x0
+
+    goto :goto_10
+
+    :cond_b
+    new-instance p1, Lcom/google/android/gms/drive/query/internal/FilterHolder;
+
+    invoke-direct {p1, p3}, Lcom/google/android/gms/drive/query/internal/FilterHolder;-><init>(Lcom/google/android/gms/drive/query/Filter;)V
+
+    :goto_10
+    iput-object p1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions;->zzbc:Lcom/google/android/gms/drive/query/internal/FilterHolder;
+
+    iput-object p4, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions;->zzbb:Lcom/google/android/gms/drive/DriveId;
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;[Ljava/lang/String;Lcom/google/android/gms/drive/query/Filter;Lcom/google/android/gms/drive/DriveId;Lcom/google/android/gms/drive/zzq;)V
+    .registers 6
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/gms/drive/OpenFileActivityOptions;-><init>(Ljava/lang/String;[Ljava/lang/String;Lcom/google/android/gms/drive/query/Filter;Lcom/google/android/gms/drive/DriveId;)V
+
+    return-void
+.end method
+
+###### Class com.google.android.gms.drive.OpenFileActivityOptions.Builder (com.google.android.gms.drive.OpenFileActivityOptions$Builder)
+.class public Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/drive/OpenFileActivityOptions;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field private final zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-direct {v0}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;-><init>()V
+
+    iput-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public build()Lcom/google/android/gms/drive/OpenFileActivityOptions;
+    .registers 8
+
+    iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->zzf()V
+
+    new-instance v0, Lcom/google/android/gms/drive/OpenFileActivityOptions;
+
+    iget-object v1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->getTitle()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->zzr()[Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->zzs()Lcom/google/android/gms/drive/query/Filter;
+
+    move-result-object v4
+
+    iget-object v1, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->zzt()Lcom/google/android/gms/drive/DriveId;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    move-object v1, v0
+
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/drive/OpenFileActivityOptions;-><init>(Ljava/lang/String;[Ljava/lang/String;Lcom/google/android/gms/drive/query/Filter;Lcom/google/android/gms/drive/DriveId;Lcom/google/android/gms/drive/zzq;)V
+
+    return-object v0
+.end method
+
+.method public setActivityStartFolder(Lcom/google/android/gms/drive/DriveId;)Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->setActivityStartFolder(Lcom/google/android/gms/drive/DriveId;)Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    return-object p0
+.end method
+
+.method public setActivityTitle(Ljava/lang/String;)Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+    .registers 3
+    .param p1    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->setActivityTitle(Ljava/lang/String;)Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    return-object p0
+.end method
+
+.method public setMimeType(Ljava/util/List;)Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+    .registers 4
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)",
+            "Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-interface {p1, v1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->setMimeType([Ljava/lang/String;)Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    return-object p0
+.end method
+
+.method public setSelectionFilter(Lcom/google/android/gms/drive/query/Filter;)Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;
+    .registers 3
+    .param p1    # Lcom/google/android/gms/drive/query/Filter;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+
+    iget-object v0, p0, Lcom/google/android/gms/drive/OpenFileActivityOptions$Builder;->zzbd:Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    invoke-virtual {v0, p1}, Lcom/google/android/gms/drive/OpenFileActivityBuilder;->setSelectionFilter(Lcom/google/android/gms/drive/query/Filter;)Lcom/google/android/gms/drive/OpenFileActivityBuilder;
+
+    return-object p0
+.end method

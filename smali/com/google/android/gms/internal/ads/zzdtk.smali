@@ -1,0 +1,402 @@
+###### Class com.google.android.gms.internal.ads.zzdtk (com.google.android.gms.internal.ads.zzdtk)
+.class public final Lcom/google/android/gms/internal/ads/zzdtk;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-ads@@22.6.0"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# instance fields
+.field private final zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field private final zzb:Lcom/google/android/gms/internal/ads/zzcba;
+
+.field private final zzc:Lcom/google/android/gms/internal/ads/zzfeq;
+
+.field private final zzd:Ljava/lang/String;
+
+.field private final zze:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/ads/zzdtu;Lcom/google/android/gms/internal/ads/zzcba;Lcom/google/android/gms/internal/ads/zzfeq;Ljava/lang/String;Ljava/lang/String;)V
+    .registers 11
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p1}, Lcom/google/android/gms/internal/ads/zzdtx;->zzc()Ljava/util/concurrent/ConcurrentHashMap;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iput-object p2, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zzb:Lcom/google/android/gms/internal/ads/zzcba;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zzc:Lcom/google/android/gms/internal/ads/zzfeq;
+
+    iput-object p4, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zzd:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zze:Ljava/lang/String;
+
+    sget-object p2, Lcom/google/android/gms/internal/ads/zzbdc;->zzgZ:Lcom/google/android/gms/internal/ads/zzbcu;
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzba;->zzc()Lcom/google/android/gms/internal/ads/zzbda;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/ads/zzbda;->zza(Lcom/google/android/gms/internal/ads/zzbcu;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-nez p2, :cond_24
+
+    return-void
+
+    :cond_24
+    invoke-static {p3}, Lcom/google/android/gms/ads/nonagon/signalgeneration/zzf;->zze(Lcom/google/android/gms/internal/ads/zzfeq;)I
+
+    move-result p2
+
+    add-int/lit8 v0, p2, -0x1
+
+    const-string v1, "scar"
+
+    if-eqz v0, :cond_8c
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x2
+
+    const-string v4, "se"
+
+    if-eq v0, v2, :cond_4b
+
+    if-eq v0, v3, :cond_45
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_3f
+
+    const-string v0, "r_both"
+
+    invoke-virtual {p1, v4, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_50
+
+    :cond_3f
+    const-string v0, "r_adstring"
+
+    invoke-virtual {p1, v4, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_50
+
+    :cond_45
+    const-string v0, "r_adinfo"
+
+    invoke-virtual {p1, v4, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_50
+
+    :cond_4b
+    const-string v0, "query_g"
+
+    invoke-virtual {p1, v4, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :goto_50
+    const-string v0, "true"
+
+    invoke-virtual {p1, v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/google/android/gms/internal/ads/zzbdc;->zzhz:Lcom/google/android/gms/internal/ads/zzbcu;
+
+    invoke-static {}, Lcom/google/android/gms/ads/internal/client/zzba;->zzc()Lcom/google/android/gms/internal/ads/zzbda;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/ads/zzbda;->zza(Lcom/google/android/gms/internal/ads/zzbcu;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6c
+
+    const-string v0, "ad_format"
+
+    invoke-virtual {p1, v0, p5}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6c
+    if-ne p2, v3, :cond_73
+
+    const-string p2, "rid"
+
+    invoke-virtual {p1, p2, p4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_73
+    iget-object p1, p3, Lcom/google/android/gms/internal/ads/zzfeq;->zzd:Lcom/google/android/gms/ads/internal/client/zzl;
+
+    iget-object p1, p1, Lcom/google/android/gms/ads/internal/client/zzl;->zzp:Ljava/lang/String;
+
+    const-string p2, "ragent"
+
+    invoke-direct {p0, p2, p1}, Lcom/google/android/gms/internal/ads/zzdtk;->zzd(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p3, Lcom/google/android/gms/internal/ads/zzfeq;->zzd:Lcom/google/android/gms/ads/internal/client/zzl;
+
+    invoke-static {p1}, Lcom/google/android/gms/ads/nonagon/signalgeneration/zzf;->zzb(Lcom/google/android/gms/ads/internal/client/zzl;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/google/android/gms/ads/nonagon/signalgeneration/zzf;->zza(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "rtype"
+
+    invoke-direct {p0, p2, p1}, Lcom/google/android/gms/internal/ads/zzdtk;->zzd(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_8c
+    const-string p2, "false"
+
+    invoke-virtual {p1, v1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private final zzd(Ljava/lang/String;Ljava/lang/String;)V
+    .registers 4
+    .param p2    # Ljava/lang/String;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_b
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()Ljava/util/Map;
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-object v0
+.end method
+
+.method public final zzb(Lcom/google/android/gms/internal/ads/zzfeh;)V
+    .registers 5
+
+    iget-object v0, p1, Lcom/google/android/gms/internal/ads/zzfeh;->zzb:Lcom/google/android/gms/internal/ads/zzfeg;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/ads/zzfeg;->zza:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_68
+
+    iget-object v0, p1, Lcom/google/android/gms/internal/ads/zzfeh;->zzb:Lcom/google/android/gms/internal/ads/zzfeg;
+
+    iget-object v0, v0, Lcom/google/android/gms/internal/ads/zzfeg;->zza:Ljava/util/List;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/ads/zzfdu;
+
+    iget v0, v0, Lcom/google/android/gms/internal/ads/zzfdu;->zzb:I
+
+    const-string v1, "ad_format"
+
+    packed-switch v0, :pswitch_data_74
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "unknown"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_24
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "app_open_ad"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zzb:Lcom/google/android/gms/internal/ads/zzcba;
+
+    invoke-virtual {v2}, Lcom/google/android/gms/internal/ads/zzcba;->zzm()Z
+
+    move-result v2
+
+    if-eq v1, v2, :cond_39
+
+    const-string v1, "0"
+
+    goto :goto_3b
+
+    :cond_39
+    const-string v1, "1"
+
+    :goto_3b
+    const-string v2, "as"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_41
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "rewarded"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_49
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "native_advanced"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_51
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "native_express"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_59
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "interstitial"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_68
+
+    :pswitch_61
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const-string v2, "banner"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_68
+    :goto_68
+    iget-object p1, p1, Lcom/google/android/gms/internal/ads/zzfeh;->zzb:Lcom/google/android/gms/internal/ads/zzfeg;
+
+    iget-object p1, p1, Lcom/google/android/gms/internal/ads/zzfeg;->zzb:Lcom/google/android/gms/internal/ads/zzfdy;
+
+    iget-object p1, p1, Lcom/google/android/gms/internal/ads/zzfdy;->zzb:Ljava/lang/String;
+
+    const-string v0, "gqi"
+
+    invoke-direct {p0, v0, p1}, Lcom/google/android/gms/internal/ads/zzdtk;->zzd(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_data_74
+    .packed-switch 0x1
+        :pswitch_61
+        :pswitch_59
+        :pswitch_51
+        :pswitch_49
+        :pswitch_41
+        :pswitch_24
+    .end packed-switch
+.end method
+
+.method public final zzc(Landroid/os/Bundle;)V
+    .registers 5
+
+    const-string v0, "cnt"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_17
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "network_coarse"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_17
+    const-string v0, "gnt"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2e
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/ads/zzdtk;->zza:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "network_fine"
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2e
+    return-void
+.end method

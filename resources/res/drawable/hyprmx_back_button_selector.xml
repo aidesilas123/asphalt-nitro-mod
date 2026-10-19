@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/hyprmx_footer_nav_padding_left_right"
+        android:top="@dimen/hyprmx_footer_nav_padding_top_bottom"
+        android:right="@dimen/hyprmx_footer_nav_padding_left_right"
+        android:bottom="@dimen/hyprmx_footer_nav_padding_top_bottom">
+        <selector>
+            <item
+                android:state_enabled="false"
+                android:drawable="@drawable/hyprmx_inactive_back_arrow"/>
+            <item
+                android:state_enabled="true"
+                android:drawable="@drawable/hyprmx_active_back_arrow"/>
+        </selector>
+    </item>
+</layer-list>

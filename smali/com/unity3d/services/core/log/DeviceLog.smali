@@ -1,0 +1,1010 @@
+###### Class com.unity3d.services.core.log.DeviceLog (com.unity3d.services.core.log.DeviceLog)
+.class public Lcom/unity3d/services/core/log/DeviceLog;
+.super Ljava/lang/Object;
+.source "DeviceLog.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+    }
+.end annotation
+
+
+# static fields
+.field private static FORCE_DEBUG_LOG:Z = false
+
+.field public static final LOGLEVEL_DEBUG:I = 0x8
+
+.field private static final LOGLEVEL_ERROR:I = 0x1
+
+.field public static final LOGLEVEL_INFO:I = 0x4
+
+.field private static final LOGLEVEL_WARNING:I = 0x2
+
+.field private static LOG_DEBUG:Z = true
+
+.field private static LOG_ERROR:Z = true
+
+.field private static LOG_INFO:Z = true
+
+.field private static LOG_WARNING:Z = true
+
+.field private static final MAX_DEBUG_MSG_LENGTH:I = 0xc00
+
+.field private static final _deviceLogLevel:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;",
+            "Lcom/unity3d/services/core/log/DeviceLogLevel;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 4
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/unity3d/services/core/log/DeviceLog;->_deviceLogLevel:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
+
+    move-result v1
+
+    if-nez v1, :cond_3d
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->INFO:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v2, Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    const-string v3, "i"
+
+    invoke-direct {v2, v3}, Lcom/unity3d/services/core/log/DeviceLogLevel;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->DEBUG:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v2, Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    const-string v3, "d"
+
+    invoke-direct {v2, v3}, Lcom/unity3d/services/core/log/DeviceLogLevel;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->WARNING:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v2, Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    const-string v3, "w"
+
+    invoke-direct {v2, v3}, Lcom/unity3d/services/core/log/DeviceLogLevel;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v2, Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    const-string v3, "e"
+
+    invoke-direct {v2, v3}, Lcom/unity3d/services/core/log/DeviceLogLevel;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_3d
+    new-instance v0, Ljava/io/File;
+
+    const-string v1, "/data/local/tmp/UnityAdsForceDebugMode"
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4d
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->FORCE_DEBUG_LOG:Z
+
+    :cond_4d
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static checkMessage(Ljava/lang/String;)Ljava/lang/String;
+    .registers 2
+
+    if-eqz p0, :cond_8
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    :cond_8
+    const-string p0, "DO NOT USE EMPTY MESSAGES, use DeviceLog.entered() instead"
+
+    :cond_a
+    return-object p0
+.end method
+
+.method private static createLogEntry(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)Lcom/unity3d/services/core/log/DeviceLogEntry;
+    .registers 10
+
+    const-class v0, Lcom/unity3d/services/core/log/DeviceLog;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v1
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->getLogLevel(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;)Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    move-result-object p0
+
+    const/4 v2, 0x0
+
+    if-eqz p0, :cond_49
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    :goto_13
+    array-length v5, v1
+
+    if-ge v3, v5, :cond_3b
+
+    aget-object v5, v1, v3
+
+    invoke-virtual {v5}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_27
+
+    const/4 v4, 0x1
+
+    :cond_27
+    invoke-virtual {v5}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_38
+
+    if-eqz v4, :cond_38
+
+    goto :goto_3b
+
+    :cond_38
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_13
+
+    :cond_3b
+    :goto_3b
+    array-length v0, v1
+
+    if-ge v3, v0, :cond_41
+
+    aget-object v0, v1, v3
+
+    goto :goto_42
+
+    :cond_41
+    move-object v0, v2
+
+    :goto_42
+    if-eqz v0, :cond_49
+
+    new-instance v2, Lcom/unity3d/services/core/log/DeviceLogEntry;
+
+    invoke-direct {v2, p0, p1, v0}, Lcom/unity3d/services/core/log/DeviceLogEntry;-><init>(Lcom/unity3d/services/core/log/DeviceLogLevel;Ljava/lang/String;Ljava/lang/StackTraceElement;)V
+
+    :cond_49
+    return-object v2
+.end method
+
+.method public static debug(Ljava/lang/String;)V
+    .registers 4
+
+    invoke-static {}, Lcom/unity3d/services/core/log/DeviceLog;->isDebugEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v1, 0xc00
+
+    if-le v0, v1, :cond_27
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/unity3d/services/core/log/DeviceLog;->debug(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/16 v2, 0x7800
+
+    if-ge v0, v2, :cond_26
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->debug(Ljava/lang/String;)V
+
+    :cond_26
+    return-void
+
+    :cond_27
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->DEBUG:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->checkMessage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/unity3d/services/core/log/DeviceLog;->write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static varargs debug(Ljava/lang/String;[Ljava/lang/Object;)V
+    .registers 3
+
+    invoke-static {}, Lcom/unity3d/services/core/log/DeviceLog;->isDebugEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
+    invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->debug(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static entered()V
+    .registers 1
+
+    const-string v0, "ENTERED METHOD"
+
+    invoke-static {v0}, Lcom/unity3d/services/core/log/DeviceLog;->debug(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static error(Ljava/lang/String;)V
+    .registers 2
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->checkMessage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/unity3d/services/core/log/DeviceLog;->write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static varargs error(Ljava/lang/String;[Ljava/lang/Object;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->error(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static exception(Ljava/lang/String;Ljava/lang/Exception;)V
+    .registers 4
+
+    const-string v0, ""
+
+    if-eqz p0, :cond_13
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_13
+    const-string p0, ": "
+
+    if-eqz p1, :cond_2d
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_2d
+    if-eqz p1, :cond_4f
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_4f
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_4f
+    sget-object p0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {p0, v0}, Lcom/unity3d/services/core/log/DeviceLog;->write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private static getLogLevel(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;)Lcom/unity3d/services/core/log/DeviceLogLevel;
+    .registers 2
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog;->_deviceLogLevel:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    return-object p0
+.end method
+
+.method public static info(Ljava/lang/String;)V
+    .registers 2
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->INFO:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->checkMessage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/unity3d/services/core/log/DeviceLog;->write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static varargs info(Ljava/lang/String;[Ljava/lang/Object;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->info(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private static isDebugEnabled()Z
+    .registers 1
+
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    if-nez v0, :cond_b
+
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->FORCE_DEBUG_LOG:Z
+
+    if-eqz v0, :cond_9
+
+    goto :goto_b
+
+    :cond_9
+    const/4 v0, 0x0
+
+    goto :goto_c
+
+    :cond_b
+    :goto_b
+    const/4 v0, 0x1
+
+    :goto_c
+    return v0
+.end method
+
+.method public static setLogLevel(I)V
+    .registers 4
+
+    const/4 v0, 0x1
+
+    const/16 v1, 0x8
+
+    if-lt p0, v1, :cond_e
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    goto :goto_3a
+
+    :cond_e
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    if-lt p0, v1, :cond_1b
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    goto :goto_3a
+
+    :cond_1b
+    const/4 v1, 0x2
+
+    if-lt p0, v1, :cond_27
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    goto :goto_3a
+
+    :cond_27
+    if-lt p0, v0, :cond_32
+
+    sput-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    goto :goto_3a
+
+    :cond_32
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    sput-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    :goto_3a
+    return-void
+.end method
+
+.method public static warning(Ljava/lang/String;)V
+    .registers 2
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->WARNING:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->checkMessage(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lcom/unity3d/services/core/log/DeviceLog;->write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static varargs warning(Ljava/lang/String;[Ljava/lang/Object;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->warning(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private static write(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)V
+    .registers 5
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$1;->$SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_1f
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_1c
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_19
+
+    const/4 v2, 0x4
+
+    if-eq v0, v2, :cond_16
+
+    const/4 v0, 0x1
+
+    goto :goto_21
+
+    :cond_16
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_ERROR:Z
+
+    goto :goto_21
+
+    :cond_19
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_WARNING:Z
+
+    goto :goto_21
+
+    :cond_1c
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_DEBUG:Z
+
+    goto :goto_21
+
+    :cond_1f
+    sget-boolean v0, Lcom/unity3d/services/core/log/DeviceLog;->LOG_INFO:Z
+
+    :goto_21
+    sget-boolean v2, Lcom/unity3d/services/core/log/DeviceLog;->FORCE_DEBUG_LOG:Z
+
+    if-eqz v2, :cond_26
+
+    goto :goto_27
+
+    :cond_26
+    move v1, v0
+
+    :goto_27
+    if-eqz v1, :cond_30
+
+    invoke-static {p0, p1}, Lcom/unity3d/services/core/log/DeviceLog;->createLogEntry(Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;Ljava/lang/String;)Lcom/unity3d/services/core/log/DeviceLogEntry;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/unity3d/services/core/log/DeviceLog;->writeToLog(Lcom/unity3d/services/core/log/DeviceLogEntry;)V
+
+    :cond_30
+    return-void
+.end method
+
+.method private static writeToLog(Lcom/unity3d/services/core/log/DeviceLogEntry;)V
+    .registers 11
+
+    const-class v0, Ljava/lang/String;
+
+    const-string v1, "Writing to log failed!"
+
+    const-string v2, "UnityAds"
+
+    if-eqz p0, :cond_48
+
+    invoke-virtual {p0}, Lcom/unity3d/services/core/log/DeviceLogEntry;->getLogLevel()Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_48
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    :try_start_12
+    const-class v7, Landroid/util/Log;
+
+    invoke-virtual {p0}, Lcom/unity3d/services/core/log/DeviceLogEntry;->getLogLevel()Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lcom/unity3d/services/core/log/DeviceLogLevel;->getReceivingMethodName()Ljava/lang/String;
+
+    move-result-object v8
+
+    new-array v9, v5, [Ljava/lang/Class;
+
+    aput-object v0, v9, v4
+
+    aput-object v0, v9, v3
+
+    invoke-virtual {v7, v8, v9}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+    :try_end_26
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_26} :catch_27
+
+    goto :goto_2c
+
+    :catch_27
+    move-exception v0
+
+    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    move-object v0, v6
+
+    :goto_2c
+    if-eqz v0, :cond_48
+
+    :try_start_2e
+    new-array v5, v5, [Ljava/lang/Object;
+
+    invoke-virtual {p0}, Lcom/unity3d/services/core/log/DeviceLogEntry;->getLogLevel()Lcom/unity3d/services/core/log/DeviceLogLevel;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Lcom/unity3d/services/core/log/DeviceLogLevel;->getLogTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v5, v4
+
+    invoke-virtual {p0}, Lcom/unity3d/services/core/log/DeviceLogEntry;->getParsedMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    aput-object p0, v5, v3
+
+    invoke-virtual {v0, v6, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_43
+    .catch Ljava/lang/Exception; {:try_start_2e .. :try_end_43} :catch_44
+
+    goto :goto_48
+
+    :catch_44
+    move-exception p0
+
+    invoke-static {v2, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_48
+    :goto_48
+    return-void
+.end method
+
+###### Class com.unity3d.services.core.log.DeviceLog.AnonymousClass1 (com.unity3d.services.core.log.DeviceLog$1)
+.class synthetic Lcom/unity3d/services/core/log/DeviceLog$1;
+.super Ljava/lang/Object;
+.source "DeviceLog.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/unity3d/services/core/log/DeviceLog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1008
+    name = null
+.end annotation
+
+
+# static fields
+.field static final synthetic $SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    invoke-static {}, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->values()[Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/unity3d/services/core/log/DeviceLog$1;->$SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+    :try_start_9
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->INFO:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_12} :catch_12
+
+    :catch_12
+    :try_start_12
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$1;->$SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->DEBUG:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_1d} :catch_1d
+
+    :catch_1d
+    :try_start_1d
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$1;->$SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->WARNING:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_28
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1d .. :try_end_28} :catch_28
+
+    :catch_28
+    :try_start_28
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$1;->$SwitchMap$com$unity3d$services$core$log$DeviceLog$UnityAdsLogLevel:[I
+
+    sget-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_33
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_28 .. :try_end_33} :catch_33
+
+    :catch_33
+    return-void
+.end method
+
+###### Class com.unity3d.services.core.log.DeviceLog.UnityAdsLogLevel (com.unity3d.services.core.log.DeviceLog$UnityAdsLogLevel)
+.class public final enum Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+.super Ljava/lang/Enum;
+.source "DeviceLog.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/unity3d/services/core/log/DeviceLog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4019
+    name = "UnityAdsLogLevel"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final synthetic $VALUES:[Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+.field public static final enum DEBUG:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+.field public static final enum ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+.field public static final enum INFO:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+.field public static final enum WARNING:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 9
+
+    new-instance v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    const-string v1, "INFO"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->INFO:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    const-string v3, "DEBUG"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v3, v4}, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->DEBUG:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v3, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    const-string v5, "WARNING"
+
+    const/4 v6, 0x2
+
+    invoke-direct {v3, v5, v6}, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->WARNING:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    new-instance v5, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    const-string v7, "ERROR"
+
+    const/4 v8, 0x3
+
+    invoke-direct {v5, v7, v8}, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->ERROR:Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    const/4 v7, 0x4
+
+    new-array v7, v7, [Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    aput-object v0, v7, v2
+
+    aput-object v1, v7, v4
+
+    aput-object v3, v7, v6
+
+    aput-object v5, v7, v8
+
+    sput-object v7, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->$VALUES:[Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+    .registers 2
+
+    const-class v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+    .registers 1
+
+    sget-object v0, Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->$VALUES:[Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    invoke-virtual {v0}, [Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/unity3d/services/core/log/DeviceLog$UnityAdsLogLevel;
+
+    return-object v0
+.end method
