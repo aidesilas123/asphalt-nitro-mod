@@ -1,0 +1,47 @@
+###### Class androidx.recyclerview.widget.RecyclerView.StretchEdgeEffectFactory (androidx.recyclerview.widget.RecyclerView$StretchEdgeEffectFactory)
+.class Landroidx/recyclerview/widget/RecyclerView$StretchEdgeEffectFactory;
+.super Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;
+.source "RecyclerView.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/recyclerview/widget/RecyclerView;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = "StretchEdgeEffectFactory"
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected createEdgeEffect(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
+    .registers 3
+    .param p1    # Landroidx/recyclerview/widget/RecyclerView;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/NonNull;
+    .end annotation
+
+    new-instance p2, Landroid/widget/EdgeEffect;
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
+    return-object p2
+.end method

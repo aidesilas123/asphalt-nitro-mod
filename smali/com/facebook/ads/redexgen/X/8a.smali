@@ -1,58 +1,55 @@
-###### Class com.facebook.ads.redexgen.X.AbstractC08448a (com.facebook.ads.redexgen.X.8a)
-.class public abstract Lcom/facebook/ads/redexgen/X/8a;
-.super Ljava/lang/Object;
+###### Class com.facebook.ads.redexgen.X.C8A (com.facebook.ads.redexgen.X.8A)
+.class public final Lcom/facebook/ads/redexgen/X/8A;
+.super Lcom/facebook/ads/redexgen/X/MA;
 .source ""
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Lcom/facebook/ads/redexgen/X/8Y;",
-        ">",
-        "Ljava/lang/Object;"
-    }
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/facebook/ads/redexgen/X/7K;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
-# direct methods
-.method public constructor <init>()V
-    .registers 1
+# instance fields
+.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/7K;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+# direct methods
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/7K;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/8A;->A00:Lcom/facebook/ads/redexgen/X/7K;
+
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/MA;-><init>()V
+
+    return-void
+.end method
+
+.method private final A00(Lcom/facebook/ads/redexgen/X/MD;)V
+    .registers 4
+
+    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/8A;->A00:Lcom/facebook/ads/redexgen/X/7K;
+
+    const/4 v0, 0x1
+
+    invoke-static {v1, v0}, Lcom/facebook/ads/redexgen/X/7K;->A0L(Lcom/facebook/ads/redexgen/X/7K;Z)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00(Lcom/facebook/ads/redexgen/X/8Y;)Z
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)Z"
-        }
-    .end annotation
+.method public final bridge synthetic A03(Lcom/facebook/ads/redexgen/X/8Y;)V
+    .registers 2
 
-    const/4 v0, 0x1
+    check-cast p1, Lcom/facebook/ads/redexgen/X/MD;
 
-    return v0
-.end method
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/8A;->A00(Lcom/facebook/ads/redexgen/X/MD;)V
 
-.method public abstract A01()Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/lang/Class<",
-            "TT;>;"
-        }
-    .end annotation
-.end method
-
-.method public abstract A03(Lcom/facebook/ads/redexgen/X/8Y;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
+    return-void
 .end method

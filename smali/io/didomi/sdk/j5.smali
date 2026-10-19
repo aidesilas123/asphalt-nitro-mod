@@ -1,43 +1,37 @@
-###### Class io.didomi.drawable.C1802j5 (io.didomi.sdk.j5)
-.class public final Lio/didomi/sdk/j5;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.J5 (io.didomi.sdk.J5)
+.class public final Lio/didomi/sdk/J5;
+.super Lio/didomi/sdk/P5;
 .source "SourceFile"
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/didomi/sdk/J5$a;
+    }
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0018\u0008\u00c6\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0017\u0010\t\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0005\u0010\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u0017\u0010\u000b\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0007\u0010\u0006\u001a\u0004\u0008\n\u0010\u0008R\u0017\u0010\r\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\n\u0010\u0006\u001a\u0004\u0008\u000c\u0010\u0008R\u0017\u0010\u000f\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\u0006\u001a\u0004\u0008\u0005\u0010\u0008R\u0017\u0010\u0012\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0010\u0010\u0006\u001a\u0004\u0008\u0011\u0010\u0008R\u0017\u0010\u0014\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u000c\u0010\u0006\u001a\u0004\u0008\u0013\u0010\u0008R\u0017\u0010\u0016\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\u0006\u001a\u0004\u0008\u0015\u0010\u0008R\u0017\u0010\u0017\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0013\u0010\u0006\u001a\u0004\u0008\u0010\u0010\u0008R\u0017\u0010\u0019\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010\u0006\u001a\u0004\u0008\u000e\u0010\u0008R\u0017\u0010\u001b\u001a\u00020\u00048\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001a\u0010\u0006\u001a\u0004\u0008\u0018\u0010\u0008\u00a8\u0006\u001c"
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0006\u0018\u0000 \u000f2\u00020\u0001:\u0001\u000bB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J\u0015\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0008\u00a2\u0006\u0004\u0008\u000b\u0010\u000cR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u00a8\u0006\u0010"
     }
     d2 = {
-        "Lio/didomi/sdk/j5;",
-        "",
+        "Lio/didomi/sdk/J5;",
+        "Lio/didomi/sdk/P5;",
+        "Lio/didomi/sdk/y1;",
+        "binding",
+        "Lio/didomi/sdk/z8;",
+        "themeProvider",
         "<init>",
-        "()V",
-        "Lkotlin/text/Regex;",
-        "b",
-        "Lkotlin/text/Regex;",
-        "c",
-        "()Lkotlin/text/Regex;",
-        "LOCALE_SEPARATOR",
-        "d",
-        "LOCALE_STRING",
-        "g",
-        "TWO_LETTERS",
-        "e",
-        "LI_OPENING_TAG",
-        "f",
+        "(Lio/didomi/sdk/y1;Lio/didomi/sdk/z8;)V",
+        "Lio/didomi/sdk/X3;",
+        "data",
+        "",
         "a",
-        "LI_CLOSING_TAG",
-        "i",
-        "UL_OPENING_TAG",
-        "h",
-        "UL_CLOSING_TAG",
-        "OL_OPENING_TAG",
-        "j",
-        "OL_CLOSING_TAG",
-        "k",
-        "UUID",
+        "(Lio/didomi/sdk/X3;)V",
+        "c",
+        "Lio/didomi/sdk/y1;",
+        "d",
         "android_release"
     }
     mv = {
@@ -49,210 +43,114 @@
 
 
 # static fields
-.field public static final a:Lio/didomi/sdk/j5;
+.field public static final d:Lio/didomi/sdk/J5$a;
 
-.field private static final b:Lkotlin/text/Regex;
 
-.field private static final c:Lkotlin/text/Regex;
-
-.field private static final d:Lkotlin/text/Regex;
-
-.field private static final e:Lkotlin/text/Regex;
-
-.field private static final f:Lkotlin/text/Regex;
-
-.field private static final g:Lkotlin/text/Regex;
-
-.field private static final h:Lkotlin/text/Regex;
-
-.field private static final i:Lkotlin/text/Regex;
-
-.field private static final j:Lkotlin/text/Regex;
-
-.field private static final k:Lkotlin/text/Regex;
+# instance fields
+.field private final c:Lio/didomi/sdk/y1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .registers 3
+    .registers 2
 
-    new-instance v0, Lio/didomi/sdk/j5;
+    new-instance v0, Lio/didomi/sdk/J5$a;
 
-    invoke-direct {v0}, Lio/didomi/sdk/j5;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lio/didomi/sdk/j5;->a:Lio/didomi/sdk/j5;
+    invoke-direct {v0, v1}, Lio/didomi/sdk/J5$a;-><init>(Lkotlin/jvm/internal/n;)V
 
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "[_-]"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->b:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    sget-object v1, Lkotlin/text/RegexOption;->a:Lkotlin/text/RegexOption;
-
-    const-string v2, "^[a-z]{2,3}[_-][A-Z]{2}|[a-z]{2,3}$"
-
-    invoke-direct {v0, v2, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;Lkotlin/text/RegexOption;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->c:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "^[A-Za-z]{2}$"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->d:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*li[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->e:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*/\\s*li[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->f:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*ul[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->g:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*/\\s*ul[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->h:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*ol[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->i:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "(?i)<\\s*/\\s*ol[^>]*>"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->j:Lkotlin/text/Regex;
-
-    new-instance v0, Lkotlin/text/Regex;
-
-    const-string v1, "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
-
-    invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lio/didomi/sdk/j5;->k:Lkotlin/text/Regex;
+    sput-object v0, Lio/didomi/sdk/J5;->d:Lio/didomi/sdk/J5$a;
 
     return-void
 .end method
 
-.method private constructor <init>()V
-    .registers 1
+.method public constructor <init>(Lio/didomi/sdk/y1;Lio/didomi/sdk/z8;)V
+    .registers 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "binding"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "themeProvider"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-direct {p0, p1, p2}, Lio/didomi/sdk/P5;-><init>(Landroidx/viewbinding/ViewBinding;Lio/didomi/sdk/z8;)V
+
+    iput-object p1, p0, Lio/didomi/sdk/J5;->c:Lio/didomi/sdk/y1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkotlin/text/Regex;
-    .registers 2
+.method public final a(Lio/didomi/sdk/X3;)V
+    .registers 5
 
-    sget-object v0, Lio/didomi/sdk/j5;->f:Lkotlin/text/Regex;
+    const-string v0, "data"
 
-    return-object v0
-.end method
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public final b()Lkotlin/text/Regex;
-    .registers 2
+    invoke-super {p0, p1}, Lio/didomi/sdk/P5;->a(Lio/didomi/sdk/W3;)V
 
-    sget-object v0, Lio/didomi/sdk/j5;->e:Lkotlin/text/Regex;
+    iget-object v0, p0, Lio/didomi/sdk/J5;->c:Lio/didomi/sdk/y1;
 
-    return-object v0
-.end method
+    iget-object v1, v0, Lio/didomi/sdk/y1;->c:Landroid/widget/TextView;
 
-.method public final c()Lkotlin/text/Regex;
-    .registers 2
+    const-string v2, "textHolderSpiCategoryName"
 
-    sget-object v0, Lio/didomi/sdk/j5;->b:Lkotlin/text/Regex;
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-object v0
-.end method
+    const/16 v2, 0x8
 
-.method public final d()Lkotlin/text/Regex;
-    .registers 2
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v0, Lio/didomi/sdk/j5;->c:Lkotlin/text/Regex;
+    iget-object v0, v0, Lio/didomi/sdk/y1;->b:Landroid/widget/TextView;
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Lio/didomi/sdk/X3;->c()Ljava/lang/String;
 
-.method public final e()Lkotlin/text/Regex;
-    .registers 2
+    move-result-object v1
 
-    sget-object v0, Lio/didomi/sdk/j5;->j:Lkotlin/text/Regex;
+    invoke-static {v1}, Lkotlin/text/g;->isBlank(Ljava/lang/CharSequence;)Z
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public final f()Lkotlin/text/Regex;
-    .registers 2
+    if-eqz v1, :cond_23
 
-    sget-object v0, Lio/didomi/sdk/j5;->i:Lkotlin/text/Regex;
+    goto :goto_39
 
-    return-object v0
-.end method
+    :cond_23
+    const-string v1, "bind$lambda$1$lambda$0"
 
-.method public final g()Lkotlin/text/Regex;
-    .registers 2
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lio/didomi/sdk/j5;->d:Lkotlin/text/Regex;
+    sget-object v1, Lio/didomi/sdk/L0;->c:Lio/didomi/sdk/L0;
 
-    return-object v0
-.end method
+    invoke-virtual {p0}, Lio/didomi/sdk/P5;->b()Lio/didomi/sdk/z8;
 
-.method public final h()Lkotlin/text/Regex;
-    .registers 2
+    move-result-object v2
 
-    sget-object v0, Lio/didomi/sdk/j5;->h:Lkotlin/text/Regex;
+    invoke-static {v0, v1, v2}, Lio/didomi/sdk/y8;->a(Landroid/widget/TextView;Lio/didomi/sdk/L0;Lio/didomi/sdk/z8;)V
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Lio/didomi/sdk/X3;->c()Ljava/lang/String;
 
-.method public final i()Lkotlin/text/Regex;
-    .registers 2
+    move-result-object p1
 
-    sget-object v0, Lio/didomi/sdk/j5;->g:Lkotlin/text/Regex;
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public final j()Lkotlin/text/Regex;
-    .registers 2
+    :goto_39
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v0, Lio/didomi/sdk/j5;->k:Lkotlin/text/Regex;
+    iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    return-object v0
+    const-string v0, "itemView"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p1}, Lio/didomi/sdk/j9;->a(Landroid/view/View;)V
+
+    return-void
 .end method

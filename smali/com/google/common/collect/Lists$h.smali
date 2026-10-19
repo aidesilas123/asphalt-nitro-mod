@@ -1,0 +1,214 @@
+###### Class com.google.common.collect.Lists.h (com.google.common.collect.Lists$h)
+.class Lcom/google/common/collect/Lists$h;
+.super Ljava/util/AbstractList;
+.source "Lists.java"
+
+# interfaces
+.implements Ljava/util/RandomAccess;
+.implements Ljava/io/Serializable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/Lists;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "h"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<F:",
+        "Ljava/lang/Object;",
+        "T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/util/AbstractList<",
+        "TT;>;",
+        "Ljava/util/RandomAccess;",
+        "Ljava/io/Serializable;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final serialVersionUID:J
+
+
+# instance fields
+.field final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "TF;>;"
+        }
+    .end annotation
+.end field
+
+.field final b:Lcom/google/common/base/f;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/google/common/base/f<",
+            "-TF;+TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Ljava/util/List;Lcom/google/common/base/f;)V
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "TF;>;",
+            "Lcom/google/common/base/f<",
+            "-TF;+TT;>;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
+
+    invoke-static {p1}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    iput-object p1, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-static {p2}, Lcom/google/common/base/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/common/base/f;
+
+    iput-object p1, p0, Lcom/google/common/collect/Lists$h;->b:Lcom/google/common/base/f;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public clear()V
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    return-void
+.end method
+
+.method public get(I)Ljava/lang/Object;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/common/collect/Lists$h;->b:Lcom/google/common/base/f;
+
+    iget-object v1, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lcom/google/common/base/f;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public isEmpty()Z
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public iterator()Ljava/util/Iterator;
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Iterator<",
+            "TT;>;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public listIterator(I)Ljava/util/ListIterator;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/ListIterator<",
+            "TT;>;"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/google/common/collect/Lists$h$a;
+
+    iget-object v1, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    invoke-direct {v0, p0, p1}, Lcom/google/common/collect/Lists$h$a;-><init>(Lcom/google/common/collect/Lists$h;Ljava/util/ListIterator;)V
+
+    return-object v0
+.end method
+
+.method public remove(I)Ljava/lang/Object;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/google/common/collect/Lists$h;->b:Lcom/google/common/base/f;
+
+    iget-object v1, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lcom/google/common/base/f;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public size()I
+    .registers 2
+
+    iget-object v0, p0, Lcom/google/common/collect/Lists$h;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+.end method

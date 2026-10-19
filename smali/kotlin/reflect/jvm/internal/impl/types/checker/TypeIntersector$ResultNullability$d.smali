@@ -1,0 +1,50 @@
+###### Class kotlin.reflect.jvm.internal.impl.types.checker.TypeIntersector.ResultNullability.d (kotlin.reflect.jvm.internal.impl.types.checker.TypeIntersector$ResultNullability$d)
+.class final Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability$d;
+.super Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;
+.source "IntersectionType.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = "d"
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;I)V
+    .registers 4
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;-><init>(Ljava/lang/String;ILkotlin/jvm/internal/n;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lkotlin/reflect/jvm/internal/impl/types/m0;)Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;
+    .registers 3
+
+    const-string v0, "nextType"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;->b(Lkotlin/reflect/jvm/internal/impl/types/m0;)Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;
+
+    move-result-object p1
+
+    sget-object v0, Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;->b:Lkotlin/reflect/jvm/internal/impl/types/checker/TypeIntersector$ResultNullability;
+
+    if-ne p1, v0, :cond_e
+
+    move-object p1, p0
+
+    :cond_e
+    return-object p1
+.end method

@@ -1,54 +1,51 @@
-###### Class io.didomi.drawable.W4 (io.didomi.sdk.W4)
-.class public final Lio/didomi/sdk/W4;
+###### Class io.didomi.drawable.InterfaceC1931w4 (io.didomi.sdk.w4)
+.class public interface abstract Lio/didomi/sdk/w4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld/b;
-
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        "Ljava/lang/Object;",
-        "Ld/b<",
-        "Lio/didomi/sdk/V4;",
-        ">;"
+        Lio/didomi/sdk/w4$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0004\u0008f\u0018\u00002\u00020\u0001:\u0001\u0007R\u0014\u0010\u0005\u001a\u00020\u00028&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0003\u0010\u0004R\u0014\u0010\t\u001a\u00020\u00068&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0007\u0010\u0008R\u0014\u0010\r\u001a\u00020\n8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u000b\u0010\u000c\u00a8\u0006\u000e"
+    }
+    d2 = {
+        "Lio/didomi/sdk/w4;",
+        "",
+        "",
+        "getId",
+        "()J",
+        "id",
+        "Lio/didomi/sdk/w4$a;",
+        "a",
+        "()Lio/didomi/sdk/w4$a;",
+        "type",
+        "",
+        "b",
+        "()Z",
+        "preventListAccessibilityAnnouncement",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
     }
 .end annotation
 
 
-# direct methods
-.method public static a(Lio/didomi/sdk/V4;Lio/didomi/sdk/I3;)V
-    .registers 2
-
-    iput-object p1, p0, Lio/didomi/sdk/V4;->c:Lio/didomi/sdk/I3;
-
-    return-void
-.end method
-
-.method public static a(Lio/didomi/sdk/V4;Lio/didomi/sdk/a5;)V
-    .registers 2
-
-    iput-object p1, p0, Lio/didomi/sdk/V4;->a:Lio/didomi/sdk/a5;
-
-    return-void
-.end method
-
-.method public static a(Lio/didomi/sdk/V4;Lio/didomi/sdk/z8;)V
-    .registers 2
-
-    iput-object p1, p0, Lio/didomi/sdk/V4;->b:Lio/didomi/sdk/z8;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public abstract synthetic injectMembers(Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)V"
-        }
-    .end annotation
+.method public abstract a()Lio/didomi/sdk/w4$a;
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract getId()J
 .end method

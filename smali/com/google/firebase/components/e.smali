@@ -1,0 +1,43 @@
+###### Class com.google.firebase.components.e (com.google.firebase.components.e)
+.class public final synthetic Lcom/google/firebase/components/e;
+.super Ljava/lang/Object;
+.source "lambda"
+
+# interfaces
+.implements Lcom/google/firebase/inject/Provider;
+
+
+# instance fields
+.field public final synthetic a:Lcom/google/firebase/components/ComponentRuntime;
+
+.field public final synthetic b:Lcom/google/firebase/components/Component;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/firebase/components/ComponentRuntime;Lcom/google/firebase/components/Component;)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/firebase/components/e;->a:Lcom/google/firebase/components/ComponentRuntime;
+
+    iput-object p2, p0, Lcom/google/firebase/components/e;->b:Lcom/google/firebase/components/Component;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .registers 3
+
+    iget-object v0, p0, Lcom/google/firebase/components/e;->a:Lcom/google/firebase/components/ComponentRuntime;
+
+    iget-object v1, p0, Lcom/google/firebase/components/e;->b:Lcom/google/firebase/components/Component;
+
+    invoke-virtual {v0, v1}, Lcom/google/firebase/components/ComponentRuntime;->j(Lcom/google/firebase/components/Component;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method

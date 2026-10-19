@@ -1,54 +1,35 @@
-###### Class com.facebook.ads.redexgen.X.SS (com.facebook.ads.redexgen.X.SS)
-.class public final Lcom/facebook/ads/redexgen/X/SS;
+###### Class com.facebook.ads.redexgen.X.C1354Ss (com.facebook.ads.redexgen.X.Ss)
+.class public final synthetic Lcom/facebook/ads/redexgen/X/Ss;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Lcom/facebook/ads/redexgen/X/NK;
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/ads/redexgen/X/SQ;-><init>(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/redexgen/X/MM;ILcom/facebook/ads/redexgen/X/If;Lcom/facebook/ads/redexgen/X/aS;Lcom/facebook/ads/redexgen/X/Lt;Lcom/facebook/ads/internal/view/FullScreenAdToolbar;ZZLcom/facebook/ads/redexgen/X/P0;I)V
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
-.end annotation
+.implements Lcom/facebook/ads/redexgen/X/Nq;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/SQ;
+.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/Sl;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/SQ;)V
+.method public synthetic constructor <init>(Lcom/facebook/ads/redexgen/X/Sl;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/SS;->A00:Lcom/facebook/ads/redexgen/X/SQ;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/Ss;->A00:Lcom/facebook/ads/redexgen/X/Sl;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final ABX(Z)V
-    .registers 3
+.method public final AAq()V
+    .registers 2
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/SS;->A00:Lcom/facebook/ads/redexgen/X/SQ;
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/Ss;->A00:Lcom/facebook/ads/redexgen/X/Sl;
 
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/SQ;->A06(Lcom/facebook/ads/redexgen/X/SQ;)Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/SS;->A00:Lcom/facebook/ads/redexgen/X/SQ;
-
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/SQ;->A09(Lcom/facebook/ads/redexgen/X/SQ;)V
+    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Sl;->A12()V
 
     return-void
 .end method

@@ -1,269 +1,115 @@
-###### Class io.didomi.drawable.K3 (io.didomi.sdk.K3)
-.class public final Lio/didomi/sdk/K3;
+###### Class io.didomi.drawable.C1810k3 (io.didomi.sdk.k3)
+.class public final Lio/didomi/sdk/k3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldagger/internal/b;
-
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ldagger/internal/b<",
-        "Lio/didomi/sdk/I3;",
-        ">;"
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0005\u001a#\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003H\u0000\u00a2\u0006\u0004\u0008\u0006\u0010\u0007\u001a\u0013\u0010\u0008\u001a\u00020\u0005*\u00020\u0000H\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\t\u00a8\u0006\n"
+    }
+    d2 = {
+        "Landroid/widget/ImageView;",
+        "Landroidx/lifecycle/LifecycleOwner;",
+        "lifecycleOwner",
+        "Lio/didomi/sdk/C3;",
+        "logoProvider",
+        "",
+        "a",
+        "(Landroid/widget/ImageView;Landroidx/lifecycle/LifecycleOwner;Lio/didomi/sdk/C3;)V",
+        "b",
+        "(Landroid/widget/ImageView;)V",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
     }
 .end annotation
 
 
-# instance fields
-.field private final a:Lio/didomi/sdk/J3;
-
-.field private final b:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final c:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final d:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final e:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final f:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final g:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # direct methods
-.method public constructor <init>(Lio/didomi/sdk/J3;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
-    .registers 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/J3;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;)V"
-        }
-    .end annotation
+.method public static final synthetic a(Landroid/widget/ImageView;)V
+    .registers 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lio/didomi/sdk/K3;->a:Lio/didomi/sdk/J3;
-
-    iput-object p2, p0, Lio/didomi/sdk/K3;->b:Le/a/a;
-
-    iput-object p3, p0, Lio/didomi/sdk/K3;->c:Le/a/a;
-
-    iput-object p4, p0, Lio/didomi/sdk/K3;->d:Le/a/a;
-
-    iput-object p5, p0, Lio/didomi/sdk/K3;->e:Le/a/a;
-
-    iput-object p6, p0, Lio/didomi/sdk/K3;->f:Le/a/a;
-
-    iput-object p7, p0, Lio/didomi/sdk/K3;->g:Le/a/a;
+    invoke-static {p0}, Lio/didomi/sdk/k3;->b(Landroid/widget/ImageView;)V
 
     return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/J3;Lio/didomi/sdk/H;Lio/didomi/sdk/M2;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/V;Lio/didomi/sdk/D8;Lio/didomi/sdk/G8;)Lio/didomi/sdk/I3;
-    .registers 7
+.method public static final a(Landroid/widget/ImageView;Landroidx/lifecycle/LifecycleOwner;Lio/didomi/sdk/C3;)V
+    .registers 6
 
-    invoke-virtual/range {p0 .. p6}, Lio/didomi/sdk/J3;->a(Lio/didomi/sdk/H;Lio/didomi/sdk/M2;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/V;Lio/didomi/sdk/D8;Lio/didomi/sdk/G8;)Lio/didomi/sdk/I3;
+    const-string v0, "<this>"
 
-    move-result-object p0
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "lifecycleOwner"
 
-    move-result-object p0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p0, Lio/didomi/sdk/I3;
+    const-string v0, "logoProvider"
 
-    return-object p0
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v0, Lio/didomi/sdk/k3$a;
+
+    invoke-direct {v0, p0}, Lio/didomi/sdk/k3$a;-><init>(Landroid/widget/ImageView;)V
+
+    new-instance v1, Lio/didomi/sdk/k3$b;
+
+    invoke-direct {v1, p0}, Lio/didomi/sdk/k3$b;-><init>(Landroid/widget/ImageView;)V
+
+    new-instance v2, Lio/didomi/sdk/k3$c;
+
+    invoke-direct {v2, p0}, Lio/didomi/sdk/k3$c;-><init>(Landroid/widget/ImageView;)V
+
+    invoke-virtual {p2, p1, v0, v1, v2}, Lio/didomi/sdk/C3;->a(Landroidx/lifecycle/LifecycleOwner;Lkotlin/jvm/b/l;Lkotlin/jvm/b/l;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/J3;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)Lio/didomi/sdk/K3;
-    .registers 16
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/J3;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;)",
-            "Lio/didomi/sdk/K3;"
-        }
-    .end annotation
+.method private static final b(Landroid/widget/ImageView;)V
+    .registers 4
 
-    new-instance v8, Lio/didomi/sdk/K3;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
-    move-object v0, v8
+    move-result-object v0
 
-    move-object v1, p0
+    sget v1, Lio/didomi/sdk/R$dimen;->didomi_notice_logo_max_height:I
 
-    move-object v2, p1
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-object v3, p2
+    move-result v0
 
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object v6, p5
-
-    move-object v7, p6
-
-    invoke-direct/range {v0 .. v7}, Lio/didomi/sdk/K3;-><init>(Lio/didomi/sdk/J3;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
-
-    return-object v8
-.end method
-
-
-# virtual methods
-.method public a()Lio/didomi/sdk/I3;
-    .registers 8
-
-    iget-object v0, p0, Lio/didomi/sdk/K3;->a:Lio/didomi/sdk/J3;
-
-    iget-object v1, p0, Lio/didomi/sdk/K3;->b:Le/a/a;
-
-    invoke-interface {v1}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    check-cast v1, Lio/didomi/sdk/H;
+    if-eqz v1, :cond_21
 
-    iget-object v2, p0, Lio/didomi/sdk/K3;->c:Le/a/a;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    invoke-interface {v2}, Le/a/a;->get()Ljava/lang/Object;
+    move-result v2
 
-    move-result-object v2
+    if-lt v2, v0, :cond_17
 
-    check-cast v2, Lio/didomi/sdk/M2;
+    goto :goto_18
 
-    iget-object v3, p0, Lio/didomi/sdk/K3;->d:Le/a/a;
+    :cond_17
+    const/4 v1, 0x0
 
-    invoke-interface {v3}, Le/a/a;->get()Ljava/lang/Object;
+    :goto_18
+    if-eqz v1, :cond_21
 
-    move-result-object v3
+    const/4 v1, 0x1
 
-    check-cast v3, Lio/didomi/sdk/apiEvents/b;
+    invoke-virtual {p0, v1}, Landroid/widget/ImageView;->setAdjustViewBounds(Z)V
 
-    iget-object v4, p0, Lio/didomi/sdk/K3;->e:Le/a/a;
+    invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setMaxHeight(I)V
 
-    invoke-interface {v4}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lio/didomi/sdk/V;
-
-    iget-object v5, p0, Lio/didomi/sdk/K3;->f:Le/a/a;
-
-    invoke-interface {v5}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lio/didomi/sdk/D8;
-
-    iget-object v6, p0, Lio/didomi/sdk/K3;->g:Le/a/a;
-
-    invoke-interface {v6}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lio/didomi/sdk/G8;
-
-    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/K3;->a(Lio/didomi/sdk/J3;Lio/didomi/sdk/H;Lio/didomi/sdk/M2;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/V;Lio/didomi/sdk/D8;Lio/didomi/sdk/G8;)Lio/didomi/sdk/I3;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic get()Ljava/lang/Object;
-    .registers 2
-
-    invoke-virtual {p0}, Lio/didomi/sdk/K3;->a()Lio/didomi/sdk/I3;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_21
+    return-void
 .end method

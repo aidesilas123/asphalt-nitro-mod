@@ -1,291 +1,168 @@
-###### Class io.didomi.drawable.Z0 (io.didomi.sdk.Z0)
-.class public final Lio/didomi/sdk/Z0;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.C1957z0 (io.didomi.sdk.z0)
+.class public final Lio/didomi/sdk/z0;
+.super Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 .source "SourceFile"
 
-# interfaces
-.implements Landroidx/viewbinding/ViewBinding;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/didomi/sdk/z0$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0006\u0018\u0000 \u00112\u00020\u0001:\u0001\u000fB\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\'\u0010\r\u001a\u00020\u000c2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u00082\u0006\u0010\u000b\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\r\u0010\u000eR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\u0010\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Lio/didomi/sdk/z0;",
+        "Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;",
+        "Landroid/graphics/drawable/Drawable;",
+        "divider",
+        "<init>",
+        "(Landroid/graphics/drawable/Drawable;)V",
+        "Landroid/graphics/Canvas;",
+        "canvas",
+        "Landroidx/recyclerview/widget/RecyclerView;",
+        "parent",
+        "Landroidx/recyclerview/widget/RecyclerView$State;",
+        "state",
+        "",
+        "onDrawOver",
+        "(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V",
+        "a",
+        "Landroid/graphics/drawable/Drawable;",
+        "b",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# static fields
+.field public static final b:Lio/didomi/sdk/z0$a;
 
 
 # instance fields
-.field private final a:Landroidx/constraintlayout/widget/ConstraintLayout;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final b:Landroid/widget/ImageView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final c:Landroid/widget/ImageView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final d:Landroid/widget/LinearLayout;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final e:Landroid/widget/ScrollView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final f:Landroid/widget/TextSwitcher;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final g:Landroid/widget/TextSwitcher;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final h:Landroid/widget/TextView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
+.field private final a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method private constructor <init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/ImageView;Landroid/widget/LinearLayout;Landroid/widget/ScrollView;Landroid/widget/TextSwitcher;Landroid/widget/TextSwitcher;Landroid/widget/TextView;)V
-    .registers 9
-    .param p1    # Landroidx/constraintlayout/widget/ConstraintLayout;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroid/widget/ImageView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroid/widget/ImageView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Landroid/widget/LinearLayout;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p5    # Landroid/widget/ScrollView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p6    # Landroid/widget/TextSwitcher;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p7    # Landroid/widget/TextSwitcher;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p8    # Landroid/widget/TextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
+.method static constructor <clinit>()V
+    .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lio/didomi/sdk/z0$a;
 
-    iput-object p1, p0, Lio/didomi/sdk/Z0;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lio/didomi/sdk/Z0;->b:Landroid/widget/ImageView;
+    invoke-direct {v0, v1}, Lio/didomi/sdk/z0$a;-><init>(Lkotlin/jvm/internal/n;)V
 
-    iput-object p3, p0, Lio/didomi/sdk/Z0;->c:Landroid/widget/ImageView;
-
-    iput-object p4, p0, Lio/didomi/sdk/Z0;->d:Landroid/widget/LinearLayout;
-
-    iput-object p5, p0, Lio/didomi/sdk/Z0;->e:Landroid/widget/ScrollView;
-
-    iput-object p6, p0, Lio/didomi/sdk/Z0;->f:Landroid/widget/TextSwitcher;
-
-    iput-object p7, p0, Lio/didomi/sdk/Z0;->g:Landroid/widget/TextSwitcher;
-
-    iput-object p8, p0, Lio/didomi/sdk/Z0;->h:Landroid/widget/TextView;
+    sput-object v0, Lio/didomi/sdk/z0;->b:Lio/didomi/sdk/z0$a;
 
     return-void
 .end method
 
-.method public static a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lio/didomi/sdk/Z0;
-    .registers 5
-    .param p0    # Landroid/view/LayoutInflater;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .registers 3
 
-    sget v0, Lio/didomi/sdk/R$layout;->didomi_fragment_tv_device_storage_disclosure_detail:I
+    const-string v0, "divider"
 
-    const/4 v1, 0x0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    move-result-object p0
+    iput-object p1, p0, Lio/didomi/sdk/z0;->a:Landroid/graphics/drawable/Drawable;
 
-    if-eqz p2, :cond_c
-
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    :cond_c
-    invoke-static {p0}, Lio/didomi/sdk/Z0;->a(Landroid/view/View;)Lio/didomi/sdk/Z0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static a(Landroid/view/View;)Lio/didomi/sdk/Z0;
-    .registers 12
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    sget v0, Lio/didomi/sdk/R$id;->image_ctv_device_storage_disclosure_detail_left_arrow_image:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v4, v1
-
-    check-cast v4, Landroid/widget/ImageView;
-
-    if-eqz v4, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->image_ctv_device_storage_disclosure_detail_right_arrow_image:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v5, v1
-
-    check-cast v5, Landroid/widget/ImageView;
-
-    if-eqz v5, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->layout_ctv_device_storage_disclosure_detail_container:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v6, v1
-
-    check-cast v6, Landroid/widget/LinearLayout;
-
-    if-eqz v6, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->scroll_ctv_device_storage_disclosure_detail:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v7, v1
-
-    check-cast v7, Landroid/widget/ScrollView;
-
-    if-eqz v7, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->switcher_ctv_device_storage_disclosure_detail_description_legal:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v8, v1
-
-    check-cast v8, Landroid/widget/TextSwitcher;
-
-    if-eqz v8, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->switcher_ctv_device_storage_disclosure_detail_subtitle:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v9, v1
-
-    check-cast v9, Landroid/widget/TextSwitcher;
-
-    if-eqz v9, :cond_57
-
-    sget v0, Lio/didomi/sdk/R$id;->text_ctv_device_storage_disclosure_detail_title:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    move-object v10, v1
-
-    check-cast v10, Landroid/widget/TextView;
-
-    if-eqz v10, :cond_57
-
-    new-instance v0, Lio/didomi/sdk/Z0;
-
-    move-object v3, p0
-
-    check-cast v3, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    move-object v2, v0
-
-    invoke-direct/range {v2 .. v10}, Lio/didomi/sdk/Z0;-><init>(Landroidx/constraintlayout/widget/ConstraintLayout;Landroid/widget/ImageView;Landroid/widget/ImageView;Landroid/widget/LinearLayout;Landroid/widget/ScrollView;Landroid/widget/TextSwitcher;Landroid/widget/TextSwitcher;Landroid/widget/TextView;)V
-
-    return-object v0
-
-    :cond_57
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Missing required view with ID: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroidx/constraintlayout/widget/ConstraintLayout;
-    .registers 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+.method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
+    .registers 10
 
-    iget-object v0, p0, Lio/didomi/sdk/Z0;->a:Landroidx/constraintlayout/widget/ConstraintLayout;
+    const-string v0, "canvas"
 
-    return-object v0
-.end method
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method public bridge synthetic getRoot()Landroid/view/View;
-    .registers 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
+    const-string v0, "parent"
 
-    invoke-virtual {p0}, Lio/didomi/sdk/Z0;->a()Landroidx/constraintlayout/widget/ConstraintLayout;
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v0, "state"
 
-    return-object v0
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingStart()I
+
+    move-result p3
+
+    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getPaddingEnd()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p2}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    :goto_21
+    if-ge v2, v1, :cond_4f
+
+    invoke-virtual {p2, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    const-string v4, "parent.getChildAt(i)"
+
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v4
+
+    const-string v5, "null cannot be cast to non-null type androidx.recyclerview.widget.RecyclerView.LayoutParams"
+
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    check-cast v4, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
+
+    invoke-virtual {v3}, Landroid/view/View;->getTop()I
+
+    move-result v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    iget v4, v4, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
+
+    add-int/2addr v3, v4
+
+    add-int/lit8 v4, v3, 0x1
+
+    iget-object v5, p0, Lio/didomi/sdk/z0;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v5, p3, v3, v0, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v3, p0, Lio/didomi/sdk/z0;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_21
+
+    :cond_4f
+    return-void
 .end method

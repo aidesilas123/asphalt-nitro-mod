@@ -1,19 +1,48 @@
-###### Class io.didomi.drawable.U5 (io.didomi.sdk.U5)
-.class public final Lio/didomi/sdk/U5;
+###### Class io.didomi.drawable.InterfaceC1912u5 (io.didomi.sdk.u5)
+.class public interface abstract Lio/didomi/sdk/u5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/didomi/sdk/u5$a;
+    }
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u000c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000\u00a2\u0006\u0004\u0008\u0002\u0010\u0003\u00a8\u0006\u0004"
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010%\n\u0002\u0010\u000e\n\u0002\u0008\u0008\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008f\u0018\u00002\u00020\u0001:\u0001\u0012R(\u0010\u0008\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00030\u00028&@&X\u00a6\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\u0004\u0010\u0005\"\u0004\u0008\u0006\u0010\u0007R(\u0010\u000b\u001a\u000e\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00030\u00028&@&X\u00a6\u000e\u00a2\u0006\u000c\u001a\u0004\u0008\t\u0010\u0005\"\u0004\u0008\n\u0010\u0007R\u001a\u0010\u0010\u001a\u0008\u0012\u0004\u0012\u00020\r0\u000c8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u000e\u0010\u000fR\u001a\u0010\u0013\u001a\u0008\u0012\u0004\u0012\u00020\u00110\u000c8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0012\u0010\u000fR\u001a\u0010\u0016\u001a\u0008\u0012\u0004\u0012\u00020\u00140\u000c8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0015\u0010\u000fR\u0014\u0010\u001a\u001a\u00020\u00178&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0018\u0010\u0019\u00a8\u0006\u001b"
     }
     d2 = {
-        "Lio/didomi/sdk/models/SpecialFeature;",
+        "Lio/didomi/sdk/u5;",
+        "",
+        "",
+        "",
+        "d",
+        "()Ljava/util/Map;",
+        "setIabPurposeIdsToDidomi",
+        "(Ljava/util/Map;)V",
+        "iabPurposeIdsToDidomi",
+        "e",
+        "setDidomiPurposeIdsToIab",
+        "didomiPurposeIdsToIab",
+        "",
         "Lio/didomi/sdk/models/InternalPurpose;",
+        "c",
+        "()Ljava/util/List;",
+        "purposes",
+        "Lio/didomi/sdk/models/InternalVendor;",
         "a",
-        "(Lio/didomi/sdk/models/SpecialFeature;)Lio/didomi/sdk/models/InternalPurpose;",
+        "vendors",
+        "Lio/didomi/sdk/models/SpecialFeature;",
+        "b",
+        "specialFeatures",
+        "Lio/didomi/sdk/u5$a;",
+        "f",
+        "()Lio/didomi/sdk/u5$a;",
+        "languages",
         "android_release"
     }
     mv = {
@@ -24,63 +53,63 @@
 .end annotation
 
 
-# direct methods
-.method public static final a(Lio/didomi/sdk/models/SpecialFeature;)Lio/didomi/sdk/models/InternalPurpose;
-    .registers 20
+# virtual methods
+.method public abstract a()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lio/didomi/sdk/models/InternalVendor;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    const-string v0, "<this>"
+.method public abstract b()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lio/didomi/sdk/models/SpecialFeature;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    move-object/from16 v1, p0
+.method public abstract c()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lio/didomi/sdk/models/InternalPurpose;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+.method public abstract d()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    new-instance v0, Lio/didomi/sdk/models/InternalPurpose;
+.method public abstract e()Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    move-object v2, v0
-
-    invoke-virtual/range {p0 .. p0}, Lio/didomi/sdk/models/SpecialFeature;->getId()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual/range {p0 .. p0}, Lio/didomi/sdk/models/SpecialFeature;->getIabId()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual/range {p0 .. p0}, Lio/didomi/sdk/models/SpecialFeature;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual/range {p0 .. p0}, Lio/didomi/sdk/models/SpecialFeature;->getDescription()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual/range {p0 .. p0}, Lio/didomi/sdk/models/SpecialFeature;->getDescriptionLegal()Ljava/lang/String;
-
-    move-result-object v7
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x1
-
-    const/4 v13, 0x0
-
-    const/4 v14, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    const/16 v17, 0x3de0
-
-    const/16 v18, 0x0
-
-    invoke-direct/range {v2 .. v18}, Lio/didomi/sdk/models/InternalPurpose;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ZZZZLjava/lang/String;Lio/didomi/sdk/models/DataProcessingNamespaces;ZZILkotlin/jvm/internal/n;)V
-
-    return-object v0
+.method public abstract f()Lio/didomi/sdk/u5$a;
 .end method

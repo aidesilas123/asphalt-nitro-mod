@@ -1,0 +1,15 @@
+###### Class com.fyber.inneractive.sdk.util.b0.a (com.fyber.inneractive.sdk.util.b0$a)
+.class public interface abstract Lcom/fyber/inneractive/sdk/util/b0$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/fyber/inneractive/sdk/util/b0;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation

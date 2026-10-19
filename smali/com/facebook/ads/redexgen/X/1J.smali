@@ -1,207 +1,148 @@
-###### Class com.facebook.ads.redexgen.X.C1J (com.facebook.ads.redexgen.X.1J)
-.class public final Lcom/facebook/ads/redexgen/X/1J;
-.super Ljava/lang/Object;
+###### Class com.facebook.ads.redexgen.X.C06851j (com.facebook.ads.redexgen.X.1j)
+.class public final Lcom/facebook/ads/redexgen/X/1j;
+.super Lcom/facebook/ads/redexgen/X/97;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/1K;
-.end annotation
+# static fields
+.field public static final A00:I
 
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "Builder"
-.end annotation
-
-
-# instance fields
-.field public A00:Lcom/facebook/ads/redexgen/X/1I;
-
-.field public A01:Ljava/lang/String;
-
-.field public A02:Ljava/lang/String;
-
-.field public A03:Ljava/lang/String;
-
-.field public A04:Ljava/lang/String;
-
-.field public A05:Ljava/lang/String;
-
-.field public A06:Ljava/lang/String;
-
-.field public A07:Ljava/lang/String;
-
-.field public A08:Ljava/lang/String;
+.field public static final A01:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .registers 1
+.method public static constructor <clinit>()V
+    .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v1, 0x41a00000    # 20.0f
+
+    sget v0, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/facebook/ads/redexgen/X/1j;->A00:I
+
+    const/high16 v1, 0x41800000    # 16.0f
+
+    sget v0, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    sput v0, Lcom/facebook/ads/redexgen/X/1j;->A01:I
 
     return-void
 .end method
 
-.method public static synthetic A00(Lcom/facebook/ads/redexgen/X/1J;)Lcom/facebook/ads/redexgen/X/1I;
-    .registers 1
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/Nz;Ljava/lang/String;Lcom/facebook/ads/redexgen/X/S0;)V
+    .registers 5
 
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A00:Lcom/facebook/ads/redexgen/X/1I;
+    const/4 v0, 0x0
 
-    return-object p0
-.end method
+    invoke-direct {p0, p1, v0, p2, p3}, Lcom/facebook/ads/redexgen/X/97;-><init>(Lcom/facebook/ads/redexgen/X/Nz;ZLjava/lang/String;Lcom/facebook/ads/redexgen/X/S0;)V
 
-.method public static synthetic A01(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A08:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A02(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A07:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A03(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A02:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A04(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A05:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A05(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A04:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A06(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A01:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A07(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A03:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public static synthetic A08(Lcom/facebook/ads/redexgen/X/1J;)Ljava/lang/String;
-    .registers 1
-
-    iget-object p0, p0, Lcom/facebook/ads/redexgen/X/1J;->A06:Ljava/lang/String;
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final A09(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 3
-
-    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/1I;->A00(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1I;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/1J;->A00:Lcom/facebook/ads/redexgen/X/1I;
-
-    return-object p0
-.end method
-
-.method public final A0A(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
+.method public final A01()Z
     .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A01:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    return-object p0
+    return v0
 .end method
 
-.method public final A0B(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
+.method public final A18(Lcom/facebook/ads/redexgen/X/YA;)V
+    .registers 9
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A02:Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/Nv;->getTitleDescContainer()Lcom/facebook/ads/redexgen/X/No;
 
-    return-object p0
-.end method
+    move-result-object v4
 
-.method public final A0C(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
+    const/4 v6, 0x3
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A03:Ljava/lang/String;
+    invoke-virtual {v4, v6}, Lcom/facebook/ads/redexgen/X/No;->setAlignment(I)V
 
-    return-object p0
-.end method
+    const/4 v5, -0x1
 
-.method public final A0D(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
+    const/4 v3, -0x2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A04:Ljava/lang/String;
+    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    return-object p0
-.end method
+    invoke-direct {v0, v5, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-.method public final A0E(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A05:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final A0F(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A06:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final A0G(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A07:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final A0H(Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/1J;
-    .registers 2
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/1J;->A08:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final A0I()Lcom/facebook/ads/redexgen/X/1K;
-    .registers 3
+    invoke-virtual {v4, v0}, Lcom/facebook/ads/redexgen/X/No;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 v1, 0x0
 
-    new-instance v0, Lcom/facebook/ads/redexgen/X/1K;
+    sget v0, Lcom/facebook/ads/redexgen/X/1j;->A00:I
 
-    invoke-direct {v0, p0, v1}, Lcom/facebook/ads/redexgen/X/1K;-><init>(Lcom/facebook/ads/redexgen/X/1J;Lcom/facebook/ads/redexgen/X/1H;)V
+    invoke-virtual {v4, v1, v1, v1, v0}, Lcom/facebook/ads/redexgen/X/No;->setPadding(IIII)V
 
-    return-object v0
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v1, v5, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/Nv;->getCtaButton()Lcom/facebook/ads/redexgen/X/T3;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/facebook/ads/redexgen/X/T3;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v2, Landroid/widget/LinearLayout;
+
+    invoke-direct {v2, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-direct {v0, v5}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    invoke-static {v2, v0}, Lcom/facebook/ads/redexgen/X/LV;->A0S(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v1, v5, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/97;->getMediaContainer()Landroid/widget/RelativeLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getId()I
+
+    move-result v0
+
+    invoke-virtual {v1, v6, v0}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
+
+    invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    sget v0, Lcom/facebook/ads/redexgen/X/1j;->A01:I
+
+    invoke-virtual {v2, v0, v0, v0, v0}, Landroid/widget/LinearLayout;->setPadding(IIII)V
+
+    invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/Nv;->getCtaButton()Lcom/facebook/ads/redexgen/X/T3;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/97;->getMediaContainer()Landroid/widget/RelativeLayout;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/facebook/ads/redexgen/X/1j;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v2}, Lcom/facebook/ads/redexgen/X/1j;->addView(Landroid/view/View;)V
+
+    return-void
 .end method

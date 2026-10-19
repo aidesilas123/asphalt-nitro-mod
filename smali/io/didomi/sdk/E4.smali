@@ -1,82 +1,79 @@
-###### Class io.didomi.drawable.PurposeDisplayItem (io.didomi.sdk.E4)
-.class public final Lio/didomi/sdk/E4;
+###### Class io.didomi.drawable.C1751e4 (io.didomi.sdk.e4)
+.class public final Lio/didomi/sdk/e4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lio/didomi/sdk/G4;
-
 
 # annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lio/didomi/sdk/e4$a;
+    }
+.end annotation
+
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0010\u000b\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0008\t\n\u0002\u0010\u0000\n\u0002\u0008#\u0008\u0086\u0008\u0018\u00002\u00020\u0001B\u0083\u0001\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\n\u001a\u00020\u0006\u0012\u0006\u0010\u000b\u001a\u00020\u0006\u0012\u0006\u0010\r\u001a\u00020\u000c\u0012\u0006\u0010\u000e\u001a\u00020\u000c\u0012\u0006\u0010\u000f\u001a\u00020\u0006\u0012\u0006\u0010\u0010\u001a\u00020\u0006\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u000c\u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0013\u0012\u000c\u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0013\u0012\u0006\u0010\u0016\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0010\u0010\u0019\u001a\u00020\u0006H\u00d6\u0001\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u0010\u0010\u001b\u001a\u00020\u0008H\u00d6\u0001\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u001a\u0010\u001f\u001a\u00020\u000c2\u0008\u0010\u001e\u001a\u0004\u0018\u00010\u001dH\u00d6\u0003\u00a2\u0006\u0004\u0008\u001f\u0010 R\u001a\u0010\u0003\u001a\u00020\u00028\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008!\u0010\"\u001a\u0004\u0008#\u0010$R\u001a\u0010\u0005\u001a\u00020\u00048\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008%\u0010&\u001a\u0004\u0008!\u0010\'R\u0017\u0010\u0007\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008(\u0010)\u001a\u0004\u0008*\u0010\u001aR\u0017\u0010\t\u001a\u00020\u00088\u0006\u00a2\u0006\u000c\n\u0004\u0008+\u0010,\u001a\u0004\u0008-\u0010\u001cR\u0017\u0010\n\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008.\u0010)\u001a\u0004\u0008(\u0010\u001aR\u0017\u0010\u000b\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008/\u0010)\u001a\u0004\u00080\u0010\u001aR\u0017\u0010\r\u001a\u00020\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u00081\u00102\u001a\u0004\u00083\u00104R\u0017\u0010\u000e\u001a\u00020\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u00085\u00102\u001a\u0004\u00086\u00104R\u0017\u0010\u000f\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u0008*\u0010)\u001a\u0004\u0008/\u0010\u001aR\u0017\u0010\u0010\u001a\u00020\u00068\u0006\u00a2\u0006\u000c\n\u0004\u00086\u0010)\u001a\u0004\u0008+\u0010\u001aR\"\u0010\u0012\u001a\u00020\u00118\u0016@\u0016X\u0096\u000e\u00a2\u0006\u0012\n\u0004\u0008-\u00107\u001a\u0004\u00088\u00109\"\u0004\u0008!\u0010:R \u0010\u0014\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u00138\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u00080\u0010;\u001a\u0004\u00081\u0010<R \u0010\u0015\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u00138\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u00088\u0010;\u001a\u0004\u00085\u0010<R\"\u0010\u0016\u001a\u00020\u000c8\u0016@\u0016X\u0096\u000e\u00a2\u0006\u0012\n\u0004\u00083\u00102\u001a\u0004\u0008.\u00104\"\u0004\u0008!\u0010=R\u001a\u0010?\u001a\u00020\u000c8\u0016X\u0096D\u00a2\u0006\u000c\n\u0004\u0008>\u00102\u001a\u0004\u0008%\u00104\u00a8\u0006@"
+        "\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0016\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0008\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u000c\u0018\u0000 92\u00020\u0001:\u0001\u0006B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010\u0007R\u001d\u0010\u000c\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\t\u0010\n\u001a\u0004\u0008\u0006\u0010\u000bR\u001d\u0010\u000f\u001a\u0004\u0018\u00010\u00088BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\r\u0010\n\u001a\u0004\u0008\u000e\u0010\u000bR\u001b\u0010\u0014\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0011\u0010\n\u001a\u0004\u0008\u0012\u0010\u0013R\u001b\u0010\u0017\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0015\u0010\n\u001a\u0004\u0008\u0016\u0010\u0013R\u001b\u0010\u001a\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010\n\u001a\u0004\u0008\u0019\u0010\u0013R\u001b\u0010\u001d\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001b\u0010\n\u001a\u0004\u0008\u001c\u0010\u0013R\u001b\u0010\u001e\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u001c\u0010\n\u001a\u0004\u0008\r\u0010\u0013R\u001b\u0010\u001f\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0019\u0010\n\u001a\u0004\u0008\u0011\u0010\u0013R\u001b\u0010!\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0012\u0010\n\u001a\u0004\u0008 \u0010\u0013R\u001b\u0010#\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0016\u0010\n\u001a\u0004\u0008\"\u0010\u0013R\u001b\u0010&\u001a\u00020\u00108FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008$\u0010\n\u001a\u0004\u0008%\u0010\u0013R\u001b\u0010*\u001a\u00020\'8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008(\u0010\n\u001a\u0004\u0008\t\u0010)R\u001b\u0010-\u001a\u00020+8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008 \u0010\n\u001a\u0004\u0008\u0015\u0010,R\u001b\u00100\u001a\u00020.8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\"\u0010\n\u001a\u0004\u0008\u0018\u0010/R\u001d\u00102\u001a\u0004\u0018\u00010\u00088FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00081\u0010\n\u001a\u0004\u0008\u001b\u0010\u000bR\u001b\u00104\u001a\u00020\'8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00083\u0010\n\u001a\u0004\u0008$\u0010)R\u001d\u00105\u001a\u0004\u0018\u00010\u00088FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\n\u001a\u0004\u0008(\u0010\u000bR\u001b\u00106\u001a\u00020+8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008%\u0010\n\u001a\u0004\u00081\u0010,R\u001b\u00108\u001a\u00020.8FX\u0086\u0084\u0002\u00a2\u0006\u000c\n\u0004\u00087\u0010\n\u001a\u0004\u00083\u0010/\u00a8\u0006:"
     }
     d2 = {
-        "Lio/didomi/sdk/E4;",
-        "Lio/didomi/sdk/G4;",
+        "Lio/didomi/sdk/e4;",
         "",
-        "id",
-        "Lio/didomi/sdk/w4$a;",
-        "type",
-        "",
-        "dataId",
-        "",
-        "iconId",
-        "label",
-        "labelEssential",
-        "",
-        "isEssential",
-        "hasTwoStates",
-        "accessibilityLabel",
-        "accessibilityActionDescription",
-        "Lio/didomi/sdk/view/mobile/DidomiToggle$b;",
-        "state",
-        "",
-        "accessibilityStateActionDescription",
-        "accessibilityStateDescription",
-        "accessibilityAnnounceState",
+        "Lio/didomi/sdk/z8;",
+        "themeProvider",
         "<init>",
-        "(JLio/didomi/sdk/w4$a;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Lio/didomi/sdk/view/mobile/DidomiToggle$b;Ljava/util/List;Ljava/util/List;Z)V",
-        "toString",
-        "()Ljava/lang/String;",
-        "hashCode",
-        "()I",
-        "",
-        "other",
-        "equals",
-        "(Ljava/lang/Object;)Z",
+        "(Lio/didomi/sdk/z8;)V",
         "a",
-        "J",
-        "getId",
-        "()J",
+        "Lio/didomi/sdk/z8;",
+        "Landroid/graphics/Typeface;",
         "b",
-        "Lio/didomi/sdk/w4$a;",
-        "()Lio/didomi/sdk/w4$a;",
+        "Lkotlin/Lazy;",
+        "()Landroid/graphics/Typeface;",
+        "buttonTypeface",
         "c",
-        "Ljava/lang/String;",
-        "i",
+        "r",
+        "titleTypeface",
+        "Lio/didomi/sdk/w8;",
         "d",
-        "I",
-        "k",
-        "e",
-        "f",
-        "l",
-        "g",
-        "Z",
-        "n",
-        "()Z",
-        "h",
         "j",
-        "Lio/didomi/sdk/view/mobile/DidomiToggle$b;",
-        "m",
-        "()Lio/didomi/sdk/view/mobile/DidomiToggle$b;",
-        "(Lio/didomi/sdk/view/mobile/DidomiToggle$b;)V",
-        "Ljava/util/List;",
-        "()Ljava/util/List;",
-        "(Z)V",
+        "()Lio/didomi/sdk/w8;",
+        "primaryButtonTheme",
+        "e",
+        "k",
+        "secondaryButtonTheme",
+        "f",
+        "i",
+        "noneButtonTheme",
+        "g",
+        "h",
+        "linkButtonTheme",
+        "descriptionPrimaryTextTheme",
+        "descriptionSecondaryTextTheme",
+        "n",
+        "titlePrimaryTextTheme",
         "o",
-        "preventListAccessibilityAnnouncement",
+        "titleSecondaryTextTheme",
+        "l",
+        "s",
+        "vendorCountButtonTheme",
+        "Lio/didomi/sdk/k$i$c$a;",
+        "m",
+        "()Lio/didomi/sdk/k$i$c$a;",
+        "descriptionAlignment",
+        "",
+        "()I",
+        "descriptionTextColor",
+        "",
+        "()F",
+        "descriptionTextSize",
+        "p",
+        "descriptionTypeface",
+        "q",
+        "titleAlignment",
+        "titleFontFamily",
+        "titleTextColor",
+        "t",
+        "titleTextSize",
+        "u",
         "android_release"
     }
     mv = {
@@ -87,787 +84,579 @@
 .end annotation
 
 
+# static fields
+.field public static final u:Lio/didomi/sdk/e4$a;
+
+
 # instance fields
-.field private final a:J
+.field private final a:Lio/didomi/sdk/z8;
 
-.field private final b:Lio/didomi/sdk/w4$a;
+.field private final b:Lkotlin/i;
 
-.field private final c:Ljava/lang/String;
+.field private final c:Lkotlin/i;
 
-.field private final d:I
+.field private final d:Lkotlin/i;
 
-.field private final e:Ljava/lang/String;
+.field private final e:Lkotlin/i;
 
-.field private final f:Ljava/lang/String;
+.field private final f:Lkotlin/i;
 
-.field private final g:Z
+.field private final g:Lkotlin/i;
 
-.field private final h:Z
+.field private final h:Lkotlin/i;
 
-.field private final i:Ljava/lang/String;
+.field private final i:Lkotlin/i;
 
-.field private final j:Ljava/lang/String;
+.field private final j:Lkotlin/i;
 
-.field private k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
+.field private final k:Lkotlin/i;
 
-.field private final l:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final l:Lkotlin/i;
 
-.field private final m:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final m:Lkotlin/i;
 
-.field private n:Z
+.field private final n:Lkotlin/i;
 
-.field private final o:Z
+.field private final o:Lkotlin/i;
+
+.field private final p:Lkotlin/i;
+
+.field private final q:Lkotlin/i;
+
+.field private final r:Lkotlin/i;
+
+.field private final s:Lkotlin/i;
+
+.field private final t:Lkotlin/i;
 
 
 # direct methods
-.method public constructor <init>(JLio/didomi/sdk/w4$a;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Lio/didomi/sdk/view/mobile/DidomiToggle$b;Ljava/util/List;Ljava/util/List;Z)V
-    .registers 28
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Lio/didomi/sdk/w4$a;",
-            "Ljava/lang/String;",
-            "I",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "ZZ",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Lio/didomi/sdk/view/mobile/DidomiToggle$b;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;Z)V"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .registers 2
 
-    move-object v0, p0
+    new-instance v0, Lio/didomi/sdk/e4$a;
 
-    move-object v1, p3
+    const/4 v1, 0x0
 
-    move-object/from16 v2, p4
+    invoke-direct {v0, v1}, Lio/didomi/sdk/e4$a;-><init>(Lkotlin/jvm/internal/n;)V
 
-    move-object/from16 v3, p6
+    sput-object v0, Lio/didomi/sdk/e4;->u:Lio/didomi/sdk/e4$a;
 
-    move-object/from16 v4, p7
+    return-void
+.end method
 
-    move-object/from16 v5, p10
+.method public constructor <init>(Lio/didomi/sdk/z8;)V
+    .registers 3
 
-    move-object/from16 v6, p11
+    const-string v0, "themeProvider"
 
-    move-object/from16 v7, p12
-
-    move-object/from16 v8, p13
-
-    move-object/from16 v9, p14
-
-    const-string v10, "type"
-
-    invoke-static {p3, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "dataId"
-
-    invoke-static {v2, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "label"
-
-    invoke-static {v3, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "labelEssential"
-
-    invoke-static {v4, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "accessibilityLabel"
-
-    invoke-static {v5, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "accessibilityActionDescription"
-
-    invoke-static {v6, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "state"
-
-    invoke-static {v7, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "accessibilityStateActionDescription"
-
-    invoke-static {v8, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v10, "accessibilityStateDescription"
-
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-wide v10, p1
+    iput-object p1, p0, Lio/didomi/sdk/e4;->a:Lio/didomi/sdk/z8;
 
-    iput-wide v10, v0, Lio/didomi/sdk/E4;->a:J
+    new-instance p1, Lio/didomi/sdk/e4$b;
 
-    iput-object v1, v0, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$b;-><init>(Lio/didomi/sdk/e4;)V
 
-    iput-object v2, v0, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
 
-    move/from16 v1, p5
+    move-result-object p1
 
-    iput v1, v0, Lio/didomi/sdk/E4;->d:I
+    iput-object p1, p0, Lio/didomi/sdk/e4;->b:Lkotlin/i;
 
-    iput-object v3, v0, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
+    new-instance p1, Lio/didomi/sdk/e4$s;
 
-    iput-object v4, v0, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$s;-><init>(Lio/didomi/sdk/e4;)V
 
-    move/from16 v1, p8
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
 
-    iput-boolean v1, v0, Lio/didomi/sdk/E4;->g:Z
+    move-result-object p1
 
-    move/from16 v1, p9
+    iput-object p1, p0, Lio/didomi/sdk/e4;->c:Lkotlin/i;
 
-    iput-boolean v1, v0, Lio/didomi/sdk/E4;->h:Z
+    new-instance p1, Lio/didomi/sdk/e4$k;
 
-    iput-object v5, v0, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$k;-><init>(Lio/didomi/sdk/e4;)V
 
-    iput-object v6, v0, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
 
-    iput-object v7, v0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
+    move-result-object p1
 
-    iput-object v8, v0, Lio/didomi/sdk/E4;->l:Ljava/util/List;
+    iput-object p1, p0, Lio/didomi/sdk/e4;->d:Lkotlin/i;
 
-    iput-object v9, v0, Lio/didomi/sdk/E4;->m:Ljava/util/List;
+    new-instance p1, Lio/didomi/sdk/e4$l;
 
-    move/from16 v1, p15
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$l;-><init>(Lio/didomi/sdk/e4;)V
 
-    iput-boolean v1, v0, Lio/didomi/sdk/E4;->n:Z
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->e:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$j;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$j;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->f:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$i;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$i;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->g:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$d;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$d;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->h:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$e;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$e;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->i:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$o;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$o;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->j:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$p;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$p;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->k:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$t;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$t;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->l:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$c;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$c;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->m:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$f;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$f;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->n:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$g;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$g;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->o:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$h;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$h;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->p:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$m;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$m;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->q:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$n;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$n;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->r:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$q;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$q;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->s:Lkotlin/i;
+
+    new-instance p1, Lio/didomi/sdk/e4$r;
+
+    invoke-direct {p1, p0}, Lio/didomi/sdk/e4$r;-><init>(Lio/didomi/sdk/e4;)V
+
+    invoke-static {p1}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/e4;->t:Lkotlin/i;
 
     return-void
+.end method
+
+.method private final a()Landroid/graphics/Typeface;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->b:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Typeface;
+
+    return-object v0
+.end method
+
+.method public static final synthetic a(Lio/didomi/sdk/e4;)Landroid/graphics/Typeface;
+    .registers 1
+
+    invoke-direct {p0}, Lio/didomi/sdk/e4;->a()Landroid/graphics/Typeface;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final synthetic b(Lio/didomi/sdk/e4;)Lio/didomi/sdk/z8;
+    .registers 1
+
+    iget-object p0, p0, Lio/didomi/sdk/e4;->a:Lio/didomi/sdk/z8;
+
+    return-object p0
+.end method
+
+.method public static final synthetic c(Lio/didomi/sdk/e4;)Landroid/graphics/Typeface;
+    .registers 1
+
+    invoke-direct {p0}, Lio/didomi/sdk/e4;->r()Landroid/graphics/Typeface;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private final r()Landroid/graphics/Typeface;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->c:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Typeface;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a()Lio/didomi/sdk/w4$a;
+.method public final b()Lio/didomi/sdk/k$i$c$a;
     .registers 2
 
-    iget-object v0, p0, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
+    iget-object v0, p0, Lio/didomi/sdk/e4;->m:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/k$i$c$a;
 
     return-object v0
 .end method
 
-.method public a(Lio/didomi/sdk/view/mobile/DidomiToggle$b;)V
-    .registers 3
-
-    const-string v0, "<set-?>"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    return-void
-.end method
-
-.method public a(Z)V
+.method public final c()Lio/didomi/sdk/w8;
     .registers 2
 
-    iput-boolean p1, p0, Lio/didomi/sdk/E4;->n:Z
+    iget-object v0, p0, Lio/didomi/sdk/e4;->h:Lkotlin/i;
 
-    return-void
-.end method
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
-.method public b()Z
-    .registers 2
+    move-result-object v0
 
-    iget-boolean v0, p0, Lio/didomi/sdk/E4;->o:Z
-
-    return v0
-.end method
-
-.method public final c()Ljava/lang/String;
-    .registers 2
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
+    check-cast v0, Lio/didomi/sdk/w8;
 
     return-object v0
 .end method
 
-.method public final d()Ljava/lang/String;
+.method public final d()Lio/didomi/sdk/w8;
     .registers 2
 
-    iget-object v0, p0, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
+    iget-object v0, p0, Lio/didomi/sdk/e4;->i:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
 
     return-object v0
 .end method
 
-.method public e()Z
+.method public final e()I
     .registers 2
 
-    iget-boolean v0, p0, Lio/didomi/sdk/E4;->n:Z
+    iget-object v0, p0, Lio/didomi/sdk/e4;->n:Lkotlin/i;
 
-    return v0
-.end method
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
-.method public equals(Ljava/lang/Object;)Z
-    .registers 9
+    move-result-object v0
 
-    const/4 v0, 0x1
+    check-cast v0, Ljava/lang/Number;
 
-    if-ne p0, p1, :cond_4
-
-    return v0
-
-    :cond_4
-    instance-of v1, p1, Lio/didomi/sdk/E4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_a
-
-    return v2
-
-    :cond_a
-    check-cast p1, Lio/didomi/sdk/E4;
-
-    iget-wide v3, p0, Lio/didomi/sdk/E4;->a:J
-
-    iget-wide v5, p1, Lio/didomi/sdk/E4;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_15
-
-    return v2
-
-    :cond_15
-    iget-object v1, p0, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
-
-    if-eq v1, v3, :cond_1c
-
-    return v2
-
-    :cond_1c
-    iget-object v1, p0, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_27
-
-    return v2
-
-    :cond_27
-    iget v1, p0, Lio/didomi/sdk/E4;->d:I
-
-    iget v3, p1, Lio/didomi/sdk/E4;->d:I
-
-    if-eq v1, v3, :cond_2e
-
-    return v2
-
-    :cond_2e
-    iget-object v1, p0, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_39
-
-    return v2
-
-    :cond_39
-    iget-object v1, p0, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_44
-
-    return v2
-
-    :cond_44
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->g:Z
-
-    iget-boolean v3, p1, Lio/didomi/sdk/E4;->g:Z
-
-    if-eq v1, v3, :cond_4b
-
-    return v2
-
-    :cond_4b
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->h:Z
-
-    iget-boolean v3, p1, Lio/didomi/sdk/E4;->h:Z
-
-    if-eq v1, v3, :cond_52
-
-    return v2
-
-    :cond_52
-    iget-object v1, p0, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5d
-
-    return v2
-
-    :cond_5d
-    iget-object v1, p0, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_68
-
-    return v2
-
-    :cond_68
-    iget-object v1, p0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    if-eq v1, v3, :cond_6f
-
-    return v2
-
-    :cond_6f
-    iget-object v1, p0, Lio/didomi/sdk/E4;->l:Ljava/util/List;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->l:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7a
-
-    return v2
-
-    :cond_7a
-    iget-object v1, p0, Lio/didomi/sdk/E4;->m:Ljava/util/List;
-
-    iget-object v3, p1, Lio/didomi/sdk/E4;->m:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_85
-
-    return v2
-
-    :cond_85
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->n:Z
-
-    iget-boolean p1, p1, Lio/didomi/sdk/E4;->n:Z
-
-    if-eq v1, p1, :cond_8c
-
-    return v2
-
-    :cond_8c
-    return v0
-.end method
-
-.method public final f()Ljava/lang/String;
-    .registers 2
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public g()Ljava/util/List;
-    .registers 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->l:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getId()J
-    .registers 3
-
-    iget-wide v0, p0, Lio/didomi/sdk/E4;->a:J
-
-    return-wide v0
-.end method
-
-.method public h()Ljava/util/List;
-    .registers 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->m:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public hashCode()I
-    .registers 4
-
-    iget-wide v0, p0, Lio/didomi/sdk/E4;->a:J
-
-    invoke-static {v0, v1}, Landroidx/privacysandbox/ads/adservices/adselection/b;->a(J)I
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lio/didomi/sdk/E4;->d:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->g:Z
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_37
-
-    const/4 v1, 0x1
-
-    :cond_37
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->h:Z
-
-    if-eqz v1, :cond_3f
-
-    const/4 v1, 0x1
-
-    :cond_3f
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->l:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->m:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->n:Z
-
-    if-eqz v1, :cond_74
-
-    goto :goto_75
-
-    :cond_74
-    move v2, v1
-
-    :goto_75
-    add-int/2addr v0, v2
-
     return v0
 .end method
 
-.method public final i()Ljava/lang/String;
+.method public final f()F
     .registers 2
 
-    iget-object v0, p0, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
+    iget-object v0, p0, Lio/didomi/sdk/e4;->o:Lkotlin/i;
 
-    return-object v0
-.end method
-
-.method public final j()Z
-    .registers 2
-
-    iget-boolean v0, p0, Lio/didomi/sdk/E4;->h:Z
-
-    return v0
-.end method
-
-.method public final k()I
-    .registers 2
-
-    iget v0, p0, Lio/didomi/sdk/E4;->d:I
-
-    return v0
-.end method
-
-.method public final l()Ljava/lang/String;
-    .registers 2
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public m()Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-    .registers 2
-
-    iget-object v0, p0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    return-object v0
-.end method
-
-.method public final n()Z
-    .registers 2
-
-    iget-boolean v0, p0, Lio/didomi/sdk/E4;->g:Z
-
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .registers 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "PurposeDisplayItem(id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lio/didomi/sdk/E4;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->b:Lio/didomi/sdk/w4$a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dataId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lio/didomi/sdk/E4;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", label="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", labelEssential="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isEssential="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->g:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasTwoStates="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->h:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", accessibilityLabel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", accessibilityActionDescription="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->j:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", state="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->k:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", accessibilityStateActionDescription="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->l:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", accessibilityStateDescription="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lio/didomi/sdk/E4;->m:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", accessibilityAnnounceState="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lio/didomi/sdk/E4;->n:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x29
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final g()Landroid/graphics/Typeface;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->p:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Typeface;
+
+    return-object v0
+.end method
+
+.method public final h()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->g:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final i()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->f:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final j()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->d:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final k()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->e:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final l()Lio/didomi/sdk/k$i$c$a;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->q:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/k$i$c$a;
+
+    return-object v0
+.end method
+
+.method public final m()Landroid/graphics/Typeface;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->r:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Typeface;
+
+    return-object v0
+.end method
+
+.method public final n()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->j:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final o()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->k:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
+
+    return-object v0
+.end method
+
+.method public final p()I
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->s:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()F
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->t:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final s()Lio/didomi/sdk/w8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/e4;->l:Lkotlin/i;
+
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lio/didomi/sdk/w8;
 
     return-object v0
 .end method

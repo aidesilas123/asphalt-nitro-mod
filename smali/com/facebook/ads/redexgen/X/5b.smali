@@ -1,42 +1,35 @@
-###### Class com.facebook.ads.redexgen.X.AsyncTaskC07785b (com.facebook.ads.redexgen.X.5b)
-.class public final Lcom/facebook/ads/redexgen/X/5b;
-.super Landroid/os/AsyncTask;
+###### Class com.facebook.ads.redexgen.X.C5B (com.facebook.ads.redexgen.X.5B)
+.class public final Lcom/facebook/ads/redexgen/X/5B;
+.super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/5e;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/facebook/ads/redexgen/X/Yu;-><init>(Landroid/content/Context;Lcom/facebook/ads/NativeAdBase;Lcom/facebook/ads/NativeAdLayout;Lcom/facebook/ads/AdOptionsView$Orientation;ILcom/facebook/ads/AdOptionsView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "NativeBannerImageLoadTask"
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask<",
-        "Lcom/facebook/ads/redexgen/X/5d;",
-        "Ljava/lang/Void;",
-        "Landroid/graphics/drawable/Drawable;",
-        ">;"
-    }
+    accessFlags = 0x1
+    name = null
 .end annotation
 
 
 # static fields
-.field public static A03:[B
-
 .field public static A04:[Ljava/lang/String;
 
 
 # instance fields
-.field public final A00:Lcom/facebook/ads/redexgen/X/5c;
+.field public final synthetic A00:Landroid/content/Context;
 
-.field public final A01:Lcom/facebook/ads/redexgen/X/YA;
+.field public final synthetic A01:Landroid/widget/LinearLayout;
 
-.field public final A02:Z
+.field public final synthetic A02:Lcom/facebook/ads/redexgen/X/Yu;
+
+.field public final synthetic A03:Lcom/facebook/ads/redexgen/X/UJ;
 
 
 # direct methods
@@ -49,335 +42,77 @@
 
     const/4 v1, 0x0
 
-    const-string v0, "1BJo9noXfKND6AuvSNdcB1V3GCwIAiOG"
+    const-string v0, "KRKQmCMMKryGk4zgpNIytFvS3TD6bAeJ"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x1
 
-    const-string v0, "Zj7TA2K"
+    const-string v0, "Xc6miAmzcu08Y"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x2
 
-    const-string v0, "dGMOiNue98uIHvh7voSV0LAZFWXYzfEv"
+    const-string v0, "37gtSV6CsPxBYDJYgwQ03wIm04Bn1UoS"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x3
 
-    const-string v0, "CcnxrNYo5kyWzKS3XGCDqe4PQiCtH"
+    const-string v0, "vc4nNQQkh46pzBlyEmkoOi4CgZODKTHg"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x4
 
-    const-string v0, "knheqnusZFI0swerek9wKwEDBcdWqhKt"
+    const-string v0, "arJKEayC0J1tSfFqlaoS22WOKdh4xl60"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x5
 
-    const-string v0, "XjDOSOe9Ixcmw73z7hfuGI1aFjWKj"
+    const-string v0, "Efttk19GyNCXlxxyYR0mavkkkhSaw2Qp"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x6
 
-    const-string v0, "M2ugdIZCKbhB2vBaVocVLhBvD0BsDTY5"
+    const-string v0, "IGlWio493rL8eTjetjpBhFYcUhZqKyAr"
 
     aput-object v0, v2, v1
 
     const/4 v1, 0x7
 
-    const-string v0, "metH7Y2aXkNKgtpuuGKiPWqQd6SU"
+    const-string v0, ""
 
     aput-object v0, v2, v1
 
-    sput-object v2, Lcom/facebook/ads/redexgen/X/5b;->A04:[Ljava/lang/String;
-
-    invoke-static {}, Lcom/facebook/ads/redexgen/X/5b;->A02()V
+    sput-object v2, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/redexgen/X/5c;Z)V
-    .registers 4
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5b;->A01:Lcom/facebook/ads/redexgen/X/YA;
-
-    iput-object p2, p0, Lcom/facebook/ads/redexgen/X/5b;->A00:Lcom/facebook/ads/redexgen/X/5c;
-
-    iput-boolean p3, p0, Lcom/facebook/ads/redexgen/X/5b;->A02:Z
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/redexgen/X/5c;ZLcom/facebook/ads/redexgen/X/YW;)V
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/Yu;Lcom/facebook/ads/redexgen/X/UJ;Landroid/content/Context;Landroid/widget/LinearLayout;)V
     .registers 5
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/facebook/ads/redexgen/X/5b;-><init>(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/redexgen/X/5c;Z)V
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5B;->A02:Lcom/facebook/ads/redexgen/X/Yu;
 
-    return-void
-.end method
+    iput-object p2, p0, Lcom/facebook/ads/redexgen/X/5B;->A03:Lcom/facebook/ads/redexgen/X/UJ;
 
-.method private final varargs A00([Lcom/facebook/ads/redexgen/X/5d;)Landroid/graphics/drawable/Drawable;
-    .registers 11
+    iput-object p3, p0, Lcom/facebook/ads/redexgen/X/5B;->A00:Landroid/content/Context;
 
-    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
+    iput-object p4, p0, Lcom/facebook/ads/redexgen/X/5B;->A01:Landroid/widget/LinearLayout;
 
-    move-result v0
-
-    const/4 v8, 0x0
-
-    if-eqz v0, :cond_8
-
-    return-object v8
-
-    :cond_8
-    move-object v6, p0
-
-    if-eqz p1, :cond_51
-
-    :try_start_b
-    array-length v1, p1
-
-    const/4 v0, 0x1
-
-    if-ge v1, v0, :cond_10
-
-    goto :goto_51
-
-    :cond_10
-    const/4 v1, 0x0
-
-    aget-object v0, p1, v1
-
-    iget-object v2, v0, Lcom/facebook/ads/redexgen/X/5d;->A01:Ljava/lang/String;
-
-    aget-object v0, p1, v1
-
-    iget-object v7, v0, Lcom/facebook/ads/redexgen/X/5d;->A00:Ljava/lang/String;
-
-    const/4 v5, 0x0
-    :try_end_1a
-    .catchall {:try_start_b .. :try_end_1a} :catchall_4c
-
-    :try_start_1a
-    iget-object v0, v6, Lcom/facebook/ads/redexgen/X/5b;->A01:Lcom/facebook/ads/redexgen/X/YA;
-
-    new-instance v1, Lcom/facebook/ads/redexgen/X/6Q;
-
-    invoke-direct {v1, v0}, Lcom/facebook/ads/redexgen/X/6Q;-><init>(Lcom/facebook/ads/redexgen/X/7S;)V
-
-    const/4 v0, -0x1
-
-    invoke-virtual {v1, v2, v0, v0}, Lcom/facebook/ads/redexgen/X/6Q;->A0N(Ljava/lang/String;II)Landroid/graphics/Bitmap;
-
-    move-result-object v5
-
-    goto :goto_40
-    :try_end_27
-    .catchall {:try_start_1a .. :try_end_27} :catchall_27
-
-    :catchall_27
-    move-exception v4
-
-    :try_start_28
-    iget-object v0, v6, Lcom/facebook/ads/redexgen/X/5b;->A01:Lcom/facebook/ads/redexgen/X/YA;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/7S;->A07()Lcom/facebook/ads/redexgen/X/7w;
-
-    move-result-object v3
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x7
-
-    const/16 v0, 0x2a
-
-    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/5b;->A01(III)Ljava/lang/String;
-
-    move-result-object v2
-
-    sget v1, Lcom/facebook/ads/redexgen/X/7x;->A1V:I
-
-    new-instance v0, Lcom/facebook/ads/redexgen/X/7y;
-
-    invoke-direct {v0, v4}, Lcom/facebook/ads/redexgen/X/7y;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v3, v2, v1, v0}, Lcom/facebook/ads/redexgen/X/7w;->A9M(Ljava/lang/String;ILcom/facebook/ads/redexgen/X/7y;)V
-
-    :goto_40
-    if-eqz v5, :cond_4b
-
-    iget-object v1, v6, Lcom/facebook/ads/redexgen/X/5b;->A01:Lcom/facebook/ads/redexgen/X/YA;
-
-    iget-boolean v0, v6, Lcom/facebook/ads/redexgen/X/5b;->A02:Z
-
-    invoke-static {v1, v5, v0, v7}, Lcom/facebook/ads/redexgen/X/UJ;->A05(Lcom/facebook/ads/redexgen/X/YA;Landroid/graphics/Bitmap;ZLjava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_4b
-    return-object v8
-    :try_end_4c
-    .catchall {:try_start_28 .. :try_end_4c} :catchall_4c
-
-    :catchall_4c
-    move-exception v0
-
-    invoke-static {v0, v6}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
-
-    return-object v8
-
-    :cond_51
-    :goto_51
-    return-object v8
-.end method
-
-.method public static A01(III)Ljava/lang/String;
-    .registers 5
-
-    sget-object v1, Lcom/facebook/ads/redexgen/X/5b;->A03:[B
-
-    add-int v0, p0, p1
-
-    invoke-static {v1, p0, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    :goto_9
-    array-length v0, p0
-
-    if-ge v1, v0, :cond_17
-
-    aget-byte v0, p0, v1
-
-    xor-int/2addr v0, p2
-
-    xor-int/lit8 v0, v0, 0x76
-
-    int-to-byte v0, v0
-
-    aput-byte v0, p0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_9
-
-    :cond_17
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
-
-    return-object v0
-.end method
-
-.method public static A02()V
-    .registers 1
-
-    const/4 v0, 0x7
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_a
-
-    sput-object v0, Lcom/facebook/ads/redexgen/X/5b;->A03:[B
-
-    return-void
-
-    nop
-
-    :array_a
-    .array-data 1
-        0x3bt
-        0x39t
-        0x32t
-        0x39t
-        0x2et
-        0x35t
-        0x3ft
-    .end array-data
-.end method
-
-.method private final A03(Landroid/graphics/drawable/Drawable;)V
-    .registers 4
-
-    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    return-void
-
-    :cond_7
-    move-object v1, p0
-
-    :try_start_8
-    iget-object v0, v1, Lcom/facebook/ads/redexgen/X/5b;->A00:Lcom/facebook/ads/redexgen/X/5c;
-
-    invoke-interface {v0, p1}, Lcom/facebook/ads/redexgen/X/5c;->ABY(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-    :try_end_e
-    .catchall {:try_start_8 .. :try_end_e} :catchall_e
-
-    :catchall_e
-    move-exception v0
-
-    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 5
-
-    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_8
-
-    return-object v2
-
-    :cond_8
-    move-object v1, p0
-
-    :try_start_9
-    check-cast p1, [Lcom/facebook/ads/redexgen/X/5d;
-
-    invoke-direct {v1, p1}, Lcom/facebook/ads/redexgen/X/5b;->A00([Lcom/facebook/ads/redexgen/X/5d;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-    :try_end_10
-    .catchall {:try_start_9 .. :try_end_10} :catchall_10
-
-    :catchall_10
-    move-exception v0
-
-    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
-
-    return-object v2
-.end method
-
-.method public final bridge synthetic onPostExecute(Ljava/lang/Object;)V
-    .registers 5
+.method public final onClick(Landroid/view/View;)V
+    .registers 7
 
     invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
 
@@ -388,31 +123,48 @@
     return-void
 
     :cond_7
-    move-object v1, p0
+    move-object v4, p0
 
     :try_start_8
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    iget-object v0, v4, Lcom/facebook/ads/redexgen/X/5B;->A03:Lcom/facebook/ads/redexgen/X/UJ;
 
-    invoke-direct {v1, p1}, Lcom/facebook/ads/redexgen/X/5b;->A03(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/UJ;->A1I()V
 
-    return-void
-    :try_end_e
-    .catchall {:try_start_8 .. :try_end_e} :catchall_e
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    :catchall_e
-    move-exception v0
+    const/16 v0, 0x10
 
-    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+    if-lt v1, v0, :cond_23
 
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5b;->A04:[Ljava/lang/String;
+    iget-object v0, v4, Lcom/facebook/ads/redexgen/X/5B;->A00:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/IP;->A1z(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    iget-object v2, v4, Lcom/facebook/ads/redexgen/X/5B;->A01:Landroid/widget/LinearLayout;
+
+    const/16 v1, 0x80
 
     const/4 v0, 0x0
 
-    aget-object v1, v2, v0
+    invoke-virtual {v2, v1, v0}, Landroid/widget/LinearLayout;->performAccessibilityAction(ILandroid/os/Bundle;)Z
 
-    const/4 v0, 0x4
+    :cond_23
+    return-void
+    :try_end_24
+    .catchall {:try_start_8 .. :try_end_24} :catchall_24
 
-    aget-object v2, v2, v0
+    :catchall_24
+    move-exception v3
+
+    sget-object v1, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
+
+    const/4 v0, 0x5
+
+    aget-object v1, v1, v0
 
     const/4 v0, 0x5
 
@@ -420,32 +172,26 @@
 
     move-result v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/String;->charAt(I)C
+    const/16 v0, 0x7a
 
-    move-result v0
+    if-eq v1, v0, :cond_3e
 
-    if-eq v1, v0, :cond_2b
+    sget-object v2, Lcom/facebook/ads/redexgen/X/5B;->A04:[Ljava/lang/String;
 
+    const-string v1, "upfEaDqgYzKFHRA83M0GBorRIFZJY191"
+
+    const/4 v0, 0x6
+
+    aput-object v1, v2, v0
+
+    invoke-static {v3, v4}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_3e
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
 
     throw v0
-
-    :cond_2b
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5b;->A04:[Ljava/lang/String;
-
-    const-string v1, "H4qVqfS"
-
-    const/4 v0, 0x1
-
-    aput-object v1, v2, v0
-
-    const-string v1, "3NPSPTmKkS9byZNXvPXu57LevjUG"
-
-    const/4 v0, 0x7
-
-    aput-object v1, v2, v0
-
-    return-void
 .end method

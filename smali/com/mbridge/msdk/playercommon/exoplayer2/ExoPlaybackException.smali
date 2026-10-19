@@ -166,22 +166,3 @@
 
     return-object v0
 .end method
-
-###### Class com.mbridge.msdk.playercommon.exoplayer2.ExoPlaybackException.Type (com.mbridge.msdk.playercommon.exoplayer2.ExoPlaybackException$Type)
-.class public interface abstract annotation Lcom/mbridge/msdk/playercommon/exoplayer2/ExoPlaybackException$Type;
-.super Ljava/lang/Object;
-.source "ExoPlaybackException.java"
-
-# interfaces
-.implements Ljava/lang/annotation/Annotation;
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/mbridge/msdk/playercommon/exoplayer2/ExoPlaybackException;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2609
-    name = "Type"
-.end annotation

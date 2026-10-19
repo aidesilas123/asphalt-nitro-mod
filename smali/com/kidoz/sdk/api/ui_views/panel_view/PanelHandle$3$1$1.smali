@@ -1,0 +1,106 @@
+###### Class com.kidoz.sdk.api.ui_views.panel_view.PanelHandle.AnonymousClass3.AnonymousClass1.C03891 (com.kidoz.sdk.api.ui_views.panel_view.PanelHandle$3$1$1)
+.class Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;
+.super Ljava/lang/Object;
+.source "PanelHandle.java"
+
+# interfaces
+.implements Lcom/kidoz/sdk/api/ui_views/parental_lock/AssetView$IOnAssetLoadedListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;->onAssetLoaded(Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+
+# direct methods
+.method constructor <init>(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;->this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onAssetLoaded(Z)V
+    .registers 5
+
+    if-nez p1, :cond_11
+
+    iget-object p1, p0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;->this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;->this$1:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;->this$0:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;
+
+    invoke-static {p1}, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;->access$700(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;)Lcom/kidoz/sdk/api/ui_views/custom_drawables/DefaultPanelDrawable;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/kidoz/sdk/api/ui_views/custom_drawables/DefaultPanelDrawable;->setDrawSign(Z)V
+
+    goto :goto_1f
+
+    :cond_11
+    iget-object p1, p0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;->this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;->this$1:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;->this$0:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;
+
+    invoke-static {p1}, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;->access$700(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;)Lcom/kidoz/sdk/api/ui_views/custom_drawables/DefaultPanelDrawable;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/kidoz/sdk/api/ui_views/custom_drawables/DefaultPanelDrawable;->setDrawSign(Z)V
+
+    :goto_1f
+    iget-object p1, p0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;->this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;->this$1:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;
+
+    iget-object p1, p1, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;->this$0:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;
+
+    invoke-static {p1}, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;->access$800(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;)Lcom/kidoz/sdk/api/ui_views/parental_lock/AssetView;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;->this$2:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;
+
+    iget-object v0, v0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1;->this$1:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;
+
+    iget-object v1, v0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;->val$helper:Lcom/kidoz/sdk/api/ui_views/panel_view/LocalAssetHelper;
+
+    iget-object v1, v1, Lcom/kidoz/sdk/api/ui_views/panel_view/LocalAssetHelper;->closeBtnAssetBg:Ljava/io/File;
+
+    iget-object v0, v0, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3;->this$0:Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;
+
+    invoke-static {v0}, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;->access$700(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle;)Lcom/kidoz/sdk/api/ui_views/custom_drawables/DefaultPanelDrawable;
+
+    move-result-object v0
+
+    new-instance v2, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1$1;
+
+    invoke-direct {v2, p0}, Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1$1;-><init>(Lcom/kidoz/sdk/api/ui_views/panel_view/PanelHandle$3$1$1;)V
+
+    invoke-virtual {p1, v1, v0, v2}, Lcom/kidoz/sdk/api/ui_views/parental_lock/AssetView;->loadAsset(Ljava/io/File;Landroid/graphics/drawable/Drawable;Lcom/kidoz/sdk/api/ui_views/parental_lock/AssetView$IOnAssetLoadedListener;)V
+
+    return-void
+.end method

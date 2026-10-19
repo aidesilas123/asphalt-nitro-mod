@@ -1,41 +1,86 @@
-###### Class io.didomi.drawable.AbstractC1846o (io.didomi.sdk.o)
-.class public abstract Lio/didomi/sdk/o;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.O (io.didomi.sdk.O)
+.class public final Lio/didomi/sdk/O;
+.super Lio/didomi/sdk/I0;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        "<Param:",
-        "Ljava/lang/Object;",
-        "Type:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
+        Lio/didomi/sdk/O$a;
     }
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0006\u0008&\u0018\u0000*\u0006\u0008\u0000\u0010\u0001 \u0000*\u0004\u0008\u0001\u0010\u00022\u00020\u0003B\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0007J!\u0010\n\u001a\u0008\u0012\u0004\u0012\u00028\u00010\t2\u0006\u0010\u0008\u001a\u00028\u0000H\u0086B\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\n\u0010\u000bJ!\u0010\r\u001a\u0008\u0012\u0004\u0012\u00028\u00010\t2\u0006\u0010\u000c\u001a\u00028\u0000H\u00a4@\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\r\u0010\u000bR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u0082\u0002\u0004\n\u0002\u0008\u0019\u00a8\u0006\u000f"
+        "\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0018\u0000 @2\u00020\u0001:\u0001\u0019B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J+\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\n\u001a\u00020\t2\u0008\u0010\u000c\u001a\u0004\u0018\u00010\u000b2\u0008\u0010\u000e\u001a\u0004\u0018\u00010\rH\u0016\u00a2\u0006\u0004\u0008\u0010\u0010\u0011J!\u0010\u0013\u001a\u00020\u00062\u0006\u0010\u0012\u001a\u00020\u000f2\u0008\u0010\u000e\u001a\u0004\u0018\u00010\rH\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u000f\u0010\u0015\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0015\u0010\u0003J\u000f\u0010\u0016\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0003J\u000f\u0010\u0017\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0003R\"\u0010\u001f\u001a\u00020\u00188\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u0008\u0019\u0010\u001a\u001a\u0004\u0008\u001b\u0010\u001c\"\u0004\u0008\u001d\u0010\u001eR\"\u0010&\u001a\u00020 8\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u0008!\u0010\"\u001a\u0004\u0008!\u0010#\"\u0004\u0008$\u0010%R\"\u0010-\u001a\u00020\'8\u0006@\u0006X\u0087.\u00a2\u0006\u0012\n\u0004\u0008(\u0010)\u001a\u0004\u0008(\u0010*\"\u0004\u0008+\u0010,R\"\u00103\u001a\u00020.8\u0016@\u0016X\u0097.\u00a2\u0006\u0012\n\u0004\u0008\u001b\u0010/\u001a\u0004\u0008\u0019\u00100\"\u0004\u00081\u00102R\u0018\u00107\u001a\u0004\u0018\u0001048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00085\u00106R\u0018\u0010;\u001a\u0004\u0018\u0001088\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u00089\u0010:R\u0018\u0010?\u001a\u0004\u0018\u00010<8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008=\u0010>\u00a8\u0006A"
     }
     d2 = {
-        "Lio/didomi/sdk/o;",
-        "Param",
-        "Type",
-        "",
-        "Lkotlinx/coroutines/CoroutineDispatcher;",
-        "coroutineDispatcher",
+        "Lio/didomi/sdk/O;",
+        "Lio/didomi/sdk/I0;",
         "<init>",
-        "(Lkotlinx/coroutines/CoroutineDispatcher;)V",
-        "parameters",
-        "Lio/didomi/sdk/y;",
-        "b",
-        "(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
-        "param",
+        "()V",
+        "Landroid/content/Context;",
+        "context",
+        "",
+        "onAttach",
+        "(Landroid/content/Context;)V",
+        "Landroid/view/LayoutInflater;",
+        "inflater",
+        "Landroid/view/ViewGroup;",
+        "container",
+        "Landroid/os/Bundle;",
+        "savedInstanceState",
+        "Landroid/view/View;",
+        "onCreateView",
+        "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;",
+        "view",
+        "onViewCreated",
+        "(Landroid/view/View;Landroid/os/Bundle;)V",
+        "onResume",
+        "onPause",
+        "onDestroyView",
+        "Lio/didomi/sdk/D8;",
         "a",
-        "Lkotlinx/coroutines/CoroutineDispatcher;",
+        "Lio/didomi/sdk/D8;",
+        "d",
+        "()Lio/didomi/sdk/D8;",
+        "setUiProvider",
+        "(Lio/didomi/sdk/D8;)V",
+        "uiProvider",
+        "Lio/didomi/sdk/U;",
+        "b",
+        "Lio/didomi/sdk/U;",
+        "()Lio/didomi/sdk/U;",
+        "setModel",
+        "(Lio/didomi/sdk/U;)V",
+        "model",
+        "Lio/didomi/sdk/I3;",
+        "c",
+        "Lio/didomi/sdk/I3;",
+        "()Lio/didomi/sdk/I3;",
+        "setNavigationManager",
+        "(Lio/didomi/sdk/I3;)V",
+        "navigationManager",
+        "Lio/didomi/sdk/z8;",
+        "Lio/didomi/sdk/z8;",
+        "()Lio/didomi/sdk/z8;",
+        "setThemeProvider",
+        "(Lio/didomi/sdk/z8;)V",
+        "themeProvider",
+        "Lio/didomi/sdk/N0;",
+        "e",
+        "Lio/didomi/sdk/N0;",
+        "binding",
+        "Lio/didomi/sdk/Q;",
+        "f",
+        "Lio/didomi/sdk/Q;",
+        "helper",
+        "Lkotlinx/coroutines/Job;",
+        "g",
+        "Lkotlinx/coroutines/Job;",
+        "job",
+        "h",
         "android_release"
     }
     mv = {
@@ -46,489 +91,315 @@
 .end annotation
 
 
+# static fields
+.field public static final h:Lio/didomi/sdk/O$a;
+
+
 # instance fields
-.field private final a:Lkotlinx/coroutines/r;
+.field public a:Lio/didomi/sdk/D8;
+
+.field public b:Lio/didomi/sdk/U;
+
+.field public c:Lio/didomi/sdk/I3;
+
+.field public d:Lio/didomi/sdk/z8;
+
+.field private e:Lio/didomi/sdk/N0;
+
+.field private f:Lio/didomi/sdk/Q;
+
+.field private g:Lkotlinx/coroutines/Job;
 
 
 # direct methods
-.method public constructor <init>(Lkotlinx/coroutines/r;)V
-    .registers 3
+.method static constructor <clinit>()V
+    .registers 2
 
-    const-string v0, "coroutineDispatcher"
+    new-instance v0, Lio/didomi/sdk/O$a;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lio/didomi/sdk/O$a;-><init>(Lkotlin/jvm/internal/n;)V
 
-    iput-object p1, p0, Lio/didomi/sdk/o;->a:Lkotlinx/coroutines/r;
+    sput-object v0, Lio/didomi/sdk/O;->h:Lio/didomi/sdk/O$a;
 
     return-void
 .end method
 
+.method public constructor <init>()V
+    .registers 2
 
-# virtual methods
-.method protected abstract a(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TParam;",
-            "Lkotlin/coroutines/d<",
-            "-",
-            "Lio/didomi/sdk/y<",
-            "+TType;>;>;)",
-            "Ljava/lang/Object;"
-        }
-    .end annotation
-
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/RuntimeException;
-        }
-    .end annotation
-.end method
-
-.method public final b(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-    .registers 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TParam;",
-            "Lkotlin/coroutines/d<",
-            "-",
-            "Lio/didomi/sdk/y<",
-            "+TType;>;>;)",
-            "Ljava/lang/Object;"
-        }
-    .end annotation
-
-    instance-of v0, p2, Lio/didomi/sdk/o$a;
-
-    if-eqz v0, :cond_13
-
-    move-object v0, p2
-
-    check-cast v0, Lio/didomi/sdk/o$a;
-
-    iget v1, v0, Lio/didomi/sdk/o$a;->c:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_13
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lio/didomi/sdk/o$a;->c:I
-
-    goto :goto_18
-
-    :cond_13
-    new-instance v0, Lio/didomi/sdk/o$a;
-
-    invoke-direct {v0, p0, p2}, Lio/didomi/sdk/o$a;-><init>(Lio/didomi/sdk/o;Lkotlin/coroutines/d;)V
-
-    :goto_18
-    iget-object p2, v0, Lio/didomi/sdk/o$a;->a:Ljava/lang/Object;
-
-    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget v2, v0, Lio/didomi/sdk/o$a;->c:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_31
-
-    if-ne v2, v3, :cond_29
-
-    :try_start_25
-    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-    :try_end_28
-    .catch Ljava/lang/Exception; {:try_start_25 .. :try_end_28} :catch_48
-
-    goto :goto_45
-
-    :cond_29
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_31
-    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-
-    :try_start_34
-    iget-object p2, p0, Lio/didomi/sdk/o;->a:Lkotlinx/coroutines/r;
-
-    new-instance v2, Lio/didomi/sdk/o$b;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, p0, p1, v4}, Lio/didomi/sdk/o$b;-><init>(Lio/didomi/sdk/o;Ljava/lang/Object;Lkotlin/coroutines/d;)V
-
-    iput v3, v0, Lio/didomi/sdk/o$a;->c:I
-
-    invoke-static {p2, v2, v0}, Lkotlinx/coroutines/BuildersKt;->withContext(Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/b/p;Lkotlin/coroutines/d;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-ne p2, v1, :cond_45
-
-    return-object v1
-
-    :cond_45
-    :goto_45
-    check-cast p2, Lio/didomi/sdk/y;
-    :try_end_47
-    .catch Ljava/lang/Exception; {:try_start_34 .. :try_end_47} :catch_48
-
-    goto :goto_4f
-
-    :catch_48
-    move-exception p1
-
-    sget-object p2, Lio/didomi/sdk/y;->c:Lio/didomi/sdk/y$a;
-
-    invoke-virtual {p2, p1}, Lio/didomi/sdk/y$a;->a(Ljava/lang/Throwable;)Lio/didomi/sdk/y;
-
-    move-result-object p2
-
-    :goto_4f
-    return-object p2
-.end method
-
-###### Class io.didomi.drawable.AbstractC1846o.a (io.didomi.sdk.o$a)
-.class final Lio/didomi/sdk/o$a;
-.super Lkotlin/coroutines/jvm/internal/c;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lio/didomi/sdk/o;->b(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
-    name = null
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    mv = {
-        0x1,
-        0x8,
-        0x0
-    }
-    xi = 0x30
-.end annotation
-
-.annotation runtime Lkotlin/coroutines/jvm/internal/e;
-    c = "io.didomi.sdk.core.base.BaseUseCase"
-    f = "BaseUseCase.kt"
-    i = {}
-    l = {
-        0x16
-    }
-    m = "invoke"
-    n = {}
-    s = {}
-.end annotation
-
-
-# instance fields
-.field synthetic a:Ljava/lang/Object;
-
-.field final synthetic b:Lio/didomi/sdk/o;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lio/didomi/sdk/o<",
-            "TParam;TType;>;"
-        }
-    .end annotation
-.end field
-
-.field c:I
-
-
-# direct methods
-.method constructor <init>(Lio/didomi/sdk/o;Lkotlin/coroutines/d;)V
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/o<",
-            "-TParam;TType;>;",
-            "Lkotlin/coroutines/d<",
-            "-",
-            "Lio/didomi/sdk/o$a;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lio/didomi/sdk/o$a;->b:Lio/didomi/sdk/o;
-
-    invoke-direct {p0, p2}, Lkotlin/coroutines/jvm/internal/c;-><init>(Lkotlin/coroutines/d;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 3
-
-    iput-object p1, p0, Lio/didomi/sdk/o$a;->a:Ljava/lang/Object;
-
-    iget p1, p0, Lio/didomi/sdk/o$a;->c:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lio/didomi/sdk/o$a;->c:I
-
-    iget-object p1, p0, Lio/didomi/sdk/o$a;->b:Lio/didomi/sdk/o;
+    invoke-direct {p0}, Lio/didomi/sdk/I0;-><init>()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lio/didomi/sdk/o;->b(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-###### Class io.didomi.drawable.AbstractC1846o.b (io.didomi.sdk.o$b)
-.class final Lio/didomi/sdk/o$b;
-.super Lkotlin/coroutines/jvm/internal/j;
-.source "SourceFile"
-
-# interfaces
-.implements Lkotlin/jvm/b/p;
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lio/didomi/sdk/o;->b(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
-    name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lkotlin/coroutines/jvm/internal/j;",
-        "Lkotlin/jvm/b/p<",
-        "Lkotlinx/coroutines/s;",
-        "Lkotlin/coroutines/d<",
-        "-",
-        "Lio/didomi/sdk/y<",
-        "+TType;>;>;",
-        "Ljava/lang/Object;",
-        ">;"
-    }
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    d1 = {
-        "\u0000\u0010\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00028\u00010\u0003\"\u0006\u0008\u0000\u0010\u0000 \u0000\"\u0004\u0008\u0001\u0010\u0001*\u00020\u0002H\u008a@\u00a2\u0006\u0004\u0008\u0004\u0010\u0005"
-    }
-    d2 = {
-        "Param",
-        "Type",
-        "Lkotlinx/coroutines/CoroutineScope;",
-        "Lio/didomi/sdk/y;",
-        "<anonymous>",
-        "(Lkotlinx/coroutines/CoroutineScope;)Lio/didomi/sdk/y;"
-    }
-    mv = {
-        0x1,
-        0x8,
-        0x0
-    }
-.end annotation
-
-.annotation runtime Lkotlin/coroutines/jvm/internal/e;
-    c = "io.didomi.sdk.core.base.BaseUseCase$invoke$2"
-    f = "BaseUseCase.kt"
-    i = {}
-    l = {
-        0x17
-    }
-    m = "invokeSuspend"
-    n = {}
-    s = {}
-.end annotation
-
-
-# instance fields
-.field a:I
-
-.field final synthetic b:Lio/didomi/sdk/o;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lio/didomi/sdk/o<",
-            "TParam;TType;>;"
-        }
-    .end annotation
-.end field
-
-.field final synthetic c:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TParam;"
-        }
-    .end annotation
-.end field
-
-
-# direct methods
-.method constructor <init>(Lio/didomi/sdk/o;Ljava/lang/Object;Lkotlin/coroutines/d;)V
-    .registers 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/o<",
-            "-TParam;TType;>;TParam;",
-            "Lkotlin/coroutines/d<",
-            "-",
-            "Lio/didomi/sdk/o$b;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lio/didomi/sdk/o$b;->b:Lio/didomi/sdk/o;
-
-    iput-object p2, p0, Lio/didomi/sdk/o$b;->c:Ljava/lang/Object;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lkotlin/coroutines/jvm/internal/j;-><init>(ILkotlin/coroutines/d;)V
+    invoke-virtual {p0, v0}, Landroidx/fragment/app/DialogFragment;->setCancelable(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlinx/coroutines/s;Lkotlin/coroutines/d;)Ljava/lang/Object;
-    .registers 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lkotlinx/coroutines/s;",
-            "Lkotlin/coroutines/d<",
-            "-",
-            "Lio/didomi/sdk/y<",
-            "+TType;>;>;)",
-            "Ljava/lang/Object;"
-        }
-    .end annotation
+.method public a()Lio/didomi/sdk/z8;
+    .registers 2
 
-    invoke-virtual {p0, p1, p2}, Lio/didomi/sdk/o$b;->create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
+    iget-object v0, p0, Lio/didomi/sdk/O;->d:Lio/didomi/sdk/z8;
 
-    move-result-object p1
-
-    check-cast p1, Lio/didomi/sdk/o$b;
-
-    sget-object p2, Lkotlin/v;->a:Lkotlin/v;
-
-    invoke-virtual {p1, p2}, Lio/didomi/sdk/o$b;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
-    .registers 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Object;",
-            "Lkotlin/coroutines/d<",
-            "*>;)",
-            "Lkotlin/coroutines/d<",
-            "Lkotlin/v;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance p1, Lio/didomi/sdk/o$b;
-
-    iget-object v0, p0, Lio/didomi/sdk/o$b;->b:Lio/didomi/sdk/o;
-
-    iget-object v1, p0, Lio/didomi/sdk/o$b;->c:Ljava/lang/Object;
-
-    invoke-direct {p1, v0, v1, p2}, Lio/didomi/sdk/o$b;-><init>(Lio/didomi/sdk/o;Ljava/lang/Object;Lkotlin/coroutines/d;)V
-
-    return-object p1
-.end method
-
-.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 3
-
-    check-cast p1, Lkotlinx/coroutines/s;
-
-    check-cast p2, Lkotlin/coroutines/d;
-
-    invoke-virtual {p0, p1, p2}, Lio/didomi/sdk/o$b;->a(Lkotlinx/coroutines/s;Lkotlin/coroutines/d;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
-    .registers 5
-
-    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget v1, p0, Lio/didomi/sdk/o$b;->a:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_17
-
-    if-ne v1, v2, :cond_f
-
-    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-
-    goto :goto_27
-
-    :cond_f
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_17
-    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lio/didomi/sdk/o$b;->b:Lio/didomi/sdk/o;
-
-    iget-object v1, p0, Lio/didomi/sdk/o$b;->c:Ljava/lang/Object;
-
-    iput v2, p0, Lio/didomi/sdk/o$b;->a:I
-
-    invoke-virtual {p1, v1, p0}, Lio/didomi/sdk/o;->a(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v0, :cond_27
+    if-eqz v0, :cond_5
 
     return-object v0
 
-    :cond_27
-    :goto_27
+    :cond_5
+    const-string v0, "themeProvider"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final b()Lio/didomi/sdk/U;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/O;->b:Lio/didomi/sdk/U;
+
+    if-eqz v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    const-string v0, "model"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final c()Lio/didomi/sdk/I3;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/O;->c:Lio/didomi/sdk/I3;
+
+    if-eqz v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    const-string v0, "navigationManager"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final d()Lio/didomi/sdk/D8;
+    .registers 2
+
+    iget-object v0, p0, Lio/didomi/sdk/O;->a:Lio/didomi/sdk/D8;
+
+    if-eqz v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    const-string v0, "uiProvider"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public onAttach(Landroid/content/Context;)V
+    .registers 3
+
+    const-string v0, "context"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Lio/didomi/sdk/F0;->a(Landroidx/fragment/app/DialogFragment;)Lio/didomi/sdk/J0;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_e
+
+    invoke-interface {v0, p0}, Lio/didomi/sdk/J0;->a(Lio/didomi/sdk/O;)V
+
+    :cond_e
+    invoke-super {p0, p1}, Landroidx/fragment/app/DialogFragment;->onAttach(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .registers 4
+
+    const-string p3, "inflater"
+
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p3, 0x0
+
+    invoke-static {p1, p2, p3}, Lio/didomi/sdk/N0;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lio/didomi/sdk/N0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/O;->e:Lio/didomi/sdk/N0;
+
+    invoke-virtual {p1}, Lio/didomi/sdk/N0;->a()Landroid/widget/LinearLayout;
+
+    move-result-object p1
+
+    const-string p2, "inflate(inflater, contai\u2026g = it\n            }.root"
+
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
     return-object p1
+.end method
+
+.method public onDestroyView()V
+    .registers 4
+
+    invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
+
+    invoke-virtual {p0}, Lio/didomi/sdk/O;->b()Lio/didomi/sdk/U;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lio/didomi/sdk/U;->n()Lio/didomi/sdk/C3;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v1
+
+    const-string v2, "viewLifecycleOwner"
+
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lio/didomi/sdk/C3;->a(Landroidx/lifecycle/LifecycleOwner;)V
+
+    iget-object v0, p0, Lio/didomi/sdk/O;->f:Lio/didomi/sdk/Q;
+
+    if-eqz v0, :cond_1e
+
+    invoke-virtual {v0}, Lio/didomi/sdk/Q;->j()V
+
+    :cond_1e
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lio/didomi/sdk/O;->f:Lio/didomi/sdk/Q;
+
+    iput-object v0, p0, Lio/didomi/sdk/O;->e:Lio/didomi/sdk/N0;
+
+    iget-object v1, p0, Lio/didomi/sdk/O;->g:Lkotlinx/coroutines/Job;
+
+    if-eqz v1, :cond_2a
+
+    invoke-interface {v1, v0}, Lkotlinx/coroutines/Job;->b(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_2a
+    iput-object v0, p0, Lio/didomi/sdk/O;->g:Lkotlinx/coroutines/Job;
+
+    return-void
+.end method
+
+.method public onPause()V
+    .registers 3
+
+    iget-object v0, p0, Lio/didomi/sdk/O;->g:Lkotlinx/coroutines/Job;
+
+    if-eqz v0, :cond_8
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lkotlinx/coroutines/Job;->b(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_8
+    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .registers 3
+
+    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onResume()V
+
+    invoke-virtual {p0}, Lio/didomi/sdk/O;->d()Lio/didomi/sdk/D8;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lio/didomi/sdk/D8;->e()Lkotlinx/coroutines/flow/u;
+
+    move-result-object v0
+
+    new-instance v1, Lio/didomi/sdk/O$b;
+
+    invoke-direct {v1, p0}, Lio/didomi/sdk/O$b;-><init>(Lio/didomi/sdk/O;)V
+
+    invoke-static {p0, v0, v1}, Lio/didomi/sdk/N2;->a(Landroidx/fragment/app/Fragment;Lkotlinx/coroutines/flow/u;Lkotlin/jvm/b/l;)Lkotlinx/coroutines/Job;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lio/didomi/sdk/O;->g:Lkotlinx/coroutines/Job;
+
+    return-void
+.end method
+
+.method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    .registers 11
+
+    const-string v0, "view"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-super {p0, p1, p2}, Lio/didomi/sdk/I0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+
+    new-instance p1, Lio/didomi/sdk/Q;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lio/didomi/sdk/O;->e:Lio/didomi/sdk/N0;
+
+    const-string p2, "null cannot be cast to non-null type io.didomi.sdk.databinding.DidomiFragmentConsentNoticeBinding"
+
+    invoke-static {v3, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lio/didomi/sdk/O;->b()Lio/didomi/sdk/U;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lio/didomi/sdk/O;->a()Lio/didomi/sdk/z8;
+
+    move-result-object v5
+
+    invoke-virtual {p0}, Lio/didomi/sdk/O;->c()Lio/didomi/sdk/I3;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getViewLifecycleOwner()Landroidx/lifecycle/LifecycleOwner;
+
+    move-result-object v7
+
+    const-string p2, "viewLifecycleOwner"
+
+    invoke-static {v7, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+    move-object v1, p1
+
+    invoke-direct/range {v1 .. v7}, Lio/didomi/sdk/Q;-><init>(Landroidx/fragment/app/FragmentActivity;Lio/didomi/sdk/N0;Lio/didomi/sdk/U;Lio/didomi/sdk/z8;Lio/didomi/sdk/I3;Landroidx/lifecycle/LifecycleOwner;)V
+
+    iput-object p1, p0, Lio/didomi/sdk/O;->f:Lio/didomi/sdk/Q;
+
+    return-void
 .end method

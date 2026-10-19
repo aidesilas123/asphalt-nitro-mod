@@ -1,59 +1,77 @@
-###### Class com.facebook.ads.redexgen.X.C07604i (com.facebook.ads.redexgen.X.4i)
-.class public final Lcom/facebook/ads/redexgen/X/4i;
+###### Class com.facebook.ads.redexgen.X.C4I (com.facebook.ads.redexgen.X.4I)
+.class public final Lcom/facebook/ads/redexgen/X/4I;
 .super Ljava/lang/Object;
 .source ""
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/4j;
+    value = Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "ScrapData"
+    accessFlags = 0x1
+    name = null
 .end annotation
 
-
-# instance fields
-.field public A00:I
-
-.field public A01:J
-
-.field public A02:J
-
-.field public A03:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/facebook/ads/redexgen/X/4u;",
-            ">;"
-        }
-    .end annotation
-.end field
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
 .method public constructor <init>()V
-    .registers 3
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/4i;->A03:Ljava/util/ArrayList;
-
-    const/4 v0, 0x5
-
-    iput v0, p0, Lcom/facebook/ads/redexgen/X/4i;->A00:I
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/facebook/ads/redexgen/X/4i;->A02:J
-
-    iput-wide v0, p0, Lcom/facebook/ads/redexgen/X/4i;->A01:J
-
     return-void
+.end method
+
+.method private final A00(Landroid/os/Parcel;)Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+    .registers 3
+
+    new-instance v0, Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+
+    invoke-direct {v0, p1}, Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;-><init>(Landroid/os/Parcel;)V
+
+    return-object v0
+.end method
+
+.method private final A01(I)[Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+    .registers 3
+
+    new-array v0, p1, [Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .registers 3
+
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/4I;->A00(Landroid/os/Parcel;)Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .registers 3
+
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/4I;->A01(I)[Lcom/facebook/ads/internal/androidx/support/v7/widget/LinearLayoutManager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method

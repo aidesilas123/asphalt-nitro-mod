@@ -1,130 +1,158 @@
-###### Class com.facebook.ads.redexgen.X.C07895m (com.facebook.ads.redexgen.X.5m)
-.class public final Lcom/facebook/ads/redexgen/X/5m;
+###### Class com.facebook.ads.redexgen.X.C5M (com.facebook.ads.redexgen.X.5M)
+.class public final Lcom/facebook/ads/redexgen/X/5M;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-.implements Lcom/facebook/ads/RewardedVideoAd$RewardedVideoLoadAdConfig;
-
-
-# instance fields
-.field public A00:Lcom/facebook/ads/AdExperienceType;
-
-.field public A01:Lcom/facebook/ads/redexgen/X/5l;
-
-.field public A02:Ljava/lang/String;
-
-.field public A03:Z
-
-.field public A04:Z
+.implements Lcom/facebook/ads/internal/api/AudienceNetworkAdsApi;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/5l;)V
-    .registers 2
+.method public constructor <init>()V
+    .registers 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5m;->A01:Lcom/facebook/ads/redexgen/X/5l;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A00()V
-    .registers 6
+.method public final getAdFormatForPlacement(Ljava/lang/String;)I
+    .registers 3
 
-    iget-object v4, p0, Lcom/facebook/ads/redexgen/X/5m;->A01:Lcom/facebook/ads/redexgen/X/5l;
+    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lcom/facebook/ads/redexgen/X/5m;->A02:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iget-object v2, p0, Lcom/facebook/ads/redexgen/X/5m;->A00:Lcom/facebook/ads/AdExperienceType;
+    return v0
+.end method
 
-    iget-boolean v1, p0, Lcom/facebook/ads/redexgen/X/5m;->A03:Z
+.method public final initialize(Landroid/content/Context;Lcom/facebook/ads/internal/settings/MultithreadedBundleWrapper;Lcom/facebook/ads/AudienceNetworkAds$InitListener;)V
+    .registers 7
 
-    iget-boolean v0, p0, Lcom/facebook/ads/redexgen/X/5m;->A04:Z
+    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
 
-    invoke-virtual {v4, v3, v2, v1, v0}, Lcom/facebook/ads/redexgen/X/5l;->A07(Ljava/lang/String;Lcom/facebook/ads/AdExperienceType;ZZ)V
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return-void
+
+    :cond_7
+    move-object v2, p0
+
+    if-nez p3, :cond_f
+
+    :try_start_a
+    new-instance p3, Lcom/facebook/ads/redexgen/X/5L;
+
+    invoke-direct {p3, v2}, Lcom/facebook/ads/redexgen/X/5L;-><init>(Lcom/facebook/ads/redexgen/X/5M;)V
+
+    :cond_f
+    invoke-static {p1}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoaderFactory;->makeLoader(Landroid/content/Context;)Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;->getInitApi()Lcom/facebook/ads/internal/api/InitApi;
+
+    move-result-object v1
+
+    const/4 v0, 0x1
+
+    invoke-interface {v1, p1, p2, p3, v0}, Lcom/facebook/ads/internal/api/InitApi;->initialize(Landroid/content/Context;Lcom/facebook/ads/internal/settings/MultithreadedBundleWrapper;Lcom/facebook/ads/AudienceNetworkAds$InitListener;I)V
+
+    return-void
+    :try_end_1c
+    .catchall {:try_start_a .. :try_end_1c} :catchall_1c
+
+    :catchall_1c
+    move-exception v0
+
+    invoke-static {v0, v2}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final bridge synthetic build()Lcom/facebook/ads/Ad$LoadAdConfig;
-    .registers 2
+.method public final isInitialized()Z
+    .registers 4
 
-    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/5m;->build()Lcom/facebook/ads/RewardedVideoAd$RewardedVideoLoadAdConfig;
+    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public final build()Lcom/facebook/ads/RewardedVideoAd$RewardedVideoLoadAdConfig;
-    .registers 1
+    if-eqz v0, :cond_8
 
-    return-object p0
-.end method
+    return v2
 
-.method public final withAdCompanionView(Z)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 2
+    :cond_8
+    move-object v1, p0
 
-    iput-boolean p1, p0, Lcom/facebook/ads/redexgen/X/5m;->A04:Z
-
-    return-object p0
-.end method
-
-.method public final withAdExperience(Lcom/facebook/ads/AdExperienceType;)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 2
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5m;->A00:Lcom/facebook/ads/AdExperienceType;
-
-    return-object p0
-.end method
-
-.method public final withAdListener(Lcom/facebook/ads/RewardedVideoAdListener;)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 3
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/5m;->A01:Lcom/facebook/ads/redexgen/X/5l;
-
-    invoke-virtual {v0, p1}, Lcom/facebook/ads/redexgen/X/5l;->A06(Lcom/facebook/ads/RewardedVideoAdListener;)V
-
-    return-object p0
-.end method
-
-.method public final bridge synthetic withBid(Ljava/lang/String;)Lcom/facebook/ads/Ad$LoadConfigBuilder;
-    .registers 3
-
-    invoke-virtual {p0, p1}, Lcom/facebook/ads/redexgen/X/5m;->withBid(Ljava/lang/String;)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
+    :try_start_9
+    invoke-static {}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoaderFactory;->getDynamicLoader()Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;
 
     move-result-object v0
 
-    return-object v0
+    if-nez v0, :cond_10
+
+    return v2
+
+    :cond_10
+    invoke-interface {v0}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;->getInitApi()Lcom/facebook/ads/internal/api/InitApi;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/facebook/ads/internal/api/InitApi;->isInitialized()Z
+
+    move-result v0
+
+    return v0
+    :try_end_19
+    .catchall {:try_start_9 .. :try_end_19} :catchall_19
+
+    :catchall_19
+    move-exception v0
+
+    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+
+    return v2
 .end method
 
-.method public final withBid(Ljava/lang/String;)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 2
+.method public final onContentProviderCreated(Landroid/content/Context;)V
+    .registers 4
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5m;->A02:Ljava/lang/String;
+    invoke-static {p0}, Lcom/facebook/ads/redexgen/X/K0;->A02(Ljava/lang/Object;)Z
 
-    return-object p0
-.end method
+    move-result v0
 
-.method public final withFailOnCacheFailureEnabled(Z)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 2
+    if-eqz v0, :cond_7
 
-    iput-boolean p1, p0, Lcom/facebook/ads/redexgen/X/5m;->A03:Z
+    return-void
 
-    return-object p0
-.end method
+    :cond_7
+    move-object v1, p0
 
-.method public final withRewardData(Lcom/facebook/ads/RewardData;)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdLoadConfigBuilder;
-    .registers 3
+    :try_start_8
+    invoke-static {p1}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoaderFactory;->makeLoader(Landroid/content/Context;)Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/5m;->A01:Lcom/facebook/ads/redexgen/X/5l;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/facebook/ads/redexgen/X/5l;->A05(Lcom/facebook/ads/RewardData;)V
+    invoke-interface {v0}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoader;->getInitApi()Lcom/facebook/ads/internal/api/InitApi;
 
-    return-object p0
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcom/facebook/ads/internal/api/InitApi;->onContentProviderCreated(Landroid/content/Context;)V
+
+    return-void
+    :try_end_14
+    .catchall {:try_start_8 .. :try_end_14} :catchall_14
+
+    :catchall_14
+    move-exception v0
+
+    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/K0;->A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -1,0 +1,85 @@
+###### Class kotlin.reflect.full.KCallables.b (kotlin.reflect.full.KCallables$b)
+.class final Lkotlin/reflect/full/KCallables$b;
+.super Lkotlin/coroutines/jvm/internal/c;
+.source "KCallables.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/reflect/full/KCallables;->callSuspendBy(Lkotlin/reflect/KCallable;Ljava/util/Map;Lkotlin/coroutines/d;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/e;
+    c = "kotlin.reflect.full.KCallables"
+    f = "KCallables.kt"
+    i = {
+        0x0,
+        0x0,
+        0x0
+    }
+    l = {
+        0x49
+    }
+    m = "callSuspendBy"
+    n = {
+        "$this$callSuspendBy",
+        "args",
+        "kCallable"
+    }
+    s = {
+        "L$0",
+        "L$1",
+        "L$2"
+    }
+.end annotation
+
+
+# instance fields
+.field synthetic a:Ljava/lang/Object;
+
+.field b:I
+
+.field c:Ljava/lang/Object;
+
+.field d:Ljava/lang/Object;
+
+.field e:Ljava/lang/Object;
+
+
+# direct methods
+.method constructor <init>(Lkotlin/coroutines/d;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lkotlin/coroutines/jvm/internal/c;-><init>(Lkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 3
+
+    iput-object p1, p0, Lkotlin/reflect/full/KCallables$b;->a:Ljava/lang/Object;
+
+    iget p1, p0, Lkotlin/reflect/full/KCallables$b;->b:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkotlin/reflect/full/KCallables$b;->b:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p0}, Lkotlin/reflect/full/KCallables;->callSuspendBy(Lkotlin/reflect/KCallable;Ljava/util/Map;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

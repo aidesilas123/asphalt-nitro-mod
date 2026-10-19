@@ -1,0 +1,517 @@
+###### Class kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt.y (kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$y)
+.class final Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;
+.super Lkotlin/coroutines/jvm/internal/j;
+.source "Deprecated.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/p;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt;->map(Lkotlinx/coroutines/channels/ReceiveChannel;Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/b/p;)Lkotlinx/coroutines/channels/ReceiveChannel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/j;",
+        "Lkotlin/jvm/b/p<",
+        "Lkotlinx/coroutines/channels/ProducerScope<",
+        "-TR;>;",
+        "Lkotlin/coroutines/d<",
+        "-",
+        "Lkotlin/v;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001\"\u0004\u0008\u0000\u0010\u0002\"\u0004\u0008\u0001\u0010\u0003*\u0008\u0012\u0004\u0012\u0002H\u00030\u0004H\u008a@"
+    }
+    d2 = {
+        "<anonymous>",
+        "",
+        "E",
+        "R",
+        "Lkotlinx/coroutines/channels/ProducerScope;"
+    }
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/e;
+    c = "kotlinx.coroutines.channels.ChannelsKt__DeprecatedKt$map$1"
+    f = "Deprecated.kt"
+    i = {
+        0x0,
+        0x0,
+        0x1,
+        0x1,
+        0x2,
+        0x2
+    }
+    l = {
+        0x205,
+        0x16b,
+        0x16b
+    }
+    m = "invokeSuspend"
+    n = {
+        "$this$produce",
+        "$this$consume$iv$iv",
+        "$this$produce",
+        "$this$consume$iv$iv",
+        "$this$produce",
+        "$this$consume$iv$iv"
+    }
+    s = {
+        "L$0",
+        "L$2",
+        "L$0",
+        "L$2",
+        "L$0",
+        "L$2"
+    }
+.end annotation
+
+
+# instance fields
+.field a:Ljava/lang/Object;
+
+.field b:Ljava/lang/Object;
+
+.field c:Ljava/lang/Object;
+
+.field d:Ljava/lang/Object;
+
+.field e:I
+
+.field private synthetic f:Ljava/lang/Object;
+
+.field final synthetic g:Lkotlinx/coroutines/channels/ReceiveChannel;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlinx/coroutines/channels/ReceiveChannel<",
+            "TE;>;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic h:Lkotlin/jvm/b/p;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/b/p<",
+            "TE;",
+            "Lkotlin/coroutines/d<",
+            "-TR;>;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Lkotlinx/coroutines/channels/ReceiveChannel;Lkotlin/jvm/b/p;Lkotlin/coroutines/d;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/channels/ReceiveChannel<",
+            "+TE;>;",
+            "Lkotlin/jvm/b/p<",
+            "-TE;-",
+            "Lkotlin/coroutines/d<",
+            "-TR;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->g:Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iput-object p2, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->h:Lkotlin/jvm/b/p;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lkotlin/coroutines/jvm/internal/j;-><init>(ILkotlin/coroutines/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/d<",
+            "*>;)",
+            "Lkotlin/coroutines/d<",
+            "Lkotlin/v;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;
+
+    iget-object v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->g:Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iget-object v2, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->h:Lkotlin/jvm/b/p;
+
+    invoke-direct {v0, v1, v2, p2}, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;-><init>(Lkotlinx/coroutines/channels/ReceiveChannel;Lkotlin/jvm/b/p;Lkotlin/coroutines/d;)V
+
+    iput-object p1, v0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 3
+
+    check-cast p1, Lkotlinx/coroutines/channels/ProducerScope;
+
+    check-cast p2, Lkotlin/coroutines/d;
+
+    invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->invoke(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invoke(Lkotlinx/coroutines/channels/ProducerScope;Lkotlin/coroutines/d;)Ljava/lang/Object;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlinx/coroutines/channels/ProducerScope<",
+            "-TR;>;",
+            "Lkotlin/coroutines/d<",
+            "-",
+            "Lkotlin/v;",
+            ">;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1, p2}, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->create(Ljava/lang/Object;Lkotlin/coroutines/d;)Lkotlin/coroutines/d;
+
+    move-result-object p1
+
+    check-cast p1, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;
+
+    sget-object p2, Lkotlin/v;->a:Lkotlin/v;
+
+    invoke-virtual {p1, p2}, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 14
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/a;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->e:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    if-eqz v1, :cond_63
+
+    if-eq v1, v5, :cond_4e
+
+    if-eq v1, v4, :cond_30
+
+    if-ne v1, v3, :cond_28
+
+    iget-object v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v6, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    check-cast v6, Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iget-object v7, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    check-cast v7, Lkotlin/jvm/b/p;
+
+    iget-object v8, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    check-cast v8, Lkotlinx/coroutines/channels/ProducerScope;
+
+    :try_start_22
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    :try_end_25
+    .catchall {:try_start_22 .. :try_end_25} :catchall_cf
+
+    move-object p1, v8
+
+    move-object v8, p0
+
+    goto :goto_76
+
+    :cond_28
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_30
+    iget-object v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->d:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ProducerScope;
+
+    iget-object v6, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    check-cast v6, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v7, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    check-cast v7, Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iget-object v8, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    check-cast v8, Lkotlin/jvm/b/p;
+
+    iget-object v9, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    check-cast v9, Lkotlinx/coroutines/channels/ProducerScope;
+
+    :try_start_44
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    :try_end_47
+    .catchall {:try_start_44 .. :try_end_47} :catchall_4a
+
+    move-object v10, p0
+
+    goto/16 :goto_b0
+
+    :catchall_4a
+    move-exception p1
+
+    move-object v6, v7
+
+    goto/16 :goto_d0
+
+    :cond_4e
+    iget-object v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/channels/ChannelIterator;
+
+    iget-object v6, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    check-cast v6, Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iget-object v7, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    check-cast v7, Lkotlin/jvm/b/p;
+
+    iget-object v8, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    check-cast v8, Lkotlinx/coroutines/channels/ProducerScope;
+
+    :try_start_5e
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+    :try_end_61
+    .catchall {:try_start_5e .. :try_end_61} :catchall_cf
+
+    move-object v9, p0
+
+    goto :goto_8b
+
+    :cond_63
+    invoke-static {p1}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    check-cast p1, Lkotlinx/coroutines/channels/ProducerScope;
+
+    iget-object v6, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->g:Lkotlinx/coroutines/channels/ReceiveChannel;
+
+    iget-object v1, p0, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->h:Lkotlin/jvm/b/p;
+
+    :try_start_6e
+    invoke-interface {v6}, Lkotlinx/coroutines/channels/ReceiveChannel;->iterator()Lkotlinx/coroutines/channels/ChannelIterator;
+
+    move-result-object v7
+
+    move-object v8, p0
+
+    move-object v11, v7
+
+    move-object v7, v1
+
+    move-object v1, v11
+
+    :goto_76
+    iput-object p1, v8, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    iput-object v7, v8, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    iput-object v6, v8, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    iput-object v1, v8, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    iput v5, v8, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->e:I
+
+    invoke-interface {v1, v8}, Lkotlinx/coroutines/channels/ChannelIterator;->a(Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object v9
+
+    if-ne v9, v0, :cond_87
+
+    return-object v0
+
+    :cond_87
+    move-object v11, v8
+
+    move-object v8, p1
+
+    move-object p1, v9
+
+    move-object v9, v11
+
+    :goto_8b
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_c9
+
+    invoke-interface {v1}, Lkotlinx/coroutines/channels/ChannelIterator;->next()Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object v8, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    iput-object v7, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    iput-object v6, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    iput-object v1, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    iput-object v8, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->d:Ljava/lang/Object;
+
+    iput v4, v9, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->e:I
+
+    invoke-interface {v7, p1, v9}, Lkotlin/jvm/b/p;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_a7
+    .catchall {:try_start_6e .. :try_end_a7} :catchall_cf
+
+    if-ne p1, v0, :cond_aa
+
+    return-object v0
+
+    :cond_aa
+    move-object v10, v9
+
+    move-object v9, v8
+
+    move-object v8, v7
+
+    move-object v7, v6
+
+    move-object v6, v1
+
+    move-object v1, v9
+
+    :goto_b0
+    :try_start_b0
+    iput-object v9, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->f:Ljava/lang/Object;
+
+    iput-object v8, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->a:Ljava/lang/Object;
+
+    iput-object v7, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->b:Ljava/lang/Object;
+
+    iput-object v6, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->c:Ljava/lang/Object;
+
+    iput-object v2, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->d:Ljava/lang/Object;
+
+    iput v3, v10, Lkotlinx/coroutines/channels/ChannelsKt__DeprecatedKt$y;->e:I
+
+    invoke-interface {v1, p1, v10}, Lkotlinx/coroutines/channels/SendChannel;->K(Ljava/lang/Object;Lkotlin/coroutines/d;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_c0
+    .catchall {:try_start_b0 .. :try_end_c0} :catchall_4a
+
+    if-ne p1, v0, :cond_c3
+
+    return-object v0
+
+    :cond_c3
+    move-object v1, v6
+
+    move-object v6, v7
+
+    move-object v7, v8
+
+    move-object p1, v9
+
+    move-object v8, v10
+
+    goto :goto_76
+
+    :cond_c9
+    :try_start_c9
+    sget-object p1, Lkotlin/v;->a:Lkotlin/v;
+    :try_end_cb
+    .catchall {:try_start_c9 .. :try_end_cb} :catchall_cf
+
+    invoke-static {v6, v2}, Lkotlinx/coroutines/channels/ChannelsKt;->cancelConsumed(Lkotlinx/coroutines/channels/ReceiveChannel;Ljava/lang/Throwable;)V
+
+    return-object p1
+
+    :catchall_cf
+    move-exception p1
+
+    :goto_d0
+    :try_start_d0
+    throw p1
+    :try_end_d1
+    .catchall {:try_start_d0 .. :try_end_d1} :catchall_d1
+
+    :catchall_d1
+    move-exception v0
+
+    invoke-static {v6, p1}, Lkotlinx/coroutines/channels/ChannelsKt;->cancelConsumed(Lkotlinx/coroutines/channels/ReceiveChannel;Ljava/lang/Throwable;)V
+
+    throw v0
+.end method

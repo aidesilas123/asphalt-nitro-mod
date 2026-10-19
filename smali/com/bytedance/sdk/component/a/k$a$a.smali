@@ -1,0 +1,15 @@
+###### Class com.bytedance.sdk.component.a.k.a.InterfaceC0099a (com.bytedance.sdk.component.a.k$a$a)
+.class public interface abstract Lcom/bytedance/sdk/component/a/k$a$a;
+.super Ljava/lang/Object;
+.source "IBridgePermissionConfigurator.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bytedance/sdk/component/a/k$a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation

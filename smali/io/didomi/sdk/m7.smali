@@ -1,471 +1,238 @@
-###### Class io.didomi.drawable.C1834m7 (io.didomi.sdk.m7)
-.class public final Lio/didomi/sdk/m7;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.M7 (io.didomi.sdk.M7)
+.class public final Lio/didomi/sdk/M7;
+.super Lio/didomi/sdk/Y7;
 .source "SourceFile"
-
-# interfaces
-.implements Ldagger/internal/b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ldagger/internal/b<",
-        "Lio/didomi/sdk/l7;",
-        ">;"
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u001d\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\u0008\u00a2\u0006\u0004\u0008\u000b\u0010\u000cR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010\r\u00a8\u0006\u000e"
+    }
+    d2 = {
+        "Lio/didomi/sdk/M7;",
+        "Lio/didomi/sdk/Y7;",
+        "Lio/didomi/sdk/c2;",
+        "binding",
+        "<init>",
+        "(Lio/didomi/sdk/c2;)V",
+        "Lio/didomi/sdk/V7$b;",
+        "consent",
+        "Lio/didomi/sdk/K7$a;",
+        "callback",
+        "",
+        "a",
+        "(Lio/didomi/sdk/V7$b;Lio/didomi/sdk/K7$a;)V",
+        "Lio/didomi/sdk/c2;",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final c:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final d:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final e:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final f:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/v3;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final g:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final h:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final i:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final j:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/V8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final k:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/C3;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final l:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/I3;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final a:Lio/didomi/sdk/c2;
 
 
 # direct methods
-.method public constructor <init>(Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
-    .registers 13
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/v3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/C3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/I3;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>(Lio/didomi/sdk/c2;)V
+    .registers 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "binding"
 
-    iput-object p1, p0, Lio/didomi/sdk/m7;->a:Le/a/a;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lio/didomi/sdk/m7;->b:Le/a/a;
+    invoke-direct {p0, p1}, Lio/didomi/sdk/Y7;-><init>(Landroidx/viewbinding/ViewBinding;)V
 
-    iput-object p3, p0, Lio/didomi/sdk/m7;->c:Le/a/a;
-
-    iput-object p4, p0, Lio/didomi/sdk/m7;->d:Le/a/a;
-
-    iput-object p5, p0, Lio/didomi/sdk/m7;->e:Le/a/a;
-
-    iput-object p6, p0, Lio/didomi/sdk/m7;->f:Le/a/a;
-
-    iput-object p7, p0, Lio/didomi/sdk/m7;->g:Le/a/a;
-
-    iput-object p8, p0, Lio/didomi/sdk/m7;->h:Le/a/a;
-
-    iput-object p9, p0, Lio/didomi/sdk/m7;->i:Le/a/a;
-
-    iput-object p10, p0, Lio/didomi/sdk/m7;->j:Le/a/a;
-
-    iput-object p11, p0, Lio/didomi/sdk/m7;->k:Le/a/a;
-
-    iput-object p12, p0, Lio/didomi/sdk/m7;->l:Le/a/a;
+    iput-object p1, p0, Lio/didomi/sdk/M7;->a:Lio/didomi/sdk/c2;
 
     return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/H;Lio/didomi/sdk/V;Lio/didomi/sdk/Z;Lio/didomi/sdk/M2;Lio/didomi/sdk/v3;Lio/didomi/sdk/G8;Lio/didomi/sdk/P8;Lio/didomi/sdk/D8;Lio/didomi/sdk/V8;Lio/didomi/sdk/C3;Lio/didomi/sdk/I3;)Lio/didomi/sdk/l7;
-    .registers 26
+.method public static final synthetic a(Lio/didomi/sdk/M7;)Lio/didomi/sdk/c2;
+    .registers 1
 
-    new-instance v13, Lio/didomi/sdk/l7;
+    iget-object p0, p0, Lio/didomi/sdk/M7;->a:Lio/didomi/sdk/c2;
 
-    move-object v0, v13
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object/from16 v3, p2
-
-    move-object/from16 v4, p3
-
-    move-object/from16 v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    move-object/from16 v11, p10
-
-    move-object/from16 v12, p11
-
-    invoke-direct/range {v0 .. v12}, Lio/didomi/sdk/l7;-><init>(Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/H;Lio/didomi/sdk/V;Lio/didomi/sdk/Z;Lio/didomi/sdk/M2;Lio/didomi/sdk/v3;Lio/didomi/sdk/G8;Lio/didomi/sdk/P8;Lio/didomi/sdk/D8;Lio/didomi/sdk/V8;Lio/didomi/sdk/C3;Lio/didomi/sdk/I3;)V
-
-    return-object v13
+    return-object p0
 .end method
 
-.method public static a(Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)Lio/didomi/sdk/m7;
-    .registers 26
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/v3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/G8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/D8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V8;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/C3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/I3;",
-            ">;)",
-            "Lio/didomi/sdk/m7;"
-        }
-    .end annotation
+.method private static final a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+    .registers 2
 
-    new-instance v13, Lio/didomi/sdk/m7;
+    const-string v0, "$this_apply"
 
-    move-object v0, v13
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v1, p0
+    const/4 v0, 0x1
 
-    move-object v2, p1
+    invoke-virtual {p0, v0}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setAnimate(Z)V
 
-    move-object/from16 v3, p2
+    return-void
+.end method
 
-    move-object/from16 v4, p3
+.method private static final a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;Landroid/view/View;)V
+    .registers 2
 
-    move-object/from16 v5, p4
+    const-string p1, "$this_apply"
 
-    move-object/from16 v6, p5
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object/from16 v7, p6
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->callOnClick()Z
 
-    move-object/from16 v8, p7
+    return-void
+.end method
 
-    move-object/from16 v9, p8
+.method private static final a(Lio/didomi/sdk/K7$a;Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .registers 5
 
-    move-object/from16 v10, p9
+    const-string p1, "$callback"
 
-    move-object/from16 v11, p10
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object/from16 v12, p11
+    const/4 p1, 0x1
 
-    invoke-direct/range {v0 .. v12}, Lio/didomi/sdk/m7;-><init>(Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
+    const/16 v0, 0x16
 
-    return-object v13
+    if-ne p2, v0, :cond_14
+
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result p2
+
+    if-ne p2, p1, :cond_14
+
+    invoke-interface {p0}, Lio/didomi/sdk/K7$a;->a()V
+
+    goto :goto_15
+
+    :cond_14
+    const/4 p1, 0x0
+
+    :goto_15
+    return p1
+.end method
+
+.method public static synthetic b(Lio/didomi/sdk/K7$a;Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .registers 4
+
+    invoke-static {p0, p1, p2, p3}, Lio/didomi/sdk/M7;->a(Lio/didomi/sdk/K7$a;Landroid/view/View;ILandroid/view/KeyEvent;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic c(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+    .registers 1
+
+    invoke-static {p0}, Lio/didomi/sdk/M7;->a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+
+    return-void
+.end method
+
+.method public static synthetic d(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;Landroid/view/View;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lio/didomi/sdk/M7;->a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;Landroid/view/View;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Lio/didomi/sdk/l7;
-    .registers 14
+.method public final a(Lio/didomi/sdk/V7$b;Lio/didomi/sdk/K7$a;)V
+    .registers 6
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->a:Le/a/a;
+    const-string v0, "consent"
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-result-object v0
+    const-string v0, "callback"
 
-    move-object v1, v0
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lio/didomi/sdk/apiEvents/b;
+    iget-object v0, p0, Lio/didomi/sdk/M7;->a:Lio/didomi/sdk/c2;
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->b:Le/a/a;
+    iget-object v1, v0, Lio/didomi/sdk/c2;->e:Landroid/widget/TextView;
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/didomi/sdk/V7$b;->e()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    move-object v2, v0
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    check-cast v2, Lio/didomi/sdk/H;
+    iget-object v0, v0, Lio/didomi/sdk/c2;->d:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->c:Le/a/a;
+    invoke-virtual {p1}, Lio/didomi/sdk/V7$b;->f()Z
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_22
 
-    move-object v3, v0
+    invoke-virtual {p1}, Lio/didomi/sdk/V7$b;->d()Ljava/lang/String;
 
-    check-cast v3, Lio/didomi/sdk/V;
+    move-result-object v1
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->d:Le/a/a;
+    goto :goto_26
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    :cond_22
+    invoke-virtual {p1}, Lio/didomi/sdk/V7$b;->c()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    move-object v4, v0
+    :goto_26
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    check-cast v4, Lio/didomi/sdk/Z;
+    iget-object v0, p0, Lio/didomi/sdk/M7;->a:Lio/didomi/sdk/c2;
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->e:Le/a/a;
+    iget-object v0, v0, Lio/didomi/sdk/c2;->c:Lio/didomi/sdk/view/ctv/DidomiTVSwitch;
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setCallback(Lio/didomi/sdk/view/ctv/DidomiTVSwitch$a;)V
 
-    move-object v5, v0
+    const/4 v1, 0x0
 
-    check-cast v5, Lio/didomi/sdk/M2;
+    invoke-virtual {v0, v1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setAnimate(Z)V
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->f:Le/a/a;
+    invoke-virtual {p1}, Lio/didomi/sdk/V7$b;->f()Z
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setChecked(Z)V
 
-    move-object v6, v0
+    new-instance v1, Lio/didomi/sdk/M7$a;
 
-    check-cast v6, Lio/didomi/sdk/v3;
+    invoke-direct {v1, p0, p1, p2}, Lio/didomi/sdk/M7$a;-><init>(Lio/didomi/sdk/M7;Lio/didomi/sdk/V7$b;Lio/didomi/sdk/K7$a;)V
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->g:Le/a/a;
+    invoke-virtual {v0, v1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setCallback(Lio/didomi/sdk/view/ctv/DidomiTVSwitch$a;)V
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    move-result-object v0
+    new-instance v1, Lio/didomi/sdk/ac;
 
-    move-object v7, v0
+    invoke-direct {v1, v0}, Lio/didomi/sdk/ac;-><init>(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
 
-    check-cast v7, Lio/didomi/sdk/G8;
+    invoke-virtual {p1, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->h:Le/a/a;
+    new-instance p1, Lio/didomi/sdk/zb;
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-direct {p1, v0}, Lio/didomi/sdk/zb;-><init>(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
 
-    move-result-object v0
+    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    move-object v8, v0
+    iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    check-cast v8, Lio/didomi/sdk/P8;
+    new-instance v0, Lio/didomi/sdk/yb;
 
-    iget-object v0, p0, Lio/didomi/sdk/m7;->i:Le/a/a;
+    invoke-direct {v0, p2}, Lio/didomi/sdk/yb;-><init>(Lio/didomi/sdk/K7$a;)V
 
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Lio/didomi/sdk/D8;
-
-    iget-object v0, p0, Lio/didomi/sdk/m7;->j:Le/a/a;
-
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Lio/didomi/sdk/V8;
-
-    iget-object v0, p0, Lio/didomi/sdk/m7;->k:Le/a/a;
-
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v11, v0
-
-    check-cast v11, Lio/didomi/sdk/C3;
-
-    iget-object v0, p0, Lio/didomi/sdk/m7;->l:Le/a/a;
-
-    invoke-interface {v0}, Le/a/a;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v12, v0
-
-    check-cast v12, Lio/didomi/sdk/I3;
-
-    invoke-static/range {v1 .. v12}, Lio/didomi/sdk/m7;->a(Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/H;Lio/didomi/sdk/V;Lio/didomi/sdk/Z;Lio/didomi/sdk/M2;Lio/didomi/sdk/v3;Lio/didomi/sdk/G8;Lio/didomi/sdk/P8;Lio/didomi/sdk/D8;Lio/didomi/sdk/V8;Lio/didomi/sdk/C3;Lio/didomi/sdk/I3;)Lio/didomi/sdk/l7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic get()Ljava/lang/Object;
-    .registers 2
-
-    invoke-virtual {p0}, Lio/didomi/sdk/m7;->a()Lio/didomi/sdk/l7;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,0 +1,67 @@
+###### Class com.unity3d.services.ads.token.InMemoryAsyncTokenStorage.AnonymousClass3 (com.unity3d.services.ads.token.InMemoryAsyncTokenStorage$3)
+.class synthetic Lcom/unity3d/services/ads/token/InMemoryAsyncTokenStorage$3;
+.super Ljava/lang/Object;
+.source "InMemoryAsyncTokenStorage.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/unity3d/services/ads/token/InMemoryAsyncTokenStorage;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1008
+    name = null
+.end annotation
+
+
+# static fields
+.field static final synthetic $SwitchMap$com$unity3d$services$core$device$TokenType:[I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    invoke-static {}, Lcom/unity3d/services/core/device/TokenType;->values()[Lcom/unity3d/services/core/device/TokenType;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/unity3d/services/ads/token/InMemoryAsyncTokenStorage$3;->$SwitchMap$com$unity3d$services$core$device$TokenType:[I
+
+    :try_start_9
+    sget-object v1, Lcom/unity3d/services/core/device/TokenType;->TOKEN_NATIVE:Lcom/unity3d/services/core/device/TokenType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_12
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_12} :catch_12
+
+    :catch_12
+    :try_start_12
+    sget-object v0, Lcom/unity3d/services/ads/token/InMemoryAsyncTokenStorage$3;->$SwitchMap$com$unity3d$services$core$device$TokenType:[I
+
+    sget-object v1, Lcom/unity3d/services/core/device/TokenType;->TOKEN_REMOTE:Lcom/unity3d/services/core/device/TokenType;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_1d} :catch_1d
+
+    :catch_1d
+    return-void
+.end method

@@ -1,0 +1,30 @@
+###### Class com.google.firebase.messaging.WithinAppServiceBinder.IntentHandler (com.google.firebase.messaging.WithinAppServiceBinder$IntentHandler)
+.class interface abstract Lcom/google/firebase/messaging/WithinAppServiceBinder$IntentHandler;
+.super Ljava/lang/Object;
+.source "WithinAppServiceBinder.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/firebase/messaging/WithinAppServiceBinder;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "IntentHandler"
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Landroid/content/Intent;)Lcom/google/android/gms/tasks/Task;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Intent;",
+            ")",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/lang/Void;",
+            ">;"
+        }
+    .end annotation
+.end method

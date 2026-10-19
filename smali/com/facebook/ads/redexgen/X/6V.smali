@@ -1,204 +1,51 @@
-###### Class com.facebook.ads.redexgen.X.C6V (com.facebook.ads.redexgen.X.6V)
-.class public final Lcom/facebook/ads/redexgen/X/6V;
-.super Ljava/lang/Object;
+###### Class com.facebook.ads.redexgen.X.C08176v (com.facebook.ads.redexgen.X.6v)
+.class public final Lcom/facebook/ads/redexgen/X/6v;
+.super Lcom/facebook/ads/redexgen/X/Ob;
 .source ""
 
 
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/facebook/ads/redexgen/X/6r;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
 # static fields
-.field public static A00:[B
+.field public static A01:[B
+
+
+# instance fields
+.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/6r;
 
 
 # direct methods
 .method public static constructor <clinit>()V
     .registers 0
 
-    invoke-static {}, Lcom/facebook/ads/redexgen/X/6V;->A04()V
+    invoke-static {}, Lcom/facebook/ads/redexgen/X/6v;->A01()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .registers 1
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/6r;)V
+    .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/6v;->A00:Lcom/facebook/ads/redexgen/X/6r;
+
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/Ob;-><init>()V
 
     return-void
 .end method
 
-.method public static A00(Landroid/graphics/BitmapFactory$Options;II)I
-    .registers 6
-
-    iget v1, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    iget v0, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    const/4 p0, 0x1
-
-    if-gt v1, p2, :cond_9
-
-    if-le v0, p1, :cond_18
-
-    :cond_9
-    div-int/lit8 v2, v1, 0x2
-
-    div-int/lit8 v1, v0, 0x2
-
-    :goto_d
-    div-int v0, v2, p0
-
-    if-lt v0, p2, :cond_18
-
-    div-int v0, v1, p0
-
-    if-lt v0, p1, :cond_18
-
-    mul-int/lit8 p0, p0, 0x2
-
-    goto :goto_d
-
-    :cond_18
-    return p0
-.end method
-
-.method public static A01(Ljava/io/InputStream;II)Landroid/graphics/Bitmap;
-    .registers 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v0, 0x13
-
-    if-ge v1, v0, :cond_b
-
-    invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_b
-    new-instance v3, Lcom/facebook/ads/redexgen/X/0N;
-
-    invoke-direct {v3, p0}, Lcom/facebook/ads/redexgen/X/0N;-><init>(Ljava/io/InputStream;)V
-
-    const/16 v0, 0x2000
-
-    invoke-virtual {v3, v0}, Lcom/facebook/ads/redexgen/X/0N;->mark(I)V
-
-    new-instance v2, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    const/4 v1, 0x0
-
-    invoke-static {v3, v1, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Lcom/facebook/ads/redexgen/X/0N;->reset()V
-
-    invoke-virtual {v3}, Lcom/facebook/ads/redexgen/X/0N;->A00()Z
-
-    move-result v0
-
-    if-nez v0, :cond_38
-
-    invoke-static {v2, p2, p1}, Lcom/facebook/ads/redexgen/X/6V;->A00(Landroid/graphics/BitmapFactory$Options;II)I
-
-    move-result v0
-
-    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    invoke-static {v3, v1, v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_38
-    invoke-static {v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static A02(Ljava/lang/String;IILcom/facebook/ads/redexgen/X/7S;)Landroid/graphics/Bitmap;
-    .registers 6
-
-    :try_start_0
-    new-instance v1, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    invoke-static {v1, p2, p1}, Lcom/facebook/ads/redexgen/X/6V;->A00(Landroid/graphics/BitmapFactory$Options;II)I
-
-    move-result v0
-
-    iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    invoke-static {p0, v1}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
-    :try_end_19
-    .catchall {:try_start_0 .. :try_end_19} :catchall_19
-
-    :catchall_19
-    move-exception v0
-
-    invoke-virtual {p3}, Lcom/facebook/ads/redexgen/X/7S;->A07()Lcom/facebook/ads/redexgen/X/7w;
-
-    move-result-object p3
-
-    sget p2, Lcom/facebook/ads/redexgen/X/7x;->A1g:I
-
-    new-instance p1, Lcom/facebook/ads/redexgen/X/7y;
-
-    invoke-direct {p1, v0}, Lcom/facebook/ads/redexgen/X/7y;-><init>(Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    const/4 v1, 0x5
-
-    const/16 v0, 0x63
-
-    invoke-static {p0, v1, v0}, Lcom/facebook/ads/redexgen/X/6V;->A03(III)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {p3, v0, p2, p1}, Lcom/facebook/ads/redexgen/X/7w;->A9M(Ljava/lang/String;ILcom/facebook/ads/redexgen/X/7y;)V
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public static A03(III)Ljava/lang/String;
+.method public static A00(III)Ljava/lang/String;
     .registers 5
 
-    sget-object v1, Lcom/facebook/ads/redexgen/X/6V;->A00:[B
+    sget-object v1, Lcom/facebook/ads/redexgen/X/6v;->A01:[B
 
     add-int v0, p0, p1
 
@@ -215,9 +62,9 @@
 
     aget-byte v0, p0, v1
 
-    xor-int/2addr v0, p2
+    sub-int/2addr v0, p2
 
-    xor-int/lit8 v0, v0, 0x56
+    add-int/lit8 v0, v0, -0x42
 
     int-to-byte v0, v0
 
@@ -235,7 +82,7 @@
     return-object v0
 .end method
 
-.method public static A04()V
+.method public static A01()V
     .registers 1
 
     const/4 v0, 0x5
@@ -244,7 +91,7 @@
 
     fill-array-data v0, :array_a
 
-    sput-object v0, Lcom/facebook/ads/redexgen/X/6V;->A00:[B
+    sput-object v0, Lcom/facebook/ads/redexgen/X/6v;->A01:[B
 
     return-void
 
@@ -252,10 +99,82 @@
 
     :array_a
     .array-data 1
-        0x5ct
-        0x58t
-        0x54t
-        0x52t
-        0x50t
+        -0x1at
+        -0x6t
+        -0x17t
+        -0x12t
+        -0xct
     .end array-data
+.end method
+
+.method private final A02(Lcom/facebook/ads/redexgen/X/75;)V
+    .registers 6
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6v;->A00:Lcom/facebook/ads/redexgen/X/6r;
+
+    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/6r;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x5
+
+    const/16 v0, 0x43
+
+    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/6v;->A00(III)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/media/AudioManager;
+
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6v;->A00:Lcom/facebook/ads/redexgen/X/6r;
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/6r;->A03(Lcom/facebook/ads/redexgen/X/6r;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    if-nez v0, :cond_25
+
+    const/4 v0, 0x0
+
+    :goto_21
+    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
+    return-void
+
+    :cond_25
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6v;->A00:Lcom/facebook/ads/redexgen/X/6r;
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/6r;->A03(Lcom/facebook/ads/redexgen/X/6r;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    goto :goto_21
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic A03(Lcom/facebook/ads/redexgen/X/8Y;)V
+    .registers 2
+
+    check-cast p1, Lcom/facebook/ads/redexgen/X/75;
+
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/6v;->A02(Lcom/facebook/ads/redexgen/X/75;)V
+
+    return-void
 .end method

@@ -13,7 +13,7 @@ packageInfo:
   renameManifestPackage: null
 versionInfo:
   versionCode: '18001'
-  versionName: 1.8.0a
+  versionName: '1.8.0a'
 compressionType: false
 sharedLibrary: false
 sparseResources: false

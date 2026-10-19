@@ -1,0 +1,15 @@
+###### Class dagger.internal.SetFactory.a (dagger.internal.SetFactory$a)
+.class synthetic Ldagger/internal/SetFactory$a;
+.super Ljava/lang/Object;
+.source "SetFactory.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Ldagger/internal/SetFactory;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1008
+    name = null
+.end annotation

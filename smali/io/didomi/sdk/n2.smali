@@ -1,189 +1,82 @@
-###### Class io.didomi.drawable.C1839n2 (io.didomi.sdk.n2)
-.class public final Lio/didomi/sdk/n2;
+###### Class io.didomi.drawable.N2 (io.didomi.sdk.N2)
+.class public final Lio/didomi/sdk/N2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroidx/viewbinding/ViewBinding;
 
-
-# instance fields
-.field private final a:Landroid/widget/LinearLayout;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final b:Landroidx/appcompat/widget/AppCompatImageView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final c:Landroid/widget/TextView;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
-
-.field public final d:Lio/didomi/sdk/view/mobile/DidomiToggle;
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-.end field
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000&\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u001aH\u0010\u000b\u001a\u00020\n\"\u0004\u0008\u0000\u0010\u0000*\u00020\u00012\u000c\u0010\u0003\u001a\u0008\u0012\u0004\u0012\u00028\u00000\u00022!\u0010\t\u001a\u001d\u0012\u0013\u0012\u00118\u0000\u00a2\u0006\u000c\u0008\u0005\u0012\u0008\u0008\u0006\u0012\u0004\u0008\u0008(\u0007\u0012\u0004\u0012\u00020\u00080\u0004\u00a2\u0006\u0004\u0008\u000b\u0010\u000c\u00a8\u0006\r"
+    }
+    d2 = {
+        "T",
+        "Landroidx/fragment/app/Fragment;",
+        "Lkotlinx/coroutines/flow/StateFlow;",
+        "stateFlow",
+        "Lkotlin/Function1;",
+        "Lkotlin/ParameterName;",
+        "name",
+        "result",
+        "",
+        "collector",
+        "Lkotlinx/coroutines/Job;",
+        "a",
+        "(Landroidx/fragment/app/Fragment;Lkotlinx/coroutines/flow/StateFlow;Lkotlin/jvm/functions/Function1;)Lkotlinx/coroutines/Job;",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
 
 
 # direct methods
-.method private constructor <init>(Landroid/widget/LinearLayout;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/TextView;Lio/didomi/sdk/view/mobile/DidomiToggle;)V
+.method public static final a(Landroidx/fragment/app/Fragment;Lkotlinx/coroutines/flow/u;Lkotlin/jvm/b/l;)Lkotlinx/coroutines/Job;
     .registers 5
-    .param p1    # Landroid/widget/LinearLayout;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p2    # Landroidx/appcompat/widget/AppCompatImageView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p3    # Landroid/widget/TextView;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p4    # Lio/didomi/sdk/view/mobile/DidomiToggle;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lio/didomi/sdk/n2;->a:Landroid/widget/LinearLayout;
-
-    iput-object p2, p0, Lio/didomi/sdk/n2;->b:Landroidx/appcompat/widget/AppCompatImageView;
-
-    iput-object p3, p0, Lio/didomi/sdk/n2;->c:Landroid/widget/TextView;
-
-    iput-object p4, p0, Lio/didomi/sdk/n2;->d:Lio/didomi/sdk/view/mobile/DidomiToggle;
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lio/didomi/sdk/n2;
-    .registers 5
-    .param p0    # Landroid/view/LayoutInflater;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .param p1    # Landroid/view/ViewGroup;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/fragment/app/Fragment;",
+            "Lkotlinx/coroutines/flow/u<",
+            "+TT;>;",
+            "Lkotlin/jvm/b/l<",
+            "-TT;",
+            "Lkotlin/v;",
+            ">;)",
+            "Lkotlinx/coroutines/Job;"
+        }
     .end annotation
 
-    sget v0, Lio/didomi/sdk/R$layout;->didomi_holder_vendors_item:I
+    const-string v0, "<this>"
 
-    const/4 v1, 0x0
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0, p1, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    const-string v0, "stateFlow"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "collector"
+
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-static {p0}, Landroidx/lifecycle/LifecycleOwnerKt;->getLifecycleScope(Landroidx/lifecycle/LifecycleOwner;)Landroidx/lifecycle/LifecycleCoroutineScope;
 
     move-result-object p0
 
-    if-eqz p2, :cond_c
+    new-instance v0, Lio/didomi/sdk/N2$a;
 
-    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    const/4 v1, 0x0
 
-    :cond_c
-    invoke-static {p0}, Lio/didomi/sdk/n2;->a(Landroid/view/View;)Lio/didomi/sdk/n2;
+    invoke-direct {v0, p1, p2, v1}, Lio/didomi/sdk/N2$a;-><init>(Lkotlinx/coroutines/flow/u;Lkotlin/jvm/b/l;Lkotlin/coroutines/d;)V
+
+    invoke-virtual {p0, v0}, Landroidx/lifecycle/LifecycleCoroutineScope;->launchWhenResumed(Lkotlin/jvm/b/p;)Lkotlinx/coroutines/Job;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public static a(Landroid/view/View;)Lio/didomi/sdk/n2;
-    .registers 5
-    .param p0    # Landroid/view/View;
-        .annotation build Landroidx/annotation/NonNull;
-        .end annotation
-    .end param
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    sget v0, Lio/didomi/sdk/R$id;->image_vendor_item:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    if-eqz v1, :cond_26
-
-    sget v0, Lio/didomi/sdk/R$id;->text_vendor_item:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/TextView;
-
-    if-eqz v2, :cond_26
-
-    sget v0, Lio/didomi/sdk/R$id;->toggle_vendor_item:I
-
-    invoke-static {p0, v0}, Landroidx/viewbinding/ViewBindings;->findChildViewById(Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v3
-
-    check-cast v3, Lio/didomi/sdk/view/mobile/DidomiToggle;
-
-    if-eqz v3, :cond_26
-
-    new-instance v0, Lio/didomi/sdk/n2;
-
-    check-cast p0, Landroid/widget/LinearLayout;
-
-    invoke-direct {v0, p0, v1, v2, v3}, Lio/didomi/sdk/n2;-><init>(Landroid/widget/LinearLayout;Landroidx/appcompat/widget/AppCompatImageView;Landroid/widget/TextView;Lio/didomi/sdk/view/mobile/DidomiToggle;)V
-
-    return-object v0
-
-    :cond_26
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "Missing required view with ID: "
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-
-# virtual methods
-.method public a()Landroid/widget/LinearLayout;
-    .registers 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    iget-object v0, p0, Lio/didomi/sdk/n2;->a:Landroid/widget/LinearLayout;
-
-    return-object v0
-.end method
-
-.method public bridge synthetic getRoot()Landroid/view/View;
-    .registers 2
-    .annotation build Landroidx/annotation/NonNull;
-    .end annotation
-
-    invoke-virtual {p0}, Lio/didomi/sdk/n2;->a()Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    return-object v0
 .end method

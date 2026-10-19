@@ -1,0 +1,84 @@
+###### Class kotlin.reflect.full.KClasses.d (kotlin.reflect.full.KClasses$d)
+.class final Lkotlin/reflect/full/KClasses$d;
+.super Lkotlin/jvm/internal/t;
+.source "KClasses.kt"
+
+# interfaces
+.implements Lkotlin/jvm/b/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lkotlin/reflect/full/KClasses;->isSubclassOf(Lkotlin/reflect/KClass;Lkotlin/reflect/KClass;)Z
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/t;",
+        "Lkotlin/jvm/b/l<",
+        "Lkotlin/reflect/KClass<",
+        "*>;",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lkotlin/reflect/KClass;
+
+
+# direct methods
+.method constructor <init>(Lkotlin/reflect/KClass;)V
+    .registers 2
+
+    iput-object p1, p0, Lkotlin/reflect/full/KClasses$d;->a:Lkotlin/reflect/KClass;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/t;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lkotlin/reflect/KClass;)Z
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/reflect/KClass<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lkotlin/reflect/full/KClasses$d;->a:Lkotlin/reflect/KClass;
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 2
+
+    check-cast p1, Lkotlin/reflect/KClass;
+
+    invoke-virtual {p0, p1}, Lkotlin/reflect/full/KClasses$d;->a(Lkotlin/reflect/KClass;)Z
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+.end method

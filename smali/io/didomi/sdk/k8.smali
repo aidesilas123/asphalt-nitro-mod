@@ -1,38 +1,58 @@
-###### Class io.didomi.drawable.C1815k8 (io.didomi.sdk.k8)
-.class public final Lio/didomi/sdk/k8;
-.super Lio/didomi/sdk/H7;
+###### Class io.didomi.drawable.K8 (io.didomi.sdk.K8)
+.class public final Lio/didomi/sdk/K8;
+.super Landroidx/lifecycle/ViewModel;
 .source "SourceFile"
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lio/didomi/sdk/k8$a;
-    }
-.end annotation
-
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0008\u0018\u0000 \u000f2\u00020\u0001:\u0001\u0010B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u000f\u0010\n\u001a\u00020\tH\u0016\u00a2\u0006\u0004\u0008\n\u0010\u000bJ\u000f\u0010\u000c\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\u0003J\u000f\u0010\r\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\r\u0010\u0003J\u000f\u0010\u000e\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u000e\u0010\u0003\u00a8\u0006\u0011"
+        "\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u000b\n\u0002\u0010\u000e\n\u0002\u0008\r\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0007\u0018\u00002\u00020\u0001B9\u0008\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0008\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u000e\u0010\u000fR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0010\u0010\u0011R\u0014\u0010\t\u001a\u00020\u00088\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0012\u0010\u0013R\u0017\u0010\r\u001a\u00020\u000c8\u0006\u00a2\u0006\u000c\n\u0004\u0008\u0014\u0010\u0015\u001a\u0004\u0008\u0016\u0010\u0017R\u0014\u0010\u001b\u001a\u00020\u00188\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0019\u0010\u001aR\u001b\u0010\u001f\u001a\u00020\u00188BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0016\u0010\u001c\u001a\u0004\u0008\u001d\u0010\u001eR\u0014\u0010!\u001a\u00020\u00188\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008 \u0010\u001aR\u0017\u0010\"\u001a\u00020\u00188\u0006\u00a2\u0006\u000c\n\u0004\u0008\u001d\u0010\u001a\u001a\u0004\u0008\u0012\u0010\u001eR\u0011\u0010#\u001a\u00020\u00188F\u00a2\u0006\u0006\u001a\u0004\u0008 \u0010\u001eR\u0011\u0010$\u001a\u00020\u00188F\u00a2\u0006\u0006\u001a\u0004\u0008\u0014\u0010\u001eR\u0011\u0010%\u001a\u00020\u00188F\u00a2\u0006\u0006\u001a\u0004\u0008\u0019\u0010\u001eR\u0011\u0010)\u001a\u00020&8F\u00a2\u0006\u0006\u001a\u0004\u0008\'\u0010(R\u0011\u0010*\u001a\u00020&8F\u00a2\u0006\u0006\u001a\u0004\u0008\u0010\u0010(\u00a8\u0006+"
     }
     d2 = {
-        "Lio/didomi/sdk/k8;",
-        "Lio/didomi/sdk/H7;",
+        "Lio/didomi/sdk/K8;",
+        "Landroidx/lifecycle/ViewModel;",
+        "Lio/didomi/sdk/H;",
+        "configurationRepository",
+        "Lio/didomi/sdk/V;",
+        "consentRepository",
+        "Lio/didomi/sdk/Z;",
+        "contextHelper",
+        "Lio/didomi/sdk/v3;",
+        "languagesHelper",
+        "Lio/didomi/sdk/M8;",
+        "userRepository",
+        "Lio/didomi/sdk/C3;",
+        "logoProvider",
         "<init>",
-        "()V",
-        "Landroid/content/Context;",
-        "context",
-        "",
-        "onAttach",
-        "(Landroid/content/Context;)V",
-        "Lio/didomi/sdk/vendors/ctv/model/TVDataProcessingLegalType;",
-        "d",
-        "()Lio/didomi/sdk/vendors/ctv/model/TVDataProcessingLegalType;",
-        "k",
-        "i",
-        "g",
-        "e",
+        "(Lio/didomi/sdk/H;Lio/didomi/sdk/V;Lio/didomi/sdk/Z;Lio/didomi/sdk/v3;Lio/didomi/sdk/M8;Lio/didomi/sdk/C3;)V",
         "a",
+        "Lio/didomi/sdk/H;",
+        "b",
+        "Lio/didomi/sdk/v3;",
+        "c",
+        "Lio/didomi/sdk/C3;",
+        "e",
+        "()Lio/didomi/sdk/C3;",
+        "",
+        "d",
+        "Ljava/lang/String;",
+        "sdkVersion",
+        "Lkotlin/Lazy;",
+        "g",
+        "()Ljava/lang/String;",
+        "token",
+        "f",
+        "userId",
+        "contentText",
+        "title",
+        "contentTitle",
+        "copiedLabel",
+        "Lio/didomi/sdk/a;",
+        "h",
+        "()Lio/didomi/sdk/a;",
+        "userInfoPanelAccessibility",
+        "closeButtonAccessibility",
         "android_release"
     }
     mv = {
@@ -43,583 +63,369 @@
 .end annotation
 
 
-# static fields
-.field public static final e:Lio/didomi/sdk/k8$a;
+# instance fields
+.field private final a:Lio/didomi/sdk/H;
+
+.field private final b:Lio/didomi/sdk/v3;
+
+.field private final c:Lio/didomi/sdk/C3;
+
+.field private final d:Ljava/lang/String;
+
+.field private final e:Lkotlin/i;
+
+.field private final f:Ljava/lang/String;
+
+.field private final g:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .registers 2
+.method public constructor <init>(Lio/didomi/sdk/H;Lio/didomi/sdk/V;Lio/didomi/sdk/Z;Lio/didomi/sdk/v3;Lio/didomi/sdk/M8;Lio/didomi/sdk/C3;)V
+    .registers 14
 
-    new-instance v0, Lio/didomi/sdk/k8$a;
+    const-string v0, "configurationRepository"
 
-    const/4 v1, 0x0
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lio/didomi/sdk/k8$a;-><init>(Lkotlin/jvm/internal/n;)V
+    const-string v0, "consentRepository"
 
-    sput-object v0, Lio/didomi/sdk/k8;->e:Lio/didomi/sdk/k8$a;
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return-void
-.end method
+    const-string v0, "contextHelper"
 
-.method public constructor <init>()V
-    .registers 1
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lio/didomi/sdk/H7;-><init>()V
+    const-string v0, "languagesHelper"
 
-    return-void
-.end method
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-.method private static final a(Lio/didomi/sdk/D2;Landroid/view/View;)V
-    .registers 2
+    const-string v0, "userRepository"
 
-    const-string p1, "$this_apply"
+    invoke-static {p5, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v0, "logoProvider"
 
-    iget-object p0, p0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
+    invoke-static {p6, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Landroid/widget/CheckBox;->callOnClick()Z
+    invoke-direct {p0}, Landroidx/lifecycle/ViewModel;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lio/didomi/sdk/K8;->a:Lio/didomi/sdk/H;
 
-.method private static final a(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;Landroid/view/View;)V
-    .registers 4
+    iput-object p4, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
 
-    const-string p2, "$this_apply"
+    iput-object p6, p0, Lio/didomi/sdk/K8;->c:Lio/didomi/sdk/C3;
 
-    invoke-static {p0, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string p2, "this$0"
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+    const-string v1, "user_information_sdk_version"
 
-    iget-object p2, p0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
+    const/4 v2, 0x0
 
-    invoke-virtual {p2}, Landroid/widget/CompoundButton;->isChecked()Z
+    const/4 v3, 0x0
 
-    move-result v0
+    const/4 v4, 0x0
 
-    xor-int/lit8 v0, v0, 0x1
+    const/16 v5, 0xe
 
-    invoke-virtual {p2, v0}, Landroid/widget/CompoundButton;->setChecked(Z)V
+    const/4 v6, 0x0
 
-    invoke-virtual {p1}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
+    move-object v0, p4
 
-    move-result-object p2
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
 
-    iget-object v0, p0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
+    move-result-object p6
 
-    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {p1, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    const/16 p6, 0x20
 
-    invoke-virtual {p2, v0}, Lio/didomi/sdk/t8;->d(Z)V
+    invoke-virtual {p1, p6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-object p2, p0, Lio/didomi/sdk/D2;->c:Landroid/widget/TextView;
+    invoke-virtual {p3}, Lio/didomi/sdk/Z;->f()Ljava/lang/String;
 
-    iget-object p0, p0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
+    move-result-object p3
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
+    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p0
-
-    if-eqz p0, :cond_35
-
-    invoke-virtual {p1}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lio/didomi/sdk/t8;->K0()Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_3d
-
-    :cond_35
-    invoke-virtual {p1}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lio/didomi/sdk/t8;->J0()Ljava/lang/String;
-
-    move-result-object p0
-
-    :goto_3d
-    invoke-virtual {p2, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method private static final a(Lio/didomi/sdk/k8;Landroid/view/ViewStub;Landroid/view/View;)V
-    .registers 3
-
-    const-string p1, "this$0"
-
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {p2}, Lio/didomi/sdk/D2;->a(Landroid/view/View;)Lio/didomi/sdk/D2;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lio/didomi/sdk/H7;->a(Lio/didomi/sdk/D2;)V
+    iput-object p1, p0, Lio/didomi/sdk/K8;->d:Ljava/lang/String;
+
+    new-instance p3, Lio/didomi/sdk/K8$a;
+
+    invoke-direct {p3, p2, p0}, Lio/didomi/sdk/K8$a;-><init>(Lio/didomi/sdk/V;Lio/didomi/sdk/K8;)V
+
+    invoke-static {p3}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lio/didomi/sdk/K8;->e:Lkotlin/i;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "user_information_user_id"
+
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p3, ":\n"
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p5}, Lio/didomi/sdk/M8;->b()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lio/didomi/sdk/K8;->f:Ljava/lang/String;
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-direct {p0}, Lio/didomi/sdk/K8;->g()Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p4, "\n\n"
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/didomi/sdk/K8;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static synthetic p(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;Landroid/view/View;)V
-    .registers 3
+.method public static final synthetic a(Lio/didomi/sdk/K8;)Lio/didomi/sdk/v3;
+    .registers 1
 
-    invoke-static {p0, p1, p2}, Lio/didomi/sdk/k8;->a(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;Landroid/view/View;)V
+    iget-object p0, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
 
-    return-void
+    return-object p0
 .end method
 
-.method public static synthetic q(Lio/didomi/sdk/D2;Landroid/view/View;)V
+.method private final g()Ljava/lang/String;
     .registers 2
 
-    invoke-static {p0, p1}, Lio/didomi/sdk/k8;->a(Lio/didomi/sdk/D2;Landroid/view/View;)V
+    iget-object v0, p0, Lio/didomi/sdk/K8;->e:Lkotlin/i;
 
-    return-void
-.end method
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
-.method public static synthetic r(Lio/didomi/sdk/k8;Landroid/view/ViewStub;Landroid/view/View;)V
-    .registers 3
+    move-result-object v0
 
-    invoke-static {p0, p1, p2}, Lio/didomi/sdk/k8;->a(Lio/didomi/sdk/k8;Landroid/view/ViewStub;Landroid/view/View;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public d()Lio/didomi/sdk/vendors/ctv/model/TVDataProcessingLegalType;
-    .registers 2
-
-    sget-object v0, Lio/didomi/sdk/vendors/ctv/model/TVDataProcessingLegalType;->LEGINT:Lio/didomi/sdk/vendors/ctv/model/TVDataProcessingLegalType;
+    check-cast v0, Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public g()V
-    .registers 5
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->a()Lio/didomi/sdk/i1;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1a
-
-    iget-object v0, v0, Lio/didomi/sdk/i1;->e:Landroid/view/ViewStub;
-
-    if-eqz v0, :cond_1a
-
-    new-instance v1, Lio/didomi/sdk/ve;
-
-    invoke-direct {v1, p0}, Lio/didomi/sdk/ve;-><init>(Lio/didomi/sdk/k8;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setOnInflateListener(Landroid/view/ViewStub$OnInflateListener;)V
-
-    sget v1, Lio/didomi/sdk/R$layout;->didomi_view_tv_item_checkbox:I
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
-
-    invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
-
-    :cond_1a
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->b()Lio/didomi/sdk/D2;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_89
-
-    iget-object v1, v0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
-
-    new-instance v2, Lio/didomi/sdk/te;
-
-    invoke-direct {v2, v0, p0}, Lio/didomi/sdk/te;-><init>(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/didomi/sdk/h9;->O()Landroidx/lifecycle/MutableLiveData;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroidx/lifecycle/LiveData;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    if-eqz v1, :cond_46
-
-    iget-object v2, v0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
-
-    sget-object v3, Lio/didomi/sdk/view/mobile/DidomiToggle$b;->d:Lio/didomi/sdk/view/mobile/DidomiToggle$b;
-
-    if-eq v1, v3, :cond_42
-
-    const/4 v1, 0x1
-
-    goto :goto_43
-
-    :cond_42
-    const/4 v1, 0x0
-
-    :goto_43
-    invoke-virtual {v2, v1}, Landroid/widget/CompoundButton;->setChecked(Z)V
-
-    :cond_46
-    iget-object v1, v0, Lio/didomi/sdk/D2;->d:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lio/didomi/sdk/t8;->I0()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v0, Lio/didomi/sdk/D2;->c:Landroid/widget/TextView;
-
-    iget-object v2, v0, Lio/didomi/sdk/D2;->b:Landroidx/appcompat/widget/AppCompatCheckBox;
-
-    invoke-virtual {v2}, Landroid/widget/CompoundButton;->isChecked()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_66
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lio/didomi/sdk/t8;->K0()Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_6e
-
-    :cond_66
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lio/didomi/sdk/t8;->J0()Ljava/lang/String;
-
-    move-result-object v2
-
-    :goto_6e
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v0}, Lio/didomi/sdk/D2;->a()Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    move-result-object v1
-
-    new-instance v2, Lio/didomi/sdk/ue;
-
-    invoke-direct {v2, v0}, Lio/didomi/sdk/ue;-><init>(Lio/didomi/sdk/D2;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0}, Lio/didomi/sdk/D2;->a()Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    move-result-object v0
-
-    const-string v1, "root"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lio/didomi/sdk/H7;->a(Landroid/view/View;)V
-
-    :cond_89
-    return-void
-.end method
-
-.method public i()V
-    .registers 3
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->a()Lio/didomi/sdk/i1;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, v0, Lio/didomi/sdk/i1;->g:Landroid/widget/TextView;
-
-    goto :goto_a
-
-    :cond_9
-    const/4 v0, 0x0
-
-    :goto_a
-    if-nez v0, :cond_d
-
-    goto :goto_18
-
-    :cond_d
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/didomi/sdk/t8;->k0()Landroid/text/SpannedString;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :goto_18
-    return-void
-.end method
-
-.method public k()V
-    .registers 4
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->a()Lio/didomi/sdk/i1;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, v0, Lio/didomi/sdk/i1;->h:Landroid/widget/TextView;
-
-    goto :goto_a
-
-    :cond_9
-    const/4 v0, 0x0
-
-    :goto_a
-    if-nez v0, :cond_d
-
-    goto :goto_29
-
-    :cond_d
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lio/didomi/sdk/h9;->D()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lio/didomi/sdk/H7;->e()Lio/didomi/sdk/t8;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lio/didomi/sdk/t8;->p0()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "toUpperCase(...)"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :goto_29
-    return-void
-.end method
-
-.method public onAttach(Landroid/content/Context;)V
-    .registers 3
-
-    const-string v0, "context"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object v0, Lio/didomi/sdk/Didomi;->Companion:Lio/didomi/sdk/Didomi$Companion;
-
-    invoke-virtual {v0}, Lio/didomi/sdk/Didomi$Companion;->getInstance()Lio/didomi/sdk/Didomi;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lio/didomi/sdk/Didomi;->getComponent$android_release()Lio/didomi/sdk/J0;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Lio/didomi/sdk/J0;->a(Lio/didomi/sdk/k8;)V
-
-    invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onAttach(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-###### Class io.didomi.drawable.C1815k8.Companion (io.didomi.sdk.k8$a)
-.class public final Lio/didomi/sdk/k8$a;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lio/didomi/sdk/k8;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x19
-    name = "a"
-.end annotation
-
-.annotation runtime Lkotlin/Metadata;
-    d1 = {
-        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\u0008\u0086\u0003\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0014\u0010\u0005\u001a\u00020\u00048\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u0006\u00a8\u0006\u0007"
-    }
-    d2 = {
-        "Lio/didomi/sdk/k8$a;",
-        "",
-        "<init>",
-        "()V",
-        "",
-        "TAG",
-        "Ljava/lang/String;",
-        "android_release"
-    }
-    mv = {
-        0x1,
-        0x8,
-        0x0
-    }
-.end annotation
-
-
-# direct methods
-.method private constructor <init>()V
-    .registers 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/n;)V
-    .registers 2
-
-    invoke-direct {p0}, Lio/didomi/sdk/k8$a;-><init>()V
-
-    return-void
-.end method
-
-###### Class io.didomi.drawable.te (io.didomi.sdk.te)
-.class public final synthetic Lio/didomi/sdk/te;
-.super Ljava/lang/Object;
-.source "lambda"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:Lio/didomi/sdk/D2;
-
-.field public final synthetic b:Lio/didomi/sdk/k8;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;)V
-    .registers 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lio/didomi/sdk/te;->a:Lio/didomi/sdk/D2;
-
-    iput-object p2, p0, Lio/didomi/sdk/te;->b:Lio/didomi/sdk/k8;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .registers 4
+.method public final a()Lio/didomi/sdk/a;
+    .registers 11
 
-    iget-object v0, p0, Lio/didomi/sdk/te;->a:Lio/didomi/sdk/D2;
+    new-instance v9, Lio/didomi/sdk/a;
 
-    iget-object v1, p0, Lio/didomi/sdk/te;->b:Lio/didomi/sdk/k8;
+    iget-object v0, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
 
-    invoke-static {v0, v1, p1}, Lio/didomi/sdk/k8;->p(Lio/didomi/sdk/D2;Lio/didomi/sdk/k8;Landroid/view/View;)V
+    const-string v1, "close"
 
-    return-void
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
+
+    const-string v3, "go_back_to_partners_list"
+
+    const/4 v5, 0x0
+
+    const/16 v7, 0xe
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v8}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/16 v7, 0x3c
+
+    move-object v0, v9
+
+    invoke-direct/range {v0 .. v8}, Lio/didomi/sdk/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Integer;ILkotlin/jvm/internal/n;)V
+
+    return-object v9
 .end method
 
-###### Class io.didomi.drawable.ue (io.didomi.sdk.ue)
-.class public final synthetic Lio/didomi/sdk/ue;
-.super Ljava/lang/Object;
-.source "lambda"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:Lio/didomi/sdk/D2;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lio/didomi/sdk/D2;)V
+.method public final b()Ljava/lang/String;
     .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lio/didomi/sdk/K8;->g:Ljava/lang/String;
 
-    iput-object p1, p0, Lio/didomi/sdk/ue;->a:Lio/didomi/sdk/D2;
-
-    return-void
+    return-object v0
 .end method
 
+.method public final c()Ljava/lang/String;
+    .registers 8
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .registers 3
+    iget-object v0, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
 
-    iget-object v0, p0, Lio/didomi/sdk/ue;->a:Lio/didomi/sdk/D2;
+    const-string v1, "user_information_title"
 
-    invoke-static {v0, p1}, Lio/didomi/sdk/k8;->q(Lio/didomi/sdk/D2;Landroid/view/View;)V
+    const/4 v2, 0x0
 
-    return-void
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-###### Class io.didomi.drawable.ve (io.didomi.sdk.ve)
-.class public final synthetic Lio/didomi/sdk/ve;
-.super Ljava/lang/Object;
-.source "lambda"
+.method public final d()Ljava/lang/String;
+    .registers 8
 
-# interfaces
-.implements Landroid/view/ViewStub$OnInflateListener;
+    iget-object v0, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
 
+    const-string v1, "user_information_copied"
 
-# instance fields
-.field public final synthetic a:Lio/didomi/sdk/k8;
+    const/4 v2, 0x0
 
+    const/4 v3, 0x0
 
-# direct methods
-.method public synthetic constructor <init>(Lio/didomi/sdk/k8;)V
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final e()Lio/didomi/sdk/C3;
     .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lio/didomi/sdk/K8;->c:Lio/didomi/sdk/C3;
 
-    iput-object p1, p0, Lio/didomi/sdk/ve;->a:Lio/didomi/sdk/k8;
-
-    return-void
+    return-object v0
 .end method
 
-
-# virtual methods
-.method public final onInflate(Landroid/view/ViewStub;Landroid/view/View;)V
+.method public final f()Ljava/lang/String;
     .registers 4
 
-    iget-object v0, p0, Lio/didomi/sdk/ve;->a:Lio/didomi/sdk/k8;
+    sget-object v0, Lio/didomi/sdk/f4;->a:Lio/didomi/sdk/f4;
 
-    invoke-static {v0, p1, p2}, Lio/didomi/sdk/k8;->r(Lio/didomi/sdk/k8;Landroid/view/ViewStub;Landroid/view/View;)V
+    iget-object v1, p0, Lio/didomi/sdk/K8;->a:Lio/didomi/sdk/H;
 
-    return-void
+    iget-object v2, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
+
+    invoke-virtual {v0, v1, v2}, Lio/didomi/sdk/f4;->a(Lio/didomi/sdk/H;Lio/didomi/sdk/v3;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final h()Lio/didomi/sdk/a;
+    .registers 11
+
+    new-instance v9, Lio/didomi/sdk/a;
+
+    iget-object v0, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
+
+    const-string v1, "user_information_description"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/16 v5, 0xe
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v0 .. v6}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lio/didomi/sdk/K8;->b:Lio/didomi/sdk/v3;
+
+    const-string v3, "copy_to_clipboard_action"
+
+    const/4 v5, 0x0
+
+    const/16 v7, 0xe
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v2 .. v8}, Lio/didomi/sdk/v3;->a(Lio/didomi/sdk/v3;Ljava/lang/String;Lio/didomi/sdk/W5;Ljava/util/Map;Ljava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/16 v7, 0x3c
+
+    move-object v0, v9
+
+    invoke-direct/range {v0 .. v8}, Lio/didomi/sdk/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Integer;ILkotlin/jvm/internal/n;)V
+
+    return-object v9
 .end method

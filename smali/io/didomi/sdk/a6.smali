@@ -1,325 +1,185 @@
-###### Class io.didomi.drawable.C1713a6 (io.didomi.sdk.a6)
-.class public final Lio/didomi/sdk/a6;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.A6 (io.didomi.sdk.A6)
+.class public final Lio/didomi/sdk/A6;
+.super Lio/didomi/sdk/M6;
 .source "SourceFile"
-
-# interfaces
-.implements Ldagger/internal/b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ldagger/internal/b<",
-        "Lio/didomi/sdk/c6;",
-        ">;"
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0005\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J8\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\u00062!\u0010\u000e\u001a\u001d\u0012\u0013\u0012\u00110\t\u00a2\u0006\u000c\u0008\n\u0012\u0008\u0008\u000b\u0012\u0004\u0008\u0008(\u000c\u0012\u0004\u0012\u00020\r0\u0008\u00a2\u0006\u0004\u0008\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\u0011\u00a8\u0006\u0012"
+    }
+    d2 = {
+        "Lio/didomi/sdk/A6;",
+        "Lio/didomi/sdk/M6;",
+        "Lio/didomi/sdk/I1;",
+        "binding",
+        "<init>",
+        "(Lio/didomi/sdk/I1;)V",
+        "Lio/didomi/sdk/J6$c;",
+        "bulk",
+        "Lkotlin/Function1;",
+        "",
+        "Lkotlin/ParameterName;",
+        "name",
+        "isChecked",
+        "",
+        "callback",
+        "a",
+        "(Lio/didomi/sdk/J6$c;Lkotlin/jvm/functions/Function1;)V",
+        "Lio/didomi/sdk/I1;",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lio/didomi/sdk/Z5;
-
-.field private final b:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final c:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final d:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final e:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final f:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final g:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/P3;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final h:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final i:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lkotlinx/coroutines/r;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final a:Lio/didomi/sdk/I1;
 
 
 # direct methods
-.method public constructor <init>(Lio/didomi/sdk/Z5;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
-    .registers 10
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/Z5;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;",
-            "Le/a/a<",
-            "Lkotlinx/coroutines/r;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>(Lio/didomi/sdk/I1;)V
+    .registers 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "binding"
 
-    iput-object p1, p0, Lio/didomi/sdk/a6;->a:Lio/didomi/sdk/Z5;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p2, p0, Lio/didomi/sdk/a6;->b:Le/a/a;
+    invoke-direct {p0, p1}, Lio/didomi/sdk/M6;-><init>(Landroidx/viewbinding/ViewBinding;)V
 
-    iput-object p3, p0, Lio/didomi/sdk/a6;->c:Le/a/a;
-
-    iput-object p4, p0, Lio/didomi/sdk/a6;->d:Le/a/a;
-
-    iput-object p5, p0, Lio/didomi/sdk/a6;->e:Le/a/a;
-
-    iput-object p6, p0, Lio/didomi/sdk/a6;->f:Le/a/a;
-
-    iput-object p7, p0, Lio/didomi/sdk/a6;->g:Le/a/a;
-
-    iput-object p8, p0, Lio/didomi/sdk/a6;->h:Le/a/a;
-
-    iput-object p9, p0, Lio/didomi/sdk/a6;->i:Le/a/a;
+    iput-object p1, p0, Lio/didomi/sdk/A6;->a:Lio/didomi/sdk/I1;
 
     return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/Z5;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)Lio/didomi/sdk/a6;
-    .registers 20
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/Z5;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/Z2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/V;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/apiEvents/b;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/M2;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P3;",
-            ">;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/P8;",
-            ">;",
-            "Le/a/a<",
-            "Lkotlinx/coroutines/r;",
-            ">;)",
-            "Lio/didomi/sdk/a6;"
-        }
-    .end annotation
+.method private static final a(Lio/didomi/sdk/I1;Landroid/view/View;)V
+    .registers 2
 
-    new-instance v10, Lio/didomi/sdk/a6;
+    const-string p1, "$this_apply"
 
-    move-object v0, v10
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    move-object v1, p0
+    iget-object p0, p0, Lio/didomi/sdk/I1;->b:Lio/didomi/sdk/view/ctv/DidomiTVSwitch;
 
-    move-object v2, p1
+    invoke-virtual {p0}, Landroid/widget/FrameLayout;->callOnClick()Z
 
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    invoke-direct/range {v0 .. v9}, Lio/didomi/sdk/a6;-><init>(Lio/didomi/sdk/Z5;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;Le/a/a;)V
-
-    return-object v10
+    return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/Z5;Lio/didomi/sdk/H;Lio/didomi/sdk/Z2;Lio/didomi/sdk/V;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/M2;Lio/didomi/sdk/P3;Lio/didomi/sdk/P8;Lkotlinx/coroutines/r;)Lio/didomi/sdk/c6;
-    .registers 9
+.method private static final a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+    .registers 2
 
-    invoke-virtual/range {p0 .. p8}, Lio/didomi/sdk/Z5;->a(Lio/didomi/sdk/H;Lio/didomi/sdk/Z2;Lio/didomi/sdk/V;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/M2;Lio/didomi/sdk/P3;Lio/didomi/sdk/P8;Lkotlinx/coroutines/r;)Lio/didomi/sdk/c6;
+    const-string v0, "$this_apply"
 
-    move-result-object p0
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    invoke-virtual {p0, v0}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setAnimate(Z)V
 
-    check-cast p0, Lio/didomi/sdk/c6;
+    return-void
+.end method
 
-    return-object p0
+.method public static synthetic b(Lio/didomi/sdk/I1;Landroid/view/View;)V
+    .registers 2
+
+    invoke-static {p0, p1}, Lio/didomi/sdk/A6;->a(Lio/didomi/sdk/I1;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public static synthetic c(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+    .registers 1
+
+    invoke-static {p0}, Lio/didomi/sdk/A6;->a(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()Lio/didomi/sdk/c6;
-    .registers 10
+.method public final a(Lio/didomi/sdk/J6$c;Lkotlin/jvm/b/l;)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/didomi/sdk/J6$c;",
+            "Lkotlin/jvm/b/l<",
+            "-",
+            "Ljava/lang/Boolean;",
+            "Lkotlin/v;",
+            ">;)V"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lio/didomi/sdk/a6;->a:Lio/didomi/sdk/Z5;
+    const-string v0, "bulk"
 
-    iget-object v1, p0, Lio/didomi/sdk/a6;->b:Le/a/a;
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Le/a/a;->get()Ljava/lang/Object;
+    const-string v0, "callback"
 
-    move-result-object v1
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v1, Lio/didomi/sdk/H;
+    iget-object v0, p0, Lio/didomi/sdk/A6;->a:Lio/didomi/sdk/I1;
 
-    iget-object v2, p0, Lio/didomi/sdk/a6;->c:Le/a/a;
+    iget-object v1, v0, Lio/didomi/sdk/I1;->d:Landroid/widget/TextView;
 
-    invoke-interface {v2}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/didomi/sdk/J6$c;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lio/didomi/sdk/Z2;
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v3, p0, Lio/didomi/sdk/a6;->d:Le/a/a;
+    iget-object v1, v0, Lio/didomi/sdk/I1;->c:Landroid/widget/TextView;
 
-    invoke-interface {v3}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/didomi/sdk/J6$c;->c()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    check-cast v3, Lio/didomi/sdk/V;
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v4, p0, Lio/didomi/sdk/a6;->e:Le/a/a;
+    iget-object v1, v0, Lio/didomi/sdk/I1;->b:Lio/didomi/sdk/view/ctv/DidomiTVSwitch;
 
-    invoke-interface {v4}, Le/a/a;->get()Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setCallback(Lio/didomi/sdk/view/ctv/DidomiTVSwitch$a;)V
 
-    check-cast v4, Lio/didomi/sdk/apiEvents/b;
+    const/4 v2, 0x0
 
-    iget-object v5, p0, Lio/didomi/sdk/a6;->f:Le/a/a;
+    invoke-virtual {v1, v2}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setAnimate(Z)V
 
-    invoke-interface {v5}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/didomi/sdk/J6$c;->e()Z
 
-    move-result-object v5
+    move-result p1
 
-    check-cast v5, Lio/didomi/sdk/M2;
+    invoke-virtual {v1, p1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setChecked(Z)V
 
-    iget-object v6, p0, Lio/didomi/sdk/a6;->g:Le/a/a;
+    new-instance p1, Lio/didomi/sdk/A6$a;
 
-    invoke-interface {v6}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-direct {p1, p2}, Lio/didomi/sdk/A6$a;-><init>(Lkotlin/jvm/b/l;)V
 
-    move-result-object v6
+    invoke-virtual {v1, p1}, Lio/didomi/sdk/view/ctv/DidomiTVSwitch;->setCallback(Lio/didomi/sdk/view/ctv/DidomiTVSwitch$a;)V
 
-    check-cast v6, Lio/didomi/sdk/P3;
+    new-instance p1, Lio/didomi/sdk/p9;
 
-    iget-object v7, p0, Lio/didomi/sdk/a6;->h:Le/a/a;
+    invoke-direct {p1, v1}, Lio/didomi/sdk/p9;-><init>(Lio/didomi/sdk/view/ctv/DidomiTVSwitch;)V
 
-    invoke-interface {v7}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    move-result-object v7
+    invoke-virtual {v0}, Lio/didomi/sdk/I1;->a()Landroidx/constraintlayout/widget/ConstraintLayout;
 
-    check-cast v7, Lio/didomi/sdk/P8;
+    move-result-object p1
 
-    iget-object v8, p0, Lio/didomi/sdk/a6;->i:Le/a/a;
+    new-instance p2, Lio/didomi/sdk/o9;
 
-    invoke-interface {v8}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-direct {p2, v0}, Lio/didomi/sdk/o9;-><init>(Lio/didomi/sdk/I1;)V
 
-    move-result-object v8
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    check-cast v8, Lkotlinx/coroutines/r;
-
-    invoke-static/range {v0 .. v8}, Lio/didomi/sdk/a6;->a(Lio/didomi/sdk/Z5;Lio/didomi/sdk/H;Lio/didomi/sdk/Z2;Lio/didomi/sdk/V;Lio/didomi/sdk/apiEvents/b;Lio/didomi/sdk/M2;Lio/didomi/sdk/P3;Lio/didomi/sdk/P8;Lkotlinx/coroutines/r;)Lio/didomi/sdk/c6;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic get()Ljava/lang/Object;
-    .registers 2
-
-    invoke-virtual {p0}, Lio/didomi/sdk/a6;->a()Lio/didomi/sdk/c6;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,0 +1,154 @@
+###### Class com.google.common.collect.SortedLists.KeyAbsentBehavior (com.google.common.collect.SortedLists$KeyAbsentBehavior)
+.class abstract enum Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+.super Ljava/lang/Enum;
+.source "SortedLists.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/SortedLists;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4408
+    name = "KeyAbsentBehavior"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+.field public static final enum b:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+.field public static final enum c:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+.field private static final synthetic d:[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 3
+
+    new-instance v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$a;
+
+    const-string v1, "NEXT_LOWER"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$a;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->a:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    new-instance v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$b;
+
+    const-string v1, "NEXT_HIGHER"
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->b:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    new-instance v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$c;
+
+    const-string v1, "INVERTED_INSERTION_INDEX"
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior$c;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->c:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    invoke-static {}, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->e()[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->d:[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
+    .registers 3
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;ILcom/google/common/collect/SortedLists$a;)V
+    .registers 4
+
+    invoke-direct {p0, p1, p2}, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method private static synthetic e()[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+    .registers 3
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    sget-object v1, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->a:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->b:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->c:Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    const/4 v2, 0x2
+
+    aput-object v1, v0, v2
+
+    return-object v0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+    .registers 2
+
+    const-class v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    return-object p0
+.end method
+
+.method public static values()[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+    .registers 1
+
+    sget-object v0, Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->d:[Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    invoke-virtual {v0}, [Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/google/common/collect/SortedLists$KeyAbsentBehavior;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method abstract f(I)I
+.end method

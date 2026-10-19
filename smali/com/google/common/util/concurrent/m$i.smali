@@ -1,0 +1,29 @@
+###### Class com.google.common.util.concurrent.m.i (com.google.common.util.concurrent.m$i)
+.class interface abstract Lcom/google/common/util/concurrent/m$i;
+.super Ljava/lang/Object;
+.source "AbstractFuture.java"
+
+# interfaces
+.implements Lcom/google/common/util/concurrent/h0;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/util/concurrent/m;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "i"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/google/common/util/concurrent/h0<",
+        "TV;>;"
+    }
+.end annotation

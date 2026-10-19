@@ -1,0 +1,15 @@
+###### Class com.ironsource.m6.a (com.ironsource.m6$a)
+.class synthetic Lcom/ironsource/m6$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/ironsource/m6;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1008
+    name = null
+.end annotation

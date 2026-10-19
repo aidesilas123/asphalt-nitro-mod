@@ -1,149 +1,238 @@
-###### Class io.didomi.drawable.N (io.didomi.sdk.N)
-.class public final Lio/didomi/sdk/N;
-.super Ljava/lang/Object;
+###### Class io.didomi.drawable.AbstractActivityC1836n (io.didomi.sdk.n)
+.class public abstract Lio/didomi/sdk/n;
+.super Landroidx/appcompat/app/AppCompatActivity;
 .source "SourceFile"
-
-# interfaces
-.implements Ldagger/internal/b;
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ldagger/internal/b<",
-        "Lio/didomi/sdk/s3;",
-        ">;"
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0005\n\u0002\u0010\t\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008&\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0004\u00a2\u0006\u0004\u0008\u0005\u0010\u0003J\u000f\u0010\u0006\u001a\u00020\u0004H\u0004\u00a2\u0006\u0004\u0008\u0006\u0010\u0003R\u001b\u0010\u000c\u001a\u00020\u00078BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\t\u001a\u0004\u0008\n\u0010\u000bR\u001b\u0010\u0011\u001a\u00020\r8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008\u000e\u0010\t\u001a\u0004\u0008\u000f\u0010\u0010R\"\u0010\u0018\u001a\u00020\u00128\u0004@\u0004X\u0084.\u00a2\u0006\u0012\n\u0004\u0008\u0013\u0010\u0014\u001a\u0004\u0008\u0015\u0010\u0016\"\u0004\u0008\u0008\u0010\u0017\u00a8\u0006\u0019"
+    }
+    d2 = {
+        "Lio/didomi/sdk/n;",
+        "Landroidx/appcompat/app/AppCompatActivity;",
+        "<init>",
+        "()V",
+        "",
+        "g",
+        "h",
+        "",
+        "a",
+        "Lkotlin/Lazy;",
+        "j",
+        "()F",
+        "backgroundAlpha",
+        "",
+        "b",
+        "k",
+        "()J",
+        "fadeDuration",
+        "Landroid/view/View;",
+        "c",
+        "Landroid/view/View;",
+        "i",
+        "()Landroid/view/View;",
+        "(Landroid/view/View;)V",
+        "background",
+        "android_release"
+    }
+    mv = {
+        0x1,
+        0x8,
+        0x0
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lio/didomi/sdk/L;
+.field private final a:Lkotlin/i;
 
-.field private final b:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final b:Lkotlin/i;
 
-.field private final c:Le/a/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Le/a/a<",
-            "Landroid/content/Context;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field protected c:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lio/didomi/sdk/L;Le/a/a;Le/a/a;)V
-    .registers 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/L;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Landroid/content/Context;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .registers 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroidx/appcompat/app/AppCompatActivity;-><init>()V
 
-    iput-object p1, p0, Lio/didomi/sdk/N;->a:Lio/didomi/sdk/L;
+    new-instance v0, Lio/didomi/sdk/n$a;
 
-    iput-object p2, p0, Lio/didomi/sdk/N;->b:Le/a/a;
+    invoke-direct {v0, p0}, Lio/didomi/sdk/n$a;-><init>(Lio/didomi/sdk/n;)V
 
-    iput-object p3, p0, Lio/didomi/sdk/N;->c:Le/a/a;
+    invoke-static {v0}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lio/didomi/sdk/n;->a:Lkotlin/i;
+
+    new-instance v0, Lio/didomi/sdk/n$b;
+
+    invoke-direct {v0, p0}, Lio/didomi/sdk/n$b;-><init>(Lio/didomi/sdk/n;)V
+
+    invoke-static {v0}, Lkotlin/j;->lazy(Lkotlin/jvm/b/a;)Lkotlin/i;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lio/didomi/sdk/n;->b:Lkotlin/i;
 
     return-void
 .end method
 
-.method public static a(Lio/didomi/sdk/L;Le/a/a;Le/a/a;)Lio/didomi/sdk/N;
-    .registers 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lio/didomi/sdk/L;",
-            "Le/a/a<",
-            "Lio/didomi/sdk/H;",
-            ">;",
-            "Le/a/a<",
-            "Landroid/content/Context;",
-            ">;)",
-            "Lio/didomi/sdk/N;"
-        }
-    .end annotation
+.method private final j()F
+    .registers 2
 
-    new-instance v0, Lio/didomi/sdk/N;
+    iget-object v0, p0, Lio/didomi/sdk/n;->a:Lkotlin/i;
 
-    invoke-direct {v0, p0, p1, p2}, Lio/didomi/sdk/N;-><init>(Lio/didomi/sdk/L;Le/a/a;Le/a/a;)V
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
-    return-object v0
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+
+    move-result v0
+
+    return v0
 .end method
 
-.method public static a(Lio/didomi/sdk/L;Lio/didomi/sdk/H;Landroid/content/Context;)Lio/didomi/sdk/s3;
+.method private final k()J
     .registers 3
 
-    invoke-virtual {p0, p1, p2}, Lio/didomi/sdk/L;->a(Lio/didomi/sdk/H;Landroid/content/Context;)Lio/didomi/sdk/s3;
+    iget-object v0, p0, Lio/didomi/sdk/n;->b:Lkotlin/i;
 
-    move-result-object p0
+    invoke-interface {v0}, Lkotlin/i;->getValue()Ljava/lang/Object;
 
-    invoke-static {p0}, Ldagger/internal/Preconditions;->checkNotNullFromProvides(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    check-cast v0, Ljava/lang/Number;
 
-    check-cast p0, Lio/didomi/sdk/s3;
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    return-object p0
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 
 # virtual methods
-.method public a()Lio/didomi/sdk/s3;
+.method protected final a(Landroid/view/View;)V
+    .registers 3
+
+    const-string v0, "<set-?>"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lio/didomi/sdk/n;->c:Landroid/view/View;
+
+    return-void
+.end method
+
+.method protected final g()V
     .registers 4
 
-    iget-object v0, p0, Lio/didomi/sdk/N;->a:Lio/didomi/sdk/L;
+    invoke-virtual {p0}, Lio/didomi/sdk/n;->i()Landroid/view/View;
 
-    iget-object v1, p0, Lio/didomi/sdk/N;->b:Le/a/a;
+    move-result-object v0
 
-    invoke-interface {v1}, Le/a/a;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lio/didomi/sdk/n;->j()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lio/didomi/sdk/n;->k()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    return-void
+.end method
+
+.method protected final h()V
+    .registers 5
+
+    invoke-virtual {p0}, Lio/didomi/sdk/n;->i()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
+
+    invoke-direct {p0}, Lio/didomi/sdk/n;->j()F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+
+    invoke-virtual {v0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    check-cast v1, Lio/didomi/sdk/H;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lio/didomi/sdk/N;->c:Le/a/a;
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
-    invoke-interface {v2}, Le/a/a;->get()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-direct {p0}, Lio/didomi/sdk/n;->k()J
 
-    check-cast v2, Landroid/content/Context;
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lio/didomi/sdk/N;->a(Lio/didomi/sdk/L;Lio/didomi/sdk/H;Landroid/content/Context;)Lio/didomi/sdk/s3;
+    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v0
+    move-result-object v1
 
-    return-object v0
+    new-instance v2, Lio/didomi/sdk/n$c;
+
+    invoke-direct {v2, v0}, Lio/didomi/sdk/n$c;-><init>(Landroid/view/View;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    return-void
 .end method
 
-.method public bridge synthetic get()Ljava/lang/Object;
+.method protected final i()Landroid/view/View;
     .registers 2
 
-    invoke-virtual {p0}, Lio/didomi/sdk/N;->a()Lio/didomi/sdk/s3;
+    iget-object v0, p0, Lio/didomi/sdk/n;->c:Landroid/view/View;
 
-    move-result-object v0
+    if-eqz v0, :cond_5
+
+    return-object v0
+
+    :cond_5
+    const-string v0, "background"
+
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->throwUninitializedPropertyAccessException(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

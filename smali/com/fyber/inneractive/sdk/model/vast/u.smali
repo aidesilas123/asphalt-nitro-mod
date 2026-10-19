@@ -255,29 +255,3 @@
 
     return-object v0
 .end method
-
-###### Class com.fyber.inneractive.sdk.model.vast.u.a (com.fyber.inneractive.sdk.model.vast.u$a)
-.class public Lcom/fyber/inneractive/sdk/model/vast/u$a;
-.super Ljava/lang/Exception;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/fyber/inneractive/sdk/model/vast/u;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "a"
-.end annotation
-
-
-# direct methods
-.method public constructor <init>()V
-    .registers 1
-
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
-
-    return-void
-.end method

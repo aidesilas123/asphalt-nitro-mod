@@ -1,0 +1,34 @@
+###### Class com.google.android.gms.games.internal.zze.zzcf (com.google.android.gms.games.internal.zze$zzcf)
+.class final Lcom/google/android/gms/games/internal/zze$zzcf;
+.super Lcom/google/android/gms/games/internal/zze$zzb;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/gms/games/internal/zze;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "zzcf"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/common/data/DataHolder;)V
+    .registers 2
+
+    invoke-direct {p0, p1}, Lcom/google/android/gms/games/internal/zze$zzb;-><init>(Lcom/google/android/gms/common/data/DataHolder;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/Room;I)V
+    .registers 4
+
+    invoke-interface {p1, p3, p2}, Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;->onRoomCreated(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V
+
+    return-void
+.end method

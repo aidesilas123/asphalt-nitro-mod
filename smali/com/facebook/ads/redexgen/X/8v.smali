@@ -1,136 +1,116 @@
-###### Class com.facebook.ads.redexgen.X.C08648v (com.facebook.ads.redexgen.X.8v)
-.class public final Lcom/facebook/ads/redexgen/X/8v;
+###### Class com.facebook.ads.redexgen.X.C8V (com.facebook.ads.redexgen.X.8V)
+.class public final Lcom/facebook/ads/redexgen/X/8V;
 .super Ljava/lang/Object;
 .source ""
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/8w;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/facebook/ads/redexgen/X/8W;->A02(Lcom/facebook/ads/redexgen/X/7S;)Ljava/lang/String;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "NumberedRecordFile"
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Ljava/lang/String;",
+        ">;"
+    }
 .end annotation
 
 
 # instance fields
-.field public final A00:I
-
-.field public final A01:Lcom/facebook/ads/redexgen/X/8s;
+.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/7S;
 
 
 # direct methods
-.method public constructor <init>(ILcom/facebook/ads/redexgen/X/8s;)V
-    .registers 3
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/7S;)V
+    .registers 2
+
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/8V;->A00:Lcom/facebook/ads/redexgen/X/7S;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/facebook/ads/redexgen/X/8v;->A00:I
-
-    iput-object p2, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
     return-void
+.end method
+
+.method private final A00()Ljava/lang/String;
+    .registers 4
+
+    invoke-static {}, Lcom/facebook/ads/redexgen/X/8W;->A07()Ljava/util/concurrent/atomic/AtomicReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_d
+
+    return-object v0
+
+    :cond_d
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8V;->A00:Lcom/facebook/ads/redexgen/X/7S;
+
+    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/7S;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v2, Landroid/webkit/WebView;
+
+    invoke-direct {v2, v0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Lcom/facebook/ads/redexgen/X/8U;
+
+    invoke-direct {v0, p0}, Lcom/facebook/ads/redexgen/X/8U;-><init>(Lcom/facebook/ads/redexgen/X/8V;)V
+
+    invoke-virtual {v2, v0}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->destroy()V
+
+    if-eqz v1, :cond_34
+
+    invoke-static {}, Lcom/facebook/ads/redexgen/X/8W;->A07()Ljava/util/concurrent/atomic/AtomicReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    :cond_34
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public final A00()I
-    .registers 2
-
-    iget v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A00:I
-
-    return v0
-.end method
-
-.method public final A01()I
+.method public final bridge synthetic call()Ljava/lang/Object;
     .registers 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Ljava/io/IOException;
+            Ljava/lang/Exception;
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/8s;->A05()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final A02(I[BI[II)Lcom/facebook/ads/redexgen/X/8j;
-    .registers 12
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
-    move v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lcom/facebook/ads/redexgen/X/8s;->A06(I[BI[II)Lcom/facebook/ads/redexgen/X/8j;
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/8V;->A00()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final A03()V
-    .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/8s;->A07()V
-
-    return-void
-.end method
-
-.method public final A04()V
-    .registers 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/8s;->A08()V
-
-    return-void
-.end method
-
-.method public final A05([B)Z
-    .registers 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8v;->A01:Lcom/facebook/ads/redexgen/X/8s;
-
-    invoke-virtual {v0, p1}, Lcom/facebook/ads/redexgen/X/8s;->A09([B)Z
-
-    move-result v0
-
-    return v0
 .end method

@@ -35,35 +35,3 @@
 
     return-void
 .end method
-
-###### Class com.fyber.inneractive.sdk.ignite.g.a (com.fyber.inneractive.sdk.ignite.g$a)
-.class public interface abstract Lcom/fyber/inneractive/sdk/ignite/g$a;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/fyber/inneractive/sdk/ignite/g;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
-    name = "a"
-.end annotation
-
-###### Class com.fyber.inneractive.sdk.ignite.g.b (com.fyber.inneractive.sdk.ignite.g$b)
-.class public interface abstract Lcom/fyber/inneractive/sdk/ignite/g$b;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/fyber/inneractive/sdk/ignite/g;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
-    name = "b"
-.end annotation

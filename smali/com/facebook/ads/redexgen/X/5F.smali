@@ -1,259 +1,128 @@
-###### Class com.facebook.ads.redexgen.X.C5F (com.facebook.ads.redexgen.X.5F)
-.class public final synthetic Lcom/facebook/ads/redexgen/X/5F;
+###### Class com.facebook.ads.redexgen.X.C07825f (com.facebook.ads.redexgen.X.5f)
+.class public final Lcom/facebook/ads/redexgen/X/5f;
 .super Ljava/lang/Object;
 .source ""
 
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/5J;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1009
-    name = null
-.end annotation
-
-
-# static fields
-.field public static final synthetic A00:[I
+# interfaces
+.implements Lcom/facebook/ads/internal/api/NativeBannerAdViewApi;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .registers 3
+.method public constructor <init>()V
+    .registers 1
 
-    invoke-static {}, Lcom/facebook/ads/redexgen/X/Jq;->values()[Lcom/facebook/ads/redexgen/X/Jq;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static A00(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/NativeBannerAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)Landroid/view/View;
+    .registers 8
+
+    if-nez p3, :cond_7
+
+    new-instance p3, Lcom/facebook/ads/NativeAdViewAttributes;
+
+    invoke-direct {p3}, Lcom/facebook/ads/NativeAdViewAttributes;-><init>()V
+
+    :cond_7
+    invoke-virtual {p1}, Lcom/facebook/ads/NativeBannerAd;->getInternalNativeAd()Lcom/facebook/ads/internal/api/NativeAdBaseApi;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/UJ;->A0L(Lcom/facebook/ads/internal/api/NativeAdBaseApi;)Lcom/facebook/ads/redexgen/X/UJ;
 
-    new-array v2, v0, [I
+    move-result-object v1
 
-    sput-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+    invoke-virtual {p2}, Lcom/facebook/ads/NativeBannerAdView$Type;->getEnumCode()I
 
-    :try_start_9
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A08:Lcom/facebook/ads/redexgen/X/Jq;
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/J7;->A00(I)Lcom/facebook/ads/redexgen/X/J7;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v0, 0x1
+    invoke-virtual {v1, v0}, Lcom/facebook/ads/redexgen/X/UJ;->A1X(Lcom/facebook/ads/redexgen/X/J7;)V
 
-    aput v0, v2, v1
-    :try_end_12
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_12} :catch_12
+    new-instance v1, Lcom/facebook/ads/redexgen/X/EA;
 
-    :catch_12
-    :try_start_12
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+    invoke-direct {v1}, Lcom/facebook/ads/redexgen/X/EA;-><init>()V
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0D:Lcom/facebook/ads/redexgen/X/Jq;
+    new-instance v3, Lcom/facebook/ads/NativeAdLayout;
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    invoke-direct {v3, p0, v1}, Lcom/facebook/ads/NativeAdLayout;-><init>(Landroid/content/Context;Lcom/facebook/ads/internal/api/NativeAdLayoutApi;)V
 
-    move-result v1
+    invoke-virtual {p3}, Lcom/facebook/ads/NativeAdViewAttributes;->getInternalAttributes()Lcom/facebook/ads/internal/api/NativeAdViewAttributesApi;
 
-    const/4 v0, 0x2
+    move-result-object v0
 
-    aput v0, v2, v1
-    :try_end_1d
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_12 .. :try_end_1d} :catch_1d
+    check-cast v0, Lcom/facebook/ads/redexgen/X/J6;
 
-    :catch_1d
-    :try_start_1d
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+    invoke-virtual {v1, p0, p1, v0, v3}, Lcom/facebook/ads/redexgen/X/EA;->A04(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/redexgen/X/J6;Lcom/facebook/ads/NativeAdLayout;)V
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0F:Lcom/facebook/ads/redexgen/X/Jq;
+    sget v1, Lcom/facebook/ads/redexgen/X/Ku;->A02:F
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    invoke-virtual {p2}, Lcom/facebook/ads/NativeBannerAdView$Type;->getHeight()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v0, 0x3
+    int-to-float v0, v0
 
-    aput v0, v2, v1
-    :try_end_28
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1d .. :try_end_28} :catch_28
+    mul-float/2addr v1, v0
 
-    :catch_28
-    :try_start_28
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+    float-to-int v2, v1
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0E:Lcom/facebook/ads/redexgen/X/Jq;
+    const/4 v1, -0x1
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
-    move-result v1
+    invoke-direct {v0, v1, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    const/4 v0, 0x4
+    invoke-virtual {v3, v0}, Lcom/facebook/ads/NativeAdLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    aput v0, v2, v1
-    :try_end_33
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_28 .. :try_end_33} :catch_33
+    return-object v3
+.end method
 
-    :catch_33
-    :try_start_33
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A02:Lcom/facebook/ads/redexgen/X/Jq;
+# virtual methods
+.method public final render(Landroid/content/Context;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/NativeBannerAdView$Type;)Landroid/view/View;
+    .registers 5
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    const/4 v0, 0x0
 
-    move-result v1
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/facebook/ads/redexgen/X/5f;->render(Landroid/content/Context;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/NativeBannerAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)Landroid/view/View;
 
-    const/4 v0, 0x5
+    move-result-object v0
 
-    aput v0, v2, v1
-    :try_end_3e
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_33 .. :try_end_3e} :catch_3e
+    return-object v0
+.end method
 
-    :catch_3e
-    :try_start_3e
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+.method public final render(Landroid/content/Context;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/NativeBannerAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)Landroid/view/View;
+    .registers 7
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0C:Lcom/facebook/ads/redexgen/X/Jq;
+    :try_start_0
+    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/5Q;->A02(Landroid/content/Context;)Lcom/facebook/ads/redexgen/X/YA;
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    invoke-static {v0, p2, p3, p4}, Lcom/facebook/ads/redexgen/X/5f;->A00(Lcom/facebook/ads/redexgen/X/YA;Lcom/facebook/ads/NativeBannerAd;Lcom/facebook/ads/NativeBannerAdView$Type;Lcom/facebook/ads/NativeAdViewAttributes;)Landroid/view/View;
 
-    const/4 v0, 0x6
+    move-result-object v0
 
-    aput v0, v2, v1
-    :try_end_49
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3e .. :try_end_49} :catch_49
+    return-object v0
+    :try_end_9
+    .catchall {:try_start_0 .. :try_end_9} :catchall_9
 
-    :catch_49
-    :try_start_49
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
+    :catchall_9
+    move-exception v1
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0A:Lcom/facebook/ads/redexgen/X/Jq;
+    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/5Q;->A02(Landroid/content/Context;)Lcom/facebook/ads/redexgen/X/YA;
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    invoke-static {v0, v1}, Lcom/facebook/ads/redexgen/X/M4;->A00(Lcom/facebook/ads/redexgen/X/YA;Ljava/lang/Throwable;)Landroid/view/View;
 
-    const/4 v0, 0x7
+    move-result-object v0
 
-    aput v0, v2, v1
-    :try_end_54
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_49 .. :try_end_54} :catch_54
-
-    :catch_54
-    :try_start_54
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A09:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0x8
-
-    aput v0, v2, v1
-    :try_end_60
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_54 .. :try_end_60} :catch_60
-
-    :catch_60
-    :try_start_60
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A0B:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0x9
-
-    aput v0, v2, v1
-    :try_end_6c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_60 .. :try_end_6c} :catch_6c
-
-    :catch_6c
-    :try_start_6c
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A06:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0xa
-
-    aput v0, v2, v1
-    :try_end_78
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6c .. :try_end_78} :catch_78
-
-    :catch_78
-    :try_start_78
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A05:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0xb
-
-    aput v0, v2, v1
-    :try_end_84
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_78 .. :try_end_84} :catch_84
-
-    :catch_84
-    :try_start_84
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A07:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0xc
-
-    aput v0, v2, v1
-    :try_end_90
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_84 .. :try_end_90} :catch_90
-
-    :catch_90
-    :try_start_90
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A04:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0xd
-
-    aput v0, v2, v1
-    :try_end_9c
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_90 .. :try_end_9c} :catch_9c
-
-    :catch_9c
-    :try_start_9c
-    sget-object v2, Lcom/facebook/ads/redexgen/X/5F;->A00:[I
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Jq;->A03:Lcom/facebook/ads/redexgen/X/Jq;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Jq;->ordinal()I
-
-    move-result v1
-
-    const/16 v0, 0xe
-
-    aput v0, v2, v1
-    :try_end_a8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9c .. :try_end_a8} :catch_a8
-
-    :catch_a8
-    return-void
+    return-object v0
 .end method

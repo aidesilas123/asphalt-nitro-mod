@@ -1882,35 +1882,3 @@
     :cond_78
     return v1
 .end method
-
-###### Class com.fyber.inneractive.sdk.flow.vast.d.a (com.fyber.inneractive.sdk.flow.vast.d$a)
-.class public Lcom/fyber/inneractive/sdk/flow/vast/d$a;
-.super Ljava/lang/Exception;
-.source "SourceFile"
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/fyber/inneractive/sdk/flow/vast/d;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = "a"
-.end annotation
-
-
-# instance fields
-.field public a:I
-
-
-# direct methods
-.method public constructor <init>(Lcom/fyber/inneractive/sdk/flow/vast/d;Ljava/lang/String;I)V
-    .registers 4
-
-    invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    iput p3, p0, Lcom/fyber/inneractive/sdk/flow/vast/d$a;->a:I
-
-    return-void
-.end method
