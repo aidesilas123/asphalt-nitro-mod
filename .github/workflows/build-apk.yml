@@ -43,8 +43,12 @@ jobs:
 
       - name: Split Combined Smali Classes
         run: |
-          echo "Splitting multi-class smali files..."
-          python3 tools/split_smali.py smali
+          if [ -f "tools/split_smali.py" ]; then
+            echo "Checking multi-class smali files..."
+            python3 tools/split_smali.py smali
+          else
+            echo "Smali files already split, proceeding..."
+          fi
 
       - name: Build APK with Apktool
         run: |

@@ -5,8 +5,9 @@ dist/
 *.idsig
 
 # Build tools cache
-tools/
 bin/
+tools/*.jar
+*.jar
 
 # OS and Python artifacts
 __pycache__/

@@ -1,0 +1,41 @@
+###### Class com.mbridge.msdk.foundation.tools.v (com.mbridge.msdk.foundation.tools.v)
+.class public final Lcom/mbridge/msdk/foundation/tools/v;
+.super Ljava/lang/Object;
+.source "SameDeviceTimeTool.java"
+
+
+# direct methods
+.method public static final a()J
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    :try_start_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    sub-long/2addr v2, v4
+
+    cmp-long v4, v2, v0
+
+    if-lez v4, :cond_15
+
+    const-wide/16 v4, 0xa
+
+    div-long/2addr v2, v4
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_12} :catch_15
+
+    mul-long v2, v2, v4
+
+    return-wide v2
+
+    :catch_15
+    :cond_15
+    return-wide v0
+.end method
