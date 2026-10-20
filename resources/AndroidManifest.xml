@@ -378,33 +378,33 @@
             android:authorities="com.gameloft.android.ANMP.GloftAGHM.vungle-provider"/>
         <activity
             android:theme="@style/Didomi.Theme.TVActivityDialog"
-            android:name="io.didomi.drawable.preferences.ctv.TVPreferencesDialogActivity"
+            android:name="io.didomi.sdk.preferences.ctv.TVPreferencesDialogActivity"
             android:launchMode="singleTop"/>
         <activity
             android:theme="@style/Didomi.Theme.TVActivityDialog"
-            android:name="io.didomi.drawable.notice.ctv.TVNoticeDialogActivity"
+            android:name="io.didomi.sdk.notice.ctv.TVNoticeDialogActivity"
             android:launchMode="singleTop"/>
         <activity
-            android:name="com.json.sdk.controller.ControllerActivity"
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
             android:configChanges="screenSize|orientation"
             android:hardwareAccelerated="true"/>
         <activity
             android:theme="@android:style/Theme.Translucent"
-            android:name="com.json.sdk.controller.InterstitialActivity"
+            android:name="com.ironsource.sdk.controller.InterstitialActivity"
             android:configChanges="screenSize|orientation"
             android:hardwareAccelerated="true"/>
         <activity
             android:theme="@android:style/Theme.Translucent"
-            android:name="com.json.sdk.controller.OpenUrlActivity"
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
             android:configChanges="screenSize|orientation"
             android:hardwareAccelerated="true"/>
         <activity
             android:theme="@android:style/Theme.NoTitleBar"
-            android:name="com.json.mediationsdk.testSuite.TestSuiteActivity"
+            android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity"
             android:configChanges="screenSize|orientation"
             android:hardwareAccelerated="true"/>
         <provider
-            android:name="com.json.lifecycle.IronsourceLifecycleProvider"
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
             android:authorities="com.gameloft.android.ANMP.GloftAGHM.IronsourceLifecycleProvider"/>
         <activity
             android:theme="@style/hyprmx_ActivityTheme"
@@ -657,12 +657,12 @@
             android:exported="false"
             android:directBootAware="false"/>
         <receiver
-            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
             android:enabled="true"
             android:exported="false"
             android:directBootAware="false"/>
         <receiver
-            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
             android:enabled="false"
             android:exported="false"
             android:directBootAware="false">
@@ -672,7 +672,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
             android:enabled="false"
             android:exported="false"
             android:directBootAware="false">
@@ -682,7 +682,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
             android:enabled="false"
             android:exported="false"
             android:directBootAware="false">
@@ -692,7 +692,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy"
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
             android:enabled="false"
             android:exported="false"
             android:directBootAware="false">
@@ -885,7 +885,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.facebook.AuthenticationTokenManager.CurrentAuthenticationTokenChangedBroadcastReceiver"
+            android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
