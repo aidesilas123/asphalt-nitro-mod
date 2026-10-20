@@ -1,438 +1,327 @@
-###### Class com.facebook.ads.redexgen.X.C06630n (com.facebook.ads.redexgen.X.0n)
-.class public final Lcom/facebook/ads/redexgen/X/0n;
-.super Ljava/lang/Object;
+.class public final Lcom/facebook/ads/redexgen/X/0N;
+.super Ljava/io/BufferedInputStream;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-    }
-.end annotation
-
-
-# static fields
-.field public static A06:[B
-
-.field public static A07:[Ljava/lang/String;
-
-
 # instance fields
-.field public A00:J
+.field public A00:I
 
-.field public A01:Landroid/app/Application;
+.field public A01:I
 
-.field public A02:Lcom/facebook/ads/redexgen/X/0f;
-
-.field public A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-.field public A04:Ljava/lang/String;
-
-.field public final A05:Lcom/facebook/ads/redexgen/X/If;
+.field public A02:Z
 
 
 # direct methods
-.method public static constructor <clinit>()V
+.method public constructor <init>(Ljava/io/InputStream;)V
     .registers 3
 
-    const/16 v0, 0x8
+    .line 1925
+    invoke-direct {p0, p1}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    new-array v2, v0, [Ljava/lang/String;
+    .line 1926
+    const v0, 0x7fffffff
 
-    const/4 v1, 0x0
+    iput v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
 
-    const-string v0, "jY95Z4e8SjES"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x1
-
-    const-string v0, "FWAQk0vwFzOT3H3ejUps9E7fwyQUHgqv"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x2
-
-    const-string v0, "R9UUrzGy7cjs1hDg6byYlCYbXfp8nW0w"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x3
-
-    const-string v0, "dKAdSxu4tDkfYe86wdSSQ2n2Du5"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x4
-
-    const-string v0, "FgFVZj7d091u9rUO"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x5
-
-    const-string v0, "kSt0PMlvWs2DEAK3GKEU98UDJan6EgWc"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x6
-
-    const-string v0, "nGXCIrfUxBd8PJB10o2gs7oQf"
-
-    aput-object v0, v2, v1
-
-    const/4 v1, 0x7
-
-    const-string v0, "n"
-
-    aput-object v0, v2, v1
-
-    sput-object v2, Lcom/facebook/ads/redexgen/X/0n;->A07:[Ljava/lang/String;
-
-    invoke-static {}, Lcom/facebook/ads/redexgen/X/0n;->A03()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/If;Landroid/app/Activity;I)V
-    .registers 6
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A00:J
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A04:Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A02:Lcom/facebook/ads/redexgen/X/0f;
-
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/0n;->A05:Lcom/facebook/ads/redexgen/X/If;
-
-    invoke-virtual {p2}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A01:Landroid/app/Application;
-
-    new-instance v0, Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-    invoke-direct {v0, p2, p0}, Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;-><init>(Landroid/app/Activity;Lcom/facebook/ads/redexgen/X/0n;)V
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-    return-void
-.end method
-
-.method public static A00(Lcom/facebook/ads/redexgen/X/If;Landroid/app/Activity;)Lcom/facebook/ads/redexgen/X/0n;
-    .registers 3
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-static {p0, p1, v0}, Lcom/facebook/ads/redexgen/X/0n;->A01(Lcom/facebook/ads/redexgen/X/If;Landroid/app/Activity;I)Lcom/facebook/ads/redexgen/X/0n;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static A01(Lcom/facebook/ads/redexgen/X/If;Landroid/app/Activity;I)Lcom/facebook/ads/redexgen/X/0n;
-    .registers 4
-
-    if-eqz p1, :cond_c
-
-    const/16 v0, 0xe
-
-    if-lt p2, v0, :cond_c
-
-    new-instance v0, Lcom/facebook/ads/redexgen/X/0n;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/facebook/ads/redexgen/X/0n;-><init>(Lcom/facebook/ads/redexgen/X/If;Landroid/app/Activity;I)V
-
-    return-object v0
-
-    :cond_c
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public static A02(III)Ljava/lang/String;
-    .registers 5
-
-    sget-object v1, Lcom/facebook/ads/redexgen/X/0n;->A06:[B
-
-    add-int v0, p0, p1
-
-    invoke-static {v1, p0, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    :goto_9
-    array-length v0, p0
-
-    if-ge v1, v0, :cond_17
-
-    aget-byte v0, p0, v1
-
-    xor-int/2addr v0, p2
-
-    xor-int/lit8 v0, v0, 0x6c
-
-    int-to-byte v0, v0
-
-    aput-byte v0, p0, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_9
-
-    :cond_17
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
-
-    return-object v0
-.end method
-
-.method public static A03()V
-    .registers 1
-
-    const/16 v0, 0x1a
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_a
-
-    sput-object v0, Lcom/facebook/ads/redexgen/X/0n;->A06:[B
-
-    return-void
-
-    :array_a
-    .array-data 1
-        0x2ct
-        0x2ft
-        0x2dt
-        0x25t
-        0x11t
-        0x3at
-        0x27t
-        0x23t
-        0x2bt
-        0x8t
-        0x1t
-        0x5t
-        0x12t
-        0x1t
-        0x3bt
-        0x10t
-        0xdt
-        0x9t
-        0x1t
-        0xat
-        0x10t
-        0x11t
-        0x6t
-        0xat
-        0x8t
-        0x0t
-    .end array-data
-.end method
-
-.method private A04(Ljava/lang/String;JJLcom/facebook/ads/redexgen/X/0f;)V
-    .registers 11
-
-    new-instance v3, Ljava/util/HashMap;
-
-    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
-
-    const/16 v2, 0x9
-
-    const/16 v1, 0xa
-
-    const/16 v0, 0x8
-
-    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/0n;->A02(III)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/16 v1, 0x9
-
-    const/16 v0, 0x22
-
-    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/0n;->A02(III)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p4, p5}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p6, :cond_38
-
-    const/16 v2, 0x13
-
-    const/4 v1, 0x7
-
-    const/16 v0, 0x9
-
-    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/0n;->A02(III)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p6}, Lcom/facebook/ads/redexgen/X/0f;->name()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_38
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A05:Lcom/facebook/ads/redexgen/X/If;
-
-    invoke-interface {v0, p1, v3}, Lcom/facebook/ads/redexgen/X/If;->A9p(Ljava/lang/String;Ljava/util/Map;)V
-
+    .line 1927
     return-void
 .end method
 
 
 # virtual methods
-.method public final A05()V
-    .registers 8
-
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/0n;->A04:Ljava/lang/String;
-
-    iget-wide v2, p0, Lcom/facebook/ads/redexgen/X/0n;->A00:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    iget-object v6, p0, Lcom/facebook/ads/redexgen/X/0n;->A02:Lcom/facebook/ads/redexgen/X/0f;
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v6}, Lcom/facebook/ads/redexgen/X/0n;->A04(Ljava/lang/String;JJLcom/facebook/ads/redexgen/X/0f;)V
-
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/0n;->A01:Landroid/app/Application;
-
-    if-eqz v1, :cond_1e
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-    if-eqz v0, :cond_1e
-
-    invoke-virtual {v1, v0}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-    iput-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A01:Landroid/app/Application;
-
-    :cond_1e
-    return-void
-.end method
-
-.method public final A06(Lcom/facebook/ads/redexgen/X/0f;)V
+.method public final A00()Z
     .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/0n;->A02:Lcom/facebook/ads/redexgen/X/0f;
+    .line 1928
+    iget-boolean v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A02:Z
 
-    return-void
+    return v0
 .end method
 
-.method public final A07(Ljava/lang/String;)V
-    .registers 12
+.method public final declared-synchronized mark(I)V
+    .registers 3
 
-    move-object v4, p1
+    monitor-enter p0
 
-    iput-object v4, p0, Lcom/facebook/ads/redexgen/X/0n;->A04:Ljava/lang/String;
+    .line 1929
+    :try_start_1
+    iput p1, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
+    .line 1930
+    invoke-super {p0, p1}, Ljava/io/BufferedInputStream;->mark(I)V
+    :try_end_6
+    .catchall {:try_start_1 .. :try_end_6} :catchall_8
 
-    if-eqz v0, :cond_19
+    .line 1931
+    monitor-exit p0
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A01:Landroid/app/Application;
-
-    if-eqz v0, :cond_19
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A00:J
-
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/0n;->A01:Landroid/app/Application;
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/0n;->A03:Lcom/facebook/ads/internal/action/UserReturnTracker$UserReturnListener;
-
-    invoke-virtual {v1, v0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
-
-    :goto_18
     return-void
 
-    :cond_19
-    const-wide/16 v5, -0x1
+    .line 1932
+    .end local v0
+    .end local p0    # "this":Lcom/facebook/ads/redexgen/X/0N;
+    :catchall_8
+    move-exception v0
 
-    const-wide/16 v7, -0x1
+    monitor-exit p0
 
-    sget-object v9, Lcom/facebook/ads/redexgen/X/0f;->A03:Lcom/facebook/ads/redexgen/X/0f;
+    throw v0
+.end method
 
-    move-object v3, p0
+.method public final read()I
+    .registers 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
 
-    sget-object v1, Lcom/facebook/ads/redexgen/X/0n;->A07:[Ljava/lang/String;
+    .line 1933
+    iget v3, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
 
-    const/4 v0, 0x2
+    add-int/lit8 v2, v3, 0x1
 
-    aget-object v1, v1, v0
-
-    const/4 v0, 0x6
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v1
-
-    const/16 v0, 0x39
-
-    if-eq v1, v0, :cond_3e
-
-    sget-object v2, Lcom/facebook/ads/redexgen/X/0n;->A07:[Ljava/lang/String;
-
-    const-string v1, "8mgXQ8lZ1oxTn8xtWXCDJO1aYxf7Xnbe"
-
-    const/4 v0, 0x5
-
-    aput-object v1, v2, v0
-
-    const-string v1, "RSHxB9AoZRnm9g8NXStW2wWwzMRvBUbh"
+    iget v1, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    if-le v2, v1, :cond_d
 
-    invoke-direct/range {v3 .. v9}, Lcom/facebook/ads/redexgen/X/0n;->A04(Ljava/lang/String;JJLcom/facebook/ads/redexgen/X/0f;)V
+    .line 1934
+    iput-boolean v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A02:Z
 
-    goto :goto_18
+    .line 1935
+    const/4 v0, -0x1
 
-    :cond_3e
-    new-instance v0, Ljava/lang/RuntimeException;
+    return v0
 
-    invoke-direct {v0}, Ljava/lang/RuntimeException;-><init>()V
+    .line 1936
+    :cond_d
+    add-int/2addr v3, v0
+
+    iput v3, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    .line 1937
+    invoke-super {p0}, Ljava/io/BufferedInputStream;->read()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final read([B)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1938
+    iget v1, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    array-length v0, p1
+
+    add-int/2addr v1, v0
+
+    iget v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
+
+    if-le v1, v0, :cond_d
+
+    .line 1939
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A02:Z
+
+    .line 1940
+    const/4 v0, -0x1
+
+    return v0
+
+    .line 1941
+    :cond_d
+    invoke-super {p0, p1}, Ljava/io/BufferedInputStream;->read([B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final declared-synchronized read([BII)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1942
+    :try_start_1
+    iget v1, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    add-int/2addr v1, p3
+
+    iget v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
+
+    if-le v1, v0, :cond_e
+
+    .line 1943
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A02:Z
+    :try_end_b
+    .catchall {:try_start_1 .. :try_end_b} :catchall_19
+
+    .line 1944
+    monitor-exit p0
+
+    const/4 v0, -0x1
+
+    return v0
+
+    .line 1945
+    .end local p0    # "this":Lcom/facebook/ads/redexgen/X/0N;
+    :cond_e
+    :try_start_e
+    invoke-super {p0, p1, p2, p3}, Ljava/io/BufferedInputStream;->read([BII)I
+
+    move-result v1
+
+    .line 1946
+    .local v0, "read":I
+    iget v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+    :try_end_17
+    .catchall {:try_start_e .. :try_end_17} :catchall_19
+
+    .line 1947
+    monitor-exit p0
+
+    return v1
+
+    .line 1948
+    .end local v0    # "read":I
+    .end local p1    # null:[B
+    .end local p2    # null:I
+    .end local p3    # null:I
+    :catchall_19
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized reset()V
+    .registers 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1949
+    const v0, 0x7fffffff
+
+    :try_start_4
+    iput v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
+
+    .line 1950
+    invoke-super {p0}, Ljava/io/BufferedInputStream;->reset()V
+    :try_end_9
+    .catchall {:try_start_4 .. :try_end_9} :catchall_b
+
+    .line 1951
+    monitor-exit p0
+
+    return-void
+
+    .line 1952
+    .end local p0    # "this":Lcom/facebook/ads/redexgen/X/0N;
+    :catchall_b
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized skip(J)J
+    .registers 9
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 1953
+    :try_start_1
+    iget v5, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    int-to-long v3, v5
+
+    add-long/2addr v3, p1
+
+    iget v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A00:I
+
+    int-to-long v1, v0
+
+    cmp-long v0, v3, v1
+
+    if-lez v0, :cond_13
+
+    .line 1954
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A02:Z
+    :try_end_f
+    .catchall {:try_start_1 .. :try_end_f} :catchall_1e
+
+    .line 1955
+    monitor-exit p0
+
+    const-wide/16 v0, 0x0
+
+    return-wide v0
+
+    .line 1956
+    .end local p0    # "this":Lcom/facebook/ads/redexgen/X/0N;
+    :cond_13
+    int-to-long v1, v5
+
+    add-long/2addr v1, p1
+
+    long-to-int v0, v1
+
+    :try_start_16
+    iput v0, p0, Lcom/facebook/ads/redexgen/X/0N;->A01:I
+
+    .line 1957
+    invoke-super {p0, p1, p2}, Ljava/io/BufferedInputStream;->skip(J)J
+
+    move-result-wide v0
+    :try_end_1c
+    .catchall {:try_start_16 .. :try_end_1c} :catchall_1e
+
+    monitor-exit p0
+
+    return-wide v0
+
+    .line 1958
+    .end local p1    # null:J
+    :catchall_1e
+    move-exception v0
+
+    monitor-exit p0
 
     throw v0
 .end method

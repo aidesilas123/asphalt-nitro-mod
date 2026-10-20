@@ -1,64 +1,47 @@
-###### Class com.facebook.ads.redexgen.X.C08598q (com.facebook.ads.redexgen.X.8q)
-.class public final Lcom/facebook/ads/redexgen/X/8q;
-.super Lcom/facebook/ads/redexgen/X/MI;
+.class public final Lcom/facebook/ads/redexgen/X/8Q;
+.super Ljava/lang/Object;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/SM;
+    value = Lcom/facebook/ads/redexgen/X/8R;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
+    accessFlags = 0x9
+    name = "ParameterFilters"
 .end annotation
 
 
-# instance fields
-.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/SM;
-
-
 # direct methods
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/SM;)V
-    .registers 2
+.method public constructor <init>()V
+    .registers 1
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/8q;->A00:Lcom/facebook/ads/redexgen/X/SM;
-
-    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/MI;-><init>()V
+    .line 19113
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final A00(Lcom/facebook/ads/redexgen/X/MJ;)V
-    .registers 3
+.method public static A00()Lcom/facebook/ads/redexgen/X/Xh;
+    .registers 1
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8q;->A00:Lcom/facebook/ads/redexgen/X/SM;
+    .line 19114
+    new-instance v0, Lcom/facebook/ads/redexgen/X/Xh;
 
-    iget-object v0, v0, Lcom/facebook/ads/redexgen/X/Ow;->A08:Lcom/facebook/ads/redexgen/X/LN;
+    invoke-direct {v0}, Lcom/facebook/ads/redexgen/X/Xh;-><init>()V
 
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/LN;->A07()Z
-
-    move-result v0
-
-    if-nez v0, :cond_f
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8q;->A00:Lcom/facebook/ads/redexgen/X/SM;
-
-    invoke-virtual {v0}, Lcom/facebook/ads/redexgen/X/Ow;->A03()V
-
-    :cond_f
-    return-void
+    return-object v0
 .end method
 
-
-# virtual methods
-.method public final bridge synthetic A03(Lcom/facebook/ads/redexgen/X/8Y;)V
+.method public static varargs A01([Ljava/lang/String;)Lcom/facebook/ads/redexgen/X/Xg;
     .registers 2
 
-    check-cast p1, Lcom/facebook/ads/redexgen/X/MJ;
+    .line 19115
+    new-instance v0, Lcom/facebook/ads/redexgen/X/Xg;
 
-    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/8q;->A00(Lcom/facebook/ads/redexgen/X/MJ;)V
+    invoke-direct {v0, p0}, Lcom/facebook/ads/redexgen/X/Xg;-><init>([Ljava/lang/String;)V
 
-    return-void
+    return-object v0
 .end method

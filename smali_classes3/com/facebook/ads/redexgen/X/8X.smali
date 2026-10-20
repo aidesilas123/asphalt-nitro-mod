@@ -1,6 +1,5 @@
-###### Class com.facebook.ads.redexgen.X.C08668x (com.facebook.ads.redexgen.X.8x)
-.class public final Lcom/facebook/ads/redexgen/X/8x;
-.super Lcom/facebook/ads/redexgen/X/MA;
+.class public final Lcom/facebook/ads/redexgen/X/8X;
+.super Lcom/facebook/ads/redexgen/X/M9;
 .source ""
 
 
@@ -23,22 +22,40 @@
 .method public constructor <init>(Lcom/facebook/ads/redexgen/X/SM;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/8x;->A00:Lcom/facebook/ads/redexgen/X/SM;
+    .line 19236
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/8X;->A00:Lcom/facebook/ads/redexgen/X/SM;
 
-    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/MA;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/M9;-><init>()V
 
     return-void
 .end method
 
-.method private final A00(Lcom/facebook/ads/redexgen/X/MD;)V
+.method private final A00(Lcom/facebook/ads/redexgen/X/71;)V
     .registers 4
 
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/8x;->A00:Lcom/facebook/ads/redexgen/X/SM;
+    .line 19237
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8X;->A00:Lcom/facebook/ads/redexgen/X/SM;
 
-    const/4 v0, 0x1
+    invoke-static {v0, p1}, Lcom/facebook/ads/redexgen/X/SM;->A0F(Lcom/facebook/ads/redexgen/X/SM;Lcom/facebook/ads/redexgen/X/71;)V
 
-    invoke-static {v1, v0}, Lcom/facebook/ads/redexgen/X/SM;->A0J(Lcom/facebook/ads/redexgen/X/SM;Z)Z
+    .line 19238
+    invoke-virtual {p1}, Lcom/facebook/ads/redexgen/X/P7;->A00()I
 
+    move-result v0
+
+    int-to-float v1, v0
+
+    .line 19239
+    .local v0, "currentPosMs":F
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/8X;->A00:Lcom/facebook/ads/redexgen/X/SM;
+
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/SM;->A06(Lcom/facebook/ads/redexgen/X/SM;)Lcom/facebook/ads/redexgen/X/P0;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1}, Lcom/facebook/ads/redexgen/X/P0;->ABO(F)V
+
+    .line 19240
     return-void
 .end method
 
@@ -47,9 +64,10 @@
 .method public final bridge synthetic A03(Lcom/facebook/ads/redexgen/X/8Y;)V
     .registers 2
 
-    check-cast p1, Lcom/facebook/ads/redexgen/X/MD;
+    .line 19241
+    check-cast p1, Lcom/facebook/ads/redexgen/X/71;
 
-    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/8x;->A00(Lcom/facebook/ads/redexgen/X/MD;)V
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/8X;->A00(Lcom/facebook/ads/redexgen/X/71;)V
 
     return-void
 .end method

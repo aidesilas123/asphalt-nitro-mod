@@ -1,93 +1,88 @@
-###### Class com.facebook.ads.redexgen.X.C5N (com.facebook.ads.redexgen.X.5N)
-.class public final Lcom/facebook/ads/redexgen/X/5N;
+.class public final Lcom/facebook/ads/redexgen/X/5n;
 .super Ljava/lang/Object;
 .source ""
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/ads/redexgen/X/Yn;->A0E(Landroid/view/View;)V
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1
-    name = null
-.end annotation
+.implements Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdShowConfigBuilder;
+.implements Lcom/facebook/ads/RewardedVideoAd$RewardedVideoShowAdConfig;
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/Yn;
+.field public A00:I
 
-.field public final synthetic A01:Lcom/facebook/ads/redexgen/X/NJ;
+.field public A01:J
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/Yn;Lcom/facebook/ads/redexgen/X/NJ;)V
-    .registers 3
+.method public constructor <init>()V
+    .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/5N;->A00:Lcom/facebook/ads/redexgen/X/Yn;
-
-    iput-object p2, p0, Lcom/facebook/ads/redexgen/X/5N;->A01:Lcom/facebook/ads/redexgen/X/NJ;
-
+    .line 15178
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 15179
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/facebook/ads/redexgen/X/5n;->A00:I
+
+    .line 15180
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .registers 7
+.method public final A00()I
+    .registers 2
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/5N;->A00:Lcom/facebook/ads/redexgen/X/Yn;
+    .line 15181
+    iget v0, p0, Lcom/facebook/ads/redexgen/X/5n;->A00:I
 
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/Yn;->A00(Lcom/facebook/ads/redexgen/X/Yn;)Landroid/view/View;
+    return v0
+.end method
+
+.method public final A01()J
+    .registers 3
+
+    .line 15182
+    iget-wide v0, p0, Lcom/facebook/ads/redexgen/X/5n;->A01:J
+
+    return-wide v0
+.end method
+
+.method public final A02(J)Lcom/facebook/ads/redexgen/X/5n;
+    .registers 3
+
+    .line 15183
+    iput-wide p1, p0, Lcom/facebook/ads/redexgen/X/5n;->A01:J
+
+    .line 15184
+    return-object p0
+.end method
+
+.method public final bridge synthetic build()Lcom/facebook/ads/FullScreenAd$ShowAdConfig;
+    .registers 2
+
+    .line 15185
+    invoke-virtual {p0}, Lcom/facebook/ads/redexgen/X/5n;->build()Lcom/facebook/ads/RewardedVideoAd$RewardedVideoShowAdConfig;
 
     move-result-object v0
 
-    const/4 v4, 0x1
+    return-object v0
+.end method
 
-    if-eqz v0, :cond_2d
+.method public final build()Lcom/facebook/ads/RewardedVideoAd$RewardedVideoShowAdConfig;
+    .registers 1
 
-    iget-object v3, p0, Lcom/facebook/ads/redexgen/X/5N;->A01:Lcom/facebook/ads/redexgen/X/NJ;
+    .line 15186
+    return-object p0
+.end method
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/5N;->A00:Lcom/facebook/ads/redexgen/X/Yn;
+.method public final withAppOrientation(I)Lcom/facebook/ads/RewardedVideoAd$RewardedVideoAdShowConfigBuilder;
+    .registers 2
 
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/Yn;->A00(Lcom/facebook/ads/redexgen/X/Yn;)Landroid/view/View;
+    .line 15187
+    iput p1, p0, Lcom/facebook/ads/redexgen/X/5n;->A00:I
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/5N;->A00:Lcom/facebook/ads/redexgen/X/Yn;
-
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/Yn;->A00(Lcom/facebook/ads/redexgen/X/Yn;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {v3, v0, v0, v2, v1}, Lcom/facebook/ads/redexgen/X/NJ;->setBounds(IIII)V
-
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/5N;->A01:Lcom/facebook/ads/redexgen/X/NJ;
-
-    invoke-virtual {v1}, Lcom/facebook/ads/redexgen/X/NJ;->A0E()Z
-
-    move-result v0
-
-    xor-int/2addr v0, v4
-
-    invoke-virtual {v1, v0}, Lcom/facebook/ads/redexgen/X/NJ;->A0D(Z)V
-
-    :cond_2d
-    return v4
+    .line 15188
+    return-object p0
 .end method

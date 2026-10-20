@@ -1,12 +1,11 @@
-###### Class com.facebook.ads.redexgen.X.C08196x (com.facebook.ads.redexgen.X.6x)
-.class public final Lcom/facebook/ads/redexgen/X/6x;
-.super Lcom/facebook/ads/redexgen/X/M9;
+.class public final Lcom/facebook/ads/redexgen/X/6X;
+.super Lcom/facebook/ads/redexgen/X/MI;
 .source ""
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/K2;
+    value = Lcom/facebook/ads/redexgen/X/6E;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,54 +15,36 @@
 
 
 # instance fields
-.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/K2;
+.field public final synthetic A00:Lcom/facebook/ads/redexgen/X/6E;
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/ads/redexgen/X/K2;)V
+.method public constructor <init>(Lcom/facebook/ads/redexgen/X/6E;)V
     .registers 2
 
-    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/6x;->A00:Lcom/facebook/ads/redexgen/X/K2;
+    .line 16224
+    iput-object p1, p0, Lcom/facebook/ads/redexgen/X/6X;->A00:Lcom/facebook/ads/redexgen/X/6E;
 
-    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/M9;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/MI;-><init>()V
 
     return-void
 .end method
 
-.method private final A00(Lcom/facebook/ads/redexgen/X/71;)V
-    .registers 5
+.method private final A00(Lcom/facebook/ads/redexgen/X/MJ;)V
+    .registers 4
 
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6x;->A00:Lcom/facebook/ads/redexgen/X/K2;
+    .line 16225
+    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6X;->A00:Lcom/facebook/ads/redexgen/X/6E;
 
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/K2;->A08(Lcom/facebook/ads/redexgen/X/K2;)Z
+    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/6E;->A06(Lcom/facebook/ads/redexgen/X/6E;)Lcom/facebook/ads/redexgen/X/Q4;
 
-    move-result v0
-
-    if-nez v0, :cond_1e
-
-    iget-object v1, p0, Lcom/facebook/ads/redexgen/X/6x;->A00:Lcom/facebook/ads/redexgen/X/K2;
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/Q5;->A05:Lcom/facebook/ads/redexgen/X/Q5;
-
-    invoke-static {v1, v0}, Lcom/facebook/ads/redexgen/X/K2;->A0A(Lcom/facebook/ads/redexgen/X/K2;Lcom/facebook/ads/redexgen/X/Q5;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1e
-
-    iget-object v0, p0, Lcom/facebook/ads/redexgen/X/6x;->A00:Lcom/facebook/ads/redexgen/X/K2;
-
-    invoke-static {v0}, Lcom/facebook/ads/redexgen/X/K2;->A04(Lcom/facebook/ads/redexgen/X/K2;)V
-
-    iget-object v2, p0, Lcom/facebook/ads/redexgen/X/6x;->A00:Lcom/facebook/ads/redexgen/X/K2;
-
-    const/4 v1, 0x1
+    move-result-object v1
 
     const/4 v0, 0x0
 
-    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/K2;->A05(Lcom/facebook/ads/redexgen/X/K2;ZZ)V
+    invoke-virtual {v1, v0}, Lcom/facebook/ads/redexgen/X/Q4;->setChecked(Z)V
 
-    :cond_1e
+    .line 16226
     return-void
 .end method
 
@@ -72,9 +53,10 @@
 .method public final bridge synthetic A03(Lcom/facebook/ads/redexgen/X/8Y;)V
     .registers 2
 
-    check-cast p1, Lcom/facebook/ads/redexgen/X/71;
+    .line 16227
+    check-cast p1, Lcom/facebook/ads/redexgen/X/MJ;
 
-    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/6x;->A00(Lcom/facebook/ads/redexgen/X/71;)V
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/6X;->A00(Lcom/facebook/ads/redexgen/X/MJ;)V
 
     return-void
 .end method

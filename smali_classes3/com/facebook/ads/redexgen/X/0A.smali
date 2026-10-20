@@ -1,110 +1,214 @@
-###### Class com.facebook.ads.redexgen.X.C06510a (com.facebook.ads.redexgen.X.0a)
-.class public Lcom/facebook/ads/redexgen/X/0a;
-.super Lcom/facebook/ads/redexgen/X/0c;
+.class public final Lcom/facebook/ads/redexgen/X/0A;
+.super Ljava/lang/Object;
 .source ""
 
 
-# annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/facebook/ads/redexgen/X/3H;
-.end annotation
-
-.annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
-    name = "ViewCompatApi21Impl"
-.end annotation
+# static fields
+.field public static A00:[B
 
 
 # direct methods
+.method public static constructor <clinit>()V
+    .registers 0
+
+    invoke-static {}, Lcom/facebook/ads/redexgen/X/0A;->A02()V
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .registers 1
 
-    invoke-direct {p0}, Lcom/facebook/ads/redexgen/X/0c;-><init>()V
+    .line 1787
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static A00(III)Ljava/lang/String;
+    .registers 5
+
+    sget-object v1, Lcom/facebook/ads/redexgen/X/0A;->A00:[B
+
+    add-int v0, p0, p1
+
+    invoke-static {v1, p0, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    :goto_9
+    array-length v0, p0
+
+    if-ge v1, v0, :cond_17
+
+    aget-byte v0, p0, v1
+
+    xor-int/2addr v0, p2
+
+    xor-int/lit8 v0, v0, 0x40
+
+    int-to-byte v0, v0
+
+    aput-byte v0, p0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_9
+
+    :cond_17
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p0}, Ljava/lang/String;-><init>([B)V
+
+    return-object v0
+.end method
+
+.method private A01(Ljava/lang/String;)Ljava/lang/String;
+    .registers 5
+
+    .line 1788
+    const/16 v0, 0x2e
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v2
+
+    .line 1789
+    .local v0, "dotIndex":I
+    const/16 v0, 0x2f
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(I)I
+
+    move-result v1
+
+    .line 1790
+    .local v1, "slashIndex":I
+    const/4 v0, -0x1
+
+    if-eq v2, v0, :cond_26
+
+    if-le v2, v1, :cond_26
+
+    add-int/lit8 v0, v2, 0x2
+
+    add-int/lit8 v1, v0, 0x4
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-le v1, v0, :cond_26
+
+    .line 1791
+    add-int/lit8 v1, v2, 0x1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1792
+    :goto_25
+    return-object v0
+
+    .line 1793
+    :cond_26
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
+    const/16 v0, 0xd
+
+    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/0A;->A00(III)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_25
+.end method
+
+.method public static A02()V
+    .registers 1
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_a
+
+    sput-object v0, Lcom/facebook/ads/redexgen/X/0A;->A00:[B
+
+    return-void
+
+    nop
+
+    :array_a
+    .array-data 1
+        0x47t
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final A08(Landroid/view/View;Lcom/facebook/ads/redexgen/X/3Y;)Lcom/facebook/ads/redexgen/X/3Y;
-    .registers 5
+.method public final A03(Ljava/lang/String;)Ljava/lang/String;
+    .registers 7
 
-    invoke-static {p2}, Lcom/facebook/ads/redexgen/X/3Y;->A01(Lcom/facebook/ads/redexgen/X/3Y;)Ljava/lang/Object;
+    .line 1794
+    invoke-direct {p0, p1}, Lcom/facebook/ads/redexgen/X/0A;->A01(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    check-cast v1, Landroid/view/WindowInsets;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->dispatchApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
-
-    move-result-object v0
-
-    if-eq v0, v1, :cond_11
-
-    new-instance v1, Landroid/view/WindowInsets;
-
-    invoke-direct {v1, v0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
-
-    :cond_11
-    invoke-static {v1}, Lcom/facebook/ads/redexgen/X/3Y;->A00(Ljava/lang/Object;)Lcom/facebook/ads/redexgen/X/3Y;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final A09(Landroid/view/View;Lcom/facebook/ads/redexgen/X/3Y;)Lcom/facebook/ads/redexgen/X/3Y;
-    .registers 5
-
-    invoke-static {p2}, Lcom/facebook/ads/redexgen/X/3Y;->A01(Lcom/facebook/ads/redexgen/X/3Y;)Ljava/lang/Object;
+    .line 1795
+    .local v0, "extension":Ljava/lang/String;
+    invoke-static {p1}, Lcom/facebook/ads/redexgen/X/0I;->A02(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    check-cast v1, Landroid/view/WindowInsets;
+    .line 1796
+    .local v1, "name":Ljava/lang/String;
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    :goto_e
+    return-object v1
+
+    :cond_f
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    const/16 v0, 0x29
+
+    invoke-static {v2, v1, v0}, Lcom/facebook/ads/redexgen/X/0A;->A00(III)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eq v0, v1, :cond_11
-
-    new-instance v1, Landroid/view/WindowInsets;
-
-    invoke-direct {v1, v0}, Landroid/view/WindowInsets;-><init>(Landroid/view/WindowInsets;)V
-
-    :cond_11
-    invoke-static {v1}, Lcom/facebook/ads/redexgen/X/3Y;->A00(Ljava/lang/Object;)Lcom/facebook/ads/redexgen/X/3Y;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final A0B(Landroid/view/View;)V
-    .registers 2
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/view/View;->stopNestedScroll()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final A0F(Landroid/view/View;Lcom/facebook/ads/redexgen/X/31;)V
-    .registers 4
-
-    if-nez p2, :cond_7
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
-
-    return-void
-
-    :cond_7
-    new-instance v0, Lcom/facebook/ads/redexgen/X/3F;
-
-    invoke-direct {v0, p0, p2}, Lcom/facebook/ads/redexgen/X/3F;-><init>(Lcom/facebook/ads/redexgen/X/0a;Lcom/facebook/ads/redexgen/X/31;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnApplyWindowInsetsListener(Landroid/view/View$OnApplyWindowInsetsListener;)V
-
-    return-void
+    goto :goto_e
 .end method
