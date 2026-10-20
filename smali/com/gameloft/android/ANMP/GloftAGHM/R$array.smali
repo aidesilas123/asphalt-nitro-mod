@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.array (com.gameloft.android.ANMP.GloftAGHM.R$array)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$array;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$array;
 .super Ljava/lang/Object;
 
 
@@ -11,3 +10,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.attr (com.gameloft.android.ANMP.GloftAGHM.R$attr)

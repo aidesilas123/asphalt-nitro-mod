@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.layout (com.gameloft.android.ANMP.GloftAGHM.R$layout)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$layout;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$layout;
 .super Ljava/lang/Object;
 
 
@@ -79,3 +78,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.menu (com.gameloft.android.ANMP.GloftAGHM.R$menu)

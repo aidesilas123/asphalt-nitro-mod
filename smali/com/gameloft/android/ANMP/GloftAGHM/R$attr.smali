@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.attr (com.gameloft.android.ANMP.GloftAGHM.R$attr)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$attr;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$attr;
 .super Ljava/lang/Object;
 
 
@@ -25,3 +24,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.bool (com.gameloft.android.ANMP.GloftAGHM.R$bool)

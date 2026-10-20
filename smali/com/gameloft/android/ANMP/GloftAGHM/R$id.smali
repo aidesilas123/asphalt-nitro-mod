@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.id (com.gameloft.android.ANMP.GloftAGHM.R$id)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$id;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$id;
 .super Ljava/lang/Object;
 
 
@@ -269,3 +268,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.integer (com.gameloft.android.ANMP.GloftAGHM.R$integer)

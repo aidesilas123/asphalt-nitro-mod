@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.style (com.gameloft.android.ANMP.GloftAGHM.R$style)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$style;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$style;
 .super Ljava/lang/Object;
 
 
@@ -21,3 +20,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.styleable (com.gameloft.android.ANMP.GloftAGHM.R$styleable)

@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.anim (com.gameloft.android.ANMP.GloftAGHM.R$anim)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$anim;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$anim;
 .super Ljava/lang/Object;
 
 
@@ -17,3 +16,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.animator (com.gameloft.android.ANMP.GloftAGHM.R$animator)

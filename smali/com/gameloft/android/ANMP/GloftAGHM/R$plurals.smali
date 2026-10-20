@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.plurals (com.gameloft.android.ANMP.GloftAGHM.R$plurals)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$plurals;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$plurals;
 .super Ljava/lang/Object;
 
 
@@ -11,3 +10,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.raw (com.gameloft.android.ANMP.GloftAGHM.R$raw)

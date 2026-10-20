@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.mipmap (com.gameloft.android.ANMP.GloftAGHM.R$mipmap)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$mipmap;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$mipmap;
 .super Ljava/lang/Object;
 
 
@@ -11,3 +10,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.plurals (com.gameloft.android.ANMP.GloftAGHM.R$plurals)

@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.drawable (com.gameloft.android.ANMP.GloftAGHM.R$drawable)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$drawable;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$drawable;
 .super Ljava/lang/Object;
 
 
@@ -223,3 +222,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.font (com.gameloft.android.ANMP.GloftAGHM.R$font)

@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.color (com.gameloft.android.ANMP.GloftAGHM.R$color)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$color;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$color;
 .super Ljava/lang/Object;
 
 
@@ -113,3 +112,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.dimen (com.gameloft.android.ANMP.GloftAGHM.R$dimen)

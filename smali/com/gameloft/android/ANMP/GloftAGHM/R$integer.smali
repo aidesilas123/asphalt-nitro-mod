@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.integer (com.gameloft.android.ANMP.GloftAGHM.R$integer)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$integer;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$integer;
 .super Ljava/lang/Object;
 
 
@@ -11,3 +10,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.interpolator (com.gameloft.android.ANMP.GloftAGHM.R$interpolator)

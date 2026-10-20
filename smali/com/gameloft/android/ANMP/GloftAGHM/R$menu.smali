@@ -1,5 +1,4 @@
-###### Class com.gameloft.android.ANMP.GloftAGHM.R.menu (com.gameloft.android.ANMP.GloftAGHM.R$menu)
-.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$menu;
+﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$menu;
 .super Ljava/lang/Object;
 
 
@@ -11,3 +10,5 @@
 
     return-void
 .end method
+
+###### Class com.gameloft.android.ANMP.GloftAGHM.R.mipmap (com.gameloft.android.ANMP.GloftAGHM.R$mipmap)
