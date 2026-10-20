@@ -57,7 +57,19 @@ def main():
         print(f"Smali directory '{smali_dir}' not found.")
         return
 
-    print(f"Scanning and splitting multi-class smali files in '{smali_dir}'...")
+    print(f"Cleaning duplicate parenthesized files and splitting multi-class files in '{smali_dir}'...")
+    deleted_dups = 0
+    for root, dirs, files in os.walk(smali_dir):
+        for file in files:
+            if '(' in file and ')' in file and file.endswith('.smali'):
+                try:
+                    os.remove(os.path.join(root, file))
+                    deleted_dups += 1
+                except Exception:
+                    pass
+    if deleted_dups > 0:
+        print(f"Removed {deleted_dups} duplicate parenthesized smali files.")
+
     total_split_files = 0
     total_classes = 0
 
