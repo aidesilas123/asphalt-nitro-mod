@@ -3159,13 +3159,13 @@
         <item name="android:headerDayOfMonthTextAppearance">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Header.Text.Day</item>
         <item name="android:headerYearTextAppearance">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Header.Text</item>
         <item name="android:calendarTextColor">?attr/colorOnSurface</item>
-        <item name="android:datePickerMode">2</item>
+        <item name="android:datePickerMode">calendar</item>
         <item name="backgroundInsetBottom">@dimen/mtrl_alert_dialog_picker_background_inset</item>
         <item name="backgroundInsetTop">@dimen/mtrl_alert_dialog_picker_background_inset</item>
         <item name="shapeAppearance">?attr/shapeAppearanceMediumComponent</item>
     </style>
     <style name="MaterialAlertDialog.MaterialComponents.Picker.Date.Spinner" parent="@android:style/Widget.DeviceDefault.DatePicker">
-        <item name="android:datePickerMode">1</item>
+        <item name="android:datePickerMode">spinner</item>
         <item name="backgroundInsetBottom">@dimen/mtrl_alert_dialog_picker_background_inset</item>
         <item name="backgroundInsetTop">@dimen/mtrl_alert_dialog_picker_background_inset</item>
         <item name="shapeAppearance">?attr/shapeAppearanceMediumComponent</item>
@@ -6791,7 +6791,7 @@
     </style>
     <style name="com_facebook_auth_dialog_instructions_textview" parent="">
         <item name="android:textSize">16sp</item>
-        <item name="android:typeface">1</item>
+        <item name="android:typeface">sans</item>
         <item name="android:textColor">@color/com_facebook_device_auth_text</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>

@@ -187,6 +187,6 @@
     <style name="tt_app_open_ad_no_animation" parent="@android:style/Theme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowAnimationStyle">@style/tt_animation</item>
-        <item name="android:windowLayoutInDisplayCutoutMode">2</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">never</item>
     </style>
 </resources>
