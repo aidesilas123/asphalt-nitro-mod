@@ -1,4 +1,4 @@
-﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$layout;
+.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$layout;
 .super Ljava/lang/Object;
 
 

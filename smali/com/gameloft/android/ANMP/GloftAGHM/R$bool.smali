@@ -1,4 +1,4 @@
-﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$bool;
+.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$bool;
 .super Ljava/lang/Object;
 
 

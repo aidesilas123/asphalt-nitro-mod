@@ -1,4 +1,4 @@
-﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$dimen;
+.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$dimen;
 .super Ljava/lang/Object;
 
 

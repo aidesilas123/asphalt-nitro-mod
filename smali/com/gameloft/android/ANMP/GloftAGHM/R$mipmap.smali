@@ -1,4 +1,4 @@
-﻿.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$mipmap;
+.class public final Lcom/gameloft/android/ANMP/GloftAGHM/R$mipmap;
 .super Ljava/lang/Object;
 
 
