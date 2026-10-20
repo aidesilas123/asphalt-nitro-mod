@@ -56,22 +56,9 @@
 .end method
 
 .method public onCreate()Z
-    .registers 4
+    .registers 2
 
-    invoke-virtual {p0}, Landroid/content/ContentProvider;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_b
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v2, v2, v1}, Lcom/facebook/ads/internal/dynamicloading/DynamicLoaderFactory;->initialize(Landroid/content/Context;Lcom/facebook/ads/internal/settings/MultithreadedBundleWrapper;Lcom/facebook/ads/AudienceNetworkAds$InitListener;Z)V
-
-    :cond_b
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     return v0
 .end method

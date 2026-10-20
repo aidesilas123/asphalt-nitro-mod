@@ -609,6 +609,7 @@
             android:resource="@xml/gma_ad_services_config"/>
         <provider
             android:name="com.facebook.ads.AudienceNetworkContentProvider"
+            android:enabled="false"
             android:exported="false"
             android:authorities="com.gameloft.android.ANMP.GloftAGHM.AudienceNetworkContentProvider"/>
         <receiver

@@ -68,50 +68,9 @@
 .end method
 
 .method public static A00(Ljava/lang/Throwable;Ljava/lang/Object;)V
-    .registers 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Throwable;
-        }
-    .end annotation
+    .registers 2
 
-    sget-object v0, Lcom/facebook/ads/redexgen/X/K0;->A01:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_24
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/K0;->A00:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    invoke-static {}, Lcom/facebook/ads/redexgen/X/KF;->A00()Lcom/facebook/ads/redexgen/X/KE;
-
-    move-result-object v1
-
-    const/16 v0, 0xcea
-
-    invoke-interface {v1, v0, p0}, Lcom/facebook/ads/redexgen/X/KE;->A9E(ILjava/lang/Throwable;)V
-
-    sget-object v0, Lcom/facebook/ads/redexgen/X/K0;->A02:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/facebook/ads/redexgen/X/Jy;
-
-    if-eqz v0, :cond_23
-
-    invoke-interface {v0, p0, p1}, Lcom/facebook/ads/redexgen/X/Jy;->AEc(Ljava/lang/Throwable;Ljava/lang/Object;)V
-
-    :cond_23
     return-void
-
-    :cond_24
-    throw p0
 .end method
 
 .method public static A01(ZLcom/facebook/ads/redexgen/X/Jy;)V
