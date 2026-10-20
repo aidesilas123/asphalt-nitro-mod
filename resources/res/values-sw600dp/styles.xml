@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
         <item name="tabGravity">center</item>
@@ -10,7 +10,7 @@
         <item name="android:layout_width">@dimen/ia_image_control_size</item>
         <item name="android:layout_height">@dimen/ia_image_control_size</item>
         <item name="android:src">@drawable/ia_sel_expand_collapse</item>
-        <item name="android:scaleType">3</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
     <style name="ia_mute_button_style" parent="@style/ia_top_left_overlay">
         <item name="android:background">@drawable/bg_circle_overlay</item>
@@ -18,6 +18,6 @@
         <item name="android:layout_width">@dimen/ia_image_control_size</item>
         <item name="android:layout_height">@dimen/ia_image_control_size</item>
         <item name="android:src">@drawable/ia_sel_mute</item>
-        <item name="android:scaleType">3</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 </resources>
