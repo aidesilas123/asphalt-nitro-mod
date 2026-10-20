@@ -30,23 +30,7 @@
 
 # virtual methods
 .method public run()V
-    .registers 4
+    .locals 0
 
-    :try_start_0
-    invoke-static {}, Lio/didomi/sdk/Didomi;->getInstance()Lio/didomi/sdk/Didomi;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/gameloft/didomiwrapper/Utils;->GetActivity()Landroidx/appcompat/app/AppCompatActivity;
-
-    move-result-object v1
-
-    const-string v2, "vendors"
-
-    invoke-virtual {v0, v1, v2}, Lio/didomi/sdk/Didomi;->showPreferences(Landroidx/fragment/app/FragmentActivity;Ljava/lang/String;)V
-    :try_end_d
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_d} :catch_d
-
-    :catch_d
     return-void
 .end method

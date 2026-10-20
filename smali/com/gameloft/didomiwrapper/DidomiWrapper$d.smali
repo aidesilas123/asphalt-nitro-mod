@@ -30,17 +30,7 @@
 
 # virtual methods
 .method public run()V
-    .registers 2
+    .locals 0
 
-    :try_start_0
-    invoke-static {}, Lio/didomi/sdk/Didomi;->getInstance()Lio/didomi/sdk/Didomi;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lio/didomi/sdk/Didomi;->hideNotice()V
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_7} :catch_7
-
-    :catch_7
     return-void
 .end method
