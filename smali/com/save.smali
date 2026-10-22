@@ -28,12 +28,45 @@
 .end method
 
 .method public static a(Landroid/content/Context;)V
-    .registers 2
+    .registers 4
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/io/File;
+
+    const-string v2, "profile"
+
+    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-nez v1, :cond_24
+
+    new-instance v1, Ljava/io/File;
+
+    const-string v2, "localprofile"
+
+    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_24
 
     const/4 v0, 0x0
 
     invoke-static {v0, p0}, Lcom/save;->unZip(ILandroid/content/Context;)V
+    :try_end_23
+    .catchall {:try_start_0 .. :try_end_23} :catchall_24
 
+    :cond_24
+    :catchall_24
     return-void
 .end method
 

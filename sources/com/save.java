@@ -17,7 +17,16 @@ public class save {
     private static String r1 = "res1";
 
     public static void a(Context context) {
-        unZip(0, context);
+        try {
+            File filesDir = context.getFilesDir();
+            File profile = new File(filesDir, "profile");
+            File localProfile = new File(filesDir, "localprofile");
+            if (!profile.exists() && !localProfile.exists()) {
+                unZip(0, context);
+            }
+        } catch (Throwable th) {
+            th.printStackTrace();
+        }
     }
 
     private static String d(int i, Context context) {
